@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+    <id value="message-events"/>
+    <url value="https://fhir.nhs.uk/R4/CodeSystem/message-event"/>
+    <identifier>
+        <system value="https://fhir.nhs.uk/identifier/CodeSystem"/>
+        <value value="message-events"/>
+    </identifier>
+    <version value="1.0.0"/>
+    <name value="Message Events"/>
+    <title value="Message Events"/>
+    <status value="draft"/>
+    <experimental value="true"/>
+    <date value="2020-01-28"/>
+    <publisher value="NHS Digital"/>
+    <contact>
+        <name value="FHIR project team"/>
+        <telecom>
+            <system value="url"/>
+            <value value="http://hl7.org/fhir"/>
+        </telecom>
+    </contact>
+    <description value="Common messaging events. I am the description of the resource, should I be included  in the default rendering"/>
+    <caseSensitive value="true"/>
+    <content value="complete"/>
+    <concept>
+        <code value="diagnostic-report-create"/>
+        <display value="Unsolicited transmission of an observation message (HL7v2.4 ORU_R01)"/>
+    </concept>
+    <concept>
+        <code value="encounter-admission-create"/>
+        <display value="Admit/Visit Notification"/>
+    </concept>
+    <concept>
+        <code value="encounter-discharge-create"/>
+        <display value="Discharge/End Visit"/>
+    </concept>
+    <concept>
+        <code value="patient-create"/>
+        <display value="Add person information"/>
+    </concept>
+    <concept>
+        <code value="patient-update"/>
+        <display value="Update person information"/>
+    </concept>
+    <concept>
+        <code value="prescription-order"/>
+        <display value="Prescription Order"/>
+    </concept>
+    <concept>
+        <code value="prescription-order-update"/>
+        <display value="Prescription Order Update"/>
+    </concept>
+</CodeSystem>
