@@ -55,6 +55,36 @@
         <profile value="https://fhir.nhs.uk/R4/StructureDefinition/Extension-UKCore-NominatedPharmacy" />
       </type>
     </element>
+    <element id="Patient.extension:nhsCommunication">
+      <path value="Patient.extension" />
+      <sliceName value="nhsCommunication" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.nhs.uk/R4/StructureDefinition/Extension-UKCore-NHSCommunication" />
+      </type>
+    </element>
+    <element id="Patient.extension:deathNotification">
+      <path value="Patient.extension" />
+      <sliceName value="deathNotification" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.nhs.uk/R4/StructureDefinition/Extension-UKCore-DeathNotificationStatus" />
+      </type>
+    </element>
+    <element id="Patient.extension:medicalApplianceSupplier">
+      <path value="Patient.extension" />
+      <sliceName value="medicalApplianceSupplier" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.nhs.uk/R4/StructureDefinition/Extension-UKCore-MedicalApplianceSupplier" />
+      </type>
+    </element>
     <element id="Patient.identifier">
       <path value="Patient.identifier" />
       <min value="1" />
