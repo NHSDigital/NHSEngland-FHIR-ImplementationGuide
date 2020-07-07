@@ -30,6 +30,24 @@
   <baseDefinition value="https://fhir.nhs.uk/R4/StructureDefinition/UKCore-PractitionerRole" />
   <derivation value="constraint" />
   <differential>
+    <element id="PractitionerRole.identifier">
+      <path value="PractitionerRole.identifier" />
+      <min value="1" />
+    </element>
+    <element id="PractitionerRole.identifier:nhsbsaSpuriousCode">
+      <path value="PractitionerRole.identifier" />
+      <sliceName value="nhsbsaSpuriousCode" />
+      <max value="1" />
+    </element>
+    <element id="PractitionerRole.identifier:nhsbsaSpuriousCode.system">
+      <path value="PractitionerRole.identifier.system" />
+      <min value="1" />
+      <fixedUri value="https://fhir.hl7.org.uk/Id/nhsbsa-spurious-code" />
+    </element>
+    <element id="PractitionerRole.identifier:nhsbsaSpuriousCode.value">
+      <path value="PractitionerRole.identifier.value" />
+      <min value="1" />
+    </element>
     <element id="PractitionerRole.practitioner">
       <path value="PractitionerRole.practitioner" />
       <min value="1" />
