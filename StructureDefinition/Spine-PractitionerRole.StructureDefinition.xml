@@ -69,9 +69,5 @@
       <sliceName value="sdsJobRoleName" />
       <min value="1" />
     </element>
-    <element id="PractitionerRole.telecom">
-      <path value="PractitionerRole.telecom" />
-      <min value="1" />
-    </element>
   </differential>
 </StructureDefinition>
