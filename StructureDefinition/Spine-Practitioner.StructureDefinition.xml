@@ -41,7 +41,6 @@
     </element>
     <element id="Practitioner.identifier:gmcCode.system">
       <path value="Practitioner.identifier.system" />
-      <min value="1" />
       <fixedUri value="https://fhir.hl7.org.uk/Id/gmc-number" />
     </element>
     <element id="Practitioner.identifier:gmpCode">
@@ -51,7 +50,6 @@
     </element>
     <element id="Practitioner.identifier:gmpCode.system">
       <path value="Practitioner.identifier.system" />
-      <min value="1" />
       <fixedUri value="https://fhir.hl7.org.uk/Id/gmp-number" />
     </element>
     <element id="Practitioner.identifier:dinCode">
@@ -60,7 +58,6 @@
     </element>
     <element id="Practitioner.identifier:dinCode.system">
       <path value="Practitioner.identifier.system" />
-      <min value="1" />
       <fixedUri value="https://fhir.hl7.org.uk/Id/din-number" />
     </element>
     <element id="Practitioner.name">
