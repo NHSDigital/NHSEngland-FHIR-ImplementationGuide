@@ -48,5 +48,75 @@
       </extension>
       <path value="Patient.contact" />
     </element>
+    <element id="Patient.generalPractitioner.identifier.type">
+      <path value="Patient.generalPractitioner.identifier.type" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="coding.system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <short value="NHS (England) ODS Organisation Type" />
+    </element>
+    <element id="Patient.generalPractitioner.identifier.type:organisationODSType">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+        <valueCode value="normative" />
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
+        <valueCode value="4.0.0" />
+      </extension>
+      <path value="Patient.generalPractitioner.identifier.type" />
+      <sliceName value="organisationODSType" />
+      <definition value="For Organisation references only." />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="IdentifierType" />
+        </extension>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding">
+          <valueBoolean value="true" />
+        </extension>
+        <strength value="extensible" />
+        <valueSet value="https://fhir.nhs.uk/R4/ValueSet/UKCore-England-organisation-type" />
+      </binding>
+    </element>
+    <element id="Patient.generalPractitioner.identifier.type:organisationODSType.coding.system">
+      <path value="Patient.generalPractitioner.identifier.type.coding.system" />
+      <fixedUri value="https://fhir.nhs.uk/R4/CodeSystem/organisation-type" />
+    </element>
+    <element id="Patient.managingOrganization.identifier.type">
+      <path value="Patient.managingOrganization.identifier.type" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="coding.system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Patient.managingOrganization.identifier.type:organisationODSType">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+        <valueCode value="normative" />
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
+        <valueCode value="4.0.0" />
+      </extension>
+      <path value="Patient.managingOrganization.identifier.type" />
+      <sliceName value="organisationODSType" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="IdentifierType" />
+        </extension>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding">
+          <valueBoolean value="true" />
+        </extension>
+        <strength value="extensible" />
+        <valueSet value="https://fhir.nhs.uk/R4/ValueSet/UKCore-England-organisation-type" />
+      </binding>
+    </element>
+    <element id="Patient.managingOrganization.identifier.type:organisationODSType.coding.system">
+      <path value="Patient.managingOrganization.identifier.type.coding.system" />
+      <fixedUri value="https://fhir.nhs.uk/R4/CodeSystem/organisation-type" />
+    </element>
   </differential>
 </StructureDefinition>
