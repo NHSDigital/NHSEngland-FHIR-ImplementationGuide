@@ -36,6 +36,10 @@
   <baseDefinition value="https://fhir.nhs.uk/R4/StructureDefinition/UKCore-Patient" />
   <derivation value="constraint" />
   <differential>
+    <element id="Patient.identifier">
+      <path value="Patient.identifier" />
+      <min value="1" />
+    </element>
     <element id="Patient.identifier:nhsNumber">
       <path value="Patient.identifier" />
       <sliceName value="nhsNumber" />
@@ -54,12 +58,6 @@
       <short value="NHS (England) ODS Organisation Type" />
     </element>
     <element id="Patient.generalPractitioner.identifier.type:organisationODSType">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Patient.generalPractitioner.identifier.type" />
       <sliceName value="organisationODSType" />
       <definition value="For Organisation references only." />
@@ -89,12 +87,6 @@
       </slicing>
     </element>
     <element id="Patient.managingOrganization.identifier.type:organisationODSType">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Patient.managingOrganization.identifier.type" />
       <sliceName value="organisationODSType" />
       <binding>
