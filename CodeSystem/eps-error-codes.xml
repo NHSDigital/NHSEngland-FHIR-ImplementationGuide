@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+    <id value="eps-error-codes"/>
+    <url value="https://fhir.nhs.uk/R4/CodeSystem/eps-error-codes"/>
+    <identifier>
+        <system value="https://fhir.nhs.uk/identifier/CodeSystem"/>
+        <value value="eps-error-codes"/>
+    </identifier>
+    <version value="1.0.0"/>
+    <name value="EPS Error Codes"/>
+    <title value="EPS Error Codes"/>
+    <status value="draft"/>
+    <date value="2020-08-05"/>
+    <publisher value="NHS Digital"/>
+    <contact>
+        <name value="Interoperability Team"/>
+        <telecom>
+           <system value="email"/>
+           <value value="interoperabilityteam@nhs.net"/>
+           <use value="work"/>
+        </telecom>
+     </contact>
+    <description value="EPS Error Codes"/>
+    <caseSensitive value="true"/>
+    <content value="complete"/>
+    <concept>
+        <code value="0001"/>
+        <display value="Patient is recorded as dead"/>
+        <definition value="Not applicable to prescribing systems Note. The Spine will not reject a prescription for a dead patient however the requirement to check PDS for death status before prescribing prevents this scenario occurring." />
+    </concept>
+    <concept>
+        <code value="0002"/>
+        <display value="Duplicate prescription ID exists"/>
+        <definition value="The System must create a new prescription UUID and re-submit the prescription to the Spine." />
+    </concept>
+    <concept>
+        <code value="0003"/>
+        <display value="Digital signature not found"/>
+        <definition value="The System must create and apply a digital signature to the prescription and re-submit the prescription to the Spine" />
+    </concept>
+    <concept>
+        <code value="0007"/>
+        <display value="Patient not found"/>
+        <definition value="The prescriber must be notified accordingly" />
+    </concept>
+    <concept>
+        <code value="0008"/>
+        <display value="Unable to process message – information missing"/>
+        <definition value="The prescription message has failed content validation at the Spine as mandatory data is missing. The System must add all mandatory data to the message and re-submit the prescription to the Spine" />
+    </concept>
+    <concept>
+        <code value="0009"/>
+        <display value="Invalid message"/>
+        <definition value="The prescription message has failed structural validation at the Spine. A defect report should be raised against the local System or the Spine (whichever is in error). The prescriber must be notified accordingly to use a paper FP10 prescription." />
+    </concept>
+    <concept>
+        <code value="0010"/>
+        <display value="Number of items on a prescription should be between 1 and 4"/>
+        <definition value="The prescriber must be notified accordingly and asked to split the items across separate prescriptions." />
+    </concept>
+    <concept>
+        <code value="0018"/>
+        <display value="Mismatch in authorised repeat counts"/>
+        <definition value="The “repeatNumber” attribute exists at both the prescription and item level. An item cannot be authorised for more repeats than the prescription." />
+    </concept>
+    <concept>
+        <code value="0019"/>
+        <display value="Repeat count should be between 1 and 99"/>
+        <definition value="The maximum “high” value for the “repeatNumber” attribute is 99." />
+    </concept>
+    <concept>
+        <code value="0099"/>
+        <display value="Incompatible version of Request. [Additional Information (if any)]"/>
+        <definition value="The user should inform their system supplier that an incompatible version of a request message has been used. This scenario may occur when a new version of the EPS is deployed but any messaging incompatibles will be carefully managed by the CFH Programme." />
+    </concept>
+    <concept>
+        <code value="5008"/>
+        <display value="Duplicate item ID exists"/>
+        <definition value="The System must create a new line item UUID and re-submit the prescription to the Spine." />
+    </concept>
+    <concept>
+        <code value="5009"/>
+        <display value="Error in check digit"/>
+        <definition value="The System must re-calculate / correct the check digit and re-submit the prescription to the Spine." />
+    </concept>
+</CodeSystem>
