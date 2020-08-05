@@ -244,6 +244,33 @@
                 <equivalence value="equivalent" />
             </target>
         </element>
+        <element>
+            <code value="BAD_REQUEST" />
+            <display value="Bad request." />
+            <target>
+                <code value="invalid" />
+                <display value="Invalid Content" />
+                <equivalence value="equivalent" />
+            </target>
+        </element>
+        <element>
+            <code value="MISSING_OR_INVALID_HEADER" />
+            <display value="There is a required header missing or invalid." />
+            <target>
+                <code value="invalid" />
+                <display value="Invalid Content" />
+                <equivalence value="equivalent" />
+            </target>
+        </element>
+        <element>
+            <code value="WITHDRAWN" />
+            <display value="Event message type has been withdrawn." />
+            <target>
+                <code value="invalid" />
+                <display value="Invalid Content" />
+                <equivalence value="equivalent" />
+            </target>
+        </element>
     </group>
     <group>
         <source value="https://fhir.nhs.uk/R4/CodeSystem/Spine-ErrorOrWarningCode" />
@@ -254,6 +281,95 @@
             <target>
                 <code value="duplicate" />
                 <display value="Duplicate" />
+                <equivalence value="equivalent" />
+            </target>
+        </element>
+    </group>
+    <group>
+        <source value="https://fhir.nhs.uk/R4/CodeSystem/Spine-ErrorOrWarningCode" />
+        <target value="http://hl7.org/fhir/issue-type" />
+        <element>
+            <code value="MESSAGE_NOT_WELL_FORMED" />
+            <display value="Message not well formed" />
+            <target>
+                <code value="structure" />
+                <display value="Structural Issue" />
+                <equivalence value="equivalent" />
+            </target>
+        </element>
+    </group>
+    <group>
+        <source value="https://fhir.nhs.uk/R4/CodeSystem/Spine-ErrorOrWarningCode" />
+        <target value="http://hl7.org/fhir/issue-type" />
+        <element>
+            <code value="NOT_IMPLEMENTED" />
+            <display value="FHIR resource or operation not implemented at server" />
+            <target>
+                <code value="not-supported" />
+                <display value="Content not supported" />
+                <equivalence value="equivalent" />
+            </target>
+        </element>
+    </group>
+    <group>
+        <source value="https://fhir.nhs.uk/R4/CodeSystem/Spine-ErrorOrWarningCode" />
+        <target value="http://hl7.org/fhir/issue-type" />
+        <element>
+            <code value="INTERNAL_SERVER_ERROR" />
+            <display value="Unexpected internal server error." />
+            <target>
+                <code value="processing" />
+                <display value="Processing Failure" />
+                <equivalence value="equivalent" />
+            </target>
+        </element>
+    </group>
+    
+    <group>
+        <source value="https://fhir.nhs.uk/R4/CodeSystem/Spine-ErrorOrWarningCode" />
+        <target value="http://hl7.org/fhir/issue-type" />
+        <element>
+            <code value="RESOURCE_CREATED" />
+            <display value="New resource created." />
+            <target>
+                <code value="informational" />
+                <display value="Informational Note" />
+                <equivalence value="equivalent" />
+            </target>
+        </element>
+        <element>
+            <code value="RESOURCE_DELETED" />
+            <display value="Resource removed." />
+            <target>
+                <code value="informational" />
+                <display value="Informational Note" />
+                <equivalence value="equivalent" />
+            </target>
+        </element>
+        <element>
+            <code value="RESOURCE_UPDATED" />
+            <display value="Resource has been successfully updated." />
+            <target>
+                <code value="informational" />
+                <display value="Informational Note" />
+                <equivalence value="equivalent" />
+            </target>
+        </element>
+        <element>
+            <code value="DEPRECATED" />
+            <display value="Event message type has been deprecated." />
+            <target>
+                <code value="informational" />
+                <display value="Informational Note" />
+                <equivalence value="equivalent" />
+            </target>
+        </element>
+        <element>
+            <code value="NO_LONGER_SUPPORTED" />
+            <display value="Event message type is no longer supported." />
+            <target>
+                <code value="informational" />
+                <display value="Informational Note" />
                 <equivalence value="equivalent" />
             </target>
         </element>
