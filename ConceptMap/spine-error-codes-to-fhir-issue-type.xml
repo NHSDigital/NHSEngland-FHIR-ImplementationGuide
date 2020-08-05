@@ -63,4 +63,30 @@
             </target>
         </element> 
     </group>
+    <group>
+        <source value="https://fhir.nhs.uk/R4/CodeSystem/Spine-ErrorOrWarningCode"/>
+        <target value="http://hl7.org/fhir/issue-type"/>
+        <element>
+            <code value="INVALID_PATIENT_DEMOGRAPHICS"/>
+            <display value="Invalid patient demographics"/>
+            <target>
+                <code value="business-rule"/> 
+                <display value="Business Rule Violation"/> 
+                <equivalence value="equivalent"/>
+            </target>
+        </element> 
+    </group>
+    <group>
+        <source value="https://fhir.nhs.uk/R4/CodeSystem/Spine-ErrorOrWarningCode"/>
+        <target value="http://hl7.org/fhir/issue-type"/>
+        <element>
+            <code value="REQUEST_UNMATCHED"/>
+            <display value="Request does not match authorisation token"/>
+            <target>
+                <code value="invalid"/> 
+                <display value="Invalid Content"/> 
+                <equivalence value="equivalent"/>
+            </target>
+        </element> 
+    </group>
 </ConceptMap>
