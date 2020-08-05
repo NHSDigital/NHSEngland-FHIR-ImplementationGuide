@@ -49,10 +49,6 @@
                 <equivalence value="equivalent" />
             </target>
         </element>
-    </group>
-    <group>
-        <source value="https://fhir.nhs.uk/R4/CodeSystem/Spine-ErrorOrWarningCode" />
-        <target value="http://hl7.org/fhir/issue-type" />
         <element>
             <code value="INVALID_NHS_NUMBER" />
             <display value="Invalid NHS number" />
@@ -98,10 +94,6 @@
                 <equivalence value="equivalent" />
             </target>
         </element>
-    </group>
-    <group>
-        <source value="https://fhir.nhs.uk/R4/CodeSystem/Spine-ErrorOrWarningCode" />
-        <target value="http://hl7.org/fhir/issue-type" />
         <element>
             <code value="INVALID_PATIENT_DEMOGRAPHICS" />
             <display value="Invalid patient demographics" />
@@ -111,10 +103,6 @@
                 <equivalence value="equivalent" />
             </target>
         </element>
-    </group>
-    <group>
-        <source value="https://fhir.nhs.uk/R4/CodeSystem/Spine-ErrorOrWarningCode" />
-        <target value="http://hl7.org/fhir/issue-type" />
         <element>
             <code value="REQUEST_UNMATCHED" />
             <display value="Request does not match authorisation token" />
@@ -124,10 +112,6 @@
                 <equivalence value="equivalent" />
             </target>
         </element>
-    </group>
-    <group>
-        <source value="https://fhir.nhs.uk/R4/CodeSystem/Spine-ErrorOrWarningCode" />
-        <target value="http://hl7.org/fhir/issue-type" />
         <element>
             <code value="INVALID_CODE_SYSTEM" />
             <display value="Invalid code system" />
@@ -146,10 +130,6 @@
                 <equivalence value="equivalent" />
             </target>
         </element>
-    </group>
-    <group>
-        <source value="https://fhir.nhs.uk/R4/CodeSystem/Spine-ErrorOrWarningCode" />
-        <target value="http://hl7.org/fhir/issue-type" />
         <element>
             <code value="NO_PATIENT_CONSENT" />
             <display value="Patient has not provided consent to share data" />
@@ -213,10 +193,6 @@
                 <equivalence value="equivalent" />
             </target>
         </element>
-    </group>
-    <group>
-        <source value="https://fhir.nhs.uk/R4/CodeSystem/Spine-ErrorOrWarningCode" />
-        <target value="http://hl7.org/fhir/issue-type" />
         <element>
             <code value="INVALID_RESOURCE" />
             <display value="Invalid validation of resource." />
@@ -271,10 +247,6 @@
                 <equivalence value="equivalent" />
             </target>
         </element>
-    </group>
-    <group>
-        <source value="https://fhir.nhs.uk/R4/CodeSystem/Spine-ErrorOrWarningCode" />
-        <target value="http://hl7.org/fhir/issue-type" />
         <element>
             <code value="DUPLICATE_REJECTED" />
             <display value="Create would lead to creation of a duplicate resource." />
@@ -284,10 +256,6 @@
                 <equivalence value="equivalent" />
             </target>
         </element>
-    </group>
-    <group>
-        <source value="https://fhir.nhs.uk/R4/CodeSystem/Spine-ErrorOrWarningCode" />
-        <target value="http://hl7.org/fhir/issue-type" />
         <element>
             <code value="MESSAGE_NOT_WELL_FORMED" />
             <display value="Message not well formed" />
@@ -297,10 +265,6 @@
                 <equivalence value="equivalent" />
             </target>
         </element>
-    </group>
-    <group>
-        <source value="https://fhir.nhs.uk/R4/CodeSystem/Spine-ErrorOrWarningCode" />
-        <target value="http://hl7.org/fhir/issue-type" />
         <element>
             <code value="NOT_IMPLEMENTED" />
             <display value="FHIR resource or operation not implemented at server" />
@@ -310,10 +274,6 @@
                 <equivalence value="equivalent" />
             </target>
         </element>
-    </group>
-    <group>
-        <source value="https://fhir.nhs.uk/R4/CodeSystem/Spine-ErrorOrWarningCode" />
-        <target value="http://hl7.org/fhir/issue-type" />
         <element>
             <code value="INTERNAL_SERVER_ERROR" />
             <display value="Unexpected internal server error." />
@@ -323,11 +283,6 @@
                 <equivalence value="equivalent" />
             </target>
         </element>
-    </group>
-    
-    <group>
-        <source value="https://fhir.nhs.uk/R4/CodeSystem/Spine-ErrorOrWarningCode" />
-        <target value="http://hl7.org/fhir/issue-type" />
         <element>
             <code value="RESOURCE_CREATED" />
             <display value="New resource created." />
