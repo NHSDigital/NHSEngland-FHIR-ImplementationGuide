@@ -89,4 +89,62 @@
             </target>
         </element> 
     </group>
+    <group>
+        <source value="https://fhir.nhs.uk/R4/CodeSystem/Spine-ErrorOrWarningCode"/>
+        <target value="http://hl7.org/fhir/issue-type"/>
+        <element>
+            <code value="NO_PATIENT_CONSENT"/>
+       <display value="Patient has not provided consent to share data"/>
+            <target>
+                <code value="forbidden"/> 
+                <display value="Forbidden"/> 
+                <equivalence value="equivalent"/>
+            </target>
+        </element> 
+        <element>
+            <code value="NO_ORGANISATIONAL_CONSENT"/>
+       <display value="Organisation has not provided consent to share data"/>
+            <target>
+                <code value="forbidden"/> 
+                <display value="Forbidden"/> 
+                <equivalence value="equivalent"/>
+            </target>
+        </element> 
+        <element>
+            <code value="ACCESS DENIED"/>
+       <display value="Access has been denied to process this request"/>
+            <target>
+                <code value="forbidden"/> 
+                <display value="Forbidden"/> 
+                <equivalence value="equivalent"/>
+            </target>
+        </element> 
+        <element>
+            <code value="ACCESS_DENIED_SSL"/>
+            <display value="SSL Protocol or Cipher requirements not met"/>
+            <target>
+                <code value="forbidden"/> 
+                <display value="Forbidden"/> 
+                <equivalence value="equivalent"/>
+            </target>
+        </element> 
+        <element>
+            <code value="ASID_CHECK_FAILED"/>
+            <display value="The sender or receiver's ASID is not authorised for this interaction"/>
+            <target>
+                <code value="forbidden"/> 
+                <display value="Forbidden"/> 
+                <equivalence value="equivalent"/>
+            </target>
+        </element> 
+        <element>
+            <code value="AUTHOR_CREDENTIALS_ERROR"/>
+            <display value="Author credentials error"/>
+            <target>
+                <code value="forbidden"/> 
+                <display value="Forbidden"/> 
+                <equivalence value="equivalent"/>
+            </target>
+        </element> 
+    </group>
 </ConceptMap>
