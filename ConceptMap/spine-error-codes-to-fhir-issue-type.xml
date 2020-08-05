@@ -31,5 +31,36 @@
                 <equivalence value="equivalent"/>
             </target>
         </element> 
+        <element>
+            <code value="ORGANISATION_NOT_FOUND"/>
+            <display value="Organisation not found"/>
+            <target>
+                <code value="not-found" />
+                <display value="Not Found" />
+                <equivalence value="equivalent"/>
+            </target>
+        </element> 
+        <element>
+            <code value="PRACTITIONER_NOT_FOUND"/>
+            <display value="Practitioner not found"/>
+            <target>
+                <code value="not-found" />
+                <display value="Not Found" />
+                <equivalence value="equivalent"/>
+            </target>
+        </element> 
+    </group>
+    <group>
+        <source value="https://fhir.nhs.uk/R4/CodeSystem/Spine-ErrorOrWarningCode"/>
+        <target value="http://hl7.org/fhir/issue-type"/>
+        <element>
+            <code value="INVALID_NHS_NUMBER"/>
+            <display value="Invalid NHS number"/>
+            <target>
+                <code value="value"/> 
+                <display value="Element value invalid"/> 
+                <equivalence value="equivalent"/>
+            </target>
+        </element> 
     </group>
 </ConceptMap>
