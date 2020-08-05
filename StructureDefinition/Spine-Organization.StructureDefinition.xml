@@ -59,7 +59,7 @@
     </element>
     <element id="Organization.partOf">
       <path value="Organization.partOf" />
-      <min value="1" />
+      <definition value="Recommended mandatory for primary care organisations." />
     </element>
     <element id="Organization.partOf.identifier">
       <path value="Organization.partOf.identifier" />
