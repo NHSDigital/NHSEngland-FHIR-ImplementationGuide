@@ -19,7 +19,7 @@
             <target>
                 <code value="not-found" />
                 <display value="Not Found" />
-                <equivalence value="equivalent" />
+                <equivalence value="specializes" />
             </target>
         </element>
         <element>
@@ -28,7 +28,7 @@
             <target>
                 <code value="not-found" />
                 <display value="Not Found" />
-                <equivalence value="equivalent" />
+                <equivalence value="specializes" />
             </target>
         </element>
         <element>
@@ -37,7 +37,7 @@
             <target>
                 <code value="not-found" />
                 <display value="Not Found" />
-                <equivalence value="equivalent" />
+                <equivalence value="specializes" />
             </target>
         </element>
         <element>
@@ -46,7 +46,7 @@
             <target>
                 <code value="not-found" />
                 <display value="Not Found" />
-                <equivalence value="equivalent" />
+                <equivalence value="specializes" />
             </target>
         </element>
         <element>
@@ -55,7 +55,7 @@
             <target>
                 <code value="value" />
                 <display value="Element value invalid" />
-                <equivalence value="equivalent" />
+                <equivalence value="specializes" />
             </target>
         </element>
         <element>
@@ -64,7 +64,7 @@
             <target>
                 <code value="value" />
                 <display value="Element value invalid" />
-                <equivalence value="equivalent" />
+                <equivalence value="specializes" />
             </target>
         </element>
         <element>
@@ -73,7 +73,7 @@
             <target>
                 <code value="value" />
                 <display value="Element value invalid" />
-                <equivalence value="equivalent" />
+                <equivalence value="specializes" />
             </target>
         </element>
         <element>
@@ -82,7 +82,7 @@
             <target>
                 <code value="value" />
                 <display value="Element value invalid" />
-                <equivalence value="equivalent" />
+                <equivalence value="specializes" />
             </target>
         </element>
         <element>
@@ -91,7 +91,7 @@
             <target>
                 <code value="value" />
                 <display value="Element value invalid" />
-                <equivalence value="equivalent" />
+                <equivalence value="specializes" />
             </target>
         </element>
         <element>
@@ -100,7 +100,7 @@
             <target>
                 <code value="business-rule" />
                 <display value="Business Rule Violation" />
-                <equivalence value="equivalent" />
+                <equivalence value="specializes" />
             </target>
         </element>
         <element>
@@ -109,7 +109,7 @@
             <target>
                 <code value="invalid" />
                 <display value="Invalid Content" />
-                <equivalence value="equivalent" />
+                <equivalence value="specializes" />
             </target>
         </element>
         <element>
@@ -118,7 +118,7 @@
             <target>
                 <code value="code-invalid" />
                 <display value="Invalid Code" />
-                <equivalence value="equivalent" />
+                <equivalence value="specializes" />
             </target>
         </element>
         <element>
@@ -127,7 +127,7 @@
             <target>
                 <code value="code-invalid" />
                 <display value="Invalid Code" />
-                <equivalence value="equivalent" />
+                <equivalence value="specializes" />
             </target>
         </element>
         <element>
@@ -136,7 +136,7 @@
             <target>
                 <code value="forbidden" />
                 <display value="Forbidden" />
-                <equivalence value="equivalent" />
+                <equivalence value="specializes" />
             </target>
         </element>
         <element>
@@ -145,7 +145,7 @@
             <target>
                 <code value="forbidden" />
                 <display value="Forbidden" />
-                <equivalence value="equivalent" />
+                <equivalence value="specializes" />
             </target>
         </element>
         <element>
@@ -154,7 +154,7 @@
             <target>
                 <code value="forbidden" />
                 <display value="Forbidden" />
-                <equivalence value="equivalent" />
+                <equivalence value="specializes" />
             </target>
         </element>
         <element>
@@ -163,7 +163,7 @@
             <target>
                 <code value="forbidden" />
                 <display value="Forbidden" />
-                <equivalence value="equivalent" />
+                <equivalence value="specializes" />
             </target>
         </element>
         <element>
@@ -172,7 +172,7 @@
             <target>
                 <code value="forbidden" />
                 <display value="Forbidden" />
-                <equivalence value="equivalent" />
+                <equivalence value="specializes" />
             </target>
         </element>
         <element>
@@ -181,7 +181,7 @@
             <target>
                 <code value="forbidden" />
                 <display value="Forbidden" />
-                <equivalence value="equivalent" />
+                <equivalence value="specializes" />
             </target>
         </element>
         <element>
@@ -190,7 +190,7 @@
             <target>
                 <code value="forbidden" />
                 <display value="Forbidden" />
-                <equivalence value="equivalent" />
+                <equivalence value="specializes" />
             </target>
         </element>
         <element>
@@ -199,7 +199,7 @@
             <target>
                 <code value="invalid" />
                 <display value="Invalid Content" />
-                <equivalence value="equivalent" />
+                <equivalence value="specializes" />
             </target>
         </element>
         <element>
@@ -208,7 +208,7 @@
             <target>
                 <code value="invalid" />
                 <display value="Invalid Content" />
-                <equivalence value="equivalent" />
+                <equivalence value="specializes" />
             </target>
         </element>
         <element>
@@ -217,7 +217,7 @@
             <target>
                 <code value="invalid" />
                 <display value="Invalid Content" />
-                <equivalence value="equivalent" />
+                <equivalence value="specializes" />
             </target>
         </element>
         <element>
@@ -226,7 +226,7 @@
             <target>
                 <code value="invalid" />
                 <display value="Invalid Content" />
-                <equivalence value="equivalent" />
+                <equivalence value="specializes" />
             </target>
         </element>
         <element>
@@ -235,7 +235,7 @@
             <target>
                 <code value="invalid" />
                 <display value="Invalid Content" />
-                <equivalence value="equivalent" />
+                <equivalence value="specializes" />
             </target>
         </element>
         <element>
@@ -244,7 +244,7 @@
             <target>
                 <code value="invalid" />
                 <display value="Invalid Content" />
-                <equivalence value="equivalent" />
+                <equivalence value="specializes" />
             </target>
         </element>
         <element>
@@ -253,7 +253,7 @@
             <target>
                 <code value="duplicate" />
                 <display value="Duplicate" />
-                <equivalence value="equivalent" />
+                <equivalence value="specializes" />
             </target>
         </element>
         <element>
@@ -262,7 +262,7 @@
             <target>
                 <code value="structure" />
                 <display value="Structural Issue" />
-                <equivalence value="equivalent" />
+                <equivalence value="specializes" />
             </target>
         </element>
         <element>
@@ -271,7 +271,7 @@
             <target>
                 <code value="not-supported" />
                 <display value="Content not supported" />
-                <equivalence value="equivalent" />
+                <equivalence value="specializes" />
             </target>
         </element>
         <element>
@@ -280,7 +280,7 @@
             <target>
                 <code value="processing" />
                 <display value="Processing Failure" />
-                <equivalence value="equivalent" />
+                <equivalence value="specializes" />
             </target>
         </element>
         <element>
@@ -289,7 +289,7 @@
             <target>
                 <code value="informational" />
                 <display value="Informational Note" />
-                <equivalence value="equivalent" />
+                <equivalence value="specializes" />
             </target>
         </element>
         <element>
@@ -298,7 +298,7 @@
             <target>
                 <code value="informational" />
                 <display value="Informational Note" />
-                <equivalence value="equivalent" />
+                <equivalence value="specializes" />
             </target>
         </element>
         <element>
@@ -307,7 +307,7 @@
             <target>
                 <code value="informational" />
                 <display value="Informational Note" />
-                <equivalence value="equivalent" />
+                <equivalence value="specializes" />
             </target>
         </element>
         <element>
@@ -316,7 +316,7 @@
             <target>
                 <code value="informational" />
                 <display value="Informational Note" />
-                <equivalence value="equivalent" />
+                <equivalence value="specializes" />
             </target>
         </element>
         <element>
@@ -325,7 +325,7 @@
             <target>
                 <code value="informational" />
                 <display value="Informational Note" />
-                <equivalence value="equivalent" />
+                <equivalence value="specializes" />
             </target>
         </element>
     </group>
