@@ -1,0 +1,81 @@
+<ConceptMap xmlns="http://hl7.org/fhir">
+    <id value="issueType-to-http-status-code" />
+    <url value="https://fhir.nhs.uk/R4/ConceptMap/issueType-to-http-status-code" />
+    <version value="1.0.0" />
+    <name value="issueType-to-http-status-code" />
+    <title value="issueType-to-http-status-code" />
+    <status value="draft" />
+    <experimental value="true" />
+    <date value="2020-08-05" />
+    <publisher value="NHS Digital" />
+    <description value="issueType-to-http-status-code for illustration only. Mapping extracted from HAPI FHIR" />
+    <purpose value="NHS Digital Spine" />
+    <group>
+        <source value="http://hl7.org/fhir/issue-type" />
+        <target value="http://hl7.org/fhir/http-status-code" />
+        <element>
+            <code value="not-found" />
+            <display value="Not Found" />
+            <target>
+                <code value="404" />
+                <display value="Not Found" />
+                <equivalence value="specializes" />
+            </target>
+        </element>
+        <element>
+            <code value="value" />
+            <display value="Element value invalid" />
+            <target>
+                <code value="400" />
+                <display value="Bad Request" />
+                <equivalence value="specializes" />
+            </target>
+        </element>
+        <element>
+            <code value="business-rule" />
+            <display value="Business Rule Violation" />
+            <target>
+                <code value="400" />
+                <display value="Bad Request" />
+                <equivalence value="specializes" />
+            </target>
+        </element>
+        <element>
+            <code value="invalid" />
+            <display value="Invalid Content" />
+            <target>
+                <code value="400" />
+                <display value="Bad Request" />
+                <equivalence value="specializes" />
+            </target>
+        </element>
+        <element>
+            <code value="code-invalid" />
+            <display value="Invalid Code" />
+            <target>
+                <code value="400" />
+                <display value="Bad Request" />
+                <equivalence value="specializes" />
+            </target>
+        </element>
+        <element>
+            <code value="forbidden" />
+            <display value="Forbidden" />
+            <target>
+                <code value="403" />
+                <display value="Forbidden" />
+                <equivalence value="specializes" />
+            </target>
+            <target>
+                <code value="401" />
+                <display value="CLIENT_UNAUTHORIZED" />
+                <equivalence value="specializes" />
+            </target>
+            <target>
+                <code value="405" />
+                <display value="METHOD_NOT_ALLOWED" />
+                <equivalence value="specializes" />
+            </target>
+        </element>
+    </group>
+</ConceptMap>

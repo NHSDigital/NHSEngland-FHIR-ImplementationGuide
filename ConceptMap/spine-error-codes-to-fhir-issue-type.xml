@@ -130,6 +130,7 @@
                 <code value="code-invalid" />
                 <display value="Invalid Code" />
                 <equivalence value="specializes" />
+                <comment value="HTTP code: 400"/>
             </target>
         </element>
         <element>
@@ -139,6 +140,7 @@
                 <code value="code-invalid" />
                 <display value="Invalid Code" />
                 <equivalence value="specializes" />
+                <comment value="HTTP code: 400"/>
             </target>
         </element>
         <element>
