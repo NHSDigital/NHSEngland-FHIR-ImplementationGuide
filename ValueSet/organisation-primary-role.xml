@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+   <id value="organisation-primary-role" />
+   <url value="https://fhir.nhs.uk/R4/ValueSet/organisation-primary-role" />
+   <version value="2.0.0" />
+   <name value="NHS Organisation Primary Role" />
+   <status value="active" />
+   <description value="A ValueSet to identify the primary role (type) of organisation" />   
+   <compose>
+      <include>
+         <system value="https://fhir.nhs.uk/R4/CodeSystem/organisation-role" />
+         <version value="2.0.0" />
+         <concept>
+            <code value="RO180" />
+            <display value="PRIMARY CARE TRUST SITE" />
+         </concept>
+         <concept>
+            <code value="RO198" />
+            <display value="NHS TRUST SITE" />
+         </concept>
+         <concept>
+            <code value="RO157" />
+            <display value="NON-NHS ORGANISATION" />
+         </concept>
+         <concept>
+            <code value="RO181" />
+            <display value="PHARMACY HEADQUARTER" />
+         </concept>
+         <concept>
+            <code value="RO191" />
+            <display value="SPECIAL HEALTH AUTHORITY SITE" />
+         </concept>
+         <concept>
+            <code value="RO96" />
+            <display value="BRANCH SURGERY" />
+         </concept>
+         <concept>
+            <code value="RO108" />
+            <display value="CARE TRUST SITE" />
+         </concept>
+         <concept>
+            <code value="RO176" />
+            <display value="INDEPENDENT SECTOR H/C PROVIDER SITE" />
+         </concept>
+         <concept>
+            <code value="RO122" />
+            <display value="LOCAL AUTHORITY SITE - LEGACY" />
+         </concept>
+         <concept>
+            <code value="RO197" />
+            <display value="NHS TRUST" />
+         </concept>
+         <concept>
+            <code value="RO173" />
+            <display value="PATHOLOGY LAB" />
+         </concept>
+         <concept>
+            <code value="RO175" />
+            <display value="PRISON" />
+         </concept>
+         <concept>
+            <code value="RO179" />
+            <display value="PRIMARY CARE TRUST" />
+         </concept>
+         <concept>
+            <code value="RO141" />
+            <display value="LOCAL AUTHORITY" />
+         </concept>
+         <concept>
+            <code value="RO107" />
+            <display value="CARE TRUST" />
+         </concept>
+         <concept>
+            <code value="RO126" />
+            <display value="GOVERNMENT DEPARTMENT" />
+         </concept>
+         <concept>
+            <code value="RO177" />
+            <display value="PRESCRIBING COST CENTRE" />
+         </concept>
+         <concept>
+            <code value="RO146" />
+            <display value="LOCAL SERVICE PROVIDER (LSP)" />
+         </concept>
+         <concept>
+            <code value="RO167" />
+            <display value="OPTICAL SITE" />
+         </concept>
+         <concept>
+            <code value="RO166" />
+            <display value="OPTICAL HEADQUARTERS" />
+         </concept>
+         <concept>
+            <code value="RO161" />
+            <display value="NHS SUPPORT AGENCY" />
+         </concept>
+         <concept>
+            <code value="RO200" />
+            <display value="WELSH ASSEMBLY" />
+         </concept>
+         <concept>
+            <code value="RO123" />
+            <display value="LOCAL AUTHORITY DEPARTMENT" />
+         </concept>
+         <concept>
+            <code value="RO172" />
+            <display value="INDEPENDENT SECTOR HEALTHCARE PROVIDER" />
+         </concept>
+         <concept>
+            <code value="RO142" />
+            <display value="LOCAL HEALTH BOARD" />
+         </concept>
+         <concept>
+            <code value="RO140" />
+            <display value="ISLE OF MAN GOVERNMENT DIRECTORATE SITE" />
+         </concept>
+         <concept>
+            <code value="RO137" />
+            <display value="ISLE OF MAN GOVERNMENT DIRECTORATE" />
+         </concept>
+         <concept>
+            <code value="RO148" />
+            <display value="LOCAL HEALTH BOARD SITE" />
+         </concept>
+         <concept>
+            <code value="RO105" />
+            <display value="CANCER REGISTRY" />
+         </concept>
+         <concept>
+            <code value="RO150" />
+            <display value="MILITARY HOSPITAL" />
+         </concept>
+         <concept>
+            <code value="RO110" />
+            <display value="GENERAL DENTAL PRACTICE" />
+         </concept>
+         <concept>
+            <code value="RO93" />
+            <display value="APPLICATION SERVICE PROVIDER - LEGACY" />
+         </concept>
+         <concept>
+            <code value="RO128" />
+            <display value="GOVERNMENT OFFICE REGION" />
+         </concept>
+         <concept>
+            <code value="RO189" />
+            <display value="SPECIAL HEALTH AUTHORITY (SPHA)" />
+         </concept>
+         <concept>
+            <code value="RO117" />
+            <display value="EDUCATION" />
+         </concept>
+         <concept>
+            <code value="RO119" />
+            <display value="LOCAL AUTHORITY - LEGACY" />
+         </concept>
+         <concept>
+            <code value="RO92" />
+            <display value="APPLICATION SERVICE PROVIDER" />
+         </concept>
+         <concept>
+            <code value="RO132" />
+            <display value="HEALTH AUTHORITY (HA)" />
+         </concept>
+         <concept>
+            <code value="RO138" />
+            <display value="ISLE OF MAN GOVERNMENT DEPARTMENT" />
+         </concept>
+         <concept>
+            <code value="RO91" />
+            <display value="EXECUTIVE AGENCY PROGRAMME" />
+         </concept>
+         <concept>
+            <code value="RO147" />
+            <display value="LSP SITE" />
+         </concept>
+         <concept>
+            <code value="RO116" />
+            <display value="EXECUTIVE AGENCY" />
+         </concept>
+         <concept>
+            <code value="RO134" />
+            <display value="HEALTH OBSERVATORY" />
+         </concept>
+         <concept>
+            <code value="RO158" />
+            <display value="NON STATUTORY NHS ORGANISATION" />
+         </concept>
+         <concept>
+            <code value="RO102" />
+            <display value="CLINICAL NETWORK" />
+         </concept>
+         <concept>
+            <code value="RO185" />
+            <display value="REGIONAL OFFICE (RO)" />
+         </concept>
+         <concept>
+            <code value="RO162" />
+            <display value="OTHER STATUTORY AUTHORITY (OSA)" />
+         </concept>
+         <concept>
+            <code value="RO103" />
+            <display value="CANCER NETWORK" />
+         </concept>
+         <concept>
+            <code value="RO131" />
+            <display value="GOVERNMENT DEPARTMENT SITE" />
+         </concept>
+         <concept>
+            <code value="RO89" />
+            <display value="EXECUTIVE AGENCY PROGRAMME - DEPARTMENT" />
+         </concept>
+         <concept>
+            <code value="RO159" />
+            <display value="NATIONAL APPLICATION SERVICE PROVIDER" />
+         </concept>
+         <concept>
+            <code value="RO90" />
+            <display value="EXECUTIVE AGENCY SITE" />
+         </concept>
+         <concept>
+            <code value="RO168" />
+            <display value="OTHER STATUTORY AUTHORITY SITE" />
+         </concept>
+         <concept>
+            <code value="RO98" />
+            <display value="CLINICAL COMMISSIONING GROUP" />
+         </concept>
+         <concept>
+            <code value="RO136" />
+            <display value="STRATEGIC HEALTH AUTHORITY SITE" />
+         </concept>
+         <concept>
+            <code value="RO99" />
+            <display value="CLINICAL COMMISSIONING GROUP SITE" />
+         </concept>
+         <concept>
+            <code value="RO210" />
+            <display value="NHS ENGLAND (REGION, LOCAL OFFICE)" />
+         </concept>
+         <concept>
+            <code value="RO209" />
+            <display value="NHS ENGLAND (REGION)" />
+         </concept>
+         <concept>
+            <code value="RO213" />
+            <display value="COMMISSIONING SUPPORT UNIT" />
+         </concept>
+         <concept>
+            <code value="RO222" />
+            <display value="LOCAL AUTHORITY SITE" />
+         </concept>
+         <concept>
+            <code value="RO212" />
+            <display value="NHS ENGLAND (REGION, LOCAL OFFICE) SITE" />
+         </concept>
+         <concept>
+            <code value="RO214" />
+            <display value="COMMISSIONING SUPPORT UNIT SITE" />
+         </concept>
+         <concept>
+            <code value="RO216" />
+            <display value="DATA SERVICES FOR COMMISSIONERS REGIONAL OFFICE (DSCRO)" />
+         </concept>
+         <concept>
+            <code value="RO217" />
+            <display value="DSCRO SITE" />
+         </concept>
+         <concept>
+            <code value="RO228" />
+            <display value="YOUNG OFFENDER INSTITUTION" />
+         </concept>
+         <concept>
+            <code value="RO234" />
+            <display value="POLICE CUSTODY SUITE" />
+         </concept>
+         <concept>
+            <code value="RO232" />
+            <display value="IMMIGRATION REMOVAL CENTRE" />
+         </concept>
+         <concept>
+            <code value="RO233" />
+            <display value="CONSTABULARY" />
+         </concept>
+         <concept>
+            <code value="RO230" />
+            <display value="SECURE TRAINING CENTRE" />
+         </concept>
+         <concept>
+            <code value="RO231" />
+            <display value="SECURE CHILDREN'S HOME" />
+         </concept>
+         <concept>
+            <code value="RO235" />
+            <display value="COURT" />
+         </concept>
+         <concept>
+            <code value="RO182" />
+            <display value="PHARMACY" />
+         </concept>
+         <concept>
+            <code value="RO94" />
+            <display value="APPLIANCE CONTRACTOR" />
+         </concept>
+         <concept>
+            <code value="RO104" />
+            <display value="SOCIAL CARE PROVIDER" />
+         </concept>
+         <concept>
+            <code value="RO101" />
+            <display value="SOCIAL CARE SITE" />
+         </concept>
+         <concept>
+            <code value="RO236" />
+            <display value="SEXUAL ASSAULT REFERRAL CENTRE" />
+         </concept>
+         <concept>
+            <code value="RO261" />
+            <display value="STRATEGIC PARTNERSHIP" />
+         </concept>
+         <concept>
+            <code value="RO272" />
+            <display value="PRIMARY CARE NETWORK" />
+         </concept>
+      </include>
+   </compose>
+
+</ValueSet>
