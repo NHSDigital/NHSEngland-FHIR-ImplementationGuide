@@ -62,17 +62,6 @@
     </element>
     <element id="Patient.managingOrganization.identifier.type">
       <path value="Patient.managingOrganization.identifier.type" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="coding.system" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="Patient.managingOrganization.identifier.type:organisationODSType">
-      <path value="Patient.managingOrganization.identifier.type" />
-      <sliceName value="organisationODSType" />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="IdentifierType" />
@@ -83,10 +72,6 @@
         <strength value="extensible" />
         <valueSet value="https://fhir.nhs.uk/R4/ValueSet/UKCore-England-organisation-type" />
       </binding>
-    </element>
-    <element id="Patient.managingOrganization.identifier.type:organisationODSType.coding.system">
-      <path value="Patient.managingOrganization.identifier.type.coding.system" />
-      <fixedUri value="https://fhir.nhs.uk/R4/CodeSystem/organisation-type" />
     </element>
   </differential>
 </StructureDefinition>
