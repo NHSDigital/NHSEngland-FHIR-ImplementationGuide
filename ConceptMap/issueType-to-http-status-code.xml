@@ -50,11 +50,20 @@
             </target>
         </element>
         <element>
+            <code value="invalid" />
+            <display value="Invalid Content" />
+            <target>
+                <code value="422" />
+                <display value="UNPROCESSABLE_ENTITY" />
+                <equivalence value="specializes" />
+            </target>
+        </element>
+        <element>
             <code value="code-invalid" />
             <display value="Invalid Code" />
             <target>
                 <code value="400" />
-                <display value="Bad Request" />
+                <display value="BAD REQUEST" />
                 <equivalence value="specializes" />
             </target>
         </element>
@@ -66,15 +75,90 @@
                 <display value="Forbidden" />
                 <equivalence value="specializes" />
             </target>
+        </element>
+        <element>
+            <code value="forbidden" />
+            <display value="Forbidden" />
             <target>
                 <code value="401" />
                 <display value="CLIENT_UNAUTHORIZED" />
                 <equivalence value="specializes" />
             </target>
+        </element>
+        <element>
+            <code value="forbidden" />
+            <display value="Forbidden" />
             <target>
                 <code value="405" />
                 <display value="METHOD_NOT_ALLOWED" />
                 <equivalence value="specializes" />
+            </target>
+        </element>
+        <element>
+            <code value="duplicate" />
+            <display value="Duplicate" />
+            <target>
+                <code value="422" />
+                <display value="UNPROCESSABLE_ENTITY" />
+                <equivalence value="specializes" />
+            </target>
+        </element>
+        <element>
+            <code value="structure" />
+            <display value="Structural Issue" />
+            <target>
+                <code value="400" />
+                <display value="BAD REQUEST" />
+                <equivalence value="specializes" />
+            </target>
+        </element>
+        <element>
+            <code value="not-supported" />
+            <display value="Content not supported" />
+            <target>
+                <code value="501" />
+                <display value="NOT_IMPLEMENTED" />
+                <equivalence value="specializes" />
+            </target>
+        </element>
+        <element>
+            <code value="processing" />
+            <display value="Processing Failure" />
+            <target>
+                <code value="500" />
+                <display value="INTERNAL_ERROR" />
+                <equivalence value="specializes" />
+                <comment value="Mapping is wrong here. process should be 422"/>
+            </target>
+        </element>
+        <element>
+            <code value="informational" />
+            <display value="Informational Note" />
+            <target>
+                <code value="201" />
+                <display value="CREATED" />
+                <equivalence value="specializes" />
+              
+            </target>
+        </element>
+        <element>
+            <code value="informational" />
+            <display value="Informational Note" />
+            <target>
+                <code value="200" />
+                <display value="OK" />
+                <equivalence value="specializes" />
+            
+            </target>
+        </element>
+        <element>
+            <code value="informational" />
+            <display value="Informational Note" />
+            <target>
+                <code value="202" />
+                <display value="ACCEPTED" />
+                <equivalence value="specializes" />
+               
             </target>
         </element>
     </group>

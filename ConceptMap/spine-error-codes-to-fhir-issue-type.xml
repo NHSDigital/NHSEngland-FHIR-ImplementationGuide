@@ -300,7 +300,7 @@
                 <code value="not-supported" />
                 <display value="Content not supported" />
                 <equivalence value="specializes" />
-                <comment value="HTTP code: 500"/>
+                <comment value="HTTP code: 501"/>
             </target>
         </element>
         <element>
