@@ -1,0 +1,44 @@
+<ConceptMap xmlns="http://hl7.org/fhir">
+    <id value="organisation-role-to-organisation-type" />
+    <url value="https://fhir.nhs.uk/R4/ConceptMap/organisation-role-to-organisation-type" />
+    <version value="1.0.0" />
+    <name value="organisation-role-to-organisation-type" />
+    <title value="organisation-role-to-organisation-type" />
+    <status value="draft" />
+    <experimental value="true" />
+    <date value="2020-08-05" />
+    <publisher value="NHS Digital" />
+    <description value="organisation-role-to-organisation-type" />
+    <purpose value="NHS Digital Spine" />
+    <group>
+        <source value="https://fhir.nhs.uk/R4/CodeSystem/organisation-role" />
+        <target value="https://fhir.nhs.uk/R4/CodeSystem/organisation-type" />
+        <element>
+            <code value="RO197" />
+            <display value="NHS TRUST" />
+            <target>
+                <code value="008" />
+                <display value="Acute Trust" />
+                <equivalence value="equivalent" />
+            </target>
+        </element>
+        <element>
+            <code value="RO197" />
+            <display value="NHS TRUST" />
+            <target>
+                <code value="009" />
+                <display value="Care Trust" />
+                <equivalence value="equivalent" />
+            </target>
+        </element>
+        <element>
+            <code value="RO197" />
+            <display value="NHS TRUST" />
+            <target>
+                <code value="010" />
+                <display value="Community Trust" />
+                <equivalence value="equivalent" />
+            </target>
+        </element>
+    </group>
+</ConceptMap>
