@@ -20,6 +20,7 @@
                 <code value="not-found" />
                 <display value="Not Found" />
                 <equivalence value="specializes" />
+                <comment value="404"/>
             </target>
         </element>
         <element>
