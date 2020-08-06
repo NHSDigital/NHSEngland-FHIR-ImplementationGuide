@@ -38,6 +38,7 @@
                 <code value="400" />
                 <display value="Bad Request" />
                 <equivalence value="specializes" />
+                <comment value="Should be 422?"/>
             </target>
         </element>
         <element>
@@ -56,6 +57,7 @@
                 <code value="422" />
                 <display value="UNPROCESSABLE_ENTITY" />
                 <equivalence value="specializes" />
+                <comment value="Should be 400?"/>
             </target>
         </element>
         <element>
@@ -65,6 +67,7 @@
                 <code value="400" />
                 <display value="BAD REQUEST" />
                 <equivalence value="specializes" />
+                <comment value="Should be 422?"/>
             </target>
         </element>
         <element>
@@ -83,6 +86,7 @@
                 <code value="401" />
                 <display value="CLIENT_UNAUTHORIZED" />
                 <equivalence value="specializes" />
+                <comment value="Wrong issueType - login/unknown better?"/>
             </target>
         </element>
         <element>
@@ -92,6 +96,7 @@
                 <code value="405" />
                 <display value="METHOD_NOT_ALLOWED" />
                 <equivalence value="specializes" />
+                <comment value="Is 405 more suited to wrong http verb being used. This should still be 403"/>
             </target>
         </element>
         <element>
@@ -128,7 +133,7 @@
                 <code value="500" />
                 <display value="INTERNAL_ERROR" />
                 <equivalence value="specializes" />
-                <comment value="Mapping is wrong here. process should be 422"/>
+                <comment value="Mapping is wrong here. processing should be 422"/>
             </target>
         </element>
         <element>
@@ -138,7 +143,6 @@
                 <code value="201" />
                 <display value="CREATED" />
                 <equivalence value="specializes" />
-              
             </target>
         </element>
         <element>
