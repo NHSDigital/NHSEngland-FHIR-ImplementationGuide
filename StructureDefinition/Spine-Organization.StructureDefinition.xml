@@ -44,10 +44,20 @@
       <sliceName value="odsSiteCode" />
       <max value="0" />
     </element>
+    <element id="Organization.type">
+      <path value="Organization.type" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="OrganizationType" />
+        </extension>
+        <strength value="preferred" />
+        <valueSet value="https://fhir.nhs.uk/R4/ValueSet/organisation-primary-role" />
+      </binding>
+    </element>
     <element id="Organization.type.coding.system">
       <path value="Organization.type.coding.system" />
       <min value="1" />
-      <fixedUri value="https://fhir.nhs.uk/R4/CodeSystem/organisation-type" />
+      <fixedUri value="https://fhir.nhs.uk/R4/CodeSystem/organisation-role" />
     </element>
     <element id="Organization.name">
       <path value="Organization.name" />
