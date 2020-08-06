@@ -20,7 +20,7 @@
                 <code value="not-found" />
                 <display value="Not Found" />
                 <equivalence value="specializes" />
-                <comment value="404"/>
+                <comment value="HTTP code: 404"/>
             </target>
         </element>
         <element>
@@ -30,6 +30,7 @@
                 <code value="not-found" />
                 <display value="Not Found" />
                 <equivalence value="specializes" />
+                <comment value="HTTP code: 404"/>
             </target>
         </element>
         <element>
@@ -39,6 +40,7 @@
                 <code value="not-found" />
                 <display value="Not Found" />
                 <equivalence value="specializes" />
+                <comment value="HTTP code: 404"/>
             </target>
         </element>
         <element>
@@ -48,6 +50,7 @@
                 <code value="not-found" />
                 <display value="Not Found" />
                 <equivalence value="specializes" />
+                <comment value="HTTP code: 404"/>
             </target>
         </element>
         <element>
@@ -57,6 +60,7 @@
                 <code value="value" />
                 <display value="Element value invalid" />
                 <equivalence value="specializes" />
+                <comment value="HTTP code: 400"/>
             </target>
         </element>
         <element>
@@ -66,6 +70,7 @@
                 <code value="value" />
                 <display value="Element value invalid" />
                 <equivalence value="specializes" />
+                <comment value="HTTP code: 400"/>
             </target>
         </element>
         <element>
@@ -75,6 +80,7 @@
                 <code value="value" />
                 <display value="Element value invalid" />
                 <equivalence value="specializes" />
+                <comment value="HTTP code: 400"/>
             </target>
         </element>
         <element>
@@ -84,6 +90,7 @@
                 <code value="value" />
                 <display value="Element value invalid" />
                 <equivalence value="specializes" />
+                <comment value="HTTP code: 400"/>
             </target>
         </element>
         <element>
@@ -93,6 +100,7 @@
                 <code value="value" />
                 <display value="Element value invalid" />
                 <equivalence value="specializes" />
+                <comment value="HTTP code: 400"/>
             </target>
         </element>
         <element>
@@ -102,6 +110,7 @@
                 <code value="business-rule" />
                 <display value="Business Rule Violation" />
                 <equivalence value="specializes" />
+                <comment value="HTTP code: 400"/>
             </target>
         </element>
         <element>
@@ -111,6 +120,7 @@
                 <code value="invalid" />
                 <display value="Invalid Content" />
                 <equivalence value="specializes" />
+                <comment value="HTTP code: 400"/>
             </target>
         </element>
         <element>
@@ -138,6 +148,7 @@
                 <code value="forbidden" />
                 <display value="Forbidden" />
                 <equivalence value="specializes" />
+                <comment value="HTTP code: 403"/>
             </target>
         </element>
         <element>
@@ -147,6 +158,7 @@
                 <code value="forbidden" />
                 <display value="Forbidden" />
                 <equivalence value="specializes" />
+                <comment value="HTTP code: 403"/>
             </target>
         </element>
         <element>
@@ -156,6 +168,7 @@
                 <code value="forbidden" />
                 <display value="Forbidden" />
                 <equivalence value="specializes" />
+                <comment value="HTTP code: 403"/>
             </target>
         </element>
         <element>
@@ -165,6 +178,7 @@
                 <code value="forbidden" />
                 <display value="Forbidden" />
                 <equivalence value="specializes" />
+                <comment value="HTTP code: 403"/>
             </target>
         </element>
         <element>
@@ -174,6 +188,7 @@
                 <code value="forbidden" />
                 <display value="Forbidden" />
                 <equivalence value="specializes" />
+                <comment value="HTTP code: 403"/>
             </target>
         </element>
         <element>
@@ -183,6 +198,7 @@
                 <code value="forbidden" />
                 <display value="Forbidden" />
                 <equivalence value="specializes" />
+                <comment value="HTTP code: 401"/>
             </target>
         </element>
         <element>
@@ -192,6 +208,7 @@
                 <code value="forbidden" />
                 <display value="Forbidden" />
                 <equivalence value="specializes" />
+                <comment value="HTTP code: 405"/>
             </target>
         </element>
         <element>
@@ -201,6 +218,7 @@
                 <code value="invalid" />
                 <display value="Invalid Content" />
                 <equivalence value="specializes" />
+                <comment value="HTTP code: 422"/>
             </target>
         </element>
         <element>
@@ -210,6 +228,7 @@
                 <code value="invalid" />
                 <display value="Invalid Content" />
                 <equivalence value="specializes" />
+                <comment value="HTTP code: 422"/>
             </target>
         </element>
         <element>
@@ -219,6 +238,7 @@
                 <code value="invalid" />
                 <display value="Invalid Content" />
                 <equivalence value="specializes" />
+                <comment value="HTTP code: 422"/>
             </target>
         </element>
         <element>
@@ -228,6 +248,7 @@
                 <code value="invalid" />
                 <display value="Invalid Content" />
                 <equivalence value="specializes" />
+                <comment value="HTTP code: 400"/>
             </target>
         </element>
         <element>
@@ -237,6 +258,7 @@
                 <code value="invalid" />
                 <display value="Invalid Content" />
                 <equivalence value="specializes" />
+                <comment value="HTTP code: 400"/>
             </target>
         </element>
         <element>
@@ -246,6 +268,7 @@
                 <code value="invalid" />
                 <display value="Invalid Content" />
                 <equivalence value="specializes" />
+                <comment value="HTTP code: 400"/>
             </target>
         </element>
         <element>
@@ -255,6 +278,7 @@
                 <code value="duplicate" />
                 <display value="Duplicate" />
                 <equivalence value="specializes" />
+                <comment value="HTTP code: 422"/>
             </target>
         </element>
         <element>
@@ -264,6 +288,7 @@
                 <code value="structure" />
                 <display value="Structural Issue" />
                 <equivalence value="specializes" />
+                <comment value="HTTP code: 400"/>
             </target>
         </element>
         <element>
@@ -273,6 +298,7 @@
                 <code value="not-supported" />
                 <display value="Content not supported" />
                 <equivalence value="specializes" />
+                <comment value="HTTP code: 500"/>
             </target>
         </element>
         <element>
@@ -282,6 +308,7 @@
                 <code value="processing" />
                 <display value="Processing Failure" />
                 <equivalence value="specializes" />
+                <comment value="HTTP code: 500"/>
             </target>
         </element>
         <element>
@@ -291,6 +318,7 @@
                 <code value="informational" />
                 <display value="Informational Note" />
                 <equivalence value="specializes" />
+                <comment value="HTTP code: 201"/>
             </target>
         </element>
         <element>
@@ -300,6 +328,7 @@
                 <code value="informational" />
                 <display value="Informational Note" />
                 <equivalence value="specializes" />
+                <comment value="HTTP code: 200. This differs from FHIR specification which is 200 if response contains payload. 204 if no payload or 202 if server is non commital."/>
             </target>
         </element>
         <element>
@@ -309,6 +338,7 @@
                 <code value="informational" />
                 <display value="Informational Note" />
                 <equivalence value="specializes" />
+                <comment value="HTTP code: 200"/>
             </target>
         </element>
         <element>
@@ -318,6 +348,7 @@
                 <code value="informational" />
                 <display value="Informational Note" />
                 <equivalence value="specializes" />
+                <comment value="HTTP code: 202"/>
             </target>
         </element>
         <element>
@@ -327,6 +358,7 @@
                 <code value="informational" />
                 <display value="Informational Note" />
                 <equivalence value="specializes" />
+                <comment value="HTTP code: 202"/>
             </target>
         </element>
     </group>
