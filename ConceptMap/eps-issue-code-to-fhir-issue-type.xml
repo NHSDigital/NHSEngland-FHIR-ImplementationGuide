@@ -1,0 +1,137 @@
+<ConceptMap xmlns="http://hl7.org/fhir">
+    <id value="eps-issue-code-to-fhir-issue-type" />
+    <url value="https://fhir.nhs.uk/R4/ConceptMap/eps-issue-code-to-fhir-issue-type" />
+    <version value="1.0.0" />
+    <name value="eps-issue-code-to-fhir-issue-type" />
+    <title value="EPS Issue Code to FHIR Issue Type Map" />
+    <status value="draft" />
+    <experimental value="true" />
+    <date value="2020-08-05" />
+    <publisher value="NHS Digital" />
+    <description value="EPS Issue Code to FHIR Issue Type Map" />
+    <purpose value="NHS Digital Spine" />
+    <group>
+        <source value="https://fhir.nhs.uk/R4/CodeSystem/EPS-IssueCode" />
+        <target value="http://hl7.org/fhir/issue-type" />
+        <element>
+            <code value="0001" />
+            <display value="Patient is recorded as dead" />
+            <target>
+                <code value="not-found" />
+                <display value="Not Found" />
+                <equivalence value="specializes" />
+                <comment value="HTTP code: 404" />
+            </target>
+        </element>
+        <element>
+            <code value="0002" />
+            <display value="Duplicate prescription ID exists" />
+            <target>
+                <code value="not-found" />
+                <display value="Not Found" />
+                <equivalence value="specializes" />
+                <comment value="HTTP code: 404" />
+            </target>
+        </element>
+        <element>
+            <code value="0003" />
+            <display value="Digital signature not found" />
+            <target>
+                <code value="not-found" />
+                <display value="Not Found" />
+                <equivalence value="specializes" />
+                <comment value="HTTP code: 404" />
+            </target>
+        </element>
+        <element>
+            <code value="0007" />
+            <display value="Patient not found" />
+            <target>
+                <code value="not-found" />
+                <display value="Not Found" />
+                <equivalence value="specializes" />
+                <comment value="HTTP code: 404" />
+            </target>
+        </element>
+        <element>
+            <code value="0008" />
+            <display value="Unable to process message – information missing" />
+            <target>
+                <code value="not-found" />
+                <display value="Not Found" />
+                <equivalence value="specializes" />
+                <comment value="HTTP code: 404" />
+            </target>
+        </element>
+        <element>
+            <code value="0009" />
+            <display value="Invalid message" />
+            <target>
+                <code value="not-found" />
+                <display value="Not Found" />
+                <equivalence value="specializes" />
+                <comment value="HTTP code: 404" />
+            </target>
+        </element>
+        <element>
+            <code value="0010" />
+            <display value="Number of items on a prescription should be between 1 and 4" />
+            <target>
+                <code value="not-found" />
+                <display value="Not Found" />
+                <equivalence value="specializes" />
+                <comment value="HTTP code: 404" />
+            </target>
+        </element>
+        <element>
+            <code value="0018" />
+            <display value="Mismatch in authorised repeat counts" />
+            <target>
+                <code value="not-found" />
+                <display value="Not Found" />
+                <equivalence value="specializes" />
+                <comment value="HTTP code: 404" />
+            </target>
+        </element>
+        <element>
+            <code value="0019" />
+            <display value="Repeat count should be between 1 and 99" />
+            <target>
+                <code value="not-found" />
+                <display value="Not Found" />
+                <equivalence value="specializes" />
+                <comment value="HTTP code: 404" />
+            </target>
+        </element>
+        <element>
+            <code value="0099" />
+            <display value="Incompatible version of Request. [Additional Information (if any)]" />
+            <target>
+                <code value="not-found" />
+                <display value="Not Found" />
+                <equivalence value="specializes" />
+                <comment value="HTTP code: 404" />
+            </target>
+        </element>
+        <element>
+            <code value="5008" />
+            <display value="Duplicate item ID exists" />
+            <target>
+                <code value="not-found" />
+                <display value="Not Found" />
+                <equivalence value="specializes" />
+                <comment value="HTTP code: 404" />
+            </target>
+        </element>
+        <element>
+            <code value="5009" />
+            <display value="Error in check digit" />
+            <target>
+                <code value="not-found" />
+                <display value="Not Found" />
+                <equivalence value="specializes" />
+                <comment value="HTTP code: 404" />
+            </target>
+        </element>
+    </group>
+</ConceptMap>
