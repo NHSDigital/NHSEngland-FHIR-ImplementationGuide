@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <CodeSystem xmlns="http://hl7.org/fhir">
-    <id value="eps-error-codes"/>
-    <url value="https://fhir.nhs.uk/R4/CodeSystem/eps-error-codes"/>
+    <id value="EPS-IssueCode"/>
+    <url value="https://fhir.nhs.uk/R4/CodeSystem/EPS-IssueCode"/>
     <identifier>
         <system value="https://fhir.nhs.uk/identifier/CodeSystem"/>
-        <value value="eps-error-codes"/>
+        <value value="EPS-IssueCode"/>
     </identifier>
     <version value="1.0.0"/>
-    <name value="EPS Error Codes"/>
-    <title value="EPS Error Codes"/>
+    <name value="EPS Issue Codes"/>
+    <title value="EPS Issue Codes"/>
     <status value="draft"/>
     <date value="2020-08-05"/>
     <publisher value="NHS Digital"/>
@@ -21,7 +21,7 @@
            <use value="work"/>
         </telecom>
      </contact>
-    <description value="EPS Error Codes"/>
+    <description value="EPS Issue Codes"/>
     <caseSensitive value="true"/>
     <content value="complete"/>
     <concept>
