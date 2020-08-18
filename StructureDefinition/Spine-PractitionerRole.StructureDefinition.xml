@@ -71,10 +71,6 @@
     <element id="PractitionerRole.organization.reference">
       <path value="PractitionerRole.organization.reference" />
       <min value="1" />
-      <type>
-        <code value="string" />
-        <profile value="https://fhir.nhs.uk/R4/StructureDefinition/Spine-Organization" />
-      </type>
     </element>
     <element id="PractitionerRole.code:sdsJobRoleName">
       <path value="PractitionerRole.code" />
