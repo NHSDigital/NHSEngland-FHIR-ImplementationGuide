@@ -51,6 +51,10 @@
     <element id="PractitionerRole.practitioner">
       <path value="PractitionerRole.practitioner" />
       <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.nhs.uk/R4/StructureDefinition/Spine-Practitioner" />
+      </type>
     </element>
     <element id="PractitionerRole.practitioner.reference">
       <path value="PractitionerRole.practitioner.reference" />
@@ -59,10 +63,18 @@
     <element id="PractitionerRole.organization">
       <path value="PractitionerRole.organization" />
       <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.nhs.uk/R4/StructureDefinition/Spine-Organization" />
+      </type>
     </element>
     <element id="PractitionerRole.organization.reference">
       <path value="PractitionerRole.organization.reference" />
       <min value="1" />
+      <type>
+        <code value="string" />
+        <profile value="https://fhir.nhs.uk/R4/StructureDefinition/Spine-Organization" />
+      </type>
     </element>
     <element id="PractitionerRole.code:sdsJobRoleName">
       <path value="PractitionerRole.code" />
