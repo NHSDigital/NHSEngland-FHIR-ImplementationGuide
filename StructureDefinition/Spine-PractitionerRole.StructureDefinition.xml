@@ -69,5 +69,12 @@
       <sliceName value="sdsJobRoleName" />
       <min value="1" />
     </element>
+    <element id="PractitionerRole.healthcareService">
+      <path value="PractitionerRole.healthcareService" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.nhs.uk/R4/StructureDefinition/Spine-HealthcareService" />
+      </type>
+    </element>
   </differential>
 </StructureDefinition>
