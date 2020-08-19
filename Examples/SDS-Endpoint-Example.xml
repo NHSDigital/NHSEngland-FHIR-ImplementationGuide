@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Endpoint xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/Validation-Assets-R4/Schemas/fhir-all-xsd/fhir-all.xsd">
+<Endpoint xmlns="http://hl7.org/fhir">
 	<id value="f0f0e921-92ca-4a88-a550-2dbb36f703af"/>
 	<extension url="https://fhir.nhs.uk/R4/StructureDefinition/Extension-SDS-ReliabilityConfiguration">
 		<extension url="nhsMHSSyncReplyMode">
@@ -30,11 +30,6 @@
 	<identifier>
 		<system value="https://fhir.nhs.uk/Id/nhsMhsFQDN"/>
 		<value value="192.168.128.11"/>
-	</identifier>
-	<!-- NhsMhsEndPoint -->
-	<identifier>
-		<system value="https://fhir.nhs.uk/Id/nhsMhsEndPoint"/>
-		<value value="https://192.168.128.11/reliablemessaging/reliablerequest"/>
 	</identifier>
 	<!-- NhsMhsPartyKey -->
 	<identifier>
@@ -70,5 +65,6 @@
 			<display value="Any"/>
 		</coding>
 	</payloadType>
-	<address value="https://192.168.128.11/"/>
+	<!-- NhsMhsEndPoint -->
+	<address value="https://192.168.128.11/reliablemessaging/reliablerequest"/>
 </Endpoint>

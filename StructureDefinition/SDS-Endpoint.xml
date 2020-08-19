@@ -607,55 +607,6 @@
         <map value="FiveWs.identifier" />
       </mapping>
     </element>
-    <element id="Endpoint.identifier:NhsMhsEndPoint">
-      <path value="Endpoint.identifier" />
-      <sliceName value="NhsMhsEndPoint" />
-      <short value="NHS Message Handling Service End Point" />
-      <definition value="Identifier for the service that is used to identify the endpoint across multiple disparate systems." />
-      <min value="1" />
-      <max value="*" />
-      <base>
-        <path value="Endpoint.identifier" />
-        <min value="0" />
-        <max value="*" />
-      </base>
-      <type>
-        <code value="Identifier" />
-      </type>
-      <fixedIdentifier>
-        <value value="https://fhir.nhs.uk/Id/nhsMhsEndPoint" />
-      </fixedIdentifier>
-      <condition value="ele-1" />
-      <constraint>
-        <key value="ele-1" />
-        <severity value="error" />
-        <human value="All FHIR elements must have a @value or children" />
-        <expression value="hasValue() or (children().count() &gt; id.count())" />
-        <xpath value="@value|f:*|h:div" />
-        <source value="http://hl7.org/fhir/StructureDefinition/Element" />
-      </constraint>
-      <isSummary value="true" />
-      <mapping>
-        <identity value="rim" />
-        <map value="n/a" />
-      </mapping>
-      <mapping>
-        <identity value="v2" />
-        <map value="CX / EI (occasionally, more often EI maps to a resource id or a URL)" />
-      </mapping>
-      <mapping>
-        <identity value="rim" />
-        <map value="II - The Identifier class is a little looser than the v3 type II because it allows URIs as well as registered OIDs or GUIDs.  Also maps to Role[classCode=IDENT]" />
-      </mapping>
-      <mapping>
-        <identity value="servd" />
-        <map value="Identifier" />
-      </mapping>
-      <mapping>
-        <identity value="w5" />
-        <map value="FiveWs.identifier" />
-      </mapping>
-    </element>
     <element id="Endpoint.identifier:NhsMhsPartyKey">
       <path value="Endpoint.identifier" />
       <sliceName value="NhsMhsPartyKey" />
@@ -1658,8 +1609,8 @@
     </element>
     <element id="Endpoint.address">
       <path value="Endpoint.address" />
-      <short value="The technical base address for connecting to this endpoint" />
-      <definition value="The uri that describes the actual end-point to connect to." />
+      <short value="The technical base address, NhsMhsEndPoint, for connecting to this endpoint" />
+      <definition value="The uri that describes the actual end-point to connect to. Represents the NHS Message Handling System (MHS) EndPoint." />
       <comment value="For rest-hook, and websocket, the end-point must be an http: or https: URL; for email, a mailto: url, for sms, a tel: url, and for message the endpoint can be in any form of url the server understands (usually, http: or mllp:). The URI is allowed to be relative; in which case, it is relative to the server end-point (since there may be more than one, clients should avoid using relative URIs)&#xA;&#xA;This address will be to the service base, without any parameters, or sub-services or resources tacked on.&#xA;&#xA;E.g. for a WADO-RS endpoint, the url should be &quot;https://pacs.hospital.org/wado-rs&quot;&#xA;&#xA;and not &quot;https://pacs.hospital.org/wado-rs/studies/1.2.250.1.59.40211.12345678.678910/series/1.2.250.1.59.40211.789001276.14556172.67789/instances/...&quot;." />
       <min value="1" />
       <max value="1" />
@@ -1771,16 +1722,6 @@
         <value value="https://fhir.nhs.uk/Id/nhsMhsFQDN" />
       </fixedIdentifier>
     </element>
-    <element id="Endpoint.identifier:NhsMhsEndPoint">
-      <path value="Endpoint.identifier" />
-      <sliceName value="NhsMhsEndPoint" />
-      <short value="NHS Message Handling Service End Point" />
-      <definition value="Identifier for the service that is used to identify the endpoint across multiple disparate systems." />
-      <min value="1" />
-      <fixedIdentifier>
-        <value value="https://fhir.nhs.uk/Id/nhsMhsEndPoint" />
-      </fixedIdentifier>
-    </element>
     <element id="Endpoint.identifier:NhsMhsPartyKey">
       <path value="Endpoint.identifier" />
       <sliceName value="NhsMhsPartyKey" />
@@ -1854,6 +1795,8 @@
     </element>
     <element id="Endpoint.address">
       <path value="Endpoint.address" />
+      <short value="The technical base address, NhsMhsEndPoint, for connecting to this endpoint" />
+      <definition value="The uri that describes the actual end-point to connect to. Represents the NHS Message Handling System (MHS) EndPoint." />
       <mustSupport value="true" />
     </element>
   </differential>
