@@ -11,7 +11,7 @@
     <description value="Spine Issue Code to FHIR Issue Type Map" />
     <purpose value="NHS Digital Spine" />
     <group>
-        <source value="https://fhir.nhs.uk/R4/CodeSystem/Spine-IssueCode" />
+        <source value="https://fhir.nhs.uk/R4/CodeSystem/Spine-ErrorOrWarningCode" />
         <target value="http://hl7.org/fhir/issue-type" />
         <element>
             <code value="NO_RECORD_FOUND" />
