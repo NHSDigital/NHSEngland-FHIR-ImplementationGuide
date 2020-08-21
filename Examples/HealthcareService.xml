@@ -1,0 +1,24 @@
+<HealthcareService xmlns="http://hl7.org/fhir">
+  <id value="54b0506d-49af-4245-9d40-d7d64902055e"/>
+    <identifier> 
+        <use value="official" />
+        <system value="https://fhir.nhs.uk/Id/ods-organization-code" />
+        <value value="A99968" />
+    </identifier> 
+    <active value="true"/> 
+    <providedBy> 
+        <identifier> 
+            <system value="https://fhir.nhs.uk/Id/ods-organization-code" />
+            <value value="RBA" />
+        </identifier> 
+    </providedBy> 
+    <location>
+      <reference value="urn:uuid:8a5d7d67-64fb-44ec-9802-2dc214bb3dcb"/>
+    </location>
+    <name value="SOMERSET BOWEL CANCER SCREENING CENTRE"/>
+    <telecom> 
+      <system value="phone"/> 
+      <value value="01823 333444"/> 
+      <use value="work"/> 
+    </telecom> 
+  </HealthcareService>
