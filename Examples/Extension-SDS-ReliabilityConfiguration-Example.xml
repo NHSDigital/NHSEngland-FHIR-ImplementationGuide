@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Endpoint xmlns="http://hl7.org/fhir">
+  <id value="Extension-SDS-ReliabilityConfiguration-Example" />
+  <!-- **************extension start************** -->
+    <extension url="https://fhir.nhs.uk/R4/StructureDefinition/Extension-SDS-ReliabilityConfiguration">
+        <extension url="nhsMHSSyncReplyMode">
+            <valueString value="MSHSignalsOnly" />
+        </extension>
+        <extension url="nhsMHSRetryInterval">
+            <valueString value="PT1M" />
+        </extension>
+        <extension url="nhsMHSRetries">
+            <valueInteger value="2" />
+        </extension>
+        <extension url="nhsMHSPersistDuration">
+            <valueString value="PT5M" />
+        </extension>
+        <extension url="nhsMHSDuplicateElimination">
+            <valueString value="always" />
+        </extension>
+        <extension url="nhsMHSAckRequested">
+            <valueString value="always" />
+        </extension>
+    </extension>
+  <!-- *************extension end *****************-->
+</Endpoint>
