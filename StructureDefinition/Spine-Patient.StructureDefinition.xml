@@ -58,7 +58,6 @@
     <element id="Patient.extension:nhsCommunication">
       <path value="Patient.extension" />
       <sliceName value="nhsCommunication" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -68,8 +67,6 @@
     <element id="Patient.extension:deathNotification">
       <path value="Patient.extension" />
       <sliceName value="deathNotification" />
-      <min value="0" />
-      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.nhs.uk/R4/StructureDefinition/Extension-UKCore-DeathNotificationStatus" />
@@ -78,7 +75,6 @@
     <element id="Patient.extension:medicalApplianceSupplier">
       <path value="Patient.extension" />
       <sliceName value="medicalApplianceSupplier" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -108,10 +104,6 @@
     </element>
     <element id="Patient.address">
       <path value="Patient.address" />
-      <min value="1" />
-    </element>
-    <element id="Patient.managingOrganization">
-      <path value="Patient.managingOrganization" />
       <min value="1" />
     </element>
     <element id="Patient.managingOrganization.identifier">
