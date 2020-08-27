@@ -39,7 +39,7 @@
                 <comment value="HTTP code: 500" />
             </target>
         </element>
-        <element>
+   <!--     <element>
             <concept>
                 <code value="UNABLE_TO_CALL_SERVICE" />
                 <display value="Unable to call service" />
@@ -54,7 +54,7 @@
 
             </concept>
 
-        </element>
+        </element> -->
         <element>
             <concept>
                 <code value="RESOURCE_NOT_FOUND" />
@@ -68,14 +68,14 @@
                 <comment value="HTTP code: 404" />
             </target>
         </element>
-        <element>
+       <!-- <element>
             <concept>
                 <code value="INVALID_RESOURCE_ID" />
                 <display value="Invalid resource ID" />
 
             </concept>
 
-        </element>
+        </element> -->
         <element>
             <concept>
                 <code value="INVALIDATED_RESOURCE" />
@@ -89,8 +89,8 @@
                 <comment value="HTTP code: 404" />
             </target>
         </element>
-        <element>
-            <!-- Search Outcomes -->
+      <!--  <element>
+           
             <concept>
                 <code value="INVALID_SEARCH_DATA" />
                 <display value="Invalid search data" />
@@ -107,7 +107,7 @@
 
         </element>
         <element>
-            <!-- Update Outcomes -->
+         
 
             <concept>
                 <code value="PRECONDITION_FAILED" />
@@ -123,7 +123,7 @@
 
             </concept>
 
-        </element>
+        </element> -->
         <element>
             <concept>
                 <code value="FORBIDDEN_UPDATE" />
@@ -137,6 +137,7 @@
                 <comment value="HTTP code: 403" />
             </target>
         </element>
+        <!--
         <element>
             <concept>
                 <code value="VALIDATION_ERROR" />
@@ -200,9 +201,9 @@
 
             </concept>
 
-        </element>
+        </element> -->
         <element>
-            <!--Polling outcomes -->
+            
             <concept>
                 <code value="POLLING_ID_NOT_FOUND" />
                 <display value="Polling ID not found" />
@@ -215,6 +216,7 @@
                 <comment value="HTTP code: 404" />
             </target>
         </element>
+        <!-- 
         <element>
             <concept>
                 <code value="POLLING_MESSAGE_FAILURE" />
@@ -223,6 +225,6 @@
             </concept>
 
         </element>
-
+    -->
     </group>
 </ConceptMap>
