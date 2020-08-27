@@ -1,181 +1,136 @@
 <CodeSystem xmlns="http://hl7.org/fhir">
-    <id value="Spine-ErrorOrWarningCode"/>
-    <url value="https://fhir.nhs.uk/R4/CodeSystem/Spine-ErrorOrWarningCode"/>
-    <version value="1.4.0"/>
-    <name value="Spine Issue, Error Or Warning Code"/>
-    <status value="active"/>
-    <date value="2018-10-17T00:00:00+00:00"/>
-    <publisher value="NHS Digital"/>
-    <contact>
-       <name value="Interoperability Team"/>
-       <telecom>
-          <system value="email"/>
-          <value value="interoperabilityteam@nhs.net"/>
-          <use value="work"/>
-       </telecom>
-    </contact>
-    <description value="A CodeSystem that identifies the Spine error or warning code in response to a request."/>
-    <copyright value="Copyright © 2017 NHS Digital"/>
-    <caseSensitive value="true"/>
-    <content value="complete"/>
-    <concept>
-       <code value="NO_RECORD_FOUND"/>
-       <display value="No record found"/>
-    </concept>
-    <concept>
-       <code value="PATIENT_NOT_FOUND"/>
-       <display value="Patient not found"/>
-    </concept>
-    <concept>
-       <code value="INVALID_NHS_NUMBER"/>
-       <display value="Invalid NHS number"/>
-    </concept>
-    <concept>
-       <code value="INVALID_CODE_SYSTEM"/>
-       <display value="Invalid code system"/>
-    </concept>
-    <concept>
-       <code value="INVALID_CODE_VALUE"/>
-       <display value="Invalid code value"/>
-    </concept>
-    <concept>
-       <code value="INVALID_VALUE"/>
-       <display value="An input field has an invalid value for its type"/>
-    </concept>
-    <concept>
-       <code value="INVALID_IDENTIFIER_SYSTEM"/>
-       <display value="Invalid identifier system"/>
-    </concept>
-    <concept>
-       <code value="INVALID_IDENTIFIER_VALUE"/>
-       <display value="Invalid identifier value"/>
-    </concept>
-    <concept>
-       <code value="CONFLICTING_VALUES"/>
-       <display value="Conflicting values have been specified in different fields"/>
-    </concept>
-    <concept>
-       <code value="INVALID_ELEMENT"/>
-       <display value="Invalid element"/>
-    </concept>
-    <concept>
-       <code value="AUTHOR_CREDENTIALS_ERROR"/>
-       <display value="Author credentials error"/>
-    </concept>
-    <concept>
-       <code value="INVALID_PARAMETER"/>
-       <display value="Invalid parameter"/>
-    </concept>
-    <concept>
-       <code value="REQUEST_UNMATCHED"/>
-       <display value="Request does not match authorisation token"/>
-    </concept>
-    <concept>
-       <code value="MESSAGE_NOT_WELL_FORMED"/>
-       <display value="Message not well formed"/>
-    </concept>
-    <concept>
-       <code value="NO_PATIENT_CONSENT"/>
-       <display value="Patient has not provided consent to share data"/>
-    </concept>
-    <concept>
-       <code value="NO_ORGANISATIONAL_CONSENT"/>
-       <display value="Organisation has not provided consent to share data"/>
-    </concept>
-    <concept>
-       <code value="BAD_REQUEST"/>
-       <display value="Bad request"/>
-    </concept>
-    <concept>
-       <code value="INVALID_RESOURCE"/>
-       <display value="Invalid validation of resource"/>
-    </concept>
-    <concept>
-       <code value="ORGANISATION_NOT_FOUND"/>
-       <display value="Organisation not found"/>
-    </concept>
-    <concept>
-       <code value="PRACTITIONER_NOT_FOUND"/>
-       <display value="Practitioner not found"/>
-    </concept>
-    <concept>
-       <code value="PATIENT_SENSITIVE"/>
-       <display value="Patient sensitive"/>
-    </concept>
-    <concept>
-       <code value="NO_RELATIONSHIP"/>
-       <display value="No legitimate relationship exists with this patient"/>
-    </concept>
-    <concept>
-       <code value="FHIR_CONSTRAINT_VIOLATION"/>
-       <display value="FHIR constraint violated"/>
-    </concept>
-    <concept>
-       <code value="FLAG_ALREADY_SET"/>
-       <display value="Flag value was already set"/>
-    </concept>
-    <concept>
-       <code value="INVALID_REQUEST_STATE"/>
-       <display value="The request exists but is not in an appropriate state for the call to succeed"/>
-    </concept>
-    <concept>
-       <code value="INVALID_REQUEST_TYPE"/>
-       <display value="The type of request is not supported by the API call"/>
-    </concept>
-    <concept>
-       <code value="ACCESS DENIED"/>
-       <display value="Access has been denied to process this request"/>
-    </concept>
-    <concept>
-      <code value="ASID_CHECK_FAILED"/>	A
-      <display value="The sender or receiver's ASID is not authorised for this interaction"/>
-    </concept>
-    <concept>
-       <code value="MISSING_OR_INVALID_HEADER"/>
-       <display value="There is a required header missing or invalid"/>
-    </concept>
-    <concept>
-       <code value="ACCESS_DENIED_SSL"/>
-       <display value="SSL Protocol or Cipher requirements not met"/>
-    </concept>
-    <concept>
-       <code value="MSG_RESOURCE_ID_FAIL"/>
-       <display value="Client is not permitted to assign an id"/>
-    </concept>
-    <concept>
-       <code value="DUPLICATE_REJECTED"/>
-       <display value="Create would lead to creation of a duplicate resource"/>
-    </concept>
-    <concept>
-       <code value="RESOURCE_CREATED"/>
-       <display value="New resource created"/>
-    </concept>
-    <concept>
-       <code value="RESOURCE_DELETED"/>
-       <display value="Resource removed"/>
-    </concept>
-    <concept>
-       <code value="RESOURCE_UPDATED"/>
-       <display value="Resource has been successfully updated"/>
-    </concept>
-    <concept>
-       <code value="INVALID_REQUEST_MESSAGE"/>
-       <display value="Invalid request message"/>
-    </concept>
-    <concept>
-       <code value="INTERNAL_SERVER_ERROR"/>
-       <display value="Unexpected internal server error"/>
-    </concept>
-    <concept>
-       <code value="INVALID_PATIENT_DEMOGRAPHICS"/>
-       <display value="Invalid patient demographics"/>
-    </concept>
-    <concept>
-       <code value="NOT_IMPLEMENTED"/>
-       <display value="Not implemented"/>
-    </concept>
-    <concept>
-       <code value="REFERENCE_NOT_FOUND"/>
-       <display value="Reference not found"/>
-    </concept>
- </CodeSystem>
+   <id value="Spine-ErrorOrWarningCode" />
+   <url value="https://fhir.nhs.uk/R4/CodeSystem/Spine-ErrorOrWarningCode" />
+   <version value="2.0.0" />
+   <name value="Spine Issue, Error Or Warning Code" />
+   <status value="active" />
+   <date value="2020-08-27T00:00:00+00:00" />
+   <publisher value="NHS Digital" />
+   <contact>
+      <name value="Interoperability Team" />
+      <telecom>
+         <system value="email" />
+         <value value="interoperabilityteam@nhs.net" />
+         <use value="work" />
+      </telecom>
+   </contact>
+   <description value="A CodeSystem that identifies the Spine error or warning code in response to a request." />
+   <copyright value="Copyright © 2020 NHS Digital" />
+   <caseSensitive value="true" />
+   <content value="complete" />
+   <!-- General Outcomes -->
+   <concept>
+      <code value="ACCESS DENIED" />
+      <display value="Access has been denied to process this request" />
+      <definition value="Used when the user does not have permission for a particular request. e.g. when their ASID does not have the correct interactions attached to it." />
+   </concept>
+   <concept>
+      <code value="FAILURE_TO_PROCESS_MESSAGE" />
+      <display value="Failure to process message" />
+      <definition value="A default message when something really bad has happened that the system could not handle." />
+   </concept>
+   <concept>
+      <code value="UNABLE_TO_CALL_SERVICE" />
+      <display value="Unable to call service" />
+      <definition value="For a synchronous request, the downstream domain processing has not completed within the configured timeout period." />
+   </concept>
+   <concept>
+      <code value="UNSUPPORTED_SERVICE" />
+      <display value="Unsupported service" />
+      <definition value="The service the user requested is an endpoint that does not exist - so is unsupported. e.g. /Patient/9999999999/Pets" />
+   </concept>
+   <concept>
+      <code value="RESOURCE_NOT_FOUND" />
+      <display value="Resource not found" />
+      <definition value="The resource was not found." />
+   </concept>
+   <concept>
+      <code value="INVALID_RESOURCE_ID" />
+      <display value="Invalid resource ID" />
+      <definition value="The resource ID was not valid. For example a NHS Number is presented which is not a valid NHS Number." />
+   </concept>
+   <concept>
+      <code value="INVALIDATED_RESOURCE" />
+      <display value="Invalidated resource" />
+      <definition value="The resource has been invalidated so could not be returned." />
+   </concept>
+   <!-- Search Outcomes -->
+   <concept>
+      <code value="INVALID_SEARCH_DATA" />
+      <display value="Invalid search data" />
+      <definition value="The search parameters are invalid. A description of what exactly is at fault will be added to the display." />
+   </concept>
+   <concept>
+      <code value="TOO_MANY_MATCHES" />
+      <display value="Too many matches" />
+      <definition value="Too many matches were found - user should refine their search parameters." />
+   </concept>
+   <!-- Update Outcomes -->
+
+   <concept>
+      <code value="PRECONDITION_FAILED" />
+      <display value="Precondition failed" />
+      <definition value="Request missing basic requirements such as If-Match header (or invalid headers)." />
+   </concept>
+   <concept>
+      <code value="RESOURCE_VERSION_MISMATCH" />
+      <display value="Resource version mismatch" />
+      <definition value="The resource version has changed since your last read, so the update has been rejected." />
+   </concept>
+   <concept>
+      <code value="FORBIDDEN_UPDATE" />
+      <display value="Forbidden update" />
+      <definition value="The user is not permitted to update certain resources or elements - a detailed description will be added to the display. For example - updating a sensitive patient or adding a formal death notification is only permitted from certain systems." />
+   </concept>
+   <concept>
+      <code value="VALIDATION_ERROR" />
+      <display value="Validation error" />
+      <definition value="This it the 'default' error thrown when no others are applicable." />
+   </concept>
+   <concept>
+      <code value="INVALID_UPDATE" />
+      <display value="Invalid update" />
+      <definition value="The update was invalid - a detailed description will be added to the display." />
+   </concept>
+   <concept>
+      <code value="MISSING_VALUE" />
+      <display value="Missing value" />
+      <definition value="There was a missing value in the request. For example - a name update that is missing the surname. The missing value will be presented in the display." />
+   </concept>
+   <concept>
+      <code value="INVALID_VALUE" />
+      <display value="Invalid value" />
+      <definition value="There was an invalid value in the request. For example - a name update where the surname is too long. The invalid value and field will be presented in the display." />
+   </concept>
+   <concept>
+      <code value="UNSUPPORTED_VALUE" />
+      <display value="Unsupported value" />
+      <definition value="There was an unsupported value in the request. The value may be valid in the schema - however it could be a legacy value that we do not allow to be set anymore. For example - setting the death notification status to 'removed'. The invalid value and field will be presented in the display." />
+   </concept>
+   <concept>
+      <code value="TOO_FEW_VALUES_SUBMITTED" />
+      <display value="Too few values submitted" />
+      <definition value="The field in question has a minimum number of items and the user sent too few." />
+   </concept>
+   <concept>
+      <code value="TOO_MANY_VALUES_SUBMITTED" />
+      <display value="Too many values submitted" />
+      <definition value="The field in question has a maximum number of items and the user sent too many." />
+   </concept>
+   <concept>
+      <code value="ADDITIONAL_PROPERTIES" />
+      <display value="Additional properties" />
+      <definition value="The user sent additional properties within the dictionary. For example sending a patient patch and attempting to add 'pets', which is not an allowed field within the patient resource." />
+   </concept>
+   <!--Polling outcomes -->
+   <concept>
+      <code value="POLLING_ID_NOT_FOUND" />
+      <display value="Polling ID not found" />
+      <definition value="When polling the ID was not found - or it was not applicable such as a non polling ID." />
+   </concept>
+   <concept>
+      <code value="POLLING_MESSAGE_FAILURE" />
+      <display value="Polling message failure" />
+      <definition value="When polling an ID, a message was found to be in a failed state, so there is nothing else to be done and should be considered a failure." />
+   </concept>
+</CodeSystem>
