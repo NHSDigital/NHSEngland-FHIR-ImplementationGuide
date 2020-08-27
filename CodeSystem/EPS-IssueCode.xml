@@ -54,12 +54,12 @@
         <display value="Unable to process message – information missing"/>
         <definition value="The prescription message has failed content validation at the Spine as mandatory data is missing. The System must add all mandatory data to the message and re-submit the prescription to the Spine" />
     </concept>
-     Spine Eror RESOURCE_VERSION_MISMATCH"
+-->
     <concept>
-        <code value="0009"/>
+        <code value="INVALID_MESSAGE"/>
         <display value="Invalid message"/>
         <definition value="The prescription message has failed structural validation at the Spine. A defect report should be raised against the local System or the Spine (whichever is in error). The prescriber must be notified accordingly to use a paper FP10 prescription." />
-    </concept> -->
+    </concept> 
     <concept>
         <!-- 0010 -->
         <code value="INVALID_NUMBER_MEDICATIONREQUESTS"/>

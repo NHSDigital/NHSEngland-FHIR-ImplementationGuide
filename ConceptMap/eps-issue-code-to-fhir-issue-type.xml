@@ -83,5 +83,15 @@
                 <comment value="HTTP code: 400" />
             </target>
         </element>
+        <element>
+            <code value="INVALID_MESSAGE"/>
+            <display value="Invalid message"/>
+            <target>
+                <code value="structure" />
+                <display value="Structural Issue" />
+                <equivalence value="specializes" />
+                <comment value="HTTP code: 400" />
+            </target>
+        </element>
     </group>
 </ConceptMap>
