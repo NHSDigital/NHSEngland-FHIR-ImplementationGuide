@@ -17,7 +17,6 @@
             <concept>
                 <code value="ACCESS DENIED" />
                 <display value="Access has been denied to process this request" />
-
             </concept>
             <target>
                 <code value="forbidden" />
@@ -30,7 +29,6 @@
             <concept>
                 <code value="FAILURE_TO_PROCESS_MESSAGE" />
                 <display value="Failure to process message" />
-
             </concept>
             <target>
                 <code value="processing" />
@@ -39,27 +37,10 @@
                 <comment value="HTTP code: 500" />
             </target>
         </element>
-   <!--     <element>
-            <concept>
-                <code value="UNABLE_TO_CALL_SERVICE" />
-                <display value="Unable to call service" />
-
-            </concept>
-
-        </element>
-        <element>
-            <concept>
-                <code value="UNSUPPORTED_SERVICE" />
-                <display value="Unsupported service" />
-
-            </concept>
-
-        </element> -->
         <element>
             <concept>
                 <code value="RESOURCE_NOT_FOUND" />
                 <display value="Resource not found" />
-
             </concept>
             <target>
                 <code value="not-found" />
@@ -68,19 +49,10 @@
                 <comment value="HTTP code: 404" />
             </target>
         </element>
-       <!-- <element>
-            <concept>
-                <code value="INVALID_RESOURCE_ID" />
-                <display value="Invalid resource ID" />
-
-            </concept>
-
-        </element> -->
         <element>
             <concept>
                 <code value="INVALIDATED_RESOURCE" />
                 <display value="Invalidated resource" />
-
             </concept>
             <target>
                 <code value="not-found" />
@@ -89,41 +61,6 @@
                 <comment value="HTTP code: 404" />
             </target>
         </element>
-      <!--  <element>
-           
-            <concept>
-                <code value="INVALID_SEARCH_DATA" />
-                <display value="Invalid search data" />
-
-            </concept>
-
-        </element>
-        <element>
-            <concept>
-                <code value="TOO_MANY_MATCHES" />
-                <display value="Too many matches" />
-
-            </concept>
-
-        </element>
-        <element>
-         
-
-            <concept>
-                <code value="PRECONDITION_FAILED" />
-                <display value="Precondition failed" />
-
-            </concept>
-
-        </element>
-        <element>
-            <concept>
-                <code value="RESOURCE_VERSION_MISMATCH" />
-                <display value="Resource version mismatch" />
-
-            </concept>
-
-        </element> -->
         <element>
             <concept>
                 <code value="FORBIDDEN_UPDATE" />
@@ -137,77 +74,10 @@
                 <comment value="HTTP code: 403" />
             </target>
         </element>
-        <!--
         <element>
-            <concept>
-                <code value="VALIDATION_ERROR" />
-                <display value="Validation error" />
-
-            </concept>
-
-        </element>
-        <element>
-            <concept>
-                <code value="INVALID_UPDATE" />
-                <display value="Invalid update" />
-
-            </concept>
-
-        </element>
-        <element>
-            <concept>
-                <code value="MISSING_VALUE" />
-                <display value="Missing value" />
-
-            </concept>
-
-        </element>
-        <element>
-            <concept>
-                <code value="INVALID_VALUE" />
-                <display value="Invalid value" />
-
-            </concept>
-
-        </element>
-        <element>
-            <concept>
-                <code value="UNSUPPORTED_VALUE" />
-                <display value="Unsupported value" />
-
-            </concept>
-
-        </element>
-        <element>
-            <concept>
-                <code value="TOO_FEW_VALUES_SUBMITTED" />
-                <display value="Too few values submitted" />
-
-            </concept>
-
-        </element>
-        <element>
-            <concept>
-                <code value="TOO_MANY_VALUES_SUBMITTED" />
-                <display value="Too many values submitted" />
-
-            </concept>
-
-        </element>
-        <element>
-            <concept>
-                <code value="ADDITIONAL_PROPERTIES" />
-                <display value="Additional properties" />
-
-            </concept>
-
-        </element> -->
-        <element>
-            
             <concept>
                 <code value="POLLING_ID_NOT_FOUND" />
                 <display value="Polling ID not found" />
-
             </concept>
             <target>
                 <code value="not-found" />
@@ -216,15 +86,5 @@
                 <comment value="HTTP code: 404" />
             </target>
         </element>
-        <!-- 
-        <element>
-            <concept>
-                <code value="POLLING_MESSAGE_FAILURE" />
-                <display value="Polling message failure" />
-
-            </concept>
-
-        </element>
-    -->
     </group>
 </ConceptMap>
