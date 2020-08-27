@@ -13,8 +13,7 @@
         </include>
         <include>
             <system value="https://fhir.nhs.uk/R4/CodeSystem/EPS-IssueCode"/>
-            <version value="1.0.0"/>
+            <version value="1.1.0"/>
         </include>
     </compose>
-  
 </ValueSet>
