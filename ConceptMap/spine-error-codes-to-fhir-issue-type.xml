@@ -1,7 +1,7 @@
 <ConceptMap xmlns="http://hl7.org/fhir">
     <id value="spine-error-codes-to-fhir-issue-type" />
     <url value="https://fhir.nhs.uk/R4/ConceptMap/spine-error-codes-to-fhir-issue-type" />
-    <version value="1.0.0" />
+    <version value="2.0.0" />
     <name value="spine-error-codes-to-fhir-issue-type" />
     <title value="Spine Error or Issue Code to FHIR Issue Type Map" />
     <status value="draft" />
@@ -14,354 +14,215 @@
         <source value="https://fhir.nhs.uk/R4/CodeSystem/Spine-ErrorOrWarningCode" />
         <target value="http://hl7.org/fhir/issue-type" />
         <element>
-            <code value="NO_RECORD_FOUND" />
-            <display value="No record found" />
-            <target>
-                <code value="not-found" />
-                <display value="Not Found" />
-                <equivalence value="specializes" />
-                <comment value="HTTP code: 404"/>
-            </target>
-        </element>
-        <element>
-            <code value="PATIENT_NOT_FOUND" />
-            <display value="Patient not found" />
-            <target>
-                <code value="not-found" />
-                <display value="Not Found" />
-                <equivalence value="specializes" />
-                <comment value="HTTP code: 404"/>
-            </target>
-        </element>
-        <element>
-            <code value="ORGANISATION_NOT_FOUND" />
-            <display value="Organisation not found" />
-            <target>
-                <code value="not-found" />
-                <display value="Not Found" />
-                <equivalence value="specializes" />
-                <comment value="HTTP code: 404"/>
-            </target>
-        </element>
-        <element>
-            <code value="PRACTITIONER_NOT_FOUND" />
-            <display value="Practitioner not found" />
-            <target>
-                <code value="not-found" />
-                <display value="Not Found" />
-                <equivalence value="specializes" />
-                <comment value="HTTP code: 404"/>
-            </target>
-        </element>
-        <element>
-            <code value="INVALID_NHS_NUMBER" />
-            <display value="Invalid NHS number" />
-            <target>
-                <code value="value" />
-                <display value="Element value invalid" />
-                <equivalence value="specializes" />
-                <comment value="HTTP code: 400"/>
-            </target>
-        </element>
-        <element>
-            <code value="INVALID_REQUEST_MESSAGE" />
-            <display value="Invalid Request Message" />
-            <target>
-                <code value="value" />
-                <display value="Element value invalid" />
-                <equivalence value="specializes" />
-                <comment value="HTTP code: 400"/>
-            </target>
-        </element>
-        <element>
-            <code value="INVALID_IDENTIFIER_SYSTEM" />
-            <display value="Invalid identifier system" />
-            <target>
-                <code value="value" />
-                <display value="Element value invalid" />
-                <equivalence value="specializes" />
-                <comment value="HTTP code: 400"/>
-            </target>
-        </element>
-        <element>
-            <code value="INVALID_IDENTIFIER_VALUE" />
-            <display value="Invalid identifier value" />
-            <target>
-                <code value="value" />
-                <display value="Element value invalid" />
-                <equivalence value="specializes" />
-                <comment value="HTTP code: 400"/>
-            </target>
-        </element>
-        <element>
-            <code value="INVALID_ELEMENT" />
-            <display value="Invalid element" />
-            <target>
-                <code value="value" />
-                <display value="Element value invalid" />
-                <equivalence value="specializes" />
-                <comment value="HTTP code: 400"/>
-            </target>
-        </element>
-        <element>
-            <code value="INVALID_PATIENT_DEMOGRAPHICS" />
-            <display value="Invalid patient demographics" />
-            <target>
-                <code value="business-rule" />
-                <display value="Business Rule Violation" />
-                <equivalence value="specializes" />
-                <comment value="HTTP code: 400"/>
-            </target>
-        </element>
-        <element>
-            <code value="REQUEST_UNMATCHED" />
-            <display value="Request does not match authorisation token" />
-            <target>
-                <code value="invalid" />
-                <display value="Invalid Content" />
-                <equivalence value="specializes" />
-                <comment value="HTTP code: 400"/>
-            </target>
-        </element>
-        <element>
-            <code value="INVALID_CODE_SYSTEM" />
-            <display value="Invalid code system" />
-            <target>
-                <code value="code-invalid" />
-                <display value="Invalid Code" />
-                <equivalence value="specializes" />
-                <comment value="HTTP code: 400"/>
-            </target>
-        </element>
-        <element>
-            <code value="INVALID_CODE_VALUE" />
-            <display value="Invalid code value" />
-            <target>
-                <code value="code-invalid" />
-                <display value="Invalid Code" />
-                <equivalence value="specializes" />
-                <comment value="HTTP code: 400"/>
-            </target>
-        </element>
-        <element>
-            <code value="NO_PATIENT_CONSENT" />
-            <display value="Patient has not provided consent to share data" />
+            <concept>
+                <code value="ACCESS DENIED" />
+                <display value="Access has been denied to process this request" />
+
+            </concept>
             <target>
                 <code value="forbidden" />
                 <display value="Forbidden" />
                 <equivalence value="specializes" />
-                <comment value="HTTP code: 403"/>
+                <comment value="HTTP code: 401" />
             </target>
         </element>
         <element>
-            <code value="NO_ORGANISATIONAL_CONSENT" />
-            <display value="Organisation has not provided consent to share data" />
-            <target>
-                <code value="forbidden" />
-                <display value="Forbidden" />
-                <equivalence value="specializes" />
-                <comment value="HTTP code: 403"/>
-            </target>
-        </element>
-        <element>
-            <code value="ACCESS DENIED" />
-            <display value="Access has been denied to process this request" />
-            <target>
-                <code value="forbidden" />
-                <display value="Forbidden" />
-                <equivalence value="specializes" />
-                <comment value="HTTP code: 403"/>
-            </target>
-        </element>
-        <element>
-            <code value="ACCESS_DENIED_SSL" />
-            <display value="SSL Protocol or Cipher requirements not met" />
-            <target>
-                <code value="forbidden" />
-                <display value="Forbidden" />
-                <equivalence value="specializes" />
-                <comment value="HTTP code: 403"/>
-            </target>
-        </element>
-        <element>
-            <code value="ASID_CHECK_FAILED" />
-            <display value="The sender or receiver's ASID is not authorised for this interaction" />
-            <target>
-                <code value="forbidden" />
-                <display value="Forbidden" />
-                <equivalence value="specializes" />
-                <comment value="HTTP code: 403"/>
-            </target>
-        </element>
-        <element>
-            <code value="AUTHOR_CREDENTIALS_ERROR" />
-            <display value="Author credentials error" />
-            <target>
-                <code value="forbidden" />
-                <display value="Forbidden" />
-                <equivalence value="specializes" />
-                <comment value="HTTP code: 401"/>
-            </target>
-        </element>
-        <element>
-            <code value="MSG_RESOURCE_ID_FAIL" />
-            <display value="Client is not permitted to assign an id." />
-            <target>
-                <code value="forbidden" />
-                <display value="Forbidden" />
-                <equivalence value="specializes" />
-                <comment value="HTTP code: 405"/>
-            </target>
-        </element>
-        <element>
-            <code value="INVALID_RESOURCE" />
-            <display value="Invalid validation of resource." />
-            <target>
-                <code value="invalid" />
-                <display value="Invalid Content" />
-                <equivalence value="specializes" />
-                <comment value="HTTP code: 422"/>
-            </target>
-        </element>
-        <element>
-            <code value="INVALID_PARAMETER" />
-            <display value="Invalid parameter." />
-            <target>
-                <code value="invalid" />
-                <display value="Invalid Content" />
-                <equivalence value="specializes" />
-                <comment value="HTTP code: 422"/>
-            </target>
-        </element>
-        <element>
-            <code value="REFERENCE_NOT_FOUND" />
-            <display value="Referenced resource not found." />
-            <target>
-                <code value="invalid" />
-                <display value="Invalid Content" />
-                <equivalence value="specializes" />
-                <comment value="HTTP code: 422"/>
-            </target>
-        </element>
-        <element>
-            <code value="BAD_REQUEST" />
-            <display value="Bad request." />
-            <target>
-                <code value="invalid" />
-                <display value="Invalid Content" />
-                <equivalence value="specializes" />
-                <comment value="HTTP code: 400"/>
-            </target>
-        </element>
-        <element>
-            <code value="MISSING_OR_INVALID_HEADER" />
-            <display value="There is a required header missing or invalid." />
-            <target>
-                <code value="invalid" />
-                <display value="Invalid Content" />
-                <equivalence value="specializes" />
-                <comment value="HTTP code: 400"/>
-            </target>
-        </element>
-        <element>
-            <code value="WITHDRAWN" />
-            <display value="Event message type has been withdrawn." />
-            <target>
-                <code value="invalid" />
-                <display value="Invalid Content" />
-                <equivalence value="specializes" />
-                <comment value="HTTP code: 400"/>
-            </target>
-        </element>
-        <element>
-            <code value="DUPLICATE_REJECTED" />
-            <display value="Create would lead to creation of a duplicate resource." />
-            <target>
-                <code value="duplicate" />
-                <display value="Duplicate" />
-                <equivalence value="specializes" />
-                <comment value="HTTP code: 422"/>
-            </target>
-        </element>
-        <element>
-            <code value="MESSAGE_NOT_WELL_FORMED" />
-            <display value="Message not well formed" />
-            <target>
-                <code value="structure" />
-                <display value="Structural Issue" />
-                <equivalence value="specializes" />
-                <comment value="HTTP code: 400"/>
-            </target>
-        </element>
-        <element>
-            <code value="NOT_IMPLEMENTED" />
-            <display value="FHIR resource or operation not implemented at server" />
-            <target>
-                <code value="not-supported" />
-                <display value="Content not supported" />
-                <equivalence value="specializes" />
-                <comment value="HTTP code: 501"/>
-            </target>
-        </element>
-        <element>
-            <code value="INTERNAL_SERVER_ERROR" />
-            <display value="Unexpected internal server error." />
+            <concept>
+                <code value="FAILURE_TO_PROCESS_MESSAGE" />
+                <display value="Failure to process message" />
+
+            </concept>
             <target>
                 <code value="processing" />
                 <display value="Processing Failure" />
                 <equivalence value="specializes" />
-                <comment value="HTTP code: 500"/>
+                <comment value="HTTP code: 500" />
             </target>
         </element>
         <element>
-            <code value="RESOURCE_CREATED" />
-            <display value="New resource created." />
+            <concept>
+                <code value="UNABLE_TO_CALL_SERVICE" />
+                <display value="Unable to call service" />
+
+            </concept>
+            <target></target>
+        </element>
+        <element>
+            <concept>
+                <code value="UNSUPPORTED_SERVICE" />
+                <display value="Unsupported service" />
+
+            </concept>
+            <target></target>
+        </element>
+        <element>
+            <concept>
+                <code value="RESOURCE_NOT_FOUND" />
+                <display value="Resource not found" />
+
+            </concept>
             <target>
-                <code value="informational" />
-                <display value="Informational Note" />
+                <code value="not-found" />
+                <display value="Not Found" />
                 <equivalence value="specializes" />
-                <comment value="HTTP code: 201"/>
+                <comment value="HTTP code: 404" />
             </target>
         </element>
         <element>
-            <code value="RESOURCE_DELETED" />
-            <display value="Resource removed." />
+            <concept>
+                <code value="INVALID_RESOURCE_ID" />
+                <display value="Invalid resource ID" />
+
+            </concept>
+            <target></target>
+        </element>
+        <element>
+            <concept>
+                <code value="INVALIDATED_RESOURCE" />
+                <display value="Invalidated resource" />
+
+            </concept>
             <target>
-                <code value="informational" />
-                <display value="Informational Note" />
+                <code value="not-found" />
+                <display value="Not Found" />
                 <equivalence value="specializes" />
-                <comment value="HTTP code: 200. This differs from FHIR specification which is 200 if response contains payload. 204 if no payload or 202 if server is non commital."/>
+                <comment value="HTTP code: 404" />
             </target>
         </element>
         <element>
-            <code value="RESOURCE_UPDATED" />
-            <display value="Resource has been successfully updated." />
+            <!-- Search Outcomes -->
+            <concept>
+                <code value="INVALID_SEARCH_DATA" />
+                <display value="Invalid search data" />
+
+            </concept>
+            <target></target>
+        </element>
+        <element>
+            <concept>
+                <code value="TOO_MANY_MATCHES" />
+                <display value="Too many matches" />
+
+            </concept>
+            <target></target>
+        </element>
+        <element>
+            <!-- Update Outcomes -->
+
+            <concept>
+                <code value="PRECONDITION_FAILED" />
+                <display value="Precondition failed" />
+
+            </concept>
+            <target></target>
+        </element>
+        <element>
+            <concept>
+                <code value="RESOURCE_VERSION_MISMATCH" />
+                <display value="Resource version mismatch" />
+
+            </concept>
+            <target></target>
+        </element>
+        <element>
+            <concept>
+                <code value="FORBIDDEN_UPDATE" />
+                <display value="Forbidden update" />
+
+            </concept>
             <target>
-                <code value="informational" />
-                <display value="Informational Note" />
+                <code value="forbidden" />
+                <display value="Forbidden" />
                 <equivalence value="specializes" />
-                <comment value="HTTP code: 200"/>
+                <comment value="HTTP code: 403" />
             </target>
         </element>
         <element>
-            <code value="DEPRECATED" />
-            <display value="Event message type has been deprecated." />
+            <concept>
+                <code value="VALIDATION_ERROR" />
+                <display value="Validation error" />
+
+            </concept>
+            <target></target>
+        </element>
+        <element>
+            <concept>
+                <code value="INVALID_UPDATE" />
+                <display value="Invalid update" />
+
+            </concept>
+            <target></target>
+        </element>
+        <element>
+            <concept>
+                <code value="MISSING_VALUE" />
+                <display value="Missing value" />
+
+            </concept>
+            <target></target>
+        </element>
+        <element>
+            <concept>
+                <code value="INVALID_VALUE" />
+                <display value="Invalid value" />
+
+            </concept>
+            <target></target>
+        </element>
+        <element>
+            <concept>
+                <code value="UNSUPPORTED_VALUE" />
+                <display value="Unsupported value" />
+
+            </concept>
+            <target></target>
+        </element>
+        <element>
+            <concept>
+                <code value="TOO_FEW_VALUES_SUBMITTED" />
+                <display value="Too few values submitted" />
+
+            </concept>
+            <target></target>
+        </element>
+        <element>
+            <concept>
+                <code value="TOO_MANY_VALUES_SUBMITTED" />
+                <display value="Too many values submitted" />
+
+            </concept>
+            <target></target>
+        </element>
+        <element>
+            <concept>
+                <code value="ADDITIONAL_PROPERTIES" />
+                <display value="Additional properties" />
+
+            </concept>
+            <target></target>
+        </element>
+        <element>
+            <!--Polling outcomes -->
+            <concept>
+                <code value="POLLING_ID_NOT_FOUND" />
+                <display value="Polling ID not found" />
+
+            </concept>
             <target>
-                <code value="informational" />
-                <display value="Informational Note" />
+                <code value="not-found" />
+                <display value="Not Found" />
                 <equivalence value="specializes" />
-                <comment value="HTTP code: 202"/>
+                <comment value="HTTP code: 404" />
             </target>
         </element>
         <element>
-            <code value="NO_LONGER_SUPPORTED" />
-            <display value="Event message type is no longer supported." />
-            <target>
-                <code value="informational" />
-                <display value="Informational Note" />
-                <equivalence value="specializes" />
-                <comment value="HTTP code: 202"/>
-            </target>
+            <concept>
+                <code value="POLLING_MESSAGE_FAILURE" />
+                <display value="Polling message failure" />
+
+            </concept>
+            <target></target>
         </element>
+
     </group>
 </ConceptMap>
