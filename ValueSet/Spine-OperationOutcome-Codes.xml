@@ -87,7 +87,7 @@
         <contains>
             <system value="https://fhir.nhs.uk/R4/CodeSystem/Spine-ErrorOrWarningCode"/>
             <version value="2.0.0"/>
-            <code value="ACCESS DENIED"/>
+            <code value="ACCESS_DENIED"/>
             <display value="Access has been denied to process this request"/>
         </contains>
         <contains>

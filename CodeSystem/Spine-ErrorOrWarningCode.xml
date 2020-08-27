@@ -20,7 +20,7 @@
    <content value="complete" />
    <!-- General Outcomes -->
    <concept>
-      <code value="ACCESS DENIED" />
+      <code value="ACCESS_DENIED" />
       <display value="Access has been denied to process this request" />
       <definition value="Used when the user does not have permission for a particular request. e.g. when their ASID does not have the correct interactions attached to it." />
    </concept>

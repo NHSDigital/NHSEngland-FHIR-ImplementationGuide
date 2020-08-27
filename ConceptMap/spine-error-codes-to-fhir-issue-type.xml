@@ -15,7 +15,7 @@
         <target value="http://hl7.org/fhir/issue-type" />
         <element>
             <concept>
-                <code value="ACCESS DENIED" />
+                <code value="ACCESS_DENIED" />
                 <display value="Access has been denied to process this request" />
             </concept>
             <target>
@@ -25,7 +25,7 @@
                 <comment value="HTTP code: 401" />
             </target>
         </element>
-        <element>
+    <!--    <element>
             <concept>
                 <code value="FAILURE_TO_PROCESS_MESSAGE" />
                 <display value="Failure to process message" />
@@ -85,6 +85,6 @@
                 <equivalence value="specializes" />
                 <comment value="HTTP code: 404" />
             </target>
-        </element>
+        </element> -->
     </group>
 </ConceptMap>
