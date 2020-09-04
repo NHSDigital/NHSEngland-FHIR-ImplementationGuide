@@ -2,7 +2,7 @@
 <ValueSet xmlns="http://hl7.org/fhir">
     <id value="Spine-OperationOutcome-Codes"/>
     <url value="https://fhir.nhs.uk/R4/ValueSet/Spine-OperationOutcome-Codes"/>
-    <version value="1.0.1"/>
+    <version value="1.0.2"/>
     <name value="Spine OperationOutcome Codes"/>
     <status value="draft"/>
     <description value="Spine OperationOutcome Codes"/>
@@ -13,7 +13,7 @@
         </include>
         <include>
             <system value="https://fhir.nhs.uk/R4/CodeSystem/EPS-IssueCode"/>
-            <version value="1.1.0"/>
+            <version value="1.1.1"/>
         </include>
     </compose>
     <expansion>
@@ -26,7 +26,7 @@
         </parameter>
         <parameter>
             <name value="version"/>
-            <valueUri value="https://fhir.nhs.uk/R4/CodeSystem/EPS-IssueCode|1.1.0"/>
+            <valueUri value="https://fhir.nhs.uk/R4/CodeSystem/EPS-IssueCode|1.1.1"/>
         </parameter>
         <parameter>
             <name value="count"/>
@@ -170,51 +170,57 @@
         </contains>
         <contains>
             <system value="https://fhir.nhs.uk/R4/CodeSystem/EPS-IssueCode"/>
-            <version value="1.1.0"/>
+            <version value="1.1.1"/>
             <code value="INVALID_REPEAT_COUNT"/>
             <display value="Repeat count should be between 1 and 99"/>
         </contains>
         <contains>
             <system value="https://fhir.nhs.uk/R4/CodeSystem/EPS-IssueCode"/>
-            <version value="1.1.0"/>
+            <version value="1.1.1"/>
             <code value="INVALID_NUMBER_MEDICATIONREQUESTS"/>
             <display value="Number of items on a prescription should be between 1 and 4"/>
         </contains>
         <contains>
             <system value="https://fhir.nhs.uk/R4/CodeSystem/EPS-IssueCode"/>
-            <version value="1.1.0"/>
+            <version value="1.1.1"/>
             <code value="DUPLICATE_MEDICATIONREQUEST_ID"/>
             <display value="Duplicate item ID exists"/>
         </contains>
         <contains>
             <system value="https://fhir.nhs.uk/R4/CodeSystem/EPS-IssueCode"/>
-            <version value="1.1.0"/>
+            <version value="1.1.1"/>
             <code value="MISSING_DIGITAL_SIGNATURE"/>
             <display value="Digital signature not found"/>
         </contains>
         <contains>
             <system value="https://fhir.nhs.uk/R4/CodeSystem/EPS-IssueCode"/>
-            <version value="1.1.0"/>
+            <version value="1.1.1"/>
             <code value="DUPLICATE_PRESCRIPTION_ID"/>
             <display value="Duplicate prescription ID exists"/>
         </contains>
         <contains>
             <system value="https://fhir.nhs.uk/R4/CodeSystem/EPS-IssueCode"/>
-            <version value="1.1.0"/>
+            <version value="1.1.1"/>
             <code value="PATIENT_DECEASED"/>
             <display value="Patient is recorded as dead"/>
         </contains>
         <contains>
             <system value="https://fhir.nhs.uk/R4/CodeSystem/EPS-IssueCode"/>
-            <version value="1.1.0"/>
+            <version value="1.1.1"/>
             <code value="MISMATCH_AUTHORISED_REPEAT_COUNT"/>
             <display value="Mismatch in authorised repeat counts"/>
         </contains>
         <contains>
             <system value="https://fhir.nhs.uk/R4/CodeSystem/EPS-IssueCode"/>
-            <version value="1.1.0"/>
+            <version value="1.1.1"/>
             <code value="INVALID_CHECK_DIGIT"/>
             <display value="Error in check digit"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/R4/CodeSystem/EPS-IssueCode"/>
+            <version value="1.1.1"/>
+            <code value="INVALID_DATE_FORMAT"/>
+            <display value="Format of date passed is invalid"/>
         </contains>
     </expansion>
 </ValueSet>

@@ -7,7 +7,7 @@
         <system value="https://fhir.nhs.uk/identifier/CodeSystem"/>
         <value value="EPS-IssueCode"/>
     </identifier>
-    <version value="1.1.0"/>
+    <version value="1.1.1"/>
     <name value="EPS Issue Codes"/>
     <title value="EPS Issue Codes"/>
     <status value="draft"/>
@@ -95,5 +95,11 @@
         <code value="INVALID_CHECK_DIGIT"/>
         <display value="Error in check digit"/>
         <definition value="The System must re-calculate / correct the check digit and re-submit the prescription to the Spine." />
+    </concept>
+    <concept>
+        <!-- 9006 -->
+        <code value="INVALID_DATE_FORMAT"/>
+        <display value="Format of date passed is invalid"/>
+        <definition value="The format of a date/time attribute with the prescription does not confirm with the format defined within the DMS. The System must correct the date/time attribute and re-submit the prescription to the Spine." />
     </concept>
 </CodeSystem>
