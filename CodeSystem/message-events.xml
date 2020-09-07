@@ -27,6 +27,7 @@
     <concept>
         <code value="prescription-order"/>
         <display value="Prescription Order"/>
+        <definition value="Related to HL7 v2.4 - RDE_O11 - Pharmacy/treatment encoded order"/>
     </concept>
     <concept>
         <code value="prescription-order-update"/>
@@ -35,5 +36,11 @@
     <concept>
         <code value="prescription-order-response"/>
         <display value="Prescription Order Response"/>
+        <definition value="Related to HL7 v2.4 - ORP_O10 - Pharmacy/treatment order acknowledgement"/>
+    </concept>
+    <concept>
+        <code value="pharmacy-dispense"/>
+        <display value="Prescription Order Response"/>
+        <definition value="Related to HL7 v2.4 - RDS_O13 - Pharmacy/treatment dispense"/>
     </concept>
 </CodeSystem>
