@@ -40,7 +40,7 @@
     </concept>
     <concept>
         <code value="pharmacy-dispense"/>
-        <display value="Prescription Order Response"/>
+        <display value="Pharmacy/treatment Dispense"/>
         <definition value="Related to HL7 v2.4 - RDS_O13 - Pharmacy/treatment dispense"/>
     </concept>
 </CodeSystem>
