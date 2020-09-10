@@ -39,7 +39,7 @@
         <definition value="Related to HL7 v2.4 - ORP_O10 - Pharmacy/treatment order acknowledgement"/>
     </concept>
     <concept>
-        <code value="pharmacy-dispense"/>
+        <code value="prescription-dispense"/>
         <display value="Pharmacy/treatment Dispense"/>
         <definition value="Related to HL7 v2.4 - RDS_O13 - Pharmacy/treatment dispense"/>
     </concept>
