@@ -43,4 +43,78 @@
         <display value="Pharmacy/treatment Dispense"/>
         <definition value="Related to HL7 v2.4 - RDS_O13 - Pharmacy/treatment dispense"/>
     </concept>
+    <concept>
+        <code value="patient-register"/>
+        <display value="Create New Patient"/>
+        <definition value="Related to HL7 v2.4 - ADT_A28"/>
+        <concept>
+            <code value="patient-register-birth"/>
+            <display value="Create New Patient (Birth)"/>
+            <definition value="Related to HL7 v2.4 - ADT_A28"/>
+        </concept>
+    </concept>
+    <concept>
+        <code value="patient-update"/>
+        <display value="Update Patient Information"/>
+        <definition value="Related to HL7 v2.4 - ADT_A31"/>
+        <concept>
+            <code value="patient-death"/>
+            <display value="Update Patient Information (Death)"/>
+            <definition value="Related to HL7 v2.4 - ADT_A31"/>
+        </concept>
+        <concept>
+            <code value="patient-merge"/>
+            <display value="Merge two patients"/>
+            <definition value="Related to HL7 v2.4 - ADT_A40"/>
+        </concept>
+    </concept>
+    <concept>
+        <code value="patient-encounter"/>
+        <display value="Patient Encounter"/>
+        <definition value="Related to HL7 v2.4 - ADT_A04"/>
+        <concept>
+            <code value="patient-admission"/>
+            <display value="Admit inpatient"/>
+            <definition value="Related to HL7 v2.4 - ADT_A01"/>
+        </concept>
+        <concept>
+            <code value="patient-discharge"/>
+            <display value="Discharge patient"/>
+            <definition value="Related to HL7 v2.4 - ADT_A03"/>
+        </concept>
+        <concept>
+            <code value="patient-transfer"/>
+            <display value="Discharge patient"/>
+            <definition value="Related to HL7 v2.4 - ADT_A02"/>
+        </concept>
+    </concept>
+    <concept>
+        <code value="patient-encounter-update"/>
+        <display value="Update patient information"/>
+        <definition value="Related to HL7 v2.4 - ADT_A08"/>
+        <concept>
+            <code value="patient-admission-cancel"/>
+            <display value="Cancel Admission/Registration"/>
+            <definition value="Related to HL7 v2.4 - ADT_A11"/>
+        </concept>
+        <concept>
+            <code value="patient-transfer-cancel"/>
+            <display value="Cancel Transfer"/>
+            <definition value="Related to HL7 v2.4 - ADT_A12"/>
+        </concept>
+    </concept>
+    <concept>
+        <code value="patient-appointment"/>
+        <display value="Pre-admit patient"/>
+        <definition value="Related to HL7 v2.4 - ADT_A05"/>
+    </concept>
+    <concept>
+        <code value="patient-appointment-update"/>
+        <display value="Appointment update"/>
+        <concept>
+            <code value="patient-appointment-cancel"/>
+            <display value="Cancel PreAdmit"/>
+            <definition value="Related to HL7 v2.4 - ADT_A38"/>
+        </concept>
+    </concept>
 </CodeSystem>
