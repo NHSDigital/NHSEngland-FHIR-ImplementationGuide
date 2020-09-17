@@ -119,4 +119,19 @@
             <definition value="Related to HL7 v2.4 - ADT_A38"/>
         </concept>
     </concept>
+    <concept>
+        <code value="unsolicited-observations"/>
+        <display value="Unsolicited Observations"/>
+        <definition value="Related to HL7 v2.4 - ORU_R01"/>
+    </concept>
+    <concept>
+        <code value="document-notification"/>
+        <display value="Original document notification"/>
+        <definition value="Related to HL7 v2.4 - MDM_T01"/>
+        <concept>
+            <code value="document-notification-content"/>
+            <display value="Original document notification and content"/>
+            <definition value="Related to HL7 v2.4 - MDM_T02"/>
+        </concept>
+    </concept>
 </CodeSystem>
