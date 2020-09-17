@@ -2,26 +2,28 @@
 
 <CodeSystem xmlns="http://hl7.org/fhir">
     <id value="message-events"/>
-    <url value="https://fhir.nhs.uk/R4/CodeSystem/message-event"/>
+    <url value="https://fhir.nhs.uk/CodeSystem/message-event"/>
     <identifier>
         <system value="https://fhir.nhs.uk/identifier/CodeSystem"/>
         <value value="message-events"/>
     </identifier>
-    <version value="1.0.1"/>
+    <version value="1.0.2"/>
     <name value="Message Events"/>
     <title value="Message Events"/>
     <status value="draft"/>
     <experimental value="true"/>
-    <date value="2020-01-28"/>
+    <date value="2020-09-17"/>
     <publisher value="NHS Digital"/>
     <contact>
-        <name value="FHIR project team"/>
+        <name value="NHS Digital" />
         <telecom>
-            <system value="url"/>
-            <value value="http://hl7.org/fhir"/>
+            <system value="email" />
+            <value value="interoperabilityteam@nhs.net" />
+            <use value="work" />
         </telecom>
     </contact>
     <description value="Common messaging events. I am the description of the resource, should I be included  in the default rendering"/>
+    <copyright value="Copyright &#169; 2019 NHS Digital" />
     <caseSensitive value="true"/>
     <content value="complete"/>
     <concept>
