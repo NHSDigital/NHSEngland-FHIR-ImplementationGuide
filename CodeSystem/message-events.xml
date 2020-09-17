@@ -86,7 +86,7 @@
         </concept>
         <concept>
             <code value="patient-transfer"/>
-            <display value="Discharge patient"/>
+            <display value="Transfer patient"/>
             <definition value="Related to HL7 v2.4 - ADT_A02"/>
         </concept>
     </concept>
