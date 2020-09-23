@@ -25,11 +25,15 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/MessageHeader" />
   <derivation value="constraint" />
   <differential>
-    <element id="MessageHeader.destination">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-        <valueString value="MessageDestination" />
-      </extension>
-      <path value="MessageHeader.destination" />
+    <element id="MessageHeader.event[x]">
+      <path value="MessageHeader.event[x]" />
+      <type>
+        <code value="Coding" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/spine-message-events" />
+      </binding>
     </element>
     <element id="MessageHeader.destination.extension">
       <path value="MessageHeader.destination.extension" />
@@ -44,8 +48,6 @@
     <element id="MessageHeader.destination.extension:spineEndpoint">
       <path value="MessageHeader.destination.extension" />
       <sliceName value="spineEndpoint" />
-      <min value="1" />
-      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.nhs.uk/R4/StructureDefinition/Extension-spineEndpoint" />
@@ -58,12 +60,6 @@
         <code value="Reference" />
         <targetProfile value="https://fhir.nhs.uk/R4/StructureDefinition/Spine-PractitionerRole" />
       </type>
-    </element>
-    <element id="MessageHeader.source">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-        <valueString value="MessageSource" />
-      </extension>
-      <path value="MessageHeader.source" />
     </element>
     <element id="MessageHeader.source.extension">
       <path value="MessageHeader.source.extension" />
@@ -78,8 +74,6 @@
     <element id="MessageHeader.source.extension:spineEndpoint">
       <path value="MessageHeader.source.extension" />
       <sliceName value="spineEndpoint" />
-      <min value="1" />
-      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.nhs.uk/R4/StructureDefinition/Extension-spineEndpoint" />
