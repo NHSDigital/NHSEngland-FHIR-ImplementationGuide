@@ -13,7 +13,7 @@ Use code “999” / “Not Specified” in all cases.
 The OID must be 2.16.840.1.113883.2.1.3.2.4.17.94  --> 
     <type>
       <coding>
-          <system value="https://fhir.nhs.uk/R4/CodeSystem/organisation-role" />
+          <system value="https://fhir.nhs.uk/CodeSystem/organisation-role" />
           <code value="RO197" />
       </coding>
     </type>

@@ -2,7 +2,7 @@
 
 <CodeSystem xmlns="http://hl7.org/fhir">
     <id value="EPS-IssueCode"/>
-    <url value="https://fhir.nhs.uk/R4/CodeSystem/EPS-IssueCode"/>
+    <url value="https://fhir.nhs.uk/CodeSystem/EPS-IssueCode"/>
     <identifier>
         <system value="https://fhir.nhs.uk/identifier/CodeSystem"/>
         <value value="EPS-IssueCode"/>

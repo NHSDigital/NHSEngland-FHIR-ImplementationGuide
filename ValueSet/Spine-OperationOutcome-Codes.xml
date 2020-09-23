@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ValueSet xmlns="http://hl7.org/fhir">
     <id value="Spine-OperationOutcome-Codes"/>
-    <url value="https://fhir.nhs.uk/R4/ValueSet/Spine-OperationOutcome-Codes"/>
+    <url value="https://fhir.nhs.uk/ValueSet/Spine-OperationOutcome-Codes"/>
     <version value="1.0.2"/>
     <name value="Spine OperationOutcome Codes"/>
     <status value="draft"/>
     <description value="Spine OperationOutcome Codes"/>
     <compose>
         <include>
-            <system value="https://fhir.nhs.uk/R4/CodeSystem/Spine-ErrorOrWarningCode"/>
+            <system value="https://fhir.nhs.uk/CodeSystem/Spine-ErrorOrWarningCode"/>
             <version value="2.0.0"/>
         </include>
         <include>
-            <system value="https://fhir.nhs.uk/R4/CodeSystem/EPS-IssueCode"/>
+            <system value="https://fhir.nhs.uk/CodeSystem/EPS-IssueCode"/>
             <version value="1.1.1"/>
         </include>
     </compose>
@@ -22,11 +22,11 @@
         <offset value="0"/>
         <parameter>
             <name value="version"/>
-            <valueUri value="https://fhir.nhs.uk/R4/CodeSystem/Spine-ErrorOrWarningCode|2.0.0"/>
+            <valueUri value="https://fhir.nhs.uk/CodeSystem/Spine-ErrorOrWarningCode|2.0.0"/>
         </parameter>
         <parameter>
             <name value="version"/>
-            <valueUri value="https://fhir.nhs.uk/R4/CodeSystem/EPS-IssueCode|1.1.1"/>
+            <valueUri value="https://fhir.nhs.uk/CodeSystem/EPS-IssueCode|1.1.1"/>
         </parameter>
         <parameter>
             <name value="count"/>
@@ -37,187 +37,187 @@
             <valueInteger value="0"/>
         </parameter>
         <contains>
-            <system value="https://fhir.nhs.uk/R4/CodeSystem/Spine-ErrorOrWarningCode"/>
+            <system value="https://fhir.nhs.uk/CodeSystem/Spine-ErrorOrWarningCode"/>
             <version value="2.0.0"/>
             <code value="INVALID_UPDATE"/>
             <display value="Invalid update"/>
         </contains>
         <contains>
-            <system value="https://fhir.nhs.uk/R4/CodeSystem/Spine-ErrorOrWarningCode"/>
+            <system value="https://fhir.nhs.uk/CodeSystem/Spine-ErrorOrWarningCode"/>
             <version value="2.0.0"/>
             <code value="FAILURE_TO_PROCESS_MESSAGE"/>
             <display value="Failure to process message"/>
         </contains>
         <contains>
-            <system value="https://fhir.nhs.uk/R4/CodeSystem/Spine-ErrorOrWarningCode"/>
+            <system value="https://fhir.nhs.uk/CodeSystem/Spine-ErrorOrWarningCode"/>
             <version value="2.0.0"/>
             <code value="TOO_MANY_MATCHES"/>
             <display value="Too many matches"/>
         </contains>
         <contains>
-            <system value="https://fhir.nhs.uk/R4/CodeSystem/Spine-ErrorOrWarningCode"/>
+            <system value="https://fhir.nhs.uk/CodeSystem/Spine-ErrorOrWarningCode"/>
             <version value="2.0.0"/>
             <code value="MISSING_VALUE"/>
             <display value="Missing value"/>
         </contains>
         <contains>
-            <system value="https://fhir.nhs.uk/R4/CodeSystem/Spine-ErrorOrWarningCode"/>
+            <system value="https://fhir.nhs.uk/CodeSystem/Spine-ErrorOrWarningCode"/>
             <version value="2.0.0"/>
             <code value="PRECONDITION_FAILED"/>
             <display value="Precondition failed"/>
         </contains>
         <contains>
-            <system value="https://fhir.nhs.uk/R4/CodeSystem/Spine-ErrorOrWarningCode"/>
+            <system value="https://fhir.nhs.uk/CodeSystem/Spine-ErrorOrWarningCode"/>
             <version value="2.0.0"/>
             <code value="INVALID_RESOURCE_ID"/>
             <display value="Invalid resource ID"/>
         </contains>
         <contains>
-            <system value="https://fhir.nhs.uk/R4/CodeSystem/Spine-ErrorOrWarningCode"/>
+            <system value="https://fhir.nhs.uk/CodeSystem/Spine-ErrorOrWarningCode"/>
             <version value="2.0.0"/>
             <code value="UNABLE_TO_CALL_SERVICE"/>
             <display value="Unable to call service"/>
         </contains>
         <contains>
-            <system value="https://fhir.nhs.uk/R4/CodeSystem/Spine-ErrorOrWarningCode"/>
+            <system value="https://fhir.nhs.uk/CodeSystem/Spine-ErrorOrWarningCode"/>
             <version value="2.0.0"/>
             <code value="TOO_MANY_VALUES_SUBMITTED"/>
             <display value="Too many values submitted"/>
         </contains>
         <contains>
-            <system value="https://fhir.nhs.uk/R4/CodeSystem/Spine-ErrorOrWarningCode"/>
+            <system value="https://fhir.nhs.uk/CodeSystem/Spine-ErrorOrWarningCode"/>
             <version value="2.0.0"/>
             <code value="ACCESS_DENIED"/>
             <display value="Access has been denied to process this request"/>
         </contains>
         <contains>
-            <system value="https://fhir.nhs.uk/R4/CodeSystem/Spine-ErrorOrWarningCode"/>
+            <system value="https://fhir.nhs.uk/CodeSystem/Spine-ErrorOrWarningCode"/>
             <version value="2.0.0"/>
             <code value="TOO_FEW_VALUES_SUBMITTED"/>
             <display value="Too few values submitted"/>
         </contains>
         <contains>
-            <system value="https://fhir.nhs.uk/R4/CodeSystem/Spine-ErrorOrWarningCode"/>
+            <system value="https://fhir.nhs.uk/CodeSystem/Spine-ErrorOrWarningCode"/>
             <version value="2.0.0"/>
             <code value="INVALIDATED_RESOURCE"/>
             <display value="Invalidated resource"/>
         </contains>
         <contains>
-            <system value="https://fhir.nhs.uk/R4/CodeSystem/Spine-ErrorOrWarningCode"/>
+            <system value="https://fhir.nhs.uk/CodeSystem/Spine-ErrorOrWarningCode"/>
             <version value="2.0.0"/>
             <code value="VALIDATION_ERROR"/>
             <display value="Validation error"/>
         </contains>
         <contains>
-            <system value="https://fhir.nhs.uk/R4/CodeSystem/Spine-ErrorOrWarningCode"/>
+            <system value="https://fhir.nhs.uk/CodeSystem/Spine-ErrorOrWarningCode"/>
             <version value="2.0.0"/>
             <code value="RESOURCE_VERSION_MISMATCH"/>
             <display value="Resource version mismatch"/>
         </contains>
         <contains>
-            <system value="https://fhir.nhs.uk/R4/CodeSystem/Spine-ErrorOrWarningCode"/>
+            <system value="https://fhir.nhs.uk/CodeSystem/Spine-ErrorOrWarningCode"/>
             <version value="2.0.0"/>
             <code value="UNSUPPORTED_VALUE"/>
             <display value="Unsupported value"/>
         </contains>
         <contains>
-            <system value="https://fhir.nhs.uk/R4/CodeSystem/Spine-ErrorOrWarningCode"/>
+            <system value="https://fhir.nhs.uk/CodeSystem/Spine-ErrorOrWarningCode"/>
             <version value="2.0.0"/>
             <code value="RESOURCE_NOT_FOUND"/>
             <display value="Resource not found"/>
         </contains>
         <contains>
-            <system value="https://fhir.nhs.uk/R4/CodeSystem/Spine-ErrorOrWarningCode"/>
+            <system value="https://fhir.nhs.uk/CodeSystem/Spine-ErrorOrWarningCode"/>
             <version value="2.0.0"/>
             <code value="FORBIDDEN_UPDATE"/>
             <display value="Forbidden update"/>
         </contains>
         <contains>
-            <system value="https://fhir.nhs.uk/R4/CodeSystem/Spine-ErrorOrWarningCode"/>
+            <system value="https://fhir.nhs.uk/CodeSystem/Spine-ErrorOrWarningCode"/>
             <version value="2.0.0"/>
             <code value="ADDITIONAL_PROPERTIES"/>
             <display value="Additional properties"/>
         </contains>
         <contains>
-            <system value="https://fhir.nhs.uk/R4/CodeSystem/Spine-ErrorOrWarningCode"/>
+            <system value="https://fhir.nhs.uk/CodeSystem/Spine-ErrorOrWarningCode"/>
             <version value="2.0.0"/>
             <code value="UNSUPPORTED_SERVICE"/>
             <display value="Unsupported service"/>
         </contains>
         <contains>
-            <system value="https://fhir.nhs.uk/R4/CodeSystem/Spine-ErrorOrWarningCode"/>
+            <system value="https://fhir.nhs.uk/CodeSystem/Spine-ErrorOrWarningCode"/>
             <version value="2.0.0"/>
             <code value="INVALID_VALUE"/>
             <display value="Invalid value"/>
         </contains>
         <contains>
-            <system value="https://fhir.nhs.uk/R4/CodeSystem/Spine-ErrorOrWarningCode"/>
+            <system value="https://fhir.nhs.uk/CodeSystem/Spine-ErrorOrWarningCode"/>
             <version value="2.0.0"/>
             <code value="POLLING_ID_NOT_FOUND"/>
             <display value="Polling ID not found"/>
         </contains>
         <contains>
-            <system value="https://fhir.nhs.uk/R4/CodeSystem/Spine-ErrorOrWarningCode"/>
+            <system value="https://fhir.nhs.uk/CodeSystem/Spine-ErrorOrWarningCode"/>
             <version value="2.0.0"/>
             <code value="POLLING_MESSAGE_FAILURE"/>
             <display value="Polling message failure"/>
         </contains>
         <contains>
-            <system value="https://fhir.nhs.uk/R4/CodeSystem/Spine-ErrorOrWarningCode"/>
+            <system value="https://fhir.nhs.uk/CodeSystem/Spine-ErrorOrWarningCode"/>
             <version value="2.0.0"/>
             <code value="INVALID_SEARCH_DATA"/>
             <display value="Invalid search data"/>
         </contains>
         <contains>
-            <system value="https://fhir.nhs.uk/R4/CodeSystem/EPS-IssueCode"/>
+            <system value="https://fhir.nhs.uk/CodeSystem/EPS-IssueCode"/>
             <version value="1.1.1"/>
             <code value="INVALID_REPEAT_COUNT"/>
             <display value="Repeat count should be between 1 and 99"/>
         </contains>
         <contains>
-            <system value="https://fhir.nhs.uk/R4/CodeSystem/EPS-IssueCode"/>
+            <system value="https://fhir.nhs.uk/CodeSystem/EPS-IssueCode"/>
             <version value="1.1.1"/>
             <code value="INVALID_NUMBER_MEDICATIONREQUESTS"/>
             <display value="Number of items on a prescription should be between 1 and 4"/>
         </contains>
         <contains>
-            <system value="https://fhir.nhs.uk/R4/CodeSystem/EPS-IssueCode"/>
+            <system value="https://fhir.nhs.uk/CodeSystem/EPS-IssueCode"/>
             <version value="1.1.1"/>
             <code value="DUPLICATE_MEDICATIONREQUEST_ID"/>
             <display value="Duplicate item ID exists"/>
         </contains>
         <contains>
-            <system value="https://fhir.nhs.uk/R4/CodeSystem/EPS-IssueCode"/>
+            <system value="https://fhir.nhs.uk/CodeSystem/EPS-IssueCode"/>
             <version value="1.1.1"/>
             <code value="MISSING_DIGITAL_SIGNATURE"/>
             <display value="Digital signature not found"/>
         </contains>
         <contains>
-            <system value="https://fhir.nhs.uk/R4/CodeSystem/EPS-IssueCode"/>
+            <system value="https://fhir.nhs.uk/CodeSystem/EPS-IssueCode"/>
             <version value="1.1.1"/>
             <code value="DUPLICATE_PRESCRIPTION_ID"/>
             <display value="Duplicate prescription ID exists"/>
         </contains>
         <contains>
-            <system value="https://fhir.nhs.uk/R4/CodeSystem/EPS-IssueCode"/>
+            <system value="https://fhir.nhs.uk/CodeSystem/EPS-IssueCode"/>
             <version value="1.1.1"/>
             <code value="PATIENT_DECEASED"/>
             <display value="Patient is recorded as dead"/>
         </contains>
         <contains>
-            <system value="https://fhir.nhs.uk/R4/CodeSystem/EPS-IssueCode"/>
+            <system value="https://fhir.nhs.uk/CodeSystem/EPS-IssueCode"/>
             <version value="1.1.1"/>
             <code value="MISMATCH_AUTHORISED_REPEAT_COUNT"/>
             <display value="Mismatch in authorised repeat counts"/>
         </contains>
         <contains>
-            <system value="https://fhir.nhs.uk/R4/CodeSystem/EPS-IssueCode"/>
+            <system value="https://fhir.nhs.uk/CodeSystem/EPS-IssueCode"/>
             <version value="1.1.1"/>
             <code value="INVALID_CHECK_DIGIT"/>
             <display value="Error in check digit"/>
         </contains>
         <contains>
-            <system value="https://fhir.nhs.uk/R4/CodeSystem/EPS-IssueCode"/>
+            <system value="https://fhir.nhs.uk/CodeSystem/EPS-IssueCode"/>
             <version value="1.1.1"/>
             <code value="INVALID_DATE_FORMAT"/>
             <display value="Format of date passed is invalid"/>

@@ -57,7 +57,7 @@
     <element id="Organization.type.coding.system">
       <path value="Organization.type.coding.system" />
       <min value="1" />
-      <fixedUri value="https://fhir.nhs.uk/R4/CodeSystem/organisation-role" />
+      <fixedUri value="https://fhir.nhs.uk/CodeSystem/organisation-role" />
     </element>
     <element id="Organization.name">
       <path value="Organization.name" />

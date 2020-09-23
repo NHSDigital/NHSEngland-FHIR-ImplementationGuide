@@ -1,6 +1,6 @@
 <ConceptMap xmlns="http://hl7.org/fhir">
     <id value="organisation-role-to-organisation-type" />
-    <url value="https://fhir.nhs.uk/R4/ConceptMap/organisation-role-to-organisation-type" />
+    <url value="https://fhir.nhs.uk/ConceptMap/organisation-role-to-organisation-type" />
     <version value="1.0.0" />
     <name value="organisation-role-to-organisation-type" />
     <title value="organisation-role-to-organisation-type" />
@@ -11,8 +11,8 @@
     <description value="organisation-role-to-organisation-type" />
     <purpose value="NHS Digital Spine" />
     <group>
-        <source value="https://fhir.nhs.uk/R4/CodeSystem/organisation-role" />
-        <target value="https://fhir.nhs.uk/R4/CodeSystem/organisation-type" />
+        <source value="https://fhir.nhs.uk/CodeSystem/organisation-role" />
+        <target value="https://fhir.nhs.uk/CodeSystem/organisation-type" />
         <element>
             <code value="RO197" />
             <display value="NHS TRUST" />

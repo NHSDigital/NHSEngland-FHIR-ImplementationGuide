@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <ValueSet xmlns="http://hl7.org/fhir">
    <id value="organisation-primary-role" />
-   <url value="https://fhir.nhs.uk/R4/ValueSet/organisation-primary-role" />
+   <url value="https://fhir.nhs.uk/ValueSet/organisation-primary-role" />
    <version value="2.0.0" />
    <name value="NHS Organisation Primary Role" />
    <status value="active" />
    <description value="A ValueSet to identify the primary role (type) of organisation" />   
    <compose>
       <include>
-         <system value="https://fhir.nhs.uk/R4/CodeSystem/organisation-role" />
+         <system value="https://fhir.nhs.uk/CodeSystem/organisation-role" />
          <version value="2.0.0" />
          <concept>
             <code value="RO180" />

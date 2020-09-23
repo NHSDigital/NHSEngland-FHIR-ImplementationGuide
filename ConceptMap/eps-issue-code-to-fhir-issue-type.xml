@@ -11,7 +11,7 @@
     <description value="EPS Issue Code to FHIR Issue Type Map" />
     <purpose value="NHS Digital Spine" />
     <group>
-        <source value="https://fhir.nhs.uk/R4/CodeSystem/EPS-IssueCode" />
+        <source value="https://fhir.nhs.uk/CodeSystem/EPS-IssueCode" />
         <target value="http://hl7.org/fhir/issue-type" />
         <element>
             <code value="PATIENT_DECEASED" />
