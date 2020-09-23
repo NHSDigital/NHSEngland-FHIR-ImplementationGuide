@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+    <id value="message-reason-code" />
+    <url value="https://fhir.nhs.uk/ValueSet/message-reason-code" />
+    <version value="1.0.0" />
+    <name value="Message Reason Codes" />
+    <status value="active" />
+    <description value="Complete set of message reasons codes" />
+    <compose>
+        <include>
+            <system value="https://fhir.nhs.uk/CodeSystem/message-reason-prescription" />
+            <version value="1.0.0" />
+        </include>
+        <include>
+            <system value="https://fhir.nhs.uk/CodeSystem/message-reason-encounter" />
+            <version value="1.0.0" />
+        </include>
+    </compose>
+    <expansion>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/message-reason-encounter"/>
+            <version value="1.0.0"/>
+            <code value="edit"/>
+            <display value="Edit"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/message-reason-encounter"/>
+            <version value="1.0.0"/>
+            <code value="moved"/>
+            <display value="Moved"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/message-reason-encounter"/>
+            <version value="1.0.0"/>
+            <code value="discharge"/>
+            <display value="Discharge"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/message-reason-encounter"/>
+            <version value="1.0.0"/>
+            <code value="absent"/>
+            <display value="Absent"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/message-reason-encounter"/>
+            <version value="1.0.0"/>
+            <code value="admit"/>
+            <display value="Admit"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/message-reason-encounter"/>
+            <version value="1.0.0"/>
+            <code value="return"/>
+            <display value="Returned"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/message-reason-prescription"/>
+            <version value="1.0.0"/>
+            <code value="cancel"/>
+            <display value="Cancel"/>
+        </contains>
+    </expansion>
+</ValueSet>

@@ -79,5 +79,12 @@
         <profile value="https://fhir.nhs.uk/R4/StructureDefinition/Extension-spineEndpoint" />
       </type>
     </element>
+    <element id="MessageHeader.reason">
+      <path value="MessageHeader.reason" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/message-reason-code" />
+      </binding>
+    </element>
   </differential>
 </StructureDefinition>
