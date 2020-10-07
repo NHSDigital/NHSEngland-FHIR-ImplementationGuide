@@ -7,7 +7,7 @@
         <system value="https://fhir.nhs.uk/identifier/message-reason-code"/>
         <value value="message-reason-prescription"/>
     </identifier>
-    <version value="1.0.0"/>
+    <version value="1.0.1"/>
     <name value="Message Reason Prescription"/>
     <title value="Message Reason Prescription"/>
     <status value="draft"/>
@@ -29,5 +29,15 @@
         <code value="cancel"/>
         <display value="Cancel"/>
         <definition value="Cancellation of prescription"/>
+    </concept>
+    <concept>
+        <code value="notification"/>
+        <display value="Notification"/>
+        <definition value="Notification of prescription or dispense"/>
+    </concept>
+    <concept>
+        <code value="claim"/>
+        <display value="Claim"/>
+        <definition value="Prescription claim"/>
     </concept>
 </CodeSystem>
