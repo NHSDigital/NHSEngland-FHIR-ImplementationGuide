@@ -7,7 +7,7 @@
         <system value="https://fhir.nhs.uk/identifier/CodeSystem"/>
         <value value="message-events"/>
     </identifier>
-    <version value="1.0.2"/>
+    <version value="1.0.3"/>
     <name value="Message Events"/>
     <title value="Message Events"/>
     <status value="draft"/>
@@ -44,6 +44,11 @@
         <code value="prescription-dispense"/>
         <display value="Pharmacy/treatment Dispense"/>
         <definition value="Related to HL7 v2.4 - RDS_O13 - Pharmacy/treatment dispense"/>
+    </concept>
+    <concept>
+        <code value="prescription-claim"/>
+        <display value="Prescription Dispense Claim"/>
+        <definition value="Prescription Dispense Claim"/>
     </concept>
     <concept>
         <code value="patient-register"/>
