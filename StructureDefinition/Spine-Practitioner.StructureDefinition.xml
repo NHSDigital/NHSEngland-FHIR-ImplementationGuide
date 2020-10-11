@@ -60,6 +60,14 @@
       <path value="Practitioner.identifier.system" />
       <fixedUri value="https://fhir.hl7.org.uk/Id/din-number" />
     </element>
+    <element id="Practitioner.identifier:gphcCode">
+      <path value="Practitioner.identifier" />
+      <sliceName value="gphcCode" />
+    </element>
+    <element id="Practitioner.identifier:gphcCode.system">
+      <path value="Practitioner.identifier.system" />
+      <fixedUri value="https://fhir.hl7.org.uk/Id/gphc-number" />
+    </element>
     <element id="Practitioner.name">
       <path value="Practitioner.name" />
       <min value="1" />
