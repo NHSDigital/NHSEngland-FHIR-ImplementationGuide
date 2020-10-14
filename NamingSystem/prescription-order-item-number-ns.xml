@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<NamingSystem xmlns="http://hl7.org/fhir">
+    <id value="prescription-order-item-number-ns"/>
+    <name value="prescription order item number"/>
+    <status value="draft"/>
+    <kind value="identifier"/>
+    <date value="2020-06-01"/>
+    <publisher value="NHS Digital"/>
+    <responsible value="NHS Digital"/>
+    <description value="This is the id of the prescription order item and is the same as the id found in pertinentInformation2[0].pertinentLineItem.id"/>
+    <usage value="EPS"/>
+    <uniqueId>
+        <type value="uri"/>
+        <value value="https://fhir.nhs.uk/Id/prescription-order-item-number"/>
+        <preferred value="true"/>
+    </uniqueId>
+</NamingSystem>

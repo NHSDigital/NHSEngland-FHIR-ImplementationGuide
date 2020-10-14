@@ -1,0 +1,30 @@
+<NamingSystem xmlns="http://hl7.org/fhir">
+    <id value="sds-role-profile-code"></id>
+    <name value="SDS Role Profile Code"></name>
+    <status value="draft"></status>
+    <kind value="identifier"></kind>
+    <date value="2019-05-01"></date>
+    <publisher value="NHS Digital"></publisher>
+    <contact>
+        <name value="Interoperability Team"></name>
+        <telecom>
+            <system value="email"></system>
+            <value value="interoperabilityteam@nhs.net"></value>
+            <use value="work"></use>
+        </telecom>
+    </contact>
+    <responsible value="NHS Digital"></responsible>
+    <description value="The user's role id on the NHS Spine Directory Service."></description>
+    <usage value="To uniquely identify a users role in NHS Spine Directory Service."></usage>
+    <uniqueId>
+        <type value="uri"></type>
+        <value value="https://fhir.nhs.uk/Id/sds-role-profile-id"></value>
+        <preferred value="true"></preferred>
+    </uniqueId>
+    <uniqueId>
+        <type value="oid"></type>
+        <value value="1.2.826.0.1285.0.2.0.67"></value>
+        <preferred value="false"></preferred>
+        <comment value="NHS SDS - Role Profile Code [BT]"></comment>
+    </uniqueId>
+</NamingSystem>

@@ -68,6 +68,22 @@
       <path value="Practitioner.identifier.system" />
       <fixedUri value="https://fhir.hl7.org.uk/Id/gphc-number" />
     </element>
+    <element id="Practitioner.identifier:hcpcNumber">
+      <path value="Practitioner.identifier" />
+      <sliceName value="hcpcNumber" />
+    </element>
+    <element id="Practitioner.identifier:hcpcNumber.system">
+      <path value="Practitioner.identifier.system" />
+      <fixedUri value="https://fhir.hl7.org.uk/Id/hcpc-number" />
+    </element>
+    <element id="Practitioner.identifier:nmcNumber">
+      <path value="Practitioner.identifier" />
+      <sliceName value="nmcNumber" />
+    </element>
+    <element id="Practitioner.identifier:nmcNumber.system">
+      <path value="Practitioner.identifier.system" />
+      <fixedUri value="https://fhir.hl7.org.uk/Id/nmc-number" />
+    </element>
     <element id="Practitioner.name">
       <path value="Practitioner.name" />
       <min value="1" />
