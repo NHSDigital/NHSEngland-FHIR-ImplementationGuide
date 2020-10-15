@@ -8,6 +8,7 @@
                 <system value="https://fhir.nhs.uk/Id/ods-organization-code" />
                 <value value="T10101" />
             </identifier>
+            <display value="Some GP System provider" />
         </valueReference>
     </extension>
   <!-- *************extension end *****************-->
