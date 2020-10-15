@@ -1,0 +1,36 @@
+<NamingSystem xmlns="http://hl7.org/fhir">
+    <id value="ods-organization-code"></id>
+    <name value="NHS ODS Organisation Code"></name>
+    <status value="draft"></status>
+    <kind value="identifier"></kind>
+    <date value="2020-05-01"></date>
+    <publisher value="NHS Digital"></publisher>
+    <contact>
+        <name value="Interoperability Team"></name>
+        <telecom>
+            <system value="email"></system>
+            <value value="interoperabilityteam@nhs.net"></value>
+            <use value="work"></use>
+        </telecom>
+    </contact>
+    <responsible value="NHS Digital"></responsible>
+    <description value="The identifier system for an Organisation registered with the Organisation Data Service (ODS)."></description>
+    <usage value="To be used to identify an Organisation registered with the Organisation Data Service (ODS)."></usage>
+    <uniqueId>
+        <type value="uri"></type>
+        <value value="https://fhir.nhs.uk/Id/ods-organization-code"></value>
+        <preferred value="true"></preferred>
+    </uniqueId>
+    <uniqueId>
+        <type value="oid"></type>
+        <value value="2.16.840.1.113883.2.1.4.3"></value>
+        <preferred value="false"></preferred>
+        <comment value="NHS ODS Organisation Codes - Identifiers of Organisations in the UK National Health Service. [NHS UK GP2GP Project]"></comment>
+    </uniqueId>
+    <uniqueId>
+        <type value="oid"></type>
+        <value value="1.2.826.0.1285.0.1.10"></value>
+        <preferred value="true"></preferred>
+        <comment value="NHS SDS Organisation Id - Organisation Id. [BT]"></comment>
+    </uniqueId>
+</NamingSystem>

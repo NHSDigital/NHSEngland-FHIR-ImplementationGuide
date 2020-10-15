@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<NamingSystem xmlns="http://hl7.org/fhir">
+    <id value="DM-medicationrequest-status-history-ns"/>
+    <name value="Digital Medicine Prescription Cancellation Status"/>
+    <status value="draft"/>
+    <kind value="codesystem"/>
+    <date value="2020-06-01"/>
+    <publisher value="NHS Digital"/>
+    <responsible value="NHS Digital"/>
+    <description value="Describes the status of the prescription cancellation"/>
+    <usage value="EPS"/>
+    <uniqueId>
+        <type value="uri"/>
+        <value value="https://fhir.nhs.uk/CodeSystem/medicationrequest-status-history"/>
+        <preferred value="true"/>
+    </uniqueId>
+    <uniqueId>
+        <type value="oid"/>
+        <value value="2.16.840.1.113883.2.1.3.2.4.17.19"/>
+        <preferred value="false"/>
+    </uniqueId>
+</NamingSystem>

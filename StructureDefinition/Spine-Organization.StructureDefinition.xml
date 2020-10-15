@@ -51,7 +51,7 @@
           <valueString value="OrganizationType" />
         </extension>
         <strength value="preferred" />
-        <valueSet value="https://fhir.nhs.uk/R4/ValueSet/organisation-primary-role" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/organisation-primary-role" />
       </binding>
     </element>
     <element id="Organization.type.coding.system">

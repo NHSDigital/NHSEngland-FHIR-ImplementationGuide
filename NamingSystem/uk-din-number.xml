@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<NamingSystem xmlns="http://hl7.org/fhir">
+    <id value="uk-din-number"/>
+    <name value="Doctor Index Number"/>
+    <status value="draft"/>
+    <kind value="identifier"/>
+    <date value="2019-12-03"/>
+    <publisher value="HL7 UK"/>
+    <responsible value="NHS Digital"/>
+    <description value="NHS Digital"/>
+    <usage value="A unique reference number, used to identify consultants"/>
+    <uniqueId>
+        <type value="uri"/>
+        <value value="https://fhir.hl7.org.uk/Id/din-number"/>
+        <preferred value="false"/>
+    </uniqueId>
+    <uniqueId>
+        <type value="oid"/>
+        <value value="1.2.826.0.1285.0.2.1.54"/>
+        <preferred value="false"/>
+    </uniqueId>
+</NamingSystem>

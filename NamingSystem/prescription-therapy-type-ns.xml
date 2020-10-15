@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<NamingSystem xmlns="http://hl7.org/fhir">
+    <id value="prescription-therapy-type-ns"/>
+    <name value="Prescription Therapy Type"/>
+    <status value="draft"/>
+    <kind value="codesystem"/>
+    <date value="2020-06-01"/>
+    <publisher value="NHS Digital"/>
+    <responsible value="NHS Digital"/>
+    <description value="The management reasons for a prescription being issued. See prescription-treatment-type for HL7v3 version"/>
+    <usage value="Medication Management"/>
+    <uniqueId>
+        <type value="uri"/>
+        <value value="https://fhir.nhs.uk/R4/CodeSystem/UKCore-PrescriptionType"/>
+        <preferred value="true"/>
+    </uniqueId>
+</NamingSystem>

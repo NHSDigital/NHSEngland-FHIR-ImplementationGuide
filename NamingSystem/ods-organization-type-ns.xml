@@ -1,0 +1,29 @@
+<NamingSystem xmlns="http://hl7.org/fhir">
+    <id value="ods-organization-type-ns"></id>
+    <name value="NHS ODS Organisation Type"></name>
+    <status value="draft"></status>
+    <kind value="codesystem"></kind>
+    <date value="2020-06-29"></date>
+    <publisher value="NHS Digital"></publisher>
+    <contact>
+        <name value="Interoperability Team"></name>
+        <telecom>
+            <system value="email"></system>
+            <value value="interoperabilityteam@nhs.net"></value>
+            <use value="work"></use>
+        </telecom>
+    </contact>
+    <responsible value="NHS Digital"></responsible>
+    <description value="The code system for an Organisation type with the Organisation Data Service (ODS)."></description>
+    <usage value="To be used to identify an Organisation registered with the Organisation Data Service (ODS)."></usage>
+    <uniqueId>
+        <type value="uri"/>
+        <value value="https://fhir.nhs.uk/CodeSystem/organisation-type"/>
+        <preferred value="true"/>
+    </uniqueId>
+    <uniqueId>
+        <type value="oid"></type>
+        <value value="2.16.840.1.113883.2.1.3.2.4.17.94"></value>
+        <preferred value="false"></preferred>
+    </uniqueId>
+</NamingSystem>

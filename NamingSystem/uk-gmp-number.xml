@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<NamingSystem xmlns="http://hl7.org/fhir">
+    <id value="uk-gmp-number"/>
+    <name value="GMP Number"/>
+    <status value="draft"/>
+    <kind value="identifier"/>
+    <date value="2019-12-03"/>
+    <publisher value="HL7 UK"/>
+    <responsible value="NHS Prescription Services"/>
+    <description value="General Practitioner (GMP) number. See [NHS Data Dictionary](https://www.datadictionary.nhs.uk/data_dictionary/attributes/g/general_medical_practitioner_ppd_code_de.asp)"/>
+    <usage value="A unqiue reference number normally used to identify GP's."/>
+    <uniqueId>
+        <type value="uri"/>
+        <value value="https://fhir.hl7.org.uk/Id/gmp-number"/>
+        <preferred value="true"/>
+    </uniqueId>
+    <uniqueId>
+        <type value="oid"/>
+        <value value="2.16.840.1.113883.2.1.3.2.4.16.62"/>
+        <preferred value="false"/>
+    </uniqueId>
+    <uniqueId>
+        <type value="other"/>
+        <value value="GMP"/>
+        <preferred value="false"/>
+        <comment value="XCN.9 HSCIC HL7 V2 ADT"/>
+    </uniqueId>
+</NamingSystem>

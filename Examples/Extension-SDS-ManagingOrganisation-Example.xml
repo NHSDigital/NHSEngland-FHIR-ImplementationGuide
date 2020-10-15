@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Device xmlns="http://hl7.org/fhir">
+  <id value="Extension-SDS-ManagingOrganisation-Example" />
+  <!-- **************extension start************** -->
+    <extension url="https://fhir.nhs.uk/R4/StructureDefinition/Extension-SDS-ManagingOrganisation">
+        <valueReference>
+            <identifier>
+                <system value="https://fhir.nhs.uk/Id/ods-organization-code" />
+                <value value="T10101" />
+            </identifier>
+            <display value="Some GP System provider" />
+        </valueReference>
+    </extension>
+  <!-- *************extension end *****************-->
+</Device>
