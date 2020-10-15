@@ -1,0 +1,84 @@
+<ConceptMap xmlns="http://hl7.org/fhir">
+    <id value="fhir-nameuse-to-v3-npfit-nameuse" />
+    <url value="https://fhir.nhs.uk/ConceptMap/fhir-nameuse-to-v3-npfit-nameuse" />
+    <version value="1.0.0" />
+    <name value="fhir-nameuse-to-v3-npfit-nameuse" />
+    <title value="fhir-nameuse-to-v3-npfit-nameuse" />
+    <status value="draft" />
+    <experimental value="true" />
+    <date value="2020-10-15" />
+    <publisher value="NHS Digital" />
+    <description value="fhir-nameuse-to-v3-npfit-nameuse" />
+    <purpose value="NHS Digital Spine" />
+    <group>
+        <source value="http://hl7.org/fhir/name-use" />
+        <target value="http://terminology.hl7.org/CodeSystem/v3-EntityNameUse" />
+        <element>
+            <code value="usual" />
+            <display value="Usual" />
+            <target>
+                <code value="L" />
+                <display value="Legal" />
+                <equivalence value="equivalent" />
+            </target>
+        </element>
+        <element>
+            <code value="official" />
+            <display value="Official" />
+            <target>
+                <code value="L" />
+                <display value="Legal" />
+                <equivalence value="equivalent" />
+            </target>
+        </element>
+        <element>
+            <code value="temp" />
+            <display value="Temp" />
+            <target>
+                <code value="A" />
+                <display value="Artist/Stage" />
+                <equivalence value="equivalent" />
+            </target>
+        </element>
+        <element>
+            <code value="anonymous" />
+            <display value="Anonymous" />
+            <target>
+                <code value="A" />
+                <display value="Artist/Stage" />
+                <equivalence value="equivalent" />
+            </target>
+        </element>
+    </group>
+    <group>
+        <source value="http://hl7.org/fhir/name-use" />
+        <target value="https://fhir.nhs.uk/CodeSystem/v3-npfit-nameuse" />
+        <element>
+            <code value="nickname" />
+            <display value="Nickname" />
+            <target>
+                <code value="PREFERRED" />
+                <display value="Preferred name" />
+                <equivalence value="equivalent" />
+            </target>
+        </element>
+        <element>
+            <code value="old" />
+            <display value="Old" />
+            <target>
+                <code value="PREVIOUS" />
+                <display value="Other previous name" />
+                <equivalence value="equivalent" />
+            </target>
+        </element>
+        <element>
+            <code value="maiden" />
+            <display value="Name changed for Marriage" />
+            <target>
+                <code value="PREVIOUS-MAIDEN" />
+                <display value="Maiden name" />
+                <equivalence value="equivalent" />
+            </target>
+        </element>
+    </group>
+</ConceptMap>
