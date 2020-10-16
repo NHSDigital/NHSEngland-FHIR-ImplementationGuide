@@ -54,74 +54,80 @@
                 <display value="Pseudo-Name" />
             </concept>
             <concept>
-                <code value="T Indigenous/Tribal/Community Name" />
+                <code value="T" />
+                <display value="Indigenous/Tribal/Community Name" />
             </concept>
             <concept>
                 <code value="U" />
                 <display value="Unspecified" />
             </concept>
-        </include>      
+        </include>
     </compose>
     <expansion>
         <contains>
-            <system value="http://terminology.hl7.org/CodeSystem/v2-0200"/>
-            <code value="A"/>
-            <display value="Alias Name"/>
+            <system value="http://terminology.hl7.org/CodeSystem/v2-0200" />
+            <code value="A" />
+            <display value="Alias Name" />
         </contains>
         <contains>
-            <system value="http://terminology.hl7.org/CodeSystem/v2-0200"/>
-            <code value="B"/>
-            <display value="Name at Birth"/>
+            <system value="http://terminology.hl7.org/CodeSystem/v2-0200" />
+            <code value="B" />
+            <display value="Name at Birth" />
         </contains>
         <contains>
-            <system value="http://terminology.hl7.org/CodeSystem/v2-0200"/>
-            <code value="C"/>
-            <display value="Adopted Name"/>
+            <system value="http://terminology.hl7.org/CodeSystem/v2-0200" />
+            <code value="C" />
+            <display value="Adopted Name" />
         </contains>
         <contains>
-            <system value="http://terminology.hl7.org/CodeSystem/v2-0200"/>
-            <code value="D"/>
-            <display value="Display Name"/>
+            <system value="http://terminology.hl7.org/CodeSystem/v2-0200" />
+            <code value="D" />
+            <display value="Display Name" />
         </contains>
         <contains>
-            <system value="http://terminology.hl7.org/CodeSystem/v2-0200"/>
-            <code value="I"/>
-            <display value="Licensing Name"/>
+            <system value="http://terminology.hl7.org/CodeSystem/v2-0200" />
+            <code value="I" />
+            <display value="Licensing Name" />
         </contains>
         <contains>
-            <system value="http://terminology.hl7.org/CodeSystem/v2-0200"/>
-            <code value="L"/>
-            <display value="Legal Name"/>
+            <system value="http://terminology.hl7.org/CodeSystem/v2-0200" />
+            <code value="L" />
+            <display value="Legal Name" />
         </contains>
         <contains>
-            <system value="http://terminology.hl7.org/CodeSystem/v2-0200"/>
-            <code value="M"/>
-            <display value="Maiden Name"/>
+            <system value="http://terminology.hl7.org/CodeSystem/v2-0200" />
+            <code value="M" />
+            <display value="Maiden Name" />
         </contains>
         <contains>
-            <system value="http://terminology.hl7.org/CodeSystem/v2-0200"/>
-            <code value="N"/>
-            <display value="Nickname"/>
+            <system value="http://terminology.hl7.org/CodeSystem/v2-0200" />
+            <code value="N" />
+            <display value="Nickname" />
         </contains>
         <contains>
-            <system value="http://terminology.hl7.org/CodeSystem/v2-0200"/>
-            <code value="P"/>
-            <display value="Name of Partner/Spouse"/>
+            <system value="http://terminology.hl7.org/CodeSystem/v2-0200" />
+            <code value="P" />
+            <display value="Name of Partner/Spouse" />
         </contains>
         <contains>
-            <system value="http://terminology.hl7.org/CodeSystem/v2-0200"/>
-            <code value="R"/>
-            <display value="Registered Name"/>
+            <system value="http://terminology.hl7.org/CodeSystem/v2-0200" />
+            <code value="R" />
+            <display value="Registered Name" />
         </contains>
         <contains>
-            <system value="http://terminology.hl7.org/CodeSystem/v2-0200"/>
-            <code value="S"/>
-            <display value="Pseudo-Name"/>
+            <system value="http://terminology.hl7.org/CodeSystem/v2-0200" />
+            <code value="S" />
+            <display value="Pseudo-Name" />
         </contains>
         <contains>
-            <system value="http://terminology.hl7.org/CodeSystem/v2-0200"/>
-            <code value="U"/>
-            <display value="Unspecified"/>
+            <system value="http://terminology.hl7.org/CodeSystem/v2-0200" />
+            <code value="T" />
+            <display value="Indigenous/Tribal/Community Name" />
+        </contains>
+        <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v2-0200" />
+            <code value="U" />
+            <display value="Unspecified" />
         </contains>
     </expansion>
 </ValueSet>
