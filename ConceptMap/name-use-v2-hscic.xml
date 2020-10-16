@@ -132,13 +132,6 @@
       </target> 
     </element> 
     <element> 
-      <code value="temp"/> 
-      <target> 
-        <code value="TEMP"/> 
-        <equivalence value="equivalent"/> 
-      </target> 
-    </element> 
-    <element> 
       <code value="nickname"/> 
       <target> 
         <code value="N"/> 
@@ -150,17 +143,6 @@
       <target> 
         <code value="S"/> 
         <equivalence value="equivalent"/> 
-      </target> 
-    </element> 
-    <element> 
-      <code value="old"/> 
-      <target> 
-        <code value="NOUSE"/> 
-        <equivalence value="wider"/> 
-      </target> 
-      <target> 
-        <code value="BAD"/> 
-        <equivalence value="wider"/> 
       </target> 
     </element> 
     <element> 
