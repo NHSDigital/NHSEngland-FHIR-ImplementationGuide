@@ -19,7 +19,7 @@
             <target>
                 <code value="L" />
                 <display value="Legal" />
-                <equivalence value="equivalent" />
+                <equivalence value="equal" />
             </target>
         </element>
         <element>
@@ -37,7 +37,7 @@
             <target>
                 <code value="A" />
                 <display value="Artist/Stage" />
-                <equivalence value="equivalent" />
+                <equivalence value="subsumes" />
             </target>
         </element>
         <element>
@@ -59,7 +59,7 @@
             <target>
                 <code value="PREFERRED" />
                 <display value="Preferred name" />
-                <equivalence value="equivalent" />
+                <equivalence value="subsumes" />
             </target>
         </element>
         <element>
@@ -77,7 +77,7 @@
             <target>
                 <code value="PREVIOUS-MAIDEN" />
                 <display value="Maiden name" />
-                <equivalence value="equivalent" />
+                <equivalence value="equal" />
             </target>
         </element>
     </group>
