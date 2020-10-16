@@ -28,7 +28,7 @@
             <target>
                 <code value="L" />
                 <display value="Legal" />
-                <equivalence value="equivalent" />
+                <equivalence value="subsumes" />
             </target>
         </element>
         <element>
