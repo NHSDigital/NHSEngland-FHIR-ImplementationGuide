@@ -3,9 +3,9 @@
     <id value="v2-hscic-0200-NameType" />
     <url value="https://fhir.nhs.uk/ValueSet/v2-hscic-0200-NameType" />
     <version value="1.0.0" />
-    <name value="HSCIC HL7 Table 0200 - Name type" />
+    <name value="HL7v2 HSCIC Table 0200 - Name type" />
     <status value="active" />
-    <description value="HSCIC HL7 Table 0200 - Name type" />
+    <description value="HL7v2 HSCIC Table 0200 - Name type" />
     <compose>
         <include>
             <system value="http://terminology.hl7.org/CodeSystem/v2-0200" />
