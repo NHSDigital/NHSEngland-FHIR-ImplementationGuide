@@ -97,7 +97,7 @@
       </table> 
     </div> 
   </text> 
-  <url value="http://hl7.org/fhir/ConceptMap/cm-name-use-v2"/> 
+  <url value="https://fhir.nhs.uk/ConceptMap/name-use-v2-hscic"/> 
   <version value="1.0.0"/> 
   <name value="HSCIC v2.NameUse"/> 
   <title value="HSCIC v2 map for NameUse"/> 
