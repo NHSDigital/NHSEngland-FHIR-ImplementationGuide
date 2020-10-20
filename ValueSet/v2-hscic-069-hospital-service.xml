@@ -2,7 +2,7 @@
     <id value="v2-hscic-069-hospital-service"/>
     <url value="https://fhir.nhs.uk/ValueSet/v2-hscic-069-hospital-service"/>
     <version value="1.0.0"/>
-    <name value="V2 hscic 069 Hospital Service"/>
+    <name value="HL7v2 HSCIC Table 069 Hospital Service"/>
     <status value="draft"/>
     <date value="2019-02-01T00:00:00+00:00"/>
     <publisher value="NHS Digital"/>

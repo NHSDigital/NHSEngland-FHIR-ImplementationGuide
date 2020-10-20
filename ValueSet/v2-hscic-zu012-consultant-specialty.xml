@@ -2,7 +2,7 @@
     <id value="v2-hscic-zu012-consultant-specialty"/>
     <url value="https://fhir.nhs.uk/ValueSet/v2-hscic-zu012-consultant-specialty"/>
     <version value="1.0.0"/>
-    <name value="V2 hscic zu012 Consultant Specialty"/>
+    <name value="HL7v2 HSCIC Table zu012 Consultant Specialty"/>
     <status value="draft"/>
     <date value="2019-02-01T00:00:00+00:00"/>
     <publisher value="NHS Digital"/>
