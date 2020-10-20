@@ -27,6 +27,13 @@
         <targetProfile value="https://fhir.nhs.uk/R4/StructureDefinition/UKCore-Organization" />
       </type>
     </element>
+    <element id="HealthcareService.type">
+      <path value="HealthcareService.type" />
+      <binding>
+        <strength value="preferred" />
+        <valueSet value="https://fhir.nhs.uk/R4/ValueSet/UKCore-CareSettingType" />
+      </binding>
+    </element>
     <element id="HealthcareService.location">
       <path value="HealthcareService.location" />
       <type>
