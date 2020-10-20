@@ -72,6 +72,13 @@
       <path value="PractitionerRole.organization.reference" />
       <min value="1" />
     </element>
+    <element id="PractitionerRole.code">
+      <path value="PractitionerRole.code" />
+      <binding>
+        <strength value="preferred" />
+        <valueSet value="https://fhir.nhs.uk/R4/ValueSet/UKCore-SDSJobRoleName" />
+      </binding>
+    </element>
     <element id="PractitionerRole.code:sdsJobRoleName">
       <path value="PractitionerRole.code" />
       <sliceName value="sdsJobRoleName" />
