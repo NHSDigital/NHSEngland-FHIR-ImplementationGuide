@@ -7,7 +7,7 @@
         <system value="https://fhir.nhs.uk/identifier/CodeSystem"/>
         <value value="message-events"/>
     </identifier>
-    <version value="1.0.3"/>
+    <version value="1.0.4"/>
     <name value="Message Events"/>
     <title value="Message Events"/>
     <status value="draft"/>
@@ -98,5 +98,10 @@
             <display value="Original document notification and content"/>
             <definition value="Related to HL7 v2.4 - MDM_T02"/>
         </concept>
+    </concept>
+    <concept>
+        <code value="patient-notification"/>
+        <display value="Patient Notifications"/>
+        <definition value="Used to send CommunicationRequests"/>
     </concept>
 </CodeSystem>

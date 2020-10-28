@@ -1,0 +1,64 @@
+{
+  "resourceType": "CommunicationRequest",
+  "identifier": [
+    {
+      "system": "https://fhir.nhs.uk/NHSApp/campaign-id",
+      "value": "2020_Notifications"
+    },
+    {
+      "system": "https://fhir.nhs.uk/NHSApp/request-id",
+      "value": "Ian notifications 1"
+    }
+  ],
+  "groupIdentifier": {
+    "system": "https://gncr.nhs.uk/my-id",
+    "value": "123456"
+  },
+  "status": "active",
+  "medium" : [
+    {
+      "coding": [
+        {
+          "system": "https://fhir.nhs.uk/CodeSystem/UKCore-CommunicationChannel",
+          "code": "notification-application"
+        }
+      ]
+    }
+  ],
+  "payload": [
+    {
+      "contentString": "You can get notifications from the NHS App on your device.\nNotifications may include information about new features and important health information, such as coronavirus updates.\nTo manage notifications, go to your notifications settings:\nhttps://www.nhsapp.service.nhs.uk/account/notifications/"
+    }
+  ],
+  "requester": {
+    "identifier": {
+      "system": "https://fhir.nhs.uk/Id/ods-organization-code",
+      "value": "RTD"
+    },
+    "display": "THE NEWCASTLE UPON TYNE HOSPITALS NHS FOUNDATION TRUST"
+  },
+  "recipient": [
+    {
+      "type": "Patient",
+      "identifier": {
+        "system": "https://fhir.nhs.uk/Id/nhs-number",
+        "value": "9453740519"
+      }
+    },
+    {
+      "type": "Patient",
+      "identifier": {
+        "system": "https://fhir.nhs.uk/Id/nhs-number",
+        "value": "9732616210"
+      }
+    },
+    {
+      "type": "Group",
+      "identifier": {
+        "system": "https://fhir.nhs.uk/Id/patients-at-ods-organization-code",
+        "value": "YARTD"
+      },
+      "display": "Austhorpe General Practice"
+    }
+  ]
+}
