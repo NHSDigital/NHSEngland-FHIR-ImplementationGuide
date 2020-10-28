@@ -1,0 +1,91 @@
+<Bundle xmlns="http://hl7.org/fhir">
+    <id value="bbea6247-6d81-4d92-b2c0-8779aacdb838"/>
+    <type value="searchset"/>
+    <total value="1"/>
+    <link>
+        <relation value="self"/>
+        <!-- note entity encoding in url -->
+        <url value="[baseURL]/Endpoint?organization=https://fhir.nhs.uk/Id/ods-organization-code|R8008&amp;identifier=https://fhir.nhs.uk/Id/nhsEndpointServiceId|urn:nhs:names:services:psis:REPC_IN150016UK05"/>
+    </link>
+    <entry>
+        <fullUrl value="[baseURL]/Endpoint/f1dc0ac6-45ff-4d2b-bf91-793971e3e286"/>
+         <resource>
+             <Endpoint>
+                <id value="f1dc0ac6-45ff-4d2b-bf91-793971e3e286"/>
+                <extension url="https://fhir.nhs.uk/R4/StructureDefinition/Extension-SDS-ReliabilityConfiguration">
+                    <extension url="nhsMHSSyncReplyMode">
+                        <valueString value="MSHSignalsOnly"/>
+                    </extension>
+                    <extension url="nhsMHSRetryInterval">
+                        <valueString value="PT1M"/>
+                    </extension>
+                    <extension url="nhsMHSRetries">
+                        <valueInteger value="2"/>
+                    </extension>
+                    <extension url="nhsMHSPersistDuration">
+                        <valueString value="PT5M"/>
+                    </extension>
+                    <extension url="nhsMHSDuplicateElimination">
+                        <valueString value="always"/>
+                    </extension>
+                    <extension url="nhsMHSAckRequested">
+                        <valueString value="always"/>
+                    </extension>
+                </extension>
+                <!-- NhsEndpointServiceId -->
+                <identifier>
+                    <system value="https://fhir.nhs.uk/Id/nhsEndpointServiceId"/>
+                    <value value="urn:nhs:names:services:psis:REPC_IN150016UK05"/>
+                </identifier>
+                <!-- NhsMhsFQDN -->
+                <identifier>
+                    <system value="https://fhir.nhs.uk/Id/nhsMhsFQDN"/>
+                    <value value="192.168.128.11"/>
+                </identifier>
+                <!-- NhsMhsEndPoint -->
+                <identifier>
+                    <system value="https://fhir.nhs.uk/Id/nhsMhsEndPoint"/>
+                    <value value="https://192.168.128.11/reliablemessaging/reliablerequest"/>
+                </identifier>
+                <!-- NhsMhsPartyKey -->
+                <identifier>
+                    <system value="https://fhir.nhs.uk/Id/nhsMhsPartyKey"/>
+                    <value value="R8008-0000806"/>
+                </identifier>
+                <!-- NhsMhsCPAId -->
+                <identifier>
+                    <system value="https://fhir.nhs.uk/Id/nhsMhsCPAId"/>
+                    <value value="S20001A000182"/>
+                </identifier>
+                <!-- NhsSpineASID -->
+                <identifier>
+                    <system value="https://fhir.nhs.uk/Id/nhsSpineASID"/>
+                    <value value="227319907548"/>
+                </identifier>
+                <status value="active"/>
+                <connectionType>
+                    <system value="http://terminology.hl7.org/CodeSystem/endpoint-connection-type"/>
+                    <code value="hl7-fhir-msg"/>
+                    <display value="HL7 FHIR Messaging"/>
+                </connectionType>
+                <managingOrganization>
+                    <identifier>
+                        <system value="https://fhir.nhs.uk/Id/ods-organization-code"/>
+                        <value value="R8008"/>
+                    </identifier>
+                </managingOrganization>
+                <payloadType>
+                    <coding>
+                        <system value="http://terminology.hl7.org/CodeSystem/endpoint-payload-type"/>
+                        <code value="any"/>
+                        <display value="Any"/>
+                    </coding>
+                </payloadType>
+                <address value="https://192.168.128.11/"/>
+            </Endpoint>
+        </resource>
+        <search>
+            <mode value="match"/>
+        </search>
+    </entry>
+</Bundle>
