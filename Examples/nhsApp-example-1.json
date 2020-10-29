@@ -61,8 +61,8 @@
                     {
                         "coding": [
                             {
-                                "system": "https://fhir.nhs.uk/CodeSystem/UKCore-CommunicationChannel",
-                                "code": "notification"
+                                "system": "https://fhir.nhs.uk/CodeSystem/Spine-CommunicationChannel",
+                                "code": "notification-device"
                             }
                         ]
                     }
@@ -71,8 +71,13 @@
                     {
                         "extension": [
                             {
-                                "url": "https://fhir.nhs.uk/R4/StructureDefinition/Extension-nhsApp-title",
-                                "valueString": "NHS App Notification"
+                                "url": "https://fhir.nhs.uk/R4/StructureDefinition/Extension-Spine-CommunicationPayload",
+                                "extension": [
+                                    {
+                                        "url": "title",
+                                        "valueString": "NHS App Notification"
+                                    }
+                                ]
                             }
                         ],
                         "contentReference": {
@@ -138,7 +143,7 @@
                     {
                         "coding": [
                             {
-                                "system": "https://fhir.nhs.uk/CodeSystem/UKCore-CommunicationChannel",
+                                "system": "https://fhir.nhs.uk/CodeSystem/Spine-CommunicationChannel",
                                 "code": "notification-application"
                             }
                         ]

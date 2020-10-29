@@ -64,7 +64,7 @@
                     {
                         "coding": [
                             {
-                                "system": "https://fhir.nhs.uk/CodeSystem/UKCore-CommunicationChannel",
+                                "system": "https://fhir.nhs.uk/CodeSystem/Spine-CommunicationChannel",
                                 "code": "notification-application"
                             }
                         ]

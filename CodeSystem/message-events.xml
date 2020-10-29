@@ -7,7 +7,7 @@
         <system value="https://fhir.nhs.uk/identifier/CodeSystem"/>
         <value value="message-events"/>
     </identifier>
-    <version value="1.0.4"/>
+    <version value="1.0.5"/>
     <name value="Message Events"/>
     <title value="Message Events"/>
     <status value="draft"/>
@@ -29,7 +29,7 @@
     <concept>
         <code value="prescription-order"/>
         <display value="Prescription Order"/>
-        <definition value="Related to HL7 v2.4 - RDE_O11 - Pharmacy/treatment encoded order"/>
+        <definition value="Pharmacy/treatment encoded order"/>
     </concept>
     <concept>
         <code value="prescription-order-update"/>
@@ -38,66 +38,16 @@
     <concept>
         <code value="prescription-order-response"/>
         <display value="Prescription Order Response"/>
-        <definition value="Related to HL7 v2.4 - ORP_O10 - Pharmacy/treatment order acknowledgement"/>
+        <definition value="Pharmacy/treatment order acknowledgement"/>
     </concept>
     <concept>
         <code value="prescription-dispense"/>
         <display value="Pharmacy/treatment Dispense"/>
-        <definition value="Related to HL7 v2.4 - RDS_O13 - Pharmacy/treatment dispense"/>
-    </concept>
-    <concept>
-        <code value="prescription-claim"/>
-        <display value="Prescription Dispense Claim"/>
-        <definition value="Prescription Dispense Claim"/>
-    </concept>
-    <concept>
-        <code value="patient-register"/>
-        <display value="Create New Patient"/>
-        <definition value="Related to HL7 v2.4 - ADT_A28"/>
-    </concept>
-    <concept>
-        <code value="patient-update"/>
-        <display value="Update Patient Information"/>
-        <definition value="Related to HL7 v2.4 - ADT_A31"/>
-    </concept>
-    <concept>
-        <code value="patient-encounter"/>
-        <display value="Patient Encounter"/>
-        <definition value="Related to HL7 v2.4 - ADT_A04"/>
-    </concept>
-    <concept>
-        <code value="patient-encounter-update"/>
-        <display value="Update patient information"/>
-        <definition value="Related to HL7 v2.4 - ADT_A08"/>
-    </concept>
-    <concept>
-        <code value="patient-appointment"/>
-        <display value="Pre-admit patient"/>
-        <definition value="Related to HL7 v2.4 - ADT_A05"/>
-    </concept>
-    <concept>
-        <code value="patient-appointment-update"/>
-        <display value="Appointment update"/>
-        <concept>
-            <code value="patient-appointment-cancel"/>
-            <display value="Cancel PreAdmit"/>
-            <definition value="Related to HL7 v2.4 - ADT_A38"/>
-        </concept>
+        <definition value="Pharmacy/treatment dispense"/>
     </concept>
     <concept>
         <code value="unsolicited-observations"/>
         <display value="Unsolicited Observations"/>
-        <definition value="Related to HL7 v2.4 - ORU_R01"/>
-    </concept>
-    <concept>
-        <code value="document-notification"/>
-        <display value="Original document notification"/>
-        <definition value="Related to HL7 v2.4 - MDM_T01"/>
-        <concept>
-            <code value="document-notification-content"/>
-            <display value="Original document notification and content"/>
-            <definition value="Related to HL7 v2.4 - MDM_T02"/>
-        </concept>
     </concept>
     <concept>
         <code value="patient-notification"/>

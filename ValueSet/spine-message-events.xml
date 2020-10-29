@@ -2,61 +2,26 @@
 <ValueSet xmlns="http://hl7.org/fhir">
     <id value="spine-message-events" />
     <url value="https://fhir.nhs.uk/ValueSet/spine-message-events" />
-    <version value="1.0.1" />
+    <version value="1.0.2" />
     <name value="Spine Message Events" />
     <status value="active" />
     <description value="A ValueSet to identify the primary role (type) of organisation" />
     <compose>
         <include>
             <system value="https://fhir.nhs.uk/CodeSystem/message-event" />
-            <version value="1.0.4" />
+            <version value="1.0.5" />
         </include>
     </compose>
     <expansion>
         <contains>
             <system value="https://fhir.nhs.uk/CodeSystem/message-event"/>
-            <code value="patient-update"/>
-            <display value="Update Patient Information"/>
-        </contains>
-        <contains>
-            <system value="https://fhir.nhs.uk/CodeSystem/message-event"/>
-            <code value="document-notification-content"/>
-            <display value="Original document notification and content"/>
-        </contains>
-        <contains>
-            <system value="https://fhir.nhs.uk/CodeSystem/message-event"/>
-            <code value="patient-encounter"/>
-            <display value="Patient Encounter"/>
-        </contains>
-        <contains>
-            <system value="https://fhir.nhs.uk/CodeSystem/message-event"/>
-            <code value="patient-notification"/>
-            <display value="Patient Notifications"/>
-        </contains>
-        <contains>
-            <system value="https://fhir.nhs.uk/CodeSystem/message-event"/>
-            <code value="patient-register"/>
-            <display value="Create New Patient"/>
+            <code value="prescription-order-response"/>
+            <display value="Prescription Order Response"/>
         </contains>
         <contains>
             <system value="https://fhir.nhs.uk/CodeSystem/message-event"/>
             <code value="prescription-order-update"/>
             <display value="Prescription Order Update"/>
-        </contains>
-        <contains>
-            <system value="https://fhir.nhs.uk/CodeSystem/message-event"/>
-            <code value="patient-appointment-cancel"/>
-            <display value="Cancel PreAdmit"/>
-        </contains>
-        <contains>
-            <system value="https://fhir.nhs.uk/CodeSystem/message-event"/>
-            <code value="document-notification"/>
-            <display value="Original document notification"/>
-        </contains>
-        <contains>
-            <system value="https://fhir.nhs.uk/CodeSystem/message-event"/>
-            <code value="patient-appointment-update"/>
-            <display value="Appointment update"/>
         </contains>
         <contains>
             <system value="https://fhir.nhs.uk/CodeSystem/message-event"/>
@@ -70,28 +35,13 @@
         </contains>
         <contains>
             <system value="https://fhir.nhs.uk/CodeSystem/message-event"/>
-            <code value="patient-appointment"/>
-            <display value="Pre-admit patient"/>
-        </contains>
-        <contains>
-            <system value="https://fhir.nhs.uk/CodeSystem/message-event"/>
-            <code value="patient-encounter-update"/>
-            <display value="Update patient information"/>
-        </contains>
-        <contains>
-            <system value="https://fhir.nhs.uk/CodeSystem/message-event"/>
-            <code value="prescription-claim"/>
-            <display value="Prescription Dispense Claim"/>
-        </contains>
-        <contains>
-            <system value="https://fhir.nhs.uk/CodeSystem/message-event"/>
-            <code value="prescription-order-response"/>
-            <display value="Prescription Order Response"/>
-        </contains>
-        <contains>
-            <system value="https://fhir.nhs.uk/CodeSystem/message-event"/>
             <code value="unsolicited-observations"/>
             <display value="Unsolicited Observations"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/message-event"/>
+            <code value="patient-notification"/>
+            <display value="Patient Notifications"/>
         </contains>
     </expansion>
 </ValueSet>
