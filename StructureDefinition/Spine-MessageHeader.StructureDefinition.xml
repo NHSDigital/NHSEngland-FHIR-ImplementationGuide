@@ -35,6 +35,10 @@
         <valueSet value="https://fhir.nhs.uk/ValueSet/spine-message-events" />
       </binding>
     </element>
+    <element id="MessageHeader.destination">
+      <path value="MessageHeader.destination" />
+      <min value="1" />
+    </element>
     <element id="MessageHeader.destination.extension">
       <path value="MessageHeader.destination.extension" />
       <slicing>
@@ -53,12 +57,34 @@
         <profile value="https://fhir.nhs.uk/R4/StructureDefinition/Extension-spineEndpoint" />
       </type>
     </element>
+    <element id="MessageHeader.destination.receiver">
+      <path value="MessageHeader.destination.receiver" />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.nhs.uk/R4/StructureDefinition/Spine-PractitionerRole" />
+        <targetProfile value="https://fhir.nhs.uk/R4/StructureDefinition/Spine-Practitioner" />
+        <targetProfile value="https://fhir.nhs.uk/R4/StructureDefinition/Spine-Organization" />
+      </type>
+    </element>
     <element id="MessageHeader.sender">
       <path value="MessageHeader.sender" />
       <min value="1" />
       <type>
         <code value="Reference" />
         <targetProfile value="https://fhir.nhs.uk/R4/StructureDefinition/Spine-PractitionerRole" />
+        <targetProfile value="https://fhir.nhs.uk/R4/StructureDefinition/Spine-Practitioner" />
+        <targetProfile value="https://fhir.nhs.uk/R4/StructureDefinition/Spine-Organization" />
+      </type>
+    </element>
+    <element id="MessageHeader.author">
+      <path value="MessageHeader.author" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole" />
+        <targetProfile value="https://fhir.nhs.uk/R4/StructureDefinition/UKCore-PractitionerRole" />
+        <targetProfile value="https://fhir.nhs.uk/R4/StructureDefinition/UKCore-Practitioner" />
       </type>
     </element>
     <element id="MessageHeader.source.extension">
@@ -77,6 +103,15 @@
       <type>
         <code value="Extension" />
         <profile value="https://fhir.nhs.uk/R4/StructureDefinition/Extension-spineEndpoint" />
+      </type>
+    </element>
+    <element id="MessageHeader.responsible">
+      <path value="MessageHeader.responsible" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.nhs.uk/R4/StructureDefinition/UKCore-PractitionerRole" />
+        <targetProfile value="https://fhir.nhs.uk/R4/StructureDefinition/UKCore-Practitioner" />
+        <targetProfile value="https://fhir.nhs.uk/R4/StructureDefinition/UKCore-Organization" />
       </type>
     </element>
     <element id="MessageHeader.reason">
