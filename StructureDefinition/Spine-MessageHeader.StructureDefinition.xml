@@ -77,12 +77,18 @@
         <targetProfile value="https://fhir.nhs.uk/R4/StructureDefinition/Spine-Organization" />
       </type>
     </element>
+    <element id="MessageHeader.enterer">
+      <path value="MessageHeader.enterer" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.nhs.uk/R4/StructureDefinition/UKCore-PractitionerRole" />
+        <targetProfile value="https://fhir.nhs.uk/R4/StructureDefinition/UKCore-Practitioner" />
+      </type>
+    </element>
     <element id="MessageHeader.author">
       <path value="MessageHeader.author" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole" />
         <targetProfile value="https://fhir.nhs.uk/R4/StructureDefinition/UKCore-PractitionerRole" />
         <targetProfile value="https://fhir.nhs.uk/R4/StructureDefinition/UKCore-Practitioner" />
       </type>
