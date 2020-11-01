@@ -1,37 +1,34 @@
-<MessageHeader xmlns="http://hl7.org/fhir">
-    <id value="48B07891-1D81-7B99-3BD2-23E242D2DD44" />
+<MessageHeader>
+    <id value="3599c0e9-9292-413e-9270-9a1ef1ead99c" />
     <eventCoding>
         <system value="https://fhir.nhs.uk/CodeSystem/message-event" />
         <code value="prescription-order" />
         <display value="Prescription Order" />
     </eventCoding>
+    <destination>
+        <endpoint value="https://sandbox.api.service.nhs.uk/electronic-prescriptions/$post-message" />
+        <receiver>
+            <identifier>
+                <system value="https://fhir.nhs.uk/Id/ods-organization-code" />
+                <value value="VNE51" />
+            </identifier>
+            <display value="The Simple Pharmacy" />
+        </receiver>
+    </destination>
     <sender>
-        <reference value="urn:uuid:6dc16793-61c2-44b8-8d0f-f872101c016e" />
-        <display value="Dr Smith" />
+        <identifier>
+            <system value="https://fhir.nhs.uk/Id/ods-organization-code" />
+            <value value="RBA" />
+        </identifier>
+        <display value="TAUNTON AND SOMERSET NHS FOUNDATION TRUST" />
     </sender>
     <source>
-        <extension url="https://fhir.nhs.uk/R4/StructureDefinition/Extension-spineEndpoint">
-            <valueIdentifier>
-                <system value="https://fhir.nhs.uk/Id/spine-ASID" />
-                <value value="747225912019" />
-            </valueIdentifier>
-        </extension>
-        <name value="PAS" />
-        <endpoint value="https://fhir.mynhstrust.nhs.uk/R4" />
+        <endpoint value="urn:nhs-uk:addressing:ods:RBA" />
     </source>
     <focus>
-        <reference value="urn:uuid:1E34EE53-397A-2E70-E97C-67B1BD95014D" />
+        <reference value="urn:uuid:78d3c2eb-009e-4ec8-a358-b042954aa9b2" />
     </focus>
     <focus>
-        <reference value="urn:uuid:791C9A65-5C6A-308B-D700-32D247BADB87" />
-    </focus>
-    <focus>
-        <reference value="urn:uuid:C6750CAA-3CA9-4F29-A282-6EE1AA5D7D4C" />
-    </focus>
-    <focus>
-        <reference value="urn:uuid:0f314b9f-5233-42e6-aed3-c436bb9ac8ab" />
-    </focus>
-    <focus>
-        <reference value="urn:uuid:6dc16793-61c2-44b8-8d0f-f872101c016e" />
+        <reference value="urn:uuid:a54219b8-f741-4c47-b662-e4f8dfa49ab6" />
     </focus>
 </MessageHeader>
