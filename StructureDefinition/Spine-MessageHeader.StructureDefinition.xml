@@ -93,24 +93,6 @@
         <targetProfile value="https://fhir.nhs.uk/R4/StructureDefinition/UKCore-Practitioner" />
       </type>
     </element>
-    <element id="MessageHeader.source.extension">
-      <path value="MessageHeader.source.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="MessageHeader.source.extension:spineEndpoint">
-      <path value="MessageHeader.source.extension" />
-      <sliceName value="spineEndpoint" />
-      <type>
-        <code value="Extension" />
-        <profile value="https://fhir.nhs.uk/R4/StructureDefinition/Extension-spineEndpoint" />
-      </type>
-    </element>
     <element id="MessageHeader.responsible">
       <path value="MessageHeader.responsible" />
       <type>
