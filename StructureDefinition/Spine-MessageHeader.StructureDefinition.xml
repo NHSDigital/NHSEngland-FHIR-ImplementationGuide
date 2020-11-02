@@ -25,6 +25,26 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/MessageHeader" />
   <derivation value="constraint" />
   <differential>
+    <element id="MessageHeader.extension">
+      <path value="MessageHeader.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="MessageHeader.extension:identifier">
+      <path value="MessageHeader.extension" />
+      <sliceName value="identifier" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.nhs.uk/R4/StructureDefinition/Extension-Spine-MessageHeader-identifier" />
+      </type>
+    </element>
     <element id="MessageHeader.event[x]">
       <path value="MessageHeader.event[x]" />
       <type>
