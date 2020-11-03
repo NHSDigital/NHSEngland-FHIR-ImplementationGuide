@@ -35,10 +35,9 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="MessageHeader.extension:identifier">
+    <element id="MessageHeader.extension:correlationID">
       <path value="MessageHeader.extension" />
-      <sliceName value="identifier" />
-      <min value="1" />
+      <sliceName value="correlationID" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -82,7 +81,6 @@
     <element id="MessageHeader.destination.receiver.extension:receiverHealthcareService">
       <path value="MessageHeader.destination.receiver.extension" />
       <sliceName value="receiverHealthcareService" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -112,7 +110,6 @@
     <element id="MessageHeader.sender.extension:senderHealthcareService">
       <path value="MessageHeader.sender.extension" />
       <sliceName value="senderHealthcareService" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
