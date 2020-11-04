@@ -38,7 +38,7 @@
     <element id="MessageHeader.extension:identifier">
       <path value="MessageHeader.extension" />
       <sliceName value="identifier" />
-      <max value="1" />
+      <max value="*" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.nhs.uk/R4/StructureDefinition/Extension-Spine-MessageHeader-identifier" />
