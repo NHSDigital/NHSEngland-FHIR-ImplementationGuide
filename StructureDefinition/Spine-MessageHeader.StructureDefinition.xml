@@ -25,6 +25,25 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/MessageHeader" />
   <derivation value="constraint" />
   <differential>
+    <element id="MessageHeader.extension">
+      <path value="MessageHeader.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="MessageHeader.extension:correlationID">
+      <path value="MessageHeader.extension" />
+      <sliceName value="correlationID" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.nhs.uk/R4/StructureDefinition/Extension-Spine-MessageHeader-identifier" />
+      </type>
+    </element>
     <element id="MessageHeader.event[x]">
       <path value="MessageHeader.event[x]" />
       <type>
@@ -39,24 +58,6 @@
       <path value="MessageHeader.destination" />
       <min value="1" />
     </element>
-    <element id="MessageHeader.destination.extension">
-      <path value="MessageHeader.destination.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="MessageHeader.destination.extension:spineEndpoint">
-      <path value="MessageHeader.destination.extension" />
-      <sliceName value="spineEndpoint" />
-      <type>
-        <code value="Extension" />
-        <profile value="https://fhir.nhs.uk/R4/StructureDefinition/Extension-spineEndpoint" />
-      </type>
-    </element>
     <element id="MessageHeader.destination.receiver">
       <path value="MessageHeader.destination.receiver" />
       <min value="1" />
@@ -67,6 +68,25 @@
         <targetProfile value="https://fhir.nhs.uk/R4/StructureDefinition/Spine-Organization" />
       </type>
     </element>
+    <element id="MessageHeader.destination.receiver.extension">
+      <path value="MessageHeader.destination.receiver.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="MessageHeader.destination.receiver.extension:receiverHealthcareService">
+      <path value="MessageHeader.destination.receiver.extension" />
+      <sliceName value="receiverHealthcareService" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.nhs.uk/R4/StructureDefinition/Extension-MessageHeader-HealthcareService-Reference" />
+      </type>
+    </element>
     <element id="MessageHeader.sender">
       <path value="MessageHeader.sender" />
       <min value="1" />
@@ -75,6 +95,25 @@
         <targetProfile value="https://fhir.nhs.uk/R4/StructureDefinition/Spine-PractitionerRole" />
         <targetProfile value="https://fhir.nhs.uk/R4/StructureDefinition/Spine-Practitioner" />
         <targetProfile value="https://fhir.nhs.uk/R4/StructureDefinition/Spine-Organization" />
+      </type>
+    </element>
+    <element id="MessageHeader.sender.extension">
+      <path value="MessageHeader.sender.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="MessageHeader.sender.extension:senderHealthcareService">
+      <path value="MessageHeader.sender.extension" />
+      <sliceName value="senderHealthcareService" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.nhs.uk/R4/StructureDefinition/Extension-MessageHeader-HealthcareService-Reference" />
       </type>
     </element>
     <element id="MessageHeader.enterer">
@@ -91,24 +130,6 @@
         <code value="Reference" />
         <targetProfile value="https://fhir.nhs.uk/R4/StructureDefinition/UKCore-PractitionerRole" />
         <targetProfile value="https://fhir.nhs.uk/R4/StructureDefinition/UKCore-Practitioner" />
-      </type>
-    </element>
-    <element id="MessageHeader.source.extension">
-      <path value="MessageHeader.source.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="MessageHeader.source.extension:spineEndpoint">
-      <path value="MessageHeader.source.extension" />
-      <sliceName value="spineEndpoint" />
-      <type>
-        <code value="Extension" />
-        <profile value="https://fhir.nhs.uk/R4/StructureDefinition/Extension-spineEndpoint" />
       </type>
     </element>
     <element id="MessageHeader.responsible">
