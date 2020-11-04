@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="https://fhir.nhs.uk/R4/StructureDefinition/Extension-Spine-MessageHeader-identifier" />
-  <name value="Extension-Spine-MessageHeader-identifier" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/Extension-Spine-MessageHeader-messageId" />
+  <name value="Extension-Spine-MessageHeader-messageId" />
   <status value="draft" />
   <description value="This is a widely used term used to correlate the same request / event across logs with an arbitrary (but unique) value.&#xD;&#xA;&#xD;&#xA;This can be implemented so that the response contains an un-changed Correlation ID &#xD;&#xA;&#xD;&#xA;In Spine http requests this will match the value of NHSD-Correlation-ID header." />
   <fhirVersion value="4.0.1" />
@@ -22,7 +22,7 @@
   <differential>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="https://fhir.nhs.uk/R4/StructureDefinition/Extension-Spine-MessageHeader-identifier" />
+      <fixedUri value="https://fhir.nhs.uk/StructureDefinition/Extension-Spine-MessageHeader-messageId" />
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />

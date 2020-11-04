@@ -35,13 +35,13 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="MessageHeader.extension:identifier">
+    <element id="MessageHeader.extension:messageId">
       <path value="MessageHeader.extension" />
-      <sliceName value="identifier" />
+      <sliceName value="messageId" />
       <max value="*" />
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.nhs.uk/R4/StructureDefinition/Extension-Spine-MessageHeader-identifier" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-Spine-MessageHeader-messageId" />
       </type>
     </element>
     <element id="MessageHeader.event[x]">
