@@ -35,9 +35,9 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="MessageHeader.extension:correlationID">
+    <element id="MessageHeader.extension:identifier">
       <path value="MessageHeader.extension" />
-      <sliceName value="correlationID" />
+      <sliceName value="identifier" />
       <max value="1" />
       <type>
         <code value="Extension" />
