@@ -78,13 +78,13 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="MessageHeader.destination.receiver.extension:receiverHealthcareService">
+    <element id="MessageHeader.destination.receiver.extension:receiverLocalPart">
       <path value="MessageHeader.destination.receiver.extension" />
-      <sliceName value="receiverHealthcareService" />
+      <sliceName value="receiverLocalPart" />
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.nhs.uk/R4/StructureDefinition/Extension-MessageHeader-HealthcareService-Reference" />
+        <profile value="https://fhir.nhs.uk/R4/StructureDefinition/Extension-Spine-MessageHeader-LocalPart" />
       </type>
     </element>
     <element id="MessageHeader.sender">
@@ -107,13 +107,13 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="MessageHeader.sender.extension:senderHealthcareService">
+    <element id="MessageHeader.sender.extension:senderLocalPart">
       <path value="MessageHeader.sender.extension" />
-      <sliceName value="senderHealthcareService" />
+      <sliceName value="senderLocalPart" />
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.nhs.uk/R4/StructureDefinition/Extension-MessageHeader-HealthcareService-Reference" />
+        <profile value="https://fhir.nhs.uk/R4/StructureDefinition/Extension-Spine-MessageHeader-LocalPart" />
       </type>
     </element>
     <element id="MessageHeader.enterer">
