@@ -38,10 +38,19 @@
     <element id="MessageHeader.extension:messageId">
       <path value="MessageHeader.extension" />
       <sliceName value="messageId" />
-      <max value="*" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-Spine-MessageHeader-messageId" />
+      </type>
+    </element>
+    <element id="MessageHeader.extension:status">
+      <path value="MessageHeader.extension" />
+      <sliceName value="status" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.nhs.uk/R4/StructureDefinition/Extension-Spine-Message-Status" />
       </type>
     </element>
     <element id="MessageHeader.event[x]">
