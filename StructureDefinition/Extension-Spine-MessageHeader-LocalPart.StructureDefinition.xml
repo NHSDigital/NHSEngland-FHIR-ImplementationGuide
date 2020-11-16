@@ -36,5 +36,13 @@
         <targetProfile value="https://fhir.nhs.uk/R4/StructureDefinition/Spine-Practitioner" />
       </type>
     </element>
+    <element id="Extension.value[x].identifier.system">
+      <path value="Extension.value[x].identifier.system" />
+      <min value="1" />
+    </element>
+    <element id="Extension.value[x].identifier.value">
+      <path value="Extension.value[x].identifier.value" />
+      <min value="1" />
+    </element>
   </differential>
 </StructureDefinition>
