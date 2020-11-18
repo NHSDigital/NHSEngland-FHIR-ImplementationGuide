@@ -114,12 +114,8 @@
         <profile value="https://fhir.nhs.uk/R4/StructureDefinition/Extension-Spine-MessageHeader-LocalPart" />
       </type>
     </element>
-    <element id="MessageHeader.destination.receiver.extension:receiverLocalPart.value[x].identifier.system">
-      <path value="MessageHeader.destination.receiver.extension.value[x].identifier.system" />
-      <min value="1" />
-    </element>
-    <element id="MessageHeader.destination.receiver.extension:receiverLocalPart.value[x].identifier.value">
-      <path value="MessageHeader.destination.receiver.extension.value[x].identifier.value" />
+    <element id="MessageHeader.destination.receiver.identifier">
+      <path value="MessageHeader.destination.receiver.identifier" />
       <min value="1" />
     </element>
     <element id="MessageHeader.destination.receiver.identifier.system">
@@ -159,12 +155,8 @@
         <profile value="https://fhir.nhs.uk/R4/StructureDefinition/Extension-Spine-MessageHeader-LocalPart" />
       </type>
     </element>
-    <element id="MessageHeader.sender.extension:senderLocalPart.value[x].identifier.system">
-      <path value="MessageHeader.sender.extension.value[x].identifier.system" />
-      <min value="1" />
-    </element>
-    <element id="MessageHeader.sender.extension:senderLocalPart.value[x].identifier.value">
-      <path value="MessageHeader.sender.extension.value[x].identifier.value" />
+    <element id="MessageHeader.sender.identifier">
+      <path value="MessageHeader.sender.identifier" />
       <min value="1" />
     </element>
     <element id="MessageHeader.sender.identifier.system">
