@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+    <id value="message-status-vs" />
+    <url value="https://fhir.hl7.org.uk/ValueSet/message-status-vs" />
+    <version value="1.0.2" />
+    <name value="Message Status Codes" />
+    <status value="active" />
+    <description value="Complete set of message reasons codes" />
+    <compose>
+        <include>
+            <system value="https://fhir.hl7.org.uk/CodeSystem/message-status" />
+            <version value="1.0.2" />
+        </include>
+    </compose>
+    <expansion>
+        <contains>
+            <system value="https://fhir.hl7.org.uk/CodeSystem/message-status"/>
+            <code value="active"/>
+            <display value="Active"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.hl7.org.uk/CodeSystem/message-status"/>
+            <code value="queued"/>
+            <display value="Queued"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.hl7.org.uk/CodeSystem/message-status"/>
+            <code value="completed"/>
+            <display value="Completed"/>
+        </contains>
+    </expansion>
+</ValueSet>

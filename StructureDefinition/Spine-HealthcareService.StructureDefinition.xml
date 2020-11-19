@@ -20,6 +20,31 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/HealthcareService" />
   <derivation value="constraint" />
   <differential>
+    <element id="HealthcareService.identifier">
+      <path value="HealthcareService.identifier" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="HealthcareService.identifier:odsCode">
+      <path value="HealthcareService.identifier" />
+      <sliceName value="odsCode" />
+      <min value="1" />
+    </element>
+    <element id="HealthcareService.identifier:odsCode.system">
+      <path value="HealthcareService.identifier.system" />
+      <min value="1" />
+      <fixedUri value="https://fhir.nhs.uk/Id/ods-organization-code" />
+    </element>
+    <element id="HealthcareService.identifier:odsCode.value">
+      <path value="HealthcareService.identifier.value" />
+      <min value="1" />
+    </element>
     <element id="HealthcareService.providedBy">
       <path value="HealthcareService.providedBy" />
       <type>
@@ -40,6 +65,22 @@
         <code value="Reference" />
         <targetProfile value="https://fhir.nhs.uk/R4/StructureDefinition/UKCore-Location" />
       </type>
+    </element>
+    <element id="HealthcareService.location.reference">
+      <path value="HealthcareService.location.reference" />
+      <min value="1" />
+    </element>
+    <element id="HealthcareService.telecom">
+      <path value="HealthcareService.telecom" />
+      <min value="1" />
+    </element>
+    <element id="HealthcareService.telecom.value">
+      <path value="HealthcareService.telecom.value" />
+      <min value="1" />
+    </element>
+    <element id="HealthcareService.telecom.use">
+      <path value="HealthcareService.telecom.use" />
+      <min value="1" />
     </element>
   </differential>
 </StructureDefinition>

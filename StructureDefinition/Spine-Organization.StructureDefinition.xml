@@ -47,9 +47,6 @@
     <element id="Organization.type">
       <path value="Organization.type" />
       <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="OrganizationType" />
-        </extension>
         <strength value="preferred" />
         <valueSet value="https://fhir.nhs.uk/ValueSet/organisation-primary-role" />
       </binding>
@@ -63,8 +60,12 @@
       <path value="Organization.name" />
       <min value="1" />
     </element>
-    <element id="Organization.address">
-      <path value="Organization.address" />
+    <element id="Organization.telecom.value">
+      <path value="Organization.telecom.value" />
+      <min value="1" />
+    </element>
+    <element id="Organization.telecom.use">
+      <path value="Organization.telecom.use" />
       <min value="1" />
     </element>
     <element id="Organization.partOf">
@@ -75,10 +76,15 @@
       <path value="Organization.partOf.identifier" />
       <min value="1" />
     </element>
+    <element id="Organization.partOf.identifier.system">
+      <path value="Organization.partOf.identifier.system" />
+      <min value="1" />
+    </element>
+    <element id="Organization.partOf.identifier.value">
+      <path value="Organization.partOf.identifier.value" />
+      <min value="1" />
+    </element>
     <element id="Organization.partOf.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="Organization.partOf.display" />
       <min value="1" />
     </element>

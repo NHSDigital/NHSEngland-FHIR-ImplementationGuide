@@ -34,6 +34,11 @@
       <path value="PractitionerRole.identifier" />
       <min value="1" />
     </element>
+    <element id="PractitionerRole.identifier:sdsRoleProfileID">
+      <path value="PractitionerRole.identifier" />
+      <sliceName value="sdsRoleProfileID" />
+      <min value="1" />
+    </element>
     <element id="PractitionerRole.identifier:nhsbsaSpuriousCode">
       <path value="PractitionerRole.identifier" />
       <sliceName value="nhsbsaSpuriousCode" />
@@ -74,6 +79,8 @@
     </element>
     <element id="PractitionerRole.code">
       <path value="PractitionerRole.code" />
+      <min value="1" />
+      <max value="1" />
       <binding>
         <strength value="preferred" />
         <valueSet value="https://fhir.nhs.uk/R4/ValueSet/UKCore-SDSJobRoleName" />
@@ -86,10 +93,19 @@
     </element>
     <element id="PractitionerRole.healthcareService">
       <path value="PractitionerRole.healthcareService" />
+      <max value="1" />
       <type>
         <code value="Reference" />
         <targetProfile value="https://fhir.nhs.uk/R4/StructureDefinition/Spine-HealthcareService" />
       </type>
+    </element>
+    <element id="PractitionerRole.telecom.value">
+      <path value="PractitionerRole.telecom.value" />
+      <min value="1" />
+    </element>
+    <element id="PractitionerRole.telecom.use">
+      <path value="PractitionerRole.telecom.use" />
+      <min value="1" />
     </element>
   </differential>
 </StructureDefinition>

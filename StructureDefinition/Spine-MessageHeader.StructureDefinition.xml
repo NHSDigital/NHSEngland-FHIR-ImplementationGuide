@@ -38,11 +38,30 @@
     <element id="MessageHeader.extension:messageId">
       <path value="MessageHeader.extension" />
       <sliceName value="messageId" />
-      <max value="*" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-Spine-MessageHeader-messageId" />
       </type>
+    </element>
+    <element id="MessageHeader.extension:messageId.value[x].value">
+      <path value="MessageHeader.extension.value[x].value" />
+      <min value="1" />
+    </element>
+    <element id="MessageHeader.extension:status">
+      <path value="MessageHeader.extension" />
+      <sliceName value="status" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.nhs.uk/R4/StructureDefinition/Extension-Spine-Message-Status" />
+      </type>
+    </element>
+    <element id="MessageHeader.extension:status.value[x].system">
+      <path value="MessageHeader.extension.value[x].system" />
+      <min value="1" />
+    </element>
+    <element id="MessageHeader.extension:status.value[x].code">
+      <path value="MessageHeader.extension.value[x].code" />
+      <min value="1" />
     </element>
     <element id="MessageHeader.event[x]">
       <path value="MessageHeader.event[x]" />
@@ -53,6 +72,14 @@
         <strength value="required" />
         <valueSet value="https://fhir.nhs.uk/ValueSet/spine-message-events" />
       </binding>
+    </element>
+    <element id="MessageHeader.event[x].system">
+      <path value="MessageHeader.event[x].system" />
+      <min value="1" />
+    </element>
+    <element id="MessageHeader.event[x].code">
+      <path value="MessageHeader.event[x].code" />
+      <min value="1" />
     </element>
     <element id="MessageHeader.destination">
       <path value="MessageHeader.destination" />
@@ -87,6 +114,18 @@
         <profile value="https://fhir.nhs.uk/R4/StructureDefinition/Extension-Spine-MessageHeader-LocalPart" />
       </type>
     </element>
+    <element id="MessageHeader.destination.receiver.identifier">
+      <path value="MessageHeader.destination.receiver.identifier" />
+      <min value="1" />
+    </element>
+    <element id="MessageHeader.destination.receiver.identifier.system">
+      <path value="MessageHeader.destination.receiver.identifier.system" />
+      <min value="1" />
+    </element>
+    <element id="MessageHeader.destination.receiver.identifier.value">
+      <path value="MessageHeader.destination.receiver.identifier.value" />
+      <min value="1" />
+    </element>
     <element id="MessageHeader.sender">
       <path value="MessageHeader.sender" />
       <min value="1" />
@@ -116,6 +155,18 @@
         <profile value="https://fhir.nhs.uk/R4/StructureDefinition/Extension-Spine-MessageHeader-LocalPart" />
       </type>
     </element>
+    <element id="MessageHeader.sender.identifier">
+      <path value="MessageHeader.sender.identifier" />
+      <min value="1" />
+    </element>
+    <element id="MessageHeader.sender.identifier.system">
+      <path value="MessageHeader.sender.identifier.system" />
+      <min value="1" />
+    </element>
+    <element id="MessageHeader.sender.identifier.value">
+      <path value="MessageHeader.sender.identifier.value" />
+      <min value="1" />
+    </element>
     <element id="MessageHeader.enterer">
       <path value="MessageHeader.enterer" />
       <type>
@@ -132,6 +183,18 @@
         <targetProfile value="https://fhir.nhs.uk/R4/StructureDefinition/UKCore-Practitioner" />
       </type>
     </element>
+    <element id="MessageHeader.author.identifier">
+      <path value="MessageHeader.author.identifier" />
+      <min value="1" />
+    </element>
+    <element id="MessageHeader.author.identifier.system">
+      <path value="MessageHeader.author.identifier.system" />
+      <min value="1" />
+    </element>
+    <element id="MessageHeader.author.identifier.value">
+      <path value="MessageHeader.author.identifier.value" />
+      <min value="1" />
+    </element>
     <element id="MessageHeader.responsible">
       <path value="MessageHeader.responsible" />
       <type>
@@ -141,12 +204,32 @@
         <targetProfile value="https://fhir.nhs.uk/R4/StructureDefinition/UKCore-Organization" />
       </type>
     </element>
+    <element id="MessageHeader.responsible.identifier.system">
+      <path value="MessageHeader.responsible.identifier.system" />
+      <min value="1" />
+    </element>
+    <element id="MessageHeader.responsible.identifier.value">
+      <path value="MessageHeader.responsible.identifier.value" />
+      <min value="1" />
+    </element>
     <element id="MessageHeader.reason">
       <path value="MessageHeader.reason" />
       <binding>
         <strength value="required" />
         <valueSet value="https://fhir.nhs.uk/ValueSet/message-reason-code" />
       </binding>
+    </element>
+    <element id="MessageHeader.reason.coding.system">
+      <path value="MessageHeader.reason.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="MessageHeader.reason.coding.code">
+      <path value="MessageHeader.reason.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="MessageHeader.focus.reference">
+      <path value="MessageHeader.focus.reference" />
+      <min value="1" />
     </element>
   </differential>
 </StructureDefinition>
