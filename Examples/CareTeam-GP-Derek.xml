@@ -1,0 +1,38 @@
+<CareTeam xmlns="http://hl7.org/fhir">
+    <id value=" "/>
+    <status value="active"/>
+    <category>
+        <coding>
+            <system value="http://loinc.org"/>
+            <code value="790141000000100"/>
+            <display value="Under care of community care team"/>
+        </coding>
+    </category>
+    <name value="Derek Type 1 Diabetes GP Care Team"/>
+    <subject>
+        <identifier>
+            <system value="https://fhir.nhs.uk/Id/nhs-number" />
+            <value value="9453740519" />
+        </identifier>
+        <display value="Derek"/>
+    </subject>
+    <period>
+        <start value="2016-01-01"/>
+    </period>
+    <participant>
+        <member>
+            <identifier>
+                <system value="https://fhir.hl7.org.uk/Id/gmc-number"/>
+                <value value"G1234567"/>
+            </identifier>
+            <display value="DR RAZIA ALI"/>
+        </member>
+    </participant>
+    <managingOrganization>
+        <identifier>
+            <system value="https://fhir.nhs.uk/Id/ods-organization-code"/>
+            <value value"B81001"/>
+        </identifier>
+        <display value="Springs Surgery"/>
+    </managingOrganization>
+</CareTeam>
