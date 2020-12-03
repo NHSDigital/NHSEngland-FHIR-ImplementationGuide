@@ -1,79 +1,77 @@
 <CarePlan xmlns="http://hl7.org/fhir">
-    <id value="diabetes"/>
-    <instantiatesCanonical>
-        <!-- https://pathways.nice.org.uk/pathways/type-1-diabetes-in-adults -->
-        <display value="diabetes treatment regime"/>
-    </instantiatesCanonical>
-    <status value="active"/>
-    <intent value="plan"/>
+    <id value="diabetes"></id>
+    <!-- This is not correct but gives the gist -->
+    <instantiatesCanonical value="https://pathways.nice.org.uk/pathways/type-1-diabetes-in-adults"></instantiatesCanonical>
+    <status value="active"></status>
+    <intent value="plan"></intent>
     <subject>
         <identifier>
-            <system value="https://fhir.nhs.uk/Id/nhs-number" />
-            <value value="9453740519" />
+            <system value="https://fhir.nhs.uk/Id/nhs-number"></system>
+            <value value="9453740519"></value>
         </identifier>
-        <display value="Derek"/>
+        <display value="Derek"></display>
     </subject>
     <careTeam>
-        <reference value="CareTeam/gp-careteam"/>
-        <display value="Derek Type 1 Diabetes GP Care Team" />
+        <reference value="CareTeam/gp-careteam"></reference>
+        <display value="Derek Type 1 Diabetes GP Care Team"></display>
     </careTeam>
     <!-- Should have link to social services care team -->
     <addresses>
         <!-- SNOMED CT 46635009 Type 1 Diabetes -->
-        <display value="Type 1 diabetes mellitus"/>
+        <display value="Type 1 diabetes mellitus"></display>
     </addresses>
     <addresses>
         <!-- SNOMED CT  709044004 Chronic kidney disease  Leave this out???? -->
-        <display value="Chronic kidney disease" />
+        <display value="Chronic kidney disease"></display>
     </addresses>
     <activity>
         <reference>
-            <type value="ServiceRequest" />
-            <display value="Provision of day care" />
+            <type value="ServiceRequest"></type>
+            <display value="Provision of day care"></display>
         </reference>
         <detail>
-            <status value="in-progress"/>
+            <status value="in-progress"></status>
             <performer>
                 <identifier>
-                    <system value="https://fhir.nhs.uk/Id/ods-organization-code"/>
-                    <value value"LDSSC"/>
+                    <system value="https://fhir.nhs.uk/Id/ods-organization-code"></system>
+                    <value value="LDSSC"></value>
                 </identifier>
-                <display value="Austhorpe Social Services"/>
+                <display value="Austhorpe Social Services"></display>
             </performer>
         </detail>
     </activity>
     <activity>
         <reference>
             <!-- This feels like it should reference a VTM code for Insulin. Maybe a Task not MedicationRequest-->
-            <type value="Task" />
-            <display value="Insulin Therapy" />
+            <type value="Task"></type>
+            <display value="Insulin Therapy"></display>
         </reference>
         <detail>
-            <status value="in-progress"/>
+            <status value="in-progress"></status>
             <performer>
                 <identifier>
-                    <system value="https://fhir.nhs.uk/Id/ods-organization-code"/>
-                    <value value"B81001"/>
+                    <system value="https://fhir.nhs.uk/Id/ods-organization-code"></system>
+                    <value value="B81001"></value>
                 </identifier>
-                <display value="Springs Surgery"/>
+                <display value="Springs Surgery"></display>
             </performer>
         </detail>
     </activity>
     <activity>
         <reference>
             <!-- SNOMED CT 225323000 -->
-            <type value="ServiceRequest" />
-            <display value="Smoking cessation advice" />
+            <type value="ServiceRequest"></type>
+            <display value="Smoking cessation advice"></display>
         </reference>
         <detail>
-            <status value="completed"/>
+            <status value="completed"></status>
             <performer>
                 <identifier>
-                    <system value="https://fhir.nhs.uk/Id/ods-organization-code"/>
-                    <value value"Z91001"/>
+                    <system value="https://fhir.nhs.uk/Id/ods-organization-code"></system>
+                    <value value="Z91001"></value>
                 </identifier>
-                <display value="Elmpt Community Services"/>
+                <display value="Elmpt Community Services"></display>
             </performer>
         </detail>
     </activity>
-</CarePlan> 
+</CarePlan>

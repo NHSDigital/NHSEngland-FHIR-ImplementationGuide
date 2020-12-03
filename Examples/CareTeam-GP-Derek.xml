@@ -1,38 +1,37 @@
 <CareTeam xmlns="http://hl7.org/fhir">
-    <id value=" "/>
-    <status value="active"/>
+    <status value="active"></status>
     <category>
         <coding>
-            <system value="http://loinc.org"/>
-            <code value="790141000000100"/>
-            <display value="Under care of community care team"/>
+            <system value="http://loinc.org"></system>
+            <code value="790141000000100"></code>
+            <display value="Under care of community care team"></display>
         </coding>
     </category>
-    <name value="Derek Type 1 Diabetes GP Care Team"/>
+    <name value="Derek Type 1 Diabetes GP Care Team"></name>
     <subject>
         <identifier>
-            <system value="https://fhir.nhs.uk/Id/nhs-number" />
-            <value value="9453740519" />
+            <system value="https://fhir.nhs.uk/Id/nhs-number"></system>
+            <value value="9453740519"></value>
         </identifier>
-        <display value="Derek"/>
+        <display value="Derek"></display>
     </subject>
     <period>
-        <start value="2016-01-01"/>
+        <start value="2016-01-01"></start>
     </period>
     <participant>
         <member>
             <identifier>
-                <system value="https://fhir.hl7.org.uk/Id/gmc-number"/>
-                <value value"G1234567"/>
+                <system value="https://fhir.hl7.org.uk/Id/gmc-number"></system>
+                <value value="G1234567"></value>
             </identifier>
-            <display value="DR RAZIA ALI"/>
+            <display value="DR RAZIA ALI"></display>
         </member>
     </participant>
     <managingOrganization>
         <identifier>
-            <system value="https://fhir.nhs.uk/Id/ods-organization-code"/>
-            <value value"B81001"/>
+            <system value="https://fhir.nhs.uk/Id/ods-organization-code"></system>
+            <value value="B81001"></value>
         </identifier>
-        <display value="Springs Surgery"/>
+        <display value="Springs Surgery"></display>
     </managingOrganization>
 </CareTeam>
