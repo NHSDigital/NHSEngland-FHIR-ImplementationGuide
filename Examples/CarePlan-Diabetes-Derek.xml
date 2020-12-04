@@ -7,8 +7,8 @@
     <category>
         <coding>
             <system value="http://snomed.info/sct"></system>
-            <code value="736373009"></code>
-            <display value="End of life care plan"></display>
+            <code value="736284000"></code>
+            <display value="Diabetes clinical management plan"></display>
         </coding>
     </category>
     <subject>

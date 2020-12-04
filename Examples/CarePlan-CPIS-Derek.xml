@@ -1,0 +1,24 @@
+<CarePlan xmlns="http://hl7.org/fhir">
+    <id value="cpis"></id>
+    <status value="active"></status>
+    <intent value="plan"></intent>
+    <category>
+        <coding>
+            <system value="http://snomed.info/sct"></system>
+            <code value="1064311000000109"></code>
+            <display value="Child protection plan"></display>
+        </coding>
+    </category>
+    <subject>
+        <identifier>
+            <system value="https://fhir.nhs.uk/Id/nhs-number"></system>
+            <value value="9453740519"></value>
+        </identifier>
+        <display value="Derek"></display>
+    </subject>
+    <careTeam>
+         <!-- Should have link to social services care team -->
+        <display value="Social Services Team"></display>
+    </careTeam>
+   
+</CarePlan>
