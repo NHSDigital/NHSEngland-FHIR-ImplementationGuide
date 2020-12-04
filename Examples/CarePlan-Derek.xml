@@ -4,6 +4,13 @@
     <instantiatesCanonical value="https://pathways.nice.org.uk/pathways/type-1-diabetes-in-adults"></instantiatesCanonical>
     <status value="active"></status>
     <intent value="plan"></intent>
+    <category>
+        <coding>
+            <system value="http://snomed.info/sct"></system>
+            <code value="736373009"></code>
+            <display value="End of life care plan"></display>
+        </coding>
+    </category>
     <subject>
         <identifier>
             <system value="https://fhir.nhs.uk/Id/nhs-number"></system>
