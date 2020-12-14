@@ -1,0 +1,19 @@
+<CarePlan xmlns="http://hl7.org/fhir">
+    <id value="1715618"/>
+    <status value="active"></status>
+    <intent value="plan"></intent>
+    <category>
+        <coding>
+            <system value="http://snomed.info/sct"></system>
+            <code value="736373009"></code>
+            <display value="End of life care plan"></display>
+        </coding>
+    </category>
+    <subject>
+        <reference value="Patient/1715615" />
+        <display value="Betty"></display>
+    </subject>
+    <careTeam>
+        <reference value="CareTeam/1715616"></reference>
+    </careTeam>
+</CarePlan>

@@ -1,0 +1,56 @@
+<QuestionnaireResponse xmlns="http://hl7.org/fhir">
+    <meta>
+        <lastUpdated value="2020-11-18T06:23:03.000+00:00" />
+    </meta>
+    <basedOn>
+        <reference value="CarePlan/1715485" />
+    </basedOn>
+    <status value="completed" />
+    <subject>
+        <reference value="Patient/1715454" />
+        <display value="Derek"></display>
+    </subject>
+    <authored value="2020-11-18T06:23:02.846Z" />
+    <item>
+        <linkId value="AboutMe" />
+        <text value="About Me" />
+        <item>
+            <linkId value="AboutMe.about_me" />
+            <text value="About Me" />
+            <item>
+                <text value="What is most important to me" />
+                <answer>
+                    <valueString value="Healthy lifestyle and remaining fit and active" />
+                </answer>
+            </item>
+            <item>
+                <linkId value="AboutMe.about_me.people_who_are_important_to_me" />
+                <text value="People who are important to me" />
+                <answer>
+                    <valueString value="My wife and children" />
+                </answer>
+            </item>
+            <item>
+                <linkId value="AboutMe.about_me.how_i_communicate_and_how_to_communicate_with_me" />
+                <text value="How I communicate and how to communicate with me" />
+                <answer>
+                    <valueString value="I tend to use email and social media. Would prefer not to receive letters" />
+                </answer>
+            </item>
+            <item>
+                <linkId value="AboutMe.about_me.please_do_and_please_dont" />
+                <text value="Please do and please don&#39;t" />
+                <answer>
+                    <valueString value="Inform my of progress on my care." />
+                </answer>
+            </item>
+            <item>
+                <linkId value="AboutMe.about_me.my_wellness" />
+                <text value="My wellness" />
+                <answer>
+                    <valueString value="Keep active and exercise daily above recommended levels" />
+                </answer>
+            </item>
+        </item>
+    </item>
+</QuestionnaireResponse>

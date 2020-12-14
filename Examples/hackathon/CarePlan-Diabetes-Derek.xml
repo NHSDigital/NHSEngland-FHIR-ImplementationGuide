@@ -1,0 +1,28 @@
+<CarePlan xmlns="http://hl7.org/fhir">
+    <id value="1715435"/>
+    <status value="active"></status>
+    <intent value="plan"></intent>
+    <category>
+        <coding>
+            <system value="http://snomed.info/sct"></system>
+            <code value="736284000"></code>
+            <display value="Diabetes clinical management plan"></display>
+        </coding>
+    </category>
+    <subject>
+        <reference value="Patient/1715454" />
+        <display value="Derek"></display>
+    </subject>
+    <careTeam>
+        <reference value="CareTeam/1715434"></reference>
+    </careTeam>
+    <!-- Should have link to social services care team -->
+    <addresses>
+        <!-- SNOMED CT 46635009 Type 1 Diabetes -->
+        <display value="Type 1 diabetes mellitus"></display>
+    </addresses>
+    <addresses>
+        <!-- SNOMED CT  709044004 Chronic kidney disease  Leave this out???? -->
+        <display value="Chronic kidney disease"></display>
+    </addresses>
+</CarePlan>

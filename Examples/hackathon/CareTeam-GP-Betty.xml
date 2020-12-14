@@ -1,4 +1,5 @@
 <CareTeam xmlns="http://hl7.org/fhir">
+    <id value="1715616"/>
     <status value="active"></status>
     <category>
         <coding>
@@ -9,11 +10,8 @@
     </category>
     <name value="Derek Type 1 Diabetes GP Care Team"></name>
     <subject>
-        <identifier>
-            <system value="https://fhir.nhs.uk/Id/nhs-number"></system>
-            <value value="9453740519"></value>
-        </identifier>
-        <display value="Derek"></display>
+        <reference value="Patient/1715615" />
+        <display value="Betty"></display>
     </subject>
     <period>
         <start value="2016-01-01"></start>

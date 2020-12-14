@@ -1,0 +1,57 @@
+{
+    "resourceType": "Patient",
+    "id": "1715615",
+    "identifier":  [
+        {
+            "extension":  [
+                {
+                    "url": "https://fhir.nhs.uk/R4/StructureDefinition/Extension-UKCore-NHSNumberVerificationStatus",
+                    "valueCodeableConcept": {
+                        "coding":  [
+                            {
+                                "system": "https://fhir.nhs.uk/R4/CodeSystem/UKCore-NHSNumberVerificationStatus",
+                                "code": "01",
+                                "display": "Number present and verified"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "system": "https://fhir.nhs.uk/Id/nhs-number",
+            "value": "9453740519"
+        }
+    ],
+    "name":  [
+        {
+            "use": "official",
+            "family": "CORY",
+            "given":  [
+                "BETTY"
+            ],
+            "prefix":  [
+                "MISS"
+            ]
+        }
+    ],
+    "gender": "female",
+    "birthDate": "1999-01-04",
+    "address":  [
+        {
+            "use": "home",
+            "line":  [
+                "123 Dale Avenue",
+                "Long Eaton",
+                "Nottingham"
+            ],
+            "postalCode": "NG10 1NP"
+        }
+    ],
+    "generalPractitioner":  [
+        {
+            "identifier": {
+                "system": "https://fhir.nhs.uk/Id/ods-organization-code",
+                "value": "B81001"
+            }
+        }
+    ]
+}
