@@ -96,10 +96,10 @@
       <path value="Patient.generalPractitioner" />
       <slicing>
         <discriminator>
-          <type value="profile" />
-          <path value="resolve()" />
+          <type value="value" />
+          <path value="identifier.system" />
         </discriminator>
-        <rules value="open" />
+        <rules value="openAtEnd" />
       </slicing>
       <min value="1" />
       <max value="1" />
@@ -121,10 +121,10 @@
       <sliceName value="registeredGPPractice" />
       <definition value="Patient's registered GP Practice. Use V81998 for no registered practice and V81999 for not known as per NHS Data Dictionary guidelines." />
       <min value="1" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/R4/StructureDefinition/UKCore-Organization" />
-      </type>
+    </element>
+    <element id="Patient.generalPractitioner:registeredGPPractice.identifier.system">
+      <path value="Patient.generalPractitioner.identifier.system" />
+      <fixedUri value="https://fhir.nhs.uk/Id/ods-organization-code" />
     </element>
     <element id="Patient.managingOrganization.identifier">
       <path value="Patient.managingOrganization.identifier" />
