@@ -43,9 +43,9 @@
         <profile value="https://fhir.nhs.uk/R4/StructureDefinition/Extension-UKCore-NHSCommunication" />
       </type>
     </element>
-    <element id="Patient.extension:deathNotification">
+    <element id="Patient.extension:deathNotificationStatus">
       <path value="Patient.extension" />
-      <sliceName value="deathNotification" />
+      <sliceName value="deathNotificationStatus" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.nhs.uk/R4/StructureDefinition/Extension-UKCore-DeathNotificationStatus" />
@@ -58,6 +58,26 @@
       <type>
         <code value="Extension" />
         <profile value="https://fhir.nhs.uk/R4/StructureDefinition/Extension-UKCore-MedicalApplianceSupplier" />
+      </type>
+    </element>
+    <element id="Patient.extension:preferredDispenserOrganization">
+      <path value="Patient.extension" />
+      <sliceName value="preferredDispenserOrganization" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.nhs.uk/R4/StructureDefinition/Extension-UKCore-PreferredDispenserOrganization" />
+      </type>
+    </element>
+    <element id="Patient.extension:contactPreference">
+      <path value="Patient.extension" />
+      <sliceName value="contactPreference" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.nhs.uk/R4/StructureDefinition/Extension-UKCore-ContactPreference" />
       </type>
     </element>
     <element id="Patient.identifier">
@@ -91,6 +111,26 @@
     <element id="Patient.address">
       <path value="Patient.address" />
       <min value="1" />
+    </element>
+    <element id="Patient.address.extension">
+      <path value="Patient.address.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Patient.address.extension:addressKey">
+      <path value="Patient.address.extension" />
+      <sliceName value="addressKey" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.nhs.uk/R4/StructureDefinition/Extension-UKCore-AddressKey" />
+      </type>
     </element>
     <element id="Patient.generalPractitioner">
       <path value="Patient.generalPractitioner" />
