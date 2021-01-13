@@ -63,7 +63,6 @@
     <element id="Patient.extension:preferredDispenserOrganization">
       <path value="Patient.extension" />
       <sliceName value="preferredDispenserOrganization" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -73,8 +72,6 @@
     <element id="Patient.extension:contactPreference">
       <path value="Patient.extension" />
       <sliceName value="contactPreference" />
-      <min value="0" />
-      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.nhs.uk/R4/StructureDefinition/Extension-UKCore-ContactPreference" />
@@ -99,6 +96,26 @@
         <identity value="MiM" />
         <map value="https://fhir.nhs.uk/ConceptMap/fhir-nameuse-to-v3-npfit-nameuse" />
       </mapping>
+    </element>
+    <element id="Patient.telecom.system.extension">
+      <path value="Patient.telecom.system.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Patient.telecom.system.extension:otherContactSystem">
+      <path value="Patient.telecom.system.extension" />
+      <sliceName value="otherContactSystem" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.nhs.uk/R4/StructureDefinition/Extension-UKCore-OtherContactSystem" />
+      </type>
     </element>
     <element id="Patient.gender">
       <path value="Patient.gender" />
@@ -125,7 +142,6 @@
     <element id="Patient.address.extension:addressKey">
       <path value="Patient.address.extension" />
       <sliceName value="addressKey" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
