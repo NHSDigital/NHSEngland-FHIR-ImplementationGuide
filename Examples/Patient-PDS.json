@@ -179,17 +179,19 @@
         },
         {
             "id": "OC789",
-            "extension": [
-                {
-                    "url": "https://fhir.nhs.uk/R4/StructureDefinition/Extension-UKCore-OtherContactSystem",
-                    "valueCoding": {
-                        "system": "https://fhir.nhs.uk/R4/CodeSystem/UKCore-OtherContactSystem",
-                        "code": "textphone",
-                        "display": "Minicom (Textphone)"
-                    }
-                }
-            ],
             "system": "other",
+            "_system": {
+                "extension": [
+                    {
+                        "url": "https://fhir.nhs.uk/R4/StructureDefinition/Extension-UKCore-OtherContactSystem",
+                        "valueCoding": {
+                            "system": "https://fhir.nhs.uk/R4/CodeSystem/UKCore-OtherContactSystem",
+                            "code": "textphone",
+                            "display": "Minicom (Textphone)"
+                        }
+                    }
+                ]
+            },
             "value": "01632960587",
             "use": "home",
             "period": {
