@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="https://fhir.nhs.uk/R4/StructureDefinition/Spine-MessageHeader" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/Spine-MessageHeader" />
   <name value="Spine-MessageHeader" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
@@ -52,7 +52,7 @@
       <sliceName value="status" />
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.nhs.uk/R4/StructureDefinition/Extension-Spine-Message-Status" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-Spine-Message-Status" />
       </type>
     </element>
     <element id="MessageHeader.extension:status.value[x].system">
@@ -90,9 +90,9 @@
       <min value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/R4/StructureDefinition/Spine-PractitionerRole" />
-        <targetProfile value="https://fhir.nhs.uk/R4/StructureDefinition/Spine-Practitioner" />
-        <targetProfile value="https://fhir.nhs.uk/R4/StructureDefinition/Spine-Organization" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/Spine-PractitionerRole" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/Spine-Practitioner" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/Spine-Organization" />
       </type>
     </element>
     <element id="MessageHeader.destination.receiver.extension">
@@ -111,7 +111,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.nhs.uk/R4/StructureDefinition/Extension-Spine-MessageHeader-LocalPart" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-Spine-MessageHeader-LocalPart" />
       </type>
     </element>
     <element id="MessageHeader.destination.receiver.identifier">
@@ -131,9 +131,9 @@
       <min value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/R4/StructureDefinition/Spine-PractitionerRole" />
-        <targetProfile value="https://fhir.nhs.uk/R4/StructureDefinition/Spine-Practitioner" />
-        <targetProfile value="https://fhir.nhs.uk/R4/StructureDefinition/Spine-Organization" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/Spine-PractitionerRole" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/Spine-Practitioner" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/Spine-Organization" />
       </type>
     </element>
     <element id="MessageHeader.sender.extension">
@@ -152,7 +152,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.nhs.uk/R4/StructureDefinition/Extension-Spine-MessageHeader-LocalPart" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-Spine-MessageHeader-LocalPart" />
       </type>
     </element>
     <element id="MessageHeader.sender.identifier">
@@ -171,16 +171,16 @@
       <path value="MessageHeader.enterer" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/R4/StructureDefinition/UKCore-PractitionerRole" />
-        <targetProfile value="https://fhir.nhs.uk/R4/StructureDefinition/UKCore-Practitioner" />
+        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-PractitionerRole" />
+        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Practitioner" />
       </type>
     </element>
     <element id="MessageHeader.author">
       <path value="MessageHeader.author" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/R4/StructureDefinition/UKCore-PractitionerRole" />
-        <targetProfile value="https://fhir.nhs.uk/R4/StructureDefinition/UKCore-Practitioner" />
+        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-PractitionerRole" />
+        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Practitioner" />
       </type>
     </element>
     <element id="MessageHeader.author.identifier">
@@ -199,9 +199,9 @@
       <path value="MessageHeader.responsible" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/R4/StructureDefinition/UKCore-PractitionerRole" />
-        <targetProfile value="https://fhir.nhs.uk/R4/StructureDefinition/UKCore-Practitioner" />
-        <targetProfile value="https://fhir.nhs.uk/R4/StructureDefinition/UKCore-Organization" />
+        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-PractitionerRole" />
+        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Practitioner" />
+        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Organization" />
       </type>
     </element>
     <element id="MessageHeader.responsible.identifier.system">

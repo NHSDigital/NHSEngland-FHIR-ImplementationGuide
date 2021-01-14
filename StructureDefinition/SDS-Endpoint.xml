@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="SDS-Endpoint" />
-  <url value="https://fhir.nhs.uk/R4/StructureDefinition/SDS-Endpoint" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/SDS-Endpoint" />
   <version value="1.0.0" />
   <name value="SDSEndpoint" />
   <title value="SDS Endpoint" />
@@ -373,7 +373,7 @@
       </base>
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.nhs.uk/R4/StructureDefinition/Extension-SDS-ReliabilityConfiguration" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-SDS-ReliabilityConfiguration" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -1685,7 +1685,7 @@
       <sliceName value="ExtensionSDSReliabilityConfiguration" />
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.nhs.uk/R4/StructureDefinition/Extension-SDS-ReliabilityConfiguration" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-SDS-ReliabilityConfiguration" />
       </type>
       <mustSupport value="true" />
     </element>

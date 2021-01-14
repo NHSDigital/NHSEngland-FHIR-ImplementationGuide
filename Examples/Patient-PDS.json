@@ -13,7 +13,7 @@
     },
     "extension": [
         {
-            "url": "https://fhir.nhs.uk/R4/StructureDefinition/Extension-UKCore-NominatedPharmacy",
+            "url": "https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-NominatedPharmacy",
             "valueReference": {
                 "identifier": {
                     "system": "https://fhir.nhs.uk/Id/ods-organization-code",
@@ -22,7 +22,7 @@
             }
         },
         {
-            "url": "https://fhir.nhs.uk/R4/StructureDefinition/Extension-UKCore-PreferredDispenserOrganization",
+            "url": "https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-PreferredDispenserOrganization",
             "valueReference": {
                 "identifier": {
                     "system": "https://fhir.nhs.uk/Id/ods-organization-code",
@@ -31,7 +31,7 @@
             }
         },
         {
-            "url": "https://fhir.nhs.uk/R4/StructureDefinition/Extension-UKCore-MedicalApplianceSupplier",
+            "url": "https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-MedicalApplianceSupplier",
             "valueReference": {
                 "identifier": {
                     "system": "https://fhir.nhs.uk/Id/ods-organization-code",
@@ -40,14 +40,14 @@
             }
         },
         {
-            "url": "https://fhir.nhs.uk/R4/StructureDefinition/Extension-UKCore-DeathNotificationStatus",
+            "url": "https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-DeathNotificationStatus",
             "extension": [
                 {
                     "url": "deathNotificationStatus",
                     "valueCodeableConcept": {
                         "coding": [
                             {
-                                "system": "https://fhir.nhs.uk/R4/CodeSystem/UKCore-DeathNotificationStatus",
+                                "system": "https://fhir.hl7org.uk/CodeSystem/UKCore-DeathNotificationStatus",
                                 "version": "1.0.0",
                                 "code": "2",
                                 "display": "Formal - death notice received from Registrar of Deaths"
@@ -62,14 +62,14 @@
             ]
         },
         {
-            "url": "https://fhir.nhs.uk/R4/StructureDefinition/Extension-UKCore-NHSCommunication",
+            "url": "https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-NHSCommunication",
             "extension": [
                 {
                     "url": "language",
                     "valueCodeableConcept": {
                         "coding": [
                             {
-                                "system": "https://fhir.nhs.uk/R4/CodeSystem/UKCore-HumanLanguage",
+                                "system": "https://fhir.hl7org.uk/CodeSystem/UKCore-HumanLanguage",
                                 "version": "1.0.0",
                                 "code": "fr",
                                 "display": "French"
@@ -84,14 +84,14 @@
             ]
         },
         {
-            "url": "https://fhir.nhs.uk/R4/StructureDefinition/Extension-UKCore-ContactPreference",
+            "url": "https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-ContactPreference",
             "extension": [
                 {
                     "url": "PreferredWrittenCommunicationFormat",
                     "valueCodeableConcept": {
                         "coding": [
                             {
-                                "system": "https://fhir.nhs.uk/R4/CodeSystem/UKCore-PreferredWrittenCommunicationFormat",
+                                "system": "https://fhir.hl7org.uk/CodeSystem/UKCore-PreferredWrittenCommunicationFormat",
                                 "code": "12",
                                 "display": "Braille"
                             }
@@ -103,7 +103,7 @@
                     "valueCodeableConcept": {
                         "coding": [
                             {
-                                "system": "https://fhir.nhs.uk/R4/CodeSystem/UKCore-PreferredContactMethod",
+                                "system": "https://fhir.hl7org.uk/CodeSystem/UKCore-PreferredContactMethod",
                                 "code": "1",
                                 "display": "Letter"
                             }
@@ -129,11 +129,11 @@
         {
             "extension": [
                 {
-                    "url": "https://fhir.nhs.uk/R4/StructureDefinition/Extension-UKCore-NHSNumberVerificationStatus",
+                    "url": "https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-NHSNumberVerificationStatus",
                     "valueCodeableConcept": {
                         "coding": [
                             {
-                                "system": "https://fhir.nhs.uk/R4/CodeSystem/UKCore-NHSNumberVerificationStatus",
+                                "system": "https://fhir.hl7org.uk/CodeSystem/UKCore-NHSNumberVerificationStatus",
                                 "version": "1.0.0",
                                 "code": "01",
                                 "display": "Number present and verified"
@@ -183,9 +183,9 @@
             "_system": {
                 "extension": [
                     {
-                        "url": "https://fhir.nhs.uk/R4/StructureDefinition/Extension-UKCore-OtherContactSystem",
+                        "url": "https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-OtherContactSystem",
                         "valueCoding": {
-                            "system": "https://fhir.nhs.uk/R4/CodeSystem/UKCore-OtherContactSystem",
+                            "system": "https://fhir.hl7org.uk/CodeSystem/UKCore-OtherContactSystem",
                             "code": "textphone",
                             "display": "Minicom (Textphone)"
                         }
@@ -208,12 +208,12 @@
             "id": "456",
             "extension": [
                 {
-                    "url": "https://fhir.nhs.uk/R4/StructureDefinition/Extension-UKCore-AddressKey",
+                    "url": "https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-AddressKey",
                     "extension": [
                         {
                             "url": "type",
                             "valueCoding": {
-                                "system": "https://fhir.nhs.uk/R4/CodeSystem/UKCore-AddressKeyType",
+                                "system": "https://fhir.hl7org.uk/CodeSystem/UKCore-AddressKeyType",
                                 "code": "PAF"
                             }
                         },
@@ -242,12 +242,12 @@
             "id": "T456",
             "extension": [
                 {
-                    "url": "https://fhir.nhs.uk/R4/StructureDefinition/Extension-UKCore-AddressKey",
+                    "url": "https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-AddressKey",
                     "extension": [
                         {
                             "url": "type",
                             "valueCoding": {
-                                "system": "https://fhir.nhs.uk/R4/CodeSystem/UKCore-AddressKeyType",
+                                "system": "https://fhir.hl7org.uk/CodeSystem/UKCore-AddressKeyType",
                                 "code": "PAF"
                             }
                         },

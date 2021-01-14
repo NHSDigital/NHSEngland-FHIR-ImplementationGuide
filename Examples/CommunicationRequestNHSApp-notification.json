@@ -29,7 +29,7 @@
     {
       "extension": [
         {
-          "url": "https://fhir.nhs.uk/R4/StructureDefinition/Extension-nhsApp-title",
+          "url": "https://fhir.nhs.uk/StructureDefinition/Extension-nhsApp-title",
           "valueString": "NHS App Notification"
         }
       ],

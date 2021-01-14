@@ -12,7 +12,7 @@
         <resource>
             <Device>
                 <id value="ef4a9244-cec1-474a-8694-775dd385d2cc" />
-                <extension url="https://fhir.nhs.uk/R4/StructureDefinition/Extension-SDS-ManagingOrganisation">
+                <extension url="https://fhir.nhs.uk/StructureDefinition/Extension-SDS-ManagingOrganisation">
                     <valueReference>
                         <identifier>
                             <system value="https://fhir.nhs.uk/Id/ods-organization-code" />

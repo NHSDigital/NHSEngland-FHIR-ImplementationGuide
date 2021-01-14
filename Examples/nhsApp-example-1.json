@@ -71,7 +71,7 @@
                     {
                         "extension": [
                             {
-                                "url": "https://fhir.nhs.uk/R4/StructureDefinition/Extension-Spine-CommunicationPayload",
+                                "url": "https://fhir.nhs.uk/StructureDefinition/Extension-Spine-CommunicationPayload",
                                 "extension": [
                                     {
                                         "url": "title",

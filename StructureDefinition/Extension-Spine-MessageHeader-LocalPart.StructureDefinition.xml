@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="https://fhir.nhs.uk/R4/StructureDefinition/Extension-Spine-MessageHeader-LocalPart" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/Extension-Spine-MessageHeader-LocalPart" />
   <name value="Extension-Spine-MessageHeader-LocalPart" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
@@ -25,15 +25,15 @@
   <differential>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="https://fhir.nhs.uk/R4/StructureDefinition/Extension-Spine-MessageHeader-LocalPart" />
+      <fixedUri value="https://fhir.nhs.uk/StructureDefinition/Extension-Spine-MessageHeader-LocalPart" />
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/R4/StructureDefinition/Spine-HealthcareService" />
-        <targetProfile value="https://fhir.nhs.uk/R4/StructureDefinition/Spine-PractitionerRole" />
-        <targetProfile value="https://fhir.nhs.uk/R4/StructureDefinition/Spine-Practitioner" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/Spine-HealthcareService" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/Spine-PractitionerRole" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/Spine-Practitioner" />
       </type>
     </element>
     <element id="Extension.value[x].identifier.system">

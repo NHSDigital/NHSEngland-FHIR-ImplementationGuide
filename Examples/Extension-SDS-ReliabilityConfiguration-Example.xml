@@ -2,7 +2,7 @@
 <Endpoint xmlns="http://hl7.org/fhir">
   <id value="Extension-SDS-ReliabilityConfiguration-Example" />
   <!-- **************extension start************** -->
-    <extension url="https://fhir.nhs.uk/R4/StructureDefinition/Extension-SDS-ReliabilityConfiguration">
+    <extension url="https://fhir.nhs.uk/StructureDefinition/Extension-SDS-ReliabilityConfiguration">
         <extension url="nhsMHSSyncReplyMode">
             <valueString value="MSHSignalsOnly" />
         </extension>

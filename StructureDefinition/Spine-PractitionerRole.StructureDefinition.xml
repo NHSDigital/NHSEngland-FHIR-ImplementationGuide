@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="https://fhir.nhs.uk/R4/StructureDefinition/Spine-PractitionerRole" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/Spine-PractitionerRole" />
   <name value="Spine-PractitionerRole" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
@@ -27,7 +27,7 @@
   <kind value="resource" />
   <abstract value="false" />
   <type value="PractitionerRole" />
-  <baseDefinition value="https://fhir.nhs.uk/R4/StructureDefinition/UKCore-PractitionerRole" />
+  <baseDefinition value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-PractitionerRole" />
   <derivation value="constraint" />
   <differential>
     <element id="PractitionerRole.identifier">
@@ -58,7 +58,7 @@
       <min value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/R4/StructureDefinition/Spine-Practitioner" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/Spine-Practitioner" />
       </type>
     </element>
     <element id="PractitionerRole.practitioner.reference">
@@ -70,7 +70,7 @@
       <min value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/R4/StructureDefinition/Spine-Organization" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/Spine-Organization" />
       </type>
     </element>
     <element id="PractitionerRole.organization.reference">
@@ -83,7 +83,7 @@
       <max value="1" />
       <binding>
         <strength value="preferred" />
-        <valueSet value="https://fhir.nhs.uk/R4/ValueSet/UKCore-SDSJobRoleName" />
+        <valueSet value="https://fhir.hl7.org.uk/ValueSet/UKCore-SDSJobRoleName" />
       </binding>
     </element>
     <element id="PractitionerRole.code:sdsJobRoleName">
@@ -96,7 +96,7 @@
       <max value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/R4/StructureDefinition/Spine-HealthcareService" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/Spine-HealthcareService" />
       </type>
     </element>
     <element id="PractitionerRole.telecom.value">

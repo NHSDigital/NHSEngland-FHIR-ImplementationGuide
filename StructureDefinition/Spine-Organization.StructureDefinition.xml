@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="https://fhir.nhs.uk/R4/StructureDefinition/Spine-Organization" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/Spine-Organization" />
   <name value="Spine-Organization" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
@@ -27,7 +27,7 @@
   <kind value="resource" />
   <abstract value="false" />
   <type value="Organization" />
-  <baseDefinition value="https://fhir.nhs.uk/R4/StructureDefinition/UKCore-Organization" />
+  <baseDefinition value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Organization" />
   <derivation value="constraint" />
   <differential>
     <element id="Organization.identifier">

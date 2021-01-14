@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="https://fhir.nhs.uk/R4/StructureDefinition/Spine-OperationOutcome" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/Spine-OperationOutcome" />
   <version value="1.1.1" />
   <name value="Spine-OperationOutcome" />
   <status value="draft" />
@@ -27,7 +27,7 @@
       <path value="OperationOutcome.issue.details.coding" />
       <binding>
         <strength value="required" />
-        <valueSet value="https://fhir.nhs.uk/R4/ValueSet/Spine-OperationOutcome-Codes|1.0.0" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/Spine-OperationOutcome-Codes|1.0.0" />
       </binding>
     </element>
   </differential>

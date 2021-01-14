@@ -12,7 +12,7 @@
          <resource>
              <Endpoint>
                 <id value="f1dc0ac6-45ff-4d2b-bf91-793971e3e286"/>
-                <extension url="https://fhir.nhs.uk/R4/StructureDefinition/Extension-SDS-ReliabilityConfiguration">
+                <extension url="https://fhir.nhs.uk/StructureDefinition/Extension-SDS-ReliabilityConfiguration">
                     <extension url="nhsMHSSyncReplyMode">
                         <valueString value="MSHSignalsOnly"/>
                     </extension>

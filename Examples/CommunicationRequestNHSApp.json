@@ -19,7 +19,7 @@
     {
       "extension": [
         {
-          "url": "https://fhir.nhs.uk/R4/StructureDefinition/Extension-nhsAppPayload",
+          "url": "https://fhir.nhs.uk/StructureDefinition/Extension-nhsAppPayload",
           "extension": [
             {
               "url": "channel",
@@ -33,7 +33,7 @@
     {
       "extension": [
         {
-          "url": "https://fhir.nhs.uk/R4/StructureDefinition/Extension-nhsAppPayload",
+          "url": "https://fhir.nhs.uk/StructureDefinition/Extension-nhsAppPayload",
           "extension": [
             {
               "url": "channel",

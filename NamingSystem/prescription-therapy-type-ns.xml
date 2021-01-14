@@ -11,7 +11,7 @@
     <usage value="Medication Management"/>
     <uniqueId>
         <type value="uri"/>
-        <value value="https://fhir.nhs.uk/R4/CodeSystem/UKCore-PrescriptionType"/>
+        <value value="https://fhir.hl7org.uk/CodeSystem/UKCore-PrescriptionType"/>
         <preferred value="true"/>
     </uniqueId>
 </NamingSystem>

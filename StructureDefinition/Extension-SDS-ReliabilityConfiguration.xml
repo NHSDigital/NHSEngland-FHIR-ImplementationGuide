@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="Extension-SDS-ReliabilityConfiguration" />
-  <url value="https://fhir.nhs.uk/R4/StructureDefinition/Extension-SDS-ReliabilityConfiguration" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/Extension-SDS-ReliabilityConfiguration" />
   <version value="1.0.0" />
   <name value="ExtensionSDSReliabilityConfiguration" />
   <title value="Extension SDS Reliability Configuration" />
@@ -1306,7 +1306,7 @@
         </extension>
         <code value="http://hl7.org/fhirpath/System.String" />
       </type>
-      <fixedUri value="https://fhir.nhs.uk/R4/StructureDefinition/Extension-SDS-ReliabilityConfiguration" />
+      <fixedUri value="https://fhir.nhs.uk/StructureDefinition/Extension-SDS-ReliabilityConfiguration" />
       <mapping>
         <identity value="rim" />
         <map value="N/A" />
@@ -1660,7 +1660,7 @@
     </element>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="https://fhir.nhs.uk/R4/StructureDefinition/Extension-SDS-ReliabilityConfiguration" />
+      <fixedUri value="https://fhir.nhs.uk/StructureDefinition/Extension-SDS-ReliabilityConfiguration" />
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />

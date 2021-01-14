@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="https://fhir.nhs.uk/R4/StructureDefinition/Spine-HealthcareService" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/Spine-HealthcareService" />
   <name value="Spine-HealthcareService" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
@@ -49,21 +49,21 @@
       <path value="HealthcareService.providedBy" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/R4/StructureDefinition/UKCore-Organization" />
+        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Organization" />
       </type>
     </element>
     <element id="HealthcareService.type">
       <path value="HealthcareService.type" />
       <binding>
         <strength value="preferred" />
-        <valueSet value="https://fhir.nhs.uk/R4/ValueSet/UKCore-CareSettingType" />
+        <valueSet value="https://fhir.hl7.org.uk/ValueSet/UKCore-CareSettingType" />
       </binding>
     </element>
     <element id="HealthcareService.location">
       <path value="HealthcareService.location" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/R4/StructureDefinition/UKCore-Location" />
+        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Location" />
       </type>
     </element>
     <element id="HealthcareService.location.reference">

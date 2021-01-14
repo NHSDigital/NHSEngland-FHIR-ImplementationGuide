@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="https://fhir.nhs.uk/R4/StructureDefinition/SDS-Device" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/SDS-Device" />
   <version value="1.0.0" />
   <name value="SDSDevice" />
   <title value="SDS Device" />
@@ -377,7 +377,7 @@
       </base>
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.nhs.uk/R4/StructureDefinition/Extension-SDS-ManagingOrganisation" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-SDS-ManagingOrganisation" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -2989,7 +2989,7 @@
       <min value="1" />
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.nhs.uk/R4/StructureDefinition/Extension-SDS-ManagingOrganisation" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-SDS-ManagingOrganisation" />
       </type>
       <mustSupport value="true" />
     </element>

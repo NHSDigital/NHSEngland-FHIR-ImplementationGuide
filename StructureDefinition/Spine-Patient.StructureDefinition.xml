@@ -4,14 +4,14 @@
     <status value="additional" />
     <div xmlns="http://www.w3.org/1999/xhtml">This is some narrative to see how simplifier handles it.</div>
   </text>
-  <url value="https://fhir.nhs.uk/R4/StructureDefinition/Spine-Patient" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/Spine-Patient" />
   <name value="Spine-Patient" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
   <kind value="resource" />
   <abstract value="false" />
   <type value="Patient" />
-  <baseDefinition value="https://fhir.nhs.uk/R4/StructureDefinition/UKCore-Patient" />
+  <baseDefinition value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Patient" />
   <derivation value="constraint" />
   <differential>
     <element id="Patient.extension">
@@ -31,7 +31,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.nhs.uk/R4/StructureDefinition/Extension-UKCore-NominatedPharmacy" />
+        <profile value="https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-NominatedPharmacy" />
       </type>
     </element>
     <element id="Patient.extension:nhsCommunication">
@@ -40,7 +40,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.nhs.uk/R4/StructureDefinition/Extension-UKCore-NHSCommunication" />
+        <profile value="https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-NHSCommunication" />
       </type>
     </element>
     <element id="Patient.extension:deathNotificationStatus">
@@ -48,7 +48,7 @@
       <sliceName value="deathNotificationStatus" />
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.nhs.uk/R4/StructureDefinition/Extension-UKCore-DeathNotificationStatus" />
+        <profile value="https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-DeathNotificationStatus" />
       </type>
     </element>
     <element id="Patient.extension:medicalApplianceSupplier">
@@ -57,7 +57,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.nhs.uk/R4/StructureDefinition/Extension-UKCore-MedicalApplianceSupplier" />
+        <profile value="https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-MedicalApplianceSupplier" />
       </type>
     </element>
     <element id="Patient.extension:preferredDispenserOrganization">
@@ -66,7 +66,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.nhs.uk/R4/StructureDefinition/Extension-UKCore-PreferredDispenserOrganization" />
+        <profile value="https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-PreferredDispenserOrganization" />
       </type>
     </element>
     <element id="Patient.extension:contactPreference">
@@ -74,7 +74,7 @@
       <sliceName value="contactPreference" />
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.nhs.uk/R4/StructureDefinition/Extension-UKCore-ContactPreference" />
+        <profile value="https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-ContactPreference" />
       </type>
     </element>
     <element id="Patient.identifier">
@@ -114,7 +114,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.nhs.uk/R4/StructureDefinition/Extension-UKCore-OtherContactSystem" />
+        <profile value="https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-OtherContactSystem" />
       </type>
     </element>
     <element id="Patient.gender">
@@ -145,7 +145,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.nhs.uk/R4/StructureDefinition/Extension-UKCore-AddressKey" />
+        <profile value="https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-AddressKey" />
       </type>
     </element>
     <element id="Patient.generalPractitioner">

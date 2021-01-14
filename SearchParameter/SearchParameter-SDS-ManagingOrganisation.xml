@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <SearchParameter xmlns="http://hl7.org/fhir">
     <id value="SDS-ManagingOrganisation"/>
-    <url value="https://fhir.nhs.uk/R4/SearchParameter/SDS-ManagingOrganisation"/>
+    <url value="https://fhir.nhs.uk/SearchParameter/SDS-ManagingOrganisation"/>
     <version value="1.0.0"/>
     <name value="SDS Managing Organisation"/>
     <status value="active"/>
@@ -20,8 +20,8 @@
     <code value="managing-organisation"/>
     <base value="Device"/>
     <type value="token"/>
-    <expression value="Device.extension('https://fhir.nhs.uk/R4/StructureDefinition/Extension-SDS-ManagingOrganisation')"/>
-    <xpath value="f:Device/f:extension[@url='https://fhir.nhs.uk/R4/StructureDefinition/Extension-SDS-ManagingOrganisation']"/>
+    <expression value="Device.extension('https://fhir.nhs.uk/StructureDefinition/Extension-SDS-ManagingOrganisation')"/>
+    <xpath value="f:Device/f:extension[@url='https://fhir.nhs.uk/StructureDefinition/Extension-SDS-ManagingOrganisation']"/>
     <xpathUsage value="normal"/>
     <comparator value="eq"/>
     <modifier value="exact"/>

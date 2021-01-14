@@ -1,6 +1,6 @@
 <Device xmlns="http://hl7.org/fhir">
     <id value="f0f0e921-92ca-4a88-a550-2dbb36f703af" />
-    <extension url="https://fhir.nhs.uk/R4/StructureDefinition/Extension-SDS-ManagingOrganisation">
+    <extension url="https://fhir.nhs.uk/StructureDefinition/Extension-SDS-ManagingOrganisation">
         <valueReference>
             <identifier>
                 <system value="https://fhir.nhs.uk/Id/ods-organization-code" />

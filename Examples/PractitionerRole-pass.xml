@@ -2,7 +2,7 @@
 <PractitionerRole xmlns="http://hl7.org/fhir">
   <id value="6dc16793-61c2-44b8-8d0f-f872101c016e" />
   <meta>
-    <profile value="https://fhir.nhs.uk/R4/StructureDefinition/Spine-PractitionerRole" />
+    <profile value="https://fhir.nhs.uk/StructureDefinition/Spine-PractitionerRole" />
   </meta>
   <identifier>
     <system value="https://fhir.nhs.uk/Id/sds-role-profile-id" />
@@ -16,7 +16,7 @@
   </organization>
   <code>
     <coding>
-      <system value="https://fhir.nhs.uk/R4/CodeSystem/UKCore-SDSJobRoleName" />
+      <system value="https://fhir.hl7org.uk/CodeSystem/UKCore-SDSJobRoleName" />
       <code value="R0260" />
       <display value="General Medical Practitioner" />
     </coding>
