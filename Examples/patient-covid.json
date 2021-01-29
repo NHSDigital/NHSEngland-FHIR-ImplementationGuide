@@ -1,6 +1,5 @@
 {
     "resourceType": "Patient",
-    "id": "123456",
     "identifier": [
       {
         "extension": [
