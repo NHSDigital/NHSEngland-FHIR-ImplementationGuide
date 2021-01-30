@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<NamingSystem xmlns="http://hl7.org/fhir">
+    <id value="uk-nhs-login-sub"/>
+    <name value="NHS Login Unique Identifier"/>
+    <status value="draft"/>
+    <kind value="identifier"/>
+    <date value="2020-01-30"/>
+    <publisher value="NHS Digital"/>
+    <responsible value="NHS Digital"/>
+    <description value="NHS Login unique identifer which is reffered to as sub in NHS Login (OpenID)"/>
+    <usage value="NHS Login"/>
+    <uniqueId>
+        <type value="uri"/>
+        <value value="https://fhir.nhs.uk/Id/nhs-login-sub"/>
+        <preferred value="true"/>
+    </uniqueId>
+</NamingSystem>
