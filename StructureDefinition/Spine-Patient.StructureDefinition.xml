@@ -7,6 +7,7 @@
   <url value="https://fhir.nhs.uk/StructureDefinition/Spine-Patient" />
   <name value="Spine-Patient" />
   <status value="draft" />
+  <description value="### identifier&#xD;&#xA;&#xD;&#xA;At least one patient identifier, **MUST** be provided. Where a traced NHS number is available for a patient this MUST be included. &#xD;&#xA;&#xD;&#xA;| Name | FHIR identifier | OID/HL7v3 | HL7v2 ITK | Format | Description |&#xD;&#xA;|--&#xD;&#xA;| NHS Number | https://fhir.nhs.uk/Id/nhs-number | 2.16.840.1.113883.2.1.4.1 |  NHS | NNNNNNNNNN | NHS Number allocated to the patient in England and Wales  |&#xD;&#xA;| CHI Number | | 2.16.840.1.113883.2.1.3.2.4.16.53 | | NNNNNNNNNN | CHI Number allocated to the patient in Scotland |&#xD;&#xA;| NHS Logon ID | https://fhir.nhs.uk/Id/nhs-login-sub | | | uuid | NHS Login unique identifer which is referred to as sub in NHS Login (OpenID) |&#xD;&#xA;&#xD;&#xA;Local identiers such as MRN **MUST** include a *system* which identifies NHS provider/assigning authority." />
   <fhirVersion value="4.0.1" />
   <kind value="resource" />
   <abstract value="false" />
@@ -28,7 +29,6 @@
       <path value="Patient.extension" />
       <sliceName value="nominatedPharmacy" />
       <definition value="This extension is used to indicate patient preferred pharmacy." />
-      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-NominatedPharmacy" />
@@ -110,7 +110,6 @@
     <element id="Patient.telecom.system.extension:otherContactSystem">
       <path value="Patient.telecom.system.extension" />
       <sliceName value="otherContactSystem" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
