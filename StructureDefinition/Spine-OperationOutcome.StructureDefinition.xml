@@ -23,6 +23,25 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/OperationOutcome" />
   <derivation value="constraint" />
   <differential>
+    <element id="OperationOutcome.extension">
+      <path value="OperationOutcome.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="OperationOutcome.extension:supportingInfo">
+      <path value="OperationOutcome.extension" />
+      <sliceName value="supportingInfo" />
+      <definition value="Information relevant to this OperationOutcome. For EPS release rejections this may be the pharmacy which is currently owns the prescription task/order." />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-Spine-supportingInfo" />
+      </type>
+    </element>
     <element id="OperationOutcome.issue.details.coding">
       <path value="OperationOutcome.issue.details.coding" />
       <binding>
