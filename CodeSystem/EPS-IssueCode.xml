@@ -7,11 +7,11 @@
         <system value="https://fhir.nhs.uk/identifier/CodeSystem"/>
         <value value="EPS-IssueCode"/>
     </identifier>
-    <version value="1.1.1"/>
+    <version value="1.1.2"/>
     <name value="EPS Issue Codes"/>
     <title value="EPS Issue Codes"/>
     <status value="draft"/>
-    <date value="2020-08-05"/>
+    <date value="2021-02-05"/>
     <publisher value="NHS Digital"/>
     <contact>
         <name value="Interoperability Team"/>
@@ -101,5 +101,30 @@
         <code value="INVALID_DATE_FORMAT"/>
         <display value="Format of date passed is invalid"/>
         <definition value="The format of a date/time attribute with the prescription does not confirm with the format defined within the DMS. The System must correct the date/time attribute and re-submit the prescription to the Spine." />
+    </concept>
+    <!-- From https://fhir.nhs.uk/ValueSet/DM-prescription-release-rejection-reason --> 
+    <concept>
+       <!-- <code value="0001"></code> -->
+       <code value="PRESCRIPTION_CANCELLED"></code>
+        <display value="Prescription has been cancelled" />
+        <definition value="Inform the dispenser to advise the patient that their prescription has been cancelled" />
+    </concept>
+    <concept>
+        <!--<code value="0002"></code>-->
+        <code value="PRESCRIPTION_EXPIRED"></code>
+        <display value="Prescription has expired" />
+        <definition value="Inform the dispenser that the prescription has expired and it cannot be downloaded" />
+    </concept>
+    <concept>
+        <!--<code value="0004"></code>-->
+        <code value="PRESCRIPTION_WITH_ANOTHER_DISPENSER"></code>
+        <display value="Prescription is with another dispenser" />
+        <definition value="Inform the dispenser that the prescription has been downloaded by another dispenser. The rejection message will contain details of the dispensing site that has the prescription." />
+    </concept>
+    <concept>
+        <!--<code value="0005"></code>-->
+        <code value="PRESCRIPTION_DISPENSED"></code>
+        <display value="Prescription has been dispensed" />
+        <definition value="Inform the dispenser to advise the patient that this prescription has already been dispensed. " />
     </concept>
 </CodeSystem>
