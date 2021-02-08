@@ -2,14 +2,14 @@
 <ValueSet xmlns="http://hl7.org/fhir">
     <id value="spine-message-events" />
     <url value="https://fhir.nhs.uk/ValueSet/spine-message-events" />
-    <version value="1.0.2" />
+    <version value="1.0.3" />
     <name value="Spine Message Events" />
     <status value="active" />
     <description value="A ValueSet to identify the primary role (type) of organisation" />
     <compose>
         <include>
             <system value="https://fhir.nhs.uk/CodeSystem/message-event" />
-            <version value="1.0.6" />
+            <version value="1.0.7" />
         </include>
     </compose>
     <expansion>
@@ -25,8 +25,8 @@
         </contains>
         <contains>
             <system value="https://fhir.nhs.uk/CodeSystem/message-event"/>
-            <code value="prescription-dispense"/>
-            <display value="Pharmacy/treatment Dispense"/>
+            <code value="dispense-notification"/>
+            <display value="Dispense Notification"/>
         </contains>
         <contains>
             <system value="https://fhir.nhs.uk/CodeSystem/message-event"/>
