@@ -47,7 +47,7 @@
                     "valueCodeableConcept": {
                         "coding": [
                             {
-                                "system": "https://fhir.hl7org.uk/CodeSystem/UKCore-DeathNotificationStatus",
+                                "system": "https://fhir.hl7.org.uk/CodeSystem/UKCore-DeathNotificationStatus",
                                 "version": "1.0.0",
                                 "code": "2",
                                 "display": "Formal - death notice received from Registrar of Deaths"
@@ -69,7 +69,7 @@
                     "valueCodeableConcept": {
                         "coding": [
                             {
-                                "system": "https://fhir.hl7org.uk/CodeSystem/UKCore-HumanLanguage",
+                                "system": "https://fhir.hl7.org.uk/CodeSystem/UKCore-HumanLanguage",
                                 "version": "1.0.0",
                                 "code": "fr",
                                 "display": "French"
@@ -91,7 +91,7 @@
                     "valueCodeableConcept": {
                         "coding": [
                             {
-                                "system": "https://fhir.hl7org.uk/CodeSystem/UKCore-PreferredWrittenCommunicationFormat",
+                                "system": "https://fhir.hl7.org.uk/CodeSystem/UKCore-PreferredWrittenCommunicationFormat",
                                 "code": "12",
                                 "display": "Braille"
                             }
@@ -103,7 +103,7 @@
                     "valueCodeableConcept": {
                         "coding": [
                             {
-                                "system": "https://fhir.hl7org.uk/CodeSystem/UKCore-PreferredContactMethod",
+                                "system": "https://fhir.hl7.org.uk/CodeSystem/UKCore-PreferredContactMethod",
                                 "code": "1",
                                 "display": "Letter"
                             }
@@ -133,7 +133,7 @@
                     "valueCodeableConcept": {
                         "coding": [
                             {
-                                "system": "https://fhir.hl7org.uk/CodeSystem/UKCore-NHSNumberVerificationStatus",
+                                "system": "https://fhir.hl7.org.uk/CodeSystem/UKCore-NHSNumberVerificationStatus",
                                 "version": "1.0.0",
                                 "code": "01",
                                 "display": "Number present and verified"
@@ -185,7 +185,7 @@
                     {
                         "url": "https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-OtherContactSystem",
                         "valueCoding": {
-                            "system": "https://fhir.hl7org.uk/CodeSystem/UKCore-OtherContactSystem",
+                            "system": "https://fhir.hl7.org.uk/CodeSystem/UKCore-OtherContactSystem",
                             "code": "textphone",
                             "display": "Minicom (Textphone)"
                         }
@@ -213,7 +213,7 @@
                         {
                             "url": "type",
                             "valueCoding": {
-                                "system": "https://fhir.hl7org.uk/CodeSystem/UKCore-AddressKeyType",
+                                "system": "https://fhir.hl7.org.uk/CodeSystem/UKCore-AddressKeyType",
                                 "code": "PAF"
                             }
                         },
@@ -247,7 +247,7 @@
                         {
                             "url": "type",
                             "valueCoding": {
-                                "system": "https://fhir.hl7org.uk/CodeSystem/UKCore-AddressKeyType",
+                                "system": "https://fhir.hl7.org.uk/CodeSystem/UKCore-AddressKeyType",
                                 "code": "PAF"
                             }
                         },

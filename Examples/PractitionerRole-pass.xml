@@ -16,7 +16,7 @@
   </organization>
   <code>
     <coding>
-      <system value="https://fhir.hl7org.uk/CodeSystem/UKCore-SDSJobRoleName" />
+      <system value="https://fhir.hl7.org.uk/CodeSystem/UKCore-SDSJobRoleName" />
       <code value="R0260" />
       <display value="General Medical Practitioner" />
     </coding>
