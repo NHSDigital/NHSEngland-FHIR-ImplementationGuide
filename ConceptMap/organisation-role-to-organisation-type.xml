@@ -14,7 +14,7 @@
         <source value="https://fhir.nhs.uk/CodeSystem/organisation-role" />
         <target value="https://fhir.nhs.uk/CodeSystem/organisation-type" />
         <element>
-            <code value="RO197" />
+            <code value="197" />
             <display value="NHS TRUST" />
             <target>
                 <code value="008" />
@@ -23,7 +23,7 @@
             </target>
         </element>
         <element>
-            <code value="RO197" />
+            <code value="197" />
             <display value="NHS TRUST" />
             <target>
                 <code value="009" />
@@ -32,7 +32,7 @@
             </target>
         </element>
         <element>
-            <code value="RO197" />
+            <code value="197" />
             <display value="NHS TRUST" />
             <target>
                 <code value="010" />
