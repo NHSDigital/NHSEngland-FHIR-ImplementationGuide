@@ -2,14 +2,14 @@
 <ValueSet xmlns="http://hl7.org/fhir">
    <id value="organisation-primary-role" />
    <url value="https://fhir.nhs.uk/ValueSet/organisation-primary-role" />
-   <version value="2.0.0" />
+   <version value="2.0.1" />
    <name value="NHS Organisation Primary Role" />
    <status value="active" />
    <description value="A ValueSet to identify the primary role (type) of organisation" />   
    <compose>
       <include>
          <system value="https://fhir.nhs.uk/CodeSystem/organisation-role" />
-         <version value="2.0.0" />
+         <version value="2.0.1" />
          <concept>
             <code value="180" />
             <display value="PRIMARY CARE TRUST SITE" />
