@@ -39,6 +39,14 @@
         <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Patient" />
       </type>
     </element>
+    <element id="CommunicationRequest.subject.identifier.system">
+      <path value="CommunicationRequest.subject.identifier.system" />
+      <min value="1" />
+    </element>
+    <element id="CommunicationRequest.subject.identifier.value">
+      <path value="CommunicationRequest.subject.identifier.value" />
+      <min value="1" />
+    </element>
     <element id="CommunicationRequest.payload">
       <path value="CommunicationRequest.payload" />
       <comment value="The payload will consist of message to the Patient and/or a reference to a list of active repeat medications." />
@@ -87,6 +95,14 @@
         <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Organization" />
       </type>
     </element>
+    <element id="CommunicationRequest.requester.identifier.system">
+      <path value="CommunicationRequest.requester.identifier.system" />
+      <min value="1" />
+    </element>
+    <element id="CommunicationRequest.requester.identifier.value">
+      <path value="CommunicationRequest.requester.identifier.value" />
+      <min value="1" />
+    </element>
     <element id="CommunicationRequest.recipient">
       <path value="CommunicationRequest.recipient" />
       <min value="1" />
@@ -100,6 +116,34 @@
         <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-PractitionerRole" />
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/Spine-HealthcareService" />
       </type>
+    </element>
+    <element id="CommunicationRequest.recipient.identifier.system">
+      <path value="CommunicationRequest.recipient.identifier.system" />
+      <min value="1" />
+    </element>
+    <element id="CommunicationRequest.recipient.identifier.value">
+      <path value="CommunicationRequest.recipient.identifier.value" />
+      <min value="1" />
+    </element>
+    <element id="CommunicationRequest.sender.identifier.system">
+      <path value="CommunicationRequest.sender.identifier.system" />
+      <min value="1" />
+    </element>
+    <element id="CommunicationRequest.sender.identifier.value">
+      <path value="CommunicationRequest.sender.identifier.value" />
+      <min value="1" />
+    </element>
+    <element id="CommunicationRequest.reasonCode.coding.system">
+      <path value="CommunicationRequest.reasonCode.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="CommunicationRequest.reasonCode.coding.code">
+      <path value="CommunicationRequest.reasonCode.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="CommunicationRequest.reasonCode.coding.display">
+      <path value="CommunicationRequest.reasonCode.coding.display" />
+      <min value="1" />
     </element>
   </differential>
 </StructureDefinition>
