@@ -1,9 +1,9 @@
 {
     "resourceType": "Organization",
-    "id": "03CAR",
+    "id": "03C",
     "identifier": {
         "system": "https://fhir.nhs.uk/Id/ods-organization-code",
-        "value": "03CAR"
+        "value": "03C"
     },
     "active": true,
     "type": {
@@ -14,7 +14,7 @@
                     {
                         "url": "activePeriod",
                         "valuePeriod": {
-                            "start": "2013-10-01"
+                            "start": "2011-12-13"
                         }
                     },
                     {
@@ -29,8 +29,8 @@
                     {
                         "url": "activePeriod",
                         "valuePeriod": {
-                            "start": "2013-10-01",
-                    "end": "2018-03-31"
+                            "start": "2013-04-01",
+                            "end": "2018-03-31"
                         }
                     },
                     {
@@ -38,7 +38,6 @@
                         "valueString": "Legal"
                     }
                 ]
-                
             },
             {
                 "url": "https://fhir.nhs.uk/StructureDefinition/Extension-Spine-Organization-Role",
@@ -55,15 +54,17 @@
             }
         ],
         "coding": {
-            "system": "https://fhir.nhs.uk/CodeSystem/organisation-role",
-            "code": "99",
-            "display": "CLINICAL COMMISSIONING GROUP SITE"
+            "system": "https://directory.spineservices.nhs.uk/STU3/CodeSystem/ODSAPI-OrganizationRole-1",
+            "code": "98",
+            "display": "CLINICAL COMMISSIONING GROUP"
         }
     },
-    "name": "LEEDS WEST CCG (HQ)",
+    "name": "NHS LEEDS WEST CCG",
     "address": {
         "line": [
-            "UNITS 2-4 WIRA BUSINESS PARK"
+            "UNITS 2-4 WIRA BUSINESS PARK",
+            "RING ROAD",
+            "WEST PARK"
         ],
         "city": "LEEDS",
         "district": "WEST YORKSHIRE",
