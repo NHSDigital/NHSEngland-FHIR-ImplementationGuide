@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="https://fhir.nhs.uk/StructureDefinition/Extension-Spine-Organization-Role-ActivePeriod" />
+  <name value="Extension-Spine-Organization-Role-ActivePeriod" />
+  <status value="draft" />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="rim" />
+    <uri value="http://hl7.org/v3" />
+    <name value="RIM Mapping" />
+  </mapping>
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <context>
+    <type value="element" />
+    <expression value="Organization.type" />
+  </context>
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Extension.extension">
+      <path value="Extension.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Extension.extension:activePeriod">
+      <path value="Extension.extension" />
+      <sliceName value="activePeriod" />
+    </element>
+    <element id="Extension.extension:activePeriod.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="activePeriod" />
+    </element>
+    <element id="Extension.extension:activePeriod.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <type>
+        <code value="Period" />
+      </type>
+    </element>
+    <element id="Extension.extension:dateType">
+      <path value="Extension.extension" />
+      <sliceName value="dateType" />
+    </element>
+    <element id="Extension.extension:dateType.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="dateType" />
+    </element>
+    <element id="Extension.extension:dateType.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url" />
+      <fixedUri value="https://fhir.nhs.uk/StructureDefinition/Extension-Spine-Organization-Role-ActivePeriod" />
+    </element>
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>

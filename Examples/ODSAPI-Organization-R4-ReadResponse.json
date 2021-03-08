@@ -1,10 +1,6 @@
 {
     "resourceType": "Organization",
     "id": "RR8",
-    "meta": {
-        "lastUpdated": "2018-01-31T00:00:00+00:00",
-        "profile": "https://fhir.nhs.uk/STU3/StructureDefinition/ODSAPI-Organization-1"
-    },
     "identifier": {
         "system": "https://fhir.nhs.uk/Id/ods-organization-code",
         "value": "RR8"
@@ -13,12 +9,21 @@
     "type": {
         "extension": [
             {
-                "url": "https://fhir.nhs.uk/STU3/StructureDefinition/Extension-Spine-OrganizationRole",
+                "url": "https://fhir.nhs.uk/StructureDefinition/Extension-Spine-Organization-Role",
                 "extension": [
                     {
                         "url": "primaryRole",
                         "valueBoolean": true
                     },
+                    {
+                        "url": "status",
+                        "valueString": "Active"
+                    }
+                ]
+            },
+            {
+                "url": "https://fhir.nhs.uk/StructureDefinition/Extension-Spine-Organization-Role-ActivePeriod",
+                "extension": [
                     {
                         "url": "activePeriod",
                         "valuePeriod": {
@@ -26,14 +31,14 @@
                         }
                     },
                     {
-                        "url": "status",
+                        "url": "dateType",
                         "valueString": "Operational"
                     }
                 ]
             }
         ],
         "coding": {
-            "system": "https://directory.spineservices.nhs.uk/STU3/CodeSystem/ODSAPI-OrganizationRole-1",
+            "system": "https://fhir.nhs.uk/CodeSystem/organisation-role",
             "code": "197",
             "display": "NHS TRUST"
         }
