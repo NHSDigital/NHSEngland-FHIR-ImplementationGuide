@@ -5,63 +5,37 @@
         "lastUpdated": "2018-01-31T00:00:00+00:00",
         "profile": "https://fhir.nhs.uk/STU3/StructureDefinition/ODSAPI-Organization-1"
     },
-    "extension": [
-        {
-            "url": "https://fhir.nhs.uk/STU3/StructureDefinition/Extension-ODSAPI-ActivePeriod-1",
-            "valuePeriod": {
-                "extension": [
-                    {
-                        "url": "https://fhir.nhs.uk/STU3/StructureDefinition/Extension-ODSAPI-DateType-1",
-                        "valueString": "Operational"
-                    }
-                ],
-                "start": "1998-04-01"
-            }
-        },
-        {
-            "url": "https://fhir.nhs.uk/STU3/StructureDefinition/Extension-ODSAPI-OrganizationRole-1",
-            "extension": [
-                {
-                    "url": "role",
-                    "valueCoding": {
-                        "system": "https://directory.spineservices.nhs.uk/STU3/CodeSystem/ODSAPI-OrganizationRole-1",
-                        "code": "197",
-                        "display": "NHS TRUST"
-                    }
-                },
-                {
-                    "url": "primaryRole",
-                    "valueBoolean": true
-                },
-                {
-                    "url": "activePeriod",
-                    "valuePeriod": {
-                        "extension": [
-                            {
-                                "url": "https://fhir.nhs.uk/STU3/StructureDefinition/Extension-ODSAPI-DateType-1",
-                                "valueString": "Operational"
-                            }
-                        ],
-                        "start": "1998-04-01"
-                    }
-                },
-                {
-                    "url": "status",
-                    "valueString": "Active"
-                }
-            ]
-        }
-    ],
     "identifier": {
         "system": "https://fhir.nhs.uk/Id/ods-organization-code",
         "value": "RR8"
     },
     "active": true,
     "type": {
+        "extension": [
+            {
+                "url": "https://fhir.nhs.uk/STU3/StructureDefinition/Extension-Spine-OrganizationRole",
+                "extension": [
+                    {
+                        "url": "primaryRole",
+                        "valueBoolean": true
+                    },
+                    {
+                        "url": "activePeriod",
+                        "valuePeriod": {
+                            "start": "1998-04-01"
+                        }
+                    },
+                    {
+                        "url": "status",
+                        "valueString": "Operational"
+                    }
+                ]
+            }
+        ],
         "coding": {
-            "system": "https://fhir.nhs.uk/STU3/CodeSystem/ODSAPI-OrganizationRecordClass-1",
-            "code": "1",
-            "display": "HSCOrg"
+            "system": "https://directory.spineservices.nhs.uk/STU3/CodeSystem/ODSAPI-OrganizationRole-1",
+            "code": "197",
+            "display": "NHS TRUST"
         }
     },
     "name": "LEEDS TEACHING HOSPITALS NHS TRUST",
