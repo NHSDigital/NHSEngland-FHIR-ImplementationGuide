@@ -51,6 +51,26 @@
         <valueSet value="https://fhir.nhs.uk/ValueSet/organisation-primary-role" />
       </binding>
     </element>
+    <element id="Organization.type.extension">
+      <path value="Organization.type.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Organization.type.extension:organisationRole">
+      <path value="Organization.type.extension" />
+      <sliceName value="organisationRole" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-Spine-OrganizationRole" />
+      </type>
+    </element>
     <element id="Organization.type.coding.system">
       <path value="Organization.type.coding.system" />
       <min value="1" />
