@@ -1,0 +1,73 @@
+{
+    "resourceType": "Organization",
+    "id": "03CAR",
+    "identifier": {
+        "system": "https://fhir.nhs.uk/Id/ods-organization-code",
+        "value": "03CAR"
+    },
+    "active": true,
+    "type": {
+        "extension": [
+            {
+                "url": "https://fhir.nhs.uk/StructureDefinition/Extension-Spine-Organization-Role-ActivePeriod",
+                "extension": [
+                    {
+                        "url": "activePeriod",
+                        "valuePeriod": {
+                            "start": "2013-10-01"
+                        }
+                    },
+                    {
+                        "url": "dateType",
+                        "valueString": "Operational"
+                    }
+                ]
+            },
+            {
+                "url": "https://fhir.nhs.uk/StructureDefinition/Extension-Spine-Organization-Role-ActivePeriod",
+                "extension": [
+                    {
+                        "url": "activePeriod",
+                        "valuePeriod": {
+                            "start": "2013-10-01",
+                    "end": "2018-03-31"
+                        }
+                    },
+                    {
+                        "url": "dateType",
+                        "valueString": "Legal"
+                    }
+                ]
+                
+            },
+            {
+                "url": "https://fhir.nhs.uk/StructureDefinition/Extension-Spine-Organization-Role",
+                "extension": [
+                    {
+                        "url": "primaryRole",
+                        "valueBoolean": true
+                    },
+                    {
+                        "url": "status",
+                        "valueString": "Active"
+                    }
+                ]
+            }
+        ],
+        "coding": {
+            "system": "https://fhir.nhs.uk/CodeSystem/organisation-role",
+            "code": "99",
+            "display": "CLINICAL COMMISSIONING GROUP SITE"
+        }
+    },
+    "name": "LEEDS WEST CCG (HQ)",
+    "address": {
+        "line": [
+            "UNITS 2-4 WIRA BUSINESS PARK"
+        ],
+        "city": "LEEDS",
+        "district": "WEST YORKSHIRE",
+        "postalCode": "LS16 6EB",
+        "country": "ENGLAND"
+    }
+}

@@ -62,22 +62,22 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Organization.type.extension:organisationRole">
-      <path value="Organization.type.extension" />
-      <sliceName value="organisationRole" />
-      <max value="1" />
-      <type>
-        <code value="Extension" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-Spine-OrganizationRole" />
-      </type>
-    </element>
     <element id="Organization.type.extension:activePeriod">
       <path value="Organization.type.extension" />
       <sliceName value="activePeriod" />
-      <min value="1" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-Spine-Organization-Role-ActivePeriod" />
+      </type>
+    </element>
+    <element id="Organization.type.extension:organisationRole">
+      <path value="Organization.type.extension" />
+      <sliceName value="organisationRole" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-Spine-Organization-Role" />
       </type>
     </element>
     <element id="Organization.type.coding.system">
