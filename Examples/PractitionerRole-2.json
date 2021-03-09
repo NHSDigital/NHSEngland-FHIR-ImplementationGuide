@@ -24,6 +24,17 @@
             ]
         }
     ],
+    "specialty": [
+        {
+            "coding": [
+                {
+                    "system": "https://fhir.nhs.uk/CodeSystem/main-specialty",
+                    "code": "840",
+                    "display": "AUDIOLOGY"
+                }
+            ]
+        }
+    ],
     "telecom": [
         {
             "system": "phone",

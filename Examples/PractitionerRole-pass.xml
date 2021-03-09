@@ -21,6 +21,13 @@
       <display value="General Medical Practitioner" />
     </coding>
   </code>
+  <specialty>
+    <coding>
+      <system value="https://fhir.nhs.uk/CodeSystem/main-specialty" />
+      <code value="100" />
+      <display value="GENERAL SURGERY" />
+    </coding>
+  </specialty>
   <telecom>
     <system value="phone" />
     <value value="01234567890" />
