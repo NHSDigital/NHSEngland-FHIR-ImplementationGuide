@@ -95,7 +95,7 @@
       <path value="PractitionerRole.specialty" />
       <slicing>
         <discriminator>
-          <type value="type" />
+          <type value="value" />
           <path value="coding.system" />
         </discriminator>
         <rules value="open" />
@@ -120,28 +120,26 @@
     <element id="PractitionerRole.specialty:NHSDataDictionaryMainSpecialty">
       <path value="PractitionerRole.specialty" />
       <sliceName value="NHSDataDictionaryMainSpecialty" />
-      <fixedCodeableConcept>
-        <coding>
-          <system value="https://fhir.nhs.uk/CodeSystem/main-specialty" />
-        </coding>
-      </fixedCodeableConcept>
       <binding>
         <strength value="required" />
         <description value="NHS Data Dictionary Main Specialty" />
         <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDataModelAndDictionary-Main-Specialty" />
       </binding>
     </element>
+    <element id="PractitionerRole.specialty:NHSDataDictionaryMainSpecialty.coding.system">
+      <path value="PractitionerRole.specialty.coding.system" />
+      <fixedUri value="https://fhir.nhs.uk/CodeSystem/main-specialty" />
+    </element>
     <element id="PractitionerRole.specialty:SNOMEDSpecialty">
       <path value="PractitionerRole.specialty" />
       <sliceName value="SNOMEDSpecialty" />
-      <fixedCodeableConcept>
-        <coding>
-          <system value="http://snomed.info/sct" />
-        </coding>
-      </fixedCodeableConcept>
       <binding>
         <strength value="required" />
       </binding>
+    </element>
+    <element id="PractitionerRole.specialty:SNOMEDSpecialty.coding.system">
+      <path value="PractitionerRole.specialty.coding.system" />
+      <fixedUri value="http://snomed.info/sct" />
     </element>
     <element id="PractitionerRole.healthcareService">
       <path value="PractitionerRole.healthcareService" />
