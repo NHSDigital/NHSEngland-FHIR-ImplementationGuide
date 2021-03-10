@@ -23,7 +23,7 @@
   </code>
   <specialty>
     <coding>
-      <system value="https://fhir.nhs.uk/CodeSystem/main-specialty" />
+      <system value="https://fhir.nhs.uk/CodeSystem/NHSDataModelAndDictionary-clinical-specialty" />
       <code value="100" />
       <display value="GENERAL SURGERY" />
     </coding>

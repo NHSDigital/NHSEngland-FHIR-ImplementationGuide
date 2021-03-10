@@ -117,18 +117,18 @@
       <path value="PractitionerRole.specialty.coding.display" />
       <min value="1" />
     </element>
-    <element id="PractitionerRole.specialty:NHSDataDictionaryMainSpecialty">
+    <element id="PractitionerRole.specialty:NHSDataDictionarySpecialty">
       <path value="PractitionerRole.specialty" />
-      <sliceName value="NHSDataDictionaryMainSpecialty" />
+      <sliceName value="NHSDataDictionarySpecialty" />
       <binding>
         <strength value="required" />
-        <description value="NHS Data Dictionary Main Specialty" />
-        <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDataModelAndDictionary-Main-Specialty" />
+        <description value="NHS Data Dictionary Specialty" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDataModelAndDictionary-clinical-specialty" />
       </binding>
     </element>
-    <element id="PractitionerRole.specialty:NHSDataDictionaryMainSpecialty.coding.system">
+    <element id="PractitionerRole.specialty:NHSDataDictionarySpecialty.coding.system">
       <path value="PractitionerRole.specialty.coding.system" />
-      <fixedUri value="https://fhir.nhs.uk/CodeSystem/main-specialty" />
+      <fixedUri value="https://fhir.nhs.uk/CodeSystem/NHSDataModelAndDictionary-clinical-specialty" />
     </element>
     <element id="PractitionerRole.specialty:SNOMEDSpecialty">
       <path value="PractitionerRole.specialty" />
