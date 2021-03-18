@@ -52,10 +52,6 @@
       <path value="Observation.identifier.value" />
       <min value="1" />
     </element>
-    <element id="Observation.code.text">
-      <path value="Observation.code.text" />
-      <min value="1" />
-    </element>
     <element id="Observation.subject">
       <path value="Observation.subject" />
       <min value="1" />
