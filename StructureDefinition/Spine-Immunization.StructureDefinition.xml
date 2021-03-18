@@ -45,9 +45,11 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Immunization.extension:myExtension">
+    <element id="Immunization.extension:vaccinationProcedure">
       <path value="Immunization.extension" />
-      <sliceName value="myExtension" />
+      <sliceName value="vaccinationProcedure" />
+      <min value="0" />
+      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-VaccinationProcedure" />
