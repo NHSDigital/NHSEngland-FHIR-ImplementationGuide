@@ -48,8 +48,6 @@
     <element id="Immunization.extension:vaccinationProcedure">
       <path value="Immunization.extension" />
       <sliceName value="vaccinationProcedure" />
-      <min value="0" />
-      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-VaccinationProcedure" />
@@ -147,14 +145,12 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Immunization.performer.actor.extension:role">
+    <element id="Immunization.performer.actor.extension:specialtyOrService">
       <path value="Immunization.performer.actor.extension" />
-      <sliceName value="role" />
-      <min value="0" />
-      <max value="1" />
+      <sliceName value="specialtyOrService" />
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-Spine-ActorRole" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-Spine-ActorRoleServiceOrSpecialty" />
       </type>
     </element>
     <element id="Immunization.performer.actor.type">

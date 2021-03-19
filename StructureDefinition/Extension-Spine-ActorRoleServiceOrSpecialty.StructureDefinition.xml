@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="https://fhir.nhs.uk/StructureDefinition/Extension-Spine-ActorRole" />
-  <name value="Extension-Spine-ActorRole" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/Extension-Spine-ActorRoleServiceOrSpecialty" />
+  <name value="Extension-Spine-ActorRoleServiceOrSpecialty" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
   <mapping>
@@ -39,7 +39,7 @@
     </element>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="https://fhir.nhs.uk/StructureDefinition/Extension-Spine-ActorRole" />
+      <fixedUri value="https://fhir.nhs.uk/StructureDefinition/Extension-Spine-ActorRoleServiceOrSpecialty" />
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />
