@@ -15,6 +15,18 @@
     <type value="element" />
     <expression value="Immunization.performer.actor" />
   </context>
+  <context>
+    <type value="element" />
+    <expression value="MedicationDispense.performer.actor" />
+  </context>
+  <context>
+    <type value="element" />
+    <expression value="MedicationRequest.requester" />
+  </context>
+  <context>
+    <type value="element" />
+    <expression value="MedicationAdministration.performer.actor" />
+  </context>
   <type value="Extension" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
   <derivation value="constraint" />
@@ -22,6 +34,7 @@
     <element id="Extension">
       <path value="Extension" />
       <short value="Role of an actor" />
+      <definition value="The preferred use of this is to record Clinical Specialty (or Hospital Service). &#xD;&#xA;It may also be used to record the SDS Role (for Practitioner and PractitionerRole references) or SNOMED Service code (for Organization references)." />
       <max value="1" />
     </element>
     <element id="Extension.url">
@@ -34,6 +47,10 @@
       <type>
         <code value="CodeableConcept" />
       </type>
+      <binding>
+        <strength value="preferred" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDataModelAndDictionary-clinical-specialty" />
+      </binding>
     </element>
   </differential>
 </StructureDefinition>
