@@ -135,24 +135,6 @@
       <path value="Immunization.site.coding.display" />
       <min value="1" />
     </element>
-    <element id="Immunization.performer.actor.extension">
-      <path value="Immunization.performer.actor.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="Immunization.performer.actor.extension:specialtyOrService">
-      <path value="Immunization.performer.actor.extension" />
-      <sliceName value="specialtyOrService" />
-      <type>
-        <code value="Extension" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-Spine-ActorRoleServiceOrSpecialty" />
-      </type>
-    </element>
     <element id="Immunization.performer.actor.type">
       <path value="Immunization.performer.actor.type" />
       <min value="1" />
