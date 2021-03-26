@@ -126,9 +126,6 @@
     <element id="PractitionerRole.specialty.coding:SNOMEDSpecialty">
       <path value="PractitionerRole.specialty.coding" />
       <sliceName value="SNOMEDSpecialty" />
-      <fixedCoding>
-        <system value="http://snomed.info/sct" />
-      </fixedCoding>
       <binding>
         <strength value="preferred" />
         <description value="Specific specialty associated with the agency." />
