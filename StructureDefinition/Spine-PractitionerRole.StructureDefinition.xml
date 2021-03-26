@@ -91,18 +91,11 @@
       <sliceName value="sdsJobRoleName" />
       <min value="1" />
     </element>
-    <element id="PractitionerRole.specialty">
-      <path value="PractitionerRole.specialty" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="coding.system" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
     <element id="PractitionerRole.specialty.coding">
       <path value="PractitionerRole.specialty.coding" />
+      <slicing>
+        <rules value="open" />
+      </slicing>
       <min value="1" />
     </element>
     <element id="PractitionerRole.specialty.coding.system">
@@ -117,27 +110,32 @@
       <path value="PractitionerRole.specialty.coding.display" />
       <min value="1" />
     </element>
-    <element id="PractitionerRole.specialty:NHSDataDictionarySpecialty">
-      <path value="PractitionerRole.specialty" />
+    <element id="PractitionerRole.specialty.coding:NHSDataDictionarySpecialty">
+      <path value="PractitionerRole.specialty.coding" />
       <sliceName value="NHSDataDictionarySpecialty" />
       <binding>
         <strength value="required" />
         <description value="NHS Data Dictionary Specialty" />
-        <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDataModelAndDictionary-clinical-specialty" />
+        <valueSet value="https://fhir.nhs.uk/CodeSystem/NHSDataModelAndDictionary-clinical-specialty" />
       </binding>
     </element>
-    <element id="PractitionerRole.specialty:NHSDataDictionarySpecialty.coding.system">
+    <element id="PractitionerRole.specialty.coding:NHSDataDictionarySpecialty.system">
       <path value="PractitionerRole.specialty.coding.system" />
       <fixedUri value="https://fhir.nhs.uk/CodeSystem/NHSDataModelAndDictionary-clinical-specialty" />
     </element>
-    <element id="PractitionerRole.specialty:SNOMEDSpecialty">
-      <path value="PractitionerRole.specialty" />
+    <element id="PractitionerRole.specialty.coding:SNOMEDSpecialty">
+      <path value="PractitionerRole.specialty.coding" />
       <sliceName value="SNOMEDSpecialty" />
+      <fixedCoding>
+        <system value="http://snomed.info/sct" />
+      </fixedCoding>
       <binding>
         <strength value="required" />
+        <description value="Specific specialty associated with the agency." />
+        <valueSet value="http://hl7.org/fhir/ValueSet/c80-practice-codes" />
       </binding>
     </element>
-    <element id="PractitionerRole.specialty:SNOMEDSpecialty.coding.system">
+    <element id="PractitionerRole.specialty.coding:SNOMEDSpecialty.system">
       <path value="PractitionerRole.specialty.coding.system" />
       <fixedUri value="http://snomed.info/sct" />
     </element>

@@ -59,6 +59,49 @@
         <valueSet value="https://fhir.hl7.org.uk/ValueSet/UKCore-CareSettingType" />
       </binding>
     </element>
+    <element id="HealthcareService.specialty.coding">
+      <path value="HealthcareService.specialty.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="HealthcareService.specialty.coding.system">
+      <path value="HealthcareService.specialty.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="HealthcareService.specialty.coding.code">
+      <path value="HealthcareService.specialty.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="HealthcareService.specialty.coding.display">
+      <path value="HealthcareService.specialty.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="HealthcareService.specialty.coding:NHSDataDictionarySpecialty">
+      <path value="HealthcareService.specialty.coding" />
+      <sliceName value="NHSDataDictionarySpecialty" />
+      <binding>
+        <strength value="required" />
+        <description value="NHS Data Dictionary Specialty/Treatment Function Code" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDataModelAndDictionary-clinical-specialty" />
+      </binding>
+    </element>
+    <element id="HealthcareService.specialty.coding:NHSDataDictionarySpecialty.system">
+      <path value="HealthcareService.specialty.coding.system" />
+      <fixedUri value="https://fhir.nhs.uk/CodeSystem/NHSDataModelAndDictionary-clinical-specialty" />
+    </element>
+    <element id="HealthcareService.specialty.coding:SNOMEDPracticeCode">
+      <path value="HealthcareService.specialty.coding" />
+      <sliceName value="SNOMEDPracticeCode" />
+    </element>
+    <element id="HealthcareService.specialty.coding:SNOMEDPracticeCode.system">
+      <path value="HealthcareService.specialty.coding.system" />
+      <fixedUri value="http://snomed.info/sct" />
+    </element>
     <element id="HealthcareService.location">
       <path value="HealthcareService.location" />
       <type>
