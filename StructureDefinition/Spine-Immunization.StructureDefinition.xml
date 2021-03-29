@@ -52,6 +52,10 @@
         <code value="Extension" />
         <profile value="https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-VaccinationProcedure" />
       </type>
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/covid-19-snomed-procedure-code-vs" />
+      </binding>
     </element>
     <element id="Immunization.identifier">
       <path value="Immunization.identifier" />
