@@ -34,6 +34,9 @@
             "code": "1324691000000104",
             "display": "Administration of second dose of SARS-CoV-2 (severe acute respiratory syndrome coronavirus 2) vaccine"
           }
+        ],
+        "valueSet": [
+          "https://fhir.hl7.org.uk/ValueSet/UKCore-VaccinationProcedure"
         ]
       }
     ]
