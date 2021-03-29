@@ -163,5 +163,13 @@
       <path value="Immunization.reasonCode.coding.display" />
       <min value="1" />
     </element>
+    <element id="Immunization.protocolApplied.targetDisease">
+      <path value="Immunization.protocolApplied.targetDisease" />
+      <binding>
+        <strength value="required" />
+        <description value="(Work in progress) The vaccine preventable disease the dose is being administered for." />
+        <valueSet value="http://hl7.eu/fhir/ig/dgc/ValueSet/covid-19-diseases" />
+      </binding>
+    </element>
   </differential>
 </StructureDefinition>
