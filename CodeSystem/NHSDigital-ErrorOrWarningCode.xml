@@ -1,5 +1,5 @@
 <CodeSystem xmlns="http://hl7.org/fhir">
-   <id value="Spine-ErrorOrWarningCode" />
+   <id value="NHSDigital-ErrorOrWarningCode" />
    <url value="https://fhir.nhs.uk/CodeSystem/NHSDigital-ErrorOrWarningCode" />
    <version value="2.0.0" />
    <name value="NHS Digital Issue, Error Or Warning Code" />
