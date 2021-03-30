@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="Extension-Spine-Organization-Role" />
+  <id value="Extension-NHSDigital-Organization-Role" />
   <meta>
     <lastUpdated value="2018-04-03T10:19:11.773+01:00" />
   </meta>
-  <url value="https://fhir.nhs.uk/StructureDefinition/Extension-Spine-Organization-Role" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-Organization-Role" />
   <version value="1.0.0" />
-  <name value="Extension-Spine-Organization-Role" />
+  <name value="Extension-NHSDigital-Organization-Role" />
   <status value="active" />
   <date value="2020-03-08" />
   <publisher value="NHS Digital" />
@@ -78,7 +78,7 @@
     </element>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="https://fhir.nhs.uk/StructureDefinition/Extension-Spine-Organization-Role" />
+      <fixedUri value="https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-Organization-Role" />
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />

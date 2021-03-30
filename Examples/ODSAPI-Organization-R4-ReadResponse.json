@@ -9,7 +9,7 @@
     "type": {
         "extension": [
             {
-                "url": "https://fhir.nhs.uk/StructureDefinition/Extension-Spine-Organization-Role",
+                "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-Organization-Role",
                 "extension": [
                     {
                         "url": "primaryRole",
@@ -22,7 +22,7 @@
                 ]
             },
             {
-                "url": "https://fhir.nhs.uk/StructureDefinition/Extension-Spine-Organization-Role-ActivePeriod",
+                "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-Organization-Role-ActivePeriod",
                 "extension": [
                     {
                         "url": "activePeriod",

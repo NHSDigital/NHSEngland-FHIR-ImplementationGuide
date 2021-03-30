@@ -2,7 +2,7 @@
 <PractitionerRole xmlns="http://hl7.org/fhir">
   <id value="6dc16793-61c2-44b8-8d0f-f872101c016e" />
   <meta>
-    <profile value="https://fhir.nhs.uk/StructureDefinition/Spine-PractitionerRole" />
+    <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole" />
   </meta>
   <identifier>
     <system value="https://fhir.nhs.uk/Id/sds-role-profile-id" />

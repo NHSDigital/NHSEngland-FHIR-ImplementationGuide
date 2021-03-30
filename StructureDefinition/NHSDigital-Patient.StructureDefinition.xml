@@ -4,8 +4,8 @@
     <status value="additional" />
     <div xmlns="http://www.w3.org/1999/xhtml">This is some narrative to see how simplifier handles it.</div>
   </text>
-  <url value="https://fhir.nhs.uk/StructureDefinition/Spine-Patient" />
-  <name value="Spine-Patient" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient" />
+  <name value="NHSDigital-Patient" />
   <status value="draft" />
   <description value="### identifier&#xD;&#xA;&#xD;&#xA;At least one patient identifier, **MUST** be provided. Where a traced NHS number is available for a patient this MUST be included. &#xD;&#xA;&#xD;&#xA;Local identiers such as MRN **MUST** include a *system* which identifies NHS provider/assigning authority." />
   <fhirVersion value="4.0.1" />

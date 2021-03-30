@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="https://fhir.nhs.uk/StructureDefinition/Spine-PractitionerRole" />
-  <name value="Spine-PractitionerRole" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole" />
+  <name value="NHSDigital-PractitionerRole" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
   <mapping>
@@ -58,7 +58,7 @@
       <min value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/Spine-Practitioner" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Practitioner" />
       </type>
     </element>
     <element id="PractitionerRole.practitioner.reference">
@@ -70,7 +70,7 @@
       <min value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/Spine-Organization" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Organization" />
       </type>
     </element>
     <element id="PractitionerRole.organization.reference">
@@ -141,7 +141,7 @@
       <max value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/Spine-HealthcareService" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-HealthcareService" />
       </type>
     </element>
     <element id="PractitionerRole.telecom.value">
