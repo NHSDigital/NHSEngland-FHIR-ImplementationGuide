@@ -8,7 +8,7 @@
     <description value="NHSDigital OperationOutcome Codes"/>
     <compose>
         <include>
-            <system value="https://fhir.nhs.uk/CodeSystem/NHSDigitial-ErrorOrWarningCode"/>
+            <system value="https://fhir.nhs.uk/CodeSystem/NHSDigital-ErrorOrWarningCode"/>
             <version value="2.0.0"/>
         </include>
         <include>
@@ -18,133 +18,133 @@
     </compose>
     <expansion>
         <contains>
-            <system value="https://fhir.nhs.uk/CodeSystem/NHSDigitial-ErrorOrWarningCode"/>
+            <system value="https://fhir.nhs.uk/CodeSystem/NHSDigital-ErrorOrWarningCode"/>
             <version value="2.0.0"/>
             <code value="INVALID_RESOURCE_ID"/>
             <display value="Invalid resource ID"/>
         </contains>
         <contains>
-            <system value="https://fhir.nhs.uk/CodeSystem/NHSDigitial-ErrorOrWarningCode"/>
+            <system value="https://fhir.nhs.uk/CodeSystem/NHSDigital-ErrorOrWarningCode"/>
             <version value="2.0.0"/>
             <code value="UNSUPPORTED_SERVICE"/>
             <display value="Unsupported service"/>
         </contains>
         <contains>
-            <system value="https://fhir.nhs.uk/CodeSystem/NHSDigitial-ErrorOrWarningCode"/>
+            <system value="https://fhir.nhs.uk/CodeSystem/NHSDigital-ErrorOrWarningCode"/>
             <version value="2.0.0"/>
             <code value="TOO_MANY_MATCHES"/>
             <display value="Too many matches"/>
         </contains>
         <contains>
-            <system value="https://fhir.nhs.uk/CodeSystem/NHSDigitial-ErrorOrWarningCode"/>
+            <system value="https://fhir.nhs.uk/CodeSystem/NHSDigital-ErrorOrWarningCode"/>
             <version value="2.0.0"/>
             <code value="INVALID_VALUE"/>
             <display value="Invalid value"/>
         </contains>
         <contains>
-            <system value="https://fhir.nhs.uk/CodeSystem/NHSDigitial-ErrorOrWarningCode"/>
+            <system value="https://fhir.nhs.uk/CodeSystem/NHSDigital-ErrorOrWarningCode"/>
             <version value="2.0.0"/>
             <code value="INVALID_UPDATE"/>
             <display value="Invalid update"/>
         </contains>
         <contains>
-            <system value="https://fhir.nhs.uk/CodeSystem/NHSDigitial-ErrorOrWarningCode"/>
+            <system value="https://fhir.nhs.uk/CodeSystem/NHSDigital-ErrorOrWarningCode"/>
             <version value="2.0.0"/>
             <code value="RESOURCE_VERSION_MISMATCH"/>
             <display value="Resource version mismatch"/>
         </contains>
         <contains>
-            <system value="https://fhir.nhs.uk/CodeSystem/NHSDigitial-ErrorOrWarningCode"/>
+            <system value="https://fhir.nhs.uk/CodeSystem/NHSDigital-ErrorOrWarningCode"/>
             <version value="2.0.0"/>
             <code value="FORBIDDEN_UPDATE"/>
             <display value="Forbidden update"/>
         </contains>
         <contains>
-            <system value="https://fhir.nhs.uk/CodeSystem/NHSDigitial-ErrorOrWarningCode"/>
+            <system value="https://fhir.nhs.uk/CodeSystem/NHSDigital-ErrorOrWarningCode"/>
             <version value="2.0.0"/>
             <code value="INVALIDATED_RESOURCE"/>
             <display value="Invalidated resource"/>
         </contains>
         <contains>
-            <system value="https://fhir.nhs.uk/CodeSystem/NHSDigitial-ErrorOrWarningCode"/>
+            <system value="https://fhir.nhs.uk/CodeSystem/NHSDigital-ErrorOrWarningCode"/>
             <version value="2.0.0"/>
             <code value="POLLING_ID_NOT_FOUND"/>
             <display value="Polling ID not found"/>
         </contains>
         <contains>
-            <system value="https://fhir.nhs.uk/CodeSystem/NHSDigitial-ErrorOrWarningCode"/>
+            <system value="https://fhir.nhs.uk/CodeSystem/NHSDigital-ErrorOrWarningCode"/>
             <version value="2.0.0"/>
             <code value="MISSING_VALUE"/>
             <display value="Missing value"/>
         </contains>
         <contains>
-            <system value="https://fhir.nhs.uk/CodeSystem/NHSDigitial-ErrorOrWarningCode"/>
+            <system value="https://fhir.nhs.uk/CodeSystem/NHSDigital-ErrorOrWarningCode"/>
             <version value="2.0.0"/>
             <code value="PRECONDITION_FAILED"/>
             <display value="Precondition failed"/>
         </contains>
         <contains>
-            <system value="https://fhir.nhs.uk/CodeSystem/NHSDigitial-ErrorOrWarningCode"/>
+            <system value="https://fhir.nhs.uk/CodeSystem/NHSDigital-ErrorOrWarningCode"/>
             <version value="2.0.0"/>
             <code value="ADDITIONAL_PROPERTIES"/>
             <display value="Additional properties"/>
         </contains>
         <contains>
-            <system value="https://fhir.nhs.uk/CodeSystem/NHSDigitial-ErrorOrWarningCode"/>
+            <system value="https://fhir.nhs.uk/CodeSystem/NHSDigital-ErrorOrWarningCode"/>
             <version value="2.0.0"/>
             <code value="FAILURE_TO_PROCESS_MESSAGE"/>
             <display value="Failure to process message"/>
         </contains>
         <contains>
-            <system value="https://fhir.nhs.uk/CodeSystem/NHSDigitial-ErrorOrWarningCode"/>
+            <system value="https://fhir.nhs.uk/CodeSystem/NHSDigital-ErrorOrWarningCode"/>
             <version value="2.0.0"/>
             <code value="INVALID_SEARCH_DATA"/>
             <display value="Invalid search data"/>
         </contains>
         <contains>
-            <system value="https://fhir.nhs.uk/CodeSystem/NHSDigitial-ErrorOrWarningCode"/>
+            <system value="https://fhir.nhs.uk/CodeSystem/NHSDigital-ErrorOrWarningCode"/>
             <version value="2.0.0"/>
             <code value="ACCESS_DENIED"/>
             <display value="Access has been denied to process this request"/>
         </contains>
         <contains>
-            <system value="https://fhir.nhs.uk/CodeSystem/NHSDigitial-ErrorOrWarningCode"/>
+            <system value="https://fhir.nhs.uk/CodeSystem/NHSDigital-ErrorOrWarningCode"/>
             <version value="2.0.0"/>
             <code value="TOO_FEW_VALUES_SUBMITTED"/>
             <display value="Too few values submitted"/>
         </contains>
         <contains>
-            <system value="https://fhir.nhs.uk/CodeSystem/NHSDigitial-ErrorOrWarningCode"/>
+            <system value="https://fhir.nhs.uk/CodeSystem/NHSDigital-ErrorOrWarningCode"/>
             <version value="2.0.0"/>
             <code value="VALIDATION_ERROR"/>
             <display value="Validation error"/>
         </contains>
         <contains>
-            <system value="https://fhir.nhs.uk/CodeSystem/NHSDigitial-ErrorOrWarningCode"/>
+            <system value="https://fhir.nhs.uk/CodeSystem/NHSDigital-ErrorOrWarningCode"/>
             <version value="2.0.0"/>
             <code value="UNABLE_TO_CALL_SERVICE"/>
             <display value="Unable to call service"/>
         </contains>
         <contains>
-            <system value="https://fhir.nhs.uk/CodeSystem/NHSDigitial-ErrorOrWarningCode"/>
+            <system value="https://fhir.nhs.uk/CodeSystem/NHSDigital-ErrorOrWarningCode"/>
             <version value="2.0.0"/>
             <code value="POLLING_MESSAGE_FAILURE"/>
             <display value="Polling message failure"/>
         </contains>
         <contains>
-            <system value="https://fhir.nhs.uk/CodeSystem/NHSDigitial-ErrorOrWarningCode"/>
+            <system value="https://fhir.nhs.uk/CodeSystem/NHSDigital-ErrorOrWarningCode"/>
             <version value="2.0.0"/>
             <code value="UNSUPPORTED_VALUE"/>
             <display value="Unsupported value"/>
         </contains>
         <contains>
-            <system value="https://fhir.nhs.uk/CodeSystem/NHSDigitial-ErrorOrWarningCode"/>
+            <system value="https://fhir.nhs.uk/CodeSystem/NHSDigital-ErrorOrWarningCode"/>
             <version value="2.0.0"/>
             <code value="RESOURCE_NOT_FOUND"/>
             <display value="Resource not found"/>
         </contains>
         <contains>
-            <system value="https://fhir.nhs.uk/CodeSystem/NHSDigitial-ErrorOrWarningCode"/>
+            <system value="https://fhir.nhs.uk/CodeSystem/NHSDigital-ErrorOrWarningCode"/>
             <version value="2.0.0"/>
             <code value="TOO_MANY_VALUES_SUBMITTED"/>
             <display value="Too many values submitted"/>
