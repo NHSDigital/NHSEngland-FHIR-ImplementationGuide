@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <url value="https://fhir.nhs.uk/StructureDefinition/Extension-MessageHeader-LocalPart" />
-  <name value="Extension-NHSDigital-MessageHeader-LocalPart" />
+  <name value="Extension-MessageHeader-LocalPart" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
   <mapping>
