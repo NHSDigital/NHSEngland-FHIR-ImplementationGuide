@@ -1,0 +1,120 @@
+<CapabilityStatement xmlns="http://hl7.org/fhir">
+    <id value="apim-conformance" />
+    <url value="https://fhir.nhs.uk/CapabilityStatement/apim-conformance" />
+    <version value="3.0.0" />
+    <name value="APIM Conformance Capability Statement" />
+    <status value="active" />
+    <publisher value="digital.nhs.uk" />
+    <description value="Conformance requirements for APIM RESTful Endpoinsts" />
+    <kind value="requirements" />
+    <fhirVersion value="4.0.1" />
+    <format value="application/fhir+json" />
+    <format value="application/fhir+xml" />
+    <rest>
+        <mode value="server" />
+        <security>
+            <service>
+                <coding>
+                    <system value="http://terminology.hl7.org/CodeSystem/restful-security-service" />
+                    <code value="OAuth" />
+                    <display value="OAuth2 Token" />
+                </coding>
+            </service>
+        </security>
+        <resource>
+            <type value="HealthcareService" />
+            <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-HealthcareService" />
+        </resource>
+        <resource>
+            <type value="Organization" />
+            <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Organization" />
+            <interaction>
+                <code value="search-type" />
+            </interaction>
+            <searchParam>
+                <name value="identifier" />
+                <type value="token" />
+                <documentation value="A organisation identifier (e.g. ODS Code)" />
+            </searchParam>
+            <searchParam>
+                <name value="name" />
+                <type value="string" />
+                <documentation value="A server defined search that may match any of the string fields in the HumanName, including family, give, prefix, suffix, suffix, and/or text" />
+            </searchParam>
+            <searchParam>
+                <name value="address" />
+                <type value="string" />
+                <documentation value="A server defined search that may match any of the string fields in the Address, including line, city, county, country, postalCode, and/or text" />
+            </searchParam>
+        </resource>
+        <resource>
+            <type value="Patient" />
+            <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient" />
+            <interaction>
+                <code value="read" />
+            </interaction>
+            <interaction>
+                <code value="search-type" />
+            </interaction>
+            <searchParam>
+                <name value="identifier" />
+                <type value="token" />
+                <documentation value="A patient identifier (e.g. NHS Number)" />
+            </searchParam>
+            <searchParam>
+                <name value="name" />
+                <type value="string" />
+                <documentation value="A server defined search that may match any of the string fields in the HumanName, including family, give, prefix, suffix, suffix, and/or text" />
+            </searchParam>
+            <searchParam>
+                <name value="birthdate" />
+                <type value="date" />
+                <documentation value="The patient&#39;s date of birth" />
+            </searchParam>
+            <searchParam>
+                <name value="gender" />
+                <type value="token" />
+                <documentation value="Gender of the patient" />
+            </searchParam>
+            <searchParam>
+                <name value="family" />
+                <type value="string" />
+                <documentation value="A portion of the family name of the patient" />
+            </searchParam>
+        </resource>
+        <resource>
+            <type value="Practitioner" />
+            <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Practitioner" />
+            <interaction>
+                <code value="search-type" />
+            </interaction>
+            <searchParam>
+                <name value="identifier" />
+                <type value="token" />
+                <documentation value="A practitioner identifier (e.g. GMC Code, GMP Code, GPHC Code, etc)" />
+            </searchParam>
+            <searchParam>
+                <name value="name" />
+                <type value="string" />
+                <documentation value="A server defined search that may match any of the string fields in the HumanName, including family, give, prefix, suffix, suffix, and/or text" />
+            </searchParam>
+        </resource>
+        <resource>
+            <type value="PractitionerRole" />
+            <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole" />
+            <interaction>
+                <code value="search-type" />
+            </interaction>
+            <searchParam>
+                <name value="organization.identifier" />
+                <type value="token" />
+                <documentation value="A organisation identifier (e.g. ODS Code)" />
+            </searchParam>
+            <searchParam>
+                <name value="practitioner.identifier" />
+                <type value="token" />
+                <documentation value="A practitioner identifier (e.g. GMC Code, GMP Code, GPHC Code, etc)" />
+            </searchParam>
+        </resource>
+    </rest>
+</CapabilityStatement>
