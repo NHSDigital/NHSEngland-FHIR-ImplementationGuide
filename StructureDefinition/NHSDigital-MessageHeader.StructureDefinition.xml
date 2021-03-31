@@ -40,7 +40,7 @@
       <sliceName value="messageId" />
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-MessageHeader-messageId" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-MessageHeader-messageId" />
       </type>
     </element>
     <element id="MessageHeader.extension:messageId.value[x].value">
@@ -111,7 +111,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-MessageHeader-LocalPart" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-MessageHeader-LocalPart" />
       </type>
     </element>
     <element id="MessageHeader.destination.receiver.identifier">
@@ -152,7 +152,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-MessageHeader-LocalPart" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-MessageHeader-LocalPart" />
       </type>
     </element>
     <element id="MessageHeader.sender.identifier">

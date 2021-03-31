@@ -4,7 +4,7 @@
   <meta>
     <lastUpdated value="2018-04-03T10:19:11.773+01:00" />
   </meta>
-  <url value="https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-Organization-Role" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/Extension-Spine-Organization-Role" />
   <version value="1.0.0" />
   <name value="Extension-NHSDigital-Organization-Role" />
   <status value="active" />
@@ -78,7 +78,7 @@
     </element>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-Organization-Role" />
+      <fixedUri value="https://fhir.nhs.uk/StructureDefinition/Extension-Spine-Organization-Role" />
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />

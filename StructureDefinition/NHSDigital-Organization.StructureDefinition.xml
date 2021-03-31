@@ -67,7 +67,7 @@
       <sliceName value="activePeriod" />
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-Organization-Role-ActivePeriod" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-Spine-Organization-Role-ActivePeriod" />
       </type>
     </element>
     <element id="Organization.type.extension:organisationRole">
@@ -75,7 +75,7 @@
       <sliceName value="organisationRole" />
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-Organization-Role" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-Spine-Organization-Role" />
       </type>
     </element>
     <element id="Organization.type.coding.system">
