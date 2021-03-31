@@ -44,6 +44,50 @@
             </searchParam>
         </resource>
         <resource>
+            <type value="Immunization" />
+            <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Immunization" />
+            <interaction>
+                <code value="search-type" />
+            </interaction>
+            <searchParam>
+                <name value="patient.identifier" />
+                <type value="token" />
+                <documentation value="The patient identifier (e.g. NHS Number) that the immunisation is about" />
+            </searchParam>
+            <searchParam>
+                <name value="patient" />
+                <type value="reference" />
+                <documentation value="The patient that the immunisation is about" />
+            </searchParam>
+        </resource>
+        <resource>
+            <type value="Observation" />
+            <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Observation" />
+            <interaction>
+                <code value="search-type" />
+            </interaction>
+            <searchParam>
+                <name value="patient.identifier" />
+                <type value="token" />
+                <documentation value="The patient identifier (e.g. NHS Number) that the observation is about" />
+            </searchParam>
+            <searchParam>
+                <name value="patient" />
+                <type value="reference" />
+                <documentation value="The patient that the observation is about" />
+            </searchParam>
+            <searchParam>
+                <name value="code" />
+                <type value="token" />
+                <documentation value="The code of the observation type" />
+            </searchParam>
+            <searchParam>
+                <name value="date" />
+                <type value="date" />
+                <documentation value="The code of the observation type" />
+            </searchParam>
+        </resource>
+        <resource>
             <type value="Organization" />
             <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Organization" />
             <interaction>
@@ -132,50 +176,6 @@
                 <name value="practitioner.identifier" />
                 <type value="token" />
                 <documentation value="A practitioner identifier (e.g. GMC Code, GMP Code, GPHC Code, etc)" />
-            </searchParam>
-        </resource>
-        <resource>
-            <type value="Observation" />
-            <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Observation" />
-            <interaction>
-                <code value="search-type" />
-            </interaction>
-            <searchParam>
-                <name value="patient.identifier" />
-                <type value="token" />
-                <documentation value="The patient identifier (e.g. NHS Number) that the observation is about" />
-            </searchParam>
-            <searchParam>
-                <name value="patient" />
-                <type value="reference" />
-                <documentation value="The patient that the observation is about" />
-            </searchParam>
-            <searchParam>
-                <name value="code" />
-                <type value="token" />
-                <documentation value="The code of the observation type" />
-            </searchParam>
-            <searchParam>
-                <name value="date" />
-                <type value="date" />
-                <documentation value="The code of the observation type" />
-            </searchParam>
-        </resource>
-        <resource>
-            <type value="Immunization" />
-            <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Immunization" />
-            <interaction>
-                <code value="search-type" />
-            </interaction>
-            <searchParam>
-                <name value="patient.identifier" />
-                <type value="token" />
-                <documentation value="The patient identifier (e.g. NHS Number) that the immunisation is about" />
-            </searchParam>
-            <searchParam>
-                <name value="patient" />
-                <type value="reference" />
-                <documentation value="The patient that the immunisation is about" />
             </searchParam>
         </resource>
     </rest>
