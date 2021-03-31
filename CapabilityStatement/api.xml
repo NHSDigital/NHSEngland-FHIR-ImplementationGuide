@@ -36,11 +36,6 @@
                 <type value="reference" />
                 <documentation value="The patient that the flag is about" />
             </searchParam>
-            <searchParam>
-                <name value="category" />
-                <type value="token" />
-                <documentation value="The type of flag (Required parameter)" />
-            </searchParam>
         </resource>
         <resource>
             <type value="HealthcareService" />
