@@ -7,7 +7,7 @@
         <system value="https://fhir.nhs.uk/identifier/CodeSystem"/>
         <value value="message-events"/>
     </identifier>
-    <version value="1.0.7"/>
+    <version value="1.0.8"/>
     <name value="Message Events"/>
     <title value="Message Events"/>
     <status value="draft"/>
@@ -57,5 +57,10 @@
     <concept>
         <code value="vaccinations"/>
         <display value="Vaccinations"/>
+    </concept>
+    <concept>
+        <code value="dispense-claim"/>
+        <display value="Dispense Claim"/>
+        <definition value="This message is used by the Dispensing System to notify the EPS System of the claim information details for a previously completed dispense event, such that the EPS System can then send a Reimbursement Claim to the Reimbursement Authority (NHS BSA)."/>
     </concept>
 </CodeSystem>

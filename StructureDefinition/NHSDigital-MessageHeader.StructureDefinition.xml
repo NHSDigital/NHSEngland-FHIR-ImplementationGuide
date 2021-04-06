@@ -70,7 +70,7 @@
       </type>
       <binding>
         <strength value="required" />
-        <valueSet value="https://fhir.nhs.uk/ValueSet/spine-message-events" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDigital-message-events" />
       </binding>
     </element>
     <element id="MessageHeader.event[x].system">
