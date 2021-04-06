@@ -48,5 +48,10 @@
             <code value="vaccinations"/>
             <display value="Vaccinations"/>
         </contains>
+        <concept>
+            <system value="https://fhir.nhs.uk/CodeSystem/message-event"/>
+            <code value="dispense-claim"/>
+            <display value="Dispense Claim"/>
+        </concept>
     </expansion>
 </ValueSet>
