@@ -54,7 +54,7 @@
       </type>
       <binding>
         <strength value="required" />
-        <valueSet value="https://fhir.nhs.uk/ValueSet/covid-19-snomed-procedure-code-vs" />
+        <description value="https://fhir.nhs.uk/ValueSet/NHSDigital-VaccinationProcedure" />
       </binding>
     </element>
     <element id="Immunization.identifier">
