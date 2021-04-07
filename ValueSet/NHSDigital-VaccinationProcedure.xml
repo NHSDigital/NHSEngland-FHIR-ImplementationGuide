@@ -1,14 +1,14 @@
 <ValueSet xmlns="http://hl7.org/fhir">
     <id value="NHSDigital-VaccinationProcedure" />
     <url value="https://fhir.nhs.uk/ValueSet/NHSDigital-VaccinationProcedure" />
-    <version value="2.0.0" />
+    <version value="2.0.1" />
     <name value="NHSDigitalVaccinationProcedure" />
     <title value="Interim version of UK Core Vaccination Procedure. Extracted from CareConnect STU3" />
     <status value="draft" />
     <date value="2021-04-20T00:00:00+00:00" />
-    <publisher value="HL7 UK" />
+    <publisher value="NHS Digitial" />
     <contact>
-        <name value="HL7 UK" />
+        <name value="NHS Digitial" />
         <telecom>
             <system value="email" />
             <value value="interoperabilityteam@nhs.net" />
@@ -19,13 +19,29 @@
     <copyright value="Copyright &#169; 2020 HL7 UK Licensed under the Apache License, Version 2.0 (the &quot;License&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at  http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. HL7&#174; FHIR&#174; standard Copyright &#169; 2011+ HL7  The HL7&#174; FHIR&#174; standard is used under the FHIR license. You may obtain a copy of the FHIR license at  https://www.hl7.org/fhir/license.html." />
     <compose>
         <include>
-            <system value="http://snomed.info/sct" />
+            <system value="http://snomed.info/sct"/>
             <filter>
-                <property value="constraint" />
-                <op value="=" />
-                <value value="(&lt;&lt;33879002 OR &lt;&lt;713404003 OR &lt;&lt;955641000000103 OR &lt;&lt;955691000000108 OR &lt;&lt;955701000000108 OR &lt;&lt;957581000000102 OR &lt;&lt;957751000000103 OR &lt;&lt;1066171000000108 OR &lt;&lt;140611000119104 OR &lt;&lt;15483003 OR &lt;&lt;39343008 OR &lt;&lt;34631000 OR &lt;&lt;72093006 OR &lt;&lt;425897001 OR &lt;&lt;8605003 OR &lt;&lt;428502009 OR &lt;&lt;283451000000105 OR &lt;&lt;308753004 OR &lt;&lt;572481000119103 OR &lt;&lt;965851000000105 OR &lt;&lt;761841000 OR &lt;&lt;16300531000119107 OR &lt;&lt;14747002 OR &lt;&lt;283431000000103 OR &lt;&lt;427633002) MINUS (&lt;&lt;304250009 OR &lt;&lt;51116004 OR &lt;&lt;296811004 OR &lt;&lt;294631000 OR &lt;&lt;425457005 OR &lt;&lt;291705006 OR &lt;&lt;417451006 OR &lt;&lt;47988006 OR &lt;&lt;293095001 OR &lt;&lt;601000000100 OR &lt;&lt;123471000119103 OR &lt;&lt;266758009 OR &lt;&lt;223464006 OR &lt;&lt;185324002 OR &lt;&lt;416064006 OR &lt;&lt;428119001 OR &lt;&lt;308433002 OR &lt;&lt;183944003 OR &lt;&lt;408864009 OR &lt;&lt;202111000000106 OR &lt;&lt;708538000 OR &lt;&lt;418019003 OR &lt;&lt;416237000 OR &lt;&lt;400999005 OR &lt;&lt;309370004)" />
+               <property value="constraint"/>
+               <op value="="/>
+               <value value="&lt;&lt;33879002 OR 868241000000109 OR 572421000119102 OR 626071000119103 OR 16298561000119108 OR 571611000119101 OR 170415002 OR 170408005 OR 412743000 OR 7141001 OR 270898008 OR 170399005 OR 14747002 OR 170412004 OR 170405008 OR 170400003 OR 170395004 OR 313188000 OR 51572002 OR 8605003 OR 39568006 OR 275849001 OR 390892002 OR 281040003 OR 275841003 OR 777611000000100 OR 1240491000000103 OR 170413009 OR 170406009 OR 170401004 OR 170396003 OR 313189008 OR 308753004 OR 170409002 OR 170414003 OR 170407000 OR 170402006 OR 170397007 OR 412742005 OR 170425007 OR 170427004 OR 170426008 OR 312867004 OR 570001 OR 787438002 OR 428570002"/>
             </filter>
-        </include>
+         </include>
+         <include>
+            <system value="http://snomed.info/sct"/>
+            <filter>
+               <property value="constraint"/>
+               <op value="="/>
+               <value value="&lt;&lt;882761000000103 OR &lt;&lt;1037211000000101 OR &lt;&lt;1037251000000102 OR &lt;&lt;380741000000101 OR &lt;&lt;868511000000106 OR &lt;&lt;908671000000105 OR &lt;&lt;310578008 OR &lt;&lt;382551000000109 OR &lt;&lt;868671000000100 OR &lt;&lt;1066171000000108 OR &lt;&lt;1037231000000109 OR &lt;&lt;1037271000000106 OR &lt;&lt;380771000000107 OR &lt;&lt;713404003"/>
+            </filter>
+         </include>
+         <include>
+            <system value="http://snomed.info/sct"/>
+            <filter>
+               <property value="constraint"/>
+               <op value="="/>
+               <value value="&lt;&lt;1240681000000103 OR &lt;&lt;90351000119108"/>
+            </filter>
+         </include>
     </compose>
     <expansion>
         <contains>
