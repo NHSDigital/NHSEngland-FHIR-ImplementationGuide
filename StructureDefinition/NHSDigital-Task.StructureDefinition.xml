@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Task" />
+  <name value="NHSDigital-Task" />
+  <status value="draft" />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="workflow" />
+    <uri value="http://hl7.org/fhir/workflow" />
+    <name value="Workflow Pattern" />
+  </mapping>
+  <mapping>
+    <identity value="rim" />
+    <uri value="http://hl7.org/v3" />
+    <name value="RIM Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="w5" />
+    <uri value="http://hl7.org/fhir/fivews" />
+    <name value="FiveWs Pattern Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="v2" />
+    <uri value="http://hl7.org/v2" />
+    <name value="HL7 v2 Mapping" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Task" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Task" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Task.identifier">
+      <path value="Task.identifier" />
+      <min value="1" />
+    </element>
+    <element id="Task.identifier.system">
+      <path value="Task.identifier.system" />
+      <min value="1" />
+    </element>
+    <element id="Task.identifier.value">
+      <path value="Task.identifier.value" />
+      <min value="1" />
+    </element>
+    <element id="Task.groupIdentifier">
+      <path value="Task.groupIdentifier" />
+      <min value="1" />
+    </element>
+    <element id="Task.groupIdentifier.system">
+      <path value="Task.groupIdentifier.system" />
+      <min value="1" />
+    </element>
+    <element id="Task.groupIdentifier.value">
+      <path value="Task.groupIdentifier.value" />
+      <min value="1" />
+    </element>
+    <element id="Task.businessStatus">
+      <path value="Task.businessStatus" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/DM-task-business-status" />
+      </binding>
+    </element>
+    <element id="Task.businessStatus.coding">
+      <path value="Task.businessStatus.coding" />
+      <min value="1" />
+    </element>
+    <element id="Task.businessStatus.coding.system">
+      <path value="Task.businessStatus.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="Task.businessStatus.coding.code">
+      <path value="Task.businessStatus.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Task.businessStatus.coding.display">
+      <path value="Task.businessStatus.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="Task.code">
+      <path value="Task.code" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/DM-task-code" />
+      </binding>
+    </element>
+    <element id="Task.code.coding">
+      <path value="Task.code.coding" />
+      <min value="1" />
+    </element>
+    <element id="Task.code.coding.system">
+      <path value="Task.code.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="Task.code.coding.code">
+      <path value="Task.code.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Task.code.coding.display">
+      <path value="Task.code.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="Task.focus">
+      <path value="Task.focus" />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="Bundle" />
+      </type>
+    </element>
+    <element id="Task.focus.identifier">
+      <path value="Task.focus.identifier" />
+      <min value="1" />
+    </element>
+    <element id="Task.focus.identifier.system">
+      <path value="Task.focus.identifier.system" />
+      <min value="1" />
+    </element>
+    <element id="Task.focus.identifier.value">
+      <path value="Task.focus.identifier.value" />
+      <min value="1" />
+    </element>
+    <element id="Task.for">
+      <path value="Task.for" />
+      <min value="1" />
+    </element>
+    <element id="Task.for.identifier">
+      <path value="Task.for.identifier" />
+      <min value="1" />
+    </element>
+    <element id="Task.for.identifier.system">
+      <path value="Task.for.identifier.system" />
+      <min value="1" />
+    </element>
+    <element id="Task.for.identifier.value">
+      <path value="Task.for.identifier.value" />
+      <min value="1" />
+    </element>
+    <element id="Task.authoredOn">
+      <path value="Task.authoredOn" />
+      <min value="1" />
+    </element>
+    <element id="Task.owner">
+      <path value="Task.owner" />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Organization" />
+      </type>
+    </element>
+    <element id="Task.owner.identifier">
+      <path value="Task.owner.identifier" />
+      <min value="1" />
+    </element>
+    <element id="Task.owner.identifier.system">
+      <path value="Task.owner.identifier.system" />
+      <min value="1" />
+    </element>
+    <element id="Task.owner.identifier.value">
+      <path value="Task.owner.identifier.value" />
+      <min value="1" />
+    </element>
+    <element id="Task.reasonCode">
+      <path value="Task.reasonCode" />
+      <min value="1" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/DM-task-reason-code" />
+      </binding>
+    </element>
+    <element id="Task.reasonCode.coding">
+      <path value="Task.reasonCode.coding" />
+      <min value="1" />
+    </element>
+    <element id="Task.reasonCode.coding.system">
+      <path value="Task.reasonCode.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="Task.reasonCode.coding.code">
+      <path value="Task.reasonCode.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Task.reasonCode.coding.display">
+      <path value="Task.reasonCode.coding.display" />
+      <min value="1" />
+    </element>
+  </differential>
+</StructureDefinition>
