@@ -1,31 +1,31 @@
 <Device xmlns="http://hl7.org/fhir">
-    <id value="f0f0e921-92ca-4a88-a550-2dbb36f703af" />
+    <id value="f0f0e921-92ca-4a88-a550-2dbb36f703af"></id>
     <extension url="https://fhir.nhs.uk/StructureDefinition/Extension-SDS-ManagingOrganisation">
         <valueReference>
             <identifier>
-                <system value="https://fhir.nhs.uk/Id/ods-organization-code" />
-                <value value="T10101" />
+                <system value="https://fhir.nhs.uk/Id/ods-organization-code"></system>
+                <value value="T10101"></value>
             </identifier>
-            <display value="Some GP System provider" />
+            <display value="Some GP System provider"></display>
         </valueReference>
     </extension>
     <identifier>
-        <system value="https://fhir.nhs.uk/Id/nhsSpineASID" />
-        <value value="227319907548" />
+        <system value="https://fhir.nhs.uk/Id/nhsSpineASID"></system>
+        <value value="227319907548"></value>
     </identifier>
     <identifier>
-        <system value="https://fhir.nhs.uk/Id/nhsMhsPartyKey" />
-        <value value="R8008-0000806" />
+        <system value="https://fhir.nhs.uk/Id/nhsMhsPartyKey"></system>
+        <value value="R8008-0000806"></value>
     </identifier>
     <identifier>
-        <system value="https://fhir.nhs.uk/Id/nhsEndpointServiceId" />
-        <value value="urn:nhs:names:services:psis:REPC_IN150016UK05" />
+        <system value="https://fhir.nhs.uk/Id/nhsEndpointServiceId"></system>
+        <value value="urn:nhs:names:services:psis:REPC_IN150016UK05"></value>
     </identifier>
     <owner>
         <identifier>
-            <system value="https://fhir.nhs.uk/Id/ods-organization-code" />
-            <value value="R8008" />
+            <system value="https://fhir.nhs.uk/Id/ods-organization-code"></system>
+            <value value="R8008"></value>
         </identifier>
-        <display value="Some GP Practice" />
+        <display value="Some GP Practice"></display>
     </owner>
 </Device>

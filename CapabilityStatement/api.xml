@@ -194,5 +194,13 @@
                 <documentation value="A practitioner identifier (e.g. GMC Code, GMP Code, GPHC Code, etc)" />
             </searchParam>
         </resource>
+        <resource>
+            <type value="Device" />
+            <profile value="https://fhir.nhs.uk/StructureDefinition/SDS-Device" />
+        </resource>
+        <resource>
+            <type value="Endpoint" />
+            <profile value="https://fhir.nhs.uk/StructureDefinition/SDS-Endpoint" />
+        </resource>
     </rest>
 </CapabilityStatement>
