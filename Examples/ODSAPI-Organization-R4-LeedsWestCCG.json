@@ -54,7 +54,7 @@
             }
         ],
         "coding": {
-            "system": "https://directory.spineservices.nhs.uk/STU3/CodeSystem/ODSAPI-OrganizationRole-1",
+            "system": "https://fhir.nhs.uk/CodeSystem/organisation-role",
             "code": "98",
             "display": "CLINICAL COMMISSIONING GROUP"
         }
