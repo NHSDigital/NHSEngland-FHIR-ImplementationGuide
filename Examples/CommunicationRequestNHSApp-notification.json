@@ -36,7 +36,6 @@
           ],
           "contentReference": {
               "reference": "https://www.nhsapp.service.nhs.uk/message/",
-              "type": "Binary",
               "display": "You have a new notification from GNCR, click here to open the NHS App to view it"
           }
       }
