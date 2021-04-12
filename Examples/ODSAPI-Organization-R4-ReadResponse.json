@@ -1,69 +1,77 @@
 {
     "resourceType": "Organization",
     "id": "RR8",
-    "identifier": {
-        "system": "https://fhir.nhs.uk/Id/ods-organization-code",
-        "value": "RR8"
-    },
-    "active": true,
-    "type": {
-        "extension": [
-            {
-                "url": "https://fhir.nhs.uk/StructureDefinition/Extension-Spine-Organization-Role",
-                "extension": [
-                    {
-                        "url": "primaryRole",
-                        "valueBoolean": true
-                    },
-                    {
-                        "url": "status",
-                        "valueString": "Active"
-                    }
-                ]
-            },
-            {
-                "url": "https://fhir.nhs.uk/StructureDefinition/Extension-Spine-Organization-Role-ActivePeriod",
-                "extension": [
-                    {
-                        "url": "activePeriod",
-                        "valuePeriod": {
-                            "start": "1998-04-01"
-                        }
-                    },
-                    {
-                        "url": "dateType",
-                        "valueString": "Operational"
-                    }
-                ]
-            }
-        ],
-        "coding": {
-            "system": "https://fhir.nhs.uk/CodeSystem/organisation-role",
-            "code": "197",
-            "display": "NHS TRUST"
+    "identifier": [
+        {
+            "system": "https://fhir.nhs.uk/Id/ods-organization-code",
+            "value": "RR8"
         }
-    },
+    ],
+    "active": true,
+    "type": [
+        {
+            "extension": [
+                {
+                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-Spine-Organization-Role",
+                    "extension": [
+                        {
+                            "url": "primaryRole",
+                            "valueBoolean": true
+                        },
+                        {
+                            "url": "status",
+                            "valueString": "Active"
+                        }
+                    ]
+                },
+                {
+                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-Spine-Organization-Role-ActivePeriod",
+                    "extension": [
+                        {
+                            "url": "activePeriod",
+                            "valuePeriod": {
+                                "start": "1998-04-01"
+                            }
+                        },
+                        {
+                            "url": "dateType",
+                            "valueString": "Operational"
+                        }
+                    ]
+                }
+            ],
+            "coding": [
+                {
+                    "system": "https://fhir.nhs.uk/CodeSystem/organisation-role",
+                    "code": "197",
+                    "display": "NHS TRUST"
+                }
+            ]
+        }
+    ],
     "name": "LEEDS TEACHING HOSPITALS NHS TRUST",
     "telecom": [
         {
-            "use": "work",
             "system": "fax",
-            "value": "0113 242 6496"
+            "value": "0113 242 6496",
+            "use": "work"
         },
         {
-            "use" : "work",
             "system": "phone",
-            "value": "0113 243 3144"
+            "value": "0113 243 3144",
+            "use": "work"
         }
     ],
-    "address": {
-        "line": [
-            "ST. JAMES'S UNIVERSITY HOSPITAL",
-            "BECKETT STREET"
-        ],
-        "city": "LEEDS",
-        "district": "WEST YORKSHIRE",
-        "postalCode": "LS9 7TF",
-        "country": "ENGLAND"
-    }
+    "address": [
+        {
+            "line": [
+                "ST. JAMES'S UNIVERSITY HOSPITAL",
+                "BECKETT STREET"
+            ],
+            "city": "LEEDS",
+            "district": "WEST YORKSHIRE",
+            "postalCode": "LS9 7TF",
+            "country": "ENGLAND"
+        }
+    ]
 }
