@@ -46,10 +46,12 @@
     "name": "LEEDS TEACHING HOSPITALS NHS TRUST",
     "telecom": [
         {
+            "use": "work",
             "system": "fax",
             "value": "0113 242 6496"
         },
         {
+            "use" : "work",
             "system": "phone",
             "value": "0113 243 3144"
         }
