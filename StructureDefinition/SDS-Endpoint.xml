@@ -74,9 +74,6 @@
       <definition value="Identifier for the service that is used to identify the endpoint across multiple disparate systems." />
       <min value="1" />
       <max value="1" />
-      <fixedIdentifier>
-        <value value="https://fhir.nhs.uk/Id/nhsEndpointServiceId" />
-      </fixedIdentifier>
     </element>
     <element id="Endpoint.identifier:NhsEndpointServiceId.system">
       <path value="Endpoint.identifier.system" />
@@ -89,9 +86,6 @@
       <definition value="Identifier for the service that is used to identify the endpoint across multiple disparate systems." />
       <min value="1" />
       <max value="1" />
-      <fixedIdentifier>
-        <value value="https://fhir.nhs.uk/Id/nhsMhsFQDN" />
-      </fixedIdentifier>
     </element>
     <element id="Endpoint.identifier:NhsMhsFQDN.system">
       <path value="Endpoint.identifier.system" />
@@ -104,9 +98,6 @@
       <definition value="Identifier for the service that is used to identify the endpoint across multiple disparate systems." />
       <min value="1" />
       <max value="1" />
-      <fixedIdentifier>
-        <value value="https://fhir.nhs.uk/Id/nhsMhsPartyKey" />
-      </fixedIdentifier>
     </element>
     <element id="Endpoint.identifier:NhsMhsPartyKey.system">
       <path value="Endpoint.identifier.system" />
@@ -119,9 +110,6 @@
       <definition value="Identifier for the service that is used to identify the endpoint across multiple disparate systems." />
       <min value="1" />
       <max value="1" />
-      <fixedIdentifier>
-        <value value="https://fhir.nhs.uk/Id/nhsMhsCPAId" />
-      </fixedIdentifier>
     </element>
     <element id="Endpoint.identifier:NhsMhsCPAId.system">
       <path value="Endpoint.identifier.system" />
@@ -132,9 +120,6 @@
       <sliceName value="NhsSpineASID" />
       <short value="NHS Spine Accredited System Identifier" />
       <min value="1" />
-      <fixedIdentifier>
-        <value value="https://fhir.nhs.uk/Id/nhsSpineASID" />
-      </fixedIdentifier>
     </element>
     <element id="Endpoint.identifier:NhsSpineASID.system">
       <path value="Endpoint.identifier.system" />

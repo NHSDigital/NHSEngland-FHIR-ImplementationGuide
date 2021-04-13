@@ -80,9 +80,6 @@
       <short value="NHS Spine Accredited System Identifier" />
       <min value="1" />
       <max value="1" />
-      <fixedIdentifier>
-        <value value="https://fhir.nhs.uk/Id/nhsSpineASID" />
-      </fixedIdentifier>
       <mustSupport value="true" />
     </element>
     <element id="Device.identifier:NhsSpineASID.system">
@@ -95,9 +92,6 @@
       <short value="Nhs Mhs Party Key" />
       <min value="1" />
       <max value="1" />
-      <fixedIdentifier>
-        <value value="https://fhir.nhs.uk/Id/nhsMhsPartyKey" />
-      </fixedIdentifier>
       <mustSupport value="true" />
     </element>
     <element id="Device.identifier:NhsMhsPartyKey.system">
@@ -110,9 +104,6 @@
       <short value="NHS Endpoint Service Id" />
       <min value="1" />
       <max value="1" />
-      <fixedIdentifier>
-        <value value="https://fhir.nhs.uk/Id/nhsEndpointServiceId" />
-      </fixedIdentifier>
       <mustSupport value="true" />
     </element>
     <element id="Device.identifier:NhsEndpointServiceId.system">
