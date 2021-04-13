@@ -17,6 +17,7 @@
         </include>
     </compose>
     <expansion>
+        <timestamp value="2020-10-07T18:08:05+10:00"/>
         <contains>
             <system value="https://fhir.nhs.uk/CodeSystem/Spine-ErrorOrWarningCode"/>
             <version value="2.0.0"/>

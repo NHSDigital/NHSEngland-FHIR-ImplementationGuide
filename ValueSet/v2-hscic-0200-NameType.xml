@@ -64,6 +64,7 @@
         </include>
     </compose>
     <expansion>
+        <timestamp value="2020-10-07T18:08:05+10:00"/>
         <contains>
             <system value="http://terminology.hl7.org/CodeSystem/v2-0200" />
             <code value="A" />

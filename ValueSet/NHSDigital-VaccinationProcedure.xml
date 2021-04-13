@@ -44,6 +44,7 @@
          </include>
     </compose>
     <expansion>
+        <timestamp value="2020-10-07T18:08:05+10:00"/>
         <contains>
             <system value="http://snomed.info/sct"/>
             <code value="957671000000103"/>

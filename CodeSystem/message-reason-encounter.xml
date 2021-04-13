@@ -21,7 +21,6 @@
     </contact>
     <description value="Message reason Prescription codes."/>
     <copyright value="Copyright &#169; 2019 NHS Digital" />
-    <valueSet value="http://hl7.org/fhir/ValueSet/message-reason-encounter"/> 
     <content value="complete"/> 
     <concept> 
       <code value="admit"/> 

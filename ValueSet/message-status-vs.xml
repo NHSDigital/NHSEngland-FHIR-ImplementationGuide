@@ -13,6 +13,7 @@
         </include>
     </compose>
     <expansion>
+        <timestamp value="2020-10-07T18:08:05+10:00"/>
         <contains>
             <system value="https://fhir.hl7.org.uk/CodeSystem/message-status"/>
             <code value="active"/>
