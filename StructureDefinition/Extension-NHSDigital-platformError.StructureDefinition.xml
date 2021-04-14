@@ -106,9 +106,6 @@
       <type>
         <code value="string" />
       </type>
-      <type>
-        <code value="uuid" />
-      </type>
     </element>
     <element id="Extension.url">
       <path value="Extension.url" />
