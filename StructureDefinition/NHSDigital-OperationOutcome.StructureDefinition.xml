@@ -42,6 +42,17 @@
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-Spine-supportingInfo" />
       </type>
     </element>
+    <element id="OperationOutcome.extension:platformError">
+      <path value="OperationOutcome.extension" />
+      <sliceName value="platformError" />
+      <comment value="This extension is optional to allow API's to begin implementation. This intention is to make this mandatory" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-platformError" />
+      </type>
+    </element>
     <element id="OperationOutcome.issue.details.coding">
       <path value="OperationOutcome.issue.details.coding" />
       <binding>
