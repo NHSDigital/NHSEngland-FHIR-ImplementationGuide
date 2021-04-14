@@ -17,7 +17,7 @@
             "diagnostics": "Patient.gender: minimum required = 1, but only found 0 (from https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient)",
             "location": [
                 "Patient",
-                "Line 1, Col 38"
+                "Line 1, Col 37"
             ]
         }
     ]
