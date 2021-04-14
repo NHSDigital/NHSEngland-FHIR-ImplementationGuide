@@ -57,7 +57,7 @@
                         </a>
                     </div>
                 </div>
-          <!--     <div class="col-md-4 hl7-logo">
+                <!--     <div class="col-md-4 hl7-logo">
                     <a href="http://hl7.org">
                         <img src="https://www.hl7.org/assets/systemimages/hl7-logo-header.png"
                             alt="visit the HL7 website" width="89" height="auto" target="_blank">
@@ -74,34 +74,31 @@
         {{ dropdown-navigation }}
     </header>
 
-    <div class="warning">
-        
-        <b>Please note:</b> 
-        <ul> <li>This is an WIP development version of the NHS (England) National Services Implementation Guide.</li>
+    <div markdown="span" class="alert alert-warning" role="alert"><i class="fa fa-warning"></i><b> Please note:</b>
+        <ul>
+            <li>This is an WIP development version of the NHS Digital FHIR Implementation Guide.</li>
 
-        </ul> 
-        </div>
-
-    <div class="content container">
-        {{ page-with-children }}
-    </div>
-
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div>
-                    <span>Version: {{ guide-version }}</span>
-                    <span>FHIR Version: {{ guide-fhir-version }}</span>
-                </div>
-                <br />
-                <p>Powered by <b>SIMPLIFIER.NET</b></p>
-                <div>
-                    HL7<sup>&reg;</sup> and FHIR<sup>&reg;</sup> are the registered trademarks of Health Level Seven
-                    International
-                </div>
+            <div class="content container">
+                {{ page-with-children }}
             </div>
-        </div>
-    </footer>
+
+            <footer>
+                <div class="container">
+                    <div class="row">
+                        <div>
+                            <span>Version: {{ guide-version }}</span>
+                            <span>FHIR Version: {{ guide-fhir-version }}</span>
+                        </div>
+                        <br />
+                        <p>Powered by <b>SIMPLIFIER.NET</b></p>
+                        <div>
+                            HL7<sup>&reg;</sup> and FHIR<sup>&reg;</sup> are the registered trademarks of Health Level
+                            Seven
+                            International
+                        </div>
+                    </div>
+                </div>
+            </footer>
 
 </body>
 
