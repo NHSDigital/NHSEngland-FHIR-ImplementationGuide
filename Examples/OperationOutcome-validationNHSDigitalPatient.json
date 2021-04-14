@@ -16,12 +16,13 @@
             "code": "processing",
             "details": {
                 "coding": [
-                  {
-                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
-                    "code": "ETREAT",
-                    "display": "Emergency Treatment"
-                  }
-                ],
+                    {
+                        "system": "https://fhir.nhs.uk/CodeSystem/Spine-ErrorOrWarningCode",
+                        "code": "INVALID_VALUE",
+                        "display": "Invalid value"
+                    }
+                ]
+            },
             "diagnostics": "Patient.gender: minimum required = 1, but only found 0 (from https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient)",
             "location": [
                 "Patient",

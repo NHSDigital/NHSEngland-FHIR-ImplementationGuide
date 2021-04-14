@@ -53,16 +53,22 @@
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-platformError" />
       </type>
     </element>
-    <element id="OperationOutcome.issue.details">
-      <path value="OperationOutcome.issue.details" />
-      <min value="1" />
-    </element>
     <element id="OperationOutcome.issue.details.coding">
       <path value="OperationOutcome.issue.details.coding" />
+      <min value="1" />
+      <max value="1" />
       <binding>
         <strength value="required" />
         <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDigital-OperationOutcome-Codes|1.0.0" />
       </binding>
+    </element>
+    <element id="OperationOutcome.issue.details.coding.system">
+      <path value="OperationOutcome.issue.details.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="OperationOutcome.issue.details.coding.code">
+      <path value="OperationOutcome.issue.details.coding.code" />
+      <min value="1" />
     </element>
   </differential>
 </StructureDefinition>

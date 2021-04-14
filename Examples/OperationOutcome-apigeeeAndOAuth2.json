@@ -28,6 +28,15 @@
         {
             "severity": "error",
             "code": "value",
+            "details": {
+                "coding": [
+                    {
+                        "system": "https://fhir.nhs.uk/CodeSystem/Spine-ErrorOrWarningCode",
+                        "code": "INVALID_VALUE",
+                        "display": "Invalid value"
+                    }
+                ]
+            },
             "diagnostics": "(invalid_request) client_id is missing"
         }
     ]
