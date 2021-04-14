@@ -104,6 +104,9 @@
       <path value="Extension.extension.value[x]" />
       <min value="1" />
       <type>
+        <code value="string" />
+      </type>
+      <type>
         <code value="uuid" />
       </type>
     </element>

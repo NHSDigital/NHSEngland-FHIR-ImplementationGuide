@@ -1,0 +1,34 @@
+{
+    "resourceType": "OperationOutcome",
+    "extension": [
+        {
+            "url":"https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-platformError",
+            "extension": [
+                {
+                    "url": "dateTime",
+                    "valueDateTime": "2021-04-14T11:35:00+00:00"
+                },
+                {
+                    "url": "HTTPStatusCode",
+                    "valueInteger": "422"
+                },
+                {
+                    "url": "url",
+                    "valueUrl": "https://auth0.com/docs/flows/call-your-api-using-the-client-credentials-flow"
+                },
+                {
+                    "url" : "uniqueRequestID",
+                    "valueUuid": "4a8617c7-a50c-4f83-b410-13d4cf3555a7"
+                }
+            ]
+        }
+    ],
+    "id": "c51a5006-8897-4396-8e84-eb04fe85c9df",
+    "issue": [
+        {
+            "severity": "error",
+            "code": "value",
+            "diagnostics": "(invalid_request) client_id is missing"
+        }
+    ]
+}
