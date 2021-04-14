@@ -81,24 +81,27 @@
             <div class="content container">
                 {{ page-with-children }}
             </div>
+        </ul>
+    </div>
 
-            <footer>
-                <div class="container">
-                    <div class="row">
-                        <div>
-                            <span>Version: {{ guide-version }}</span>
-                            <span>FHIR Version: {{ guide-fhir-version }}</span>
-                        </div>
-                        <br />
-                        <p>Powered by <b>SIMPLIFIER.NET</b></p>
-                        <div>
-                            HL7<sup>&reg;</sup> and FHIR<sup>&reg;</sup> are the registered trademarks of Health Level
-                            Seven
-                            International
-                        </div>
-                    </div>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div>
+                    <span>Version: {{ guide-version }}</span>
+                    <span>FHIR Version: {{ guide-fhir-version }}</span>
                 </div>
-            </footer>
+                <br />
+                <p>Powered by <b>SIMPLIFIER.NET</b></p>
+                <div>
+                    HL7<sup>&reg;</sup> and FHIR<sup>&reg;</sup> are the registered trademarks of Health Level
+                    Seven
+                    International
+                </div>
+            </div>
+        </div>
+    </footer>
 
 </body>
 
