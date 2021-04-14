@@ -43,7 +43,9 @@ html, body {
       padding-right: 50px;
       text-align: left; 
     }
-
+    .lang-json {
+      border: 1px solid #ccc;
+    }
     .tab {
       overflow: hidden;
       border: 1px solid #ccc;
