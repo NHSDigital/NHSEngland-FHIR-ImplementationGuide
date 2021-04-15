@@ -1,0 +1,23 @@
+{
+    "resourceType": "OperationOutcome",
+    "id" : "4a8617c7-a50c-4f83-b410-13d4cf3555a7",
+    "meta" : {
+        "lastUpdated" : "2021-04-14T11:35:00+00:00"
+    },
+    "issue": [
+        {
+            "severity": "error",
+            "code": "value",
+            "details": {
+                "coding": [
+                    {
+                        "system": "https://fhir.nhs.uk/CodeSystem/Spine-ErrorOrWarningCode",
+                        "code": "INVALID_VALUE",
+                        "display": "Invalid value"
+                    }
+                ]
+            },
+            "diagnostics": "(invalid_request) client_id is missing"
+        }
+    ]
+}
