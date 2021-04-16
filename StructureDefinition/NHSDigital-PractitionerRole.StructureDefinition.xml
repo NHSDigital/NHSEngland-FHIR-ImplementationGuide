@@ -79,8 +79,6 @@
     </element>
     <element id="PractitionerRole.code">
       <path value="PractitionerRole.code" />
-      <min value="1" />
-      <max value="1" />
       <binding>
         <strength value="preferred" />
         <valueSet value="https://fhir.hl7.org.uk/ValueSet/UKCore-SDSJobRoleName" />
