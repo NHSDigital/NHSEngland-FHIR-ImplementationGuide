@@ -23,6 +23,11 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/OperationOutcome" />
   <derivation value="constraint" />
   <differential>
+    <element id="OperationOutcome.id">
+      <path value="OperationOutcome.id" />
+      <short value="uniqueRequestID" />
+      <definition value="Internal Apigee messageID" />
+    </element>
     <element id="OperationOutcome.extension">
       <path value="OperationOutcome.extension" />
       <slicing>
@@ -46,7 +51,6 @@
       <path value="OperationOutcome.extension" />
       <sliceName value="platformError" />
       <comment value="This extension is optional to allow API's to begin implementation. This intention is to make this mandatory" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />

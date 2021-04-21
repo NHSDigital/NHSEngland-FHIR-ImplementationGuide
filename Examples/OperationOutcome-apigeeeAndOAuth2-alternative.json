@@ -17,7 +17,10 @@
                     }
                 ]
             },
-            "diagnostics": "(invalid_request) client_id is missing"
+            "diagnostics": "(invalid_request) firstName is missing",
+            "location": [
+                "/data/attributes/firstName"
+            ]
         }
     ]
 }

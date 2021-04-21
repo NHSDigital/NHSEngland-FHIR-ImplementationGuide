@@ -88,25 +88,6 @@
         <code value="url" />
       </type>
     </element>
-    <element id="Extension.extension:uniqueRequestID">
-      <path value="Extension.extension" />
-      <sliceName value="uniqueRequestID" />
-      <short value="UniquerequestID" />
-      <definition value="Internal Apigee messageID" />
-      <comment value="Internal Apigee messageID" />
-      <min value="1" />
-    </element>
-    <element id="Extension.extension:uniqueRequestID.url">
-      <path value="Extension.extension.url" />
-      <fixedUri value="uniqueRequestID" />
-    </element>
-    <element id="Extension.extension:uniqueRequestID.value[x]">
-      <path value="Extension.extension.value[x]" />
-      <min value="1" />
-      <type>
-        <code value="string" />
-      </type>
-    </element>
     <element id="Extension.url">
       <path value="Extension.url" />
       <fixedUri value="https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-platformError" />
