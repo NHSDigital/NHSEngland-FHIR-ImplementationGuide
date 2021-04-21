@@ -28,6 +28,14 @@
       <short value="uniqueRequestID" />
       <definition value="Internal Apigee messageID" />
     </element>
+    <element id="OperationOutcome.meta">
+      <path value="OperationOutcome.meta" />
+      <min value="1" />
+    </element>
+    <element id="OperationOutcome.meta.lastUpdated">
+      <path value="OperationOutcome.meta.lastUpdated" />
+      <min value="1" />
+    </element>
     <element id="OperationOutcome.extension">
       <path value="OperationOutcome.extension" />
       <slicing>
