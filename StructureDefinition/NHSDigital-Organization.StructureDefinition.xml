@@ -111,9 +111,5 @@
       <path value="Organization.partOf.identifier.value" />
       <min value="1" />
     </element>
-    <element id="Organization.partOf.display">
-      <path value="Organization.partOf.display" />
-      <min value="1" />
-    </element>
   </differential>
 </StructureDefinition>
