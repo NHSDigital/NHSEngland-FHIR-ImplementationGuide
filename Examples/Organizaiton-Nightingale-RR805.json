@@ -61,7 +61,7 @@
         }
     ],
     "partOf": {
-        "reference": "https://directory.spineservices.nhs.uk/STU3/Organization/RR8",
+        "reference": "https://directory.spineservices.nhs.uk/R4/Organization/RR8",
         "identifier": {
             "system": "https://fhir.nhs.uk/Id/ods-organization-code",
             "value": "RR8"
