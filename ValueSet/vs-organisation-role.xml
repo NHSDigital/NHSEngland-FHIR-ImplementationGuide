@@ -5,7 +5,7 @@
    <version value="2.0.3" />
    <name value="NHS Organisation Role" />
    <status value="active" />
-   <description value="A ValueSet to identify the roles (type) of organisation" />   
+   <description value="A ValueSet to identify the roles (type) of organisation." />   
    <compose>
       <include>
          <system value="https://fhir.nhs.uk/CodeSystem/organisation-role" />
