@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="https://fhir.nhs.uk/StructureDefinition/Extension-Spine-Organization-Role-ActivePeriod" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/Extension-ODS-Organization-Role-ActivePeriod" />
   <name value="Extension-NHSDigital-Organization-Role-ActivePeriod" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
@@ -59,7 +59,7 @@
     </element>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="https://fhir.nhs.uk/StructureDefinition/Extension-Spine-Organization-Role-ActivePeriod" />
+      <fixedUri value="https://fhir.nhs.uk/StructureDefinition/Extension-ODS-Organization-Role-ActivePeriod" />
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />

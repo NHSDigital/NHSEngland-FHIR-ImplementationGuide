@@ -30,6 +30,26 @@
   <baseDefinition value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Organization" />
   <derivation value="constraint" />
   <differential>
+    <element id="Organization.extension">
+      <path value="Organization.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Organization.extension:relationships">
+      <path value="Organization.extension" />
+      <sliceName value="relationships" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-ODS-OrganisationRealtionships" />
+      </type>
+    </element>
     <element id="Organization.identifier">
       <path value="Organization.identifier" />
       <min value="1" />
@@ -67,7 +87,7 @@
       <sliceName value="activePeriod" />
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-Spine-Organization-Role-ActivePeriod" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-ODS-Organization-Role-ActivePeriod" />
       </type>
     </element>
     <element id="Organization.type.extension:organisationRole">
@@ -75,7 +95,7 @@
       <sliceName value="organisationRole" />
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-Spine-Organization-Role" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-ODS-Organization-Role" />
       </type>
     </element>
     <element id="Organization.type.coding.system">

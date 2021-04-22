@@ -1,10 +1,24 @@
 {
     "resourceType": "Organization",
-    "id": "03C",
+    "id": "15F",
+    "extension": [
+        {
+            "url": "https://fhir.nhs.uk/StructureDefinition/Extension-ODS-Organization-Role",
+            "extension": [
+                {
+                    "url": "nationalGrouping",
+                    "valueIdentifier": {
+                        "system": "https://fhir.nhs.uk/Id/ods-organization-code",
+                        "value": "Q72"
+                    }
+                }
+            ]
+        }
+    ],
     "identifier": [
         {
             "system": "https://fhir.nhs.uk/Id/ods-organization-code",
-            "value": "03C"
+            "value": "15F"
         }
     ],
     "active": true,
@@ -12,12 +26,25 @@
         {
             "extension": [
                 {
-                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-Spine-Organization-Role-ActivePeriod",
+                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-ODS-Organization-Role",
+                    "extension": [
+                        {
+                            "url": "primaryRole",
+                            "valueBoolean": true
+                        },
+                        {
+                            "url": "status",
+                            "valueString": "Active"
+                        }
+                    ]
+                },
+                {
+                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-ODS-Organization-Role-ActivePeriod",
                     "extension": [
                         {
                             "url": "activePeriod",
                             "valuePeriod": {
-                                "start": "2011-12-13"
+                                "start": "2017-12-12"
                             }
                         },
                         {
@@ -27,31 +54,17 @@
                     ]
                 },
                 {
-                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-Spine-Organization-Role-ActivePeriod",
+                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-ODS-Organization-Role-ActivePeriod",
                     "extension": [
                         {
                             "url": "activePeriod",
                             "valuePeriod": {
-                                "start": "2013-04-01",
-                                "end": "2018-03-31"
+                                "start": "2018-04-01"
                             }
                         },
                         {
                             "url": "dateType",
                             "valueString": "Legal"
-                        }
-                    ]
-                },
-                {
-                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-Spine-Organization-Role",
-                    "extension": [
-                        {
-                            "url": "primaryRole",
-                            "valueBoolean": true
-                        },
-                        {
-                            "url": "status",
-                            "valueString": "Active"
                         }
                     ]
                 }
@@ -65,11 +78,11 @@
             ]
         }
     ],
-    "name": "NHS LEEDS WEST CCG",
+    "name": "NHS LEEDS CCG",
     "address": [
         {
             "line": [
-                "UNITS 2-4 WIRA BUSINESS PARK",
+                "SUITES 2 - 4 WIRA HOUSE",
                 "RING ROAD",
                 "WEST PARK"
             ],

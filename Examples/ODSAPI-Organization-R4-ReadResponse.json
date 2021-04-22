@@ -1,6 +1,20 @@
 {
     "resourceType": "Organization",
     "id": "RR8",
+    "extension": [
+        {
+            "url": "https://fhir.nhs.uk/StructureDefinition/Extension-ODS-Organization-Role",
+            "extension": [
+                {
+                    "url": "highLevelHealthGeography",
+                    "valueIdentifier": {
+                        "system": "https://fhir.nhs.uk/Id/ods-organization-code",
+                        "value": "QWO"
+                    }
+                }
+            ]
+        }
+    ],
     "identifier": [
         {
             "system": "https://fhir.nhs.uk/Id/ods-organization-code",
@@ -12,7 +26,7 @@
         {
             "extension": [
                 {
-                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-Spine-Organization-Role",
+                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-ODS-Organization-Role",
                     "extension": [
                         {
                             "url": "primaryRole",
@@ -25,7 +39,7 @@
                     ]
                 },
                 {
-                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-Spine-Organization-Role-ActivePeriod",
+                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-ODS-Organization-Role-ActivePeriod",
                     "extension": [
                         {
                             "url": "activePeriod",
