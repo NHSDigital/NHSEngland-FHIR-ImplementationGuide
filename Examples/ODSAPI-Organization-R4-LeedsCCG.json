@@ -3,7 +3,7 @@
     "id": "15F",
     "extension": [
         {
-            "url": "https://fhir.nhs.uk/StructureDefinition/Extension-ODS-Organization-Role",
+            "url": "https://fhir.nhs.uk/StructureDefinition/Extension-ODS-OrganisationRealtionships",
             "extension": [
                 {
                     "url": "nationalGrouping",
