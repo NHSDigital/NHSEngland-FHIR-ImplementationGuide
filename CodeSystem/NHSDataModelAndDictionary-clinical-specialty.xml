@@ -18,7 +18,6 @@
    <copyright value="Copyright © 2019 NHS Digital" />
    <caseSensitive value="true" />
    <content value="complete" />
-   <name value="NHS Data Dictionary Main Clinical Specialty" />
    <concept>
       <code value="100"/>
       <display value="General Surgery" />
