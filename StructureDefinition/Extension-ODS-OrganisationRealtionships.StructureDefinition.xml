@@ -93,6 +93,29 @@
       <path value="Extension.extension.value[x].value" />
       <min value="1" />
     </element>
+    <element id="Extension.extension:primaryCareNetwork">
+      <path value="Extension.extension" />
+      <sliceName value="primaryCareNetwork" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:primaryCareNetwork.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="primaryCareNetwork" />
+    </element>
+    <element id="Extension.extension:primaryCareNetwork.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <type>
+        <code value="Identifier" />
+      </type>
+    </element>
+    <element id="Extension.extension:primaryCareNetwork.value[x].system">
+      <path value="Extension.extension.value[x].system" />
+      <min value="1" />
+    </element>
+    <element id="Extension.extension:primaryCareNetwork.value[x].value">
+      <path value="Extension.extension.value[x].value" />
+      <min value="1" />
+    </element>
     <element id="Extension.url">
       <path value="Extension.url" />
       <fixedUri value="https://fhir.nhs.uk/StructureDefinition/Extension-ODS-OrganisationRealtionships" />
