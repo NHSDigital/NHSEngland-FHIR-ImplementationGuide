@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><ValueSet xmlns="http://hl7.org/fhir">
-    <id value="NHSDataModelAndDictionary-clinical-specialty"/>
-    <url value="https://fhir.nhs.uk/ValueSet/NHSDataModelAndDictionary-clinical-specialty"/>
+    <id value="NHSDataModelAndDictionary-treatment-function"/>
+    <url value="https://fhir.nhs.uk/ValueSet/NHSDataModelAndDictionary-treatment-function"/>
     <version value="1.2.0"/>
-    <name value="NHS Data Dictionary Main Clinical Specialty"/>
+    <name value="NHS Data Dictionary Treatment Function Codes"/>
     <status value="draft"/>
     <date value="2019-02-01T00:00:00+00:00"/>
     <publisher value="NHS Digital"/>
@@ -18,7 +18,7 @@
     <copyright value="Copyright © 2018 NHS Digital"/>
     <compose>
        <include>
-          <system value="https://fhir.nhs.uk/CodeSystem/NHSDataModelAndDictionary-clinical-specialty"/>
+          <system value="https://fhir.nhs.uk/CodeSystem/NHSDataModelAndDictionary-treatment-function"/>
           <version value="1.2.1"/>
        </include>
     </compose>
