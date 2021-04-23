@@ -27,7 +27,7 @@
                 <code value="search-type" />
             </interaction>
             <searchParam>
-                <name value="patient.identifier" />
+                <name value="patient:identifier" />
                 <type value="token" />
                 <documentation value="The patient identifier (e.g. NHS Number) that the flag is about" />
             </searchParam>
@@ -140,12 +140,12 @@
                 <code value="search-type" />
             </interaction>
             <searchParam>
-                <name value="organization.identifier" />
+                <name value="organization:identifier" />
                 <type value="token" />
                 <documentation value="A organisation identifier (e.g. ODS Code)" />
             </searchParam>
             <searchParam>
-                <name value="practitioner.identifier" />
+                <name value="practitioner:identifier" />
                 <type value="token" />
                 <documentation value="A practitioner identifier (e.g. GMC Code, GMP Code, GPHC Code, etc)" />
             </searchParam>
