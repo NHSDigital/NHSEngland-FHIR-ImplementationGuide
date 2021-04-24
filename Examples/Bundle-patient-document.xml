@@ -64,12 +64,14 @@
                     <display value="Richard Smith"/>
                 </subject>
                 <author>
+                    <type value="Organization"/>
                     <identifier>
                         <system value="https://fhir.nhs.uk/Id/ods-organization-code" />
                         <value value="RR8" />
                     </identifier>
                 </author>
                 <author>
+                    <type value="Practitioner"/>
                     <identifier>
                         <system value="https://fhir.hl7.org.uk/Id/gmc-number" />
                         <value value="C1234567" />
