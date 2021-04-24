@@ -1,0 +1,40 @@
+<MessageDefinition xmlns="http://hl7.org/fhir">
+    <id value="64011859-32d9-4fd2-abc2-00e31a15b5fc" />
+    <url value="https://fhir.nhs.uk/MessageDefinition/document" />
+    <identifier>
+        <system value="https://tools.ietf.org/html/rfc4122" />
+        <value value="64011859-32d9-4fd2-abc2-00e31a15b5fc" />
+    </identifier>
+    <version value="1.0.0" />
+    <title value="Patient Documents" />
+    <status value="active" />
+    <date value="2021-04-23" />
+    <eventCoding>
+        <system value="https://fhir.nhs.uk/CodeSystem/message-event" />
+        <code value="document" />
+        <display value="Document" />
+    </eventCoding>
+    <category value="notification" />
+    <focus>
+        <code value="DocumentReference" />
+        <profile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-DocumentReference" />
+        <min value="1" />
+        <max value="*" />
+    </focus>
+    <focus>
+        <code value="Patient" />
+        <profile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Patient" />
+        <min value="0" />
+        <max value="1" />
+    </focus>
+    <focus>
+        <code value="Binary" />
+        <min value="0" />
+        <max value="*" />
+    </focus>
+    <focus>
+        <code value="Bundle" />
+        <min value="0" />
+        <max value="*" />
+    </focus>
+</MessageDefinition>

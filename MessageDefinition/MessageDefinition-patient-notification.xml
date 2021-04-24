@@ -1,5 +1,5 @@
 <MessageDefinition xmlns="http://hl7.org/fhir">
-    <id value="patient-notification" />
+    <id value="c5f14f39-3c68-4a93-ae31-b98f6fddfef5" />
     <url value="https://fhir.nhs.uk/MessageDefinition/patient-notification" />
     <identifier>
         <system value="https://tools.ietf.org/html/rfc4122" />
@@ -14,10 +14,10 @@
         <code value="patient-notification" />
         <display value="patient-notification" />
     </eventCoding>
-    <category value="consequence" />
+    <category value="notification" />
     <focus>
-        <code value="Claim" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/Spine-CommunicationRequest" />
+        <code value="CommunicationRequest" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-CommunicationRequest" />
         <min value="1" />
         <max value="*" />
     </focus>

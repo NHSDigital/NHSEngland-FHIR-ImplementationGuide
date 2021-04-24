@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <CodeSystem xmlns="http://hl7.org/fhir">
     <id value="message-events"/>
     <url value="https://fhir.nhs.uk/CodeSystem/message-event"/>
@@ -7,11 +6,10 @@
         <system value="https://fhir.nhs.uk/identifier/CodeSystem"/>
         <value value="message-events"/>
     </identifier>
-    <version value="1.0.8"/>
+    <version value="1.0.9"/>
     <name value="Message Events"/>
     <title value="Message Events"/>
     <status value="draft"/>
-    <experimental value="true"/>
     <date value="2020-09-17"/>
     <publisher value="NHS Digital"/>
     <contact>
@@ -62,5 +60,15 @@
         <code value="dispense-claim"/>
         <display value="Dispense Claim"/>
         <definition value="This message is used by the Dispensing System to notify the EPS System of the claim information details for a previously completed dispense event, such that the EPS System can then send a Reimbursement Claim to the Reimbursement Authority (NHS BSA)."/>
+    </concept>
+    <concept>
+        <code value="document"/>
+        <display value="Document"/>
+        <definition value="Original document notification and content"/>
+    </concept>
+    <concept>
+        <code value="document-notification"/>
+        <display value="Document Notification"/>
+        <definition value="Original document notification"/>
     </concept>
 </CodeSystem>
