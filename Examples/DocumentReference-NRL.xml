@@ -1,0 +1,63 @@
+<DocumentReference xmlns="http://hl7.org/fhir">
+    <id value="c037a0cb-0c77-4976-83a1-a5d2703e6aa3-23325861873450086113" />
+    <meta>
+        <lastUpdated value="2016-03-08T15:26:01+01:00" />
+    </meta>
+    <status value="current" />
+    <type>
+        <coding>
+            <system value="http://snomed.info/sct" />
+            <code value="736253002" />
+            <display value="Mental health crisis plan" />
+        </coding>
+    </type>
+    <category>
+        <coding>
+            <system value="http://snomed.info/sct" />
+            <code value="734163000" />
+            <display value="Care plan" />
+        </coding>
+    </category>
+    <subject>
+        <identifier>
+            <system value="https://fhir.nhs.uk/Id/nhs-number" />
+            <value value="9876543210" />
+        </identifier>
+    </subject>
+    <author>
+        <identifier>
+            <system value="https://fhir.nhs.uk/Id/ods-organization-code" />
+            <value value="RGD" />
+        </identifier>
+    </author>
+    <custodian>
+        <identifier>
+            <system value="https://fhir.nhs.uk/Id/ods-organization-code" />
+            <value value="RR8" />
+        </identifier>
+    </custodian>
+    <content>
+        <attachment>
+            <contentType value="application/pdf" />
+            <url value="https://p1.nhs.uk/MentalhealthCrisisPlanReport.pdf" />
+            <creation value="2016-03-08T15:26:00+01:00" />
+        </attachment>
+        <format>
+            <system value="https://fhir.nhs.uk/STU3/CodeSystem/NRL-FormatCode-1" />
+            <code value="urn:nhs-ic:unstructured" />
+            <display value="Unstructured Document" />
+        </format>
+    </content>
+    <context>
+        <period>
+            <start value="2016-03-07T13:34:00+01:00" />
+        </period>
+        <practiceSetting>
+            <coding>
+                <system value="http://snomed.info/sct" />
+                <code value="708168004" />
+                <display value="Mental health service" />
+            </coding>
+        </practiceSetting>
+    </context>
+</DocumentReference>
