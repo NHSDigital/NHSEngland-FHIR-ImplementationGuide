@@ -1,0 +1,126 @@
+{
+    "resourceType": "Encounter",
+    "id": "9d222207-7b26-42a0-9abe-f9883a330662",
+    "identifier": [
+        {
+            "system": "https://fhir.leedsth.nhs.uk/Id/encounter",
+            "value": "6f40cebe-7b55-461d-9d7f-eadb4c065762"
+        }
+    ],
+    "status": "finished",
+    "class": {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "IMP",
+        "display": "inpatient encounter"
+    },
+    "type": [
+        {
+            "coding": [
+                {
+                    "system": "http://snomed.info/sct",
+                    "code": "185212007",
+                    "display": "Seen in hospital ward"
+                }
+            ]
+        }
+    ],
+    "serviceType": {
+        "coding": [
+            {
+                "system": "https://fhir.nhs.uk/CodeSystem/NHSDataModelAndDictionary-treatment-function",
+                "code": "320",
+                "display": "CARDIOLOGY"
+            }
+        ]
+    },
+    "subject": {
+        "identifier": {
+            "system": "https://fhir.nhs.uk/Id/nhs-number",
+            "value": "987123456"
+        },
+        "display": "Richard Smith"
+    },
+    "episodeOfCare" : {
+        "identifier": {
+            "system": "https://fhir.leedsth.nhs.uk/Id/stay-number",
+            "value": "CARDIO-12345"
+        },
+    },
+    "participant": [
+        {
+            "type": [
+                {
+                    "coding": [
+                        {
+                            "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                            "code": "ATND",
+                            "display": "attender"
+                        }
+                    ]
+                }
+            ],
+            "individual": {
+                "identifier": [
+                    {
+                        "system": "https://fhir.nhs.uk/Id/gmc-number",
+                        "value": "C12345678"
+                    }
+                ],
+                "display": "Dr Sandra Goose"
+            }
+        }
+    ],
+    "period": {
+        "start": "2019-12-10T13:00:00+00:00",
+        "end": "2019-12-11T13:00:00+00:00"
+    },
+    "reasonCode": [
+        {
+            "coding": [
+                {
+                    "system": "http://snomed.info/sct",
+                    "code": "7922000",
+                    "display": "General treatment"
+                }
+            ]
+        }
+    ],
+    "hospitalization": {
+        "dischargeDisposition": {
+            "coding": [
+                {
+                    "system": "https://fhir.hl7.org.uk/CodeSystem/UKCore-DischargeDestination",
+                    "code": "19",
+                    "display": "Usual place of residence unless listed below, for example, a private dwelling whether owner occupied or owned by Local Authority, housing association or other landlord. This includes wardened accommodation but not residential accommodation where health care is provided. It also includes Patients with no fixed abode."
+                }
+            ]
+        }
+    },
+    "location": [
+        {
+            "location": {
+                "identifier": {
+                    "system": "https://fhir.nhs.uk/Id/ods-organization-code",
+                    "value": "RR801"
+                },
+                "display": "St James Hospital"
+            }
+        },
+        {
+            "location": {
+                "identifier": {
+                    "system": "https://fhir.leedsth.nhs.uk/Id/ward-number",
+                    "value": "WARD-B20"
+                },
+                "display": "Ward B20"
+            }
+        }
+    ],
+    "serviceProvider": {
+        "identifier": {
+            "system": "https://fhir.nhs.uk/Id/ods-organization-code",
+            "value": "RR8"
+        },
+        "display": "Leeds Teaching Trust"
+    }
+}
