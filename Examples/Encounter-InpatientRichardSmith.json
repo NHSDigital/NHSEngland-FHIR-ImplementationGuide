@@ -40,12 +40,14 @@
         },
         "display": "Richard Smith"
     },
-    "episodeOfCare" : {
-        "identifier": {
-            "system": "https://fhir.leedsth.nhs.uk/Id/stay-number",
-            "value": "CARDIO-12345"
-        },
-    },
+    "episodeOfCare": [
+        {
+            "identifier": {
+                "system": "https://fhir.leedsth.nhs.uk/Id/stay-number",
+                "value": "CARDIO-12345"
+            }
+        }
+    ],
     "participant": [
         {
             "type": [
