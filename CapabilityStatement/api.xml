@@ -50,7 +50,7 @@
         </resource>
         <resource>
             <type value="DocumentReference" />
-            <profile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-DocumentReference" />
+            <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-DocumentReference" />
             <interaction>
                 <code value="search-type" />
             </interaction>

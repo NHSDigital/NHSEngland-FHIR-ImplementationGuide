@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-DocumentReference" />
+  <name value="NHSDigital-DocumentReference" />
+  <status value="draft" />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="workflow" />
+    <uri value="http://hl7.org/fhir/workflow" />
+    <name value="Workflow Pattern" />
+  </mapping>
+  <mapping>
+    <identity value="fhircomposition" />
+    <uri value="http://hl7.org/fhir/composition" />
+    <name value="FHIR Composition" />
+  </mapping>
+  <mapping>
+    <identity value="rim" />
+    <uri value="http://hl7.org/v3" />
+    <name value="RIM Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="cda" />
+    <uri value="http://hl7.org/v3/cda" />
+    <name value="CDA (R2)" />
+  </mapping>
+  <mapping>
+    <identity value="w5" />
+    <uri value="http://hl7.org/fhir/fivews" />
+    <name value="FiveWs Pattern Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="v2" />
+    <uri value="http://hl7.org/v2" />
+    <name value="HL7 v2 Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="xds" />
+    <uri value="http://ihe.net/xds" />
+    <name value="XDS metadata equivalent" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="DocumentReference" />
+  <baseDefinition value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-DocumentReference" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="DocumentReference.type">
+      <path value="DocumentReference.type" />
+      <binding>
+        <strength value="extensible" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDigital-DocumentType" />
+      </binding>
+    </element>
+    <element id="DocumentReference.type.coding">
+      <path value="DocumentReference.type.coding" />
+      <min value="1" />
+    </element>
+    <element id="DocumentReference.type.coding.system">
+      <path value="DocumentReference.type.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="DocumentReference.type.coding.code">
+      <path value="DocumentReference.type.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="DocumentReference.type.coding.display">
+      <path value="DocumentReference.type.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="DocumentReference.context.practiceSetting">
+      <path value="DocumentReference.context.practiceSetting" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="coding.system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="DocumentReference.context.practiceSetting:NHSDataDictionaryTreatmentFunction">
+      <path value="DocumentReference.context.practiceSetting" />
+      <sliceName value="NHSDataDictionaryTreatmentFunction" />
+      <binding>
+        <strength value="required" />
+        <description value="NHS Data Dictionary Treatment Function Code" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDataModelAndDictionary-treatment-function" />
+      </binding>
+    </element>
+    <element id="DocumentReference.context.practiceSetting:NHSDataDictionaryTreatmentFunction.coding.system">
+      <path value="DocumentReference.context.practiceSetting.coding.system" />
+      <fixedUri value="https://fhir.nhs.uk/CodeSystem/NHSDataModelAndDictionary-treatment-function" />
+    </element>
+    <element id="DocumentReference.context.practiceSetting:UKCoreCareSettingSNOMED">
+      <path value="DocumentReference.context.practiceSetting" />
+      <sliceName value="UKCoreCareSettingSNOMED" />
+      <binding>
+        <strength value="extensible" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDigital-CareSettingType" />
+      </binding>
+    </element>
+    <element id="DocumentReference.context.practiceSetting:UKCoreCareSettingSNOMED.coding.system">
+      <path value="DocumentReference.context.practiceSetting.coding.system" />
+      <fixedUri value="http://snomed.info/sct" />
+      <binding>
+        <strength value="extensible" />
+        <description value="UK Core Care setting" />
+      </binding>
+    </element>
+  </differential>
+</StructureDefinition>
