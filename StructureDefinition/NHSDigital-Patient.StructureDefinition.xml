@@ -177,6 +177,7 @@
       <sliceName value="registeredGPPractice" />
       <definition value="Patient's registered GP Practice. Use V81998 for no registered practice and V81999 for not known as per NHS Data Dictionary guidelines." />
       <min value="1" />
+      <max value="1" />
     </element>
     <element id="Patient.generalPractitioner:registeredGPPractice.identifier.system">
       <path value="Patient.generalPractitioner.identifier.system" />
