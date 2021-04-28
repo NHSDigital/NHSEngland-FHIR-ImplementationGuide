@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="19354975-cb99-492c-b469-798ed7534b51"/>
   <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-DocumentReference" />
   <name value="NHSDigital-DocumentReference" />
   <status value="draft" />

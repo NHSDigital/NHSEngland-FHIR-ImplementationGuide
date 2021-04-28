@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="641d2bce-32f0-415d-903b-c3905e4c2483"/>
   <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Encounter" />
   <name value="NHSDigital-Encounter" />
   <status value="draft" />

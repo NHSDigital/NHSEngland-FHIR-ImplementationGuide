@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <text>
-    <status value="additional" />
-    <div xmlns="http://www.w3.org/1999/xhtml">This is some narrative to see how simplifier handles it.</div>
-  </text>
+  <id value="7c42ccf1-3e8f-446c-8f7f-d703281a07d5"/>
   <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient" />
   <name value="NHSDigital-Patient" />
   <status value="draft" />

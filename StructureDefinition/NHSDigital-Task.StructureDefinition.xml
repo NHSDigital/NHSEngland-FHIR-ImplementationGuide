@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="790504c4-6314-4c50-a3e8-909ee027e020"/>
   <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Task" />
   <name value="NHSDigital-Task" />
   <status value="draft" />

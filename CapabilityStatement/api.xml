@@ -4,6 +4,7 @@
     <version value="3.0.0" />
     <name value="NHS Digital Conformance Capability Statement" />
     <status value="active" />
+    <date value="2021-04-28T00:00:00+00:00" />
     <publisher value="digital.nhs.uk" />
     <description value="Conformance requirements for NHS Digital RESTful Endpoinsts" />
     <kind value="requirements" />
