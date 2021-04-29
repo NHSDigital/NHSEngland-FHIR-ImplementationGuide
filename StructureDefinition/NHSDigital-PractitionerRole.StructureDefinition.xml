@@ -95,7 +95,7 @@
       <binding>
         <strength value="required" />
         <description value="NHS Data Dictionary Specialty" />
-        <valueSet value="https://fhir.nhs.uk/CodeSystem/NHSDataModelAndDictionary-clinical-specialty" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDataModelAndDictionary-clinical-specialty" />
       </binding>
     </element>
     <element id="PractitionerRole.specialty.coding:NHSDataDictionarySpecialty.system">
