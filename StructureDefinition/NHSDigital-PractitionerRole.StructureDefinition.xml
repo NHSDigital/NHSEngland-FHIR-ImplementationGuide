@@ -73,6 +73,10 @@
     <element id="PractitionerRole.specialty.coding">
       <path value="PractitionerRole.specialty.coding" />
       <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
         <rules value="open" />
       </slicing>
       <min value="1" />
