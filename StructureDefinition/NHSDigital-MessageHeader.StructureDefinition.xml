@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="35cdca0d-46a3-4dd3-9967-9470b864b92e"/>
+  <id value="35cdca0d-46a3-4dd3-9967-9470b864b92e" />
   <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-MessageHeader" />
   <name value="NHSDigital-MessageHeader" />
   <status value="draft" />
@@ -63,6 +63,16 @@
     <element id="MessageHeader.extension:status.value[x].code">
       <path value="MessageHeader.extension.value[x].code" />
       <min value="1" />
+    </element>
+    <element id="MessageHeader.extension:replacementOf">
+      <path value="MessageHeader.extension" />
+      <sliceName value="replacementOf" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-replacementOf" />
+      </type>
     </element>
     <element id="MessageHeader.event[x]">
       <path value="MessageHeader.event[x]" />
