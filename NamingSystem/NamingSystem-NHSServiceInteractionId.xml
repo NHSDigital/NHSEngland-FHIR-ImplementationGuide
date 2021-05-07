@@ -1,0 +1,25 @@
+<NamingSystem xmlns="http://hl7.org/fhir">
+    <id value="b71e5a47-c308-4091-9c04-f99d4de2a882"/>
+    <name value="NhsServiceInteractionId" />
+    <status value="draft" />
+    <kind value="identifier" />
+    <date value="2021-01-25" />
+    <publisher value="NHS Digital" />
+    <contact>
+        <name value="NHS Digital" />
+        <telecom>
+            <system value="email" />
+            <value value="interoperabilityteam@nhs.uk" />
+            <use value="work" />
+            <rank value="1" />
+        </telecom>
+    </contact>
+    <responsible value="NHS Digital" />
+    <description value="NHS Service Interaction Identifier" />
+    <usage value="NHS Service Interaction Identifier" />
+    <uniqueId>
+        <type value="uri" />
+        <value value="https://fhir.nhs.uk/Id/nhsServiceInteractionId" />
+        <preferred value="true" />
+    </uniqueId>
+</NamingSystem>

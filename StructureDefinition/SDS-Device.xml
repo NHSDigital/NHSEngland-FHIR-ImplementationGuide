@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="7f27141a-5fbc-4c00-842f-8c918d436841"/>
   <url value="https://fhir.nhs.uk/StructureDefinition/SDS-Device" />
   <version value="1.0.0" />
   <name value="SDSDevice" />

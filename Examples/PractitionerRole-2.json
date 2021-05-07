@@ -29,8 +29,8 @@
             "coding": [
                 {
                     "system": "https://fhir.nhs.uk/CodeSystem/NHSDataModelAndDictionary-clinical-specialty",
-                    "code": "840",
-                    "display": "AUDIOLOGY"
+                    "code": "310",
+                    "display": "Audio Vestibular Medicine"
                 }
             ]
         }

@@ -4,6 +4,7 @@
     <version value="3.0.0" />
     <name value="NHS Digital Conformance Capability Statement" />
     <status value="active" />
+    <date value="2021-04-28T00:00:00+00:00" />
     <publisher value="digital.nhs.uk" />
     <description value="Conformance requirements for NHS Digital RESTful Endpoinsts" />
     <kind value="requirements" />
@@ -50,7 +51,7 @@
         </resource>
         <resource>
             <type value="DocumentReference" />
-            <profile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-DocumentReference" />
+            <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-DocumentReference" />
             <interaction>
                 <code value="search-type" />
             </interaction>

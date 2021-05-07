@@ -6,7 +6,7 @@
         <system value="https://fhir.nhs.uk/identifier/CodeSystem"/>
         <value value="message-events"/>
     </identifier>
-    <version value="1.0.9"/>
+    <version value="1.0.11"/>
     <name value="Message Events"/>
     <title value="Message Events"/>
     <status value="draft"/>
@@ -70,5 +70,10 @@
         <code value="document-notification"/>
         <display value="Document Notification"/>
         <definition value="Original document notification"/>
+    </concept>
+    <concept>
+        <code value="dispense-claim-update"/>
+        <display value="Dispense Claim Update"/>
+        <definition value="This message is used by the Dispensing System to notify the EPS System of an amendment to a previousy submitted dispense-claim"/>
     </concept>
 </CodeSystem>

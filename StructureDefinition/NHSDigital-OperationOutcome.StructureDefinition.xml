@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="76b4a80a-a0af-4882-962b-9769a7910954"/>
   <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-OperationOutcome" />
   <version value="1.1.1" />
   <name value="NHSDigital-OperationOutcome" />

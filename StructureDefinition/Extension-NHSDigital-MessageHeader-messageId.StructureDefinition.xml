@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="7c11bace-9d43-4640-aa97-c2e7d7a13a57"/>
   <url value="https://fhir.nhs.uk/StructureDefinition/Extension-MessageHeader-messageId" />
   <name value="Extension-MessageHeader-messageId" />
   <status value="draft" />

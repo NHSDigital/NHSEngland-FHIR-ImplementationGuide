@@ -11,7 +11,7 @@
     <usage value="EPS"/>
     <uniqueId>
         <type value="uri"/>
-        <value value="EPS-task-prescription-release-rejection-reason"/>
+        <value value="https://fhir.nhs.uk/ConceptMap/Prescription-release-rejection-reason-EPS-IssueCode"/>
         <preferred value="true"/>
     </uniqueId>
     <uniqueId>

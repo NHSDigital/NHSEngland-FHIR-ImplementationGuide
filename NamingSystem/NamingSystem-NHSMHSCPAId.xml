@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <NamingSystem xmlns="http://hl7.org/fhir">
+  <id value="NhsMhsCPAId"/>
   <name value="NhsMhsCPAId"/>
   <status value="draft"/>
   <kind value="identifier"/>
