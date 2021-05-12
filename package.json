@@ -7,7 +7,7 @@
       "4.0.1"
     ],
     "dependencies": {
-      "UK.Core.r4.v2": "2.0.8",
+      "uk.core.r4.v2": "2.0.8",
       "hl7.fhir.r4.core": "4.0.1"
     }
   }
