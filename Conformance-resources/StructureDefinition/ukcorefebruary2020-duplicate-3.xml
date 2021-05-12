@@ -1,0 +1,780 @@
+<ImplementationGuide xmlns="http://hl7.org/fhir">
+  <url value="https://simplifier.net/guide/ukcorefebruary2020" />
+  <version value="March 2020" />
+  <name value="HL7 FHIR® UK Core Implementation Guide R4 - March 2020" />
+  <status value="draft" />
+  <description value="This is a dynamic build of the current UK Core in development and should be considered as “work in progress”. The content will be refreshed dynamically as part of the development process for all changes or updates. This implementation guide is not an official product release for implementation, and nothing contained in this specification should be seen as approved." />
+  <fhirVersion value="4.0.0" />
+  <definition>
+    <page>
+      <nameUrl value="Home-feb2020.md" />
+      <title value="Home" />
+      <generation value="markdown" />
+      <page>
+        <nameUrl value="Guidance-feb2020.md" />
+        <title value="Guidance" />
+        <generation value="markdown" />
+        <page>
+          <nameUrl value="Summary-feb2020.md" />
+          <title value="Summary" />
+          <generation value="markdown" />
+        </page>
+        <page>
+          <nameUrl value="Releases-feb2020.md" />
+          <title value="Releases" />
+          <generation value="markdown" />
+        </page>
+        <page>
+          <nameUrl value="Versioning-feb2020.md" />
+          <title value="Versioning" />
+          <generation value="markdown" />
+        </page>
+      </page>
+      <page>
+        <nameUrl value="FHIRAssets-feb2020.md" />
+        <title value="FHIR Assets" />
+        <generation value="markdown" />
+        <page>
+          <nameUrl value="Profiles-feb2020.md" />
+          <title value="Profiles" />
+          <generation value="markdown" />
+        </page>
+        <page>
+          <nameUrl value="ExtensionLibrary-feb2020.md" />
+          <title value="Extension Library" />
+          <generation value="markdown" />
+        </page>
+        <page>
+          <nameUrl value="CodeSystems-feb2020.md" />
+          <title value="CodeSystems" />
+          <generation value="markdown" />
+        </page>
+        <page>
+          <nameUrl value="ValueSets-feb2020.md" />
+          <title value="ValueSets" />
+          <generation value="markdown" />
+        </page>
+        <page>
+          <nameUrl value="ConceptMaps-feb2020.md" />
+          <title value="ConceptMaps" />
+          <generation value="markdown" />
+        </page>
+        <page>
+          <nameUrl value="SearchParametersandOperations-feb2020.md" />
+          <title value="Search Parameters and Operations" />
+          <generation value="markdown" />
+        </page>
+        <page>
+          <nameUrl value="CapabilityStatements-feb2020.md" />
+          <title value="Capability Statements" />
+          <generation value="markdown" />
+        </page>
+        <page>
+          <nameUrl value="AllAssets-feb2020.md" />
+          <title value="All Assets" />
+          <generation value="markdown" />
+          <page>
+            <nameUrl value="AllProfiles-feb2020.md" />
+            <title value="All Profiles" />
+            <generation value="markdown" />
+            <page>
+              <nameUrl value="ProfileUKCore-Procedure-feb2020.md" />
+              <title value="Profile UKCore-Procedure" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="ProfileUKCore-RelatedPerson-feb2020.md" />
+              <title value="Profile UKCore-RelatedPerson" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="ProfileUKCore-PractitionerRole-feb2020.md" />
+              <title value="Profile UKCore-PractitionerRole" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="ProfileUKCore-Practitioner-feb2020.md" />
+              <title value="Profile UKCore-Practitioner" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="ProfileUKCore-Patient-feb2020.md" />
+              <title value="Profile UKCore-Patient" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="ProfileUKCore-Organization-feb2020.md" />
+              <title value="Profile UKCore-Organization" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="ProfileUKCore-Observation-feb2020.md" />
+              <title value="Profile UKCore-Observation" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="ProfileUKCore-Location-feb2020.md" />
+              <title value="Profile UKCore-Location" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="ProfileUKCore-List-feb2020.md" />
+              <title value="Profile UKCore-List" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="ProfileUKCore-Encounter-feb2020.md" />
+              <title value="Profile UKCore-Encounter" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="ProfileUKCore-Consent-feb2020.md" />
+              <title value="Profile UKCore-Consent" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="ProfileUKCore-Condition-feb2020.md" />
+              <title value="Profile UKCore-Condition" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="ProfileUKCore-AllergyIntolerance-feb2020.md" />
+              <title value="Profile UKCore-AllergyIntolerance" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="ProfileUKCore-CarePlan.md" />
+              <title value="Profile UKCore-CarePlan" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="ProfileUKCore-CareTeam.md" />
+              <title value="Profile UKCore-CareTeam" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="ProfileUKCore-DocumentReference.md" />
+              <title value="Profile UKCore-DocumentReference" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="ProfileUKCore-Immunization.md" />
+              <title value="Profile UKCore-Immunization" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="ProfileUKCore-Medication.md" />
+              <title value="Profile UKCore-Medication" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="ProfileUKCore-MedicationRequest.md" />
+              <title value="Profile UKCore-MedicationRequest" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="ProfileUKCore-MedicationStatement.md" />
+              <title value="Profile UKCore-MedicationStatement" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="ProfileUKCore-DiagnosticReport.md" />
+              <title value="Profile UKCore-DiagnosticReport" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="ProfileUKCore-ServiceRequest.md" />
+              <title value="Profile UKCore-ServiceRequest" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="ProfileUKCore-MedicationDispense.md" />
+              <title value="Profile UKCore-MedicationDispense" />
+              <generation value="markdown" />
+            </page>
+          </page>
+          <page>
+            <nameUrl value="AllExtensions-duplicate-3-feb2020.md" />
+            <title value="All Extensions" />
+            <generation value="markdown" />
+            <page>
+              <nameUrl value="ExtensionUKCore-AddressKey-feb2020.md" />
+              <title value="Extension UKCore-AddressKey" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="ExtensionUKCore-AdmissionMethod-feb2020.md" />
+              <title value="Extension UKCore-AdmissionMethod" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="ExtensionUKCore-AllergyIntoleranceEnd-feb2020.md" />
+              <title value="Extension UKCore-AllergyIntoleranceEnd" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="ExtensionUKCore-AnaestheticIssues-feb2020.md" />
+              <title value="Extension UKCore-AnaestheticIssues" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="ExtensionUKCore-ClinicalSetting-feb2020.md" />
+              <title value="Extension UKCore-ClinicalSetting" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="ExtensionUKCore-ConditionEpisode-feb2020.md" />
+              <title value="Extension UKCore-ConditionEpisode" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="ExtensionUKCore-ContactPreference-feb2020.md" />
+              <title value="Extension UKCore-ContactPreference" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="ExtensionUKCore-ContactRank-feb2020.md" />
+              <title value="Extension UKCore-ContactRank" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="ExtensionUKCore-CopyCorrespondenceIndicator-feb2020.md" />
+              <title value="Extension UKCore-CopyCorrespondenceIndicator" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="ExtensionUKCore-DeathNotificationStatus-feb2020.md" />
+              <title value="Extension UKCore-DeathNotificationStatus" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="ExtensionUKCore-DischargeMethod-feb2020.md" />
+              <title value="Extension UKCore-DischargeMethod" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="ExtensionUKCore-EffectivePeriod-feb2020.md" />
+              <title value="Extension UKCore-EffectivePeriod" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="ExtensionUKCore-EmergencyCareDischargeStatus-feb2020.md" />
+              <title value="Extension UKCore-EmergencyCareDischargeStatus" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="ExtensionUKCore-EncounterTransport-feb2020.md" />
+              <title value="Extension UKCore-EncounterTransport" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="ExtensionUKCore-EthnicCategory-feb2020.md" />
+              <title value="Extension UKCore-EthnicCategory" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="ExtensionUKCore-Evidence-feb2020.md" />
+              <title value="Extension UKCore-Evidence" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="ExtensionUKCore-ListWarningCode-feb2020.md" />
+              <title value="Extension UKCore-ListWarningCode" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="ExtensionUKCore-MainLocation-feb2020.md" />
+              <title value="Extension UKCore-MainLocation" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="ExtensionUKCore-NHSCommunication-feb2020.md" />
+              <title value="Extension UKCore-NHSCommunication" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="ExtensionUKCore-NHSNumberVerificationStatus-feb2020.md" />
+              <title value="Extension UKCore-NHSNumberVerificationStatus" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="ExtensionUKCore-NominatedPharmacy-feb2020.md" />
+              <title value="Extension UKCore-NominatedPharmacy" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="ExtensionUKCore-OutcomeOfAttendance-feb2020.md" />
+              <title value="Extension UKCore-OutcomeOfAttendance" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="ExtensionUKCore-ReligiousAffiliation-feb2020.md" />
+              <title value="Extension UKCore-ReligiousAffiliation" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="ExtensionUKCore-ResidentialStatus-duplicate-2-feb2020.md" />
+              <title value="Extension UKCore-ResidentialStatus" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="ExtensionUKCore-TreatmentCategory-feb2020.md" />
+              <title value="Extension UKCore-TreatmentCategory" />
+              <generation value="markdown" />
+            </page>
+          </page>
+          <page>
+            <nameUrl value="AllCodeSystems-duplicate-3-feb2020.md" />
+            <title value="All CodeSystems" />
+            <generation value="markdown" />
+            <page>
+              <nameUrl value="CodeSystemUKCore-AdmissionMethod-feb2020.md" />
+              <title value="CodeSystem UKCore-AdmissionMethod" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="CodeSystemUKCore-DischargeDestination-feb2020.md" />
+              <title value="CodeSystem UKCore-DischargeDestination" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="CodeSystemUKCore-DischargeMethod-feb2020.md" />
+              <title value="CodeSystem UKCore-DischargeMethod" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="CodeSystemUKCore-OutcomeOfAttendance-feb2020.md" />
+              <title value="CodeSystem UKCore-OutcomeOfAttendance" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="CodeSystemUKCore-SourceOfAdmission-feb2020.md" />
+              <title value="CodeSystem UKCore-SourceOfAdmission" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="CodeSystemUKCore-PersonStatedGenderCode.md" />
+              <title value="CodeSystem UKCore-PersonStatedGenderCode" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="CodeSystemUKCore-PersonMaritalStatusCode.md" />
+              <title value="CodeSystem UKCore-PersonMaritalStatusCode" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="CodeSystemUKCore-AdditionalRelatedPersonRole-feb2020.md" />
+              <title value="CodeSystem UKCore-AdditionalRelatedPersonRole" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="CodeSystemUKCore-AddressKeyType-feb2020.md" />
+              <title value="CodeSystem UKCore-AddressKeyType" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="CodeSystemUKCore-ConditionEpisodicity-feb2020.md" />
+              <title value="CodeSystem UKCore-ConditionEpisodicity" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="CodeSystemUKCore-ConsentUpdateMode-feb2020.md" />
+              <title value="CodeSystem UKCore-ConsentUpdateMode" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="CodeSystemUKCore-DeathNotificationStatus-feb2020.md" />
+              <title value="CodeSystem UKCore-DeathNotificationStatus" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="CodeSystemUKCore-EthnicCategory-feb2020.md" />
+              <title value="CodeSystem UKCore-EthnicCategory" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="CodeSystemUKCore-HumanLanguage-feb2020.md" />
+              <title value="CodeSystem UKCore-HumanLanguage" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="CodeSystemUKCore-LanguageAbilityMode-feb2020.md" />
+              <title value="CodeSystem UKCore-LanguageAbilityMode" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="CodeSystemUKCore-LanguageAbilityProficiency-feb2020.md" />
+              <title value="CodeSystem UKCore-LanguageAbilityProficiency" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="CodeSystemUKCore-ListEmptyReasonCode-feb2020.md" />
+              <title value="CodeSystem UKCore-ListEmptyReasonCode" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="CodeSystemUKCore-ListWarningCode-feb2020.md" />
+              <title value="CodeSystem UKCore-ListWarningCode" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="CodeSystemUKCore-NHSNumberVerificationStatus-feb2020.md" />
+              <title value="CodeSystem UKCore-NHSNumberVerificationStatus" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="CodeSystemUKCore-PreferredContactMethod-feb2020.md" />
+              <title value="CodeSystem UKCore-PreferredContactMethod" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="CodeSystemUKCore-PreferredWrittenCommunicationFormat-feb2020.md" />
+              <title value="CodeSystem UKCore-PreferredWrittenCommunicationFormat" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="CodeSystemUKCore-ResidentialStatus-feb2020.md" />
+              <title value="CodeSystem UKCore-ResidentialStatus" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="CodeSystemUKCore-SDSJobRoleName-feb2020.md" />
+              <title value="CodeSystem UKCore-SDSJobRoleName" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="CodeSystemUKCore-TreatmentCategory-feb2020.md" />
+              <title value="CodeSystem UKCore-TreatmentCategory" />
+              <generation value="markdown" />
+            </page>
+          </page>
+          <page>
+            <nameUrl value="AllValueSets-duplicate-3-feb2020.md" />
+            <title value="All ValueSets" />
+            <generation value="markdown" />
+            <page>
+              <nameUrl value="ValueSetNHSDataModelAndDictionaryAdmissionMethod-duplicate-3-feb2020.md" />
+              <title value="ValueSet NHSDataModelAndDictionaryAdmissionMethod" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="ValueSetNHSDataModelAndDictionaryDischargeDestination-duplicate-2-feb2020.md" />
+              <title value="ValueSet NHSDataModelAndDictionaryDischargeDestination" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="ValueSetNHSDataModelAndDictionaryDischargeMethod-duplicate-2-feb2020.md" />
+              <title value="ValueSet NHSDataModelAndDictionaryDischargeMethod" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="ValueSetNHSDataModelAndDictionaryOutcomeOfAttendance-duplicate-2-feb2020.md" />
+              <title value="ValueSet NHSDataModelAndDictionaryOutcomeOfAttendance" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="ValueSetNHSDataModelAndDictionarySourceOfAdmission-duplicate-2-feb2020.md" />
+              <title value="ValueSet NHSDataModelAndDictionarySourceOfAdmission" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="ValueSetNHSDataModelAndDictionaryPersonStatedGenderCode-duplicate-2-feb2020.md" />
+              <title value="ValueSet NHSDataModelAndDictionaryPersonStatedGenderCode" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="ValueSetNHSDataModelAndDictionaryPersonMaritalStatusCode-duplicate-2-feb2020.md" />
+              <title value="ValueSet NHSDataModelAndDictionaryPersonMaritalStatusCode" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="ValueSetUKCoreAddressKeyType-feb2020.md" />
+              <title value="ValueSet UKCoreAddressKeyType" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="ValueSetUKCoreAllergyCode-duplicate-2.md" />
+              <title value="ValueSet UKCoreAllergyCode" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="ValueSetUKCoreConditionEpisodicity-feb2020.md" />
+              <title value="ValueSet UKCoreConditionEpisodicity" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="ValueSetUKCoreDeathNotificationStatus-feb2020.md" />
+              <title value="ValueSet UKCoreDeathNotificationStatus" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="ValueSetUKCoreEthnicCategory-feb2020.md" />
+              <title value="ValueSet UKCoreEthnicCategory" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="ValueSetUKCoreHumanLanguage-feb2020.md" />
+              <title value="ValueSet UKCoreHumanLanguage" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="ValueSetUKCoreLanguageAbilityMode-feb2020.md" />
+              <title value="ValueSet UKCoreLanguageAbilityMode" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="ValueSetUKCoreLanguageAbilityProficiency-feb2020.md" />
+              <title value="ValueSet UKCoreLanguageAbilityProficiency" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="ValueSetUKCoreListEmptyReasonCode-feb2020.md" />
+              <title value="ValueSet UKCoreListEmptyReasonCode" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="ValueSetUKCoreListWarningCode-feb2020.md" />
+              <title value="ValueSet UKCoreListWarningCode" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="ValueSetUKCoreNHSNumberVerificationStatus-feb2020.md" />
+              <title value="ValueSet UKCoreNHSNumberVerificationStatus" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="ValueSetUKCorePreferredContactMethod-feb2020.md" />
+              <title value="ValueSet UKCorePreferredContactMethod" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="ValueSetUKCorePreferredWrittenCommunicationFormat-feb2020.md" />
+              <title value="ValueSet UKCorePreferredWrittenCommunicationFormat" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="ValueSetUKCoreResidentialStatus-feb2020.md" />
+              <title value="ValueSet UKCoreResidential Status" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="ValueSetUKCoreSDSJobRoleName-feb2020.md" />
+              <title value="ValueSet UKCoreSDSJobRoleName" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="ValueSetUKCoreTreatmentCategory-feb2020.md" />
+              <title value="ValueSet UKCoreTreatmentCategory" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="ValueSetUKCoreAllergyCertainty-feb2020.md" />
+              <title value="ValueSet UKCoreAllergyCertainty" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="ValueSetUKCoreAllergyExposureRoute-feb2020.md" />
+              <title value="ValueSet UKCoreAllergyExposureRoute" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="ValueSetUKCoreAllergySeverity-feb2020.md" />
+              <title value="ValueSet UKCoreAllergySeverity" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="ValueSetUKCoreBodySite-feb2020.md" />
+              <title value="ValueSet UKCoreBodySite" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="ValueSetUKCoreCareSettingType-feb2020.md" />
+              <title value="ValueSet UKCoreCareSettingType" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="ValueSetUKCoreConditionCode-feb2020.md" />
+              <title value="ValueSet UKCoreConditionCode" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="ValueSetUKCoreConditionEpisode-feb2020.md" />
+              <title value="ValueSet UKCoreConditionEpisode" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="ValueSetUKCoreEncounterType-feb2020.md" />
+              <title value="ValueSet UKCoreEncounterType" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="ValueSetUKCoreEmergencyCareDischargeStatus-feb2020.md" />
+              <title value="ValueSet UKCoreEmergencyCareDischargeStatus" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="ValueSetUKCoreListCode-feb2020.md" />
+              <title value="ValueSet UKCoreListCode" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="ValueSetUKCoreObservationType-feb2020.md" />
+              <title value="ValueSet UKCoreObservationType" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="ValueSetUKCoreProcedureCode-feb2020.md" />
+              <title value="ValueSet UKCoreProcedureCode" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="ValueSetUKCoreReligiousAffiliation-feb2020.md" />
+              <title value="ValueSet UKCoreReligiousAffiliation" />
+              <generation value="markdown" />
+            </page>
+          </page>
+          <page>
+            <nameUrl value="AllConceptMaps-feb2020.md" />
+            <title value="All ConceptMaps" />
+            <generation value="markdown" />
+            <page>
+              <nameUrl value="ConceptMapUKCoreAdministrativeGender-feb2020.md" />
+              <title value="Concept Map UKCoreAdministrativeGender" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="ConceptMapUKCoreAllergySeverity-feb2020.md" />
+              <title value="Concept Map UKCoreAllergySeverity" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="ConceptMapUKCoreAllergyVerificationStatus-feb2020.md" />
+              <title value="Concept Map UKCoreAllergyVerificationStatus" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="ConceptMapUKCoreConditionEpisodicity-feb2020.md" />
+              <title value="Concept Map UKCoreConditionEpisodicity" />
+              <generation value="markdown" />
+            </page>
+            <page>
+              <nameUrl value="ConceptMapUKCoreMaritalStatus-feb2020.md" />
+              <title value="Concept Map UKCoreMaritalStatus" />
+              <generation value="markdown" />
+            </page>
+          </page>
+        </page>
+      </page>
+      <page>
+        <nameUrl value="Examples-feb2020.md" />
+        <title value="Examples" />
+        <generation value="markdown" />
+        <page>
+          <nameUrl value="ExampleUKCore-AllergyIntolerance-feb2020.md" />
+          <title value="Example UKCore-AllergyIntolerance" />
+          <generation value="markdown" />
+        </page>
+        <page>
+          <nameUrl value="ExampleUKCore-Condition-feb2020.md" />
+          <title value="Example UKCore-Condition" />
+          <generation value="markdown" />
+        </page>
+        <page>
+          <nameUrl value="ExampleUKCore-Consent-feb2020.md" />
+          <title value="Example UKCore-Consent" />
+          <generation value="markdown" />
+        </page>
+        <page>
+          <nameUrl value="ExampleUKCore-Encounter-feb2020.md" />
+          <title value="Example UKCore-Encounter" />
+          <generation value="markdown" />
+        </page>
+        <page>
+          <nameUrl value="ExampleUKCore-Allergy-List-feb2020.md" />
+          <title value="Example UKCore-Allergy-List" />
+          <generation value="markdown" />
+        </page>
+        <page>
+          <nameUrl value="ExampleUKCore-Empty-List-feb2020.md" />
+          <title value="Example UKCore-Empty-List" />
+          <generation value="markdown" />
+        </page>
+        <page>
+          <nameUrl value="ExampleUKCore-Location-feb2020.md" />
+          <title value="Example UKCore-Location" />
+          <generation value="markdown" />
+        </page>
+        <page>
+          <nameUrl value="ExampleUKCore-Observation-feb2020.md" />
+          <title value="Example UKCore-Observation" />
+          <generation value="markdown" />
+        </page>
+        <page>
+          <nameUrl value="ExampleUKCore-Organization-feb2020.md" />
+          <title value="Example UKCore-Organization" />
+          <generation value="markdown" />
+        </page>
+        <page>
+          <nameUrl value="ExampleUKCore-Patient-feb2020.md" />
+          <title value="Example UKCore-Patient" />
+          <generation value="markdown" />
+        </page>
+        <page>
+          <nameUrl value="ExampleUKCore-Practitioner-feb2020.md" />
+          <title value="Example UKCore-Practitioner" />
+          <generation value="markdown" />
+        </page>
+        <page>
+          <nameUrl value="ExampleUKCore-PractitionerRole-feb2020.md" />
+          <title value="Example UKCore-PractitionerRole" />
+          <generation value="markdown" />
+        </page>
+        <page>
+          <nameUrl value="ExampleUKCore-Procedure-feb2020.md" />
+          <title value="Example UKCore-Procedure" />
+          <generation value="markdown" />
+        </page>
+        <page>
+          <nameUrl value="ExampleUKCore-RelatedPerson-feb2020.md" />
+          <title value="Example UKCore-RelatedPerson" />
+          <generation value="markdown" />
+        </page>
+        <page>
+          <nameUrl value="ExampleUKCore-Medication.md" />
+          <title value="Example UKCore-Medication" />
+          <generation value="markdown" />
+        </page>
+        <page>
+          <nameUrl value="ExampleUKCore-MedicationDispense.md" />
+          <title value="Example UKCore-MedicationDispense" />
+          <generation value="markdown" />
+        </page>
+        <page>
+          <nameUrl value="ExampleUKCore-CareTeam.md" />
+          <title value="Example UKCore-CareTeam" />
+          <generation value="markdown" />
+        </page>
+        <page>
+          <nameUrl value="ExampleUKCore-DocumentReference.md" />
+          <title value="Example UKCore-DocumentReference" />
+          <generation value="markdown" />
+        </page>
+      </page>
+      <page>
+        <nameUrl value="Downloads-feb2020.md" />
+        <title value="Downloads" />
+        <generation value="markdown" />
+      </page>
+      <page>
+        <nameUrl value="ReleaseNotes.md" />
+        <title value="Release Notes" />
+        <generation value="markdown" />
+      </page>
+      <page>
+        <nameUrl value="ContactUs-feb2020.md" />
+        <title value="Contact Us" />
+        <generation value="markdown" />
+      </page>
+    </page>
+  </definition>
+</ImplementationGuide>
