@@ -586,11 +586,6 @@
             <display value="Administration of diphtheria and acellular pertussis and tetanus vaccine"/>
         </contains>
         <contains>
-            <extension url="http://ontoserver.csiro.au/profiles/expansion">
-                <extension url="inactive">
-                    <valueBoolean value="true"/>
-                </extension>
-            </extension>
             <system value="http://snomed.info/sct"/>
             <inactive value="true"/>
             <code value="308753004"/>
@@ -697,11 +692,6 @@
             <display value="Seasonal influenza vaccination"/>
         </contains>
         <contains>
-            <extension url="http://ontoserver.csiro.au/profiles/expansion">
-                <extension url="inactive">
-                    <valueBoolean value="true"/>
-                </extension>
-            </extension>
             <system value="http://snomed.info/sct"/>
             <inactive value="true"/>
             <code value="8605003"/>
