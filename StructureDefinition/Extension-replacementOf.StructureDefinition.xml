@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="4c86ee70-90ca-4fd8-ba11-f2bf092ad648"/>
   <url value="https://fhir.nhs.uk/StructureDefinition/Extension-replacementOf" />
   <name value="Extension-replacementOf" />
   <status value="draft" />
