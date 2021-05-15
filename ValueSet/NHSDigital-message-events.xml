@@ -2,20 +2,20 @@
 <ValueSet xmlns="http://hl7.org/fhir">
     <id value="nhsdigital-message-events" />
     <url value="https://fhir.nhs.uk/ValueSet/NHSDigital-message-events" />
-    <version value="1.0.6" />
+    <version value="1.0.7" />
     <name value="NHS Digital Message Events" />
     <status value="active" />
     <description value="A ValueSet to identify the primary role (type) of organisation" />
     <compose>
         <include>
             <system value="https://fhir.nhs.uk/CodeSystem/message-event" />
-            <version value="1.0.11" />
+            <version value="1.0.12" />
         </include>
     </compose>
     <expansion>
         <identifier value="dcbf0434-1a7a-4010-bb62-a76855757c2d"/>
-        <timestamp value="2021-04-23T20:23:06+10:00"/>
-        <total value="11"/>
+        <timestamp value="2021-05-15T20:23:06+10:00"/>
+        <total value="12"/>
         <offset value="0"/>
         <parameter>
             <name value="version"/>
@@ -83,6 +83,11 @@
             <system value="https://fhir.nhs.uk/CodeSystem/message-event"/>
             <code value="dispense-claim-update"/>
             <display value="Dispense Claim Update"/>
+        </contains>
+         <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/message-event"/>
+            <code value="dispense-notification-update"/>
+            <display value="Dispense Notification Update"/>
         </contains>
     </expansion>
 </ValueSet>
