@@ -1,532 +1,29 @@
 <!DOCTYPE html>
-<html lang="en" class="nhsd-no-js">
+<html>
 
 <head>
+
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
     <title>{{ guide-title }}</title>
 
+    <!--[if IE]><link rel="shortcut icon" href="//nhs-prod.global.ssl.fastly.net/webfiles/1618312147406/icons/favicon.ico"><![endif]-->
+    <link rel="apple-touch-icon" sizes="180x180" href="//nhs-prod.global.ssl.fastly.net/webfiles/1618312147406/icons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="//nhs-prod.global.ssl.fastly.net/webfiles/1618312147406/icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="//nhs-prod.global.ssl.fastly.net/webfiles/1618312147406/icons/favicon-16x16.png">
+    <link rel="manifest" href="//nhs-prod.global.ssl.fastly.net/webfiles/1618312147406/icons/manifest.json">
+    <link rel="mask-icon" href="//nhs-prod.global.ssl.fastly.net/webfiles/1618312147406/icons/safari-pinned-tab.svg">
+    <meta name="theme-color" content="#ffffff">
+
+    <script src="{{content}}/styles/common/jquery/jquery.min.js"></script>
+    <script src="{{content}}/styles/common/bootstrap/bootstrap.min.js"></script>
 
     <link rel="stylesheet" href="{{content}}/styles/common/main.min.css" />
     <link rel="stylesheet" href="{{content}}/styles/common/bootstrap/bootstrap.min.css" />
     <link rel="stylesheet" href="{{content}}/styles/common/rendering/rendering.min.css" />
-    <link rel="stylesheet" href="{{content}}/{{style-folder}}/style.css?v={{version}}" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
 
-    <link rel="stylesheet" href="https://dbs1dgg3cdf4v.cloudfront.net/cdn/latest/stylesheets/nhsd-frontend.css" media="screen" type="text/css"/>
-    <link rel="stylesheet" href="https://digital.nhs.uk/webfiles/1620817713907/dist/nhsd-frontend-edge-cases.css" media="screen" type="text/css"/>
+    <script src="{{content}}/styles/common/rendering/stu3TreeTable.min.js"></script>
+    <script src="{{content}}/styles/common/rendering/baseTreetable.min.js"></script>
 
-    <link href="https://dbs1dgg3cdf4v.cloudfront.net/" rel="preconnect" crossorigin>
-    <link type="font/woff2" href="https://dbs1dgg3cdf4v.cloudfront.net/cdn/latest/fonts/FrutigerLTW01-55Roman.woff2" rel="preload" as="font" crossorigin>
-    <link type="font/woff2" href="https://dbs1dgg3cdf4v.cloudfront.net/cdn/latest/fonts/FrutigerLTW01-65Bold.woff2" rel="preload" as="font" crossorigin>
-    <link type="font/woff2" href="https://dbs1dgg3cdf4v.cloudfront.net/cdn/latest/fonts/FrutigerLTW01-45Light.woff2" rel="preload" as="font" crossorigin>
-
-    <!-- Header scripts -->
-    <script>
-        document.getElementsByTagName('html')[0].classList.remove('nhsd-no-js');
-    </script>
-    <!-- /Header scripts -->
-</head>
-
-<body>
-    <div class="nhsd-t-grid nhsd-t-grid--full-width nhsd-!t-no-gutters">
-        <!-- Header -->
-        <header id="header">
-            <div class="nhsd-o-global-header" id="nhsd-global-header">
-                <div class="nhsd-t-grid">
-                    <div class="nhsd-t-row">
-                        <div class="nhsd-t-col">
-                            <div class="nhsd-o-global-header__content-box">
-                                <div class="nhsd-o-global-header__background"></div>
-                                <a class="nhsd-m-logo-link nhsd-o-global-header__logo" id="nhsd-global-header__logo"
-                                    href="https://digital.nhs.uk/" aria-label="NHS Digital home">
-                                    <svg class="nhsd-a-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 60"
-                                        width="80" height="60" aria-hidden="true" focusable="false">
-                                        <rect fill="#005BBB" x="0" width="80" height="32.1"></rect>
-                                        <path fill="#FFFFFF"
-                                            d="M76.9,3.8L75.2,9c-1.3-0.6-3.2-1.2-5.7-1.2c-2.8,0-5,0.4-5,2.5c0,3.7,10.1,2.3,10.1,10.2c0,7.1-6.7,9-12.7,9c-2.7,0-5.8-0.6-8-1.3l1.6-5.3c1.4,0.9,4.1,1.5,6.4,1.5c2.2,0,5.5-0.4,5.5-3.1c0-4.2-10.1-2.6-10.1-9.9c0-6.7,5.9-8.7,11.6-8.7C72.1,2.7,75.1,3,76.9,3.8">
-                                        </path>
-                                        <polygon fill="#FFFFFF"
-                                            points="56.9,3.1 51.5,29 44.5,29 46.8,17.9 38.6,17.9 36.3,29 29.3,29 34.7,3.1 41.7,3.1 39.6,13 47.8,13 49.9,3.1   ">
-                                        </polygon>
-                                        <polygon fill="#FFFFFF"
-                                            points="32.1,3.1 26.6,29 18,29 12.5,11.1 12.5,11.1 8.8,29 2.3,29 7.8,3.1 16.5,3.1 21.8,21 21.9,21 25.6,3.1  ">
-                                        </polygon>
-                                        <rect x="63.5" y="38.5" fill="#231F20" width="3.1" height="16"></rect>
-                                        <path fill="#231F20"
-                                            d="M51.6,43.1c1.3-0.6,2.7-0.9,4.1-0.9c3.6,0,5.1,1.5,5.1,5v1.7c0,1.2,0,2.1,0,3c0,0.9,0.1,1.7,0.1,2.6h-2.7c-0.1-0.6-0.1-1.2-0.1-1.8h0c-0.7,1.3-2.2,2-3.6,2c-2.1,0-4.1-1.3-4.1-3.5c0-1.8,0.8-3,2-3.6c1.2-0.6,2.7-0.7,4-0.7H58c0-1.9-0.8-2.5-2.7-2.5c-1.3,0-2.7,0.5-3.7,1.3V43.1z M55.2,52.3c0.8,0,1.7-0.4,2.2-1.1c0.5-0.7,0.6-1.5,0.6-2.4h-1.3c-1.4,0-3.4,0.2-3.4,2C53.3,51.9,54.1,52.3,55.2,52.3">
-                                        </path>
-                                        <path fill="#231F20"
-                                            d="M42.7,45.2h-2.3v-2.2h2.3v-2.7l3.1-1v3.6h2.7v2.2h-2.7v5.3c0,1,0.3,1.9,1.4,1.9c0.5,0,1.1-0.1,1.4-0.3l0.1,2.4c-0.7,0.2-1.5,0.3-2.3,0.3c-2.4,0-3.7-1.5-3.7-3.8L42.7,45.2z">
-                                        </path>
-                                        <path fill="#231F20"
-                                            d="M35.2,38.5h3.1v2.7h-3.1V38.5z M35.2,42.9h3.1v11.6h-3.1V42.9z"></path>
-                                        <path fill="#231F20"
-                                            d="M32.6,42.9v10.7c0,3.2-1.3,6-6.2,6c-1.4,0-2.8-0.3-4.1-0.8l0.3-2.6c0.9,0.5,2.5,1,3.4,1c3.4,0,3.6-2.3,3.6-4.3h0c-0.6,1-1.9,1.9-3.7,1.9c-3.5,0-4.8-2.8-4.8-6c0-2.8,1.5-6.1,5-6.1
-    c1.6,0,2.8,0.5,3.6,1.9h0v-1.6L32.6,42.9z M29.5,48.7c0-2-0.8-3.7-2.6-3.7c-2.1,0-2.8,1.9-2.8,3.7c0,1.6,0.8,3.6,2.6,3.6C28.7,52.3,29.5,50.7,29.5,48.7">
-                                        </path>
-                                        <path fill="#231F20"
-                                            d="M15.9,38.5H19v2.7h-3.1V38.5z M15.9,42.9H19v11.6h-3.1V42.9z">
-                                        </path>
-                                        <path fill="#231F20"
-                                            d="M0,38.5h4.4c4.9,0,9.2,1.7,9.2,8s-4.3,8-9.2,8H0V38.5z M3.2,52H5c2.7,0,5.3-2,5.3-5.5C10.3,43,7.7,41,5,41H3.2V52z">
-                                        </path>
-                                    </svg>
-                                </a>
-                                <div class="nhsd-o-global-header__menu" id="nhsd-global-header__menu">
-                                    <div class="nhsd-o-global-header__menu-background"></div>
-                                    <div class="nhsd-o-global-header__menu-content-box">
-                                        <a class="nhsd-a-icon-link nhsd-o-global-header__menu-close-button"
-                                            id="nhsd-global-header__menu-close-button" href="#">
-                                            <span class="nhsd-a-icon-link__label">Close menu</span>
-                                            <span class="nhsd-a-icon nhsd-a-icon--size-m">
-                                                <svg xmlns="http://www.w3.org/2000/svg"
-                                                    preserveAspectRatio="xMidYMid meet" aria-hidden="true"
-                                                    focusable="false" viewBox="0 0 16 16" width="100%" height="100%">
-                                                    <path
-                                                        d="M8.9,8l3.1,3.1L11.1,12L8,8.9L4.9,12L4,11.1L7.1,8L4,4.9L4.9,4L8,7.1L11.1,4L12,4.9L8.9,8z">
-                                                    </path>
-                                                    <path
-                                                        d="M8,1.3c3.7,0,6.7,3,6.7,6.7s-3,6.7-6.7,6.7s-6.7-3-6.7-6.7S4.3,1.3,8,1.3 M8,0C3.6,0,0,3.6,0,8s3.6,8,8,8 s8-3.6,8-8S12.4,0,8,0L8,0z">
-                                                    </path>
-                                                </svg>
-                                            </span>
-                                        </a>
-                                        {{ dropdown-navigation }}
-                                    </div>
-                                </div>
-                                <nav class="nhsd-m-button-nav nhsd-m-button-nav--condensed nhsd-m-button-nav--non-responsive nhsd-o-global-header__button-nav">
-                                <button class="nhsd-a-button nhsd-o-global-header__menu-button" id="nhsd-global-header__menu-button" type="button" aria-controls="nhsd-global-header__menu" aria-expanded="false">
-                                    <span class="nhsd-a-button__label">Menu</span>
-                                    <span class="nhsd-a-icon nhsd-a-icon--size-s">
-                                        <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false" viewBox="0 0 16 16" width="100%" height="100%">
-                                            <rect x="1" y="3.1" class="st0" width="14" height="1.6"></rect>
-                                            <rect x="1" y="7.2" class="st0" width="14" height="1.6"></rect>
-                                            <rect x="1" y="11.3" class="st0" width="14" height="1.6"></rect>
-                                        </svg>
-                                    </span>
-                                </button>
-                            </nav>
-                            <div class="nhsd-o-global-header__search" id="nhsd-global-header__search">
-                                <div class="nhsd-o-global-header__search-background"></div>
-                                <div class="nhsd-o-global-header__search-content-box">
-                                    <a class="nhsd-a-button nhsd-a-button--circle" id="nhsd-global-header__search-button" aria-label="Open search" aria-controls="nhsd-global-header__search" aria-expanded="false" href="/search">
-    <span class="nhsd-a-icon nhsd-a-icon--size-s ">
-        <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false" viewBox="0 0 16 16" width="100%" height="100%">
-<path d="M7,10.9c-2.1,0-3.9-1.7-3.9-3.9c0-2.1,1.7-3.9,3.9-3.9c2.1,0,3.9,1.7,3.9,3.9C10.9,9.2,9.2,10.9,7,10.9zM13.4,14.8l1.4-1.4l-3-3c0.7-1,1.1-2.1,1.1-3.4c0-3.2-2.6-5.8-5.8-5.8C3.8,1.2,1.2,3.8,1.2,7c0,3.2,2.6,5.8,5.8,5.8c1.3,0,2.4-0.4,3.4-1.1L13.4,14.8z"></path>        </svg>
-    </span>
-                                </a>
-                                    <a class="nhsd-a-icon-link nhsd-o-global-header__search-close-button" id="nhsd-global-header__search-close-button" href="#">
-                                        <span class="nhsd-a-icon-link__label">Close search</span>
-                                        <span class="nhsd-a-icon nhsd-a-icon--size-m">
-                                            <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false" viewBox="0 0 16 16" width="100%" height="100%">
-                                                <path d="M8.9,8l3.1,3.1L11.1,12L8,8.9L4.9,12L4,11.1L7.1,8L4,4.9L4.9,4L8,7.1L11.1,4L12,4.9L8.9,8z"></path>
-                                                <path d="M8,1.3c3.7,0,6.7,3,6.7,6.7s-3,6.7-6.7,6.7s-6.7-3-6.7-6.7S4.3,1.3,8,1.3 M8,0C3.6,0,0,3.6,0,8s3.6,8,8,8 s8-3.6,8-8S12.4,0,8,0L8,0z"></path>
-                                            </svg>
-                                        </span>
-                                    </a>
-                                    <div class="nhsd-m-search-bar" style="display: none;">
-                                        <form role="search" method="get" action="/search" class="nhsd-t-form" novalidate="" autocomplete="off" aria-label="Search">
-                                            <div class="nhsd-t-form-group">
-                                                <div class="nhsd-t-form-control">
-                                                    <input class="nhsd-t-form-input" type="text" id="query" name="query" autocomplete="off" placeholder="What are you looking for today?" aria-label="Keywords" spellcheck="false" data-ms-editor="true">
-                                                    <span class="nhsd-t-form-control__button">
-													<button class="nhsd-a-button nhsd-a-button--circle-condensed nhsd-a-button--transparent" type="submit" aria-label="Perform search">
-    <span class="nhsd-a-icon nhsd-a-icon--size-s ">
-        <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false" viewBox="0 0 16 16" width="100%" height="100%">
-<path d="M7,10.9c-2.1,0-3.9-1.7-3.9-3.9c0-2.1,1.7-3.9,3.9-3.9c2.1,0,3.9,1.7,3.9,3.9C10.9,9.2,9.2,10.9,7,10.9zM13.4,14.8l1.4-1.4l-3-3c0.7-1,1.1-2.1,1.1-3.4c0-3.2-2.6-5.8-5.8-5.8C3.8,1.2,1.2,3.8,1.2,7c0,3.2,2.6,5.8,5.8,5.8c1.3,0,2.4-0.4,3.4-1.1L13.4,14.8z"></path>        </svg>
-    </span>
-													</button>
-												</span>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <hr class="nhsd-a-horizontal-rule nhsd-!t-margin-0">
-        </header>
-        <!-- Main content -->
-        <main id="main-content">
-            <!-- Guide Title -->
-            <div class="nhsd-o-hero    nhsd-!t-margin-bottom-6">
-                <div class="nhsd-t-grid">
-                    <div class="nhsd-t-row nhsd-t-row--centred">
-                        <div class="
-                            nhsd-t-col-xs-9 nhsd-t-col-s-10 nhsd-t-col-m-11 nhsd-t-col-l-8
-    nhsd-!t-text-align-l-left">
-                            <h1 class="nhsd-t-heading-xl nhsd-!t-margin-bottom-6 nhsd-!t-margin-top-6"
-                                data-uipath="document.title">{{guide-title}}</h1>
-                            <span class="nhsd-t-heading-s nhsd-!t-margin-bottom-6" data-uipath="document.summary">This
-                                guidance
-                                is under active development by NHS Digital and content may be added or updated on a regular
-                                basis.</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="nhsd-a-digiblocks nhsd-a-digiblocks--pos-bl ">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 550 550">
-                        <g>
-                            <g transform="translate(222, 224)">
-                                <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#BFD7ED"></polygon>
-                                <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#B2CFEA"></polygon>
-                                <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#A6C7E6"></polygon>
-                            </g>
-                            <g transform="translate(328.5, 367.5)">
-                                <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#FBFAFA"></polygon>
-                                <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#F5F5F4"></polygon>
-                                <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#EFF2F1"></polygon>
-                            </g>
-                            <g transform="translate(151, 306)">
-                                <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#3C4D57"></polygon>
-                                <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#32434C"></polygon>
-                                <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#313D45"></polygon>
-                            </g>
-                            <g transform="translate(80, 306)">
-                                <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#FBFAFA"></polygon>
-                                <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#F5F5F4"></polygon>
-                                <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#EFF2F1"></polygon>
-                            </g>
-                        </g>
-                        <g>
-                            <g transform="translate(186.5, 203.5)">
-                                <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#FBFAFA"></polygon>
-                                <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#F5F5F4"></polygon>
-                                <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#EFF2F1"></polygon>
-                            </g>
-                            <g transform="translate(186.5, 285.5)">
-                                <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#00267A"></polygon>
-                                <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#001F75"></polygon>
-                                <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#001766"></polygon>
-                            </g>
-                            <g transform="translate(222, 306)">
-                                <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#00267A"></polygon>
-                                <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#001F75"></polygon>
-                                <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#001766"></polygon>
-                            </g>
-                            <g transform="translate(9, 306)">
-                                <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#00267A"></polygon>
-                                <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#001F75"></polygon>
-                                <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#001766"></polygon>
-                            </g>
-                            <g transform="translate(257.5, 449.5)">
-                                <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#F5D507"></polygon>
-                                <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#F2CB0C"></polygon>
-                                <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#EEC000"></polygon>
-                            </g>
-                        </g>
-                        <g>
-                            <g transform="translate(186.5, 203.5)">
-                                <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#6D7B86"></polygon>
-                                <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#62717A"></polygon>
-                                <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#5C6B75"></polygon>
-                            </g>
-                            <g transform="translate(399.5, 326.5)">
-                                <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#BFD7ED"></polygon>
-                                <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#B2CFEA"></polygon>
-                                <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#A6C7E6"></polygon>
-                            </g>
-                            <g transform="translate(222, 306)">
-                                <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#FBFAFA"></polygon>
-                                <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#F5F5F4"></polygon>
-                                <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#EFF2F1"></polygon>
-                            </g>
-                        </g>
-                        <g>
-                            <g transform="translate(328.5, 162.5)">
-                                <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#F5D507"></polygon>
-                                <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#F2CB0C"></polygon>
-                                <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#EEC000"></polygon>
-                            </g>
-                            <g transform="translate(399.5, 244.5)">
-                                <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#00267A"></polygon>
-                                <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#001F75"></polygon>
-                                <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#001766"></polygon>
-                            </g>
-                            <g transform="translate(115.5, 162.5)">
-                                <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#6D7B86"></polygon>
-                                <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#62717A"></polygon>
-                                <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#5C6B75"></polygon>
-                            </g>
-                            <g transform="translate(186.5, 244.5)">
-                                <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#0062CC"></polygon>
-                                <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#005ABE"></polygon>
-                                <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#0050B5"></polygon>
-                            </g>
-                            <g transform="translate(328.5, 326.5)">
-                                <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#0062CC"></polygon>
-                                <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#005ABE"></polygon>
-                                <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#0050B5"></polygon>
-                            </g>
-                            <g transform="translate(257.5, 326.5)">
-                                <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#3C4D57"></polygon>
-                                <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#32434C"></polygon>
-                                <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#313D45"></polygon>
-                            </g>
-                        </g>
-                        <g>
-                            <g transform="translate(328.5, 244.5)">
-                                <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#DADFDF"></polygon>
-                                <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#CDD5D6"></polygon>
-                                <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#C5CDCF"></polygon>
-                            </g>
-                            <g transform="translate(257.5, 285.5)">
-                                <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#0062CC"></polygon>
-                                <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#005ABE"></polygon>
-                                <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#0050B5"></polygon>
-                            </g>
-                            <g transform="translate(44.5, 203.5)">
-                                <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#6D7B86"></polygon>
-                                <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#62717A"></polygon>
-                                <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#5C6B75"></polygon>
-                            </g>
-                            <g transform="translate(151, 265)">
-                                <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#BFD7ED"></polygon>
-                                <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#B2CFEA"></polygon>
-                                <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#A6C7E6"></polygon>
-                            </g>
-                        </g>
-                        <g>
-                            <g transform="translate(435, 142)">
-                                <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#0062CC"></polygon>
-                                <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#005ABE"></polygon>
-                                <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#0050B5"></polygon>
-                            </g>
-                        </g>
-                        <g>
-                            <g transform="translate(328.5, 39.5)">
-                                <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#BFD7ED"></polygon>
-                                <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#B2CFEA"></polygon>
-                                <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#A6C7E6"></polygon>
-                            </g>
-                            <g transform="translate(222, 19)">
-                                <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#00267A"></polygon>
-                                <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#001F75"></polygon>
-                                <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#001766"></polygon>
-                            </g>
-                            <g transform="translate(257.5, 80.5)">
-                                <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#DADFDF"></polygon>
-                                <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#CDD5D6"></polygon>
-                                <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#C5CDCF"></polygon>
-                            </g>
-                        </g>
-                    </svg>
-                </div>
-
-                <div class="nhsd-a-digiblocks nhsd-a-digiblocks--pos-tr ">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 550 550">
-                        <g>
-                            <g transform="translate(222, 224)">
-                                <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#BFD7ED"></polygon>
-                                <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#B2CFEA"></polygon>
-                                <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#A6C7E6"></polygon>
-                            </g>
-                            <g transform="translate(328.5, 367.5)">
-                                <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#FBFAFA"></polygon>
-                                <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#F5F5F4"></polygon>
-                                <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#EFF2F1"></polygon>
-                            </g>
-                            <g transform="translate(151, 306)">
-                                <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#3C4D57"></polygon>
-                                <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#32434C"></polygon>
-                                <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#313D45"></polygon>
-                            </g>
-                            <g transform="translate(80, 306)">
-                                <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#FBFAFA"></polygon>
-                                <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#F5F5F4"></polygon>
-                                <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#EFF2F1"></polygon>
-                            </g>
-                        </g>
-                        <g>
-                            <g transform="translate(186.5, 203.5)">
-                                <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#FBFAFA"></polygon>
-                                <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#F5F5F4"></polygon>
-                                <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#EFF2F1"></polygon>
-                            </g>
-                            <g transform="translate(186.5, 285.5)">
-                                <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#00267A"></polygon>
-                                <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#001F75"></polygon>
-                                <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#001766"></polygon>
-                            </g>
-                            <g transform="translate(222, 306)">
-                                <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#00267A"></polygon>
-                                <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#001F75"></polygon>
-                                <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#001766"></polygon>
-                            </g>
-                            <g transform="translate(9, 306)">
-                                <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#00267A"></polygon>
-                                <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#001F75"></polygon>
-                                <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#001766"></polygon>
-                            </g>
-                            <g transform="translate(257.5, 449.5)">
-                                <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#F5D507"></polygon>
-                                <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#F2CB0C"></polygon>
-                                <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#EEC000"></polygon>
-                            </g>
-                        </g>
-                        <g>
-                            <g transform="translate(186.5, 203.5)">
-                                <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#6D7B86"></polygon>
-                                <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#62717A"></polygon>
-                                <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#5C6B75"></polygon>
-                            </g>
-                            <g transform="translate(399.5, 326.5)">
-                                <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#BFD7ED"></polygon>
-                                <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#B2CFEA"></polygon>
-                                <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#A6C7E6"></polygon>
-                            </g>
-                            <g transform="translate(222, 306)">
-                                <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#FBFAFA"></polygon>
-                                <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#F5F5F4"></polygon>
-                                <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#EFF2F1"></polygon>
-                            </g>
-                        </g>
-                        <g>
-                            <g transform="translate(328.5, 162.5)">
-                                <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#F5D507"></polygon>
-                                <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#F2CB0C"></polygon>
-                                <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#EEC000"></polygon>
-                            </g>
-                            <g transform="translate(399.5, 244.5)">
-                                <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#00267A"></polygon>
-                                <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#001F75"></polygon>
-                                <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#001766"></polygon>
-                            </g>
-                            <g transform="translate(115.5, 162.5)">
-                                <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#6D7B86"></polygon>
-                                <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#62717A"></polygon>
-                                <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#5C6B75"></polygon>
-                            </g>
-                            <g transform="translate(186.5, 244.5)">
-                                <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#0062CC"></polygon>
-                                <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#005ABE"></polygon>
-                                <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#0050B5"></polygon>
-                            </g>
-                            <g transform="translate(328.5, 326.5)">
-                                <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#0062CC"></polygon>
-                                <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#005ABE"></polygon>
-                                <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#0050B5"></polygon>
-                            </g>
-                            <g transform="translate(257.5, 326.5)">
-                                <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#3C4D57"></polygon>
-                                <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#32434C"></polygon>
-                                <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#313D45"></polygon>
-                            </g>
-                        </g>
-                        <g>
-                            <g transform="translate(328.5, 244.5)">
-                                <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#DADFDF"></polygon>
-                                <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#CDD5D6"></polygon>
-                                <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#C5CDCF"></polygon>
-                            </g>
-                            <g transform="translate(257.5, 285.5)">
-                                <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#0062CC"></polygon>
-                                <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#005ABE"></polygon>
-                                <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#0050B5"></polygon>
-                            </g>
-                            <g transform="translate(44.5, 203.5)">
-                                <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#6D7B86"></polygon>
-                                <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#62717A"></polygon>
-                                <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#5C6B75"></polygon>
-                            </g>
-                            <g transform="translate(151, 265)">
-                                <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#BFD7ED"></polygon>
-                                <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#B2CFEA"></polygon>
-                                <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#A6C7E6"></polygon>
-                            </g>
-                        </g>
-                        <g>
-                            <g transform="translate(435, 142)">
-                                <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#0062CC"></polygon>
-                                <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#005ABE"></polygon>
-                                <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#0050B5"></polygon>
-                            </g>
-                        </g>
-                        <g>
-                            <g transform="translate(328.5, 39.5)">
-                                <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#BFD7ED"></polygon>
-                                <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#B2CFEA"></polygon>
-                                <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#A6C7E6"></polygon>
-                            </g>
-                            <g transform="translate(222, 19)">
-                                <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#00267A"></polygon>
-                                <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#001F75"></polygon>
-                                <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#001766"></polygon>
-                            </g>
-                            <g transform="translate(257.5, 80.5)">
-                                <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#DADFDF"></polygon>
-                                <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#CDD5D6"></polygon>
-                                <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#C5CDCF"></polygon>
-                            </g>
-                        </g>
-                    </svg>
-                </div>
-            </div>
-
-            <article>
-                <div class="nhsd-t-grid">
-                    <div class="nhsd-t-row">
-                        <!-- Dynamic content -->
-                        {{ page-with-children }}
-                    </div>
-                </div>
-            </article>
-        </main>
-
-        <!-- Footer -->
-        <footer>
-            <div class="nhsd-o-global-footer">
-                <div class="nhsd-t-grid">
-                    <div class="nhsd-t-row">
-                        <div class="nhsd-t-col-12 nhsd-!t-no-gutters">
-                            <div class="nhsd-t-grid">
-                                <div class="nhsd-t-row">
-                                    <div class="nhsd-t-col-xs-12 nhsd-t-col-s-6 nhsd-t-col-l-3 nhsd-!t-padding-3 nhsd-!t-margin-bottom-1">
-                                        <img src="{{content}}/{{style-folder}}/fhir-logo.png?v={{version}}" alt="logo fhir" class="img-responsive">
-                                    </div>
-                                </div>
-                                <div class="nhsd-t-row">
-                                    <div class="nhsd-t-col-xs-6 nhsd-t-col-s-6 nhsd-t-col-l-6 nhsd-!t-padding-3">
-                                        <p>
-                                            Powered by <a href="simplifier.net">SIMPLIFIER.NET</a>
-                                        </p>
-                                        <p>
-                                            HL7<sup>&reg;</sup> and FHIR<sup>&reg;</sup> are the registered trademarks of <a href="https://www.hl7.org/">Health Level Seven International</a>
-                                        </p>
-                                    </div>
-                                    <div class="nhsd-t-col-xs-6 nhsd-t-col-s-6 nhsd-t-col-l-6 nhsd-!t-padding-3 nhsd-!t-margin-top-1">
-                                            <p>
-                                                <strong>Guide Version:</strong> {{ guide-version }}
-                                            </p>
-                                            <p>
-                                                <strong>FHIR Version:</strong> <a href="http://hl7.org/fhir/{{guide-fhir-version}}/">{{ guide-fhir-version }}</a>
-                                            </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-
-        <!-- Scroll back to top of page button -->
-        <span id="back-to-top" class="nhsd-a-button" onclick="goBackToTop()">
-            <span class="nhsd-a-button__label">back to top</span>
-        </span>
-    </div>
-
-    <!-- Legacy openTab() function for existing NHS-D guides -->
     <script>
         function openTab(evt, tabName) {
             var i, tabcontent, tablinks;
@@ -543,105 +40,69 @@
         }
     </script>
 
-    <!-- Back to top button functionality -->
-    <script>
-        var backToTopButton = document.getElementById("back-to-top");
 
-        // When the user scrolls down 100px from the top of the document, show the button
-        window.onscroll = function () { showTopButton() };
+    <link rel="stylesheet" href="{{content}}/{{style-folder}}/style.css?v={{version}}" />
 
-        function showTopButton() {
-            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-                backToTopButton.style.display = "block";
-            } else {
-                backToTopButton.style.display = "none";
-            }
-        }
+</head>
 
-        // When the user clicks on the button, scroll to the top of the document
-        function goBackToTop() {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-            $(window.location)[0].replace("#");
-        }
-    </script>
+<body>
 
-    <script src="{{content}}/styles/common/jquery/jquery.min.js"></script>
-    <script src="{{content}}/styles/common/bootstrap/bootstrap.min.js"></script>
-    <script src="{{content}}/styles/common/rendering/stu3TreeTable.min.js"></script>
-    <script src="{{content}}/styles/common/rendering/baseTreetable.min.js"></script>
+    <header>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 fhir-logo">
+                    <a href="http://hl7.org/fhir/{{guide-fhir-version}}/">
+                        <img src="{{content}}/{{style-folder}}/fhir-logo.png?v={{version}}" alt="logo fhir">
+                    </a>
+                </div>
+                <div class="col-md-16 title">
+                    <div>
+                        <a href="/">
+                            {{ guide-title }}
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4 hl7-logo">
+                    <a href="http://digital.nhs.uk">
+                        <img src="https://digital.nhs.uk/webfiles/1576854238445/images/nhs-digital-logo.svg"
+                            alt="visit the NHS Digital website" width="89" height="auto" target="_blank">
+                    </a>
+                </div>
+            </div>
+        </div>
+        {{ dropdown-navigation }}
+    </header>
 
-    <!-- Ensures footer is at the bottom of the page -->
-    <script>
-        $(function () {
-            updateFooterPosition();
-        });
+    <div markdown="span" class="alert alert-warning" role="alert"><i class="fa fa-warning"></i><b> Please note:</b>
+        <ul>
+            <li>This is a WIP development version of the NHS Digital FHIR Implementation Guide.</li>
 
-        $(window).resize(function () {
-            updateFooterPosition();
-        });
+        </ul>
+    </div>
 
-        function updateFooterPosition() {
-            var bottomOfFooter = $('footer').offset().top + $('footer').outerHeight(true);
-            var heightShortage = $(document).height() - bottomOfFooter;
-            if (heightShortage < 0) heightShortage = 0;
-            $('footer').css('margin-top', heightShortage);
-        }
-    </script>
 
-    <!-- Apply NHS-D skin to simplifier / bootstrap content -->
-    <script>
-        
-            $("main h1").addClass("nhsd-t-heading-l");
-            $("main h2").addClass("nhsd-t-heading-m");
-            $("main h3").addClass("nhsd-t-heading-s");
-            $("main h4").addClass("nhsd-t-heading-xs");
-            $("main table").not(".treetable").wrap("<div class=\"nhsd-m-table\"></div>");
-            $("main a:not([role='tab'], .nhsd-a-button, pre a), footer a").addClass("nhsd-a-link");
-            $("main pre").addClass("nhsd-o-code-viewer");
-            // $("main code").addClass("nhsd-a-text-highlight--code"); // not sure about this
-            $("hr").addClass("nhsd-a-horizontal-rule nhsd-!t-margin-bottom-6");
-            $("p").addClass("nhsd-t-body");
-            $("blockquote").each(function(e) {
-                var element = this;
-                var blockquote = $(element).html();
-                var text = $(blockquote).text();
+    <div class="content container">
+        {{ page-with-children }}
+    </div>
 
-                $(element).html("<div class=\"nhsd-m-quote nhsd-!t-margin-bottom-3\"><div class=\"nhsd-a-box nhsd-a-box--bg-light-grey\"><figure><blockquote><span class=\"nhsd-a-icon nhsd-a-icon--size-xl nhsd-a-icon--col-blue\"><svg xmlns=\"http://www.w3.org/2000/svg\" preserveAspectRatio=\"xMidYMid meet\" aria-hidden=\"true\" focusable=\"false\" viewBox=\"0 0 16 16\"  width=\"100%\" height=\"100%\"><path d=\"M7.5,16H0V7.5c0-4.4,3.3-6.4,6.4-6.4v3.2c-0.8,0-3.2,0.2-3.2,3.2v1.1h4.3C7.5,8.5,7.5,16,7.5,16z M16,16H8.5V7.5 c0-4.4,3.3-6.4,6.4-6.4v3.2c-0.8,0-3.2,0.2-3.2,3.2v1.1H16V16z\"/></svg></span>"+text+"</blockquote></figure></div></div>");
-            });
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div>
+                    <span>Version: {{ guide-version }}</span>
+                    <span>FHIR Version: {{ guide-fhir-version }}</span>
+                </div>
+                <br />
+                <p>Powered by <b>SIMPLIFIER.NET</b></p>
+                <div>
+                    HL7<sup>&reg;</sup> and FHIR<sup>&reg;</sup> are the registered trademarks of Health Level Seven
+                    International
+                </div>
+            </div>
+        </div>
+    </footer>
 
-            // Main navigation
-            $("header .navbar").find(".container").removeClass("container").children().unwrap();
-            $("header .navbar-header").remove();
-            $(".navbar-toggle").remove();
-            $("#bs-example-navbar-collapse-1").children().unwrap();
-            $("header .navbar").addClass("nhsd-m-menu-bar").removeClass("navbar").removeClass("navbar-default");
-            $("header .navbar-collapse").removeClass("navbar-collapse").removeClass("collapse");
-
-            $("header .nav>li").each(function(e) {
-                var element = $(this);
-                $(element).children("a").addClass("nhsd-a-menu-item");
-                $(element).children("a").wrapInner("<span class='nhsd-a-menu-item__label'></span>");
-            });
-
-            // Fix sidebar navigation
-            $("main ul:not(.nav)").addClass("nhsd-t-list nhsd-t-list--bullet");
-            $("main ol").addClass("nhsd-t-list nhsd-t-list--number");
-            $("main .nav-pills.nav-stacked").find("li").addClass("nhsd-m-sticky-navigation__item");
-            $("main .nav-pills.nav-stacked").removeClass("nav-pills").removeClass("nav-stacked").removeClass("nav");
-            $(".nhsd-m-sticky-navigation__item").find("a").addClass("nhsd-a-link");
-            $(".nhsd-m-sticky-navigation__item").parent().parent().prepend("<span id=\"sticky-nav-header\" class=\"nhsd-t-heading-xs nhsd-!t-margin-bottom-2\">Page contents</span><hr class=\"nhsd-a-horizontal-rule nhsd-a-horizontal-rule--size-xs nhsd-!t-margin-bottom-2\">");
-
-            // Use NHS-D Grid system
-            $(".nhsd-t-row").find(".row").children().unwrap();
-            $(".col-md-6").addClass("nhsd-t-col-xs-12 nhsd-t-col-s-4").removeClass("col-md-6");
-            $(".col-md-18").addClass("nhsd-t-col-xs-12 nhsd-t-col-s-8").removeClass("col-md-18")
-     
-    </script>
- 
-    <script defer>
-        !function(t){var e={};function n(s){if(e[s])return e[s].exports;var i=e[s]={i:s,l:!1,exports:{}};return t[s].call(i.exports,i,i.exports,n),i.l=!0,i.exports}n.m=t,n.c=e,n.d=function(t,e,s){n.o(t,e)||Object.defineProperty(t,e,{enumerable:!0,get:s})},n.r=function(t){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(t,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(t,"__esModule",{value:!0})},n.t=function(t,e){if(1&e&&(t=n(t)),8&e)return t;if(4&e&&"object"==typeof t&&t&&t.__esModule)return t;var s=Object.create(null);if(n.r(s),Object.defineProperty(s,"default",{enumerable:!0,value:t}),2&e&&"string"!=typeof t)for(var i in t)n.d(s,i,function(e){return t[e]}.bind(null,i));return s},n.n=function(t){var e=t&&t.__esModule?function(){return t.default}:function(){return t};return n.d(e,"a",e),e},n.o=function(t,e){return Object.prototype.hasOwnProperty.call(t,e)},n.p="",n(n.s=15)}([function(t,e,n){"use strict";n.r(e);var s=n(1);e.default={...Object(s.default)(document),event:s.default}},function(t,e,n){"use strict";n.r(e),n.d(e,"default",(function(){return i}));const s={UUID:0,add(t,e,n){this.UUID+=1;const s=new this.Event(t,e,n,this.UUID);return this.events[this.UUID]=s,s},removeByUUID(t){delete this.events[t]},remove(...t){this.find(t).forEach(t=>this.removeByUUID(t.UUID))},find(t,e,n=null){let s=Object.values(this.events).filter(n=>{const s=e.split("."),i=s[0],r=s[1];return!(t!==n.element||i&&i!==n.eventType||r&&r!==n.namespace)});return"function"==typeof n&&(s=s.filter(t=>t.fn===n)),s},events:{},Event:class{constructor(t,e,n,s){this.element=t,[this.eventType,this.namespace]=e.split("."),this.fn=n,this.UUID=s,this.handler=function(t,...e){!1===n.bind(this)(t,e)&&t.preventDefault()}}}};function i(t){return{on:(e,n)=>{let i=e;"string"==typeof i&&(i=[i]),i.forEach(e=>{const i=s.add(t,e,n);t.addEventListener(i.eventType,i.handler,!0)})},trigger:(e,n={})=>{let s=e;"string"==typeof s&&(s=[s]),s.forEach(e=>{const s=e.split(".")[0];t.dispatchEvent(new CustomEvent(s,{detail:n}))})},unbind:(e,n=null)=>{let i=e;"string"==typeof i&&(i=[i]),i.forEach(e=>{s.find(t,e,n).forEach(n=>{t.removeEventListener(n.eventType,n.handler,!0),s.removeByUUID(e.UUID)})})}}}},function(t,e){function n(t,e,n){var s,i,r,o,a;function l(){var c=Date.now()-o;c<e&&c>=0?s=setTimeout(l,e-c):(s=null,n||(a=t.apply(r,i),r=i=null))}null==e&&(e=100);var c=function(){r=this,i=arguments,o=Date.now();var c=n&&!s;return s||(s=setTimeout(l,e)),c&&(a=t.apply(r,i),r=i=null),a};return c.clear=function(){s&&(clearTimeout(s),s=null)},c.flush=function(){s&&(a=t.apply(r,i),r=i=null,clearTimeout(s),s=null)},c}n.debounce=n,t.exports=n},function(t,e,n){"use strict";n.r(e),n.d(e,"default",(function(){return m}));var s=n(0),i=n(11),r=n(4),o=n(5),a=n(6),l=n(7),c=n(8),u=n(9),d=n(10);window.nhsd=s.default;const h=[];function f(t,e){const n=document.querySelectorAll(t);Array.from(n).forEach(t=>{if(!h.includes(t))try{new e(t)}catch(t){console.error("Failed to initialise "+e.name)}})}function m(){f(".nhsd-o-global-header",i.default),f(".nhsd-o-code-viewer",r.default),f(".nhsd-m-sticky-navigation",o.default),f(".nhsd-m-filter-menu-section",a.default),f(".nhsd-m-expander",l.default),f(".nhsd-m-table",c.default),f(".nhsd-m-tabs",u.default),f(".nhsd-m-notification-banner",d.default)}},function(t,e,n){"use strict";n.r(e),n.d(e,"default",(function(){return o}));var s=n(0);let i=null,r=null;function o(t){Array.from(t.querySelectorAll(".nhsd-o-code-viewer__code")).forEach(t=>function(t){if(t.querySelector(".nhsd-o-code-viewer__copy-code"))return;const e=document.createElement("div");e.classList.add("nhsd-o-code-viewer__copy-code"),e.setAttribute("aria-live","polite"),e.innerHTML='<button class="nhsd-a-button nhsd-a-button nhsd-a-button--invert" type="button"><span class="nhsd-a-button__label">Copy</span></button>',t.insertBefore(e,t.firstChild);const n=e.querySelector("button");n&&s.default.event(n).on("click",()=>function(t){!function(t){const e=document.createElement("textarea");e.value=t.innerText,document.body.appendChild(e),e.select(),document.execCommand("Copy"),e.remove()}(t.querySelector(".nhsd-o-code-viewer__code-content"));const e=t.querySelector(".nhsd-a-button__label");e&&function(t){i&&clearTimeout(i),r&&(r.innerText="Copy"),r=t,r.innerText="Copied",i=setTimeout(()=>{r.innerText="Copy"},5e3)}(e)}(t))}(t))}},function(t,e,n){"use strict";n.r(e),n.d(e,"default",(function(){return d}));var s=n(0),i=n(2),r=n.n(i);let o=null,a=[],l=0;function c(){a.forEach(t=>t.navEl.classList.remove("nhsd-m-sticky-navigation__item--active")),o&&o.navEl.classList.add("nhsd-m-sticky-navigation__item--active"),s.default.trigger("sticky-navigation[update]",o)}function u(){let t=null,e=null;a.forEach(n=>{const s=n.contentEl.getBoundingClientRect().top;l<s||t&&s<e||(t=n,e=t.contentEl.getBoundingClientRect().top)}),o!==t&&(o=t,c())}function d(t){a=[],t.querySelectorAll(".nhsd-m-sticky-navigation__item").forEach(t=>function(t){const e=t.dataset.navContent,n=document.querySelector(`[id='${e}']`);if(!n)return;const i={navEl:t,contentEl:n};!function(t){const e=t.navEl.querySelector("a");e&&s.default.event(e).on("click.sticky-nav",()=>{s.default.event(window).unbind("scroll.sticky-nav"),o=t,c(),setTimeout(()=>s.default.event(window).on("scroll.sticky-nav",r()(u,16)),60)})}(i),a.push(i)}(t)),l=.1*window.innerHeight,s.default.event(window).on("resize.sticky-nav",()=>{l=.1*window.innerHeight,r()(u,16)}),s.default.event(window).on("scroll.sticky-nav",r()(u,16)),u()}},function(t,e,n){"use strict";n.r(e),n.d(e,"default",(function(){return s}));class s{constructor(t){if(!t)return null;this.hostEl=t,this.init()}init(){for(let t=0;t<this.hostEl.children.length;t+=1)this.hostEl.children[t].querySelector(".nhsd-m-filter-menu-section__heading-text").addEventListener("click",(function(){this.parentElement.querySelector("#icon").classList.toggle("active");const t=this.parentElement.querySelector(".nhsd-m-filter-menu-section__accordion-panel");"block"===t.style.display?(t.style.display="none",this.setAttribute("aria-expanded","false")):(t.style.display="block",this.setAttribute("aria-expanded","true"))}))}}},function(t,e,n){"use strict";n.r(e),n.d(e,"default",(function(){return s}));class s{constructor(t){if(!t)return null;this.hostEl=t,this.init()}init(){const t=this.hostEl.querySelector(".nhsd-m-expander__heading-container"),e=t.querySelector(".nhsd-m-expander__icon"),n=this.hostEl.querySelector(".nhsd-m-expander__content-container");t.addEventListener("click",()=>{e.classList.toggle("active"),"block"===n.style.display?(n.style.display="none",t.setAttribute("aria-expanded","false")):(n.style.display="block",t.setAttribute("aria-expanded","true"))})}}},function(t,e,n){"use strict";n.r(e),n.d(e,"default",(function(){return a}));var s=n(0);const i={asc:'<path d="M8,4l7,6.5L13.5,12L8,6.8L2.5,12L1,10.5L8,4z"/>',desc:'<path d="M8,12L1,5.5L2.5,4L8,9.2L13.5,4L15,5.5L8,12z"/>'};function r(t="asc"){return`<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false" viewBox="0 0 16 16" width="100%" height="100%">\n${i[t]}\n</svg>`}function o(t){if(void 0!==t.dataset.noSort)return;const e=t.querySelectorAll("thead td,th");Array.from(e).forEach((e,n)=>{if(void 0!==e.dataset.noSort)return;e.classList.add("nhsd-m-table__col--orderable");const i=`<span class="nhsd-a-icon nhsd-a-icon--size-xs">${r("asc")}</span>`,o=t.classList.contains("nhsd-m-table--right-align")||e.classList.contains("nhsd-m-table__col--right-align");e.innerHTML=o&&n>0?`<button><span>${i}${e.innerHTML}</span></button>`:`<button><span>${e.innerHTML}${i}</span></button>`,function(t,e,n){const i=t.querySelector("button");i&&s.default.event(i).on("click",()=>{const s=n.querySelectorAll("thead td,th");Array.from(s).forEach(e=>{const n=e.querySelector(".nhsd-a-icon");n&&(e===t?(t.dataset.sort="asc"===t.dataset.sort?"desc":"asc",n.innerHTML=r(t.dataset.sort)):(e.dataset.sort="",n.innerHTML=r("asc")))}),function(t,e,n="asc"){const s=e.querySelectorAll("tbody");Array.from(s).forEach(e=>{const s=[],i=e.querySelectorAll("tr");Array.from(i).forEach((e,n)=>{const i=e.querySelectorAll("td, th")[t];i&&s.push({row:n,value:i.innerText})}),s.sort((t,e)=>{const s=function(t,e){const n=/[^a-zA-Z]/g,s=/[^0-9]/g,i=t.replace(n,""),r=e.replace(n,"");if(i===r){const n=parseInt(t.replace(s,""),10),i=parseInt(e.replace(s,""),10);return n===i?0:n>i?1:-1}return i>r?1:-1}(t.value,e.value);return"asc"===n?s:-1*s}),e.innerHTML="",s.forEach(t=>{e.append(i[t.row])})})}(e,n,t.dataset.sort)})}(e,n,t)})}function a(t){const e=t.querySelectorAll("table");if(0===e.length)return null;Array.from(e).forEach(t=>{!function(t){if(void 0===t.dataset.responsive)return;t.classList.add("nhsd-!t-display-hide"),t.classList.add("nhsd-!t-display-s-show-table");const e=t.querySelector("thead tr").querySelectorAll("td, th"),n=t.querySelectorAll("tbody");let s='<ul class="nhsd-!t-display-s-hide">';Array.from(n).forEach(t=>{const n=t.classList.contains("nhsd-m-table__highlighted-items"),i=t.querySelectorAll("tr");Array.from(i).forEach(t=>{s+="<li>",s+=n?'<ul class="nhsd-m-table__mobile-list-item nhsd-m-table__mobile-list-item--highlighted">':'<ul class="nhsd-m-table__mobile-list-item">';const i=t.querySelectorAll("td, th");Array.from(i).forEach((t,n)=>{s+="<li><span><b>",e[n]&&(s+=e[n].innerText),s+=`</b></span><span>${t.innerHTML}</span>`,s+="</li>"}),s+="</ul></li>"})}),s+="</ul>";const i=document.createElement("div");i.classList.add("nhsd-m-table__mobile-list"),i.innerHTML=s,t.parentNode.insertBefore(i,t.nextSibling)}(t),o(t)})}},function(t,e,n){"use strict";n.r(e),n.d(e,"default",(function(){return i}));var s=n(0);function i(t){const e=[];function n(n){return e.forEach(t=>{t.content.classList.add("nhsd-!t-display-hide"),t.content.setAttribute("aria-hidden",!0),t.tab.classList.remove("nhsd-a-tab__active"),t.tab.setAttribute("aria-selected",!1)}),n.content.classList.remove("nhsd-!t-display-hide"),n.content.setAttribute("aria-hidden",!1),n.tab.classList.add("nhsd-a-tab__active"),n.tab.setAttribute("aria-selected",!0),s.default.event(t).trigger("tabs[show]",n),!1}Array.from(t.querySelectorAll(".nhsd-a-tab")).forEach(t=>{if(!t.dataset.tabContent)return;const i=document.querySelector("#"+t.dataset.tabContent);if(!i)return;!function(t){t.querySelectorAll("[data-hide-tab-header]").forEach(t=>t.classList.add("nhsd-!t-display-hide"))}(i);const r={tab:t,content:i};e.push(r),s.default.event(t).unbind(".nhsd-tabs"),s.default.event(t).on("click.nhsd-tabs",()=>n(r))}),0!==e.length&&n(e[0])}},function(t,e,n){"use strict";n.r(e),n.d(e,"default",(function(){return s}));class s{constructor(t){if(!t)return null;this.hostEl=t,this.init()}init(){const t=this.hostEl.querySelector(".nhsd-m-notification-banner__right-col");this.hostEl.classList.contains("nhsd-m-notification-banner--irremovable")||(t.style.display="block"),t.addEventListener("click",()=>this.fadeOutEffect(this.hostEl))}fadeOutEffect(t){t.classList.add("nhsd-m-notification-banner--fade-out"),setTimeout(()=>{t.classList.remove("nhsd-m-notification-banner--fade-out"),t.classList.add("nhsd-m-notification-banner--hidden")},500)}}},function(t,e,n){"use strict";n.r(e),n.d(e,"default",(function(){return a}));var s=n(13),i=n.n(s),r=n(12),o=(i()(r.a,{insert:"head",singleton:!1}),r.a.locals||{});class a{constructor(t){if(!t)return null;this.hostEl=t,this.html=document.querySelector("html"),this.body=document.body,this.logoEl=this.hostEl.querySelector("#nhsd-global-header__logo"),this.menuBarEl=this.hostEl.querySelector("#nhsd-global-header__menu"),this.searchInput=this.hostEl.querySelector("#query"),this.menuBarActive=!1,this.cachedProps={html:{overflow:this.html.style.overflow,height:this.html.style.height},body:{overflow:this.html.style.overflow,height:this.html.style.height}},this.initMenuBar(),this.initSearchBar(),window.addEventListener("resize",()=>{window.innerWidth>=o["nhsd-breakpoint-m"]&&this.menuBarActive&&this.closeMenuBar()})}initMenuBar(){this.hostEl&&(this.menuButtonEl=this.hostEl.querySelector("#nhsd-global-header__menu-button"),this.menuButtonEl&&(this.menuButtonEl.addEventListener("click",t=>{t.preventDefault(),t.stopPropagation(),this.menuBarActive?this.closeMenuBar():this.openMenuBar(),this.searchBarActive&&this.closeSearchBar()}),this.menuCloseButtonEl=this.hostEl.querySelector("#nhsd-global-header__menu-close-button"),this.menuCloseButtonEl.addEventListener("click",t=>{t.preventDefault(),t.stopPropagation(),this.closeMenuBar()})))}initSearchBar(){this.searchButtonEl=this.hostEl.querySelector("#nhsd-global-header__search-button"),this.searchButtonEl&&(this.searchButtonEl.addEventListener("click",t=>{t.preventDefault(),t.stopPropagation(),this.searchBarActive?this.closeSearchBar():this.openSearchBar(),this.menuBarActive&&this.closeMenuBar()}),this.searchCloseButtonEl=this.hostEl.querySelector("#nhsd-global-header__search-close-button"),this.searchCloseButtonEl.addEventListener("click",t=>{t.preventDefault(),t.stopPropagation(),this.closeSearchBar()}))}openMenuBar(){this.hostEl.classList.add("js-menu-active"),this.menuButtonEl.classList.add("js-active"),this.menuBarActive=!0,this.menuButtonEl.setAttribute("aria-expanded",!0),this.setTabIndexes(),this.setDocumentScrolling()}closeMenuBar(){this.hostEl.classList.remove("js-menu-active"),this.menuButtonEl.classList.remove("js-active"),this.menuBarActive=!1,this.menuButtonEl.setAttribute("aria-expanded",!1),this.setTabIndexes(),this.setDocumentScrolling()}openSearchBar(){this.hostEl.classList.add("js-search-active"),this.searchButtonEl.classList.add("js-active"),this.searchButtonEl.blur(),this.searchInput&&this.searchInput.focus(),this.searchButtonEl.setAttribute("aria-expanded",!0),this.searchBarActive=!0,this.setDocumentScrolling()}closeSearchBar(){this.hostEl.classList.remove("js-search-active"),this.searchButtonEl.classList.remove("js-active"),this.searchButtonEl.blur(),this.searchButtonEl.setAttribute("aria-expanded",!1),this.searchBarActive=!1,this.setDocumentScrolling()}setDocumentScrolling(){this.hostEl.classList.contains("js-menu-active")||this.hostEl.classList.contains("js-search-active")?(this.html.style.overflow="hidden",this.body.style.overflow="hidden",this.html.style.height="100%",this.body.style.height="100%"):(this.html.style.overflow=this.cachedProps.html.overflow?this.cachedProps.html.overflow:null,this.html.style.height=this.cachedProps.html.height?this.cachedProps.html.height:null,this.body.style.overflow=this.cachedProps.body.overflow?this.cachedProps.body.overflow:null,this.body.style.height=this.cachedProps.body.height?this.cachedProps.body.height:null)}setTabIndexes(){if(!this.menuBarEl)return;const t=Array.from(this.menuBarEl.querySelectorAll(".nhsd-a-menu-item"));if(this.menuBarActive){let e=0;this.logoEl.setAttribute("tabindex",e+=1),this.searchButtonEl.setAttribute("tabindex",e+=1),this.menuButtonEl.setAttribute("tabindex",e+=1),this.menuCloseButtonEl.setAttribute("tabindex",e+=1),t.forEach((t,n)=>{t.setAttribute("tabindex",e+=n+1)})}else this.logoEl.removeAttribute("tabindex"),this.searchButtonEl.removeAttribute("tabindex"),this.menuButtonEl.removeAttribute("tabindex"),this.menuCloseButtonEl.removeAttribute("tabindex"),t.forEach(t=>{t.removeAttribute("tabindex")})}}},function(t,e,n){"use strict";var s=n(14),i=n.n(s)()((function(t){return t[1]}));i.push([t.i,":export{nhsd-breakpoint-xs:375px;nhsd-breakpoint-s:1024px;nhsd-breakpoint-m:1240px;nhsd-breakpoint-l:1366px;nhsd-breakpoint-xl:1580px}",""]),e.a=i},function(t,e,n){"use strict";var s,i=function(){var t={};return function(e){if(void 0===t[e]){var n=document.querySelector(e);if(window.HTMLIFrameElement&&n instanceof window.HTMLIFrameElement)try{n=n.contentDocument.head}catch(t){n=null}t[e]=n}return t[e]}}(),r=[];function o(t){for(var e=-1,n=0;n<r.length;n++)if(r[n].identifier===t){e=n;break}return e}function a(t,e){for(var n={},s=[],i=0;i<t.length;i++){var a=t[i],l=e.base?a[0]+e.base:a[0],c=n[l]||0,u="".concat(l," ").concat(c);n[l]=c+1;var d=o(u),h={css:a[1],media:a[2],sourceMap:a[3]};-1!==d?(r[d].references++,r[d].updater(h)):r.push({identifier:u,updater:v(h,e),references:1}),s.push(u)}return s}function l(t){var e=document.createElement("style"),s=t.attributes||{};if(void 0===s.nonce){var r=n.nc;r&&(s.nonce=r)}if(Object.keys(s).forEach((function(t){e.setAttribute(t,s[t])})),"function"==typeof t.insert)t.insert(e);else{var o=i(t.insert||"head");if(!o)throw new Error("Couldn't find a style target. This probably means that the value for the 'insert' parameter is invalid.");o.appendChild(e)}return e}var c,u=(c=[],function(t,e){return c[t]=e,c.filter(Boolean).join("\n")});function d(t,e,n,s){var i=n?"":s.media?"@media ".concat(s.media," {").concat(s.css,"}"):s.css;if(t.styleSheet)t.styleSheet.cssText=u(e,i);else{var r=document.createTextNode(i),o=t.childNodes;o[e]&&t.removeChild(o[e]),o.length?t.insertBefore(r,o[e]):t.appendChild(r)}}function h(t,e,n){var s=n.css,i=n.media,r=n.sourceMap;if(i?t.setAttribute("media",i):t.removeAttribute("media"),r&&"undefined"!=typeof btoa&&(s+="\n/*# sourceMappingURL=data:application/json;base64,".concat(btoa(unescape(encodeURIComponent(JSON.stringify(r))))," */")),t.styleSheet)t.styleSheet.cssText=s;else{for(;t.firstChild;)t.removeChild(t.firstChild);t.appendChild(document.createTextNode(s))}}var f=null,m=0;function v(t,e){var n,s,i;if(e.singleton){var r=m++;n=f||(f=l(e)),s=d.bind(null,n,r,!1),i=d.bind(null,n,r,!0)}else n=l(e),s=h.bind(null,n,e),i=function(){!function(t){if(null===t.parentNode)return!1;t.parentNode.removeChild(t)}(n)};return s(t),function(e){if(e){if(e.css===t.css&&e.media===t.media&&e.sourceMap===t.sourceMap)return;s(t=e)}else i()}}t.exports=function(t,e){(e=e||{}).singleton||"boolean"==typeof e.singleton||(e.singleton=(void 0===s&&(s=Boolean(window&&document&&document.all&&!window.atob)),s));var n=a(t=t||[],e);return function(t){if(t=t||[],"[object Array]"===Object.prototype.toString.call(t)){for(var s=0;s<n.length;s++){var i=o(n[s]);r[i].references--}for(var l=a(t,e),c=0;c<n.length;c++){var u=o(n[c]);0===r[u].references&&(r[u].updater(),r.splice(u,1))}n=l}}}},function(t,e,n){"use strict";t.exports=function(t){var e=[];return e.toString=function(){return this.map((function(e){var n=t(e);return e[2]?"@media ".concat(e[2]," {").concat(n,"}"):n})).join("")},e.i=function(t,n,s){"string"==typeof t&&(t=[[null,t,""]]);var i={};if(s)for(var r=0;r<this.length;r++){var o=this[r][0];null!=o&&(i[o]=!0)}for(var a=0;a<t.length;a++){var l=[].concat(t[a]);s&&i[l[0]]||(n&&(l[2]?l[2]="".concat(n," and ").concat(l[2]):l[2]=n),e.push(l))}},e}},function(t,e,n){n(16),n(3),n(0),n(1),n(7),n(6),n(10),n(5),n(8),n(9),n(4),t.exports=n(11)},function(t,e,n){"use strict";n.r(e);var s=n(3);Object(s.default)(),window.addEventListener("load",()=>{document.querySelector("html").classList.remove("nhsd-no-js")})}]);
-    </script>
 </body>
 
 </html>
