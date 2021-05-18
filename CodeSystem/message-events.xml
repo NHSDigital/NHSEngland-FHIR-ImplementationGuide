@@ -6,11 +6,11 @@
         <system value="https://fhir.nhs.uk/identifier/CodeSystem"/>
         <value value="message-events"/>
     </identifier>
-    <version value="1.0.11"/>
+    <version value="1.0.12"/>
     <name value="Message Events"/>
     <title value="Message Events"/>
     <status value="draft"/>
-    <date value="2020-09-17"/>
+    <date value="2021-05-15"/>
     <publisher value="NHS Digital"/>
     <contact>
         <name value="NHS Digital" />
@@ -75,5 +75,10 @@
         <code value="dispense-claim-update"/>
         <display value="Dispense Claim Update"/>
         <definition value="This message is used by the Dispensing System to notify the EPS System of an amendment to a previousy submitted dispense-claim"/>
+    </concept>
+    <concept>
+        <code value="document-notification-update"/>
+        <display value="Document Notification Update"/>
+        <definition value="This message is used by the Dispensing System to notify the EPS System of an amendment to a previousy submitted dispense-notification"/>
     </concept>
 </CodeSystem>
