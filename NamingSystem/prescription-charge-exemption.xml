@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<NamingSystem xmlns="http://hl7.org/fhir">
+    <id value="prescription-charge-exemption-ns"/>
+    <name value="Prescription Charge Exemption"/>
+    <status value="draft"/>
+    <kind value="codesystem"/>
+    <date value="2021-05-18"/>
+    <publisher value="NHS Digital"/>
+    <responsible value="NHS Digital"/>
+    <description value="Prescription Charge Exemption."/>
+    <usage value="EPS"/>
+    <uniqueId>
+        <type value="uri"/>
+        <value value="https://fhir.nhs.uk/CodeSystem/prescription-charge-exemption"/>
+        <preferred value="true"/>
+    </uniqueId>
+    <uniqueId>
+        <type value="oid"/>
+        <value value="2.16.840.1.113883.2.1.3.2.4.16.33"/>
+        <preferred value="false"/>
+    </uniqueId>
+</NamingSystem>
