@@ -1,0 +1,56 @@
+<StructureDefinition xmlns="http://hl7.org/fhir">
+    <id value="Extension-SDS-ManufacturingOrganisation" />
+    <url value="https://fhir.nhs.uk/StructureDefinition/Extension-SDS-ManufacturingOrganisation" />
+    <version value="1.0.0" />
+    <name value="ExtensionSDSManufacturingOrganisation" />
+    <title value="Extension SDS Manufacturing Organisation" />
+    <status value="draft" />
+    <date value="2020-10-12" />
+    <publisher value="NHS Digital" />
+    <contact>
+        <name value="NHS Digital" />
+        <telecom>
+            <system value="email" />
+            <value value="interoperabilityteam@nhs.uk" />
+            <use value="work" />
+            <rank value="1" />
+        </telecom>
+    </contact>
+    <description value="ODS reference that represents the manufacturing (or managing) organisation providing an Accredited System" />
+    <purpose value="This extension extends the Device resource to support the exchange of information about the manufacturing (or managing) organisation supplying an Accredited System. This information is currently not supported by the FHIR standard in the base Device resource." />
+    <copyright value="Copyright &#169; 2020 NHS Digital" />
+    <fhirVersion value="4.0.1" />
+    <mapping>
+        <identity value="rim" />
+        <uri value="http://hl7.org/v3" />
+        <name value="RIM Mapping" />
+    </mapping>
+    <kind value="primitive-type" />
+    <abstract value="false" />
+    <context>
+        <type value="element" />
+        <expression value="Device" />
+    </context>
+    <type value="Extension" />
+    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+    <derivation value="constraint" />
+    <differential>
+        <element id="Extension">
+            <path value="Extension" />
+            <short value="SDS Manufacturing Organisation" />
+            <comment value="Reference to the manufacturing, managing or supplying organisation of an Accredited System." />
+            <max value="1" />
+        </element>
+        <element id="Extension.url">
+            <path value="Extension.url" />
+            <fixedUri value="https://fhir.nhs.uk/StructureDefinition/Extension-SDS-ManufacturingOrganisation" />
+        </element>
+        <element id="Extension.value[x]">
+            <path value="Extension.value[x]" />
+            <min value="1" />
+            <type>
+                <code value="Reference" />
+            </type>
+        </element>
+    </differential>
+</StructureDefinition>
