@@ -2,28 +2,473 @@
 <html>
 
 <head>
-
     <meta charset="utf-8" />
     <title>{{ guide-title }}</title>
 
-    <!--[if IE]><link rel="shortcut icon" href="//nhs-prod.global.ssl.fastly.net/webfiles/1618312147406/icons/favicon.ico"><![endif]-->
     <link rel="apple-touch-icon" sizes="180x180" href="//nhs-prod.global.ssl.fastly.net/webfiles/1618312147406/icons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="//nhs-prod.global.ssl.fastly.net/webfiles/1618312147406/icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="//nhs-prod.global.ssl.fastly.net/webfiles/1618312147406/icons/favicon-16x16.png">
     <link rel="manifest" href="//nhs-prod.global.ssl.fastly.net/webfiles/1618312147406/icons/manifest.json">
     <link rel="mask-icon" href="//nhs-prod.global.ssl.fastly.net/webfiles/1618312147406/icons/safari-pinned-tab.svg">
-    <meta name="theme-color" content="#ffffff">
-
-    <script src="{{content}}/styles/common/jquery/jquery.min.js"></script>
-    <script src="{{content}}/styles/common/bootstrap/bootstrap.min.js"></script>
-
+    
     <link rel="stylesheet" href="{{content}}/styles/common/main.min.css" />
     <link rel="stylesheet" href="{{content}}/styles/common/bootstrap/bootstrap.min.css" />
     <link rel="stylesheet" href="{{content}}/styles/common/rendering/rendering.min.css" />
+    <link rel="stylesheet" href="{{content}}/{{style-folder}}/style.css?v={{version}}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
 
+    <link rel="stylesheet" href="https://dbs1dgg3cdf4v.cloudfront.net/cdn/latest/stylesheets/nhsd-frontend.css" />
+
+    <script src="{{content}}/styles/common/jquery/jquery.min.js"></script>
+    <script src="{{content}}/styles/common/bootstrap/bootstrap.min.js"></script>
     <script src="{{content}}/styles/common/rendering/stu3TreeTable.min.js"></script>
     <script src="{{content}}/styles/common/rendering/baseTreetable.min.js"></script>
+</head>
 
+<body>
+    <div class="nhsd-t-grid nhsd-t-grid--full-width nhsd-!t-no-gutters">
+        <!-- Header -->
+        <header>
+            <div class="nhsd-o-global-header" id="nhsd-global-header">
+                <div class="nhsd-t-grid">
+                    <div class="nhsd-t-row">
+                        <div class="nhsd-t-col">
+                            <div class="nhsd-o-global-header__content-box">
+                                <div class="nhsd-o-global-header__background"></div>
+                                <a class="nhsd-m-logo-link nhsd-o-global-header__logo" id="nhsd-global-header__logo"
+                                    href="/" aria-label="NHS Digital home">
+                                    <svg class="nhsd-a-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 60"
+                                        width="80" height="60" aria-hidden="true" focusable="false">
+                                        <rect fill="#005BBB" x="0" width="80" height="32.1"></rect>
+                                        <path fill="#FFFFFF"
+                                            d="M76.9,3.8L75.2,9c-1.3-0.6-3.2-1.2-5.7-1.2c-2.8,0-5,0.4-5,2.5c0,3.7,10.1,2.3,10.1,10.2c0,7.1-6.7,9-12.7,9c-2.7,0-5.8-0.6-8-1.3l1.6-5.3c1.4,0.9,4.1,1.5,6.4,1.5c2.2,0,5.5-0.4,5.5-3.1c0-4.2-10.1-2.6-10.1-9.9c0-6.7,5.9-8.7,11.6-8.7C72.1,2.7,75.1,3,76.9,3.8">
+                                        </path>
+                                        <polygon fill="#FFFFFF"
+                                            points="56.9,3.1 51.5,29 44.5,29 46.8,17.9 38.6,17.9 36.3,29 29.3,29 34.7,3.1 41.7,3.1 39.6,13 47.8,13 49.9,3.1   ">
+                                        </polygon>
+                                        <polygon fill="#FFFFFF"
+                                            points="32.1,3.1 26.6,29 18,29 12.5,11.1 12.5,11.1 8.8,29 2.3,29 7.8,3.1 16.5,3.1 21.8,21 21.9,21 25.6,3.1  ">
+                                        </polygon>
+                                        <rect x="63.5" y="38.5" fill="#231F20" width="3.1" height="16"></rect>
+                                        <path fill="#231F20"
+                                            d="M51.6,43.1c1.3-0.6,2.7-0.9,4.1-0.9c3.6,0,5.1,1.5,5.1,5v1.7c0,1.2,0,2.1,0,3c0,0.9,0.1,1.7,0.1,2.6h-2.7c-0.1-0.6-0.1-1.2-0.1-1.8h0c-0.7,1.3-2.2,2-3.6,2c-2.1,0-4.1-1.3-4.1-3.5c0-1.8,0.8-3,2-3.6c1.2-0.6,2.7-0.7,4-0.7H58c0-1.9-0.8-2.5-2.7-2.5c-1.3,0-2.7,0.5-3.7,1.3V43.1z M55.2,52.3c0.8,0,1.7-0.4,2.2-1.1c0.5-0.7,0.6-1.5,0.6-2.4h-1.3c-1.4,0-3.4,0.2-3.4,2C53.3,51.9,54.1,52.3,55.2,52.3">
+                                        </path>
+                                        <path fill="#231F20"
+                                            d="M42.7,45.2h-2.3v-2.2h2.3v-2.7l3.1-1v3.6h2.7v2.2h-2.7v5.3c0,1,0.3,1.9,1.4,1.9c0.5,0,1.1-0.1,1.4-0.3l0.1,2.4c-0.7,0.2-1.5,0.3-2.3,0.3c-2.4,0-3.7-1.5-3.7-3.8L42.7,45.2z">
+                                        </path>
+                                        <path fill="#231F20"
+                                            d="M35.2,38.5h3.1v2.7h-3.1V38.5z M35.2,42.9h3.1v11.6h-3.1V42.9z"></path>
+                                        <path fill="#231F20"
+                                            d="M32.6,42.9v10.7c0,3.2-1.3,6-6.2,6c-1.4,0-2.8-0.3-4.1-0.8l0.3-2.6c0.9,0.5,2.5,1,3.4,1c3.4,0,3.6-2.3,3.6-4.3h0c-0.6,1-1.9,1.9-3.7,1.9c-3.5,0-4.8-2.8-4.8-6c0-2.8,1.5-6.1,5-6.1
+    c1.6,0,2.8,0.5,3.6,1.9h0v-1.6L32.6,42.9z M29.5,48.7c0-2-0.8-3.7-2.6-3.7c-2.1,0-2.8,1.9-2.8,3.7c0,1.6,0.8,3.6,2.6,3.6C28.7,52.3,29.5,50.7,29.5,48.7">
+                                        </path>
+                                        <path fill="#231F20"
+                                            d="M15.9,38.5H19v2.7h-3.1V38.5z M15.9,42.9H19v11.6h-3.1V42.9z">
+                                        </path>
+                                        <path fill="#231F20"
+                                            d="M0,38.5h4.4c4.9,0,9.2,1.7,9.2,8s-4.3,8-9.2,8H0V38.5z M3.2,52H5c2.7,0,5.3-2,5.3-5.5C10.3,43,7.7,41,5,41H3.2V52z">
+                                        </path>
+                                    </svg>
+                                </a>
+                                <div class="nhsd-o-global-header__menu" id="nhsd-global-header__menu">
+                                    <div class="nhsd-o-global-header__menu-background"></div>
+                                    <div class="nhsd-o-global-header__menu-content-box">
+                                        <a class="nhsd-a-icon-link nhsd-o-global-header__menu-close-button"
+                                            id="nhsd-global-header__menu-close-button" href="#">
+                                            <span class="nhsd-a-icon-link__label">Close menu</span>
+                                            <span class="nhsd-a-icon nhsd-a-icon--size-m">
+                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                    preserveAspectRatio="xMidYMid meet" aria-hidden="true"
+                                                    focusable="false" viewBox="0 0 16 16" width="100%" height="100%">
+                                                    <path
+                                                        d="M8.9,8l3.1,3.1L11.1,12L8,8.9L4.9,12L4,11.1L7.1,8L4,4.9L4.9,4L8,7.1L11.1,4L12,4.9L8.9,8z">
+                                                    </path>
+                                                    <path
+                                                        d="M8,1.3c3.7,0,6.7,3,6.7,6.7s-3,6.7-6.7,6.7s-6.7-3-6.7-6.7S4.3,1.3,8,1.3 M8,0C3.6,0,0,3.6,0,8s3.6,8,8,8 s8-3.6,8-8S12.4,0,8,0L8,0z">
+                                                    </path>
+                                                </svg>
+                                            </span>
+                                        </a>
+                                        {{ dropdown-navigation }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Guide Title -->
+        <div class="nhsd-o-hero    nhsd-!t-margin-bottom-6">
+            <div class="nhsd-t-grid">
+                <div class="nhsd-t-row nhsd-t-row--centred">
+                    <div class="
+                        nhsd-t-col-xs-9 nhsd-t-col-s-10 nhsd-t-col-m-11 nhsd-t-col-l-8
+ nhsd-!t-text-align-l-left">
+                        <h1 class="nhsd-t-heading-xl nhsd-!t-margin-bottom-6 nhsd-!t-margin-top-6"
+                            data-uipath="document.title">{{guide-title}}</h1>
+                        <span class="nhsd-t-heading-s nhsd-!t-margin-bottom-6" data-uipath="document.summary">This
+                            guidance
+                            is under active development by NHS Digital and content may be added or updated on a regular
+                            basis.</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nhsd-a-digiblocks nhsd-a-digiblocks--pos-bl ">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 550 550">
+                    <g>
+                        <g transform="translate(222, 224)">
+                            <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#BFD7ED"></polygon>
+                            <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#B2CFEA"></polygon>
+                            <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#A6C7E6"></polygon>
+                        </g>
+                        <g transform="translate(328.5, 367.5)">
+                            <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#FBFAFA"></polygon>
+                            <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#F5F5F4"></polygon>
+                            <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#EFF2F1"></polygon>
+                        </g>
+                        <g transform="translate(151, 306)">
+                            <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#3C4D57"></polygon>
+                            <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#32434C"></polygon>
+                            <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#313D45"></polygon>
+                        </g>
+                        <g transform="translate(80, 306)">
+                            <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#FBFAFA"></polygon>
+                            <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#F5F5F4"></polygon>
+                            <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#EFF2F1"></polygon>
+                        </g>
+                    </g>
+                    <g>
+                        <g transform="translate(186.5, 203.5)">
+                            <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#FBFAFA"></polygon>
+                            <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#F5F5F4"></polygon>
+                            <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#EFF2F1"></polygon>
+                        </g>
+                        <g transform="translate(186.5, 285.5)">
+                            <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#00267A"></polygon>
+                            <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#001F75"></polygon>
+                            <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#001766"></polygon>
+                        </g>
+                        <g transform="translate(222, 306)">
+                            <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#00267A"></polygon>
+                            <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#001F75"></polygon>
+                            <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#001766"></polygon>
+                        </g>
+                        <g transform="translate(9, 306)">
+                            <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#00267A"></polygon>
+                            <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#001F75"></polygon>
+                            <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#001766"></polygon>
+                        </g>
+                        <g transform="translate(257.5, 449.5)">
+                            <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#F5D507"></polygon>
+                            <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#F2CB0C"></polygon>
+                            <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#EEC000"></polygon>
+                        </g>
+                    </g>
+                    <g>
+                        <g transform="translate(186.5, 203.5)">
+                            <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#6D7B86"></polygon>
+                            <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#62717A"></polygon>
+                            <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#5C6B75"></polygon>
+                        </g>
+                        <g transform="translate(399.5, 326.5)">
+                            <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#BFD7ED"></polygon>
+                            <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#B2CFEA"></polygon>
+                            <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#A6C7E6"></polygon>
+                        </g>
+                        <g transform="translate(222, 306)">
+                            <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#FBFAFA"></polygon>
+                            <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#F5F5F4"></polygon>
+                            <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#EFF2F1"></polygon>
+                        </g>
+                    </g>
+                    <g>
+                        <g transform="translate(328.5, 162.5)">
+                            <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#F5D507"></polygon>
+                            <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#F2CB0C"></polygon>
+                            <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#EEC000"></polygon>
+                        </g>
+                        <g transform="translate(399.5, 244.5)">
+                            <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#00267A"></polygon>
+                            <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#001F75"></polygon>
+                            <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#001766"></polygon>
+                        </g>
+                        <g transform="translate(115.5, 162.5)">
+                            <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#6D7B86"></polygon>
+                            <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#62717A"></polygon>
+                            <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#5C6B75"></polygon>
+                        </g>
+                        <g transform="translate(186.5, 244.5)">
+                            <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#0062CC"></polygon>
+                            <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#005ABE"></polygon>
+                            <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#0050B5"></polygon>
+                        </g>
+                        <g transform="translate(328.5, 326.5)">
+                            <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#0062CC"></polygon>
+                            <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#005ABE"></polygon>
+                            <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#0050B5"></polygon>
+                        </g>
+                        <g transform="translate(257.5, 326.5)">
+                            <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#3C4D57"></polygon>
+                            <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#32434C"></polygon>
+                            <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#313D45"></polygon>
+                        </g>
+                    </g>
+                    <g>
+                        <g transform="translate(328.5, 244.5)">
+                            <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#DADFDF"></polygon>
+                            <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#CDD5D6"></polygon>
+                            <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#C5CDCF"></polygon>
+                        </g>
+                        <g transform="translate(257.5, 285.5)">
+                            <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#0062CC"></polygon>
+                            <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#005ABE"></polygon>
+                            <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#0050B5"></polygon>
+                        </g>
+                        <g transform="translate(44.5, 203.5)">
+                            <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#6D7B86"></polygon>
+                            <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#62717A"></polygon>
+                            <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#5C6B75"></polygon>
+                        </g>
+                        <g transform="translate(151, 265)">
+                            <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#BFD7ED"></polygon>
+                            <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#B2CFEA"></polygon>
+                            <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#A6C7E6"></polygon>
+                        </g>
+                    </g>
+                    <g>
+                        <g transform="translate(435, 142)">
+                            <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#0062CC"></polygon>
+                            <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#005ABE"></polygon>
+                            <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#0050B5"></polygon>
+                        </g>
+                    </g>
+                    <g>
+                        <g transform="translate(328.5, 39.5)">
+                            <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#BFD7ED"></polygon>
+                            <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#B2CFEA"></polygon>
+                            <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#A6C7E6"></polygon>
+                        </g>
+                        <g transform="translate(222, 19)">
+                            <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#00267A"></polygon>
+                            <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#001F75"></polygon>
+                            <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#001766"></polygon>
+                        </g>
+                        <g transform="translate(257.5, 80.5)">
+                            <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#DADFDF"></polygon>
+                            <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#CDD5D6"></polygon>
+                            <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#C5CDCF"></polygon>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+
+            <div class="nhsd-a-digiblocks nhsd-a-digiblocks--pos-tr ">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 550 550">
+                    <g>
+                        <g transform="translate(222, 224)">
+                            <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#BFD7ED"></polygon>
+                            <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#B2CFEA"></polygon>
+                            <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#A6C7E6"></polygon>
+                        </g>
+                        <g transform="translate(328.5, 367.5)">
+                            <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#FBFAFA"></polygon>
+                            <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#F5F5F4"></polygon>
+                            <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#EFF2F1"></polygon>
+                        </g>
+                        <g transform="translate(151, 306)">
+                            <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#3C4D57"></polygon>
+                            <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#32434C"></polygon>
+                            <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#313D45"></polygon>
+                        </g>
+                        <g transform="translate(80, 306)">
+                            <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#FBFAFA"></polygon>
+                            <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#F5F5F4"></polygon>
+                            <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#EFF2F1"></polygon>
+                        </g>
+                    </g>
+                    <g>
+                        <g transform="translate(186.5, 203.5)">
+                            <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#FBFAFA"></polygon>
+                            <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#F5F5F4"></polygon>
+                            <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#EFF2F1"></polygon>
+                        </g>
+                        <g transform="translate(186.5, 285.5)">
+                            <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#00267A"></polygon>
+                            <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#001F75"></polygon>
+                            <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#001766"></polygon>
+                        </g>
+                        <g transform="translate(222, 306)">
+                            <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#00267A"></polygon>
+                            <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#001F75"></polygon>
+                            <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#001766"></polygon>
+                        </g>
+                        <g transform="translate(9, 306)">
+                            <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#00267A"></polygon>
+                            <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#001F75"></polygon>
+                            <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#001766"></polygon>
+                        </g>
+                        <g transform="translate(257.5, 449.5)">
+                            <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#F5D507"></polygon>
+                            <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#F2CB0C"></polygon>
+                            <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#EEC000"></polygon>
+                        </g>
+                    </g>
+                    <g>
+                        <g transform="translate(186.5, 203.5)">
+                            <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#6D7B86"></polygon>
+                            <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#62717A"></polygon>
+                            <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#5C6B75"></polygon>
+                        </g>
+                        <g transform="translate(399.5, 326.5)">
+                            <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#BFD7ED"></polygon>
+                            <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#B2CFEA"></polygon>
+                            <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#A6C7E6"></polygon>
+                        </g>
+                        <g transform="translate(222, 306)">
+                            <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#FBFAFA"></polygon>
+                            <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#F5F5F4"></polygon>
+                            <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#EFF2F1"></polygon>
+                        </g>
+                    </g>
+                    <g>
+                        <g transform="translate(328.5, 162.5)">
+                            <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#F5D507"></polygon>
+                            <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#F2CB0C"></polygon>
+                            <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#EEC000"></polygon>
+                        </g>
+                        <g transform="translate(399.5, 244.5)">
+                            <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#00267A"></polygon>
+                            <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#001F75"></polygon>
+                            <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#001766"></polygon>
+                        </g>
+                        <g transform="translate(115.5, 162.5)">
+                            <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#6D7B86"></polygon>
+                            <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#62717A"></polygon>
+                            <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#5C6B75"></polygon>
+                        </g>
+                        <g transform="translate(186.5, 244.5)">
+                            <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#0062CC"></polygon>
+                            <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#005ABE"></polygon>
+                            <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#0050B5"></polygon>
+                        </g>
+                        <g transform="translate(328.5, 326.5)">
+                            <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#0062CC"></polygon>
+                            <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#005ABE"></polygon>
+                            <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#0050B5"></polygon>
+                        </g>
+                        <g transform="translate(257.5, 326.5)">
+                            <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#3C4D57"></polygon>
+                            <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#32434C"></polygon>
+                            <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#313D45"></polygon>
+                        </g>
+                    </g>
+                    <g>
+                        <g transform="translate(328.5, 244.5)">
+                            <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#DADFDF"></polygon>
+                            <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#CDD5D6"></polygon>
+                            <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#C5CDCF"></polygon>
+                        </g>
+                        <g transform="translate(257.5, 285.5)">
+                            <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#0062CC"></polygon>
+                            <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#005ABE"></polygon>
+                            <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#0050B5"></polygon>
+                        </g>
+                        <g transform="translate(44.5, 203.5)">
+                            <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#6D7B86"></polygon>
+                            <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#62717A"></polygon>
+                            <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#5C6B75"></polygon>
+                        </g>
+                        <g transform="translate(151, 265)">
+                            <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#BFD7ED"></polygon>
+                            <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#B2CFEA"></polygon>
+                            <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#A6C7E6"></polygon>
+                        </g>
+                    </g>
+                    <g>
+                        <g transform="translate(435, 142)">
+                            <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#0062CC"></polygon>
+                            <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#005ABE"></polygon>
+                            <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#0050B5"></polygon>
+                        </g>
+                    </g>
+                    <g>
+                        <g transform="translate(328.5, 39.5)">
+                            <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#BFD7ED"></polygon>
+                            <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#B2CFEA"></polygon>
+                            <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#A6C7E6"></polygon>
+                        </g>
+                        <g transform="translate(222, 19)">
+                            <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#00267A"></polygon>
+                            <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#001F75"></polygon>
+                            <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#001766"></polygon>
+                        </g>
+                        <g transform="translate(257.5, 80.5)">
+                            <polygon points="0,20.5 35.5,0 71,20.5 35.5,41" fill="#DADFDF"></polygon>
+                            <polygon points="35.5,82 71,61.4 71,20.5 35.5,41" fill="#CDD5D6"></polygon>
+                            <polygon points="0,20.5 0,61.4 35.5,82 35.5,41" fill="#C5CDCF"></polygon>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+        </div>
+
+        <!-- Main content -->
+        <main id="main-content">
+            <article>
+                <div class="nhsd-t-grid">
+                    <div class="nhsd-t-row">
+                        <!-- Dynamic content -->
+                        {{ page-with-children }}
+                    </div>
+                </div>
+            </article>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <div class="nhsd-o-global-footer">
+                <div class="nhsd-t-grid">
+                    <div class="nhsd-t-row">
+                        <div class="nhsd-t-col-12 nhsd-!t-no-gutters">
+                            <div class="nhsd-t-grid">
+                                <div class="nhsd-t-row">
+                                    <div class="nhsd-t-col-xs-12 nhsd-t-col-s-6 nhsd-t-col-l-3 nhsd-!t-padding-0 nhsd-!t-margin-bottom-3">
+                                        <a href="http://hl7.org/fhir/{{guide-fhir-version}}/">
+                                            <img src="{{content}}/{{style-folder}}/fhir-logo.png?v={{version}}" alt="logo fhir" class="img-responsive">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="nhsd-t-row">
+                                    <div class="nhsd-t-col-xs-6 nhsd-t-col-s-6 nhsd-t-col-l-6 nhsd-!t-padding-0">
+                                        <p>Powered by <b>SIMPLIFIER.NET</b></p>
+                                        <p>
+                                            HL7<sup>&reg;</sup> and FHIR<sup>&reg;</sup> are the registered trademarks of Health Level Seven
+                                            International
+                                        </p>
+                                    </div>
+                                    <div class="nhsd-t-col-xs-6 nhsd-t-col-s-6 nhsd-t-col-l-6 nhsd-!t-padding-0">
+                                        <span><strong>Guide Version:</strong> {{ guide-version }}</span>
+                                        <br />
+                                        <span><strong>FHIR Version:</strong> {{ guide-fhir-version }}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Scroll back to top of page button -->
+        <span id="back-to-top" class="nhsd-a-button" onclick="goBackToTop()">
+            <span class="nhsd-a-button__label">back to top</span>
+        </span>
+    </div>
+
+    <!-- Legacy openTab() function for existing NHS-D guides -->
     <script>
         function openTab(evt, tabName) {
             var i, tabcontent, tablinks;
@@ -40,69 +485,92 @@
         }
     </script>
 
+    <!-- Back to top button functionality -->
+    <script>
+        var backToTopButton = document.getElementById("back-to-top");
 
-    <link rel="stylesheet" href="{{content}}/{{style-folder}}/style.css?v={{version}}" />
+        // When the user scrolls down 100px from the top of the document, show the button
+        window.onscroll = function () { showTopButton() };
 
-</head>
+        function showTopButton() {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        }
 
-<body>
+        // When the user clicks on the button, scroll to the top of the document
+        function goBackToTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+            $(window.location)[0].replace("#");
+        }
+    </script>
 
-    <header>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 fhir-logo">
-                    <a href="http://hl7.org/fhir/{{guide-fhir-version}}/">
-                        <img src="{{content}}/{{style-folder}}/fhir-logo.png?v={{version}}" alt="logo fhir">
-                    </a>
-                </div>
-                <div class="col-md-16 title">
-                    <div>
-                        <a href="/">
-                            {{ guide-title }}
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-4 hl7-logo">
-                    <a href="http://digital.nhs.uk">
-                        <img src="https://digital.nhs.uk/webfiles/1576854238445/images/nhs-digital-logo.svg"
-                            alt="visit the NHS Digital website" width="89" height="auto" target="_blank">
-                    </a>
-                </div>
-            </div>
-        </div>
-        {{ dropdown-navigation }}
-    </header>
+    <!-- floatThead - simplifier does not allow remote scripts so added here -->
+    <script>
+        /** @preserve jQuery.floatThead 2.2.1 - https://mkoryak.github.io/floatThead/ - Copyright (c) 2012 - 2020 Misha Koryak **/
+        !function (bt) { bt.floatThead = bt.floatThead || {}, bt.floatThead.defaults = { headerCellSelector: "tr:visible:first>*:visible", zIndex: 1001, position: "auto", top: 0, bottom: 0, scrollContainer: function (t) { return bt([]) }, responsiveContainer: function (t) { return bt([]) }, getSizingRow: function (t, e, o) { return t.find("tbody tr:visible:first>*:visible") }, ariaLabel: function (t, e, o) { return e.text() }, floatTableClass: "floatThead-table", floatWrapperClass: "floatThead-wrapper", floatContainerClass: "floatThead-container", copyTableClass: !0, autoReflow: !1, debug: !1, support: { bootstrap: !0, datatables: !0, jqueryUI: !0, perfectScrollbar: !0 }, floatContainerCss: { "overflow-x": "hidden" } }; var wt = function () { var n = {}, o = Object.prototype.hasOwnProperty; n.has = function (t, e) { return o.call(t, e) }, n.keys = Object.keys || function (t) { if (t !== Object(t)) throw new TypeError("Invalid object"); var e = []; for (var o in t) n.has(t, o) && e.push(o); return e }; var r = 0; return n.uniqueId = function (t) { var e = ++r + ""; return t ? t + e : e }, bt.each(["Arguments", "Function", "String", "Number", "Date", "RegExp"], function () { var e = this; n["is" + e] = function (t) { return Object.prototype.toString.call(t) === "[object " + e + "]" } }), n.debounce = function (o, n, r) { var a, i, l, s, d; return function () { l = this, i = arguments, s = new Date; var e = function () { var t = new Date - s; t < n ? a = setTimeout(e, n - t) : (a = null, r || (d = o.apply(l, i))) }, t = r && !a; return a || (a = setTimeout(e, n)), t && (d = o.apply(l, i)), d } }, n }(), gt = "undefined" != typeof MutationObserver, mt = function () { for (var t = 3, e = document.createElement("b"), o = e.all || []; t = 1 + t, e.innerHTML = "\x3c!--[if gt IE " + t + "]><i><![endif]--\x3e", o[0];); return 4 < t ? t : document.documentMode }(), t = /Gecko\//.test(navigator.userAgent), yt = /WebKit\//.test(navigator.userAgent), Tt = /rtl/i.test(document.documentElement.dir || ""); mt || t || yt || (mt = 11); var l = function () { if (yt) { var t = bt("<div>").css("width", 0).append(bt("<table>").css("max-width", "100%").append(bt("<tr>").append(bt("<th>").append(bt("<div>").css("min-width", 100).text("X"))))); bt("body").append(t); var e = 0 === t.find("table").width(); return t.remove(), e } return !1 }, Ct = !t && !mt, xt = bt(window), Lt = t && window.matchMedia; if (!window.matchMedia || Lt) { var e = window.onbeforeprint, o = window.onafterprint; window.onbeforeprint = function () { e && e(), xt.triggerHandler("fth-beforeprint") }, window.onafterprint = function () { o && o(), xt.triggerHandler("fth-afterprint") } } function St(t) { var e = t[0].parentElement; do { if ("visible" !== window.getComputedStyle(e).getPropertyValue("overflow")) break } while (e = e.parentElement); return e === document.body ? bt([]) : bt(e) } function jt(t) { window && window.console && window.console.error && window.console.error("jQuery.floatThead: " + t) } function zt(t) { var e = t.getBoundingClientRect(); return e.width || e.right - e.left } function It() { var t = document.createElement("scrolltester"); t.style.cssText = "width:100px;height:100px;overflow:scroll!important;position:absolute;top:-9999px;display:block", document.body.appendChild(t); var e = t.offsetWidth - t.clientWidth; return document.body.removeChild(t), e } function Ht(t, e, o) { var n = o ? "outerWidth" : "width"; if (l && t.css("max-width")) { var r = 0; o && (r += parseInt(t.css("borderLeft"), 10), r += parseInt(t.css("borderRight"), 10)); for (var a = 0; a < e.length; a++)r += zt(e.get(a)); return r } return t[n]() } bt.fn.floatThead = function (t) { if (t = t || {}, mt < 8) return this; if (wt.isFunction(l) && (l = l()), wt.isString(t)) { var r = t, a = Array.prototype.slice.call(arguments, 1), i = this; return this.filter("table").each(function () { var t = bt(this), e = t.data("floatThead-lazy"); e && t.floatThead(e); var o = t.data("floatThead-attached"); if (o && wt.isFunction(o[r])) { var n = o[r].apply(this, a); void 0 !== n && (i = n) } }), i } var vt = bt.extend({}, bt.floatThead.defaults || {}, t); if (bt.each(t, function (t, e) { t in bt.floatThead.defaults || !vt.debug || jt("Used [" + t + "] key to init plugin, but that param is not an option for the plugin. Valid options are: " + wt.keys(bt.floatThead.defaults).join(", ")) }), vt.debug) { var e = bt.fn.jquery.split("."); 1 === parseInt(e[0], 10) && parseInt(e[1], 10) <= 7 && jt("jQuery version " + bt.fn.jquery + " detected! This plugin supports 1.8 or better, or 1.7.x with jQuery UI 1.8.24 -> http://jqueryui.com/resources/download/jquery-ui-1.8.24.zip") } return this.filter(":not(." + vt.floatTableClass + ")").each(function () { var e = wt.uniqueId(), m = bt(this); if (m.data("floatThead-attached")) return !0; if (!m.is("table")) throw new Error('jQuery.floatThead must be run on a table element. ex: $("table").floatThead();'); var o = vt.autoReflow && gt, n = null, d = m.children("thead:first"), r = m.children("tbody:first"); if (0 === d.length || 0 === r.length) return vt.debug && (0 === d.length ? jt("The thead element is missing.") : jt("The tbody element is missing.")), m.data("floatThead-lazy", vt), void m.unbind("reflow").one("reflow", function () { m.floatThead(vt) }); m.data("floatThead-lazy") && m.unbind("reflow"), m.data("floatThead-lazy", !1); var y, T, a = !0, C = { vertical: 0, horizontal: 0 }; wt.isFunction(It) && (It = It()); var i = 0; !0 === vt.scrollContainer && (vt.scrollContainer = St); var x = vt.scrollContainer(m) || bt([]), L = 0 < x.length, S = L ? bt([]) : vt.responsiveContainer(m) || bt([]), j = _(), z = null; "auto" === vt.position ? z = null : "fixed" === vt.position ? z = !1 : "absolute" === vt.position ? z = !0 : vt.debug && jt('Invalid value given to "position" option, valid is "fixed", "absolute" and "auto". You passed: ', vt.position), null == z && (z = L); var I = m.find("caption"), H = 1 === I.length; if (H) var W = "top" === (I.css("caption-side") || I.attr("align") || "top"); var l = bt("<fthfoot>").css({ display: "table-footer-group", "border-spacing": 0, height: 0, "border-collapse": "collapse", visibility: "hidden" }), q = !1, s = bt([]), R = mt <= 9 && !L && z, f = bt("<table/>"), c = bt("<colgroup/>"), u = m.children("colgroup:first"), p = !0; 0 === u.length && (u = bt("<colgroup/>"), p = !1); var h = p ? "col:visible" : "col", v = bt("<fthtr>").css({ display: "table-row", "border-spacing": 0, height: 0, "border-collapse": "collapse" }), E = bt("<div>").css(vt.floatContainerCss).attr("aria-hidden", "true"), M = !1, b = bt("<thead/>"), w = bt('<tr class="size-row"/>'), g = bt([]), k = bt([]), D = bt([]), F = bt([]); b.append(w), m.prepend(u), Ct && (l.append(v), m.append(l)), f.append(c), E.append(f), vt.copyTableClass && f.attr("class", m.attr("class")), f.attr({ cellpadding: m.attr("cellpadding"), cellspacing: m.attr("cellspacing"), border: m.attr("border") }); var t = m.css("display"); if (f.css({ borderCollapse: m.css("borderCollapse"), border: m.css("border"), display: t }), L || f.css("width", "auto"), "none" === t && (M = !0), f.addClass(vt.floatTableClass).css({ margin: 0, "border-bottom-width": 0 }), z) { var O = function (t, e) { var o = t.css("position"), n = t; if (!("relative" === o || "absolute" === o) || e) { var r = { paddingLeft: t.css("paddingLeft"), paddingRight: t.css("paddingRight") }; E.css(r), n = t.data("floatThead-containerWrap") || t.wrap(bt("<div>").addClass(vt.floatWrapperClass).css({ position: "relative", clear: "both" })).parent(), t.data("floatThead-containerWrap", n), q = !0 } return n }; L ? (s = O(x, !0)).prepend(E) : (s = O(m), m.before(E)) } else m.before(E); E.css({ position: z ? "absolute" : "fixed", marginTop: 0, top: z ? 0 : "auto", zIndex: vt.zIndex, willChange: "transform" }), E.addClass(vt.floatContainerClass), V(); var N = { "table-layout": "fixed" }, A = { "table-layout": m.css("tableLayout") || "auto" }, Q = m[0].style.width || "", U = m.css("minWidth") || ""; function G(t) { return t + ".fth-" + e + ".floatTHead" } function P() { var t = 0; if (d.children("tr:visible").each(function () { t += bt(this).outerHeight(!0) }), "collapse" === m.css("border-collapse")) { var e = parseInt(m.css("border-top-width"), 10); parseInt(m.find("thead tr:first").find(">*:first").css("border-top-width"), 10) < e && (t -= e / 2) } w.outerHeight(t), g.outerHeight(t) } function V() { y = (wt.isFunction(vt.top) ? vt.top(m) : vt.top) || 0, T = (wt.isFunction(vt.bottom) ? vt.bottom(m) : vt.bottom) || 0 } function X() { if (!a) { if (a = !0, z) { var t = Ht(m, F, !0); s.width() < t && m.css("minWidth", t) } m.css(N), f.css(N), f.append(d), r.before(b), P() } } function Y() { a && (a = !1, z && m.width(Q), b.detach(), m.prepend(d), m.css(A), f.css(A), m.css("minWidth", U), m.css("minWidth", Ht(m, F))) } var B = !1; function K(t) { B !== t && (B = t, m.triggerHandler("floatThead", [t, E])) } function $(t) { z !== t && (z = t, E.css({ position: z ? "absolute" : "fixed" })) } function J() { var l, s = function () { var t, e = d.find(vt.headerCellSelector); if (p ? t = u.find(h).length : (t = 0, e.each(function () { t += parseInt(bt(this).attr("colspan") || 1, 10) })), t !== i) { i = t; var o = [], n = []; w.empty(); for (var r = 0; r < t; r++) { var a = document.createElement("th"); a.setAttribute("aria-label", vt.ariaLabel(m, e.eq(r), r)), a.className = "floatThead-col", w[0].appendChild(a), o.push("<col/>"), n.push(bt("<fthtd>").css({ display: "table-cell", height: 0, width: "auto" })) } o = p ? u.html() : o.join(""), Ct && (v.empty(), v.append(n), F = v.find("fthtd")), g = w.find("th"), p || u.html(o), k = u.find(h), c.html(o), D = c.find(h) } return t }(); return function () { var t = E.scrollLeft(); k = u.find(h); var e, o, n, r, a = (e = m, o = k, n = F, r = mt, Ct ? n : r ? vt.getSizingRow(e, o, n) : o); if (a.length === s && 0 < s) { if (!p) for (l = 0; l < s; l++)k.eq(l).css("width", ""); Y(); var i = []; for (l = 0; l < s; l++)i[l] = zt(a.get(l)); for (l = 0; l < s; l++)D.eq(l).width(i[l]), k.eq(l).width(i[l]); X() } else f.append(d), m.css(A), f.css(A), P(); E.scrollLeft(t), m.triggerHandler("reflowed", [E]) } } function Z(t) { var e = x.css("border-" + t + "-width"), o = 0; return e && ~e.indexOf("px") && (o = parseInt(e, 10)), o } function _() { return "auto" === S.css("overflow-x") } function tt() { var i, l = x.scrollTop(), s = 0, d = H ? I.outerHeight(!0) : 0, f = W ? d : -d, c = E.height(), u = m.offset(), p = 0, h = 0; if (L) { var t = x.offset(); s = u.top - t.top + l, H && W && (s += d), p = Z("left"), h = Z("top"), s -= h } else i = u.top - y - c + T + C.horizontal; var v = xt.scrollTop(), b = xt.scrollLeft(), w = function () { return (_() ? S : x).scrollLeft() || 0 }, g = w(); return function (t) { j = _(); var e = m[0].offsetWidth <= 0 && m[0].offsetHeight <= 0; if (!e && M) return M = !1, setTimeout(function () { m.triggerHandler("reflow") }, 1), null; if (e && (M = !0, !z)) return null; if ("windowScroll" === t) v = xt.scrollTop(), b = xt.scrollLeft(); else if ("containerScroll" === t) if (S.length) { if (!j) return; g = S.scrollLeft() } else l = x.scrollTop(), g = x.scrollLeft(); else "init" !== t && (v = xt.scrollTop(), b = xt.scrollLeft(), l = x.scrollTop(), g = w()); if (!yt || !(v < 0 || Tt && 0 < b || !Tt && b < 0)) { if (R) $("windowScrollDone" === t); else if ("windowScrollDone" === t) return null; var o, n; u = m.offset(), H && W && (u.top += d); var r = m.outerHeight(); if (L && z) { if (l <= s) { var a = s - l + h; o = 0 < a ? a : 0, K(!1) } else r - c < l - s ? o = r - c - l - s : (o = q ? h : l, K(!0)); n = p } else !L && z ? (i + r + f < v ? o = r - c + f + T : u.top >= v + y ? (o = 0, Y(), K(!1)) : (o = y + v - u.top + s + (W ? d : 0), X(), K(!0)), n = g) : L && !z ? (l < s || r < l - s ? (o = u.top - v, Y(), K(!1)) : (o = u.top + l - v - s, X(), K(!0)), n = u.left + g - b) : L || z || (i + r + f < v ? o = r + y - v + i + f : u.top > v + y ? (o = u.top - v, X(), K(!1)) : (o = y, K(!0)), n = u.left + g - b); return { top: Math.round(o), left: Math.round(n) } } } } function et() { var i = null, l = null, s = null; return function (t, e, o) { if (null != t && (i !== t.top || l !== t.left)) { if (8 === mt) E.css({ top: t.top, left: t.left }); else { var n = "translateX(" + t.left + "px) translateY(" + t.top + "px)", r = { "-webkit-transform": n, "-moz-transform": n, "-ms-transform": n, "-o-transform": n, transform: n, top: 0, left: 0 }; E.css(r) } i = t.top, l = t.left } e && function () { var t = Ht(m, F, !0), e = j ? S : x, o = e.length ? zt(e[0]) : t, n = "hidden" !== e.css("overflow-y") ? o - C.vertical : o; if (E.width(n), L) { var r = 100 * t / n; f.css("width", r + "%") } else f.css("width", t + "px") }(), o && P(); var a = (j ? S : x).scrollLeft(); z && s === a || (E.scrollLeft(a), s = a) } } function ot() { if (x.length) if (vt.support && vt.support.perfectScrollbar && x.data().perfectScrollbar) C = { horizontal: 0, vertical: 0 }; else { if ("scroll" === x.css("overflow-x")) C.horizontal = It; else { var t = x.width(), e = Ht(m, F), o = n < r ? It : 0; C.horizontal = t - o < e ? It : 0 } if ("scroll" === x.css("overflow-y")) C.vertical = It; else { var n = x.height(), r = m.height(), a = t < e ? It : 0; C.vertical = n - a < r ? It : 0 } } } ot(); var nt = function () { J()() }; nt(); var rt = tt(), at = et(); at(rt("init"), !0); var it = wt.debounce(function () { at(rt("windowScrollDone"), !1) }, 1), lt = function () { at(rt("windowScroll"), !1), R && it() }, st = function () { at(rt("containerScroll"), !1) }, dt = wt.debounce(function () { m.is(":hidden") || (ot(), V(), nt(), rt = tt(), at(rt("reflow"), !0, !0)) }, 1), ft = function () { Y() }, ct = function () { X() }, ut = function (t) { t.matches ? ft() : ct() }, pt = null; if (window.matchMedia && window.matchMedia("print").addListener && !Lt ? (pt = window.matchMedia("print")).addListener(ut) : (xt.on("fth-beforeprint", ft), xt.on("fth-afterprint", ct)), L ? z ? x.on(G("scroll"), st) : (x.on(G("scroll"), st), xt.on(G("scroll"), lt)) : (S.on(G("scroll"), st), xt.on(G("scroll"), lt)), xt.on(G("load"), dt), function (t, e) { if (8 === mt) { var o = xt.width(), n = wt.debounce(function () { var t = xt.width(); o !== t && (o = t, e()) }, 1); xt.on(t, n) } else xt.on(t, wt.debounce(e, 1)) }(G("resize"), function () { m.is(":hidden") || (V(), ot(), nt(), rt = tt(), (at = et())(rt("resize"), !0, !0)) }), m.on("reflow", dt), vt.support && vt.support.datatables && function (t) { if (t.dataTableSettings) for (var e = 0; e < t.dataTableSettings.length; e++) { var o = t.dataTableSettings[e].nTable; if (t[0] === o) return !0 } return !1 }(m) && m.on("filter", dt).on("sort", dt).on("page", dt), vt.support && vt.support.bootstrap && xt.on(G("shown.bs.tab"), dt), vt.support && vt.support.jqueryUI && xt.on(G("tabsactivate"), dt), o) { var ht = null; wt.isFunction(vt.autoReflow) && (ht = vt.autoReflow(m, x)), ht || (ht = x.length ? x[0] : m[0]), (n = new MutationObserver(function (t) { for (var e = function (t) { return t && t[0] && ("THEAD" === t[0].nodeName || "TD" === t[0].nodeName || "TH" === t[0].nodeName) }, o = 0; o < t.length; o++)if (!e(t[o].addedNodes) && !e(t[o].removedNodes)) { dt(); break } })).observe(ht, { childList: !0, subtree: !0 }) } m.data("floatThead-attached", { destroy: function () { var t = ".fth-" + e; return Y(), m.css(A), u.remove(), Ct && l.remove(), b.parent().length && b.replaceWith(d), K(!1), o && (n.disconnect(), n = null), m.off("reflow reflowed"), x.off(t), S.off(t), q && (x.length ? x.unwrap() : m.unwrap()), L ? x.data("floatThead-containerWrap", !1) : m.data("floatThead-containerWrap", !1), m.css("minWidth", U), E.remove(), m.data("floatThead-attached", !1), xt.off(t), xt.off("fth-beforeprint fth-afterprint"), pt && pt.removeListener(ut), ft = ct = function () { }, function () { return m.floatThead(vt) } }, reflow: function () { dt() }, setHeaderHeight: function () { P() }, getFloatContainer: function () { return E }, getRowGroups: function () { return a ? E.find(">table>thead").add(m.children("tbody,tfoot")) : m.children("thead,tbody,tfoot") } }) }), this } }(function () { var t = window.jQuery; return "undefined" != typeof module && module.exports && !t && (t = require("jquery")), t }());
+    </script>
 
-    <div markdown="span" class="alert alert-warning" role="alert"><i class="fa fa-warning"></i><b> Please note:</b>
-        <ul>
-            <li>This is a WIP development version of the NHS Digital FHIR Implementation Guide.</li>
+    <!-- apply sticky header to all tables -->
+    <script>$(() => $('table').floatThead());</script>
 
-        </ul>
-    </div>
+    <!-- Ensures footer is at the bottom of the page -->
+    <script>
+        $(function () {
+            updateFooterPosition();
+        });
+
+        $(window).resize(function () {
+            updateFooterPosition();
+        });
+
+        function updateFooterPosition() {
+            var bottomOfFooter = $('footer').offset().top + $('footer').outerHeight(true);
+            var heightShortage = $(document).height() - bottomOfFooter;
+            if (heightShortage < 0) heightShortage = 0;
+            $('footer').css('margin-top', heightShortage);
+        }
+    </script>
 
 
-    <div class="content container">
-        {{ page-with-children }}
-    </div>
+    <!-- Apply NHS-D skin to simplifier / bootstrap content -->
+    <script>
+        $("main h1").addClass("nhsd-t-heading-l");
+        $("main h2").addClass("nhsd-t-heading-m");
+        $("main h3").addClass("nhsd-t-heading-s");
+        $("main h4").addClass("nhsd-t-heading-xs");
+        $("main table").not(".treetable").addClass("nhsd-m-table");
+        $("main a:not([role='tab'], .nhsd-a-button, pre a)").addClass("nhsd-a-link");
+        // $("main code").addClass("nhsd-a-text-highlight--code"); // not sure about this
+        $("hr").addClass("nhsd-a-horizontal-rule nhsd-!t-margin-bottom-6");
+        $("p").addClass("nhsd-t-body");
+        $("blockquote").each(function(e) {
+            var element = this;
+            var blockquote = $(element).html();
+            var text = $(blockquote).text();
 
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div>
-                    <span>Version: {{ guide-version }}</span>
-                    <span>FHIR Version: {{ guide-fhir-version }}</span>
-                </div>
-                <br />
-                <p>Powered by <b>SIMPLIFIER.NET</b></p>
-                <div>
-                    HL7<sup>&reg;</sup> and FHIR<sup>&reg;</sup> are the registered trademarks of Health Level Seven
-                    International
-                </div>
-            </div>
-        </div>
-    </footer>
+            $(element).html("<div class=\"nhsd-m-quote nhsd-!t-margin-bottom-3\"><div class=\"nhsd-a-box nhsd-a-box--bg-light-grey\"><figure><blockquote><span class=\"nhsd-a-icon nhsd-a-icon--size-xl nhsd-a-icon--col-blue\"><svg xmlns=\"http://www.w3.org/2000/svg\" preserveAspectRatio=\"xMidYMid meet\" aria-hidden=\"true\" focusable=\"false\" viewBox=\"0 0 16 16\"  width=\"100%\" height=\"100%\"><path d=\"M7.5,16H0V7.5c0-4.4,3.3-6.4,6.4-6.4v3.2c-0.8,0-3.2,0.2-3.2,3.2v1.1h4.3C7.5,8.5,7.5,16,7.5,16z M16,16H8.5V7.5 c0-4.4,3.3-6.4,6.4-6.4v3.2c-0.8,0-3.2,0.2-3.2,3.2v1.1H16V16z\"/></svg></span>"+text+"</blockquote></figure></div></div>");
+        });
 
+        // Main navigation
+        $("header .navbar").find(".container").removeClass("container");
+
+        // Fix sidebar navigation
+        $("main ul:not(.nav)").addClass("nhsd-t-list nhsd-t-list--bullet");
+        $("main ol").addClass("nhsd-t-list nhsd-t-list--number");
+        $("main .nav-pills.nav-stacked").find("li").addClass("nhsd-m-sticky-navigation__item");
+        $("main .nav-pills.nav-stacked").removeClass("nav-pills").removeClass("nav-stacked").removeClass("nav");
+        $(".nhsd-m-sticky-navigation__item").find("a").addClass("nhsd-a-link");
+        $(".nhsd-m-sticky-navigation__item").parent().parent().prepend("<span id=\"sticky-nav-header\" class=\"nhsd-t-heading-xs nhsd-!t-margin-bottom-2\">Page contents</span><hr class=\"nhsd-a-horizontal-rule nhsd-a-horizontal-rule--size-xs nhsd-!t-margin-bottom-2\">");
+
+        // Use NHS-D Grid system
+        $(".nhsd-t-row").find(".row").children().unwrap();
+        $(".col-md-6").addClass("nhsd-t-col-xs-12 nhsd-t-col-s-4").removeClass("col-md-6");
+        $(".col-md-18").addClass("nhsd-t-col-xs-12 nhsd-t-col-s-8").removeClass("col-md-18")
+    </script>
 </body>
 
 </html>
