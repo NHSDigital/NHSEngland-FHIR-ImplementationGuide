@@ -12,7 +12,7 @@
     <uniqueId>
         <type value="uri"/>
         <value value="https://fhir.nhs.uk/CodeSystem/DM-prescription-treatment-type"/>
-        <preferred value="false"/>
+        <preferred value="true"/>
     </uniqueId>
     <uniqueId>
         <type value="oid"/>
