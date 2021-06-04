@@ -7,20 +7,20 @@
         <system value="https://fhir.nhs.uk/identifier/CodeSystem"/>
         <value value="EPS-IssueCode"/>
     </identifier>
-    <version value="1.1.3"/>
+    <version value="17.22"/>
     <name value="EPS Issue Codes"/>
     <title value="EPS Issue Codes"/>
     <status value="draft"/>
-    <date value="2021-02-05"/>
+    <date value="2021-06-04"/>
     <publisher value="NHS Digital"/>
     <contact>
         <name value="Interoperability Team"/>
         <telecom>
-           <system value="email"/>
-           <value value="interoperabilityteam@nhs.net"/>
-           <use value="work"/>
+            <system value="email"/>
+            <value value="interoperabilityteam@nhs.net"/>
+            <use value="work"/>
         </telecom>
-     </contact>
+    </contact>
     <description value="EPS Issue Codes"/>
     <caseSensitive value="true"/>
     <content value="complete"/>
@@ -42,7 +42,7 @@
         <display value="Digital signature not found"/>
         <definition value="The System must create and apply a digital signature to the prescription and re-submit the prescription to the Spine" />
     </concept>
-<!-- <concept>
+    <!-- <concept>
     Spine Error INVALID_RESOURCE_ID
         <code value="0007"/>
         <display value="Patient not found"/>
@@ -59,7 +59,7 @@
         <code value="INVALID_MESSAGE"/>
         <display value="Invalid message"/>
         <definition value="The prescription message has failed structural validation at the Spine. A defect report should be raised against the local System or the Spine (whichever is in error). The prescriber must be notified accordingly to use a paper FP10 prescription." />
-    </concept> 
+    </concept>
     <concept>
         <!-- 0010 -->
         <code value="INVALID_NUMBER_MEDICATIONREQUESTS"/>
@@ -102,10 +102,10 @@
         <display value="Format of date passed is invalid"/>
         <definition value="The format of a date/time attribute with the prescription does not confirm with the format defined within the DMS. The System must correct the date/time attribute and re-submit the prescription to the Spine." />
     </concept>
-    <!-- From https://fhir.nhs.uk/ValueSet/DM-prescription-release-rejection-reason --> 
+    <!-- From https://fhir.nhs.uk/ValueSet/DM-prescription-release-rejection-reason -->
     <concept>
-       <!-- <code value="0001"></code> -->
-       <code value="PRESCRIPTION_CANCELLED"></code>
+        <!-- <code value="0001"></code> -->
+        <code value="PRESCRIPTION_CANCELLED"></code>
         <display value="Prescription has been cancelled" />
         <definition value="Inform the dispenser to advise the patient that their prescription has been cancelled" />
     </concept>
@@ -139,4 +139,58 @@
         <display value="functionality disabled in spine" />
         <definition value="The Spine nomination functionality has been disabled at the request of the Authority and the message is rejected. The request will not be processed. However, the prescription request by prescription unique identifier should be available." />
     </concept>
+
+    <!-- 
+    https://nhsd-jira.digital.nhs.uk/browse/AEA-1376
+    The following codes are in the 17.22
+
+    0005 Prescription can not be found. Contact prescriber
+    This has a different name need to understand why
+
+0012 Invalid State Transition for Prescription
+0013 Invalid State Transition for Item
+0014 Prescription Item Not found
+0015 Invalid Claim. Prescription is not Dispensed
+0021 Dispense Amendment/Cancellation Request does not pertain to Last Dispense
+0100 Claim amendment is not permitted outside of the claim period
+
+7002 Invalid request received
+Use INVALID_MESSAGE?
+
+9999 Unexpected Exception Occurred while processing 
+Is this the same as FAILURE_TO_PROCESS_MESSAGE 
+
+-->
+
+    <concept>
+        <!-- <code value="0012"></code> -->
+        <code value="PRESCRIPTION_INVALID_STATE_TRANSITION" />
+        <display value="Invalid State Transition for Prescription" />
+    </concept>
+    <concept>
+        <!-- <code value="0013"></code> -->
+        <code value="MEDICATIONREQUEST_INVALID_STATE_TRANSITION" />
+        <display value="Invalid State Transition for Prescription Item" />
+    </concept>
+    <concept>
+        <!-- <code value="0014"></code> -->
+        <code value="MEDICATIONREQUEST_NOT_FOUND" />
+        <display value="Prescription Item Not found" />
+    </concept>
+    <concept>
+        <!-- <code value="0015"></code> -->
+        <code value="CLAIM_INVALID_NOT_DISPENSED" />
+        <display value="Invalid Claim. Prescription is not Dispensed" />
+    </concept>
+    <concept>
+        <!-- <code value="0021"></code> -->
+        <code value="DISPENSE_AMEND_IDENTIFIER_MISMATCH" />
+        <display value="Dispense Amendment/Cancellation Request does not pertain to Last Dispense" />
+    </concept>
+    <concept>
+        <!-- <code value="0100"></code> -->
+        <code value="" />
+        <display value="Claim amendment is not permitted outside of the claim period" />
+    </concept>
+    
 </CodeSystem>
