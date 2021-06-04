@@ -5,7 +5,7 @@
     <version value="1.0.7" />
     <name value="NHS Digital Message Events" />
     <status value="active" />
-    <description value="A ValueSet to identify the primary role (type) of organisation" />
+    <description value="A ValueSet to identify the type of FHIR Message" />
     <compose>
         <include>
             <system value="https://fhir.nhs.uk/CodeSystem/message-event" />
