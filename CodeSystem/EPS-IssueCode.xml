@@ -189,7 +189,7 @@ Is this the same as FAILURE_TO_PROCESS_MESSAGE
     </concept>
     <concept>
         <!-- <code value="0100"></code> -->
-        <code value="" />
+        <code value="CLAIM_AMEND_PERIOD_ISSUE" />
         <display value="Claim amendment is not permitted outside of the claim period" />
     </concept>
     
