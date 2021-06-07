@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="cf075664-89f6-49d6-bc3d-cfc7176b9ac6"/>
+  <id value="cf075664-89f6-49d6-bc3d-cfc7176b9ac6" />
   <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Practitioner" />
   <name value="NHSDigital-Practitioner" />
   <status value="draft" />
@@ -34,6 +34,7 @@
     <element id="Practitioner.identifier">
       <path value="Practitioner.identifier" />
       <min value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="Practitioner.identifier:sdsUserID">
       <path value="Practitioner.identifier" />
@@ -117,6 +118,7 @@
     <element id="Practitioner.name">
       <path value="Practitioner.name" />
       <min value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="Practitioner.telecom.value">
       <path value="Practitioner.telecom.value" />

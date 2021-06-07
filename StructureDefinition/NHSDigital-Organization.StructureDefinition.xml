@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="19aa8f3d-46b0-486a-bab8-056a383e0f88"/>
+  <id value="19aa8f3d-46b0-486a-bab8-056a383e0f88" />
   <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Organization" />
   <name value="NHSDigital-Organization" />
   <status value="draft" />
@@ -53,6 +53,7 @@
     <element id="Organization.identifier">
       <path value="Organization.identifier" />
       <min value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="Organization.identifier:odsOrganisationCode">
       <path value="Organization.identifier" />
@@ -106,6 +107,7 @@
     <element id="Organization.name">
       <path value="Organization.name" />
       <min value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="Organization.telecom.value">
       <path value="Organization.telecom.value" />

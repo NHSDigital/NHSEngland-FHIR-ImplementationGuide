@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="7c42ccf1-3e8f-446c-8f7f-d703281a07d5"/>
+  <id value="7c42ccf1-3e8f-446c-8f7f-d703281a07d5" />
   <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient" />
   <name value="NHSDigital-Patient" />
   <status value="draft" />
@@ -78,15 +78,22 @@
       <path value="Patient.identifier" />
       <definition value="At least one patient identifier, common to both sender and receiver. Where a traced NHS number is available for a patient this MUST be included in the list." />
       <min value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="Patient.identifier:nhsNumber">
       <path value="Patient.identifier" />
       <sliceName value="nhsNumber" />
       <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.identifier:nhsNumber.system">
+      <path value="Patient.identifier.system" />
+      <mustSupport value="true" />
     </element>
     <element id="Patient.name">
       <path value="Patient.name" />
       <min value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="Patient.name.use">
       <path value="Patient.name.use" />
@@ -94,6 +101,14 @@
         <identity value="MiM" />
         <map value="https://fhir.nhs.uk/ConceptMap/fhir-nameuse-to-v3-npfit-nameuse" />
       </mapping>
+    </element>
+    <element id="Patient.name.family">
+      <path value="Patient.name.family" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.name.given">
+      <path value="Patient.name.given" />
+      <mustSupport value="true" />
     </element>
     <element id="Patient.telecom.system.extension">
       <path value="Patient.telecom.system.extension" />
@@ -117,10 +132,12 @@
     <element id="Patient.gender">
       <path value="Patient.gender" />
       <min value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="Patient.birthDate">
       <path value="Patient.birthDate" />
       <min value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="Patient.address">
       <path value="Patient.address" />
