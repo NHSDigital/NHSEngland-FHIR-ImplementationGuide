@@ -1,45 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <CodeSystem xmlns="http://hl7.org/fhir">
-    <id value="EPS-IssueCode"/>
-    <url value="https://fhir.nhs.uk/CodeSystem/EPS-IssueCode"/>
+    <id value="EPS-IssueCode" />
+    <url value="https://fhir.nhs.uk/CodeSystem/EPS-IssueCode" />
     <identifier>
-        <system value="https://fhir.nhs.uk/identifier/CodeSystem"/>
-        <value value="EPS-IssueCode"/>
+        <system value="https://fhir.nhs.uk/identifier/CodeSystem" />
+        <value value="EPS-IssueCode" />
     </identifier>
-    <version value="17.22"/>
-    <name value="EPS Issue Codes"/>
-    <title value="EPS Issue Codes"/>
-    <status value="draft"/>
-    <date value="2021-06-04"/>
-    <publisher value="NHS Digital"/>
+    <version value="17.22" />
+    <name value="EPS Issue Codes" />
+    <title value="EPS Issue Codes" />
+    <status value="draft" />
+    <date value="2021-06-04" />
+    <publisher value="NHS Digital" />
     <contact>
-        <name value="Interoperability Team"/>
+        <name value="Interoperability Team" />
         <telecom>
-            <system value="email"/>
-            <value value="interoperabilityteam@nhs.net"/>
-            <use value="work"/>
+            <system value="email" />
+            <value value="interoperabilityteam@nhs.net" />
+            <use value="work" />
         </telecom>
     </contact>
-    <description value="EPS Issue Codes"/>
-    <caseSensitive value="true"/>
-    <content value="complete"/>
+    <description value="EPS Issue Codes" />
+    <caseSensitive value="true" />
+    <content value="complete" />
     <concept>
         <!-- 0001 This may be a spine code -->
-        <code value="PATIENT_DECEASED"/>
-        <display value="Patient is recorded as dead"/>
+        <code value="PATIENT_DECEASED" />
+        <display value="Patient is recorded as dead" />
         <definition value="Not applicable to prescribing systems Note. The Spine will not reject a prescription for a dead patient however the requirement to check PDS for death status before prescribing prevents this scenario occurring." />
     </concept>
     <concept>
         <!-- 0002 -->
-        <code value="DUPLICATE_PRESCRIPTION_ID"/>
-        <display value="Duplicate prescription ID exists"/>
+        <code value="DUPLICATE_PRESCRIPTION_ID" />
+        <display value="Duplicate prescription ID exists" />
         <definition value="The System must create a new prescription UUID and re-submit the prescription to the Spine." />
     </concept>
     <concept>
         <!-- 0003 -->
-        <code value="MISSING_DIGITAL_SIGNATURE"/>
-        <display value="Digital signature not found"/>
+        <code value="MISSING_DIGITAL_SIGNATURE" />
+        <display value="Digital signature not found" />
         <definition value="The System must create and apply a digital signature to the prescription and re-submit the prescription to the Spine" />
     </concept>
     <!-- <concept>
@@ -56,26 +56,26 @@
     </concept>
 -->
     <concept>
-        <code value="INVALID_MESSAGE"/>
-        <display value="Invalid message"/>
+        <code value="INVALID_MESSAGE" />
+        <display value="Invalid message" />
         <definition value="The prescription message has failed structural validation at the Spine. A defect report should be raised against the local System or the Spine (whichever is in error). The prescriber must be notified accordingly to use a paper FP10 prescription." />
     </concept>
     <concept>
         <!-- 0010 -->
-        <code value="INVALID_NUMBER_MEDICATIONREQUESTS"/>
-        <display value="Number of items on a prescription should be between 1 and 4"/>
+        <code value="INVALID_NUMBER_MEDICATIONREQUESTS" />
+        <display value="Number of items on a prescription should be between 1 and 4" />
         <definition value="The prescriber must be notified accordingly and asked to split the items across separate prescriptions." />
     </concept>
     <concept>
         <!-- 0018 -->
-        <code value="MISMATCH_AUTHORISED_REPEAT_COUNT"/>
-        <display value="Mismatch in authorised repeat counts"/>
+        <code value="MISMATCH_AUTHORISED_REPEAT_COUNT" />
+        <display value="Mismatch in authorised repeat counts" />
         <definition value="The “repeatNumber” attribute exists at both the prescription and item level. An item cannot be authorised for more repeats than the prescription." />
     </concept>
     <concept>
         <!-- 0019 -->
-        <code value="INVALID_REPEAT_COUNT"/>
-        <display value="Repeat count should be between 1 and 99"/>
+        <code value="INVALID_REPEAT_COUNT" />
+        <display value="Repeat count should be between 1 and 99" />
         <definition value="The maximum “high” value for the “repeatNumber” attribute is 99." />
     </concept>
     <!--  Spine Eror RESOURCE_VERSION_MISMATCH" 
@@ -86,20 +86,20 @@
     </concept> -->
     <concept>
         <!-- 5008 -->
-        <code value="DUPLICATE_MEDICATIONREQUEST_ID"/>
-        <display value="Duplicate item ID exists"/>
+        <code value="DUPLICATE_MEDICATIONREQUEST_ID" />
+        <display value="Duplicate item ID exists" />
         <definition value="The System must create a new line item UUID and re-submit the prescription to the Spine." />
     </concept>
     <concept>
         <!-- 5009 -->
-        <code value="INVALID_CHECK_DIGIT"/>
-        <display value="Error in check digit"/>
+        <code value="INVALID_CHECK_DIGIT" />
+        <display value="Error in check digit" />
         <definition value="The System must re-calculate / correct the check digit and re-submit the prescription to the Spine." />
     </concept>
     <concept>
         <!-- 9006 -->
-        <code value="INVALID_DATE_FORMAT"/>
-        <display value="Format of date passed is invalid"/>
+        <code value="INVALID_DATE_FORMAT" />
+        <display value="Format of date passed is invalid" />
         <definition value="The format of a date/time attribute with the prescription does not confirm with the format defined within the DMS. The System must correct the date/time attribute and re-submit the prescription to the Spine." />
     </concept>
     <!-- From https://fhir.nhs.uk/ValueSet/DM-prescription-release-rejection-reason -->
@@ -122,7 +122,7 @@
         <definition value="Inform the dispenser that the prescription has been downloaded by another dispenser. The rejection message will contain details of the dispensing site that has the prescription." />
     </concept>
     <concept>
-        <!--<code value="0005"></code>-->
+        <!-- 16.34 <code value="0005"></code>-->
         <code value="PRESCRIPTION_DISPENSED"></code>
         <display value="Prescription has been dispensed" />
         <definition value="Inform the dispenser to advise the patient that this prescription has already been dispensed. " />
@@ -161,7 +161,11 @@ Use INVALID_MESSAGE?
 Is this the same as FAILURE_TO_PROCESS_MESSAGE 
 
 -->
-
+    <concept>
+        <!-- 17.22 <code value="0005"></code>-->
+        <code value="PRESCRIPTION_NOT_FOUND"></code>
+        <display value="Prescription can not be found. Contact prescriber" />
+    </concept>
     <concept>
         <!-- <code value="0012"></code> -->
         <code value="PRESCRIPTION_INVALID_STATE_TRANSITION" />
@@ -192,5 +196,5 @@ Is this the same as FAILURE_TO_PROCESS_MESSAGE
         <code value="CLAIM_AMEND_PERIOD_ISSUE" />
         <display value="Claim amendment is not permitted outside of the claim period" />
     </concept>
-    
+
 </CodeSystem>
