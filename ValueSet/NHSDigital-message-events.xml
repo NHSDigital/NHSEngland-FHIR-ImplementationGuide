@@ -84,10 +84,15 @@
             <code value="dispense-claim-update"/>
             <display value="Dispense Claim Update"/>
         </contains>
-         <contains>
+        <contains>
             <system value="https://fhir.nhs.uk/CodeSystem/message-event"/>
             <code value="dispense-notification-update"/>
             <display value="Dispense Notification Update"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/message-event"/>
+            <code value="appointment"/>
+            <display value="Appointment"/>
         </contains>
     </expansion>
 </ValueSet>

@@ -1,0 +1,134 @@
+<Bundle xmlns="http://hl7.org/fhir">
+    <id value="8994e1bd-8147-4437-8b8a-2b1c21ec9207" />
+    <identifier>
+        <system value="https://tools.ietf.org/html/rfc4122" />
+        <value value="8994e1bd-8147-4437-8b8a-2b1c21ec9207" />
+    </identifier>
+    <type value="message" />
+    <timestamp value="2018-07-12T10:30:16+00:00" />
+    <entry>
+        <fullUrl value="urn:uuid:ea7221b8-3cc0-4b11-bc95-585b056b5428" />
+        <resource>
+            <MessageHeader>
+                <!-- MESH mailbox ID of message sender -->
+                <source>
+                    <endpoint value="urn:nhs-uk:addressing:ods:RR8" />
+                </source>
+                <eventCoding>
+                    <system value="https://fhir.nhs.uk/CodeSystem/message-event" />
+                    <code value="appointment" />
+                    <display value="Appointment" />
+                </eventCoding>
+                <sender>
+                    <identifier>
+                        <system value="https://fhir.nhs.uk/Id/ods-organization-code" />
+                        <value value="RBA" />
+                    </identifier>
+                </sender>
+                <destination>
+                    <endpoint value="urn:nhs-uk:addressing:ods:GP0001" />
+                    <receiver>
+                        <identifier>
+                            <system value="https://fhir.nhs.uk/Id/ods-organization-code" />
+                            <value value="GP0001" />
+                        </identifier>
+                        <display value="Cumbria Starling Medical Centre" />
+                    </receiver>
+                </destination>
+                <focus>
+                    <reference value="urn:uuid:70c35c4a-65f4-4a03-bcf7-d1041ab999fd" />
+                </focus>
+            </MessageHeader>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="urn:uuid:70c35c4a-65f4-4a03-bcf7-d1041ab999fd" />
+        <resource>
+            <Appointment xmlns="http://hl7.org/fhir">
+                <status value="booked"></status>
+                <description value="Reason for calling"></description>
+                <specialty>
+                    <coding>
+                        <system value="https://fhir.nhs.uk/CodeSystem/NHSDataModelAndDictionary-clinical-specialty" />
+                        <code value="370" />
+                        <display value="Medical Oncology Service" />
+                    </coding>
+                </specialty>
+                <start value="2019-01-17T15:00:00.000Z"></start>
+                <end value="2019-01-17T15:10:00.000Z"></end>
+                <created value="2019-01-17T14:32:22.579+00:00"></created>
+                <participant>
+                    <actor>
+                        <type value="Patient" />
+                        <reference value="urn:uuid:90578a68-b711-4d05-885d-42fdc435b02a"></reference>
+                        <display value="Peter Chalmers"/>
+                    </actor>
+                    <status value="needs-action"/>
+                </participant>
+                <participant>
+                    <actor>
+                        <type value="Practitioner" />
+                        <identifier>
+                            <system value="https://fhir.hl7.org.uk/Id/gmc-number" />
+                            <value value="G1234567" />
+                        </identifier>
+                        <display value="Dr Razia Ali"/>
+                    </actor>
+                    <status value="accepted"/>
+                </participant>
+                <participant>
+                    <actor>
+                        <type value="Location" />
+                        <identifier>
+                            <system value="https://fhir.nhs.uk/Id/ods-organization-code" />
+                            <value value="RBA11" />
+                        </identifier>
+                        <display value="MUSGROVE PARK HOSPITAL"/>
+                    </actor>
+                    <status value="needs-action"/>
+                </participant>
+            </Appointment>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="urn:uuid:90578a68-b711-4d05-885d-42fdc435b02a" />
+        <resource>
+            <Patient>
+                <identifier>
+                    <extension url="https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-NHSNumberVerificationStatus">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="https://fhir.hl7.org.uk/CodeSystem/UKCore-NHSNumberVerificationStatus" />
+                                <code value="01" />
+                                <display value="Number present and verified" />
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <system value="https://fhir.nhs.uk/Id/nhs-number" />
+                    <value value="9453740519" />
+                </identifier>
+                <name>
+                    <use value="official" />
+                    <family value="CORY" />
+                    <given value="ETTA" />
+                    <prefix value="MISS" />
+                </name>
+                <gender value="female" />
+                <birthDate value="1999-01-04" />
+                <address>
+                    <use value="home" />
+                    <line value="123 Dale Avenue" />
+                    <line value="Long Eaton" />
+                    <line value="Nottingham" />
+                    <postalCode value="NG10 1NP" />
+                </address>
+                <generalPractitioner>
+                    <identifier>
+                        <system value="https://fhir.nhs.uk/Id/ods-organization-code" />
+                        <value value="B81001" />
+                    </identifier>
+                </generalPractitioner>
+            </Patient>
+        </resource>
+    </entry>
+</Bundle>
