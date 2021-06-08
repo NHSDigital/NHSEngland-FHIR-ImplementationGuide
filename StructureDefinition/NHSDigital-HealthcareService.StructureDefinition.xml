@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="23dc287d-ffe2-4524-8498-9d57cf115240"/>
+  <id value="23dc287d-ffe2-4524-8498-9d57cf115240" />
   <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-HealthcareService" />
   <name value="NHSDigital-HealthcareService" />
   <status value="draft" />
@@ -31,6 +31,7 @@
         <rules value="open" />
       </slicing>
       <min value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="HealthcareService.identifier:odsCode">
       <path value="HealthcareService.identifier" />
@@ -118,6 +119,10 @@
     <element id="HealthcareService.location.reference">
       <path value="HealthcareService.location.reference" />
       <min value="1" />
+    </element>
+    <element id="HealthcareService.name">
+      <path value="HealthcareService.name" />
+      <mustSupport value="true" />
     </element>
     <element id="HealthcareService.telecom">
       <path value="HealthcareService.telecom" />
