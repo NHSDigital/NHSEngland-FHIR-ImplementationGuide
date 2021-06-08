@@ -9,7 +9,7 @@
     <compose>
         <include>
             <system value="https://fhir.nhs.uk/CodeSystem/message-event" />
-            <version value="1.0.12" />
+            <version value="1.0.13" />
         </include>
     </compose>
     <expansion>
