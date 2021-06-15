@@ -41,9 +41,12 @@
         <code value="Reference" />
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Practitioner" />
       </type>
-    </element>
-    <element id="PractitionerRole.practitioner.reference">
-      <path value="PractitionerRole.practitioner.reference" />
+      <constraint>
+        <key value="nhsd-2" />
+        <severity value="error" />
+        <human value="An identifier or resource reference must be provided" />
+        <expression value="(reference.exists() or identifier.exists())" />
+      </constraint>
     </element>
     <element id="PractitionerRole.organization">
       <path value="PractitionerRole.organization" />
@@ -52,9 +55,12 @@
         <code value="Reference" />
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Organization" />
       </type>
-    </element>
-    <element id="PractitionerRole.organization.reference">
-      <path value="PractitionerRole.organization.reference" />
+      <constraint>
+        <key value="nhsd-1" />
+        <severity value="error" />
+        <human value="An identifier or resource reference must be supplied" />
+        <expression value="(reference.exists() or identifier.exists())" />
+      </constraint>
     </element>
     <element id="PractitionerRole.code">
       <path value="PractitionerRole.code" />
@@ -117,6 +123,15 @@
       <path value="PractitionerRole.specialty.coding.system" />
       <fixedUri value="http://snomed.info/sct" />
     </element>
+    <element id="PractitionerRole.location">
+      <path value="PractitionerRole.location" />
+      <constraint>
+        <key value="nhsd-3" />
+        <severity value="error" />
+        <human value="An identifier or resource reference must be provided" />
+        <expression value="(reference.exists() or identifier.exists())" />
+      </constraint>
+    </element>
     <element id="PractitionerRole.healthcareService">
       <path value="PractitionerRole.healthcareService" />
       <max value="1" />
@@ -124,6 +139,12 @@
         <code value="Reference" />
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-HealthcareService" />
       </type>
+      <constraint>
+        <key value="nhsd-4" />
+        <severity value="error" />
+        <human value="An identifier or resource reference must be provided" />
+        <expression value="(reference.exists() or identifier.exists())" />
+      </constraint>
     </element>
     <element id="PractitionerRole.telecom.value">
       <path value="PractitionerRole.telecom.value" />
