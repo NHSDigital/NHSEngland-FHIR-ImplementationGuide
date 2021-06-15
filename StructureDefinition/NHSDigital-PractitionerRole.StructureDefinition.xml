@@ -44,7 +44,6 @@
     </element>
     <element id="PractitionerRole.practitioner.reference">
       <path value="PractitionerRole.practitioner.reference" />
-      <min value="1" />
     </element>
     <element id="PractitionerRole.organization">
       <path value="PractitionerRole.organization" />
@@ -56,7 +55,6 @@
     </element>
     <element id="PractitionerRole.organization.reference">
       <path value="PractitionerRole.organization.reference" />
-      <min value="1" />
     </element>
     <element id="PractitionerRole.code">
       <path value="PractitionerRole.code" />
