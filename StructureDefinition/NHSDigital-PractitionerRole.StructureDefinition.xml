@@ -44,7 +44,7 @@
       <constraint>
         <key value="nhsd-2" />
         <severity value="error" />
-        <human value="An identifier or resource reference must be provided" />
+        <human value="PractitionerRole.practitioner - An identifier or resource reference must be provided" />
         <expression value="(reference.exists() or identifier.exists())" />
       </constraint>
     </element>
@@ -58,7 +58,7 @@
       <constraint>
         <key value="nhsd-1" />
         <severity value="error" />
-        <human value="An identifier or resource reference must be supplied" />
+        <human value="PractitionerRole.organization - An identifier or resource reference must be supplied" />
         <expression value="(reference.exists() or identifier.exists())" />
       </constraint>
     </element>
@@ -128,7 +128,7 @@
       <constraint>
         <key value="nhsd-3" />
         <severity value="error" />
-        <human value="An identifier or resource reference must be provided" />
+        <human value="PractitionerRole.location - An identifier or resource reference must be provided" />
         <expression value="(reference.exists() or identifier.exists())" />
       </constraint>
     </element>
@@ -142,7 +142,7 @@
       <constraint>
         <key value="nhsd-4" />
         <severity value="error" />
-        <human value="An identifier or resource reference must be provided" />
+        <human value="PractitionerRole.healthcareService - An identifier or resource reference must be provided" />
         <expression value="(reference.exists() or identifier.exists())" />
       </constraint>
     </element>
