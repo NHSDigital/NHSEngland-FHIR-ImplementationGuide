@@ -136,7 +136,7 @@
     <element id="Patient.gender">
       <path value="Patient.gender" />
       <min value="1" />
-      <mustSupport value="true" />
+      <mustSupport value="false" />
     </element>
     <element id="Patient.birthDate">
       <path value="Patient.birthDate" />
@@ -179,7 +179,7 @@
       <min value="1" />
       <max value="1" />
       <mustSupport value="true" />
-    </element>
+        </element>
     <element id="Patient.generalPractitioner.identifier">
       <path value="Patient.generalPractitioner.identifier" />
       <min value="1" />
