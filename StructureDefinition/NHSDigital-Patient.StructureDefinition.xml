@@ -110,6 +110,10 @@
       <path value="Patient.name.given" />
       <mustSupport value="true" />
     </element>
+    <element id="Patient.telecom">
+      <path value="Patient.telecom" />
+      <mustSupport value="true" />
+    </element>
     <element id="Patient.telecom.system.extension">
       <path value="Patient.telecom.system.extension" />
       <slicing>
@@ -142,6 +146,7 @@
     <element id="Patient.address">
       <path value="Patient.address" />
       <min value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="Patient.address.extension">
       <path value="Patient.address.extension" />
@@ -173,6 +178,7 @@
       </slicing>
       <min value="1" />
       <max value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="Patient.generalPractitioner.identifier">
       <path value="Patient.generalPractitioner.identifier" />
