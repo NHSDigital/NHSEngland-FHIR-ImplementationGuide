@@ -14,6 +14,7 @@
     <element id="PractitionerRole.identifier">
       <path value="PractitionerRole.identifier" />
       <min value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="PractitionerRole.identifier:sdsRoleProfileID">
       <path value="PractitionerRole.identifier" />
@@ -46,7 +47,9 @@
         <severity value="error" />
         <human value="PractitionerRole.practitioner - An identifier or resource reference must be provided" />
         <expression value="(reference.exists() or identifier.exists())" />
+        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole" />
       </constraint>
+      <mustSupport value="true" />
     </element>
     <element id="PractitionerRole.organization">
       <path value="PractitionerRole.organization" />
@@ -60,7 +63,9 @@
         <severity value="error" />
         <human value="PractitionerRole.organization - An identifier or resource reference must be supplied" />
         <expression value="(reference.exists() or identifier.exists())" />
+        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole" />
       </constraint>
+      <mustSupport value="true" />
     </element>
     <element id="PractitionerRole.code">
       <path value="PractitionerRole.code" />
@@ -73,6 +78,10 @@
       <path value="PractitionerRole.code" />
       <sliceName value="sdsJobRoleName" />
       <min value="1" />
+    </element>
+    <element id="PractitionerRole.specialty">
+      <path value="PractitionerRole.specialty" />
+      <mustSupport value="true" />
     </element>
     <element id="PractitionerRole.specialty.coding">
       <path value="PractitionerRole.specialty.coding" />
@@ -125,12 +134,18 @@
     </element>
     <element id="PractitionerRole.location">
       <path value="PractitionerRole.location" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Location" />
+      </type>
       <constraint>
         <key value="nhsd-3" />
         <severity value="error" />
         <human value="PractitionerRole.location - An identifier or resource reference must be provided" />
         <expression value="(reference.exists() or identifier.exists())" />
+        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole" />
       </constraint>
+      <mustSupport value="true" />
     </element>
     <element id="PractitionerRole.healthcareService">
       <path value="PractitionerRole.healthcareService" />
@@ -144,7 +159,13 @@
         <severity value="error" />
         <human value="PractitionerRole.healthcareService - An identifier or resource reference must be provided" />
         <expression value="(reference.exists() or identifier.exists())" />
+        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole" />
       </constraint>
+      <mustSupport value="true" />
+    </element>
+    <element id="PractitionerRole.telecom">
+      <path value="PractitionerRole.telecom" />
+      <mustSupport value="true" />
     </element>
     <element id="PractitionerRole.telecom.value">
       <path value="PractitionerRole.telecom.value" />

@@ -109,6 +109,10 @@
       <min value="1" />
       <mustSupport value="true" />
     </element>
+    <element id="Organization.telecom">
+      <path value="Organization.telecom" />
+      <mustSupport value="true" />
+    </element>
     <element id="Organization.telecom.value">
       <path value="Organization.telecom.value" />
       <min value="1" />
