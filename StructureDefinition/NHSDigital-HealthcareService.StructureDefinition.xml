@@ -30,6 +30,7 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <comment value="MUST contain an ANANA/ODS code." />
       <min value="1" />
       <mustSupport value="true" />
     </element>
