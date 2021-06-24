@@ -36,34 +36,6 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="MessageHeader.extension:messageId">
-      <path value="MessageHeader.extension" />
-      <sliceName value="messageId" />
-      <type>
-        <code value="Extension" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-MessageHeader-messageId" />
-      </type>
-    </element>
-    <element id="MessageHeader.extension:messageId.value[x].value">
-      <path value="MessageHeader.extension.value[x].value" />
-      <min value="1" />
-    </element>
-    <element id="MessageHeader.extension:status">
-      <path value="MessageHeader.extension" />
-      <sliceName value="status" />
-      <type>
-        <code value="Extension" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-Spine-Message-Status" />
-      </type>
-    </element>
-    <element id="MessageHeader.extension:status.value[x].system">
-      <path value="MessageHeader.extension.value[x].system" />
-      <min value="1" />
-    </element>
-    <element id="MessageHeader.extension:status.value[x].code">
-      <path value="MessageHeader.extension.value[x].code" />
-      <min value="1" />
-    </element>
     <element id="MessageHeader.extension:replacementOf">
       <path value="MessageHeader.extension" />
       <sliceName value="replacementOf" />
