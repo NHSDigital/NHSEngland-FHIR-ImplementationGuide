@@ -45,7 +45,7 @@
       <constraint>
         <key value="nhsd-2" />
         <severity value="error" />
-        <human value="PractitionerRole.practitioner - An identifier plus display or resource reference must be provided" />
+        <human value="PractitionerRole.practitioner - An identifier reference plus display name or resource reference must be provided" />
         <expression value="(reference.exists() or (identifier.exists() and display.exists()))" />
         <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole" />
       </constraint>
@@ -60,9 +60,9 @@
       </type>
       <constraint>
         <key value="nhsd-1" />
-        <severity value="error" />
-        <human value="PractitionerRole.organization - An identifier or resource reference must be supplied" />
-        <expression value="(reference.exists() or identifier.exists())" />
+        <severity value="warning" />
+        <human value="PractitionerRole.organization - A display name should be provided" />
+        <expression value="(display.exists())" />
         <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole" />
       </constraint>
       <mustSupport value="true" />
@@ -70,7 +70,14 @@
     <element id="PractitionerRole.organization.identifier">
       <path value="PractitionerRole.organization.identifier" />
       <min value="1" />
-      <mustSupport value="true" />
+    </element>
+    <element id="PractitionerRole.organization.identifier.system">
+      <path value="PractitionerRole.organization.identifier.system" />
+      <min value="1" />
+    </element>
+    <element id="PractitionerRole.organization.identifier.value">
+      <path value="PractitionerRole.organization.identifier.value" />
+      <min value="1" />
     </element>
     <element id="PractitionerRole.code">
       <path value="PractitionerRole.code" />
@@ -83,10 +90,6 @@
       <path value="PractitionerRole.code" />
       <sliceName value="sdsJobRoleName" />
       <min value="1" />
-    </element>
-    <element id="PractitionerRole.specialty">
-      <path value="PractitionerRole.specialty" />
-      <mustSupport value="true" />
     </element>
     <element id="PractitionerRole.specialty.coding">
       <path value="PractitionerRole.specialty.coding" />
@@ -150,7 +153,15 @@
         <expression value="(reference.exists() or identifier.exists())" />
         <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole" />
       </constraint>
-      <mustSupport value="true" />
+      <mustSupport value="false" />
+    </element>
+    <element id="PractitionerRole.location.identifier.system">
+      <path value="PractitionerRole.location.identifier.system" />
+      <min value="1" />
+    </element>
+    <element id="PractitionerRole.location.identifier.value">
+      <path value="PractitionerRole.location.identifier.value" />
+      <min value="1" />
     </element>
     <element id="PractitionerRole.healthcareService">
       <path value="PractitionerRole.healthcareService" />
@@ -161,21 +172,27 @@
       </type>
       <constraint>
         <key value="nhsd-4" />
-        <severity value="error" />
-        <human value="PractitionerRole.healthcareService - An identifier or resource reference must be provided" />
-        <expression value="(reference.exists() or identifier.exists())" />
+        <severity value="warning" />
+        <human value="PractitionerRole.healthcareService - A dispay name should be provided" />
+        <expression value="(display.exists())" />
         <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole" />
       </constraint>
       <mustSupport value="true" />
     </element>
-     <element id="PractitionerRole.healthcareService.identifier">
+    <element id="PractitionerRole.healthcareService.identifier">
       <path value="PractitionerRole.healthcareService.identifier" />
       <min value="1" />
-      <mustSupport value="true" />
+    </element>
+    <element id="PractitionerRole.healthcareService.identifier.system">
+      <path value="PractitionerRole.healthcareService.identifier.system" />
+      <min value="1" />
+    </element>
+    <element id="PractitionerRole.healthcareService.identifier.value">
+      <path value="PractitionerRole.healthcareService.identifier.value" />
+      <min value="1" />
     </element>
     <element id="PractitionerRole.telecom">
       <path value="PractitionerRole.telecom" />
-       <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="PractitionerRole.telecom.value">

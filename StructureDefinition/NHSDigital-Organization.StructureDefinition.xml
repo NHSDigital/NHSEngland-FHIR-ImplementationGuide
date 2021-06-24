@@ -52,6 +52,7 @@
     </element>
     <element id="Organization.identifier">
       <path value="Organization.identifier" />
+      <comment value="MUST contain an ANANA/ODS code." />
       <min value="1" />
       <mustSupport value="true" />
     </element>
@@ -132,6 +133,15 @@
     <element id="Organization.partOf.identifier.value">
       <path value="Organization.partOf.identifier.value" />
       <min value="1" />
+    </element>
+    <element id="Organization.partOf.display">
+      <path value="Organization.partOf.display" />
+      <constraint>
+        <key value="nhsd-6" />
+        <severity value="warning" />
+        <human value="partOf.display - a display name should be provided" />
+        <expression value="(display.exists())" />
+      </constraint>
     </element>
   </differential>
 </StructureDefinition>
