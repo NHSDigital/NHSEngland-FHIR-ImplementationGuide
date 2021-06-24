@@ -58,6 +58,7 @@
         <key value="nhsd-7" />
         <severity value="warning" />
         <human value="providedBy - a display name should be provided" />
+        <expression value="(display.exists())" />
       </constraint>
     </element>
     <element id="HealthcareService.providedBy.identifier">
