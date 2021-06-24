@@ -9,10 +9,18 @@
     <value value="125686540025" />
   </identifier>
   <practitioner>
-    <reference value="urn:uuid:1557E58E-3B1E-41DD-B3B5-D4D393DC5A3D" />
+    <identifier>
+      <system value="https://fhir.hl7.org.uk/Id/gmc-number" />
+      <value value="G1234567" />
+    </identifier>
+    <display value="Dr Razia Ali" />
   </practitioner>
   <organization>
-    <reference value="urn:uuid:17c4270d-6966-4788-8cbc-1d1d63536b25" />
+    <identifier>
+      <system value="https://fhir.nhs.uk/Id/ods-organization-code" />
+      <value value="M85011" />
+    </identifier>
+    <display value="THE SWAN MEDICAL CENTRE" />
   </organization>
   <code>
     <coding>

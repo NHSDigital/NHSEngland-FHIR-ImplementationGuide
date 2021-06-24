@@ -8,10 +8,18 @@
         }
     ],
     "practitioner": {
-        "reference": "urn:uuid:30b05f09-5dc9-4e8c-8d21-5287e8761fc0"
+        "identifier": {
+            "system": "https://fhir.hl7.org.uk/Id/gmc-number",
+            "value": "C9876543"
+          },
+          "display": "Dr Smith"
     },
     "organization": {
-        "reference": "urn:uuid:3b4b03a5-52ba-4ba6-9b82-70350aa109d8"
+        "identifier": {
+            "system": "https://fhir.nhs.uk/Id/ods-organization-code",
+            "value": "RBA"
+          },
+        "display": "TAUNTON AND SOMERSET NHS FOUNDATION TRUST"
     },
     "code": [
         {
