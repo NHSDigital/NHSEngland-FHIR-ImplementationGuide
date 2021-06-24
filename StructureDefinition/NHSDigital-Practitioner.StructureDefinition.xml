@@ -33,6 +33,7 @@
   <differential>
     <element id="Practitioner.identifier">
       <path value="Practitioner.identifier" />
+      <comment value="SHOULD contain a professional code and SDS-user-id." />
       <min value="1" />
       <mustSupport value="true" />
     </element>
@@ -118,6 +119,7 @@
     <element id="Practitioner.name">
       <path value="Practitioner.name" />
       <min value="1" />
+      <meaningWhenMissing value="" />
       <mustSupport value="true" />
     </element>
     <element id="Practitioner.telecom.value">

@@ -70,7 +70,14 @@
     <element id="PractitionerRole.organization.identifier">
       <path value="PractitionerRole.organization.identifier" />
       <min value="1" />
-      <mustSupport value="true" />
+    </element>
+    <element id="PractitionerRole.organization.identifier.system">
+      <path value="PractitionerRole.organization.identifier.system" />
+      <min value="1" />
+    </element>
+    <element id="PractitionerRole.organization.identifier.value">
+      <path value="PractitionerRole.organization.identifier.value" />
+      <min value="1" />
     </element>
     <element id="PractitionerRole.code">
       <path value="PractitionerRole.code" />
@@ -172,14 +179,20 @@
       </constraint>
       <mustSupport value="true" />
     </element>
-     <element id="PractitionerRole.healthcareService.identifier">
+    <element id="PractitionerRole.healthcareService.identifier">
       <path value="PractitionerRole.healthcareService.identifier" />
       <min value="1" />
-      <mustSupport value="true" />
+    </element>
+    <element id="PractitionerRole.healthcareService.identifier.system">
+      <path value="PractitionerRole.healthcareService.identifier.system" />
+      <min value="1" />
+    </element>
+    <element id="PractitionerRole.healthcareService.identifier.value">
+      <path value="PractitionerRole.healthcareService.identifier.value" />
+      <min value="1" />
     </element>
     <element id="PractitionerRole.telecom">
       <path value="PractitionerRole.telecom" />
-       <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="PractitionerRole.telecom.value">

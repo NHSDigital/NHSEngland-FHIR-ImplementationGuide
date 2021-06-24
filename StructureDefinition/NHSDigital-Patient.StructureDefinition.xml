@@ -180,6 +180,7 @@
         </discriminator>
         <rules value="openAtEnd" />
       </slicing>
+      <requirements value="GP Surgery SHOULD be provided. It is recommended the patients GP Surgery is the first item in the array and branch surgery is second. It is also suggested type and display (name of practice) is also included." />
       <min value="1" />
       <max value="1" />
       <constraint>
