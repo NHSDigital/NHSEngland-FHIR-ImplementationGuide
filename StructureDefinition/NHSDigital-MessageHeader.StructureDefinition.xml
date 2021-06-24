@@ -67,7 +67,6 @@
     <element id="MessageHeader.extension:replacementOf">
       <path value="MessageHeader.extension" />
       <sliceName value="replacementOf" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -190,8 +189,7 @@
       <path value="MessageHeader.author" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-PractitionerRole" />
-        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Practitioner" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Practitioner" />
       </type>
     </element>
     <element id="MessageHeader.author.identifier">
@@ -210,10 +208,13 @@
       <path value="MessageHeader.responsible" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-PractitionerRole" />
-        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Practitioner" />
-        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Organization" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Practitioner" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Organization" />
       </type>
+    </element>
+    <element id="MessageHeader.responsible.identifier">
+      <path value="MessageHeader.responsible.identifier" />
+      <min value="1" />
     </element>
     <element id="MessageHeader.responsible.identifier.system">
       <path value="MessageHeader.responsible.identifier.system" />
