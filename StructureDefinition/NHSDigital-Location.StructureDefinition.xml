@@ -17,7 +17,7 @@
   <kind value="resource" />
   <abstract value="false" />
   <type value="Location" />
-  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Location" />
+  <baseDefinition value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Location" />
   <derivation value="constraint" />
   <differential>
     <element id="Location.identifier">
