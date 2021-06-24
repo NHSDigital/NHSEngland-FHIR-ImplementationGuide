@@ -67,6 +67,11 @@
       </constraint>
       <mustSupport value="true" />
     </element>
+    <element id="PractitionerRole.organization.identifier">
+      <path value="PractitionerRole.organization.identifier" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
     <element id="PractitionerRole.code">
       <path value="PractitionerRole.code" />
       <binding>
@@ -161,6 +166,11 @@
         <expression value="(reference.exists() or identifier.exists())" />
         <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole" />
       </constraint>
+      <mustSupport value="true" />
+    </element>
+     <element id="PractitionerRole.healthcareService.identifier">
+      <path value="PractitionerRole.healthcareService.identifier" />
+      <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="PractitionerRole.telecom">
