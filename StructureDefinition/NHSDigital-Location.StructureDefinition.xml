@@ -48,5 +48,51 @@
       <min value="1" />
       <mustSupport value="true" />
     </element>
+    <element id="Location.managingOrganization">
+      <path value="Location.managingOrganization" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Organization" />
+      </type>
+      <constraint>
+        <key value="nhds-10" />
+        <severity value="warning" />
+        <human value="managingOrganization - a display name should be provided" />
+        <expression value="(display.exists())" />
+      </constraint>
+    </element>
+    <element id="Location.managingOrganization.identifier">
+      <path value="Location.managingOrganization.identifier" />
+      <min value="1" />
+    </element>
+    <element id="Location.managingOrganization.identifier.system">
+      <path value="Location.managingOrganization.identifier.system" />
+      <min value="1" />
+    </element>
+    <element id="Location.managingOrganization.identifier.value">
+      <path value="Location.managingOrganization.identifier.value" />
+      <min value="1" />
+    </element>
+    <element id="Location.partOf">
+      <path value="Location.partOf" />
+      <constraint>
+        <key value="nhsd-9" />
+        <severity value="warning" />
+        <human value="partOf - display name should be provided" />
+        <expression value="(display.exists())" />
+      </constraint>
+    </element>
+    <element id="Location.partOf.identifier">
+      <path value="Location.partOf.identifier" />
+      <min value="1" />
+    </element>
+    <element id="Location.partOf.identifier.system">
+      <path value="Location.partOf.identifier.system" />
+      <min value="1" />
+    </element>
+    <element id="Location.partOf.identifier.value">
+      <path value="Location.partOf.identifier.value" />
+      <min value="1" />
+    </element>
   </differential>
 </StructureDefinition>

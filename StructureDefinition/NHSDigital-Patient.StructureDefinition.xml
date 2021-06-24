@@ -167,6 +167,10 @@
         <profile value="https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-AddressKey" />
       </type>
     </element>
+    <element id="Patient.contact">
+      <path value="Patient.contact" />
+      <mustSupport value="false" />
+    </element>
     <element id="Patient.generalPractitioner">
       <path value="Patient.generalPractitioner" />
       <slicing>
@@ -178,8 +182,14 @@
       </slicing>
       <min value="1" />
       <max value="1" />
+      <constraint>
+        <key value="nhsd-5" />
+        <severity value="warning" />
+        <human value="generalPractitioner - a display name should be provided" />
+        <expression value="(display.exists())" />
+      </constraint>
       <mustSupport value="true" />
-        </element>
+    </element>
     <element id="Patient.generalPractitioner.identifier">
       <path value="Patient.generalPractitioner.identifier" />
       <min value="1" />
