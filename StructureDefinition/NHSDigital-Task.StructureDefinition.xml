@@ -106,7 +106,7 @@
       <min value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="Bundle" />
+        <targetProfile value="https://fhir.nhs.uk/R4/StructureDefinition/UKCore-Bundle" />
       </type>
     </element>
     <element id="Task.focus.identifier">
