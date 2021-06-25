@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="35cdca0d-46a3-4dd3-9967-9470b864b92e" />
   <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-MessageHeader" />
-  <name value="NHSDigital-MessageHeader"></name>
+  <name value="NHSDigital-MessageHeader" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
   <mapping>
@@ -26,6 +26,15 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/MessageHeader" />
   <derivation value="constraint" />
   <differential>
+    <element id="MessageHeader">
+      <path value="MessageHeader" />
+      <constraint>
+        <key value="nhsd-11" />
+        <severity value="error" />
+        <human value="replacementOf extension is mandatory for update messages" />
+        <expression value="(event.code.indexOf('update') = -1) or (event.code.indexOf('update') &gt; -1 and extension('https://fhir.nhs.uk/StructureDefinition/Extension-replacementOf').exists())" />
+      </constraint>
+    </element>
     <element id="MessageHeader.extension">
       <path value="MessageHeader.extension" />
       <slicing>
