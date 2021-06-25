@@ -38,6 +38,7 @@
         <severity value="error" />
         <human value="groupIdentifier and reasonCode are mandatory for EPS interactions" />
         <expression value="code.coding.where(system = 'http://hl7.org/fhir/CodeSystem/task-code').exists().not() or (code.coding.where(system = 'http://hl7.org/fhir/CodeSystem/task-code').exists() and groupIdentifier.exists() and reasonCode.exists())" />
+        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Task" />
       </constraint>
     </element>
     <element id="Task.identifier">
@@ -85,17 +86,17 @@
     </element>
     <element id="Task.code">
       <path value="Task.code" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="coding.system" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
       <min value="1" />
     </element>
     <element id="Task.code.coding">
       <path value="Task.code.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
       <min value="1" />
     </element>
     <element id="Task.code.coding.system">
@@ -110,27 +111,30 @@
       <path value="Task.code.coding.display" />
       <min value="1" />
     </element>
-    <element id="Task.code:prescriptionTrackerCode">
-      <path value="Task.code" />
-      <sliceName value="prescriptionTrackerCode" />
+    <element id="Task.code.coding:dispensingCodes">
+      <path value="Task.code.coding" />
+      <sliceName value="dispensingCodes" />
+      <max value="1" />
       <binding>
         <strength value="required" />
         <description value="Dispensing Codes" />
         <valueSet value="https://fhir.nhs.uk/ValueSet/DM-task-code" />
       </binding>
     </element>
-    <element id="Task.code:prescriptionTypeCode">
-      <path value="Task.code" />
-      <sliceName value="prescriptionTypeCode" />
+    <element id="Task.code.coding:prescriptionTherapyCodes">
+      <path value="Task.code.coding" />
+      <sliceName value="prescriptionTherapyCodes" />
+      <max value="1" />
       <binding>
         <strength value="required" />
         <description value="Prescription Course Of Therapy Codes" />
         <valueSet value="https://fhir.nhs.uk/ValueSet/DM-medicationrequest-course-of-therapy" />
       </binding>
     </element>
-    <element id="Task.code:workflowCode">
-      <path value="Task.code" />
-      <sliceName value="workflowCode" />
+    <element id="Task.code.coding:workflowCodes">
+      <path value="Task.code.coding" />
+      <sliceName value="workflowCodes" />
+      <max value="1" />
       <binding>
         <strength value="required" />
         <description value="Workflow/event type code" />
@@ -142,7 +146,7 @@
       <min value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/R4/StructureDefinition/UKCore-Bundle" />
+        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Bundle" />
       </type>
     </element>
     <element id="Task.focus.identifier">

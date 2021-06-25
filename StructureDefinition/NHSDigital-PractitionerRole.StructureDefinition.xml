@@ -193,6 +193,7 @@
     </element>
     <element id="PractitionerRole.telecom">
       <path value="PractitionerRole.telecom" />
+      <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="PractitionerRole.telecom.value">
