@@ -115,30 +115,51 @@
       <path value="Task.code.coding" />
       <sliceName value="dispensingCodes" />
       <max value="1" />
+      <fixedCoding>
+        <system value="http://hl7.org/fhir/CodeSystem/task-code" />
+      </fixedCoding>
       <binding>
         <strength value="required" />
         <description value="Dispensing Codes" />
         <valueSet value="https://fhir.nhs.uk/ValueSet/DM-task-code" />
       </binding>
     </element>
-    <element id="Task.code.coding:prescriptionTherapyCodes">
+    <element id="Task.code.coding:workflowCodes">
       <path value="Task.code.coding" />
-      <sliceName value="prescriptionTherapyCodes" />
+      <sliceName value="workflowCodes" />
       <max value="1" />
+      <fixedCoding>
+        <system value="https://fhir.nhs.uk/CodeSystem/message-event" />
+      </fixedCoding>
+      <binding>
+        <strength value="required" />
+        <description value="Workflow/event type code" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDigital-message-events" />
+      </binding>
+    </element>
+    <element id="Task.code.coding:prescriptionTherapyCodesUK">
+      <path value="Task.code.coding" />
+      <sliceName value="prescriptionTherapyCodesUK" />
+      <max value="1" />
+      <fixedCoding>
+        <system value="https://fhir.nhs.uk/CodeSystem/medicationrequest-course-of-therapy" />
+      </fixedCoding>
       <binding>
         <strength value="required" />
         <description value="Prescription Course Of Therapy Codes" />
         <valueSet value="https://fhir.nhs.uk/ValueSet/DM-medicationrequest-course-of-therapy" />
       </binding>
     </element>
-    <element id="Task.code.coding:workflowCodes">
+    <element id="Task.code.coding:prescriptionTherapyCodes">
       <path value="Task.code.coding" />
-      <sliceName value="workflowCodes" />
+      <sliceName value="prescriptionTherapyCodes" />
       <max value="1" />
+      <fixedCoding>
+        <system value="http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy" />
+      </fixedCoding>
       <binding>
         <strength value="required" />
-        <description value="Workflow/event type code" />
-        <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDigital-message-events" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/DM-medicationrequest-course-of-therapy" />
       </binding>
     </element>
     <element id="Task.focus">
@@ -146,7 +167,7 @@
       <min value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Bundle" />
+        <targetProfile value="https://fhir.nhs.uk/R4/StructureDefinition/UKCore-Bundle" />
       </type>
     </element>
     <element id="Task.focus.identifier">
