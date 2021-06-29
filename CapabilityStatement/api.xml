@@ -2,7 +2,7 @@
     <id value="apim-conformance" />
     <url value="https://fhir.nhs.uk/CapabilityStatement/apim-conformance" />
     <version value="3.0.0" />
-    <name value="APIM-Core" />
+    <name value="APIMCore" />
     <status value="active" />
     <date value="2021-04-28T00:00:00+00:00" />
     <publisher value="digital.nhs.uk" />

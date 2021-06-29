@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="35cdca0d-46a3-4dd3-9967-9470b864b92e" />
   <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-MessageHeader" />
-  <name value="NHSDigital-MessageHeader" />
+  <name value="NHSDigitalMessageHeader" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
   <mapping>

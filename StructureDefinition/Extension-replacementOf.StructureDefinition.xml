@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="4c86ee70-90ca-4fd8-ba11-f2bf092ad648"/>
   <url value="https://fhir.nhs.uk/StructureDefinition/Extension-replacementOf" />
-  <name value="Extension-replacementOf" />
+  <name value="ExtensionreplacementOf" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
   <kind value="complex-type" />

@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="04733847-bb2e-4342-9cf6-d37cbeca99c9"/>
   <url value="https://fhir.nhs.uk/StructureDefinition/Extension-ODS-Organization-Role-ActivePeriod" />
-  <name value="Extension-NHSDigital-Organization-Role-ActivePeriod" />
+  <name value="ExtensionNHSDigitalOrganizationRoleActivePeriod" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
   <mapping>

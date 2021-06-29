@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="bec1adeb-104c-46ce-8b28-775eecdf80ab"/>
   <url value="https://fhir.nhs.uk/StructureDefinition/Extension-spineEndpoint" />
-  <name value="Extension-spineEndpoint" />
+  <name value="ExtensionspineEndpoint" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
   <mapping>

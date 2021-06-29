@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="cf075664-89f6-49d6-bc3d-cfc7176b9ac6" />
   <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Practitioner" />
-  <name value="NHSDigital-Practitioner" />
+  <name value="NHSDigitalPractitioner" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
   <mapping>

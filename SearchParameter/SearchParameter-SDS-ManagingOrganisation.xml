@@ -3,7 +3,7 @@
     <id value="SDS-ManagingOrganisation"/>
     <url value="https://fhir.nhs.uk/SearchParameter/SDS-ManagingOrganisation"/>
     <version value="1.0.0"/>
-    <name value="SDS Managing Organisation"/>
+    <name value="SDSManagingOrganisation"/>
     <status value="active"/>
     <date value="2020-10-16"/>
     <publisher value="NHS Digital"/>

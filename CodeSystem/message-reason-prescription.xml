@@ -8,7 +8,7 @@
         <value value="message-reason-prescription"/>
     </identifier>
     <version value="1.0.1"/>
-    <name value="message-reason-prescription"/>
+    <name value="messagereasonprescription"/>
     <title value="Message Reason Prescription"/>
     <status value="draft"/>
     <date value="2020-09-23"/>

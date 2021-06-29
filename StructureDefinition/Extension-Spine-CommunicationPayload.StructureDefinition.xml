@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="3502dff2-72ce-4ccd-87f6-3fff2eb8d29f"/>
   <url value="https://fhir.nhs.uk/StructureDefinition/Extension-Spine-CommunicationPayload" />
-  <name value="Extension-Spine-CommunicationPayload" />
+  <name value="ExtensionSpineCommunicationPayload" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
   <mapping>

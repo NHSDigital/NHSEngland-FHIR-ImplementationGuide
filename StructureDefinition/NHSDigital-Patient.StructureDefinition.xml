@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="7c42ccf1-3e8f-446c-8f7f-d703281a07d5" />
   <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient" />
-  <name value="NHSDigital-Patient" />
+  <name value="NHSDigitalPatient" />
   <status value="draft" />
   <description value="### identifier&#xD;&#xA;&#xD;&#xA;At least one patient identifier, **MUST** be provided. Where a traced NHS number is available for a patient this MUST be included. &#xD;&#xA;&#xD;&#xA;Local identiers such as MRN **MUST** include a *system* which identifies NHS provider/assigning authority." />
   <fhirVersion value="4.0.1" />

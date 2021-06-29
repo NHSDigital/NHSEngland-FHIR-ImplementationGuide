@@ -3,7 +3,7 @@
    <id value="organisation-type"/>
    <url value="https://fhir.nhs.uk/CodeSystem/organisation-type"/>
    <version value="1.0.0"/>
-   <name value="organisation-type"/>
+   <name value="organisationtype"/>
    <status value="active"/>
    <date value="2018-05-18T00:00:00+00:00"/>
    <publisher value="HL7 UK"/>

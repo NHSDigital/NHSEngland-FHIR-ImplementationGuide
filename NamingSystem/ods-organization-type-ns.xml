@@ -1,6 +1,6 @@
 <NamingSystem xmlns="http://hl7.org/fhir">
     <id value="ods-organization-type-ns"></id>
-    <name value="ods-organization-type-ns"></name>
+    <name value="odsorganizationtypens"></name>
     <status value="draft"></status>
     <kind value="codesystem"></kind>
     <date value="2020-06-29"></date>

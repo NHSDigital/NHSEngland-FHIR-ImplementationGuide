@@ -3,7 +3,7 @@
     <id value="NHSDigital-OperationOutcome-Codes"/>
     <url value="https://fhir.nhs.uk/ValueSet/NHSDigital-OperationOutcome-Codes"/>
     <version value="1.0.4"/>
-    <name value="NHSDigital OperationOutcome Codes"/>
+    <name value="NHSDigitalOperationOutcomeCodes"/>
     <status value="draft"/>
     <description value="NHSDigital OperationOutcome Codes"/>
     <compose>

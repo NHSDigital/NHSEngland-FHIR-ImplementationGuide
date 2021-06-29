@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="74e07931-0657-49dd-90e2-015903af9927"/>
   <url value="https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-platformError" />
-  <name value="Extension-NHSDigital-platformError" />
+  <name value="ExtensionNHSDigitalplatformError" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
   <mapping>

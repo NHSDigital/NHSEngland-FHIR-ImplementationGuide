@@ -3,7 +3,7 @@
     <id value="message-reason-code" />
     <url value="https://fhir.nhs.uk/ValueSet/message-reason-code" />
     <version value="1.0.1" />
-    <name value="Message Reason Codes" />
+    <name value="MessageReasonCodes" />
     <status value="active" />
     <description value="Complete set of message reasons codes" />
     <compose>

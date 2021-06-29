@@ -3,7 +3,7 @@
    <id value="vs-organisation-role" />
    <url value="https://fhir.nhs.uk/ValueSet/organisation-role" />
    <version value="2.0.3" />
-   <name value="NHS Organisation Role" />
+   <name value="NHSOrganisationRole" />
    <status value="active" />
    <description value="A ValueSet to identify the roles (type) of organisation." />   
    <compose>

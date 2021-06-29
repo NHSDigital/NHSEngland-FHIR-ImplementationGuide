@@ -3,7 +3,7 @@
   <id value="66bea612-3d87-4af3-ba94-08620b1dc367"/>
   <url value="https://fhir.nhs.uk/StructureDefinition/Extension-Spine-supportingInfo" />
   <version value="4.0.1" />
-  <name value="Extension-Spine-supportingInfo" />
+  <name value="ExtensionSpinesupportingInfo" />
   <title value="Supporting Information" />
   <status value="draft" />
   <date value="2021-02-05" />

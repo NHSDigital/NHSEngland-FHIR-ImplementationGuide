@@ -3,7 +3,7 @@
     <id value="v2-hscic-0200-NameType" />
     <url value="https://fhir.nhs.uk/ValueSet/v2-hscic-0200-NameType" />
     <version value="1.0.0" />
-    <name value="HL7v2 HSCIC Table 0200 - Name type" />
+    <name value="HL7v2HSCICTable0200Nametype" />
     <status value="active" />
     <description value="HL7v2 HSCIC Table 0200 - Name type" />
     <compose>

@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="19aa8f3d-46b0-486a-bab8-056a383e0f88" />
   <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Organization" />
-  <name value="NHSDigital-Organization" />
+  <name value="NHSDigitalOrganization" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
   <mapping>

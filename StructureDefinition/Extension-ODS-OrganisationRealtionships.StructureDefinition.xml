@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="d1235b27-88f5-4c85-b9a2-e36c4a9bd0e6"/>
   <url value="https://fhir.nhs.uk/StructureDefinition/Extension-ODS-OrganisationRealtionships" />
-  <name value="Extension-ODS-OrganisationRealtionships" />
+  <name value="ExtensionODSOrganisationRealtionships" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
   <kind value="complex-type" />

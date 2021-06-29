@@ -2,7 +2,7 @@
     <id value="NHSDigital-CareSettingType" />
     <url value="https://fhir.nhs.uk/ValueSet/NHSDigital-CareSettingType" />
     <version value="3.0.3" />
-    <name value="NHSDigital-CareSettingType" />
+    <name value="NHSDigitalCareSettingType" />
     <title value="NHSDigital-CareSettingType" />
     <status value="draft" />
     <date value="2020-11-04T00:00:00+00:00" />

@@ -99,7 +99,7 @@
   </text> 
   <url value="https://fhir.nhs.uk/ConceptMap/name-use-v2-hscic"/> 
   <version value="1.0.0"/> 
-  <name value="HSCIC v2.NameUse"/> 
+  <name value="HSCICv2NameUse"/> 
   <title value="HSCIC v2 map for NameUse"/> 
   <status value="draft"/> 
   <date value="2019-11-01T09:29:23+11:00"/> 

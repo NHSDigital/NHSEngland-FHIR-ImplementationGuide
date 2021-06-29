@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="ac0fe80a-ebc4-4f9f-825f-7ae7ff448597"/>
   <url value="https://fhir.nhs.uk/StructureDefinition/Extension-Spine-ActorRoleServiceOrSpecialty" />
-  <name value="Extension-Spine-ActorRoleServiceOrSpecialty" />
+  <name value="ExtensionSpineActorRoleServiceOrSpecialty" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
   <mapping>

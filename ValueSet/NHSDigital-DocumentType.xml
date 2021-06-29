@@ -2,7 +2,7 @@
     <id value="NHSDigital-DocumentType" />
     <url value="https://fhir.nhs.uk/ValueSet/NHSDigital-DocumentType" />
     <version value="3.0.1" />
-    <name value="NHSDigital-DocumentType" />
+    <name value="NHSDigitalDocumentType" />
     <title value="NHSDigital-DocumentType" />
     <status value="draft" />
     <date value="2020-11-04T00:00:00+00:00" />

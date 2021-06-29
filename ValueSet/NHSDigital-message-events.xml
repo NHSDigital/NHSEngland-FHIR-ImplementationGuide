@@ -3,7 +3,7 @@
     <id value="nhsdigital-message-events" />
     <url value="https://fhir.nhs.uk/ValueSet/NHSDigital-message-events" />
     <version value="1.0.7" />
-    <name value="NHS Digital Message Events" />
+    <name value="NHSMessageEvents" />
     <status value="active" />
     <description value="A ValueSet to identify the type of FHIR Message" />
     <compose>

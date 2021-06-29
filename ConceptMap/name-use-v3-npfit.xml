@@ -2,7 +2,7 @@
     <id value="name-use-v3-npfit" />
     <url value="https://fhir.nhs.uk/ConceptMap/name-use-v3-npfit" />
     <version value="1.0.0" />
-    <name value="NPfIT v3.NameUse" />
+    <name value="NPfITv3NameUse" />
     <title value="NPfIT v3.NameUse" />
     <status value="draft" />
     <experimental value="true" />

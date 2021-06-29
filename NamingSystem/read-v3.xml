@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <NamingSystem xmlns="http://hl7.org/fhir">
     <id value="read-v3"/>
-    <name value="READ_V3"/>
+    <name value="READV3"/>
     <status value="draft"/>
     <kind value="codesystem"/>
     <date value="2020-01-02"/>
