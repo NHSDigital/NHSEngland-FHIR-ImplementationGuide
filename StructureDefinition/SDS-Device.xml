@@ -116,14 +116,5 @@
       <min value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Device.contact">
-      <path value="Device.contact" />
-      <constraint>
-        <key value="cpt-2" />
-        <severity value="error" />
-        <human value="A system is required if a value is provided." />
-        <source value="http://hl7.org/fhir/StructureDefinition/ContactDetail" />
-      </constraint>
-    </element>
   </differential>
 </StructureDefinition>
