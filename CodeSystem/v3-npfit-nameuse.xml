@@ -3,7 +3,7 @@
     <id value="v3-npfit-nameuse" />
     <url value="https://fhir.nhs.uk/CodeSystem/v3-npfit-nameuse" />
     <version value="1.0.0" />
-    <name value="HL7v3 npfit NameUse" />
+    <name value="v3-npfit-nameuse" />
     <status value="active" />
     <date value="2020-10-15T00:00:00+00:00" />
     <publisher value="HL7 UK" />

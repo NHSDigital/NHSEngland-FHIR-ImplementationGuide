@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <NamingSystem xmlns="http://hl7.org/fhir">
     <id value="prescription-order-number-uuid-ns"/>
-    <name value="prescription order number UUID"/>
+    <name value="prescription-order-number-uuid-ns"/>
     <status value="draft"/>
     <kind value="identifier"/>
     <date value="2020-06-01"/>

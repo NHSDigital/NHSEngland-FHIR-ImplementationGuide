@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <NamingSystem xmlns="http://hl7.org/fhir">
     <id value="uk-nmc-number"/>
-    <name value="Nursing and Midwifery Council Identifier"/>
+    <name value="uk-nmc-number"/>
     <status value="draft"/>
     <kind value="identifier"/>
     <date value="2019-12-03"/>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <NamingSystem xmlns="http://hl7.org/fhir">
     <id value="DM-prescription-charge-ns"/>
-    <name value="Prescription Charge Paid"/>
+    <name value="DM-prescription-charge-ns"/>
     <status value="draft"/>
     <kind value="codesystem"/>
     <date value="2021-05-17"/>

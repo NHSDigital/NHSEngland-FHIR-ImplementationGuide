@@ -1,6 +1,6 @@
 <NamingSystem xmlns="http://hl7.org/fhir">
     <id value="spine-asid"></id>
-    <name value="Spine ASID"></name>
+    <name value="spine-asid"></name>
     <status value="draft"></status>
     <kind value="identifier"></kind>
     <date value="2019-05-01"></date>

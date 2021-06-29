@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <NamingSystem xmlns="http://hl7.org/fhir">
     <id value="dm-prescription-treatment-type-ns"/>
-    <name value="Digital Medicine Prescription Treatment Type - not used externally"/>
+    <name value="dm-prescription-treatment-type-ns"/>
     <status value="draft"/>
     <kind value="codesystem"/>
     <date value="2020-06-01"/>

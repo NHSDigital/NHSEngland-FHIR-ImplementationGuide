@@ -1,6 +1,6 @@
 <NamingSystem xmlns="http://hl7.org/fhir">
     <id value="sds-job-role-id"></id>
-    <name value="SDS Job Role ID"></name>
+    <name value="sds-job-role-id"></name>
     <status value="draft"></status>
     <kind value="codesystem"></kind>
     <date value="2019-05-01"></date>

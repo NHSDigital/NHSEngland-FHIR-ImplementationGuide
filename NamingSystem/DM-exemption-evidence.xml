@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <NamingSystem xmlns="http://hl7.org/fhir">
     <id value="DM-exemption-evidence-ns"/>
-    <name value="Exemption evidence"/>
+    <name value="DM-exemption-evidence-ns"/>
     <status value="draft"/>
     <kind value="codesystem"/>
     <date value="2021-05-17"/>
