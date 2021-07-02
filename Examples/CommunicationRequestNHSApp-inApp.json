@@ -1,0 +1,39 @@
+{
+    "resourceType": "CommunicationRequest",
+    "id": "941f9751-aa2a-4749-88c1-201266f7b538",
+    "identifier": [
+        {
+            "system": "https://fhir.nhs.uk/NHSApp/campaign-id",
+            "value": "optional campaign id"
+        },
+        {
+            "system": "https://fhir.nhs.uk/NHSApp/request-id",
+            "value": "optional request reference"
+        }
+    ],
+    "status": "active",
+    "payload": [
+        {
+            "contentString": "You have a new appointment, please confirm you can attend. Open the Onboarded Third Party appointment [here](https://www.nhsapp.service.nhs.uk/appointments/hospital-appointments)"
+        }
+    ],
+    "sender": {
+        "display": "Onboarded Third Party"
+    },
+    "recipient": [
+        {
+            "type": "Patient",
+            "identifier": {
+                "system": "https://fhir.nhs.uk/Id/nhs-number",
+                "value": "9903002157"
+            }
+        }
+    ],
+    "requester": {
+        "identifier": {
+            "system": "https://fhir.nhs.uk/Id/ods-organization-code",
+            "value": "RTD"
+        },
+        "display": "THE NEWCASTLE UPON TYNE HOSPITALS NHS FOUNDATION TRUST"
+    }
+}

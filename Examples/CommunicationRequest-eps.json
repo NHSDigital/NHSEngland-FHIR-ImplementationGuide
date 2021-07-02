@@ -1,0 +1,36 @@
+{
+    "resourceType": "CommunicationRequest",
+    "id": "270de8ea-1fcc-4c0d-9928-f46248c66abb",
+    "status": "active",
+    "subject": {
+        "reference": "urn:uuid:848d8470-bd51-494e-9347-8142ea75cb23"
+    },
+    "payload": [
+        {
+            "contentString": "Please make an appointment to see your GP. Review date due"
+        },
+        {
+            "contentReference": {
+                "reference": "urn:uuid:d0f003a0-8763-43d5-a264-ce52a38901c9",
+                "display": "List of Repeat Medications for re-ordering"
+            }
+        }
+    ],
+    "requester": {
+        "type": "Organization",
+        "identifier": {
+            "system": "https://fhir.nhs.uk/Id/ods-organization-code",
+            "value": "RBA"
+        },
+        "display": "TAUNTON AND SOMERSET NHS FOUNDATION TRUST"
+    },
+    "recipient":  [
+        {
+            "type": "Patient",
+            "identifier": {
+                "system": "https://fhir.nhs.uk/Id/nhs-number",
+                "value": "9453740519"
+            }
+        }
+    ]
+}
