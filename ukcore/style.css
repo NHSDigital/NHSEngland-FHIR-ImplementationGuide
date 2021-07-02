@@ -39,7 +39,6 @@ ol, ul {
 blockquote, q {
 	quotes: none;
 }
-
 blockquote:before, blockquote:after,
 q:before, q:after {
 	content: '';
@@ -50,24 +49,55 @@ table {
 	border-spacing: 0;
 }
 
-/*****************/
-/* NHS-D Theme   */
-/*****************/
+/*****************************************/
+/* Code snippet viewer for legacy guides */
+/*****************************************/
+
+/* .lang-json {
+    border: 1px solid #ccc;
+} */
+
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tabbutton {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tabbutton:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tabbutton.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+/*************************************/
+/* NHS-D Theme (bootstrap-overrides) */
+/*************************************/
 a {
   color: #005bbb;
-}
-
-thead {
-   background: #fff;
- }
-
-.navbar-default .navbar-brand, .navbar-default .navbar-nav>li>a {
-  color: #3f525f !important;
-  padding: 15px 10px;
-}
-
-header .navbar {
-  margin-bottom: 0px;
 }
 
 pre {
@@ -89,6 +119,7 @@ pre {
   line-height: 1.4rem;
 }
 
+/* Tree table overiddes */
 .stu3-treetable .treetable-wrapper .treetable-left-panel .treetable  {
   font-size: 100%;
   font-family: "Frutiger W01","Arial",sans-serif;
@@ -109,6 +140,7 @@ table.dict {
   border: none;
 }
 
+/* Sidebar override for nested pages */
 .nav-tabs>li>a {
   border-radius: 0;
   border: none;
@@ -123,15 +155,23 @@ table.dict {
   outline: 0 !important;
 }
 
+.navbar-nav>li {
+    display: inline-block !important;
+    float: none !important;
+}
+
+/* Main navigation - ensure 100% width when using a small device */
+@media (max-width: 77.49em) {
+  .nhsd-m-menu-bar li {
+    width: 100% !important;
+  }
+}
+
 .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
     color: #fff;
     background-color: #005eb8;
     border: 0;
     cursor: default;
-}
-
-.nhsd-o-global-header__menu {
-    display: block !important;
 }
 
 .navbar-collapse ul li {
@@ -151,6 +191,7 @@ ul.dropdown-menu {
   padding-top: 0px !important;
 }
 
+/* NHS Digital callout boxes (old branding) */
 .callout-box--info {
     border-left: solid 7px #4c90ce;
     background-color: #d4e4f3;
@@ -175,6 +216,7 @@ ul.dropdown-menu {
     line-height: 1.4rem;
 }
 
+/* back to top button - renders when scrolling */
 #back-to-top {
     position: fixed;
     bottom: 20px;
@@ -182,6 +224,8 @@ ul.dropdown-menu {
     z-index: 99;
     display: none;
 }
+
+/* PRSB-style mandatory, required, optional, avoid, and unknown circles */
 .mro-circle {
     border-radius: 100%;
     height: 30px;
@@ -191,13 +235,14 @@ ul.dropdown-menu {
     line-height: 30px;
     display: inline-block;
     vertical-align: middle;
-    text-align: center;
+    text-align: center !important;
     cursor: help;
+    padding: 0px;
 }
 
 .mandatory {
-  background: #330072;
-  color: #fff;
+  background: #330072 !important;
+  color: #fff !important;
 }
 
 .mandatory::after {
@@ -205,8 +250,8 @@ ul.dropdown-menu {
 }
 
 .required {
-  background: #ED8B00;
-  color: #fff;
+  background: #ED8B00 !important;
+  color: #fff !important;
 }
 
 .required::after {
@@ -214,8 +259,8 @@ ul.dropdown-menu {
 }
 
 .optional {
-  background: #006747;
-  color: #fff;
+  background: #006747 !important;
+  color: #fff !important;
 }
 
 .optional::after {
@@ -223,8 +268,8 @@ ul.dropdown-menu {
 }
 
 .unknown {
-  background: #DFE2E5;
-  color: #687784;
+  background: #DFE2E5 !important;
+  color: #687784 !important;
 }
 
 .unknown::after {
@@ -232,42 +277,10 @@ ul.dropdown-menu {
 }
 
 .avoid {
-  background: #8A1538; 
-  color: #fff;
+  background: #8A1538 !important;
+  color: #fff !important;
 }
 
 .avoid::after {
   content:'X';
 }
-
-
-  .lang-json {
-    border: 0px solid #ccc;
-  }
-  .tab {
-    overflow: hidden;
-    border: 1px solid #ccc;
-    background-color: #f1f1f1;
-  }/* Style the buttons inside the tab */
-  .tab button {
-    background-color: inherit;
-    float: left;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 14px 16px;
-    transition: 0.3s;
-    font-size: 17px;
-  }/* Change background color of buttons on hover */
-  .tab button:hover {
-    background-color: #ddd;
-  }/* Create an active/current tablink class */
-  .tab button.active {
-    background-color: #ccc;
-  }/* Style the tab content */
-  .tabcontent {
-    display: none;
-    padding: 6px 12px;
-    border: 1px solid #ccc;
-    border-top: none;
-  }
