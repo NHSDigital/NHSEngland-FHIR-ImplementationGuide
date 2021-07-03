@@ -1,0 +1,16 @@
+{
+  "resourceType": "ObservationDefinition",
+  "id": "snomed-871553007",
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "871553007",
+        "display": "Detection of SARS-CoV-2 (severe acute respiratory syndrome coronavirus 2) antigen"
+      }
+    ]
+  },
+  "validCodedValueSet": {
+    "reference": "https://fhir.nhs.uk/ValueSet/covid-19-detection-of-antigen"
+  }
+}

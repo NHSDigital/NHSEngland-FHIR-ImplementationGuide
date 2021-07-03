@@ -129,6 +129,33 @@
                 <documentation value="A server defined search that may match any of the string fields in the Address, including line, city, county, country, postalCode, and/or text" />
             </searchParam>
         </resource>
+         <resource>
+            <type value="Observation" />
+            <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Observation" />
+            <interaction>
+                <code value="search-type" />
+            </interaction>
+            <searchParam>
+                <name value="patient:identifier" />
+                <type value="token" />
+                <documentation value="The patient identifier (e.g. NHS Number) that the observation is about" />
+            </searchParam>
+            <searchParam>
+                <name value="patient" />
+                <type value="reference" />
+                <documentation value="The patient that the observation is about" />
+            </searchParam>
+            <searchParam>
+                <name value="code" />
+                <type value="token" />
+                <documentation value="The code of the observation type" />
+            </searchParam>
+            <searchParam>
+                <name value="date" />
+                <type value="date" />
+                <documentation value="The code of the observation type" />
+            </searchParam>
+        </resource>
         <resource>
             <type value="Organization" />
             <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Organization" />

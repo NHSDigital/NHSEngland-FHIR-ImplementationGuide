@@ -1,0 +1,16 @@
+{
+  "resourceType": "ObservationDefinition",
+  "id": "snomed-871555000",
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "871555000",
+        "display": "Detection of ribonucleic acid of Severe acute respiratory syndrome coronavirus 2"
+      }
+    ]
+  },
+  "validCodedValueSet": {
+    "reference": "https://fhir.nhs.uk/ValueSet/covid-19-detection-of-virus"
+  }
+}
