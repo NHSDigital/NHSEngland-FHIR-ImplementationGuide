@@ -1,0 +1,26 @@
+<MessageDefinition xmlns="http://hl7.org/fhir">
+    <id value="dispense-claim-update" />
+    <url value="https://fhir.nhs.uk/MessageDefinition/dispense-claim-update" />
+    <identifier>
+        <system value="https://tools.ietf.org/html/rfc4122" />
+        <value value="2aa99b67-d493-4569-8f7a-2aa8ac571c8d" />
+    </identifier>
+    <version value="1.0.0" />
+    <name value="dispenseclaimupdate" />
+    <title value="Dispense Prescription Claim Update" />
+    <status value="active" />
+    <date value="2021-04-28" />
+    <eventCoding>
+        <system value="https://fhir.nhs.uk/CodeSystem/message-event" />
+        <code value="dispense-claim-update" />
+        <display value="Dispense Claim Update" />
+    </eventCoding>
+    <category value="consequence" />
+    <focus>
+        <code value="Claim" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Claim" />
+        <min value="1" />
+        <max value="4" />
+    </focus>
+    <responseRequired value="on-error"></responseRequired>
+</MessageDefinition>

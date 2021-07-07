@@ -1,0 +1,25 @@
+<MessageDefinition xmlns="http://hl7.org/fhir">
+    <id value="dispense-notification-update"></id>
+    <url value="https://fhir.nhs.uk/MessageDefinition/dispense-notification-update"></url>
+    <identifier>
+        <system value="https://tools.ietf.org/html/rfc4122"></system>
+        <value value="16aa190c-9ef3-49b3-b323-a40148f0f072"></value>
+    </identifier>
+    <version value="1.0.0"></version>
+    <name value="dispensenotificationupdate" />
+    <title value="Pharmacy/Treatment Dispense Update"></title>
+    <status value="active"></status>
+    <date value="2021-05-15"></date>
+    <eventCoding>
+        <system value="https://fhir.nhs.uk/CodeSystem/message-event"></system>
+        <code value="dispense-notification-update"></code>
+        <display value="Dispense Notification Update"></display>
+    </eventCoding>
+    <category value="notification"></category>
+    <focus>
+        <code value="MedicationDispense"></code>
+        <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationDispense"></profile>
+        <min value="1"></min>
+        <max value="*"></max>
+    </focus>
+</MessageDefinition>
