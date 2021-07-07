@@ -15,6 +15,7 @@
         <code value="dispense-notification-update"></code>
         <display value="Dispense Notification Update"></display>
     </eventCoding>
+     <description value="Notification of medication dispenses."/>
     <category value="notification"></category>
     <focus>
         <code value="MedicationDispense"></code>

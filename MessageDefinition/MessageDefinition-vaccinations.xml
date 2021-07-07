@@ -15,6 +15,7 @@
         <code value="vaccinations" />
         <display value="Vaccinations" />
     </eventCoding>
+     <description value="Notification of immunisations."/>
     <category value="notification" />
     <focus>
         <code value="Immunization" />

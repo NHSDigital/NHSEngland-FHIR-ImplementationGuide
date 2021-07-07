@@ -14,7 +14,8 @@
         <code value="document" />
         <display value="Document" />
     </eventCoding>
-    <category value="notification" />
+    <description value="Used to exchange a clinical document. One of FHIR Binary or FHIR Bundle (type=document) is required."/>
+    <category value="consequence" />
     <focus>
         <code value="DocumentReference" />
         <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-DocumentReference" />
@@ -34,6 +35,7 @@
     </focus>
     <focus>
         <code value="Bundle" />
+         <profile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Bundle" />
         <min value="0" />
         <max value="*" />
     </focus>

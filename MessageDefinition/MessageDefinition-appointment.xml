@@ -14,9 +14,11 @@
         <code value="appointment" />
         <display value="Appointment" />
     </eventCoding>
-    <category value="notification" />
+     <description value="Used create an appointment."/>
+    <category value="consequence" />
     <focus>
         <code value="Appointment" />
+        <profile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Appointment" />
         <min value="1" />
         <max value="*" />
     </focus>

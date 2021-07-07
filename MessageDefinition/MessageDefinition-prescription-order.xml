@@ -15,6 +15,7 @@
         <code value="prescription-order" />
         <display value="Prescription Order" />
     </eventCoding>
+     <description value="Ordering of medications"/>
     <category value="consequence" />
     <focus>
         <code value="MedicationRequest" />
