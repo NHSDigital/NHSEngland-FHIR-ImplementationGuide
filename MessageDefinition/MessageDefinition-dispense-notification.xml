@@ -1,5 +1,5 @@
 <MessageDefinition xmlns="http://hl7.org/fhir">
-    <id value="pharmacy-dispense"></id>
+    <id value="e387293a-84e4-4d7e-9696-4161abde26e7"></id>
     <url value="https://fhir.nhs.uk/MessageDefinition/dispense-notification"></url>
     <identifier>
         <system value="https://tools.ietf.org/html/rfc4122"></system>
