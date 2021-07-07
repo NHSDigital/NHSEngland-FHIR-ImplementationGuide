@@ -1,6 +1,6 @@
 <MessageDefinition xmlns="http://hl7.org/fhir">
     <id value="64011859-32d9-4fd2-abc2-00e31a15b5fc" />
-    <url value="https://fhir.nhs.uk/MessageDefinition/document" />
+    <url value="https://fhir.nhs.uk/MessageDefinition/appointment" />
     <identifier>
         <system value="https://tools.ietf.org/html/rfc4122" />
         <value value="64011859-32d9-4fd2-abc2-00e31a15b5fc" />
