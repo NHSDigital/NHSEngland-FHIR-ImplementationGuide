@@ -1,5 +1,5 @@
 <MessageDefinition xmlns="http://hl7.org/fhir">
-    <id value="e387293a-84e4-4d7e-9696-4161abde26e7"></id>
+    <id value="bf729ea8-280b-4109-b2f5-02ce8e51d870"></id>
     <url value="https://fhir.nhs.uk/MessageDefinition/dispense-notification"></url>
     <identifier>
         <system value="https://tools.ietf.org/html/rfc4122"></system>
@@ -15,6 +15,7 @@
         <code value="dispense-notification"></code>
         <display value="Dispense Notification"></display>
     </eventCoding>
+    <description value="Notification of dispensed medication"/>
     <category value="notification"></category>
     <focus>
         <code value="MedicationDispense"></code>
