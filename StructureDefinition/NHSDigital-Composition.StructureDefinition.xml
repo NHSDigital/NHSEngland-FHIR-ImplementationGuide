@@ -2034,7 +2034,7 @@
         </extension>
         <strength value="example"></strength>
         <description value="A code from the SNOMED Clinical Terminology UK coding system which represents the type of section."></description>
-        <valueSetUri value="http://hl7.org/fhir/ValueSet/doc-section-codes"></valueSetUri>
+        <valueSet value="http://hl7.org/fhir/ValueSet/doc-section-codes"></valueSet>
       </binding>
     </element>
     <element id="Composition.section:patientAndCarerConcernsExpectationsAndWishesSection.code.coding">
