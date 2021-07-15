@@ -33,6 +33,8 @@ StructureDefinition/UKCoreProcedure.xml
 StructureDefinition/UKCoreRelatedPerson.xml
 StructureDefinition/UKCoreServiceRequest.xml
 StructureDefinition/UKCoreSpecimen.xml
+StructureDefinition/UKCoreBundle.xml
+StructureDefinition/UKCoreComposition.xml
 StructureDefinition/ExtensionUKCoreAddressKey.xml
 StructureDefinition/ExtensionUKCoreAdmissionMethod.xml
 StructureDefinition/ExtensionUKCoreAllergyIntoleranceEnd.xml
