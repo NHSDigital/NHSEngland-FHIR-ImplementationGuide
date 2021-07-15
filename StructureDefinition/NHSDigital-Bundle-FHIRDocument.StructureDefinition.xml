@@ -41,7 +41,7 @@
     </element>
     <element id="Bundle.entry">
       <path value="Bundle.entry" />
-      <min value="1" />
+      <min value="2" />
     </element>
     <element id="Bundle.entry.link">
       <path value="Bundle.entry.link" />
