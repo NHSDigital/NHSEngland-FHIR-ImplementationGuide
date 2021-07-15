@@ -47,6 +47,10 @@
       <path value="Bundle.entry.link" />
       <max value="0" />
     </element>
+    <element id="Bundle.entry.fullUrl">
+      <path value="Bundle.entry.fullUrl" />
+      <min value="1" />
+    </element>
     <element id="Bundle.entry.resource">
       <path value="Bundle.entry.resource" />
       <slicing>
