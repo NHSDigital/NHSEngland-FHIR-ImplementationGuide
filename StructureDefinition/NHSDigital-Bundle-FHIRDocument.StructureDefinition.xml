@@ -67,6 +67,27 @@
         <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Composition" />
       </type>
     </element>
+    <element id="Bundle.entry.resource:patient">
+      <path value="Bundle.entry.resource" />
+      <sliceName value="patient" />
+      <min value="1" />
+      <type>
+        <code value="Resource" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient" />
+      </type>
+    </element>
+    <element id="Bundle.entry.resource:patient.identifier">
+      <path value="Bundle.entry.resource.identifier" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <ordered value="false" />
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
     <element id="Bundle.entry.search">
       <path value="Bundle.entry.search" />
       <max value="0" />
