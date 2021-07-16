@@ -7,8 +7,8 @@
             "value": "3415870201"
         },
         {
-            "system": "https://fhir.hl7.org.uk/Id/gmc-number",
-            "value": "G123456"
+            "system": "https://fhir.hl7.org.uk/Id/gmp-number",
+            "value": "G1234567"
         }
     ],
     "name": [
