@@ -82,7 +82,6 @@
       </type>
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-List" />
       </type>
     </element>
     <element id="CommunicationRequest.requester">

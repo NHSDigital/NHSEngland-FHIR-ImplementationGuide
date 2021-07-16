@@ -31,14 +31,6 @@
   <baseDefinition value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Bundle" />
   <derivation value="constraint" />
   <differential>
-    <element id="Bundle.identifier.system">
-      <path value="Bundle.identifier.system" />
-      <min value="1" />
-    </element>
-    <element id="Bundle.identifier.value">
-      <path value="Bundle.identifier.value" />
-      <min value="1" />
-    </element>
     <element id="Bundle.type">
       <path value="Bundle.type" />
       <fixedCode value="document" />
@@ -59,34 +51,52 @@
       <path value="Bundle.entry.fullUrl" />
       <min value="1" />
     </element>
-    <element id="Bundle.entry.resource">
-      <path value="Bundle.entry.resource" />
+    <element id="Bundle.entry">
+      <path value="Bundle.entry" />
       <slicing>
         <discriminator>
           <type value="profile" />
-          <path value="resolve()" />
+          <path value="resource.resolve()" />
         </discriminator>
         <rules value="open" />
       </slicing>
       <min value="1" />
     </element>
-    <element id="Bundle.entry.resource:composition">
-      <path value="Bundle.entry.resource" />
+    <element id="Bundle.entry:composition">
+      <path value="Bundle.entry" />
       <sliceName value="composition" />
       <min value="1" />
+    </element>
+     <element id="Bundle.entry.resource:composition">
+      <path value="Bundle.entry.resource" />
       <type>
         <code value="Resource" />
         <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Composition" />
       </type>
     </element>
-    <element id="Bundle.entry.resource:patient">
-      <path value="Bundle.entry.resource" />
+    <element id="Bundle.entry:patient">
+      <path value="Bundle.entry" />
       <sliceName value="patient" />
       <min value="1" />
+    </element>
+    <element id="Bundle.entry.resource:patient">
+      <path value="Bundle.entry.resource" />
       <type>
         <code value="Resource" />
         <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient" />
       </type>
+    </element>
+    <element id="Bundle.entry:patient.resource.identifier">
+      <path value="Bundle.entry.resource.identifier" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <ordered value="false" />
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
     </element>
     <element id="Bundle.entry.search">
       <path value="Bundle.entry.search" />
