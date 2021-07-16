@@ -45,9 +45,7 @@
       </type>
     </element>
     <element id="Composition.section">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-        <valueString value="Section"></valueString>
-      </extension>
+     
       <path value="Composition.section"></path>
       <slicing>
         <discriminator>
@@ -58,16 +56,42 @@
         <rules value="closed"></rules>
       </slicing>
       <min value="1"></min>
-      <mustSupport value="true"></mustSupport>
+      
     </element>
+      <element id="Composition.section.code.coding.system">
+      <path value="Composition.section.code.coding.system"></path>
+      <min value="1"></min>
+      <fixedUri value="http://snomed.info/sct"></fixedUri>
+      <mustSupport value="false"></mustSupport>
+    </element>
+    <element id="Composition.section.code.coding.version">
+      <path value="Composition.section.code.coding.version"></path>
+      <max value="0"></max>
+    </element>
+     <element id="Composition.section.code.coding">
+      <path value="Composition.section.code.coding"></path>
+      <min value="1"></min>
+      <max value="1"></max>
+    </element>
+     <element id="Composition.section.text">
+      <path value="Composition.section.text"></path>
+      <min value="1"></min>
+    </element>
+      <element id="Composition.section.code">
+      <path value="Composition.section.code"></path>
+      <min value="1"></min>
+    </element> 
+    <element id="Composition.section:admissionDetailsSection.code.coding.system">
+      <path value="Composition.section.code.coding.system"></path>
+      <min value="1"></min>
+      <fixedUri value="http://snomed.info/sct"></fixedUri>
+      <mustSupport value="false"></mustSupport>
+    </element>
+<!-- admissionDetailsSection -->
     <element id="Composition.section:admissionDetailsSection">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-        <valueString value="Section"></valueString>
-      </extension>
       <path value="Composition.section"></path>
       <sliceName value="admissionDetailsSection"></sliceName>
-      <max value="1"></max>
-      <mustSupport value="true"></mustSupport>
+      <max value="1"></max> 
     </element>
     <element id="Composition.section:admissionDetailsSection.title">
       <path value="Composition.section.title"></path>
@@ -75,107 +99,17 @@
       <fixedString value="Admission details"></fixedString>
       <mustSupport value="false"></mustSupport>
     </element>
-    <element id="Composition.section:admissionDetailsSection.code">
-      <path value="Composition.section.code"></path>
-      <min value="1"></min>
-      <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="CompositionSectionType"></valueString>
-        </extension>
-        <strength value="example"></strength>
-        <description value="A code from the SNOMED Clinical Terminology UK coding system which represents the type of section."></description>
-      </binding>
-    </element>
-    <element id="Composition.section:admissionDetailsSection.code.coding">
-      <path value="Composition.section.code.coding"></path>
-      <min value="1"></min>
-      <max value="1"></max>
-    </element>
-    <element id="Composition.section:admissionDetailsSection.code.coding.system">
-      <path value="Composition.section.code.coding.system"></path>
-      <min value="1"></min>
-      <fixedUri value="http://snomed.info/sct"></fixedUri>
-      <mustSupport value="false"></mustSupport>
-    </element>
-    <element id="Composition.section:admissionDetailsSection.code.coding.version">
-      <path value="Composition.section.code.coding.version"></path>
-      <max value="0"></max>
-    </element>
     <element id="Composition.section:admissionDetailsSection.code.coding.code">
       <path value="Composition.section.code.coding.code"></path>
       <min value="1"></min>
       <fixedCode value="886781000000108"></fixedCode>
       <mustSupport value="false"></mustSupport>
     </element>
-    <element id="Composition.section:admissionDetailsSection.code.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
+    <element id="Composition.section:admissionDetailsSection.code.coding.display">   
       <path value="Composition.section.code.coding.display"></path>
       <min value="1"></min>
       <fixedString value="Admission details"></fixedString>
       <mustSupport value="false"></mustSupport>
-    </element>
-    <element id="Composition.section:admissionDetailsSection.code.coding.userSelected">
-      <path value="Composition.section.code.coding.userSelected"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:admissionDetailsSection.code.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
-      <path value="Composition.section.code.text"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:admissionDetailsSection.text">
-      <path value="Composition.section.text"></path>
-      <min value="1"></min>
-    </element>
-    <element id="Composition.section:admissionDetailsSection.mode">
-      <path value="Composition.section.mode"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:admissionDetailsSection.orderedBy">
-      <path value="Composition.section.orderedBy"></path>
-      <max value="0"></max>
-      <mustSupport value="false"></mustSupport>
-    </element>
-    <element id="Composition.section:admissionDetailsSection.orderedBy.coding">
-      <path value="Composition.section.orderedBy.coding"></path>
-      <mustSupport value="false"></mustSupport>
-    </element>
-    <element id="Composition.section:admissionDetailsSection.orderedBy.coding.system">
-      <path value="Composition.section.orderedBy.coding.system"></path>
-      <min value="1"></min>
-      <mustSupport value="false"></mustSupport>
-    </element>
-    <element id="Composition.section:admissionDetailsSection.orderedBy.coding.version">
-      <path value="Composition.section.orderedBy.coding.version"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:admissionDetailsSection.orderedBy.coding.code">
-      <path value="Composition.section.orderedBy.coding.code"></path>
-      <min value="1"></min>
-      <mustSupport value="false"></mustSupport>
-    </element>
-    <element id="Composition.section:admissionDetailsSection.orderedBy.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
-      <path value="Composition.section.orderedBy.coding.display"></path>
-      <min value="1"></min>
-      <mustSupport value="false"></mustSupport>
-    </element>
-    <element id="Composition.section:admissionDetailsSection.orderedBy.coding.userSelected">
-      <path value="Composition.section.orderedBy.coding.userSelected"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:admissionDetailsSection.orderedBy.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
-      <path value="Composition.section.orderedBy.text"></path>
-      <max value="0"></max>
     </element>
     <element id="Composition.section:admissionDetailsSection.entry">
       <path value="Composition.section.entry"></path>
@@ -186,30 +120,20 @@
       </type>
       <type>
         <code value="Reference"></code>
-        <targetProfile value="https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-ITK-Encounter-1"></targetProfile>
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Encounter"></targetProfile>
       </type>
     </element>
     <element id="Composition.section:admissionDetailsSection.entry.reference">
       <path value="Composition.section.entry.reference"></path>
       <min value="1"></min>
     </element>
-    <element id="Composition.section:admissionDetailsSection.emptyReason">
-      <path value="Composition.section.emptyReason"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:admissionDetailsSection.section">
-      <path value="Composition.section.section"></path>
-      <max value="0"></max>
-    </element>
+   
     <element id="Composition.section:allergiesAndAdverseReactionsSection">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-        <valueString value="Section"></valueString>
-      </extension>
       <path value="Composition.section"></path>
       <sliceName value="allergiesAndAdverseReactionsSection"></sliceName>
       <min value="1"></min>
       <max value="1"></max>
-      <mustSupport value="true"></mustSupport>
+      
     </element>
     <element id="Composition.section:allergiesAndAdverseReactionsSection.title">
       <path value="Composition.section.title"></path>
@@ -220,29 +144,13 @@
     <element id="Composition.section:allergiesAndAdverseReactionsSection.code">
       <path value="Composition.section.code"></path>
       <min value="1"></min>
-      <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="CompositionSectionType"></valueString>
-        </extension>
-        <strength value="example"></strength>
-        <description value="A code from the SNOMED Clinical Terminology UK coding system which represents the type of section."></description>
-      </binding>
     </element>
     <element id="Composition.section:allergiesAndAdverseReactionsSection.code.coding">
       <path value="Composition.section.code.coding"></path>
       <min value="1"></min>
       <max value="1"></max>
     </element>
-    <element id="Composition.section:allergiesAndAdverseReactionsSection.code.coding.system">
-      <path value="Composition.section.code.coding.system"></path>
-      <min value="1"></min>
-      <fixedUri value="http://snomed.info/sct"></fixedUri>
-      <mustSupport value="false"></mustSupport>
-    </element>
-    <element id="Composition.section:allergiesAndAdverseReactionsSection.code.coding.version">
-      <path value="Composition.section.code.coding.version"></path>
-      <max value="0"></max>
-    </element>
+  
     <element id="Composition.section:allergiesAndAdverseReactionsSection.code.coding.code">
       <path value="Composition.section.code.coding.code"></path>
       <min value="1"></min>
@@ -250,9 +158,7 @@
       <mustSupport value="false"></mustSupport>
     </element>
     <element id="Composition.section:allergiesAndAdverseReactionsSection.code.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
+    
       <path value="Composition.section.code.coding.display"></path>
       <min value="1"></min>
       <fixedString value="Allergies and adverse reactions"></fixedString>
@@ -263,9 +169,7 @@
       <max value="0"></max>
     </element>
     <element id="Composition.section:allergiesAndAdverseReactionsSection.code.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
+    
       <path value="Composition.section.code.text"></path>
       <max value="0"></max>
     </element>
@@ -304,9 +208,7 @@
       <mustSupport value="false"></mustSupport>
     </element>
     <element id="Composition.section:allergiesAndAdverseReactionsSection.orderedBy.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
+    
       <path value="Composition.section.orderedBy.coding.display"></path>
       <min value="1"></min>
       <mustSupport value="false"></mustSupport>
@@ -316,9 +218,7 @@
       <max value="0"></max>
     </element>
     <element id="Composition.section:allergiesAndAdverseReactionsSection.orderedBy.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
+    
       <path value="Composition.section.orderedBy.text"></path>
       <max value="0"></max>
     </element>
@@ -338,9 +238,7 @@
       <min value="1"></min>
     </element>
     <element id="Composition.section:allergiesAndAdverseReactionsSection.entry.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
+    
       <path value="Composition.section.entry.display"></path>
       <mustSupport value="false"></mustSupport>
     </element>
@@ -353,13 +251,11 @@
       <max value="0"></max>
     </element>
     <element id="Composition.section:assessmentScalesSection">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-        <valueString value="Section"></valueString>
-      </extension>
+     
       <path value="Composition.section"></path>
       <sliceName value="assessmentScalesSection"></sliceName>
       <max value="1"></max>
-      <mustSupport value="true"></mustSupport>
+      
     </element>
     <element id="Composition.section:assessmentScalesSection.title">
       <path value="Composition.section.title"></path>
@@ -370,13 +266,7 @@
     <element id="Composition.section:assessmentScalesSection.code">
       <path value="Composition.section.code"></path>
       <min value="1"></min>
-      <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="CompositionSectionType"></valueString>
-        </extension>
-        <strength value="example"></strength>
-        <description value="A code from the SNOMED Clinical Terminology UK coding system which represents the type of section."></description>
-      </binding>
+      
     </element>
     <element id="Composition.section:assessmentScalesSection.code.coding">
       <path value="Composition.section.code.coding"></path>
@@ -400,9 +290,7 @@
       <mustSupport value="false"></mustSupport>
     </element>
     <element id="Composition.section:assessmentScalesSection.code.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
+    
       <path value="Composition.section.code.coding.display"></path>
       <min value="1"></min>
       <fixedString value="Assessment scales"></fixedString>
@@ -413,9 +301,7 @@
       <max value="0"></max>
     </element>
     <element id="Composition.section:assessmentScalesSection.code.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
+    
       <path value="Composition.section.code.text"></path>
       <max value="0"></max>
     </element>
@@ -452,9 +338,7 @@
       <min value="1"></min>
     </element>
     <element id="Composition.section:assessmentScalesSection.orderedBy.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
+    
       <path value="Composition.section.orderedBy.coding.display"></path>
       <min value="1"></min>
     </element>
@@ -463,9 +347,7 @@
       <max value="0"></max>
     </element>
     <element id="Composition.section:assessmentScalesSection.orderedBy.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
+    
       <path value="Composition.section.orderedBy.text"></path>
       <max value="0"></max>
     </element>
@@ -489,13 +371,11 @@
       <max value="0"></max>
     </element>
     <element id="Composition.section:clinicalSummarySection">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-        <valueString value="Section"></valueString>
-      </extension>
+     
       <path value="Composition.section"></path>
       <sliceName value="clinicalSummarySection"></sliceName>
       <max value="1"></max>
-      <mustSupport value="true"></mustSupport>
+      
     </element>
     <element id="Composition.section:clinicalSummarySection.title">
       <path value="Composition.section.title"></path>
@@ -506,13 +386,7 @@
     <element id="Composition.section:clinicalSummarySection.code">
       <path value="Composition.section.code"></path>
       <min value="1"></min>
-      <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="CompositionSectionType"></valueString>
-        </extension>
-        <strength value="example"></strength>
-        <description value="A code from the SNOMED Clinical Terminology UK coding system which represents the type of section."></description>
-      </binding>
+      
     </element>
     <element id="Composition.section:clinicalSummarySection.code.coding">
       <path value="Composition.section.code.coding"></path>
@@ -536,9 +410,7 @@
       <mustSupport value="false"></mustSupport>
     </element>
     <element id="Composition.section:clinicalSummarySection.code.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
+    
       <path value="Composition.section.code.coding.display"></path>
       <min value="1"></min>
       <fixedString value="Clinical summary"></fixedString>
@@ -549,9 +421,7 @@
       <max value="0"></max>
     </element>
     <element id="Composition.section:clinicalSummarySection.code.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
+    
       <path value="Composition.section.code.text"></path>
       <max value="0"></max>
     </element>
@@ -580,9 +450,7 @@
       <min value="1"></min>
     </element>
     <element id="Composition.section:clinicalSummarySection.orderedBy.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
+    
       <path value="Composition.section.orderedBy.coding.display"></path>
       <min value="1"></min>
     </element>
@@ -591,9 +459,7 @@
       <max value="0"></max>
     </element>
     <element id="Composition.section:clinicalSummarySection.orderedBy.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
+    
       <path value="Composition.section.orderedBy.text"></path>
       <max value="0"></max>
     </element>
@@ -617,13 +483,11 @@
       <max value="0"></max>
     </element>
     <element id="Composition.section:diagnosesSection">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-        <valueString value="Section"></valueString>
-      </extension>
+     
       <path value="Composition.section"></path>
       <sliceName value="diagnosesSection"></sliceName>
       <max value="1"></max>
-      <mustSupport value="true"></mustSupport>
+      
     </element>
     <element id="Composition.section:diagnosesSection.title">
       <path value="Composition.section.title"></path>
@@ -634,13 +498,7 @@
     <element id="Composition.section:diagnosesSection.code">
       <path value="Composition.section.code"></path>
       <min value="1"></min>
-      <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="CompositionSectionType"></valueString>
-        </extension>
-        <strength value="example"></strength>
-        <description value="A code from the SNOMED Clinical Terminology UK coding system which represents the type of section."></description>
-      </binding>
+      
     </element>
     <element id="Composition.section:diagnosesSection.code.coding">
       <path value="Composition.section.code.coding"></path>
@@ -664,9 +522,7 @@
       <mustSupport value="false"></mustSupport>
     </element>
     <element id="Composition.section:diagnosesSection.code.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
+    
       <path value="Composition.section.code.coding.display"></path>
       <min value="1"></min>
       <fixedString value="Diagnoses"></fixedString>
@@ -677,9 +533,7 @@
       <max value="0"></max>
     </element>
     <element id="Composition.section:diagnosesSection.code.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
+    
       <path value="Composition.section.code.text"></path>
       <max value="0"></max>
     </element>
@@ -718,9 +572,7 @@
       <mustSupport value="false"></mustSupport>
     </element>
     <element id="Composition.section:diagnosesSection.orderedBy.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
+    
       <path value="Composition.section.orderedBy.coding.display"></path>
       <min value="1"></min>
       <mustSupport value="false"></mustSupport>
@@ -730,9 +582,7 @@
       <max value="0"></max>
     </element>
     <element id="Composition.section:diagnosesSection.orderedBy.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
+    
       <path value="Composition.section.orderedBy.text"></path>
       <max value="0"></max>
     </element>
@@ -760,13 +610,11 @@
       <max value="0"></max>
     </element>
     <element id="Composition.section:dischargeDetailsSection">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-        <valueString value="Section"></valueString>
-      </extension>
+     
       <path value="Composition.section"></path>
       <sliceName value="dischargeDetailsSection"></sliceName>
       <max value="1"></max>
-      <mustSupport value="true"></mustSupport>
+      
     </element>
     <element id="Composition.section:dischargeDetailsSection.title">
       <path value="Composition.section.title"></path>
@@ -777,13 +625,7 @@
     <element id="Composition.section:dischargeDetailsSection.code">
       <path value="Composition.section.code"></path>
       <min value="1"></min>
-      <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="CompositionSectionType"></valueString>
-        </extension>
-        <strength value="example"></strength>
-        <description value="A code from the SNOMED Clinical Terminology UK coding system which represents the type of section."></description>
-      </binding>
+      
     </element>
     <element id="Composition.section:dischargeDetailsSection.code.coding">
       <path value="Composition.section.code.coding"></path>
@@ -807,9 +649,7 @@
       <mustSupport value="false"></mustSupport>
     </element>
     <element id="Composition.section:dischargeDetailsSection.code.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
+    
       <path value="Composition.section.code.coding.display"></path>
       <min value="1"></min>
       <fixedString value="Discharge details"></fixedString>
@@ -820,9 +660,7 @@
       <max value="0"></max>
     </element>
     <element id="Composition.section:dischargeDetailsSection.code.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
+    
       <path value="Composition.section.code.text"></path>
       <max value="0"></max>
     </element>
@@ -863,9 +701,7 @@
       <mustSupport value="false"></mustSupport>
     </element>
     <element id="Composition.section:dischargeDetailsSection.orderedBy.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
+    
       <path value="Composition.section.orderedBy.coding.display"></path>
       <min value="1"></min>
       <mustSupport value="false"></mustSupport>
@@ -875,9 +711,7 @@
       <max value="0"></max>
     </element>
     <element id="Composition.section:dischargeDetailsSection.orderedBy.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
+    
       <path value="Composition.section.orderedBy.text"></path>
       <max value="0"></max>
     </element>
@@ -910,13 +744,11 @@
       <max value="0"></max>
     </element>
     <element id="Composition.section:distributionListSection">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-        <valueString value="Section"></valueString>
-      </extension>
+     
       <path value="Composition.section"></path>
       <sliceName value="distributionListSection"></sliceName>
       <max value="1"></max>
-      <mustSupport value="true"></mustSupport>
+      
     </element>
     <element id="Composition.section:distributionListSection.title">
       <path value="Composition.section.title"></path>
@@ -926,13 +758,7 @@
     <element id="Composition.section:distributionListSection.code">
       <path value="Composition.section.code"></path>
       <min value="1"></min>
-      <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="CompositionSectionType"></valueString>
-        </extension>
-        <strength value="example"></strength>
-        <description value="A code from the SNOMED Clinical Terminology UK coding system which represents the type of section."></description>
-      </binding>
+      
     </element>
     <element id="Composition.section:distributionListSection.code.coding">
       <path value="Composition.section.code.coding"></path>
@@ -954,9 +780,7 @@
       <fixedCode value="887261000000109"></fixedCode>
     </element>
     <element id="Composition.section:distributionListSection.code.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
+    
       <path value="Composition.section.code.coding.display"></path>
       <min value="1"></min>
       <fixedString value="Distribution list"></fixedString>
@@ -966,9 +790,7 @@
       <max value="0"></max>
     </element>
     <element id="Composition.section:distributionListSection.code.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
+    
       <path value="Composition.section.code.text"></path>
       <max value="0"></max>
     </element>
@@ -997,9 +819,7 @@
       <min value="1"></min>
     </element>
     <element id="Composition.section:distributionListSection.orderedBy.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
+    
       <path value="Composition.section.orderedBy.coding.display"></path>
       <min value="1"></min>
     </element>
@@ -1008,9 +828,7 @@
       <max value="0"></max>
     </element>
     <element id="Composition.section:distributionListSection.orderedBy.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
+    
       <path value="Composition.section.orderedBy.text"></path>
       <max value="0"></max>
     </element>
@@ -1055,13 +873,11 @@
       <max value="0"></max>
     </element>
     <element id="Composition.section:gpPracticeSection">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-        <valueString value="Section"></valueString>
-      </extension>
+     
       <path value="Composition.section"></path>
       <sliceName value="gpPracticeSection"></sliceName>
       <max value="1"></max>
-      <mustSupport value="true"></mustSupport>
+      
     </element>
     <element id="Composition.section:gpPracticeSection.title">
       <path value="Composition.section.title"></path>
@@ -1071,13 +887,7 @@
     <element id="Composition.section:gpPracticeSection.code">
       <path value="Composition.section.code"></path>
       <min value="1"></min>
-      <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="CompositionSectionType"></valueString>
-        </extension>
-        <strength value="example"></strength>
-        <description value="A code from the SNOMED Clinical Terminology UK coding system which represents the type of section."></description>
-      </binding>
+      
     </element>
     <element id="Composition.section:gpPracticeSection.code.coding">
       <path value="Composition.section.code.coding"></path>
@@ -1099,9 +909,7 @@
       <fixedCode value="886711000000101"></fixedCode>
     </element>
     <element id="Composition.section:gpPracticeSection.code.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
+    
       <path value="Composition.section.code.coding.display"></path>
       <min value="1"></min>
       <fixedString value="GP practice"></fixedString>
@@ -1111,9 +919,7 @@
       <max value="0"></max>
     </element>
     <element id="Composition.section:gpPracticeSection.code.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
+    
       <path value="Composition.section.code.text"></path>
       <max value="0"></max>
     </element>
@@ -1142,9 +948,7 @@
       <min value="1"></min>
     </element>
     <element id="Composition.section:gpPracticeSection.orderedBy.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
+    
       <path value="Composition.section.orderedBy.coding.display"></path>
       <min value="1"></min>
     </element>
@@ -1153,9 +957,7 @@
       <max value="0"></max>
     </element>
     <element id="Composition.section:gpPracticeSection.orderedBy.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
+    
       <path value="Composition.section.orderedBy.text"></path>
       <max value="0"></max>
     </element>
@@ -1184,13 +986,11 @@
       <max value="0"></max>
     </element>
     <element id="Composition.section:individualRequirementsSection">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-        <valueString value="Section"></valueString>
-      </extension>
+     
       <path value="Composition.section"></path>
       <sliceName value="individualRequirementsSection"></sliceName>
       <max value="1"></max>
-      <mustSupport value="true"></mustSupport>
+      
     </element>
     <element id="Composition.section:individualRequirementsSection.title">
       <path value="Composition.section.title"></path>
@@ -1201,13 +1001,7 @@
     <element id="Composition.section:individualRequirementsSection.code">
       <path value="Composition.section.code"></path>
       <min value="1"></min>
-      <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="CompositionSectionType"></valueString>
-        </extension>
-        <strength value="example"></strength>
-        <description value="A code from the SNOMED Clinical Terminology UK coding system which represents the type of section."></description>
-      </binding>
+      
     </element>
     <element id="Composition.section:individualRequirementsSection.code.coding">
       <path value="Composition.section.code.coding"></path>
@@ -1231,9 +1025,7 @@
       <mustSupport value="false"></mustSupport>
     </element>
     <element id="Composition.section:individualRequirementsSection.code.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
+    
       <path value="Composition.section.code.coding.display"></path>
       <min value="1"></min>
       <fixedString value="Individual requirements"></fixedString>
@@ -1244,9 +1036,7 @@
       <max value="0"></max>
     </element>
     <element id="Composition.section:individualRequirementsSection.code.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
+    
       <path value="Composition.section.code.text"></path>
       <max value="0"></max>
     </element>
@@ -1280,9 +1070,7 @@
       <min value="1"></min>
     </element>
     <element id="Composition.section:individualRequirementsSection.orderedBy.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
+    
       <path value="Composition.section.orderedBy.coding.display"></path>
       <min value="1"></min>
     </element>
@@ -1291,9 +1079,7 @@
       <max value="0"></max>
     </element>
     <element id="Composition.section:individualRequirementsSection.orderedBy.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
+    
       <path value="Composition.section.orderedBy.text"></path>
       <max value="0"></max>
     </element>
@@ -1317,13 +1103,11 @@
       <max value="0"></max>
     </element>
     <element id="Composition.section:informationAndAdviceGivenSection">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-        <valueString value="Section"></valueString>
-      </extension>
+     
       <path value="Composition.section"></path>
       <sliceName value="informationAndAdviceGivenSection"></sliceName>
       <max value="1"></max>
-      <mustSupport value="true"></mustSupport>
+      
     </element>
     <element id="Composition.section:informationAndAdviceGivenSection.title">
       <path value="Composition.section.title"></path>
@@ -1334,13 +1118,7 @@
     <element id="Composition.section:informationAndAdviceGivenSection.code">
       <path value="Composition.section.code"></path>
       <min value="1"></min>
-      <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="CompositionSectionType"></valueString>
-        </extension>
-        <strength value="example"></strength>
-        <description value="A code from the SNOMED Clinical Terminology UK coding system which represents the type of section."></description>
-      </binding>
+      
     </element>
     <element id="Composition.section:informationAndAdviceGivenSection.code.coding">
       <path value="Composition.section.code.coding"></path>
@@ -1364,9 +1142,7 @@
       <mustSupport value="false"></mustSupport>
     </element>
     <element id="Composition.section:informationAndAdviceGivenSection.code.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
+    
       <path value="Composition.section.code.coding.display"></path>
       <min value="1"></min>
       <fixedString value="Information and advice given"></fixedString>
@@ -1377,9 +1153,7 @@
       <max value="0"></max>
     </element>
     <element id="Composition.section:informationAndAdviceGivenSection.code.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
+    
       <path value="Composition.section.code.text"></path>
       <max value="0"></max>
     </element>
@@ -1416,9 +1190,7 @@
       <min value="1"></min>
     </element>
     <element id="Composition.section:informationAndAdviceGivenSection.orderedBy.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
+    
       <path value="Composition.section.orderedBy.coding.display"></path>
       <min value="1"></min>
     </element>
@@ -1427,9 +1199,7 @@
       <max value="0"></max>
     </element>
     <element id="Composition.section:informationAndAdviceGivenSection.orderedBy.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
+    
       <path value="Composition.section.orderedBy.text"></path>
       <max value="0"></max>
     </element>
@@ -1453,13 +1223,11 @@
       <max value="0"></max>
     </element>
     <element id="Composition.section:investigationResultsSection">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-        <valueString value="Section"></valueString>
-      </extension>
+     
       <path value="Composition.section"></path>
       <sliceName value="investigationResultsSection"></sliceName>
       <max value="1"></max>
-      <mustSupport value="true"></mustSupport>
+      
     </element>
     <element id="Composition.section:investigationResultsSection.title">
       <path value="Composition.section.title"></path>
@@ -1470,13 +1238,7 @@
     <element id="Composition.section:investigationResultsSection.code">
       <path value="Composition.section.code"></path>
       <min value="1"></min>
-      <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="CompositionSectionType"></valueString>
-        </extension>
-        <strength value="example"></strength>
-        <description value="A code from the SNOMED Clinical Terminology UK coding system which represents the type of section."></description>
-      </binding>
+      
     </element>
     <element id="Composition.section:investigationResultsSection.code.coding">
       <path value="Composition.section.code.coding"></path>
@@ -1500,9 +1262,7 @@
       <mustSupport value="false"></mustSupport>
     </element>
     <element id="Composition.section:investigationResultsSection.code.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
+    
       <path value="Composition.section.code.coding.display"></path>
       <min value="1"></min>
       <fixedString value="Investigation results"></fixedString>
@@ -1513,9 +1273,7 @@
       <max value="0"></max>
     </element>
     <element id="Composition.section:investigationResultsSection.code.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
+    
       <path value="Composition.section.code.text"></path>
       <max value="0"></max>
     </element>
@@ -1552,9 +1310,7 @@
       <min value="1"></min>
     </element>
     <element id="Composition.section:investigationResultsSection.orderedBy.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
+    
       <path value="Composition.section.orderedBy.coding.display"></path>
       <min value="1"></min>
     </element>
@@ -1563,9 +1319,7 @@
       <max value="0"></max>
     </element>
     <element id="Composition.section:investigationResultsSection.orderedBy.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
+    
       <path value="Composition.section.orderedBy.text"></path>
       <max value="0"></max>
     </element>
@@ -1589,13 +1343,11 @@
       <max value="0"></max>
     </element>
     <element id="Composition.section:legalInformationSection">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-        <valueString value="Section"></valueString>
-      </extension>
+     
       <path value="Composition.section"></path>
       <sliceName value="legalInformationSection"></sliceName>
       <max value="1"></max>
-      <mustSupport value="true"></mustSupport>
+      
     </element>
     <element id="Composition.section:legalInformationSection.title">
       <path value="Composition.section.title"></path>
@@ -1606,13 +1358,7 @@
     <element id="Composition.section:legalInformationSection.code">
       <path value="Composition.section.code"></path>
       <min value="1"></min>
-      <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="CompositionSectionType"></valueString>
-        </extension>
-        <strength value="example"></strength>
-        <description value="A code from the SNOMED Clinical Terminology UK coding system which represents the type of section."></description>
-      </binding>
+      
     </element>
     <element id="Composition.section:legalInformationSection.code.coding">
       <path value="Composition.section.code.coding"></path>
@@ -1636,9 +1382,7 @@
       <mustSupport value="false"></mustSupport>
     </element>
     <element id="Composition.section:legalInformationSection.code.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
+    
       <path value="Composition.section.code.coding.display"></path>
       <min value="1"></min>
       <fixedString value="Legal information"></fixedString>
@@ -1649,9 +1393,7 @@
       <max value="0"></max>
     </element>
     <element id="Composition.section:legalInformationSection.code.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
+    
       <path value="Composition.section.code.text"></path>
       <max value="0"></max>
     </element>
@@ -1680,9 +1422,7 @@
       <min value="1"></min>
     </element>
     <element id="Composition.section:legalInformationSection.orderedBy.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
+    
       <path value="Composition.section.orderedBy.coding.display"></path>
       <min value="1"></min>
     </element>
@@ -1691,9 +1431,7 @@
       <max value="0"></max>
     </element>
     <element id="Composition.section:legalInformationSection.orderedBy.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
+    
       <path value="Composition.section.orderedBy.text"></path>
       <max value="0"></max>
     </element>
@@ -1717,13 +1455,11 @@
       <max value="0"></max>
     </element>
     <element id="Composition.section:medicationsAndMedicalDevicesSection">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-        <valueString value="Section"></valueString>
-      </extension>
+     
       <path value="Composition.section"></path>
       <sliceName value="medicationsAndMedicalDevicesSection"></sliceName>
       <max value="1"></max>
-      <mustSupport value="true"></mustSupport>
+      
     </element>
     <element id="Composition.section:medicationsAndMedicalDevicesSection.title">
       <path value="Composition.section.title"></path>
@@ -1734,13 +1470,7 @@
     <element id="Composition.section:medicationsAndMedicalDevicesSection.code">
       <path value="Composition.section.code"></path>
       <min value="1"></min>
-      <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="CompositionSectionType"></valueString>
-        </extension>
-        <strength value="example"></strength>
-        <description value="A code from the SNOMED Clinical Terminology UK coding system which represents the type of section."></description>
-      </binding>
+      
     </element>
     <element id="Composition.section:medicationsAndMedicalDevicesSection.code.coding">
       <path value="Composition.section.code.coding"></path>
@@ -1764,9 +1494,7 @@
       <mustSupport value="false"></mustSupport>
     </element>
     <element id="Composition.section:medicationsAndMedicalDevicesSection.code.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
+    
       <path value="Composition.section.code.coding.display"></path>
       <min value="1"></min>
       <fixedString value="Medications and medical devices"></fixedString>
@@ -1777,9 +1505,7 @@
       <max value="0"></max>
     </element>
     <element id="Composition.section:medicationsAndMedicalDevicesSection.code.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
+    
       <path value="Composition.section.code.text"></path>
       <max value="0"></max>
     </element>
@@ -1823,9 +1549,7 @@
       <mustSupport value="false"></mustSupport>
     </element>
     <element id="Composition.section:medicationsAndMedicalDevicesSection.orderedBy.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
+    
       <path value="Composition.section.orderedBy.coding.display"></path>
       <min value="1"></min>
       <mustSupport value="false"></mustSupport>
@@ -1835,9 +1559,7 @@
       <max value="0"></max>
     </element>
     <element id="Composition.section:medicationsAndMedicalDevicesSection.orderedBy.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
+    
       <path value="Composition.section.orderedBy.text"></path>
       <max value="0"></max>
     </element>
@@ -1858,9 +1580,7 @@
       <mustSupport value="false"></mustSupport>
     </element>
     <element id="Composition.section:medicationsAndMedicalDevicesSection.entry.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
+    
       <path value="Composition.section.entry.display"></path>
       <mustSupport value="false"></mustSupport>
     </element>
@@ -1873,13 +1593,11 @@
       <max value="0"></max>
     </element>
     <element id="Composition.section:participationInResearchSection">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-        <valueString value="Section"></valueString>
-      </extension>
+     
       <path value="Composition.section"></path>
       <sliceName value="participationInResearchSection"></sliceName>
       <max value="1"></max>
-      <mustSupport value="true"></mustSupport>
+      
     </element>
     <element id="Composition.section:participationInResearchSection.title">
       <path value="Composition.section.title"></path>
@@ -1891,13 +1609,7 @@
       <path value="Composition.section.code"></path>
       <min value="1"></min>
       <mustSupport value="false"></mustSupport>
-      <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="CompositionSectionType"></valueString>
-        </extension>
-        <strength value="example"></strength>
-        <description value="A code from the SNOMED Clinical Terminology UK coding system which represents the type of section."></description>
-      </binding>
+      
     </element>
     <element id="Composition.section:participationInResearchSection.code.coding">
       <path value="Composition.section.code.coding"></path>
@@ -1922,9 +1634,7 @@
       <mustSupport value="false"></mustSupport>
     </element>
     <element id="Composition.section:participationInResearchSection.code.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
+    
       <path value="Composition.section.code.coding.display"></path>
       <min value="1"></min>
       <fixedString value="Participation in research"></fixedString>
@@ -1935,9 +1645,7 @@
       <max value="0"></max>
     </element>
     <element id="Composition.section:participationInResearchSection.code.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
+    
       <path value="Composition.section.code.text"></path>
       <max value="0"></max>
     </element>
@@ -1974,9 +1682,7 @@
       <min value="1"></min>
     </element>
     <element id="Composition.section:participationInResearchSection.orderedBy.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
+    
       <path value="Composition.section.orderedBy.coding.display"></path>
       <min value="1"></min>
     </element>
@@ -1985,9 +1691,7 @@
       <max value="0"></max>
     </element>
     <element id="Composition.section:participationInResearchSection.orderedBy.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
+    
       <path value="Composition.section.orderedBy.text"></path>
       <max value="0"></max>
     </element>
@@ -2011,13 +1715,11 @@
       <max value="0"></max>
     </element>
     <element id="Composition.section:patientAndCarerConcernsExpectationsAndWishesSection">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-        <valueString value="Section"></valueString>
-      </extension>
+     
       <path value="Composition.section"></path>
       <sliceName value="patientAndCarerConcernsExpectationsAndWishesSection"></sliceName>
       <max value="1"></max>
-      <mustSupport value="true"></mustSupport>
+      
     </element>
     <element id="Composition.section:patientAndCarerConcernsExpectationsAndWishesSection.title">
       <path value="Composition.section.title"></path>
@@ -2059,9 +1761,7 @@
       <mustSupport value="false"></mustSupport>
     </element>
     <element id="Composition.section:patientAndCarerConcernsExpectationsAndWishesSection.code.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
+    
       <path value="Composition.section.code.coding.display"></path>
       <min value="1"></min>
       <fixedString value="Patient and carer concerns, expectations and wishes"></fixedString>
@@ -2072,9 +1772,7 @@
       <max value="0"></max>
     </element>
     <element id="Composition.section:patientAndCarerConcernsExpectationsAndWishesSection.code.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
+    
       <path value="Composition.section.code.text"></path>
       <max value="0"></max>
     </element>
@@ -2103,9 +1801,7 @@
       <min value="1"></min>
     </element>
     <element id="Composition.section:patientAndCarerConcernsExpectationsAndWishesSection.orderedBy.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
+    
       <path value="Composition.section.orderedBy.coding.display"></path>
       <min value="1"></min>
     </element>
@@ -2114,9 +1810,7 @@
       <max value="0"></max>
     </element>
     <element id="Composition.section:patientAndCarerConcernsExpectationsAndWishesSection.orderedBy.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
+    
       <path value="Composition.section.orderedBy.text"></path>
       <max value="0"></max>
     </element>
@@ -2140,14 +1834,12 @@
       <max value="0"></max>
     </element>
     <element id="Composition.section:patientDemographicsSection">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-        <valueString value="Section"></valueString>
-      </extension>
+     
       <path value="Composition.section"></path>
       <sliceName value="patientDemographicsSection"></sliceName>
       <min value="1"></min>
       <max value="1"></max>
-      <mustSupport value="true"></mustSupport>
+      
     </element>
     <element id="Composition.section:patientDemographicsSection.title">
       <path value="Composition.section.title"></path>
@@ -2157,13 +1849,7 @@
     <element id="Composition.section:patientDemographicsSection.code">
       <path value="Composition.section.code"></path>
       <min value="1"></min>
-      <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="CompositionSectionType"></valueString>
-        </extension>
-        <strength value="example"></strength>
-        <description value="A code from the SNOMED Clinical Terminology UK coding system which represents the type of section."></description>
-      </binding>
+      
     </element>
     <element id="Composition.section:patientDemographicsSection.code.coding">
       <path value="Composition.section.code.coding"></path>
@@ -2185,9 +1871,7 @@
       <fixedCode value="886731000000109"></fixedCode>
     </element>
     <element id="Composition.section:patientDemographicsSection.code.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
+    
       <path value="Composition.section.code.coding.display"></path>
       <min value="1"></min>
       <fixedString value="Patient demographics"></fixedString>
@@ -2197,9 +1881,7 @@
       <max value="0"></max>
     </element>
     <element id="Composition.section:patientDemographicsSection.code.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
+    
       <path value="Composition.section.code.text"></path>
       <max value="0"></max>
     </element>
@@ -2228,9 +1910,7 @@
       <min value="1"></min>
     </element>
     <element id="Composition.section:patientDemographicsSection.orderedBy.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
+    
       <path value="Composition.section.orderedBy.coding.display"></path>
       <min value="1"></min>
     </element>
@@ -2239,9 +1919,7 @@
       <max value="0"></max>
     </element>
     <element id="Composition.section:patientDemographicsSection.orderedBy.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
+    
       <path value="Composition.section.orderedBy.text"></path>
       <max value="0"></max>
     </element>
@@ -2270,13 +1948,11 @@
       <max value="0"></max>
     </element>
     <element id="Composition.section:personCompletingRecordSection">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-        <valueString value="Section"></valueString>
-      </extension>
+     
       <path value="Composition.section"></path>
       <sliceName value="personCompletingRecordSection"></sliceName>
       <max value="1"></max>
-      <mustSupport value="true"></mustSupport>
+      
     </element>
     <element id="Composition.section:personCompletingRecordSection.title">
       <path value="Composition.section.title"></path>
@@ -2287,13 +1963,7 @@
     <element id="Composition.section:personCompletingRecordSection.code">
       <path value="Composition.section.code"></path>
       <min value="1"></min>
-      <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="CompositionSectionType"></valueString>
-        </extension>
-        <strength value="example"></strength>
-        <description value="A code from the SNOMED Clinical Terminology UK coding system which represents the type of section."></description>
-      </binding>
+      
     </element>
     <element id="Composition.section:personCompletingRecordSection.code.coding">
       <path value="Composition.section.code.coding"></path>
@@ -2317,9 +1987,7 @@
       <mustSupport value="false"></mustSupport>
     </element>
     <element id="Composition.section:personCompletingRecordSection.code.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
+    
       <path value="Composition.section.code.coding.display"></path>
       <min value="1"></min>
       <fixedString value="Person completing record"></fixedString>
@@ -2330,9 +1998,7 @@
       <max value="0"></max>
     </element>
     <element id="Composition.section:personCompletingRecordSection.code.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
+    
       <path value="Composition.section.code.text"></path>
       <max value="0"></max>
     </element>
@@ -2369,9 +2035,7 @@
       <min value="1"></min>
     </element>
     <element id="Composition.section:personCompletingRecordSection.orderedBy.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
+    
       <path value="Composition.section.orderedBy.coding.display"></path>
       <min value="1"></min>
     </element>
@@ -2380,9 +2044,7 @@
       <max value="0"></max>
     </element>
     <element id="Composition.section:personCompletingRecordSection.orderedBy.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
+    
       <path value="Composition.section.orderedBy.text"></path>
       <max value="0"></max>
     </element>
@@ -2410,13 +2072,11 @@
       <max value="0"></max>
     </element>
     <element id="Composition.section:planAndRequestedActionsSection">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-        <valueString value="Section"></valueString>
-      </extension>
+     
       <path value="Composition.section"></path>
       <sliceName value="planAndRequestedActionsSection"></sliceName>
       <max value="1"></max>
-      <mustSupport value="true"></mustSupport>
+      
     </element>
     <element id="Composition.section:planAndRequestedActionsSection.title">
       <path value="Composition.section.title"></path>
@@ -2427,13 +2087,7 @@
     <element id="Composition.section:planAndRequestedActionsSection.code">
       <path value="Composition.section.code"></path>
       <min value="1"></min>
-      <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="CompositionSectionType"></valueString>
-        </extension>
-        <strength value="example"></strength>
-        <description value="A code from the SNOMED Clinical Terminology UK coding system which represents the type of section."></description>
-      </binding>
+      
     </element>
     <element id="Composition.section:planAndRequestedActionsSection.code.coding">
       <path value="Composition.section.code.coding"></path>
@@ -2457,9 +2111,7 @@
       <mustSupport value="false"></mustSupport>
     </element>
     <element id="Composition.section:planAndRequestedActionsSection.code.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
+    
       <path value="Composition.section.code.coding.display"></path>
       <min value="1"></min>
       <fixedString value="Plan and requested actions"></fixedString>
@@ -2470,9 +2122,7 @@
       <max value="0"></max>
     </element>
     <element id="Composition.section:planAndRequestedActionsSection.code.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
+    
       <path value="Composition.section.code.text"></path>
       <max value="0"></max>
     </element>
@@ -2509,9 +2159,7 @@
       <min value="1"></min>
     </element>
     <element id="Composition.section:planAndRequestedActionsSection.orderedBy.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
+    
       <path value="Composition.section.orderedBy.coding.display"></path>
       <min value="1"></min>
     </element>
@@ -2520,9 +2168,7 @@
       <max value="0"></max>
     </element>
     <element id="Composition.section:planAndRequestedActionsSection.orderedBy.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
+    
       <path value="Composition.section.orderedBy.text"></path>
       <max value="0"></max>
     </element>
@@ -2546,13 +2192,11 @@
       <max value="0"></max>
     </element>
     <element id="Composition.section:proceduresSection">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-        <valueString value="Section"></valueString>
-      </extension>
+     
       <path value="Composition.section"></path>
       <sliceName value="proceduresSection"></sliceName>
       <max value="1"></max>
-      <mustSupport value="true"></mustSupport>
+      
     </element>
     <element id="Composition.section:proceduresSection.title">
       <path value="Composition.section.title"></path>
@@ -2563,13 +2207,7 @@
     <element id="Composition.section:proceduresSection.code">
       <path value="Composition.section.code"></path>
       <min value="1"></min>
-      <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="CompositionSectionType"></valueString>
-        </extension>
-        <strength value="example"></strength>
-        <description value="A code from the SNOMED Clinical Terminology UK coding system which represents the type of section."></description>
-      </binding>
+      
     </element>
     <element id="Composition.section:proceduresSection.code.coding">
       <path value="Composition.section.code.coding"></path>
@@ -2593,9 +2231,7 @@
       <mustSupport value="false"></mustSupport>
     </element>
     <element id="Composition.section:proceduresSection.code.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
+    
       <path value="Composition.section.code.coding.display"></path>
       <min value="1"></min>
       <fixedString value="Procedures"></fixedString>
@@ -2606,9 +2242,7 @@
       <max value="0"></max>
     </element>
     <element id="Composition.section:proceduresSection.code.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
+    
       <path value="Composition.section.code.text"></path>
       <max value="0"></max>
     </element>
@@ -2653,9 +2287,7 @@
       <mustSupport value="false"></mustSupport>
     </element>
     <element id="Composition.section:proceduresSection.orderedBy.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
+    
       <path value="Composition.section.orderedBy.coding.display"></path>
       <min value="1"></min>
       <mustSupport value="false"></mustSupport>
@@ -2665,9 +2297,7 @@
       <max value="0"></max>
     </element>
     <element id="Composition.section:proceduresSection.orderedBy.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
+    
       <path value="Composition.section.orderedBy.text"></path>
       <max value="0"></max>
     </element>
@@ -2688,9 +2318,7 @@
       <mustSupport value="false"></mustSupport>
     </element>
     <element id="Composition.section:proceduresSection.entry.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
+    
       <path value="Composition.section.entry.display"></path>
       <mustSupport value="false"></mustSupport>
     </element>
@@ -2703,13 +2331,11 @@
       <max value="0"></max>
     </element>
     <element id="Composition.section:referrerDetailsSection">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-        <valueString value="Section"></valueString>
-      </extension>
+     
       <path value="Composition.section"></path>
       <sliceName value="referrerDetailsSection"></sliceName>
       <max value="1"></max>
-      <mustSupport value="true"></mustSupport>
+      
     </element>
     <element id="Composition.section:referrerDetailsSection.title">
       <path value="Composition.section.title"></path>
@@ -2720,13 +2346,7 @@
     <element id="Composition.section:referrerDetailsSection.code">
       <path value="Composition.section.code"></path>
       <min value="1"></min>
-      <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="CompositionSectionType"></valueString>
-        </extension>
-        <strength value="example"></strength>
-        <description value="A code from the SNOMED Clinical Terminology UK coding system which represents the type of section."></description>
-      </binding>
+      
     </element>
     <element id="Composition.section:referrerDetailsSection.code.coding">
       <path value="Composition.section.code.coding"></path>
@@ -2750,9 +2370,7 @@
       <mustSupport value="false"></mustSupport>
     </element>
     <element id="Composition.section:referrerDetailsSection.code.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
+    
       <path value="Composition.section.code.coding.display"></path>
       <min value="1"></min>
       <fixedString value="Referrer details"></fixedString>
@@ -2763,9 +2381,7 @@
       <max value="0"></max>
     </element>
     <element id="Composition.section:referrerDetailsSection.code.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
+    
       <path value="Composition.section.code.text"></path>
       <max value="0"></max>
     </element>
@@ -2803,9 +2419,7 @@
       <min value="1"></min>
     </element>
     <element id="Composition.section:referrerDetailsSection.orderedBy.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
+    
       <path value="Composition.section.orderedBy.coding.display"></path>
       <min value="1"></min>
     </element>
@@ -2814,9 +2428,7 @@
       <max value="0"></max>
     </element>
     <element id="Composition.section:referrerDetailsSection.orderedBy.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
+    
       <path value="Composition.section.orderedBy.text"></path>
       <max value="0"></max>
     </element>
@@ -2860,13 +2472,11 @@
       <max value="0"></max>
     </element>
     <element id="Composition.section:safetyAlertsSection">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-        <valueString value="Section"></valueString>
-      </extension>
+     
       <path value="Composition.section"></path>
       <sliceName value="safetyAlertsSection"></sliceName>
       <max value="1"></max>
-      <mustSupport value="true"></mustSupport>
+      
     </element>
     <element id="Composition.section:safetyAlertsSection.title">
       <path value="Composition.section.title"></path>
@@ -2877,13 +2487,7 @@
     <element id="Composition.section:safetyAlertsSection.code">
       <path value="Composition.section.code"></path>
       <min value="1"></min>
-      <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="CompositionSectionType"></valueString>
-        </extension>
-        <strength value="example"></strength>
-        <description value="A code from the SNOMED Clinical Terminology UK coding system which represents the type of section."></description>
-      </binding>
+      
     </element>
     <element id="Composition.section:safetyAlertsSection.code.coding">
       <path value="Composition.section.code.coding"></path>
@@ -2907,9 +2511,7 @@
       <mustSupport value="false"></mustSupport>
     </element>
     <element id="Composition.section:safetyAlertsSection.code.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
+    
       <path value="Composition.section.code.coding.display"></path>
       <min value="1"></min>
       <fixedString value="Safety alerts"></fixedString>
@@ -2920,9 +2522,7 @@
       <max value="0"></max>
     </element>
     <element id="Composition.section:safetyAlertsSection.code.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
+    
       <path value="Composition.section.code.text"></path>
       <max value="0"></max>
     </element>
@@ -2960,9 +2560,7 @@
       <min value="1"></min>
     </element>
     <element id="Composition.section:safetyAlertsSection.orderedBy.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
+    
       <path value="Composition.section.orderedBy.coding.display"></path>
       <min value="1"></min>
     </element>
@@ -2971,9 +2569,7 @@
       <max value="0"></max>
     </element>
     <element id="Composition.section:safetyAlertsSection.orderedBy.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
+    
       <path value="Composition.section.orderedBy.text"></path>
       <max value="0"></max>
     </element>
@@ -2997,13 +2593,11 @@
       <max value="0"></max>
     </element>
     <element id="Composition.section:socialContextSection">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-        <valueString value="Section"></valueString>
-      </extension>
+     
       <path value="Composition.section"></path>
       <sliceName value="socialContextSection"></sliceName>
       <max value="1"></max>
-      <mustSupport value="true"></mustSupport>
+      
     </element>
     <element id="Composition.section:socialContextSection.title">
       <path value="Composition.section.title"></path>
@@ -3014,13 +2608,7 @@
     <element id="Composition.section:socialContextSection.code">
       <path value="Composition.section.code"></path>
       <min value="1"></min>
-      <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="CompositionSectionType"></valueString>
-        </extension>
-        <strength value="example"></strength>
-        <description value="A code from the SNOMED Clinical Terminology UK coding system which represents the type of section."></description>
-      </binding>
+      
     </element>
     <element id="Composition.section:socialContextSection.code.coding">
       <path value="Composition.section.code.coding"></path>
@@ -3044,9 +2632,7 @@
       <mustSupport value="false"></mustSupport>
     </element>
     <element id="Composition.section:socialContextSection.code.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
+    
       <path value="Composition.section.code.coding.display"></path>
       <min value="1"></min>
       <fixedString value="Social context"></fixedString>
@@ -3057,9 +2643,7 @@
       <max value="0"></max>
     </element>
     <element id="Composition.section:socialContextSection.code.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
+    
       <path value="Composition.section.code.text"></path>
       <max value="0"></max>
     </element>
@@ -3096,9 +2680,7 @@
       <min value="1"></min>
     </element>
     <element id="Composition.section:socialContextSection.orderedBy.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
+    
       <path value="Composition.section.orderedBy.coding.display"></path>
       <min value="1"></min>
     </element>
@@ -3107,9 +2689,7 @@
       <max value="0"></max>
     </element>
     <element id="Composition.section:socialContextSection.orderedBy.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"></valueBoolean>
-      </extension>
+    
       <path value="Composition.section.orderedBy.text"></path>
       <max value="0"></max>
     </element>
