@@ -45,1012 +45,806 @@
       </type>
     </element>
     <element id="Composition.section">
-      <path value="Composition.section"></path>
+      <path value="Composition.section" />
       <slicing>
         <discriminator>
-          <type value="value"></type>
-          <path value="code.coding.code"></path>
+          <type value="value" />
+          <path value="code.coding.code" />
         </discriminator>
-        <ordered value="false"></ordered>
-        <rules value="closed"></rules>
+        <ordered value="false" />
+        <rules value="closed" />
       </slicing>
-      <min value="1"></min>
-    </element>
-    <element id="Composition.section.code.coding.code">
-      <path value="Composition.section.code.coding.code"></path>
-      <min value="1"></min>
-    </element>
-    <element id="Composition.section.code.coding.system">
-      <path value="Composition.section.code.coding.system"></path>
-      <min value="1"></min>
-      <fixedUri value="http://snomed.info/sct"></fixedUri>
-    </element>
-    <element id="Composition.section.code.coding.version">
-      <path value="Composition.section.code.coding.version"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section.code.coding">
-      <path value="Composition.section.code.coding"></path>
-      <min value="1"></min>
-      <max value="1"></max>
-    </element>
-    <element id="Composition.section.text">
-      <path value="Composition.section.text"></path>
-      <min value="1"></min>
+      <min value="1" />
     </element>
     <element id="Composition.section.code">
-      <path value="Composition.section.code"></path>
-      <min value="1"></min>
+      <path value="Composition.section.code" />
+      <min value="1" />
     </element>
-    <!-- admissionDetailsSection -->
+    <element id="Composition.section.code.coding">
+      <path value="Composition.section.code.coding" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Composition.section.code.coding.system">
+      <path value="Composition.section.code.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="Composition.section.code.coding.code">
+      <path value="Composition.section.code.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Composition.section.code.coding.display">
+      <path value="Composition.section.code.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="Composition.section.text">
+      <path value="Composition.section.text" />
+      <min value="1" />
+    </element>
     <element id="Composition.section:admissionDetailsSection">
-      <path value="Composition.section"></path>
-      <sliceName value="admissionDetailsSection"></sliceName>
-      <max value="1"></max>
+      <path value="Composition.section" />
+      <sliceName value="admissionDetailsSection" />
+      <max value="1" />
     </element>
     <element id="Composition.section:admissionDetailsSection.title">
-      <path value="Composition.section.title"></path>
-      <fixedString value="Admission details"></fixedString>
+      <path value="Composition.section.title" />
+      <fixedString value="Admission details" />
     </element>
     <element id="Composition.section:admissionDetailsSection.code.coding.code">
-      <path value="Composition.section.code.coding.code"></path>
-      <fixedCode value="886781000000108"></fixedCode>
+      <path value="Composition.section.code.coding.code" />
+      <fixedCode value="886781000000108" />
     </element>
     <element id="Composition.section:admissionDetailsSection.code.coding.display">
-      <path value="Composition.section.code.coding.display"></path>
-      <fixedString value="Admission details"></fixedString>
+      <path value="Composition.section.code.coding.display" />
+      <fixedString value="Admission details" />
     </element>
     <element id="Composition.section:admissionDetailsSection.entry">
-      <path value="Composition.section.entry"></path>
-      <min value="1"></min>
+      <path value="Composition.section.entry" />
+      <min value="1" />
       <type>
-        <code value="Reference"></code>
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Encounter"></targetProfile>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Encounter" />
       </type>
     </element>
-
     <element id="Composition.section:allergiesAndAdverseReactionsSection">
-      <path value="Composition.section"></path>
-      <sliceName value="allergiesAndAdverseReactionsSection"></sliceName>
-      <max value="1"></max>
+      <path value="Composition.section" />
+      <sliceName value="allergiesAndAdverseReactionsSection" />
+      <max value="1" />
     </element>
     <element id="Composition.section:allergiesAndAdverseReactionsSection.title">
-      <path value="Composition.section.title"></path>
-      <fixedString value="Allergies and adverse reactions"></fixedString>
+      <path value="Composition.section.title" />
+      <fixedString value="Allergies and adverse reactions" />
     </element>
     <element id="Composition.section:allergiesAndAdverseReactionsSection.code.coding.code">
-      <path value="Composition.section.code.coding.code"></path>
-      <min value="1"></min>
-      <fixedCode value="886921000000105"></fixedCode>
-
+      <path value="Composition.section.code.coding.code" />
+      <min value="1" />
+      <fixedCode value="886921000000105" />
     </element>
     <element id="Composition.section:allergiesAndAdverseReactionsSection.code.coding.display">
-
-      <path value="Composition.section.code.coding.display"></path>
-
-      <fixedString value="Allergies and adverse reactions"></fixedString>
-
+      <path value="Composition.section.code.coding.display" />
+      <fixedString value="Allergies and adverse reactions" />
     </element>
     <element id="Composition.section:allergiesAndAdverseReactionsSection.entry">
-      <path value="Composition.section.entry"></path>
+      <path value="Composition.section.entry" />
       <type>
-        <code value="Reference"></code>
-        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-AllergyIntolerance"></targetProfile>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-AllergyIntolerance" />
       </type>
     </element>
-
     <element id="Composition.section:assessmentScalesSection">
-      <path value="Composition.section"></path>
-      <sliceName value="assessmentScalesSection"></sliceName>
-      <max value="1"></max>
+      <path value="Composition.section" />
+      <sliceName value="assessmentScalesSection" />
+      <max value="1" />
     </element>
     <element id="Composition.section:assessmentScalesSection.title">
-      <path value="Composition.section.title"></path>
-
-      <fixedString value="Assessment scales"></fixedString>
-    </element>
-    <element id="Composition.section:assessmentScalesSection.code.coding.system">
-      <path value="Composition.section.code.coding.system"></path>
-
-      <fixedUri value="http://snomed.info/sct"></fixedUri>
+      <path value="Composition.section.title" />
+      <fixedString value="Assessment scales" />
     </element>
     <element id="Composition.section:assessmentScalesSection.code.coding.code">
-      <path value="Composition.section.code.coding.code"></path>
-
-      <fixedCode value="887141000000103"></fixedCode>
+      <path value="Composition.section.code.coding.code" />
+      <fixedCode value="887141000000103" />
     </element>
     <element id="Composition.section:assessmentScalesSection.code.coding.display">
-      <path value="Composition.section.code.coding.display"></path>
-
-      <fixedString value="Assessment scales"></fixedString>
+      <path value="Composition.section.code.coding.display" />
+      <fixedString value="Assessment scales" />
     </element>
-
     <element id="Composition.section:clinicalSummarySection">
-
-      <path value="Composition.section"></path>
-      <sliceName value="clinicalSummarySection"></sliceName>
-      <max value="1"></max>
-
+      <path value="Composition.section" />
+      <sliceName value="clinicalSummarySection" />
+      <max value="1" />
     </element>
     <element id="Composition.section:clinicalSummarySection.title">
-      <path value="Composition.section.title"></path>
-
-      <fixedString value="Clinical summary"></fixedString>
-
+      <path value="Composition.section.title" />
+      <fixedString value="Clinical summary" />
     </element>
     <element id="Composition.section:clinicalSummarySection.code.coding.code">
-      <path value="Composition.section.code.coding.code"></path>
-      <min value="1"></min>
-      <fixedCode value="887181000000106"></fixedCode>
+      <path value="Composition.section.code.coding.code" />
+      <min value="1" />
+      <fixedCode value="887181000000106" />
     </element>
     <element id="Composition.section:clinicalSummarySection.code.coding.display">
-      <path value="Composition.section.code.coding.display"></path>
-      <fixedString value="Clinical summary"></fixedString>
+      <path value="Composition.section.code.coding.display" />
+      <fixedString value="Clinical summary" />
     </element>
-
-
     <element id="Composition.section:clinicalSummarySection.entry">
-      <path value="Composition.section.entry"></path>
+      <path value="Composition.section.entry" />
       <type>
-        <code value="Reference"></code>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Binary"></targetProfile>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Binary" />
       </type>
     </element>
     <element id="Composition.section:diagnosesSection">
-      <path value="Composition.section"></path>
-      <sliceName value="diagnosesSection"></sliceName>
-      <max value="1"></max>
-
+      <path value="Composition.section" />
+      <sliceName value="diagnosesSection" />
+      <max value="1" />
     </element>
     <element id="Composition.section:diagnosesSection.title">
-      <path value="Composition.section.title"></path>
-
-      <fixedString value="Diagnoses"></fixedString>
-
+      <path value="Composition.section.title" />
+      <fixedString value="Diagnoses" />
     </element>
-
     <element id="Composition.section:diagnosesSection.code.coding.system">
-      <path value="Composition.section.code.coding.system"></path>
-
-      <fixedUri value="http://snomed.info/sct"></fixedUri>
-
+      <path value="Composition.section.code.coding.system" />
+      <fixedUri value="http://snomed.info/sct" />
     </element>
     <element id="Composition.section:diagnosesSection.code.coding.code">
-      <path value="Composition.section.code.coding.code"></path>
-
-      <fixedCode value="887161000000102"></fixedCode>
-
+      <path value="Composition.section.code.coding.code" />
+      <fixedCode value="887161000000102" />
     </element>
     <element id="Composition.section:diagnosesSection.code.coding.display">
-      <path value="Composition.section.code.coding.display"></path>
-      <fixedString value="Diagnoses"></fixedString>
+      <path value="Composition.section.code.coding.display" />
+      <fixedString value="Diagnoses" />
     </element>
     <element id="Composition.section:diagnosesSection.code.coding.userSelected">
-      <path value="Composition.section.code.coding.userSelected"></path>
-      <max value="0"></max>
+      <path value="Composition.section.code.coding.userSelected" />
+      <max value="0" />
     </element>
     <element id="Composition.section:diagnosesSection.code.text">
-
-      <path value="Composition.section.code.text"></path>
-      <max value="0"></max>
+      <path value="Composition.section.code.text" />
+      <max value="0" />
     </element>
     <element id="Composition.section:diagnosesSection.text">
-      <path value="Composition.section.text"></path>
-      <min value="1"></min>
-    </element>
-    <element id="Composition.section:diagnosesSection.text.status">
-      <path value="Composition.section.text.status"></path>
-
-    </element>
-    <element id="Composition.section:diagnosesSection.text.div">
-      <path value="Composition.section.text.div"></path>
-
+      <path value="Composition.section.text" />
+      <min value="1" />
     </element>
     <element id="Composition.section:diagnosesSection.mode">
-      <path value="Composition.section.mode"></path>
-      <max value="0"></max>
+      <path value="Composition.section.mode" />
+      <max value="0" />
     </element>
     <element id="Composition.section:diagnosesSection.orderedBy">
-      <path value="Composition.section.orderedBy"></path>
-      <max value="0"></max>
+      <path value="Composition.section.orderedBy" />
+      <max value="0" />
     </element>
     <element id="Composition.section:diagnosesSection.orderedBy.coding.system">
-      <path value="Composition.section.orderedBy.coding.system"></path>
-      <min value="1"></min>
-
+      <path value="Composition.section.orderedBy.coding.system" />
+      <min value="1" />
     </element>
     <element id="Composition.section:diagnosesSection.orderedBy.coding.version">
-      <path value="Composition.section.orderedBy.coding.version"></path>
-      <max value="0"></max>
+      <path value="Composition.section.orderedBy.coding.version" />
+      <max value="0" />
     </element>
     <element id="Composition.section:diagnosesSection.orderedBy.coding.code">
-      <path value="Composition.section.orderedBy.coding.code"></path>
-      <min value="1"></min>
-
+      <path value="Composition.section.orderedBy.coding.code" />
+      <min value="1" />
     </element>
     <element id="Composition.section:diagnosesSection.orderedBy.coding.display">
-
-      <path value="Composition.section.orderedBy.coding.display"></path>
-      <min value="1"></min>
-
+      <path value="Composition.section.orderedBy.coding.display" />
+      <min value="1" />
     </element>
     <element id="Composition.section:diagnosesSection.orderedBy.coding.userSelected">
-      <path value="Composition.section.orderedBy.coding.userSelected"></path>
-      <max value="0"></max>
+      <path value="Composition.section.orderedBy.coding.userSelected" />
+      <max value="0" />
     </element>
     <element id="Composition.section:diagnosesSection.orderedBy.text">
-
-      <path value="Composition.section.orderedBy.text"></path>
-      <max value="0"></max>
+      <path value="Composition.section.orderedBy.text" />
+      <max value="0" />
     </element>
     <element id="Composition.section:diagnosesSection.entry">
-      <path value="Composition.section.entry"></path>
+      <path value="Composition.section.entry" />
       <type>
-        <code value="Reference"></code>
-        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Condition"></targetProfile>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Condition" />
       </type>
-     
     </element>
     <element id="Composition.section:diagnosesSection.entry.reference">
-      <path value="Composition.section.entry.reference"></path>
-      <min value="1"></min>
+      <path value="Composition.section.entry.reference" />
+      <min value="1" />
     </element>
     <element id="Composition.section:diagnosesSection.emptyReason">
-      <path value="Composition.section.emptyReason"></path>
-      <max value="0"></max>
+      <path value="Composition.section.emptyReason" />
+      <max value="0" />
     </element>
     <element id="Composition.section:diagnosesSection.section">
-      <path value="Composition.section.section"></path>
-      <max value="0"></max>
+      <path value="Composition.section.section" />
+      <max value="0" />
     </element>
     <element id="Composition.section:dischargeDetailsSection">
-
-      <path value="Composition.section"></path>
-      <sliceName value="dischargeDetailsSection"></sliceName>
-      <max value="1"></max>
-
+      <path value="Composition.section" />
+      <sliceName value="dischargeDetailsSection" />
+      <max value="1" />
     </element>
     <element id="Composition.section:dischargeDetailsSection.title">
-      <path value="Composition.section.title"></path>
-
-      <fixedString value="Discharge details"></fixedString>
-
+      <path value="Composition.section.title" />
+      <fixedString value="Discharge details" />
     </element>
     <element id="Composition.section:dischargeDetailsSection.code">
-      <path value="Composition.section.code"></path>
-      <min value="1"></min>
-
+      <path value="Composition.section.code" />
+      <min value="1" />
     </element>
     <element id="Composition.section:dischargeDetailsSection.code.coding">
-      <path value="Composition.section.code.coding"></path>
-      <min value="1"></min>
-      <max value="1"></max>
+      <path value="Composition.section.code.coding" />
+      <min value="1" />
+      <max value="1" />
     </element>
     <element id="Composition.section:dischargeDetailsSection.code.coding.system">
-      <path value="Composition.section.code.coding.system"></path>
-      <min value="1"></min>
-      <fixedUri value="http://snomed.info/sct"></fixedUri>
-
+      <path value="Composition.section.code.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://snomed.info/sct" />
     </element>
     <element id="Composition.section:dischargeDetailsSection.code.coding.version">
-      <path value="Composition.section.code.coding.version"></path>
-      <max value="0"></max>
+      <path value="Composition.section.code.coding.version" />
+      <max value="0" />
     </element>
     <element id="Composition.section:dischargeDetailsSection.code.coding.code">
-      <path value="Composition.section.code.coding.code"></path>
-      <min value="1"></min>
-      <fixedCode value="886811000000106"></fixedCode>
-
+      <path value="Composition.section.code.coding.code" />
+      <min value="1" />
+      <fixedCode value="886811000000106" />
     </element>
     <element id="Composition.section:dischargeDetailsSection.code.coding.display">
-
-      <path value="Composition.section.code.coding.display"></path>
-
-      <fixedString value="Discharge details"></fixedString>
-
+      <path value="Composition.section.code.coding.display" />
+      <fixedString value="Discharge details" />
     </element>
     <element id="Composition.section:dischargeDetailsSection.code.coding.userSelected">
-      <path value="Composition.section.code.coding.userSelected"></path>
-      <max value="0"></max>
+      <path value="Composition.section.code.coding.userSelected" />
+      <max value="0" />
     </element>
     <element id="Composition.section:dischargeDetailsSection.code.text">
-
-      <path value="Composition.section.code.text"></path>
-      <max value="0"></max>
+      <path value="Composition.section.code.text" />
+      <max value="0" />
     </element>
     <element id="Composition.section:dischargeDetailsSection.text">
-      <path value="Composition.section.text"></path>
-      <min value="1"></min>
-
-    </element>
-    <element id="Composition.section:dischargeDetailsSection.text.status">
-      <path value="Composition.section.text.status"></path>
-
-    </element>
-    <element id="Composition.section:dischargeDetailsSection.text.div">
-      <path value="Composition.section.text.div"></path>
-
+      <path value="Composition.section.text" />
+      <min value="1" />
     </element>
     <element id="Composition.section:dischargeDetailsSection.mode">
-      <path value="Composition.section.mode"></path>
-      <max value="0"></max>
+      <path value="Composition.section.mode" />
+      <max value="0" />
     </element>
     <element id="Composition.section:dischargeDetailsSection.orderedBy">
-      <path value="Composition.section.orderedBy"></path>
-      <max value="0"></max>
-
+      <path value="Composition.section.orderedBy" />
+      <max value="0" />
     </element>
     <element id="Composition.section:dischargeDetailsSection.orderedBy.coding.system">
-      <path value="Composition.section.orderedBy.coding.system"></path>
-      <min value="1"></min>
-
+      <path value="Composition.section.orderedBy.coding.system" />
+      <min value="1" />
     </element>
     <element id="Composition.section:dischargeDetailsSection.orderedBy.coding.version">
-      <path value="Composition.section.orderedBy.coding.version"></path>
-      <max value="0"></max>
+      <path value="Composition.section.orderedBy.coding.version" />
+      <max value="0" />
     </element>
     <element id="Composition.section:dischargeDetailsSection.orderedBy.coding.code">
-      <path value="Composition.section.orderedBy.coding.code"></path>
-      <min value="1"></min>
-
+      <path value="Composition.section.orderedBy.coding.code" />
+      <min value="1" />
     </element>
     <element id="Composition.section:dischargeDetailsSection.orderedBy.coding.display">
-
-      <path value="Composition.section.orderedBy.coding.display"></path>
-      <min value="1"></min>
-
+      <path value="Composition.section.orderedBy.coding.display" />
+      <min value="1" />
     </element>
     <element id="Composition.section:dischargeDetailsSection.orderedBy.coding.userSelected">
-      <path value="Composition.section.orderedBy.coding.userSelected"></path>
-      <max value="0"></max>
+      <path value="Composition.section.orderedBy.coding.userSelected" />
+      <max value="0" />
     </element>
     <element id="Composition.section:dischargeDetailsSection.orderedBy.text">
-
-      <path value="Composition.section.orderedBy.text"></path>
-      <max value="0"></max>
+      <path value="Composition.section.orderedBy.text" />
+      <max value="0" />
     </element>
     <element id="Composition.section:dischargeDetailsSection.entry">
-      <path value="Composition.section.entry"></path>
-      <min value="1"></min>
-   
+      <path value="Composition.section.entry" />
+      <min value="1" />
       <type>
-        <code value="Reference"></code>
-        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Encounter"></targetProfile>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Encounter" />
       </type>
     </element>
     <element id="Composition.section:dischargeDetailsSection.entry.reference">
-      <path value="Composition.section.entry.reference"></path>
-      <min value="1"></min>
+      <path value="Composition.section.entry.reference" />
+      <min value="1" />
     </element>
     <element id="Composition.section:dischargeDetailsSection.emptyReason">
-      <path value="Composition.section.emptyReason"></path>
-      <max value="0"></max>
+      <path value="Composition.section.emptyReason" />
+      <max value="0" />
     </element>
     <element id="Composition.section:dischargeDetailsSection.section">
-      <path value="Composition.section.section"></path>
-      <max value="0"></max>
+      <path value="Composition.section.section" />
+      <max value="0" />
     </element>
     <element id="Composition.section:distributionListSection">
-
-      <path value="Composition.section"></path>
-      <sliceName value="distributionListSection"></sliceName>
-      <max value="1"></max>
-
+      <path value="Composition.section" />
+      <sliceName value="distributionListSection" />
+      <max value="1" />
     </element>
     <element id="Composition.section:distributionListSection.title">
-      <path value="Composition.section.title"></path>
-
-      <fixedString value="Distribution list"></fixedString>
+      <path value="Composition.section.title" />
+      <fixedString value="Distribution list" />
     </element>
     <element id="Composition.section:distributionListSection.code">
-      <path value="Composition.section.code"></path>
-      <min value="1"></min>
-
+      <path value="Composition.section.code" />
+      <min value="1" />
     </element>
     <element id="Composition.section:distributionListSection.code.coding">
-      <path value="Composition.section.code.coding"></path>
-      <min value="1"></min>
-      <max value="1"></max>
+      <path value="Composition.section.code.coding" />
+      <min value="1" />
+      <max value="1" />
     </element>
     <element id="Composition.section:distributionListSection.code.coding.system">
-      <path value="Composition.section.code.coding.system"></path>
-      <min value="1"></min>
-      <fixedUri value="http://snomed.info/sct"></fixedUri>
+      <path value="Composition.section.code.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://snomed.info/sct" />
     </element>
     <element id="Composition.section:distributionListSection.code.coding.version">
-      <path value="Composition.section.code.coding.version"></path>
-      <max value="0"></max>
+      <path value="Composition.section.code.coding.version" />
+      <max value="0" />
     </element>
     <element id="Composition.section:distributionListSection.code.coding.code">
-      <path value="Composition.section.code.coding.code"></path>
-      <min value="1"></min>
-      <fixedCode value="887261000000109"></fixedCode>
+      <path value="Composition.section.code.coding.code" />
+      <min value="1" />
+      <fixedCode value="887261000000109" />
     </element>
     <element id="Composition.section:distributionListSection.code.coding.display">
-
-      <path value="Composition.section.code.coding.display"></path>
-
-      <fixedString value="Distribution list"></fixedString>
+      <path value="Composition.section.code.coding.display" />
+      <fixedString value="Distribution list" />
     </element>
     <element id="Composition.section:gpPracticeSection">
-
-      <path value="Composition.section"></path>
-      <sliceName value="gpPracticeSection"></sliceName>
-      <max value="1"></max>
-
+      <path value="Composition.section" />
+      <sliceName value="gpPracticeSection" />
+      <max value="1" />
     </element>
     <element id="Composition.section:gpPracticeSection.title">
-      <path value="Composition.section.title"></path>
-
-      <fixedString value="GP practice"></fixedString>
+      <path value="Composition.section.title" />
+      <fixedString value="GP practice" />
     </element>
-
     <element id="Composition.section:gpPracticeSection.code.coding.version">
-      <path value="Composition.section.code.coding.version"></path>
-      <max value="0"></max>
+      <path value="Composition.section.code.coding.version" />
+      <max value="0" />
     </element>
     <element id="Composition.section:gpPracticeSection.code.coding.code">
-      <path value="Composition.section.code.coding.code"></path>
-
-      <fixedCode value="886711000000101"></fixedCode>
+      <path value="Composition.section.code.coding.code" />
+      <fixedCode value="886711000000101" />
     </element>
     <element id="Composition.section:gpPracticeSection.code.coding.display">
-
-      <path value="Composition.section.code.coding.display"></path>
-
-      <fixedString value="GP practice"></fixedString>
+      <path value="Composition.section.code.coding.display" />
+      <fixedString value="GP practice" />
     </element>
     <element id="Composition.section:gpPracticeSection.code.coding.userSelected">
-      <path value="Composition.section.code.coding.userSelected"></path>
-      <max value="0"></max>
+      <path value="Composition.section.code.coding.userSelected" />
+      <max value="0" />
     </element>
     <element id="Composition.section:gpPracticeSection.code.text">
-
-      <path value="Composition.section.code.text"></path>
-      <max value="0"></max>
+      <path value="Composition.section.code.text" />
+      <max value="0" />
     </element>
     <element id="Composition.section:gpPracticeSection.text">
-      <path value="Composition.section.text"></path>
-      <min value="1"></min>
+      <path value="Composition.section.text" />
+      <min value="1" />
     </element>
     <element id="Composition.section:gpPracticeSection.mode">
-      <path value="Composition.section.mode"></path>
-      <max value="0"></max>
+      <path value="Composition.section.mode" />
+      <max value="0" />
     </element>
     <element id="Composition.section:gpPracticeSection.orderedBy">
-      <path value="Composition.section.orderedBy"></path>
-      <max value="0"></max>
+      <path value="Composition.section.orderedBy" />
+      <max value="0" />
     </element>
     <element id="Composition.section:gpPracticeSection.orderedBy.coding.system">
-      <path value="Composition.section.orderedBy.coding.system"></path>
-      <min value="1"></min>
+      <path value="Composition.section.orderedBy.coding.system" />
+      <min value="1" />
     </element>
     <element id="Composition.section:gpPracticeSection.orderedBy.coding.version">
-      <path value="Composition.section.orderedBy.coding.version"></path>
-      <max value="0"></max>
+      <path value="Composition.section.orderedBy.coding.version" />
+      <max value="0" />
     </element>
     <element id="Composition.section:gpPracticeSection.orderedBy.coding.code">
-      <path value="Composition.section.orderedBy.coding.code"></path>
-      <min value="1"></min>
+      <path value="Composition.section.orderedBy.coding.code" />
+      <min value="1" />
     </element>
     <element id="Composition.section:gpPracticeSection.orderedBy.coding.display">
-
-      <path value="Composition.section.orderedBy.coding.display"></path>
-      <min value="1"></min>
+      <path value="Composition.section.orderedBy.coding.display" />
+      <min value="1" />
     </element>
     <element id="Composition.section:gpPracticeSection.orderedBy.coding.userSelected">
-      <path value="Composition.section.orderedBy.coding.userSelected"></path>
-      <max value="0"></max>
+      <path value="Composition.section.orderedBy.coding.userSelected" />
+      <max value="0" />
     </element>
     <element id="Composition.section:gpPracticeSection.orderedBy.text">
-
-      <path value="Composition.section.orderedBy.text"></path>
-      <max value="0"></max>
+      <path value="Composition.section.orderedBy.text" />
+      <max value="0" />
     </element>
     <element id="Composition.section:gpPracticeSection.entry">
-      <path value="Composition.section.entry"></path>
-      <min value="1"></min>
+      <path value="Composition.section.entry" />
+      <min value="1" />
       <type>
-        <code value="Reference"></code>
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Organization"></targetProfile>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Organization" />
       </type>
-    
     </element>
     <element id="Composition.section:individualRequirementsSection">
-
-      <path value="Composition.section"></path>
-      <sliceName value="individualRequirementsSection"></sliceName>
-      <max value="1"></max>
-
+      <path value="Composition.section" />
+      <sliceName value="individualRequirementsSection" />
+      <max value="1" />
     </element>
     <element id="Composition.section:individualRequirementsSection.title">
-      <path value="Composition.section.title"></path>
-
-      <fixedString value="Individual requirements"></fixedString>
-
+      <path value="Composition.section.title" />
+      <fixedString value="Individual requirements" />
     </element>
-
     <element id="Composition.section:individualRequirementsSection.code.coding.version">
-      <path value="Composition.section.code.coding.version"></path>
-      <max value="0"></max>
+      <path value="Composition.section.code.coding.version" />
+      <max value="0" />
     </element>
     <element id="Composition.section:individualRequirementsSection.code.coding.code">
-      <path value="Composition.section.code.coding.code"></path>
-
-      <fixedCode value="1078911000000106"></fixedCode>
-
+      <path value="Composition.section.code.coding.code" />
+      <fixedCode value="1078911000000106" />
     </element>
     <element id="Composition.section:individualRequirementsSection.code.coding.display">
-
-      <path value="Composition.section.code.coding.display"></path>
-
-      <fixedString value="Individual requirements"></fixedString>
-
+      <path value="Composition.section.code.coding.display" />
+      <fixedString value="Individual requirements" />
     </element>
-
     <element id="Composition.section:individualRequirementsSection.entry">
-      <path value="Composition.section.entry"></path>
+      <path value="Composition.section.entry" />
       <type>
-        <code value="Reference"></code>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Binary"></targetProfile>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Binary" />
       </type>
     </element>
     <element id="Composition.section:individualRequirementsSection.entry.reference">
-      <path value="Composition.section.entry.reference"></path>
-      <min value="1"></min>
+      <path value="Composition.section.entry.reference" />
+      <min value="1" />
     </element>
     <element id="Composition.section:individualRequirementsSection.emptyReason">
-      <path value="Composition.section.emptyReason"></path>
-      <max value="0"></max>
+      <path value="Composition.section.emptyReason" />
+      <max value="0" />
     </element>
     <element id="Composition.section:individualRequirementsSection.section">
-      <path value="Composition.section.section"></path>
-      <max value="0"></max>
+      <path value="Composition.section.section" />
+      <max value="0" />
     </element>
     <element id="Composition.section:informationAndAdviceGivenSection">
-
-      <path value="Composition.section"></path>
-      <sliceName value="informationAndAdviceGivenSection"></sliceName>
-      <max value="1"></max>
-
+      <path value="Composition.section" />
+      <sliceName value="informationAndAdviceGivenSection" />
+      <max value="1" />
     </element>
     <element id="Composition.section:informationAndAdviceGivenSection.title">
-      <path value="Composition.section.title"></path>
-      <fixedString value="Information and advice given"></fixedString>
+      <path value="Composition.section.title" />
+      <fixedString value="Information and advice given" />
     </element>
     <element id="Composition.section:informationAndAdviceGivenSection.code.coding.code">
-      <path value="Composition.section.code.coding.code"></path>
-
-      <fixedCode value="1052951000000105"></fixedCode>
-
+      <path value="Composition.section.code.coding.code" />
+      <fixedCode value="1052951000000105" />
     </element>
     <element id="Composition.section:informationAndAdviceGivenSection.code.coding.display">
-
-      <path value="Composition.section.code.coding.display"></path>
-
-      <fixedString value="Information and advice given"></fixedString>
-
+      <path value="Composition.section.code.coding.display" />
+      <fixedString value="Information and advice given" />
     </element>
-
     <element id="Composition.section:informationAndAdviceGivenSection.entry">
-      <path value="Composition.section.entry"></path>
+      <path value="Composition.section.entry" />
       <type>
-        <code value="Reference"></code>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Binary"></targetProfile>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Binary" />
       </type>
     </element>
-
     <element id="Composition.section:investigationResultsSection">
-
-      <path value="Composition.section"></path>
-      <sliceName value="investigationResultsSection"></sliceName>
-
+      <path value="Composition.section" />
+      <sliceName value="investigationResultsSection" />
     </element>
     <element id="Composition.section:investigationResultsSection.title">
-      <path value="Composition.section.title"></path>
-
-      <fixedString value="Investigation results"></fixedString>
-
+      <path value="Composition.section.title" />
+      <fixedString value="Investigation results" />
     </element>
-
     <element id="Composition.section:investigationResultsSection.code.coding.code">
-      <path value="Composition.section.code.coding.code"></path>
-
-      <fixedCode value="1082101000000102"></fixedCode>
-
+      <path value="Composition.section.code.coding.code" />
+      <fixedCode value="1082101000000102" />
     </element>
     <element id="Composition.section:investigationResultsSection.code.coding.display">
-
-      <path value="Composition.section.code.coding.display"></path>
-
-      <fixedString value="Investigation results"></fixedString>
-
+      <path value="Composition.section.code.coding.display" />
+      <fixedString value="Investigation results" />
     </element>
-
     <element id="Composition.section:investigationResultsSection.entry">
-      <path value="Composition.section.entry"></path>
+      <path value="Composition.section.entry" />
       <type>
-        <code value="Reference"></code>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Binary"></targetProfile>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Binary" />
       </type>
     </element>
     <element id="Composition.section:investigationResultsSection.entry.reference">
-      <path value="Composition.section.entry.reference"></path>
-      <min value="1"></min>
+      <path value="Composition.section.entry.reference" />
+      <min value="1" />
     </element>
     <element id="Composition.section:investigationResultsSection.emptyReason">
-      <path value="Composition.section.emptyReason"></path>
-      <max value="0"></max>
+      <path value="Composition.section.emptyReason" />
+      <max value="0" />
     </element>
     <element id="Composition.section:investigationResultsSection.section">
-      <path value="Composition.section.section"></path>
-      <max value="0"></max>
+      <path value="Composition.section.section" />
+      <max value="0" />
     </element>
     <element id="Composition.section:legalInformationSection">
-
-      <path value="Composition.section"></path>
-      <sliceName value="legalInformationSection"></sliceName>
-      <max value="1"></max>
-
+      <path value="Composition.section" />
+      <sliceName value="legalInformationSection" />
+      <max value="1" />
     </element>
     <element id="Composition.section:legalInformationSection.title">
-      <path value="Composition.section.title"></path>
-      <fixedString value="Legal information"></fixedString>
+      <path value="Composition.section.title" />
+      <fixedString value="Legal information" />
     </element>
     <element id="Composition.section:legalInformationSection.code.coding.code">
-      <path value="Composition.section.code.coding.code"></path>
-      <fixedCode value="886961000000102"></fixedCode>
+      <path value="Composition.section.code.coding.code" />
+      <fixedCode value="886961000000102" />
     </element>
     <element id="Composition.section:legalInformationSection.code.coding.display">
-      <path value="Composition.section.code.coding.display"></path>
-      <fixedString value="Legal information"></fixedString>
+      <path value="Composition.section.code.coding.display" />
+      <fixedString value="Legal information" />
     </element>
-
     <element id="Composition.section:legalInformationSection.entry">
-      <path value="Composition.section.entry"></path>
+      <path value="Composition.section.entry" />
       <type>
-        <code value="Reference"></code>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Binary"></targetProfile>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Binary" />
       </type>
     </element>
     <element id="Composition.section:legalInformationSection.entry.reference">
-      <path value="Composition.section.entry.reference"></path>
-      <min value="1"></min>
+      <path value="Composition.section.entry.reference" />
+      <min value="1" />
     </element>
     <element id="Composition.section:legalInformationSection.emptyReason">
-      <path value="Composition.section.emptyReason"></path>
-      <max value="0"></max>
+      <path value="Composition.section.emptyReason" />
+      <max value="0" />
     </element>
     <element id="Composition.section:legalInformationSection.section">
-      <path value="Composition.section.section"></path>
-      <max value="0"></max>
+      <path value="Composition.section.section" />
+      <max value="0" />
     </element>
     <element id="Composition.section:medicationsAndMedicalDevicesSection">
-
-      <path value="Composition.section"></path>
-      <sliceName value="medicationsAndMedicalDevicesSection"></sliceName>
-      <max value="1"></max>
-
+      <path value="Composition.section" />
+      <sliceName value="medicationsAndMedicalDevicesSection" />
+      <max value="1" />
     </element>
     <element id="Composition.section:medicationsAndMedicalDevicesSection.title">
-      <path value="Composition.section.title"></path>
-
-      <fixedString value="Medications and medical devices"></fixedString>
-
+      <path value="Composition.section.title" />
+      <fixedString value="Medications and medical devices" />
     </element>
-
-
     <element id="Composition.section:medicationsAndMedicalDevicesSection.code.coding.code">
-      <path value="Composition.section.code.coding.code"></path>
-
-      <fixedCode value="933361000000108"></fixedCode>
-
+      <path value="Composition.section.code.coding.code" />
+      <fixedCode value="933361000000108" />
     </element>
     <element id="Composition.section:medicationsAndMedicalDevicesSection.code.coding.display">
-
-      <path value="Composition.section.code.coding.display"></path>
-
-      <fixedString value="Medications and medical devices"></fixedString>
-
+      <path value="Composition.section.code.coding.display" />
+      <fixedString value="Medications and medical devices" />
     </element>
-
     <element id="Composition.section:medicationsAndMedicalDevicesSection.entry">
-      <path value="Composition.section.entry"></path>
+      <path value="Composition.section.entry" />
       <type>
-        <code value="Reference"></code>
-        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-MedicationStatement"></targetProfile>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-MedicationStatement" />
       </type>
-    
     </element>
     <element id="Composition.section:participationInResearchSection">
-
-      <path value="Composition.section"></path>
-      <sliceName value="participationInResearchSection"></sliceName>
-      <max value="1"></max>
-
+      <path value="Composition.section" />
+      <sliceName value="participationInResearchSection" />
+      <max value="1" />
     </element>
     <element id="Composition.section:participationInResearchSection.title">
-      <path value="Composition.section.title"></path>
-
-      <fixedString value="Participation in research"></fixedString>
-
+      <path value="Composition.section.title" />
+      <fixedString value="Participation in research" />
     </element>
-
     <element id="Composition.section:participationInResearchSection.code.coding.code">
-      <path value="Composition.section.code.coding.code"></path>
-      <fixedCode value="886751000000102"></fixedCode>
-
+      <path value="Composition.section.code.coding.code" />
+      <fixedCode value="886751000000102" />
     </element>
     <element id="Composition.section:participationInResearchSection.code.coding.display">
-
-      <path value="Composition.section.code.coding.display"></path>
-
-      <fixedString value="Participation in research"></fixedString>
-
+      <path value="Composition.section.code.coding.display" />
+      <fixedString value="Participation in research" />
     </element>
-
     <element id="Composition.section:participationInResearchSection.entry">
-      <path value="Composition.section.entry"></path>
+      <path value="Composition.section.entry" />
       <type>
-        <code value="Reference"></code>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Binary"></targetProfile>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Binary" />
       </type>
     </element>
     <element id="Composition.section:patientAndCarerConcernsExpectationsAndWishesSection">
-      <path value="Composition.section"></path>
-      <sliceName value="patientAndCarerConcernsExpectationsAndWishesSection"></sliceName>
+      <path value="Composition.section" />
+      <sliceName value="patientAndCarerConcernsExpectationsAndWishesSection" />
     </element>
     <element id="Composition.section:patientAndCarerConcernsExpectationsAndWishesSection.title">
-      <path value="Composition.section.title"></path>
-
-      <fixedString value="Patient and carer concerns, expectations and wishes"></fixedString>
-
+      <path value="Composition.section.title" />
+      <fixedString value="Patient and carer concerns, expectations and wishes" />
     </element>
-
     <element id="Composition.section:patientAndCarerConcernsExpectationsAndWishesSection.code.coding.code">
-      <path value="Composition.section.code.coding.code"></path>
-      <fixedCode value="1052941000000107"></fixedCode>
-
+      <path value="Composition.section.code.coding.code" />
+      <fixedCode value="1052941000000107" />
     </element>
     <element id="Composition.section:patientAndCarerConcernsExpectationsAndWishesSection.code.coding.display">
-
-      <path value="Composition.section.code.coding.display"></path>
-      <fixedString value="Patient and carer concerns, expectations and wishes"></fixedString>
-
+      <path value="Composition.section.code.coding.display" />
+      <fixedString value="Patient and carer concerns, expectations and wishes" />
     </element>
     <element id="Composition.section:patientDemographicsSection">
-
-      <path value="Composition.section"></path>
-      <sliceName value="patientDemographicsSection"></sliceName>
-      <min value="1"></min>
-      <max value="1"></max>
-
+      <path value="Composition.section" />
+      <sliceName value="patientDemographicsSection" />
+      <min value="1" />
+      <max value="1" />
     </element>
     <element id="Composition.section:patientDemographicsSection.title">
-      <path value="Composition.section.title"></path>
-
-      <fixedString value="Patient demographics"></fixedString>
+      <path value="Composition.section.title" />
+      <fixedString value="Patient demographics" />
     </element>
     <element id="Composition.section:patientDemographicsSection.code.coding.code">
-      <path value="Composition.section.code.coding.code"></path>
-      <fixedCode value="886731000000109"></fixedCode>
+      <path value="Composition.section.code.coding.code" />
+      <fixedCode value="886731000000109" />
     </element>
     <element id="Composition.section:patientDemographicsSection.code.coding.display">
-
-      <path value="Composition.section.code.coding.display"></path>
-      <fixedString value="Patient demographics"></fixedString>
+      <path value="Composition.section.code.coding.display" />
+      <fixedString value="Patient demographics" />
     </element>
     <element id="Composition.section:patientDemographicsSection.entry">
-      <path value="Composition.section.entry"></path>
-      <min value="1"></min>
+      <path value="Composition.section.entry" />
+      <min value="1" />
       <type>
-        <code value="Reference"></code>
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient"></targetProfile>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient" />
       </type>
-    
     </element>
-
     <element id="Composition.section:personCompletingRecordSection">
-
-      <path value="Composition.section"></path>
-      <sliceName value="personCompletingRecordSection"></sliceName>
-      <max value="1"></max>
-
+      <path value="Composition.section" />
+      <sliceName value="personCompletingRecordSection" />
+      <max value="1" />
     </element>
     <element id="Composition.section:personCompletingRecordSection.title">
-      <path value="Composition.section.title"></path>
-
-      <fixedString value="Person completing record"></fixedString>
-
+      <path value="Composition.section.title" />
+      <fixedString value="Person completing record" />
     </element>
     <element id="Composition.section:personCompletingRecordSection.code.coding.code">
-      <path value="Composition.section.code.coding.code"></path>
-      <min value="1"></min>
-      <fixedCode value="887231000000104"></fixedCode>
-
+      <path value="Composition.section.code.coding.code" />
+      <min value="1" />
+      <fixedCode value="887231000000104" />
     </element>
     <element id="Composition.section:personCompletingRecordSection.code.coding.display">
-      <path value="Composition.section.code.coding.display"></path>
-      <fixedString value="Person completing record"></fixedString>
+      <path value="Composition.section.code.coding.display" />
+      <fixedString value="Person completing record" />
     </element>
-
     <element id="Composition.section:personCompletingRecordSection.entry">
-      <path value="Composition.section.entry"></path>
-  
+      <path value="Composition.section.entry" />
       <type>
-        <code value="Reference"></code>
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Practitioner"></targetProfile>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Practitioner" />
       </type>
     </element>
     <element id="Composition.section:personCompletingRecordSection.entry.reference">
-      <path value="Composition.section.entry.reference"></path>
-      <min value="1"></min>
+      <path value="Composition.section.entry.reference" />
+      <min value="1" />
     </element>
-
     <element id="Composition.section:planAndRequestedActionsSection">
-      <path value="Composition.section"></path>
-      <sliceName value="planAndRequestedActionsSection"></sliceName>
-      <max value="1"></max>
+      <path value="Composition.section" />
+      <sliceName value="planAndRequestedActionsSection" />
+      <max value="1" />
     </element>
     <element id="Composition.section:planAndRequestedActionsSection.title">
-      <path value="Composition.section.title"></path>
-
-      <fixedString value="Plan and requested actions"></fixedString>
-
+      <path value="Composition.section.title" />
+      <fixedString value="Plan and requested actions" />
     </element>
-
     <element id="Composition.section:planAndRequestedActionsSection.code.coding.code">
-      <path value="Composition.section.code.coding.code"></path>
-      <min value="1"></min>
-      <fixedCode value="887201000000105"></fixedCode>
-
+      <path value="Composition.section.code.coding.code" />
+      <min value="1" />
+      <fixedCode value="887201000000105" />
     </element>
     <element id="Composition.section:planAndRequestedActionsSection.code.coding.display">
-
-      <path value="Composition.section.code.coding.display"></path>
-      <fixedString value="Plan and requested actions"></fixedString>
-
+      <path value="Composition.section.code.coding.display" />
+      <fixedString value="Plan and requested actions" />
     </element>
-
     <element id="Composition.section:planAndRequestedActionsSection.entry">
-      <path value="Composition.section.entry"></path>
+      <path value="Composition.section.entry" />
       <type>
-        <code value="Reference"></code>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Binary"></targetProfile>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Binary" />
       </type>
     </element>
     <element id="Composition.section:planAndRequestedActionsSection.entry.reference">
-      <path value="Composition.section.entry.reference"></path>
-      <min value="1"></min>
+      <path value="Composition.section.entry.reference" />
+      <min value="1" />
     </element>
     <element id="Composition.section:planAndRequestedActionsSection.emptyReason">
-      <path value="Composition.section.emptyReason"></path>
-      <max value="0"></max>
+      <path value="Composition.section.emptyReason" />
+      <max value="0" />
     </element>
     <element id="Composition.section:planAndRequestedActionsSection.section">
-      <path value="Composition.section.section"></path>
-      <max value="0"></max>
+      <path value="Composition.section.section" />
+      <max value="0" />
     </element>
     <element id="Composition.section:proceduresSection">
-
-      <path value="Composition.section"></path>
-      <sliceName value="proceduresSection"></sliceName>
-      <max value="1"></max>
-
+      <path value="Composition.section" />
+      <sliceName value="proceduresSection" />
+      <max value="1" />
     </element>
     <element id="Composition.section:proceduresSection.title">
-      <path value="Composition.section.title"></path>
-      <min value="1"></min>
-      <fixedString value="Procedures"></fixedString>
-
+      <path value="Composition.section.title" />
+      <min value="1" />
+      <fixedString value="Procedures" />
     </element>
     <element id="Composition.section:proceduresSection.code">
-      <path value="Composition.section.code"></path>
-      <min value="1"></min>
+      <path value="Composition.section.code" />
+      <min value="1" />
     </element>
-
     <element id="Composition.section:proceduresSection.code.coding.code">
-      <path value="Composition.section.code.coding.code"></path>
-      <fixedCode value="887171000000109"></fixedCode>
-
+      <path value="Composition.section.code.coding.code" />
+      <fixedCode value="887171000000109" />
     </element>
     <element id="Composition.section:proceduresSection.code.coding.display">
-
-      <path value="Composition.section.code.coding.display"></path>
-      <fixedString value="Procedures"></fixedString>
-
+      <path value="Composition.section.code.coding.display" />
+      <fixedString value="Procedures" />
     </element>
     <element id="Composition.section:proceduresSection.entry">
-      <path value="Composition.section.entry"></path>
+      <path value="Composition.section.entry" />
       <type>
-        <code value="Reference"></code>
-        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Procedure"></targetProfile>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Procedure" />
       </type>
-     
     </element>
     <element id="Composition.section:proceduresSection.entry.reference">
-      <path value="Composition.section.entry.reference"></path>
-      <min value="1"></min>
+      <path value="Composition.section.entry.reference" />
+      <min value="1" />
     </element>
     <element id="Composition.section:referrerDetailsSection">
-
-      <path value="Composition.section"></path>
-      <sliceName value="referrerDetailsSection"></sliceName>
-      <max value="1"></max>
-
+      <path value="Composition.section" />
+      <sliceName value="referrerDetailsSection" />
+      <max value="1" />
     </element>
     <element id="Composition.section:referrerDetailsSection.title">
-      <path value="Composition.section.title"></path>
-
-      <fixedString value="Referrer details"></fixedString>
-
+      <path value="Composition.section.title" />
+      <fixedString value="Referrer details" />
     </element>
     <element id="Composition.section:referrerDetailsSection.code.coding.code">
-      <path value="Composition.section.code.coding.code"></path>
-      <fixedCode value="1052891000000108"></fixedCode>
-
+      <path value="Composition.section.code.coding.code" />
+      <fixedCode value="1052891000000108" />
     </element>
     <element id="Composition.section:referrerDetailsSection.code.coding.display">
-
-      <path value="Composition.section.code.coding.display"></path>
-      <fixedString value="Referrer details"></fixedString>
-
+      <path value="Composition.section.code.coding.display" />
+      <fixedString value="Referrer details" />
     </element>
-
- 
-
     <element id="Composition.section:safetyAlertsSection">
-
-      <path value="Composition.section"></path>
-      <sliceName value="safetyAlertsSection"></sliceName>
-      <max value="1"></max>
-
+      <path value="Composition.section" />
+      <sliceName value="safetyAlertsSection" />
+      <max value="1" />
     </element>
     <element id="Composition.section:safetyAlertsSection.title">
-      <path value="Composition.section.title"></path>
-      <fixedString value="Safety alerts"></fixedString>
-
+      <path value="Composition.section.title" />
+      <fixedString value="Safety alerts" />
     </element>
     <element id="Composition.section:safetyAlertsSection.code.coding.code">
-      <path value="Composition.section.code.coding.code"></path>
-      <fixedCode value="886931000000107"></fixedCode>
+      <path value="Composition.section.code.coding.code" />
+      <fixedCode value="886931000000107" />
     </element>
     <element id="Composition.section:safetyAlertsSection.code.coding.display">
-
-      <path value="Composition.section.code.coding.display"></path>
-
-      <fixedString value="Safety alerts"></fixedString>
-
+      <path value="Composition.section.code.coding.display" />
+      <fixedString value="Safety alerts" />
     </element>
-
     <element id="Composition.section:socialContextSection">
-      <path value="Composition.section"></path>
-      <sliceName value="socialContextSection"></sliceName>
+      <path value="Composition.section" />
+      <sliceName value="socialContextSection" />
     </element>
     <element id="Composition.section:socialContextSection.title">
-      <path value="Composition.section.title"></path>
-      <fixedString value="Social context"></fixedString>
-
+      <path value="Composition.section.title" />
+      <fixedString value="Social context" />
     </element>
     <element id="Composition.section:socialContextSection.code.coding.code">
-      <path value="Composition.section.code.coding.code"></path>
-
-      <fixedCode value="887051000000101"></fixedCode>
-
+      <path value="Composition.section.code.coding.code" />
+      <fixedCode value="887051000000101" />
     </element>
     <element id="Composition.section:socialContextSection.code.coding.display">
-
-      <path value="Composition.section.code.coding.display"></path>
-
-      <fixedString value="Social context"></fixedString>
-
+      <path value="Composition.section.code.coding.display" />
+      <fixedString value="Social context" />
     </element>
-
     <element id="Composition.section:socialContextSection.entry">
-      <path value="Composition.section.entry"></path>
+      <path value="Composition.section.entry" />
       <type>
-        <code value="Reference"></code>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Binary"></targetProfile>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Binary" />
       </type>
     </element>
   </differential>
