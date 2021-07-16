@@ -135,7 +135,7 @@
       <path value="Composition.section.entry"></path>
       <type>
         <code value="Reference"></code>
-        <targetProfile value="https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-ITK-Allergy-List-1"></targetProfile>
+        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-AllergyIntolerance"></targetProfile>
       </type>
     </element>
 
@@ -185,9 +185,7 @@
     </element>
     <element id="Composition.section:clinicalSummarySection.code.coding.display">
       <path value="Composition.section.code.coding.display"></path>
-
       <fixedString value="Clinical summary"></fixedString>
-
     </element>
 
 
@@ -195,7 +193,7 @@
       <path value="Composition.section.entry"></path>
       <type>
         <code value="Reference"></code>
-        <targetProfile value="https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Attachment-Binary-1"></targetProfile>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Binary"></targetProfile>
       </type>
     </element>
     <element id="Composition.section:diagnosesSection">
@@ -289,7 +287,7 @@
       <path value="Composition.section.entry"></path>
       <type>
         <code value="Reference"></code>
-        <targetProfile value="https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-ITK-Condition-List-1"></targetProfile>
+        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Condition"></targetProfile>
       </type>
      
     </element>
@@ -417,7 +415,7 @@
    
       <type>
         <code value="Reference"></code>
-        <targetProfile value="https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-ITK-Encounter-1"></targetProfile>
+        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Encounter"></targetProfile>
       </type>
     </element>
     <element id="Composition.section:dischargeDetailsSection.entry.reference">
@@ -554,7 +552,7 @@
       <min value="1"></min>
       <type>
         <code value="Reference"></code>
-        <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1"></targetProfile>
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Organization"></targetProfile>
       </type>
     
     </element>
@@ -594,7 +592,7 @@
       <path value="Composition.section.entry"></path>
       <type>
         <code value="Reference"></code>
-        <targetProfile value="https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Attachment-Binary-1"></targetProfile>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Binary"></targetProfile>
       </type>
     </element>
     <element id="Composition.section:individualRequirementsSection.entry.reference">
@@ -638,7 +636,7 @@
       <path value="Composition.section.entry"></path>
       <type>
         <code value="Reference"></code>
-        <targetProfile value="https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Attachment-Binary-1"></targetProfile>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Binary"></targetProfile>
       </type>
     </element>
 
@@ -673,7 +671,7 @@
       <path value="Composition.section.entry"></path>
       <type>
         <code value="Reference"></code>
-        <targetProfile value="https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Attachment-Binary-1"></targetProfile>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Binary"></targetProfile>
       </type>
     </element>
     <element id="Composition.section:investigationResultsSection.entry.reference">
@@ -712,7 +710,7 @@
       <path value="Composition.section.entry"></path>
       <type>
         <code value="Reference"></code>
-        <targetProfile value="https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Attachment-Binary-1"></targetProfile>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Binary"></targetProfile>
       </type>
     </element>
     <element id="Composition.section:legalInformationSection.entry.reference">
@@ -760,7 +758,7 @@
       <path value="Composition.section.entry"></path>
       <type>
         <code value="Reference"></code>
-        <targetProfile value="https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-ITK-Medication-List-1"></targetProfile>
+        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-MedicationStatement"></targetProfile>
       </type>
     
     </element>
@@ -795,7 +793,7 @@
       <path value="Composition.section.entry"></path>
       <type>
         <code value="Reference"></code>
-        <targetProfile value="https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Attachment-Binary-1"></targetProfile>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Binary"></targetProfile>
       </type>
     </element>
     <element id="Composition.section:patientAndCarerConcernsExpectationsAndWishesSection">
@@ -847,7 +845,7 @@
       <min value="1"></min>
       <type>
         <code value="Reference"></code>
-        <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1"></targetProfile>
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient"></targetProfile>
       </type>
     
     </element>
@@ -881,7 +879,7 @@
   
       <type>
         <code value="Reference"></code>
-        <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1"></targetProfile>
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Practitioner"></targetProfile>
       </type>
     </element>
     <element id="Composition.section:personCompletingRecordSection.entry.reference">
@@ -918,7 +916,7 @@
       <path value="Composition.section.entry"></path>
       <type>
         <code value="Reference"></code>
-        <targetProfile value="https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Attachment-Binary-1"></targetProfile>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Binary"></targetProfile>
       </type>
     </element>
     <element id="Composition.section:planAndRequestedActionsSection.entry.reference">
@@ -966,7 +964,7 @@
       <path value="Composition.section.entry"></path>
       <type>
         <code value="Reference"></code>
-        <targetProfile value="https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-ITK-Procedure-List-1"></targetProfile>
+        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Procedure"></targetProfile>
       </type>
      
     </element>
@@ -1052,7 +1050,7 @@
       <path value="Composition.section.entry"></path>
       <type>
         <code value="Reference"></code>
-        <targetProfile value="https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Attachment-Binary-1"></targetProfile>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Binary"></targetProfile>
       </type>
     </element>
   </differential>
