@@ -31,10 +31,8 @@
   <baseDefinition value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Practitioner" />
   <derivation value="constraint" />
   <differential>
-    <element id="Practitioner.identifier">
-      <path value="Practitioner.identifier" />
-      <comment value="SHOULD contain a professional code and SDS-user-id." />
-      <min value="1" />
+    <element id="Practitioner">
+      <path value="Practitioner" />
       <constraint>
         <key value="prac-nmc" />
         <severity value="warning" />
@@ -71,6 +69,11 @@
         <human value="DIN format must be NNNNNN" />
         <expression value="identifier.where(system='https://fhir.hl7.org.uk/Id/din-number').exists().not() or (identifier.where(system='https://fhir.hl7.org.uk/Id/din-number').exists()  and identifier.where(system='https://fhir.hl7.org.uk/Id/din-number').value.matches('^[0-9]{6}$'))" />
       </constraint>
+    </element>
+    <element id="Practitioner.identifier">
+      <path value="Practitioner.identifier" />
+      <comment value="SHOULD contain a professional code and SDS-user-id." />
+      <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Practitioner.identifier:sdsUserID">

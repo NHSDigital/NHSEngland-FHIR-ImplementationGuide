@@ -35,7 +35,7 @@
     </focus>
     <focus>
         <code value="Bundle" />
-         <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Bundle-FHIRDocument" />
+       <!--  <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Bundle-FHIRDocument" />-->
         <min value="0" />
         <max value="*" />
     </focus>
