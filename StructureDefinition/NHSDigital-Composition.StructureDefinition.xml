@@ -139,6 +139,11 @@
       </type>
     </element>
 
+    <element id="Composition.section:assessmentScalesSection">
+      <path value="Composition.section"></path>
+      <sliceName value="assessmentScalesSection"></sliceName>
+      <max value="1"></max>
+    </element>
     <element id="Composition.section:assessmentScalesSection.title">
       <path value="Composition.section.title"></path>
 
@@ -159,6 +164,7 @@
 
       <fixedString value="Assessment scales"></fixedString>
     </element>
+
     <element id="Composition.section:clinicalSummarySection">
 
       <path value="Composition.section"></path>
