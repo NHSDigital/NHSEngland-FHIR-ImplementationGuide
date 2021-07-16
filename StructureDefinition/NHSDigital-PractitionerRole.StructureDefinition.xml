@@ -11,6 +11,15 @@
   <baseDefinition value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-PractitionerRole" />
   <derivation value="constraint" />
   <differential>
+  <element id="PractitionerRole">
+      <path value="PractitionerRole" />
+      <constraint>
+        <key value="role-spurious" />
+        <severity value="warning" />
+        <human value="Spurious Code format must be G6NNNNNN or G7NNNNNN" />
+        <expression value="identifier.where(system='https://fhir.hl7.org.uk/Id/nhsbsa-spurious-code').exists().not() or (identifier.where(system='https://fhir.hl7.org.uk/Id/nhsbsa-spurious-code').exists()  and identifier.where(system='https://fhir.hl7.org.uk/Id/nhsbsa-spurious-code').value.matches('^[G]{1}[67]{1}[0-9]{6}$'))" />
+      </constraint>
+    </element>
     <element id="PractitionerRole.identifier">
       <path value="PractitionerRole.identifier" />
       <min value="1" />
@@ -59,7 +68,7 @@
         <key value="role-gmp" />
         <severity value="warning" />
         <human value="GMP must be of the format GNNNNNNN" />
-        <expression value="identifier.exists().not() or identifier.where(system='https://fhir.hl7.org.uk/Id/gmp-number').exists().not() or (identifier.where(system='https://fhir.hl7.org.uk/Id/gmp-number').exists()  and identifier.where(system='https://fhir.hl7.org.uk/Id/gmp-number').value.matches('^[G]{1}[0-9]{7}$'))" />
+        <expression value="identifier.exists().not() or identifier.where(system='https://fhir.hl7.org.uk/Id/gmp-number').exists().not() or (identifier.where(system='https://fhir.hl7.org.uk/Id/gmp-number').exists()  and identifier.where(system='https://fhir.hl7.org.uk/Id/gmp-number').value.matches('^[G]{1}[01234589]{1}[0-9]{6}$'))" />
       </constraint>
       <constraint>
         <key value="role-gmc" />

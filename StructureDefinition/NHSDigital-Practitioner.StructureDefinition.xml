@@ -42,8 +42,8 @@
       <constraint>
         <key value="prac-gmp" />
         <severity value="warning" />
-        <human value="GMP must be of the format GNNNNNNN" />
-        <expression value="identifier.where(system='https://fhir.hl7.org.uk/Id/gmp-number').exists().not() or (identifier.where(system='https://fhir.hl7.org.uk/Id/gmp-number').exists()  and identifier.where(system='https://fhir.hl7.org.uk/Id/gmp-number').value.matches('^[G]{1}[0-9]{7}$'))" />
+        <human value="GMP must be of the format GNNNNNNN and not be a spurious code (starts with G6 or G7)" />
+        <expression value="identifier.where(system='https://fhir.hl7.org.uk/Id/gmp-number').exists().not() or (identifier.where(system='https://fhir.hl7.org.uk/Id/gmp-number').exists()  and identifier.where(system='https://fhir.hl7.org.uk/Id/gmp-number').value.matches('^[G]{1}[01234589]{1}[0-9]{6}$')" />
       </constraint>
       <constraint>
         <key value="prac-gmc" />
