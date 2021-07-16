@@ -45,7 +45,6 @@
       </type>
     </element>
     <element id="Composition.section">
-
       <path value="Composition.section"></path>
       <slicing>
         <discriminator>
@@ -106,41 +105,19 @@
       <min value="1"></min>
       <type>
         <code value="Reference"></code>
-        <targetProfile value="https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Attachment-Binary-1"></targetProfile>
-      </type>
-      <type>
-        <code value="Reference"></code>
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Encounter"></targetProfile>
       </type>
-    </element>
-    <element id="Composition.section:admissionDetailsSection.entry.reference">
-      <path value="Composition.section.entry.reference"></path>
-      <min value="1"></min>
     </element>
 
     <element id="Composition.section:allergiesAndAdverseReactionsSection">
       <path value="Composition.section"></path>
       <sliceName value="allergiesAndAdverseReactionsSection"></sliceName>
-      <min value="1"></min>
       <max value="1"></max>
-
     </element>
     <element id="Composition.section:allergiesAndAdverseReactionsSection.title">
       <path value="Composition.section.title"></path>
-
       <fixedString value="Allergies and adverse reactions"></fixedString>
-
     </element>
-    <element id="Composition.section:allergiesAndAdverseReactionsSection.code">
-      <path value="Composition.section.code"></path>
-      <min value="1"></min>
-    </element>
-    <element id="Composition.section:allergiesAndAdverseReactionsSection.code.coding">
-      <path value="Composition.section.code.coding"></path>
-      <min value="1"></min>
-      <max value="1"></max>
-    </element>
-
     <element id="Composition.section:allergiesAndAdverseReactionsSection.code.coding.code">
       <path value="Composition.section.code.coding.code"></path>
       <min value="1"></min>
@@ -154,16 +131,11 @@
       <fixedString value="Allergies and adverse reactions"></fixedString>
 
     </element>
-
     <element id="Composition.section:allergiesAndAdverseReactionsSection.entry">
       <path value="Composition.section.entry"></path>
       <type>
         <code value="Reference"></code>
         <targetProfile value="https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-ITK-Allergy-List-1"></targetProfile>
-      </type>
-      <type>
-        <code value="Reference"></code>
-        <targetProfile value="https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Attachment-Binary-1"></targetProfile>
       </type>
     </element>
 
@@ -313,10 +285,7 @@
         <code value="Reference"></code>
         <targetProfile value="https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-ITK-Condition-List-1"></targetProfile>
       </type>
-      <type>
-        <code value="Reference"></code>
-        <targetProfile value="https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Attachment-Binary-1"></targetProfile>
-      </type>
+     
     </element>
     <element id="Composition.section:diagnosesSection.entry.reference">
       <path value="Composition.section.entry.reference"></path>
@@ -439,14 +408,7 @@
     <element id="Composition.section:dischargeDetailsSection.entry">
       <path value="Composition.section.entry"></path>
       <min value="1"></min>
-      <type>
-        <code value="Reference"></code>
-        <targetProfile value="https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Attachment-Binary-1"></targetProfile>
-      </type>
-      <type>
-        <code value="Reference"></code>
-        <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1"></targetProfile>
-      </type>
+   
       <type>
         <code value="Reference"></code>
         <targetProfile value="https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-ITK-Encounter-1"></targetProfile>
@@ -505,93 +467,6 @@
       <path value="Composition.section.code.coding.display"></path>
 
       <fixedString value="Distribution list"></fixedString>
-    </element>
-    <element id="Composition.section:distributionListSection.code.coding.userSelected">
-      <path value="Composition.section.code.coding.userSelected"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:distributionListSection.code.text">
-
-      <path value="Composition.section.code.text"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:distributionListSection.text">
-      <path value="Composition.section.text"></path>
-      <min value="1"></min>
-    </element>
-    <element id="Composition.section:distributionListSection.mode">
-      <path value="Composition.section.mode"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:distributionListSection.orderedBy">
-      <path value="Composition.section.orderedBy"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:distributionListSection.orderedBy.coding.system">
-      <path value="Composition.section.orderedBy.coding.system"></path>
-      <min value="1"></min>
-    </element>
-    <element id="Composition.section:distributionListSection.orderedBy.coding.version">
-      <path value="Composition.section.orderedBy.coding.version"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:distributionListSection.orderedBy.coding.code">
-      <path value="Composition.section.orderedBy.coding.code"></path>
-      <min value="1"></min>
-    </element>
-    <element id="Composition.section:distributionListSection.orderedBy.coding.display">
-
-      <path value="Composition.section.orderedBy.coding.display"></path>
-      <min value="1"></min>
-    </element>
-    <element id="Composition.section:distributionListSection.orderedBy.coding.userSelected">
-      <path value="Composition.section.orderedBy.coding.userSelected"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:distributionListSection.orderedBy.text">
-
-      <path value="Composition.section.orderedBy.text"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:distributionListSection.entry">
-      <path value="Composition.section.entry"></path>
-      <short value="A reference to data that supports this section."></short>
-      <type>
-        <code value="Reference"></code>
-        <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1"></targetProfile>
-      </type>
-      <type>
-        <code value="Reference"></code>
-        <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1"></targetProfile>
-      </type>
-      <type>
-        <code value="Reference"></code>
-        <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1"></targetProfile>
-      </type>
-      <type>
-        <code value="Reference"></code>
-        <targetProfile value="https://fhir.nhs.uk/STU3/StructureDefinition/ITK-RelatedPerson-1"></targetProfile>
-      </type>
-      <type>
-        <code value="Reference"></code>
-        <targetProfile value="https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Attachment-Binary-1"></targetProfile>
-      </type>
-      <type>
-        <code value="Reference"></code>
-        <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-PractitionerRole-1"></targetProfile>
-      </type>
-    </element>
-    <element id="Composition.section:distributionListSection.entry.reference">
-      <path value="Composition.section.entry.reference"></path>
-      <min value="1"></min>
-    </element>
-    <element id="Composition.section:distributionListSection.emptyReason">
-      <path value="Composition.section.emptyReason"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:distributionListSection.section">
-      <path value="Composition.section.section"></path>
-      <max value="0"></max>
     </element>
     <element id="Composition.section:gpPracticeSection">
 
@@ -675,22 +550,7 @@
         <code value="Reference"></code>
         <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1"></targetProfile>
       </type>
-      <type>
-        <code value="Reference"></code>
-        <targetProfile value="https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Attachment-Binary-1"></targetProfile>
-      </type>
-    </element>
-    <element id="Composition.section:gpPracticeSection.entry.reference">
-      <path value="Composition.section.entry.reference"></path>
-      <min value="1"></min>
-    </element>
-    <element id="Composition.section:gpPracticeSection.emptyReason">
-      <path value="Composition.section.emptyReason"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:gpPracticeSection.section">
-      <path value="Composition.section.section"></path>
-      <max value="0"></max>
+    
     </element>
     <element id="Composition.section:individualRequirementsSection">
 
@@ -896,10 +756,7 @@
         <code value="Reference"></code>
         <targetProfile value="https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-ITK-Medication-List-1"></targetProfile>
       </type>
-      <type>
-        <code value="Reference"></code>
-        <targetProfile value="https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Attachment-Binary-1"></targetProfile>
-      </type>
+    
     </element>
     <element id="Composition.section:participationInResearchSection">
 
@@ -986,10 +843,7 @@
         <code value="Reference"></code>
         <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1"></targetProfile>
       </type>
-      <type>
-        <code value="Reference"></code>
-        <targetProfile value="https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Attachment-Binary-1"></targetProfile>
-      </type>
+    
     </element>
 
     <element id="Composition.section:personCompletingRecordSection">
@@ -1018,10 +872,7 @@
 
     <element id="Composition.section:personCompletingRecordSection.entry">
       <path value="Composition.section.entry"></path>
-      <type>
-        <code value="Reference"></code>
-        <targetProfile value="https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Attachment-Binary-1"></targetProfile>
-      </type>
+  
       <type>
         <code value="Reference"></code>
         <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1"></targetProfile>
@@ -1111,10 +962,7 @@
         <code value="Reference"></code>
         <targetProfile value="https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-ITK-Procedure-List-1"></targetProfile>
       </type>
-      <type>
-        <code value="Reference"></code>
-        <targetProfile value="https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Attachment-Binary-1"></targetProfile>
-      </type>
+     
     </element>
     <element id="Composition.section:proceduresSection.entry.reference">
       <path value="Composition.section.entry.reference"></path>
@@ -1144,37 +992,8 @@
       <fixedString value="Referrer details"></fixedString>
 
     </element>
-    <element id="Composition.section:referrerDetailsSection.entry">
-      <path value="Composition.section.entry"></path>
-      <type>
-        <code value="Reference"></code>
-        <targetProfile value="https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Attachment-Binary-1"></targetProfile>
-      </type>
-      <type>
-        <code value="Reference"></code>
-        <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1"></targetProfile>
-      </type>
-      <type>
-        <code value="Reference"></code>
-        <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1"></targetProfile>
-      </type>
-      <type>
-        <code value="Reference"></code>
-        <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1"></targetProfile>
-      </type>
-      <type>
-        <code value="Reference"></code>
-        <targetProfile value="https://fhir.nhs.uk/STU3/StructureDefinition/ITK-RelatedPerson-1"></targetProfile>
-      </type>
-      <type>
-        <code value="Reference"></code>
-        <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-PractitionerRole-1"></targetProfile>
-      </type>
-    </element>
-    <element id="Composition.section:referrerDetailsSection.entry.reference">
-      <path value="Composition.section.entry.reference"></path>
-      <min value="1"></min>
-    </element>
+
+ 
 
     <element id="Composition.section:safetyAlertsSection">
 
@@ -1200,13 +1019,6 @@
 
     </element>
 
-    <element id="Composition.section:safetyAlertsSection.entry">
-      <path value="Composition.section.entry"></path>
-      <type>
-        <code value="Reference"></code>
-        <targetProfile value="https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Attachment-Binary-1"></targetProfile>
-      </type>
-    </element>
     <element id="Composition.section:socialContextSection">
       <path value="Composition.section"></path>
       <sliceName value="socialContextSection"></sliceName>
