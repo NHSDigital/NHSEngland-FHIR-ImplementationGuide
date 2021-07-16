@@ -45,7 +45,7 @@
       </type>
     </element>
     <element id="Composition.section">
-     
+
       <path value="Composition.section"></path>
       <slicing>
         <discriminator>
@@ -56,60 +56,50 @@
         <rules value="closed"></rules>
       </slicing>
       <min value="1"></min>
-      
     </element>
-      <element id="Composition.section.code.coding.system">
+    <element id="Composition.section.code.coding.code">
+      <path value="Composition.section.code.coding.code"></path>
+      <min value="1"></min>
+    </element>
+    <element id="Composition.section.code.coding.system">
       <path value="Composition.section.code.coding.system"></path>
       <min value="1"></min>
       <fixedUri value="http://snomed.info/sct"></fixedUri>
-      <mustSupport value="false"></mustSupport>
     </element>
     <element id="Composition.section.code.coding.version">
       <path value="Composition.section.code.coding.version"></path>
       <max value="0"></max>
     </element>
-     <element id="Composition.section.code.coding">
+    <element id="Composition.section.code.coding">
       <path value="Composition.section.code.coding"></path>
       <min value="1"></min>
       <max value="1"></max>
     </element>
-     <element id="Composition.section.text">
+    <element id="Composition.section.text">
       <path value="Composition.section.text"></path>
       <min value="1"></min>
     </element>
-      <element id="Composition.section.code">
+    <element id="Composition.section.code">
       <path value="Composition.section.code"></path>
       <min value="1"></min>
-    </element> 
-    <element id="Composition.section:admissionDetailsSection.code.coding.system">
-      <path value="Composition.section.code.coding.system"></path>
-      <min value="1"></min>
-      <fixedUri value="http://snomed.info/sct"></fixedUri>
-      <mustSupport value="false"></mustSupport>
     </element>
-<!-- admissionDetailsSection -->
+    <!-- admissionDetailsSection -->
     <element id="Composition.section:admissionDetailsSection">
       <path value="Composition.section"></path>
       <sliceName value="admissionDetailsSection"></sliceName>
-      <max value="1"></max> 
+      <max value="1"></max>
     </element>
     <element id="Composition.section:admissionDetailsSection.title">
       <path value="Composition.section.title"></path>
-      <min value="1"></min>
       <fixedString value="Admission details"></fixedString>
-      <mustSupport value="false"></mustSupport>
     </element>
     <element id="Composition.section:admissionDetailsSection.code.coding.code">
       <path value="Composition.section.code.coding.code"></path>
-      <min value="1"></min>
       <fixedCode value="886781000000108"></fixedCode>
-      <mustSupport value="false"></mustSupport>
     </element>
-    <element id="Composition.section:admissionDetailsSection.code.coding.display">   
+    <element id="Composition.section:admissionDetailsSection.code.coding.display">
       <path value="Composition.section.code.coding.display"></path>
-      <min value="1"></min>
       <fixedString value="Admission details"></fixedString>
-      <mustSupport value="false"></mustSupport>
     </element>
     <element id="Composition.section:admissionDetailsSection.entry">
       <path value="Composition.section.entry"></path>
@@ -127,19 +117,19 @@
       <path value="Composition.section.entry.reference"></path>
       <min value="1"></min>
     </element>
-   
+
     <element id="Composition.section:allergiesAndAdverseReactionsSection">
       <path value="Composition.section"></path>
       <sliceName value="allergiesAndAdverseReactionsSection"></sliceName>
       <min value="1"></min>
       <max value="1"></max>
-      
+
     </element>
     <element id="Composition.section:allergiesAndAdverseReactionsSection.title">
       <path value="Composition.section.title"></path>
-      <min value="1"></min>
+
       <fixedString value="Allergies and adverse reactions"></fixedString>
-      <mustSupport value="false"></mustSupport>
+
     </element>
     <element id="Composition.section:allergiesAndAdverseReactionsSection.code">
       <path value="Composition.section.code"></path>
@@ -150,78 +140,21 @@
       <min value="1"></min>
       <max value="1"></max>
     </element>
-  
+
     <element id="Composition.section:allergiesAndAdverseReactionsSection.code.coding.code">
       <path value="Composition.section.code.coding.code"></path>
       <min value="1"></min>
       <fixedCode value="886921000000105"></fixedCode>
-      <mustSupport value="false"></mustSupport>
+
     </element>
     <element id="Composition.section:allergiesAndAdverseReactionsSection.code.coding.display">
-    
+
       <path value="Composition.section.code.coding.display"></path>
-      <min value="1"></min>
+
       <fixedString value="Allergies and adverse reactions"></fixedString>
-      <mustSupport value="false"></mustSupport>
+
     </element>
-    <element id="Composition.section:allergiesAndAdverseReactionsSection.code.coding.userSelected">
-      <path value="Composition.section.code.coding.userSelected"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:allergiesAndAdverseReactionsSection.code.text">
-    
-      <path value="Composition.section.code.text"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:allergiesAndAdverseReactionsSection.text">
-      <path value="Composition.section.text"></path>
-      <min value="1"></min>
-    </element>
-    <element id="Composition.section:allergiesAndAdverseReactionsSection.text.status">
-      <path value="Composition.section.text.status"></path>
-      <mustSupport value="false"></mustSupport>
-    </element>
-    <element id="Composition.section:allergiesAndAdverseReactionsSection.text.div">
-      <path value="Composition.section.text.div"></path>
-      <mustSupport value="false"></mustSupport>
-    </element>
-    <element id="Composition.section:allergiesAndAdverseReactionsSection.mode">
-      <path value="Composition.section.mode"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:allergiesAndAdverseReactionsSection.orderedBy">
-      <path value="Composition.section.orderedBy"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:allergiesAndAdverseReactionsSection.orderedBy.coding.system">
-      <path value="Composition.section.orderedBy.coding.system"></path>
-      <min value="1"></min>
-      <mustSupport value="false"></mustSupport>
-    </element>
-    <element id="Composition.section:allergiesAndAdverseReactionsSection.orderedBy.coding.version">
-      <path value="Composition.section.orderedBy.coding.version"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:allergiesAndAdverseReactionsSection.orderedBy.coding.code">
-      <path value="Composition.section.orderedBy.coding.code"></path>
-      <min value="1"></min>
-      <mustSupport value="false"></mustSupport>
-    </element>
-    <element id="Composition.section:allergiesAndAdverseReactionsSection.orderedBy.coding.display">
-    
-      <path value="Composition.section.orderedBy.coding.display"></path>
-      <min value="1"></min>
-      <mustSupport value="false"></mustSupport>
-    </element>
-    <element id="Composition.section:allergiesAndAdverseReactionsSection.orderedBy.coding.userSelected">
-      <path value="Composition.section.orderedBy.coding.userSelected"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:allergiesAndAdverseReactionsSection.orderedBy.text">
-    
-      <path value="Composition.section.orderedBy.text"></path>
-      <max value="0"></max>
-    </element>
+
     <element id="Composition.section:allergiesAndAdverseReactionsSection.entry">
       <path value="Composition.section.entry"></path>
       <type>
@@ -233,236 +166,53 @@
         <targetProfile value="https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Attachment-Binary-1"></targetProfile>
       </type>
     </element>
-    <element id="Composition.section:allergiesAndAdverseReactionsSection.entry.reference">
-      <path value="Composition.section.entry.reference"></path>
-      <min value="1"></min>
-    </element>
-    <element id="Composition.section:allergiesAndAdverseReactionsSection.entry.display">
-    
-      <path value="Composition.section.entry.display"></path>
-      <mustSupport value="false"></mustSupport>
-    </element>
-    <element id="Composition.section:allergiesAndAdverseReactionsSection.emptyReason">
-      <path value="Composition.section.emptyReason"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:allergiesAndAdverseReactionsSection.section">
-      <path value="Composition.section.section"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:assessmentScalesSection">
-     
-      <path value="Composition.section"></path>
-      <sliceName value="assessmentScalesSection"></sliceName>
-      <max value="1"></max>
-      
-    </element>
+
     <element id="Composition.section:assessmentScalesSection.title">
       <path value="Composition.section.title"></path>
-      <min value="1"></min>
+
       <fixedString value="Assessment scales"></fixedString>
-      <mustSupport value="false"></mustSupport>
-    </element>
-    <element id="Composition.section:assessmentScalesSection.code">
-      <path value="Composition.section.code"></path>
-      <min value="1"></min>
-      
-    </element>
-    <element id="Composition.section:assessmentScalesSection.code.coding">
-      <path value="Composition.section.code.coding"></path>
-      <min value="1"></min>
-      <max value="1"></max>
     </element>
     <element id="Composition.section:assessmentScalesSection.code.coding.system">
       <path value="Composition.section.code.coding.system"></path>
-      <min value="1"></min>
+
       <fixedUri value="http://snomed.info/sct"></fixedUri>
-      <mustSupport value="false"></mustSupport>
-    </element>
-    <element id="Composition.section:assessmentScalesSection.code.coding.version">
-      <path value="Composition.section.code.coding.version"></path>
-      <max value="0"></max>
     </element>
     <element id="Composition.section:assessmentScalesSection.code.coding.code">
       <path value="Composition.section.code.coding.code"></path>
-      <min value="1"></min>
+
       <fixedCode value="887141000000103"></fixedCode>
-      <mustSupport value="false"></mustSupport>
     </element>
     <element id="Composition.section:assessmentScalesSection.code.coding.display">
-    
       <path value="Composition.section.code.coding.display"></path>
-      <min value="1"></min>
+
       <fixedString value="Assessment scales"></fixedString>
-      <mustSupport value="false"></mustSupport>
-    </element>
-    <element id="Composition.section:assessmentScalesSection.code.coding.userSelected">
-      <path value="Composition.section.code.coding.userSelected"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:assessmentScalesSection.code.text">
-    
-      <path value="Composition.section.code.text"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:assessmentScalesSection.text">
-      <path value="Composition.section.text"></path>
-      <min value="1"></min>
-    </element>
-    <element id="Composition.section:assessmentScalesSection.text.status">
-      <path value="Composition.section.text.status"></path>
-      <mustSupport value="false"></mustSupport>
-    </element>
-    <element id="Composition.section:assessmentScalesSection.text.div">
-      <path value="Composition.section.text.div"></path>
-      <mustSupport value="false"></mustSupport>
-    </element>
-    <element id="Composition.section:assessmentScalesSection.mode">
-      <path value="Composition.section.mode"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:assessmentScalesSection.orderedBy">
-      <path value="Composition.section.orderedBy"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:assessmentScalesSection.orderedBy.coding.system">
-      <path value="Composition.section.orderedBy.coding.system"></path>
-      <min value="1"></min>
-    </element>
-    <element id="Composition.section:assessmentScalesSection.orderedBy.coding.version">
-      <path value="Composition.section.orderedBy.coding.version"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:assessmentScalesSection.orderedBy.coding.code">
-      <path value="Composition.section.orderedBy.coding.code"></path>
-      <min value="1"></min>
-    </element>
-    <element id="Composition.section:assessmentScalesSection.orderedBy.coding.display">
-    
-      <path value="Composition.section.orderedBy.coding.display"></path>
-      <min value="1"></min>
-    </element>
-    <element id="Composition.section:assessmentScalesSection.orderedBy.coding.userSelected">
-      <path value="Composition.section.orderedBy.coding.userSelected"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:assessmentScalesSection.orderedBy.text">
-    
-      <path value="Composition.section.orderedBy.text"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:assessmentScalesSection.entry">
-      <path value="Composition.section.entry"></path>
-      <type>
-        <code value="Reference"></code>
-        <targetProfile value="https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Attachment-Binary-1"></targetProfile>
-      </type>
-    </element>
-    <element id="Composition.section:assessmentScalesSection.entry.reference">
-      <path value="Composition.section.entry.reference"></path>
-      <min value="1"></min>
-    </element>
-    <element id="Composition.section:assessmentScalesSection.emptyReason">
-      <path value="Composition.section.emptyReason"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:assessmentScalesSection.section">
-      <path value="Composition.section.section"></path>
-      <max value="0"></max>
     </element>
     <element id="Composition.section:clinicalSummarySection">
-     
+
       <path value="Composition.section"></path>
       <sliceName value="clinicalSummarySection"></sliceName>
       <max value="1"></max>
-      
+
     </element>
     <element id="Composition.section:clinicalSummarySection.title">
       <path value="Composition.section.title"></path>
-      <min value="1"></min>
+
       <fixedString value="Clinical summary"></fixedString>
-      <mustSupport value="false"></mustSupport>
-    </element>
-    <element id="Composition.section:clinicalSummarySection.code">
-      <path value="Composition.section.code"></path>
-      <min value="1"></min>
-      
-    </element>
-    <element id="Composition.section:clinicalSummarySection.code.coding">
-      <path value="Composition.section.code.coding"></path>
-      <min value="1"></min>
-      <max value="1"></max>
-    </element>
-    <element id="Composition.section:clinicalSummarySection.code.coding.system">
-      <path value="Composition.section.code.coding.system"></path>
-      <min value="1"></min>
-      <fixedUri value="http://snomed.info/sct"></fixedUri>
-      <mustSupport value="false"></mustSupport>
-    </element>
-    <element id="Composition.section:clinicalSummarySection.code.coding.version">
-      <path value="Composition.section.code.coding.version"></path>
-      <max value="0"></max>
+
     </element>
     <element id="Composition.section:clinicalSummarySection.code.coding.code">
       <path value="Composition.section.code.coding.code"></path>
       <min value="1"></min>
       <fixedCode value="887181000000106"></fixedCode>
-      <mustSupport value="false"></mustSupport>
     </element>
     <element id="Composition.section:clinicalSummarySection.code.coding.display">
-    
       <path value="Composition.section.code.coding.display"></path>
-      <min value="1"></min>
+
       <fixedString value="Clinical summary"></fixedString>
-      <mustSupport value="false"></mustSupport>
+
     </element>
-    <element id="Composition.section:clinicalSummarySection.code.coding.userSelected">
-      <path value="Composition.section.code.coding.userSelected"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:clinicalSummarySection.code.text">
-    
-      <path value="Composition.section.code.text"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:clinicalSummarySection.text">
-      <path value="Composition.section.text"></path>
-      <min value="1"></min>
-    </element>
-    <element id="Composition.section:clinicalSummarySection.mode">
-      <path value="Composition.section.mode"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:clinicalSummarySection.orderedBy">
-      <path value="Composition.section.orderedBy"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:clinicalSummarySection.orderedBy.coding.system">
-      <path value="Composition.section.orderedBy.coding.system"></path>
-      <min value="1"></min>
-    </element>
-    <element id="Composition.section:clinicalSummarySection.orderedBy.coding.version">
-      <path value="Composition.section.orderedBy.coding.version"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:clinicalSummarySection.orderedBy.coding.code">
-      <path value="Composition.section.orderedBy.coding.code"></path>
-      <min value="1"></min>
-    </element>
-    <element id="Composition.section:clinicalSummarySection.orderedBy.coding.display">
-    
-      <path value="Composition.section.orderedBy.coding.display"></path>
-      <min value="1"></min>
-    </element>
-    <element id="Composition.section:clinicalSummarySection.orderedBy.coding.userSelected">
-      <path value="Composition.section.orderedBy.coding.userSelected"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:clinicalSummarySection.orderedBy.text">
-    
-      <path value="Composition.section.orderedBy.text"></path>
-      <max value="0"></max>
-    </element>
+
+
     <element id="Composition.section:clinicalSummarySection.entry">
       <path value="Composition.section.entry"></path>
       <type>
@@ -470,70 +220,41 @@
         <targetProfile value="https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Attachment-Binary-1"></targetProfile>
       </type>
     </element>
-    <element id="Composition.section:clinicalSummarySection.entry.reference">
-      <path value="Composition.section.entry.reference"></path>
-      <min value="1"></min>
-    </element>
-    <element id="Composition.section:clinicalSummarySection.emptyReason">
-      <path value="Composition.section.emptyReason"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:clinicalSummarySection.section">
-      <path value="Composition.section.section"></path>
-      <max value="0"></max>
-    </element>
     <element id="Composition.section:diagnosesSection">
-     
       <path value="Composition.section"></path>
       <sliceName value="diagnosesSection"></sliceName>
       <max value="1"></max>
-      
+
     </element>
     <element id="Composition.section:diagnosesSection.title">
       <path value="Composition.section.title"></path>
-      <min value="1"></min>
+
       <fixedString value="Diagnoses"></fixedString>
-      <mustSupport value="false"></mustSupport>
+
     </element>
-    <element id="Composition.section:diagnosesSection.code">
-      <path value="Composition.section.code"></path>
-      <min value="1"></min>
-      
-    </element>
-    <element id="Composition.section:diagnosesSection.code.coding">
-      <path value="Composition.section.code.coding"></path>
-      <min value="1"></min>
-      <max value="1"></max>
-    </element>
+
     <element id="Composition.section:diagnosesSection.code.coding.system">
       <path value="Composition.section.code.coding.system"></path>
-      <min value="1"></min>
+
       <fixedUri value="http://snomed.info/sct"></fixedUri>
-      <mustSupport value="false"></mustSupport>
-    </element>
-    <element id="Composition.section:diagnosesSection.code.coding.version">
-      <path value="Composition.section.code.coding.version"></path>
-      <max value="0"></max>
+
     </element>
     <element id="Composition.section:diagnosesSection.code.coding.code">
       <path value="Composition.section.code.coding.code"></path>
-      <min value="1"></min>
+
       <fixedCode value="887161000000102"></fixedCode>
-      <mustSupport value="false"></mustSupport>
+
     </element>
     <element id="Composition.section:diagnosesSection.code.coding.display">
-    
       <path value="Composition.section.code.coding.display"></path>
-      <min value="1"></min>
       <fixedString value="Diagnoses"></fixedString>
-      <mustSupport value="false"></mustSupport>
     </element>
     <element id="Composition.section:diagnosesSection.code.coding.userSelected">
       <path value="Composition.section.code.coding.userSelected"></path>
       <max value="0"></max>
     </element>
     <element id="Composition.section:diagnosesSection.code.text">
-    
+
       <path value="Composition.section.code.text"></path>
       <max value="0"></max>
     </element>
@@ -543,11 +264,11 @@
     </element>
     <element id="Composition.section:diagnosesSection.text.status">
       <path value="Composition.section.text.status"></path>
-      <mustSupport value="false"></mustSupport>
+
     </element>
     <element id="Composition.section:diagnosesSection.text.div">
       <path value="Composition.section.text.div"></path>
-      <mustSupport value="false"></mustSupport>
+
     </element>
     <element id="Composition.section:diagnosesSection.mode">
       <path value="Composition.section.mode"></path>
@@ -560,7 +281,7 @@
     <element id="Composition.section:diagnosesSection.orderedBy.coding.system">
       <path value="Composition.section.orderedBy.coding.system"></path>
       <min value="1"></min>
-      <mustSupport value="false"></mustSupport>
+
     </element>
     <element id="Composition.section:diagnosesSection.orderedBy.coding.version">
       <path value="Composition.section.orderedBy.coding.version"></path>
@@ -569,20 +290,20 @@
     <element id="Composition.section:diagnosesSection.orderedBy.coding.code">
       <path value="Composition.section.orderedBy.coding.code"></path>
       <min value="1"></min>
-      <mustSupport value="false"></mustSupport>
+
     </element>
     <element id="Composition.section:diagnosesSection.orderedBy.coding.display">
-    
+
       <path value="Composition.section.orderedBy.coding.display"></path>
       <min value="1"></min>
-      <mustSupport value="false"></mustSupport>
+
     </element>
     <element id="Composition.section:diagnosesSection.orderedBy.coding.userSelected">
       <path value="Composition.section.orderedBy.coding.userSelected"></path>
       <max value="0"></max>
     </element>
     <element id="Composition.section:diagnosesSection.orderedBy.text">
-    
+
       <path value="Composition.section.orderedBy.text"></path>
       <max value="0"></max>
     </element>
@@ -610,22 +331,22 @@
       <max value="0"></max>
     </element>
     <element id="Composition.section:dischargeDetailsSection">
-     
+
       <path value="Composition.section"></path>
       <sliceName value="dischargeDetailsSection"></sliceName>
       <max value="1"></max>
-      
+
     </element>
     <element id="Composition.section:dischargeDetailsSection.title">
       <path value="Composition.section.title"></path>
-      <min value="1"></min>
+
       <fixedString value="Discharge details"></fixedString>
-      <mustSupport value="false"></mustSupport>
+
     </element>
     <element id="Composition.section:dischargeDetailsSection.code">
       <path value="Composition.section.code"></path>
       <min value="1"></min>
-      
+
     </element>
     <element id="Composition.section:dischargeDetailsSection.code.coding">
       <path value="Composition.section.code.coding"></path>
@@ -636,7 +357,7 @@
       <path value="Composition.section.code.coding.system"></path>
       <min value="1"></min>
       <fixedUri value="http://snomed.info/sct"></fixedUri>
-      <mustSupport value="false"></mustSupport>
+
     </element>
     <element id="Composition.section:dischargeDetailsSection.code.coding.version">
       <path value="Composition.section.code.coding.version"></path>
@@ -646,36 +367,36 @@
       <path value="Composition.section.code.coding.code"></path>
       <min value="1"></min>
       <fixedCode value="886811000000106"></fixedCode>
-      <mustSupport value="false"></mustSupport>
+
     </element>
     <element id="Composition.section:dischargeDetailsSection.code.coding.display">
-    
+
       <path value="Composition.section.code.coding.display"></path>
-      <min value="1"></min>
+
       <fixedString value="Discharge details"></fixedString>
-      <mustSupport value="false"></mustSupport>
+
     </element>
     <element id="Composition.section:dischargeDetailsSection.code.coding.userSelected">
       <path value="Composition.section.code.coding.userSelected"></path>
       <max value="0"></max>
     </element>
     <element id="Composition.section:dischargeDetailsSection.code.text">
-    
+
       <path value="Composition.section.code.text"></path>
       <max value="0"></max>
     </element>
     <element id="Composition.section:dischargeDetailsSection.text">
       <path value="Composition.section.text"></path>
       <min value="1"></min>
-      <mustSupport value="false"></mustSupport>
+
     </element>
     <element id="Composition.section:dischargeDetailsSection.text.status">
       <path value="Composition.section.text.status"></path>
-      <mustSupport value="false"></mustSupport>
+
     </element>
     <element id="Composition.section:dischargeDetailsSection.text.div">
       <path value="Composition.section.text.div"></path>
-      <mustSupport value="false"></mustSupport>
+
     </element>
     <element id="Composition.section:dischargeDetailsSection.mode">
       <path value="Composition.section.mode"></path>
@@ -684,12 +405,12 @@
     <element id="Composition.section:dischargeDetailsSection.orderedBy">
       <path value="Composition.section.orderedBy"></path>
       <max value="0"></max>
-      <mustSupport value="false"></mustSupport>
+
     </element>
     <element id="Composition.section:dischargeDetailsSection.orderedBy.coding.system">
       <path value="Composition.section.orderedBy.coding.system"></path>
       <min value="1"></min>
-      <mustSupport value="false"></mustSupport>
+
     </element>
     <element id="Composition.section:dischargeDetailsSection.orderedBy.coding.version">
       <path value="Composition.section.orderedBy.coding.version"></path>
@@ -698,20 +419,20 @@
     <element id="Composition.section:dischargeDetailsSection.orderedBy.coding.code">
       <path value="Composition.section.orderedBy.coding.code"></path>
       <min value="1"></min>
-      <mustSupport value="false"></mustSupport>
+
     </element>
     <element id="Composition.section:dischargeDetailsSection.orderedBy.coding.display">
-    
+
       <path value="Composition.section.orderedBy.coding.display"></path>
       <min value="1"></min>
-      <mustSupport value="false"></mustSupport>
+
     </element>
     <element id="Composition.section:dischargeDetailsSection.orderedBy.coding.userSelected">
       <path value="Composition.section.orderedBy.coding.userSelected"></path>
       <max value="0"></max>
     </element>
     <element id="Composition.section:dischargeDetailsSection.orderedBy.text">
-    
+
       <path value="Composition.section.orderedBy.text"></path>
       <max value="0"></max>
     </element>
@@ -744,21 +465,21 @@
       <max value="0"></max>
     </element>
     <element id="Composition.section:distributionListSection">
-     
+
       <path value="Composition.section"></path>
       <sliceName value="distributionListSection"></sliceName>
       <max value="1"></max>
-      
+
     </element>
     <element id="Composition.section:distributionListSection.title">
       <path value="Composition.section.title"></path>
-      <min value="1"></min>
+
       <fixedString value="Distribution list"></fixedString>
     </element>
     <element id="Composition.section:distributionListSection.code">
       <path value="Composition.section.code"></path>
       <min value="1"></min>
-      
+
     </element>
     <element id="Composition.section:distributionListSection.code.coding">
       <path value="Composition.section.code.coding"></path>
@@ -780,9 +501,9 @@
       <fixedCode value="887261000000109"></fixedCode>
     </element>
     <element id="Composition.section:distributionListSection.code.coding.display">
-    
+
       <path value="Composition.section.code.coding.display"></path>
-      <min value="1"></min>
+
       <fixedString value="Distribution list"></fixedString>
     </element>
     <element id="Composition.section:distributionListSection.code.coding.userSelected">
@@ -790,7 +511,7 @@
       <max value="0"></max>
     </element>
     <element id="Composition.section:distributionListSection.code.text">
-    
+
       <path value="Composition.section.code.text"></path>
       <max value="0"></max>
     </element>
@@ -819,7 +540,7 @@
       <min value="1"></min>
     </element>
     <element id="Composition.section:distributionListSection.orderedBy.coding.display">
-    
+
       <path value="Composition.section.orderedBy.coding.display"></path>
       <min value="1"></min>
     </element>
@@ -828,7 +549,7 @@
       <max value="0"></max>
     </element>
     <element id="Composition.section:distributionListSection.orderedBy.text">
-    
+
       <path value="Composition.section.orderedBy.text"></path>
       <max value="0"></max>
     </element>
@@ -873,45 +594,31 @@
       <max value="0"></max>
     </element>
     <element id="Composition.section:gpPracticeSection">
-     
+
       <path value="Composition.section"></path>
       <sliceName value="gpPracticeSection"></sliceName>
       <max value="1"></max>
-      
+
     </element>
     <element id="Composition.section:gpPracticeSection.title">
       <path value="Composition.section.title"></path>
-      <min value="1"></min>
+
       <fixedString value="GP practice"></fixedString>
     </element>
-    <element id="Composition.section:gpPracticeSection.code">
-      <path value="Composition.section.code"></path>
-      <min value="1"></min>
-      
-    </element>
-    <element id="Composition.section:gpPracticeSection.code.coding">
-      <path value="Composition.section.code.coding"></path>
-      <min value="1"></min>
-      <max value="1"></max>
-    </element>
-    <element id="Composition.section:gpPracticeSection.code.coding.system">
-      <path value="Composition.section.code.coding.system"></path>
-      <min value="1"></min>
-      <fixedUri value="http://snomed.info/sct"></fixedUri>
-    </element>
+
     <element id="Composition.section:gpPracticeSection.code.coding.version">
       <path value="Composition.section.code.coding.version"></path>
       <max value="0"></max>
     </element>
     <element id="Composition.section:gpPracticeSection.code.coding.code">
       <path value="Composition.section.code.coding.code"></path>
-      <min value="1"></min>
+
       <fixedCode value="886711000000101"></fixedCode>
     </element>
     <element id="Composition.section:gpPracticeSection.code.coding.display">
-    
+
       <path value="Composition.section.code.coding.display"></path>
-      <min value="1"></min>
+
       <fixedString value="GP practice"></fixedString>
     </element>
     <element id="Composition.section:gpPracticeSection.code.coding.userSelected">
@@ -919,7 +626,7 @@
       <max value="0"></max>
     </element>
     <element id="Composition.section:gpPracticeSection.code.text">
-    
+
       <path value="Composition.section.code.text"></path>
       <max value="0"></max>
     </element>
@@ -948,7 +655,7 @@
       <min value="1"></min>
     </element>
     <element id="Composition.section:gpPracticeSection.orderedBy.coding.display">
-    
+
       <path value="Composition.section.orderedBy.coding.display"></path>
       <min value="1"></min>
     </element>
@@ -957,7 +664,7 @@
       <max value="0"></max>
     </element>
     <element id="Composition.section:gpPracticeSection.orderedBy.text">
-    
+
       <path value="Composition.section.orderedBy.text"></path>
       <max value="0"></max>
     </element>
@@ -986,103 +693,37 @@
       <max value="0"></max>
     </element>
     <element id="Composition.section:individualRequirementsSection">
-     
+
       <path value="Composition.section"></path>
       <sliceName value="individualRequirementsSection"></sliceName>
       <max value="1"></max>
-      
+
     </element>
     <element id="Composition.section:individualRequirementsSection.title">
       <path value="Composition.section.title"></path>
-      <min value="1"></min>
+
       <fixedString value="Individual requirements"></fixedString>
-      <mustSupport value="false"></mustSupport>
+
     </element>
-    <element id="Composition.section:individualRequirementsSection.code">
-      <path value="Composition.section.code"></path>
-      <min value="1"></min>
-      
-    </element>
-    <element id="Composition.section:individualRequirementsSection.code.coding">
-      <path value="Composition.section.code.coding"></path>
-      <min value="1"></min>
-      <max value="1"></max>
-    </element>
-    <element id="Composition.section:individualRequirementsSection.code.coding.system">
-      <path value="Composition.section.code.coding.system"></path>
-      <min value="1"></min>
-      <fixedUri value="http://snomed.info/sct"></fixedUri>
-      <mustSupport value="false"></mustSupport>
-    </element>
+
     <element id="Composition.section:individualRequirementsSection.code.coding.version">
       <path value="Composition.section.code.coding.version"></path>
       <max value="0"></max>
     </element>
     <element id="Composition.section:individualRequirementsSection.code.coding.code">
       <path value="Composition.section.code.coding.code"></path>
-      <min value="1"></min>
+
       <fixedCode value="1078911000000106"></fixedCode>
-      <mustSupport value="false"></mustSupport>
+
     </element>
     <element id="Composition.section:individualRequirementsSection.code.coding.display">
-    
+
       <path value="Composition.section.code.coding.display"></path>
-      <min value="1"></min>
+
       <fixedString value="Individual requirements"></fixedString>
-      <mustSupport value="false"></mustSupport>
+
     </element>
-    <element id="Composition.section:individualRequirementsSection.code.coding.userSelected">
-      <path value="Composition.section.code.coding.userSelected"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:individualRequirementsSection.code.text">
-    
-      <path value="Composition.section.code.text"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:individualRequirementsSection.text">
-      <path value="Composition.section.text"></path>
-      <min value="1"></min>
-      <mustSupport value="false"></mustSupport>
-    </element>
-    <element id="Composition.section:individualRequirementsSection.text.status">
-      <path value="Composition.section.text.status"></path>
-      <mustSupport value="false"></mustSupport>
-    </element>
-    <element id="Composition.section:individualRequirementsSection.mode">
-      <path value="Composition.section.mode"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:individualRequirementsSection.orderedBy">
-      <path value="Composition.section.orderedBy"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:individualRequirementsSection.orderedBy.coding.system">
-      <path value="Composition.section.orderedBy.coding.system"></path>
-      <min value="1"></min>
-    </element>
-    <element id="Composition.section:individualRequirementsSection.orderedBy.coding.version">
-      <path value="Composition.section.orderedBy.coding.version"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:individualRequirementsSection.orderedBy.coding.code">
-      <path value="Composition.section.orderedBy.coding.code"></path>
-      <min value="1"></min>
-    </element>
-    <element id="Composition.section:individualRequirementsSection.orderedBy.coding.display">
-    
-      <path value="Composition.section.orderedBy.coding.display"></path>
-      <min value="1"></min>
-    </element>
-    <element id="Composition.section:individualRequirementsSection.orderedBy.coding.userSelected">
-      <path value="Composition.section.orderedBy.coding.userSelected"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:individualRequirementsSection.orderedBy.text">
-    
-      <path value="Composition.section.orderedBy.text"></path>
-      <max value="0"></max>
-    </element>
+
     <element id="Composition.section:individualRequirementsSection.entry">
       <path value="Composition.section.entry"></path>
       <type>
@@ -1103,106 +744,30 @@
       <max value="0"></max>
     </element>
     <element id="Composition.section:informationAndAdviceGivenSection">
-     
+
       <path value="Composition.section"></path>
       <sliceName value="informationAndAdviceGivenSection"></sliceName>
       <max value="1"></max>
-      
+
     </element>
     <element id="Composition.section:informationAndAdviceGivenSection.title">
       <path value="Composition.section.title"></path>
-      <min value="1"></min>
       <fixedString value="Information and advice given"></fixedString>
-      <mustSupport value="false"></mustSupport>
-    </element>
-    <element id="Composition.section:informationAndAdviceGivenSection.code">
-      <path value="Composition.section.code"></path>
-      <min value="1"></min>
-      
-    </element>
-    <element id="Composition.section:informationAndAdviceGivenSection.code.coding">
-      <path value="Composition.section.code.coding"></path>
-      <min value="1"></min>
-      <max value="1"></max>
-    </element>
-    <element id="Composition.section:informationAndAdviceGivenSection.code.coding.system">
-      <path value="Composition.section.code.coding.system"></path>
-      <min value="1"></min>
-      <fixedUri value="http://snomed.info/sct"></fixedUri>
-      <mustSupport value="false"></mustSupport>
-    </element>
-    <element id="Composition.section:informationAndAdviceGivenSection.code.coding.version">
-      <path value="Composition.section.code.coding.version"></path>
-      <max value="0"></max>
     </element>
     <element id="Composition.section:informationAndAdviceGivenSection.code.coding.code">
       <path value="Composition.section.code.coding.code"></path>
-      <min value="1"></min>
+
       <fixedCode value="1052951000000105"></fixedCode>
-      <mustSupport value="false"></mustSupport>
+
     </element>
     <element id="Composition.section:informationAndAdviceGivenSection.code.coding.display">
-    
+
       <path value="Composition.section.code.coding.display"></path>
-      <min value="1"></min>
+
       <fixedString value="Information and advice given"></fixedString>
-      <mustSupport value="false"></mustSupport>
+
     </element>
-    <element id="Composition.section:informationAndAdviceGivenSection.code.coding.userSelected">
-      <path value="Composition.section.code.coding.userSelected"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:informationAndAdviceGivenSection.code.text">
-    
-      <path value="Composition.section.code.text"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:informationAndAdviceGivenSection.text">
-      <path value="Composition.section.text"></path>
-      <min value="1"></min>
-    </element>
-    <element id="Composition.section:informationAndAdviceGivenSection.text.status">
-      <path value="Composition.section.text.status"></path>
-      <mustSupport value="false"></mustSupport>
-    </element>
-    <element id="Composition.section:informationAndAdviceGivenSection.text.div">
-      <path value="Composition.section.text.div"></path>
-      <mustSupport value="false"></mustSupport>
-    </element>
-    <element id="Composition.section:informationAndAdviceGivenSection.mode">
-      <path value="Composition.section.mode"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:informationAndAdviceGivenSection.orderedBy">
-      <path value="Composition.section.orderedBy"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:informationAndAdviceGivenSection.orderedBy.coding.system">
-      <path value="Composition.section.orderedBy.coding.system"></path>
-      <min value="1"></min>
-    </element>
-    <element id="Composition.section:informationAndAdviceGivenSection.orderedBy.coding.version">
-      <path value="Composition.section.orderedBy.coding.version"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:informationAndAdviceGivenSection.orderedBy.coding.code">
-      <path value="Composition.section.orderedBy.coding.code"></path>
-      <min value="1"></min>
-    </element>
-    <element id="Composition.section:informationAndAdviceGivenSection.orderedBy.coding.display">
-    
-      <path value="Composition.section.orderedBy.coding.display"></path>
-      <min value="1"></min>
-    </element>
-    <element id="Composition.section:informationAndAdviceGivenSection.orderedBy.coding.userSelected">
-      <path value="Composition.section.orderedBy.coding.userSelected"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:informationAndAdviceGivenSection.orderedBy.text">
-    
-      <path value="Composition.section.orderedBy.text"></path>
-      <max value="0"></max>
-    </element>
+
     <element id="Composition.section:informationAndAdviceGivenSection.entry">
       <path value="Composition.section.entry"></path>
       <type>
@@ -1210,119 +775,34 @@
         <targetProfile value="https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Attachment-Binary-1"></targetProfile>
       </type>
     </element>
-    <element id="Composition.section:informationAndAdviceGivenSection.entry.reference">
-      <path value="Composition.section.entry.reference"></path>
-      <min value="1"></min>
-    </element>
-    <element id="Composition.section:informationAndAdviceGivenSection.emptyReason">
-      <path value="Composition.section.emptyReason"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:informationAndAdviceGivenSection.section">
-      <path value="Composition.section.section"></path>
-      <max value="0"></max>
-    </element>
+
     <element id="Composition.section:investigationResultsSection">
-     
+
       <path value="Composition.section"></path>
       <sliceName value="investigationResultsSection"></sliceName>
-      <max value="1"></max>
-      
+
     </element>
     <element id="Composition.section:investigationResultsSection.title">
       <path value="Composition.section.title"></path>
-      <min value="1"></min>
+
       <fixedString value="Investigation results"></fixedString>
-      <mustSupport value="false"></mustSupport>
+
     </element>
-    <element id="Composition.section:investigationResultsSection.code">
-      <path value="Composition.section.code"></path>
-      <min value="1"></min>
-      
-    </element>
-    <element id="Composition.section:investigationResultsSection.code.coding">
-      <path value="Composition.section.code.coding"></path>
-      <min value="1"></min>
-      <max value="1"></max>
-    </element>
-    <element id="Composition.section:investigationResultsSection.code.coding.system">
-      <path value="Composition.section.code.coding.system"></path>
-      <min value="1"></min>
-      <fixedUri value="http://snomed.info/sct"></fixedUri>
-      <mustSupport value="false"></mustSupport>
-    </element>
-    <element id="Composition.section:investigationResultsSection.code.coding.version">
-      <path value="Composition.section.code.coding.version"></path>
-      <max value="0"></max>
-    </element>
+
     <element id="Composition.section:investigationResultsSection.code.coding.code">
       <path value="Composition.section.code.coding.code"></path>
-      <min value="1"></min>
+
       <fixedCode value="1082101000000102"></fixedCode>
-      <mustSupport value="false"></mustSupport>
+
     </element>
     <element id="Composition.section:investigationResultsSection.code.coding.display">
-    
+
       <path value="Composition.section.code.coding.display"></path>
-      <min value="1"></min>
+
       <fixedString value="Investigation results"></fixedString>
-      <mustSupport value="false"></mustSupport>
+
     </element>
-    <element id="Composition.section:investigationResultsSection.code.coding.userSelected">
-      <path value="Composition.section.code.coding.userSelected"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:investigationResultsSection.code.text">
-    
-      <path value="Composition.section.code.text"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:investigationResultsSection.text">
-      <path value="Composition.section.text"></path>
-      <min value="1"></min>
-    </element>
-    <element id="Composition.section:investigationResultsSection.text.status">
-      <path value="Composition.section.text.status"></path>
-      <mustSupport value="false"></mustSupport>
-    </element>
-    <element id="Composition.section:investigationResultsSection.text.div">
-      <path value="Composition.section.text.div"></path>
-      <mustSupport value="false"></mustSupport>
-    </element>
-    <element id="Composition.section:investigationResultsSection.mode">
-      <path value="Composition.section.mode"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:investigationResultsSection.orderedBy">
-      <path value="Composition.section.orderedBy"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:investigationResultsSection.orderedBy.coding.system">
-      <path value="Composition.section.orderedBy.coding.system"></path>
-      <min value="1"></min>
-    </element>
-    <element id="Composition.section:investigationResultsSection.orderedBy.coding.version">
-      <path value="Composition.section.orderedBy.coding.version"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:investigationResultsSection.orderedBy.coding.code">
-      <path value="Composition.section.orderedBy.coding.code"></path>
-      <min value="1"></min>
-    </element>
-    <element id="Composition.section:investigationResultsSection.orderedBy.coding.display">
-    
-      <path value="Composition.section.orderedBy.coding.display"></path>
-      <min value="1"></min>
-    </element>
-    <element id="Composition.section:investigationResultsSection.orderedBy.coding.userSelected">
-      <path value="Composition.section.orderedBy.coding.userSelected"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:investigationResultsSection.orderedBy.text">
-    
-      <path value="Composition.section.orderedBy.text"></path>
-      <max value="0"></max>
-    </element>
+
     <element id="Composition.section:investigationResultsSection.entry">
       <path value="Composition.section.entry"></path>
       <type>
@@ -1343,98 +823,25 @@
       <max value="0"></max>
     </element>
     <element id="Composition.section:legalInformationSection">
-     
+
       <path value="Composition.section"></path>
       <sliceName value="legalInformationSection"></sliceName>
       <max value="1"></max>
-      
+
     </element>
     <element id="Composition.section:legalInformationSection.title">
       <path value="Composition.section.title"></path>
-      <min value="1"></min>
       <fixedString value="Legal information"></fixedString>
-      <mustSupport value="false"></mustSupport>
-    </element>
-    <element id="Composition.section:legalInformationSection.code">
-      <path value="Composition.section.code"></path>
-      <min value="1"></min>
-      
-    </element>
-    <element id="Composition.section:legalInformationSection.code.coding">
-      <path value="Composition.section.code.coding"></path>
-      <min value="1"></min>
-      <max value="1"></max>
-    </element>
-    <element id="Composition.section:legalInformationSection.code.coding.system">
-      <path value="Composition.section.code.coding.system"></path>
-      <min value="1"></min>
-      <fixedUri value="http://snomed.info/sct"></fixedUri>
-      <mustSupport value="false"></mustSupport>
-    </element>
-    <element id="Composition.section:legalInformationSection.code.coding.version">
-      <path value="Composition.section.code.coding.version"></path>
-      <max value="0"></max>
     </element>
     <element id="Composition.section:legalInformationSection.code.coding.code">
       <path value="Composition.section.code.coding.code"></path>
-      <min value="1"></min>
       <fixedCode value="886961000000102"></fixedCode>
-      <mustSupport value="false"></mustSupport>
     </element>
     <element id="Composition.section:legalInformationSection.code.coding.display">
-    
       <path value="Composition.section.code.coding.display"></path>
-      <min value="1"></min>
       <fixedString value="Legal information"></fixedString>
-      <mustSupport value="false"></mustSupport>
     </element>
-    <element id="Composition.section:legalInformationSection.code.coding.userSelected">
-      <path value="Composition.section.code.coding.userSelected"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:legalInformationSection.code.text">
-    
-      <path value="Composition.section.code.text"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:legalInformationSection.text">
-      <path value="Composition.section.text"></path>
-      <min value="1"></min>
-    </element>
-    <element id="Composition.section:legalInformationSection.mode">
-      <path value="Composition.section.mode"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:legalInformationSection.orderedBy">
-      <path value="Composition.section.orderedBy"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:legalInformationSection.orderedBy.coding.system">
-      <path value="Composition.section.orderedBy.coding.system"></path>
-      <min value="1"></min>
-    </element>
-    <element id="Composition.section:legalInformationSection.orderedBy.coding.version">
-      <path value="Composition.section.orderedBy.coding.version"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:legalInformationSection.orderedBy.coding.code">
-      <path value="Composition.section.orderedBy.coding.code"></path>
-      <min value="1"></min>
-    </element>
-    <element id="Composition.section:legalInformationSection.orderedBy.coding.display">
-    
-      <path value="Composition.section.orderedBy.coding.display"></path>
-      <min value="1"></min>
-    </element>
-    <element id="Composition.section:legalInformationSection.orderedBy.coding.userSelected">
-      <path value="Composition.section.orderedBy.coding.userSelected"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:legalInformationSection.orderedBy.text">
-    
-      <path value="Composition.section.orderedBy.text"></path>
-      <max value="0"></max>
-    </element>
+
     <element id="Composition.section:legalInformationSection.entry">
       <path value="Composition.section.entry"></path>
       <type>
@@ -1455,114 +862,34 @@
       <max value="0"></max>
     </element>
     <element id="Composition.section:medicationsAndMedicalDevicesSection">
-     
+
       <path value="Composition.section"></path>
       <sliceName value="medicationsAndMedicalDevicesSection"></sliceName>
       <max value="1"></max>
-      
+
     </element>
     <element id="Composition.section:medicationsAndMedicalDevicesSection.title">
       <path value="Composition.section.title"></path>
-      <min value="1"></min>
+
       <fixedString value="Medications and medical devices"></fixedString>
-      <mustSupport value="false"></mustSupport>
+
     </element>
-    <element id="Composition.section:medicationsAndMedicalDevicesSection.code">
-      <path value="Composition.section.code"></path>
-      <min value="1"></min>
-      
-    </element>
-    <element id="Composition.section:medicationsAndMedicalDevicesSection.code.coding">
-      <path value="Composition.section.code.coding"></path>
-      <min value="1"></min>
-      <max value="1"></max>
-    </element>
-    <element id="Composition.section:medicationsAndMedicalDevicesSection.code.coding.system">
-      <path value="Composition.section.code.coding.system"></path>
-      <min value="1"></min>
-      <fixedUri value="http://snomed.info/sct"></fixedUri>
-      <mustSupport value="false"></mustSupport>
-    </element>
-    <element id="Composition.section:medicationsAndMedicalDevicesSection.code.coding.version">
-      <path value="Composition.section.code.coding.version"></path>
-      <max value="0"></max>
-    </element>
+
+
     <element id="Composition.section:medicationsAndMedicalDevicesSection.code.coding.code">
       <path value="Composition.section.code.coding.code"></path>
-      <min value="1"></min>
+
       <fixedCode value="933361000000108"></fixedCode>
-      <mustSupport value="false"></mustSupport>
+
     </element>
     <element id="Composition.section:medicationsAndMedicalDevicesSection.code.coding.display">
-    
+
       <path value="Composition.section.code.coding.display"></path>
-      <min value="1"></min>
+
       <fixedString value="Medications and medical devices"></fixedString>
-      <mustSupport value="false"></mustSupport>
+
     </element>
-    <element id="Composition.section:medicationsAndMedicalDevicesSection.code.coding.userSelected">
-      <path value="Composition.section.code.coding.userSelected"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:medicationsAndMedicalDevicesSection.code.text">
-    
-      <path value="Composition.section.code.text"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:medicationsAndMedicalDevicesSection.text">
-      <path value="Composition.section.text"></path>
-      <min value="1"></min>
-    </element>
-    <element id="Composition.section:medicationsAndMedicalDevicesSection.text.status">
-      <path value="Composition.section.text.status"></path>
-      <mustSupport value="false"></mustSupport>
-    </element>
-    <element id="Composition.section:medicationsAndMedicalDevicesSection.text.div">
-      <path value="Composition.section.text.div"></path>
-      <mustSupport value="false"></mustSupport>
-    </element>
-    <element id="Composition.section:medicationsAndMedicalDevicesSection.mode">
-      <path value="Composition.section.mode"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:medicationsAndMedicalDevicesSection.orderedBy">
-      <path value="Composition.section.orderedBy"></path>
-      <max value="0"></max>
-      <mustSupport value="false"></mustSupport>
-    </element>
-    <element id="Composition.section:medicationsAndMedicalDevicesSection.orderedBy.coding">
-      <path value="Composition.section.orderedBy.coding"></path>
-      <mustSupport value="false"></mustSupport>
-    </element>
-    <element id="Composition.section:medicationsAndMedicalDevicesSection.orderedBy.coding.system">
-      <path value="Composition.section.orderedBy.coding.system"></path>
-      <min value="1"></min>
-      <mustSupport value="false"></mustSupport>
-    </element>
-    <element id="Composition.section:medicationsAndMedicalDevicesSection.orderedBy.coding.version">
-      <path value="Composition.section.orderedBy.coding.version"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:medicationsAndMedicalDevicesSection.orderedBy.coding.code">
-      <path value="Composition.section.orderedBy.coding.code"></path>
-      <min value="1"></min>
-      <mustSupport value="false"></mustSupport>
-    </element>
-    <element id="Composition.section:medicationsAndMedicalDevicesSection.orderedBy.coding.display">
-    
-      <path value="Composition.section.orderedBy.coding.display"></path>
-      <min value="1"></min>
-      <mustSupport value="false"></mustSupport>
-    </element>
-    <element id="Composition.section:medicationsAndMedicalDevicesSection.orderedBy.coding.userSelected">
-      <path value="Composition.section.orderedBy.coding.userSelected"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:medicationsAndMedicalDevicesSection.orderedBy.text">
-    
-      <path value="Composition.section.orderedBy.text"></path>
-      <max value="0"></max>
-    </element>
+
     <element id="Composition.section:medicationsAndMedicalDevicesSection.entry">
       <path value="Composition.section.entry"></path>
       <type>
@@ -1574,127 +901,33 @@
         <targetProfile value="https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Attachment-Binary-1"></targetProfile>
       </type>
     </element>
-    <element id="Composition.section:medicationsAndMedicalDevicesSection.entry.reference">
-      <path value="Composition.section.entry.reference"></path>
-      <min value="1"></min>
-      <mustSupport value="false"></mustSupport>
-    </element>
-    <element id="Composition.section:medicationsAndMedicalDevicesSection.entry.display">
-    
-      <path value="Composition.section.entry.display"></path>
-      <mustSupport value="false"></mustSupport>
-    </element>
-    <element id="Composition.section:medicationsAndMedicalDevicesSection.emptyReason">
-      <path value="Composition.section.emptyReason"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:medicationsAndMedicalDevicesSection.section">
-      <path value="Composition.section.section"></path>
-      <max value="0"></max>
-    </element>
     <element id="Composition.section:participationInResearchSection">
-     
+
       <path value="Composition.section"></path>
       <sliceName value="participationInResearchSection"></sliceName>
       <max value="1"></max>
-      
+
     </element>
     <element id="Composition.section:participationInResearchSection.title">
       <path value="Composition.section.title"></path>
-      <min value="1"></min>
+
       <fixedString value="Participation in research"></fixedString>
-      <mustSupport value="false"></mustSupport>
+
     </element>
-    <element id="Composition.section:participationInResearchSection.code">
-      <path value="Composition.section.code"></path>
-      <min value="1"></min>
-      <mustSupport value="false"></mustSupport>
-      
-    </element>
-    <element id="Composition.section:participationInResearchSection.code.coding">
-      <path value="Composition.section.code.coding"></path>
-      <min value="1"></min>
-      <max value="1"></max>
-      <mustSupport value="false"></mustSupport>
-    </element>
-    <element id="Composition.section:participationInResearchSection.code.coding.system">
-      <path value="Composition.section.code.coding.system"></path>
-      <min value="1"></min>
-      <fixedUri value="http://snomed.info/sct"></fixedUri>
-      <mustSupport value="false"></mustSupport>
-    </element>
-    <element id="Composition.section:participationInResearchSection.code.coding.version">
-      <path value="Composition.section.code.coding.version"></path>
-      <max value="0"></max>
-    </element>
+
     <element id="Composition.section:participationInResearchSection.code.coding.code">
       <path value="Composition.section.code.coding.code"></path>
-      <min value="1"></min>
       <fixedCode value="886751000000102"></fixedCode>
-      <mustSupport value="false"></mustSupport>
+
     </element>
     <element id="Composition.section:participationInResearchSection.code.coding.display">
-    
+
       <path value="Composition.section.code.coding.display"></path>
-      <min value="1"></min>
+
       <fixedString value="Participation in research"></fixedString>
-      <mustSupport value="false"></mustSupport>
+
     </element>
-    <element id="Composition.section:participationInResearchSection.code.coding.userSelected">
-      <path value="Composition.section.code.coding.userSelected"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:participationInResearchSection.code.text">
-    
-      <path value="Composition.section.code.text"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:participationInResearchSection.text">
-      <path value="Composition.section.text"></path>
-      <min value="1"></min>
-    </element>
-    <element id="Composition.section:participationInResearchSection.text.status">
-      <path value="Composition.section.text.status"></path>
-      <mustSupport value="false"></mustSupport>
-    </element>
-    <element id="Composition.section:participationInResearchSection.text.div">
-      <path value="Composition.section.text.div"></path>
-      <mustSupport value="false"></mustSupport>
-    </element>
-    <element id="Composition.section:participationInResearchSection.mode">
-      <path value="Composition.section.mode"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:participationInResearchSection.orderedBy">
-      <path value="Composition.section.orderedBy"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:participationInResearchSection.orderedBy.coding.system">
-      <path value="Composition.section.orderedBy.coding.system"></path>
-      <min value="1"></min>
-    </element>
-    <element id="Composition.section:participationInResearchSection.orderedBy.coding.version">
-      <path value="Composition.section.orderedBy.coding.version"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:participationInResearchSection.orderedBy.coding.code">
-      <path value="Composition.section.orderedBy.coding.code"></path>
-      <min value="1"></min>
-    </element>
-    <element id="Composition.section:participationInResearchSection.orderedBy.coding.display">
-    
-      <path value="Composition.section.orderedBy.coding.display"></path>
-      <min value="1"></min>
-    </element>
-    <element id="Composition.section:participationInResearchSection.orderedBy.coding.userSelected">
-      <path value="Composition.section.orderedBy.coding.userSelected"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:participationInResearchSection.orderedBy.text">
-    
-      <path value="Composition.section.orderedBy.text"></path>
-      <max value="0"></max>
-    </element>
+
     <element id="Composition.section:participationInResearchSection.entry">
       <path value="Composition.section.entry"></path>
       <type>
@@ -1702,226 +935,49 @@
         <targetProfile value="https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Attachment-Binary-1"></targetProfile>
       </type>
     </element>
-    <element id="Composition.section:participationInResearchSection.entry.reference">
-      <path value="Composition.section.entry.reference"></path>
-      <min value="1"></min>
-    </element>
-    <element id="Composition.section:participationInResearchSection.emptyReason">
-      <path value="Composition.section.emptyReason"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:participationInResearchSection.section">
-      <path value="Composition.section.section"></path>
-      <max value="0"></max>
-    </element>
     <element id="Composition.section:patientAndCarerConcernsExpectationsAndWishesSection">
-     
       <path value="Composition.section"></path>
       <sliceName value="patientAndCarerConcernsExpectationsAndWishesSection"></sliceName>
-      <max value="1"></max>
-      
     </element>
     <element id="Composition.section:patientAndCarerConcernsExpectationsAndWishesSection.title">
       <path value="Composition.section.title"></path>
-      <min value="1"></min>
+
       <fixedString value="Patient and carer concerns, expectations and wishes"></fixedString>
-      <mustSupport value="false"></mustSupport>
+
     </element>
-    <element id="Composition.section:patientAndCarerConcernsExpectationsAndWishesSection.code">
-      <path value="Composition.section.code"></path>
-      <min value="1"></min>
-      <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="CompositionSectionType"></valueString>
-        </extension>
-        <strength value="example"></strength>
-        <description value="A code from the SNOMED Clinical Terminology UK coding system which represents the type of section."></description>
-        <valueSet value="http://hl7.org/fhir/ValueSet/doc-section-codes"></valueSet>
-      </binding>
-    </element>
-    <element id="Composition.section:patientAndCarerConcernsExpectationsAndWishesSection.code.coding">
-      <path value="Composition.section.code.coding"></path>
-      <min value="1"></min>
-      <max value="1"></max>
-    </element>
-    <element id="Composition.section:patientAndCarerConcernsExpectationsAndWishesSection.code.coding.system">
-      <path value="Composition.section.code.coding.system"></path>
-      <min value="1"></min>
-      <fixedUri value="http://snomed.info/sct"></fixedUri>
-      <mustSupport value="false"></mustSupport>
-    </element>
-    <element id="Composition.section:patientAndCarerConcernsExpectationsAndWishesSection.code.coding.version">
-      <path value="Composition.section.code.coding.version"></path>
-      <max value="0"></max>
-    </element>
+
     <element id="Composition.section:patientAndCarerConcernsExpectationsAndWishesSection.code.coding.code">
       <path value="Composition.section.code.coding.code"></path>
-      <min value="1"></min>
       <fixedCode value="1052941000000107"></fixedCode>
-      <mustSupport value="false"></mustSupport>
+
     </element>
     <element id="Composition.section:patientAndCarerConcernsExpectationsAndWishesSection.code.coding.display">
-    
+
       <path value="Composition.section.code.coding.display"></path>
-      <min value="1"></min>
       <fixedString value="Patient and carer concerns, expectations and wishes"></fixedString>
-      <mustSupport value="false"></mustSupport>
-    </element>
-    <element id="Composition.section:patientAndCarerConcernsExpectationsAndWishesSection.code.coding.userSelected">
-      <path value="Composition.section.code.coding.userSelected"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:patientAndCarerConcernsExpectationsAndWishesSection.code.text">
-    
-      <path value="Composition.section.code.text"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:patientAndCarerConcernsExpectationsAndWishesSection.text">
-      <path value="Composition.section.text"></path>
-      <min value="1"></min>
-    </element>
-    <element id="Composition.section:patientAndCarerConcernsExpectationsAndWishesSection.mode">
-      <path value="Composition.section.mode"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:patientAndCarerConcernsExpectationsAndWishesSection.orderedBy">
-      <path value="Composition.section.orderedBy"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:patientAndCarerConcernsExpectationsAndWishesSection.orderedBy.coding.system">
-      <path value="Composition.section.orderedBy.coding.system"></path>
-      <min value="1"></min>
-    </element>
-    <element id="Composition.section:patientAndCarerConcernsExpectationsAndWishesSection.orderedBy.coding.version">
-      <path value="Composition.section.orderedBy.coding.version"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:patientAndCarerConcernsExpectationsAndWishesSection.orderedBy.coding.code">
-      <path value="Composition.section.orderedBy.coding.code"></path>
-      <min value="1"></min>
-    </element>
-    <element id="Composition.section:patientAndCarerConcernsExpectationsAndWishesSection.orderedBy.coding.display">
-    
-      <path value="Composition.section.orderedBy.coding.display"></path>
-      <min value="1"></min>
-    </element>
-    <element id="Composition.section:patientAndCarerConcernsExpectationsAndWishesSection.orderedBy.coding.userSelected">
-      <path value="Composition.section.orderedBy.coding.userSelected"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:patientAndCarerConcernsExpectationsAndWishesSection.orderedBy.text">
-    
-      <path value="Composition.section.orderedBy.text"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:patientAndCarerConcernsExpectationsAndWishesSection.entry">
-      <path value="Composition.section.entry"></path>
-      <type>
-        <code value="Reference"></code>
-        <targetProfile value="https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Attachment-Binary-1"></targetProfile>
-      </type>
-    </element>
-    <element id="Composition.section:patientAndCarerConcernsExpectationsAndWishesSection.entry.reference">
-      <path value="Composition.section.entry.reference"></path>
-      <min value="1"></min>
-    </element>
-    <element id="Composition.section:patientAndCarerConcernsExpectationsAndWishesSection.emptyReason">
-      <path value="Composition.section.emptyReason"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:patientAndCarerConcernsExpectationsAndWishesSection.section">
-      <path value="Composition.section.section"></path>
-      <max value="0"></max>
+
     </element>
     <element id="Composition.section:patientDemographicsSection">
-     
+
       <path value="Composition.section"></path>
       <sliceName value="patientDemographicsSection"></sliceName>
       <min value="1"></min>
       <max value="1"></max>
-      
+
     </element>
     <element id="Composition.section:patientDemographicsSection.title">
       <path value="Composition.section.title"></path>
-      <min value="1"></min>
+
       <fixedString value="Patient demographics"></fixedString>
-    </element>
-    <element id="Composition.section:patientDemographicsSection.code">
-      <path value="Composition.section.code"></path>
-      <min value="1"></min>
-      
-    </element>
-    <element id="Composition.section:patientDemographicsSection.code.coding">
-      <path value="Composition.section.code.coding"></path>
-      <min value="1"></min>
-      <max value="1"></max>
-    </element>
-    <element id="Composition.section:patientDemographicsSection.code.coding.system">
-      <path value="Composition.section.code.coding.system"></path>
-      <min value="1"></min>
-      <fixedUri value="http://snomed.info/sct"></fixedUri>
-    </element>
-    <element id="Composition.section:patientDemographicsSection.code.coding.version">
-      <path value="Composition.section.code.coding.version"></path>
-      <max value="0"></max>
     </element>
     <element id="Composition.section:patientDemographicsSection.code.coding.code">
       <path value="Composition.section.code.coding.code"></path>
-      <min value="1"></min>
       <fixedCode value="886731000000109"></fixedCode>
     </element>
     <element id="Composition.section:patientDemographicsSection.code.coding.display">
-    
+
       <path value="Composition.section.code.coding.display"></path>
-      <min value="1"></min>
       <fixedString value="Patient demographics"></fixedString>
-    </element>
-    <element id="Composition.section:patientDemographicsSection.code.coding.userSelected">
-      <path value="Composition.section.code.coding.userSelected"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:patientDemographicsSection.code.text">
-    
-      <path value="Composition.section.code.text"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:patientDemographicsSection.text">
-      <path value="Composition.section.text"></path>
-      <min value="1"></min>
-    </element>
-    <element id="Composition.section:patientDemographicsSection.mode">
-      <path value="Composition.section.mode"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:patientDemographicsSection.orderedBy">
-      <path value="Composition.section.orderedBy"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:patientDemographicsSection.orderedBy.coding.system">
-      <path value="Composition.section.orderedBy.coding.system"></path>
-      <min value="1"></min>
-    </element>
-    <element id="Composition.section:patientDemographicsSection.orderedBy.coding.version">
-      <path value="Composition.section.orderedBy.coding.version"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:patientDemographicsSection.orderedBy.coding.code">
-      <path value="Composition.section.orderedBy.coding.code"></path>
-      <min value="1"></min>
-    </element>
-    <element id="Composition.section:patientDemographicsSection.orderedBy.coding.display">
-    
-      <path value="Composition.section.orderedBy.coding.display"></path>
-      <min value="1"></min>
-    </element>
-    <element id="Composition.section:patientDemographicsSection.orderedBy.coding.userSelected">
-      <path value="Composition.section.orderedBy.coding.userSelected"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:patientDemographicsSection.orderedBy.text">
-    
-      <path value="Composition.section.orderedBy.text"></path>
-      <max value="0"></max>
     </element>
     <element id="Composition.section:patientDemographicsSection.entry">
       <path value="Composition.section.entry"></path>
@@ -1935,119 +991,31 @@
         <targetProfile value="https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Attachment-Binary-1"></targetProfile>
       </type>
     </element>
-    <element id="Composition.section:patientDemographicsSection.entry.reference">
-      <path value="Composition.section.entry.reference"></path>
-      <min value="1"></min>
-    </element>
-    <element id="Composition.section:patientDemographicsSection.emptyReason">
-      <path value="Composition.section.emptyReason"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:patientDemographicsSection.section">
-      <path value="Composition.section.section"></path>
-      <max value="0"></max>
-    </element>
+
     <element id="Composition.section:personCompletingRecordSection">
-     
+
       <path value="Composition.section"></path>
       <sliceName value="personCompletingRecordSection"></sliceName>
       <max value="1"></max>
-      
+
     </element>
     <element id="Composition.section:personCompletingRecordSection.title">
       <path value="Composition.section.title"></path>
-      <min value="1"></min>
+
       <fixedString value="Person completing record"></fixedString>
-      <mustSupport value="false"></mustSupport>
-    </element>
-    <element id="Composition.section:personCompletingRecordSection.code">
-      <path value="Composition.section.code"></path>
-      <min value="1"></min>
-      
-    </element>
-    <element id="Composition.section:personCompletingRecordSection.code.coding">
-      <path value="Composition.section.code.coding"></path>
-      <min value="1"></min>
-      <max value="1"></max>
-    </element>
-    <element id="Composition.section:personCompletingRecordSection.code.coding.system">
-      <path value="Composition.section.code.coding.system"></path>
-      <min value="1"></min>
-      <fixedUri value="http://snomed.info/sct"></fixedUri>
-      <mustSupport value="false"></mustSupport>
-    </element>
-    <element id="Composition.section:personCompletingRecordSection.code.coding.version">
-      <path value="Composition.section.code.coding.version"></path>
-      <max value="0"></max>
+
     </element>
     <element id="Composition.section:personCompletingRecordSection.code.coding.code">
       <path value="Composition.section.code.coding.code"></path>
       <min value="1"></min>
       <fixedCode value="887231000000104"></fixedCode>
-      <mustSupport value="false"></mustSupport>
+
     </element>
     <element id="Composition.section:personCompletingRecordSection.code.coding.display">
-    
       <path value="Composition.section.code.coding.display"></path>
-      <min value="1"></min>
       <fixedString value="Person completing record"></fixedString>
-      <mustSupport value="false"></mustSupport>
     </element>
-    <element id="Composition.section:personCompletingRecordSection.code.coding.userSelected">
-      <path value="Composition.section.code.coding.userSelected"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:personCompletingRecordSection.code.text">
-    
-      <path value="Composition.section.code.text"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:personCompletingRecordSection.text">
-      <path value="Composition.section.text"></path>
-      <min value="1"></min>
-    </element>
-    <element id="Composition.section:personCompletingRecordSection.text.status">
-      <path value="Composition.section.text.status"></path>
-      <mustSupport value="false"></mustSupport>
-    </element>
-    <element id="Composition.section:personCompletingRecordSection.text.div">
-      <path value="Composition.section.text.div"></path>
-      <mustSupport value="false"></mustSupport>
-    </element>
-    <element id="Composition.section:personCompletingRecordSection.mode">
-      <path value="Composition.section.mode"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:personCompletingRecordSection.orderedBy">
-      <path value="Composition.section.orderedBy"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:personCompletingRecordSection.orderedBy.coding.system">
-      <path value="Composition.section.orderedBy.coding.system"></path>
-      <min value="1"></min>
-    </element>
-    <element id="Composition.section:personCompletingRecordSection.orderedBy.coding.version">
-      <path value="Composition.section.orderedBy.coding.version"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:personCompletingRecordSection.orderedBy.coding.code">
-      <path value="Composition.section.orderedBy.coding.code"></path>
-      <min value="1"></min>
-    </element>
-    <element id="Composition.section:personCompletingRecordSection.orderedBy.coding.display">
-    
-      <path value="Composition.section.orderedBy.coding.display"></path>
-      <min value="1"></min>
-    </element>
-    <element id="Composition.section:personCompletingRecordSection.orderedBy.coding.userSelected">
-      <path value="Composition.section.orderedBy.coding.userSelected"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:personCompletingRecordSection.orderedBy.text">
-    
-      <path value="Composition.section.orderedBy.text"></path>
-      <max value="0"></max>
-    </element>
+
     <element id="Composition.section:personCompletingRecordSection.entry">
       <path value="Composition.section.entry"></path>
       <type>
@@ -2063,115 +1031,32 @@
       <path value="Composition.section.entry.reference"></path>
       <min value="1"></min>
     </element>
-    <element id="Composition.section:personCompletingRecordSection.emptyReason">
-      <path value="Composition.section.emptyReason"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:personCompletingRecordSection.section">
-      <path value="Composition.section.section"></path>
-      <max value="0"></max>
-    </element>
+
     <element id="Composition.section:planAndRequestedActionsSection">
-     
       <path value="Composition.section"></path>
       <sliceName value="planAndRequestedActionsSection"></sliceName>
       <max value="1"></max>
-      
     </element>
     <element id="Composition.section:planAndRequestedActionsSection.title">
       <path value="Composition.section.title"></path>
-      <min value="1"></min>
+
       <fixedString value="Plan and requested actions"></fixedString>
-      <mustSupport value="false"></mustSupport>
+
     </element>
-    <element id="Composition.section:planAndRequestedActionsSection.code">
-      <path value="Composition.section.code"></path>
-      <min value="1"></min>
-      
-    </element>
-    <element id="Composition.section:planAndRequestedActionsSection.code.coding">
-      <path value="Composition.section.code.coding"></path>
-      <min value="1"></min>
-      <max value="1"></max>
-    </element>
-    <element id="Composition.section:planAndRequestedActionsSection.code.coding.system">
-      <path value="Composition.section.code.coding.system"></path>
-      <min value="1"></min>
-      <fixedUri value="http://snomed.info/sct"></fixedUri>
-      <mustSupport value="false"></mustSupport>
-    </element>
-    <element id="Composition.section:planAndRequestedActionsSection.code.coding.version">
-      <path value="Composition.section.code.coding.version"></path>
-      <max value="0"></max>
-    </element>
+
     <element id="Composition.section:planAndRequestedActionsSection.code.coding.code">
       <path value="Composition.section.code.coding.code"></path>
       <min value="1"></min>
       <fixedCode value="887201000000105"></fixedCode>
-      <mustSupport value="false"></mustSupport>
+
     </element>
     <element id="Composition.section:planAndRequestedActionsSection.code.coding.display">
-    
+
       <path value="Composition.section.code.coding.display"></path>
-      <min value="1"></min>
       <fixedString value="Plan and requested actions"></fixedString>
-      <mustSupport value="false"></mustSupport>
+
     </element>
-    <element id="Composition.section:planAndRequestedActionsSection.code.coding.userSelected">
-      <path value="Composition.section.code.coding.userSelected"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:planAndRequestedActionsSection.code.text">
-    
-      <path value="Composition.section.code.text"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:planAndRequestedActionsSection.text">
-      <path value="Composition.section.text"></path>
-      <min value="1"></min>
-    </element>
-    <element id="Composition.section:planAndRequestedActionsSection.text.status">
-      <path value="Composition.section.text.status"></path>
-      <mustSupport value="false"></mustSupport>
-    </element>
-    <element id="Composition.section:planAndRequestedActionsSection.text.div">
-      <path value="Composition.section.text.div"></path>
-      <mustSupport value="false"></mustSupport>
-    </element>
-    <element id="Composition.section:planAndRequestedActionsSection.mode">
-      <path value="Composition.section.mode"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:planAndRequestedActionsSection.orderedBy">
-      <path value="Composition.section.orderedBy"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:planAndRequestedActionsSection.orderedBy.coding.system">
-      <path value="Composition.section.orderedBy.coding.system"></path>
-      <min value="1"></min>
-    </element>
-    <element id="Composition.section:planAndRequestedActionsSection.orderedBy.coding.version">
-      <path value="Composition.section.orderedBy.coding.version"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:planAndRequestedActionsSection.orderedBy.coding.code">
-      <path value="Composition.section.orderedBy.coding.code"></path>
-      <min value="1"></min>
-    </element>
-    <element id="Composition.section:planAndRequestedActionsSection.orderedBy.coding.display">
-    
-      <path value="Composition.section.orderedBy.coding.display"></path>
-      <min value="1"></min>
-    </element>
-    <element id="Composition.section:planAndRequestedActionsSection.orderedBy.coding.userSelected">
-      <path value="Composition.section.orderedBy.coding.userSelected"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:planAndRequestedActionsSection.orderedBy.text">
-    
-      <path value="Composition.section.orderedBy.text"></path>
-      <max value="0"></max>
-    </element>
+
     <element id="Composition.section:planAndRequestedActionsSection.entry">
       <path value="Composition.section.entry"></path>
       <type>
@@ -2192,114 +1077,33 @@
       <max value="0"></max>
     </element>
     <element id="Composition.section:proceduresSection">
-     
+
       <path value="Composition.section"></path>
       <sliceName value="proceduresSection"></sliceName>
       <max value="1"></max>
-      
+
     </element>
     <element id="Composition.section:proceduresSection.title">
       <path value="Composition.section.title"></path>
       <min value="1"></min>
       <fixedString value="Procedures"></fixedString>
-      <mustSupport value="false"></mustSupport>
+
     </element>
     <element id="Composition.section:proceduresSection.code">
       <path value="Composition.section.code"></path>
       <min value="1"></min>
-      
     </element>
-    <element id="Composition.section:proceduresSection.code.coding">
-      <path value="Composition.section.code.coding"></path>
-      <min value="1"></min>
-      <max value="1"></max>
-    </element>
-    <element id="Composition.section:proceduresSection.code.coding.system">
-      <path value="Composition.section.code.coding.system"></path>
-      <min value="1"></min>
-      <fixedUri value="http://snomed.info/sct"></fixedUri>
-      <mustSupport value="false"></mustSupport>
-    </element>
-    <element id="Composition.section:proceduresSection.code.coding.version">
-      <path value="Composition.section.code.coding.version"></path>
-      <max value="0"></max>
-    </element>
+
     <element id="Composition.section:proceduresSection.code.coding.code">
       <path value="Composition.section.code.coding.code"></path>
-      <min value="1"></min>
       <fixedCode value="887171000000109"></fixedCode>
-      <mustSupport value="false"></mustSupport>
+
     </element>
     <element id="Composition.section:proceduresSection.code.coding.display">
-    
+
       <path value="Composition.section.code.coding.display"></path>
-      <min value="1"></min>
       <fixedString value="Procedures"></fixedString>
-      <mustSupport value="false"></mustSupport>
-    </element>
-    <element id="Composition.section:proceduresSection.code.coding.userSelected">
-      <path value="Composition.section.code.coding.userSelected"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:proceduresSection.code.text">
-    
-      <path value="Composition.section.code.text"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:proceduresSection.text">
-      <path value="Composition.section.text"></path>
-      <min value="1"></min>
-      <mustSupport value="false"></mustSupport>
-    </element>
-    <element id="Composition.section:proceduresSection.text.status">
-      <path value="Composition.section.text.status"></path>
-      <mustSupport value="false"></mustSupport>
-    </element>
-    <element id="Composition.section:proceduresSection.text.div">
-      <path value="Composition.section.text.div"></path>
-      <mustSupport value="false"></mustSupport>
-    </element>
-    <element id="Composition.section:proceduresSection.mode">
-      <path value="Composition.section.mode"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:proceduresSection.orderedBy">
-      <path value="Composition.section.orderedBy"></path>
-      <max value="0"></max>
-      <mustSupport value="false"></mustSupport>
-    </element>
-    <element id="Composition.section:proceduresSection.orderedBy.coding">
-      <path value="Composition.section.orderedBy.coding"></path>
-      <mustSupport value="false"></mustSupport>
-    </element>
-    <element id="Composition.section:proceduresSection.orderedBy.coding.system">
-      <path value="Composition.section.orderedBy.coding.system"></path>
-      <min value="1"></min>
-      <mustSupport value="false"></mustSupport>
-    </element>
-    <element id="Composition.section:proceduresSection.orderedBy.coding.version">
-      <path value="Composition.section.orderedBy.coding.version"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:proceduresSection.orderedBy.coding.code">
-      <path value="Composition.section.orderedBy.coding.code"></path>
-      <min value="1"></min>
-      <mustSupport value="false"></mustSupport>
-    </element>
-    <element id="Composition.section:proceduresSection.orderedBy.coding.display">
-    
-      <path value="Composition.section.orderedBy.coding.display"></path>
-      <min value="1"></min>
-      <mustSupport value="false"></mustSupport>
-    </element>
-    <element id="Composition.section:proceduresSection.orderedBy.coding.userSelected">
-      <path value="Composition.section.orderedBy.coding.userSelected"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:proceduresSection.orderedBy.text">
-    
-      <path value="Composition.section.orderedBy.text"></path>
-      <max value="0"></max>
+
     </element>
     <element id="Composition.section:proceduresSection.entry">
       <path value="Composition.section.entry"></path>
@@ -2315,122 +1119,30 @@
     <element id="Composition.section:proceduresSection.entry.reference">
       <path value="Composition.section.entry.reference"></path>
       <min value="1"></min>
-      <mustSupport value="false"></mustSupport>
-    </element>
-    <element id="Composition.section:proceduresSection.entry.display">
-    
-      <path value="Composition.section.entry.display"></path>
-      <mustSupport value="false"></mustSupport>
-    </element>
-    <element id="Composition.section:proceduresSection.emptyReason">
-      <path value="Composition.section.emptyReason"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:proceduresSection.section">
-      <path value="Composition.section.section"></path>
-      <max value="0"></max>
     </element>
     <element id="Composition.section:referrerDetailsSection">
-     
+
       <path value="Composition.section"></path>
       <sliceName value="referrerDetailsSection"></sliceName>
       <max value="1"></max>
-      
+
     </element>
     <element id="Composition.section:referrerDetailsSection.title">
       <path value="Composition.section.title"></path>
-      <min value="1"></min>
+
       <fixedString value="Referrer details"></fixedString>
-      <mustSupport value="false"></mustSupport>
-    </element>
-    <element id="Composition.section:referrerDetailsSection.code">
-      <path value="Composition.section.code"></path>
-      <min value="1"></min>
-      
-    </element>
-    <element id="Composition.section:referrerDetailsSection.code.coding">
-      <path value="Composition.section.code.coding"></path>
-      <min value="1"></min>
-      <max value="1"></max>
-    </element>
-    <element id="Composition.section:referrerDetailsSection.code.coding.system">
-      <path value="Composition.section.code.coding.system"></path>
-      <min value="1"></min>
-      <fixedUri value="http://snomed.info/sct"></fixedUri>
-      <mustSupport value="false"></mustSupport>
-    </element>
-    <element id="Composition.section:referrerDetailsSection.code.coding.version">
-      <path value="Composition.section.code.coding.version"></path>
-      <max value="0"></max>
+
     </element>
     <element id="Composition.section:referrerDetailsSection.code.coding.code">
       <path value="Composition.section.code.coding.code"></path>
-      <min value="1"></min>
       <fixedCode value="1052891000000108"></fixedCode>
-      <mustSupport value="false"></mustSupport>
+
     </element>
     <element id="Composition.section:referrerDetailsSection.code.coding.display">
-    
+
       <path value="Composition.section.code.coding.display"></path>
-      <min value="1"></min>
       <fixedString value="Referrer details"></fixedString>
-      <mustSupport value="false"></mustSupport>
-    </element>
-    <element id="Composition.section:referrerDetailsSection.code.coding.userSelected">
-      <path value="Composition.section.code.coding.userSelected"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:referrerDetailsSection.code.text">
-    
-      <path value="Composition.section.code.text"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:referrerDetailsSection.text">
-      <path value="Composition.section.text"></path>
-      <min value="1"></min>
-      <mustSupport value="false"></mustSupport>
-    </element>
-    <element id="Composition.section:referrerDetailsSection.text.status">
-      <path value="Composition.section.text.status"></path>
-      <mustSupport value="false"></mustSupport>
-    </element>
-    <element id="Composition.section:referrerDetailsSection.text.div">
-      <path value="Composition.section.text.div"></path>
-      <mustSupport value="false"></mustSupport>
-    </element>
-    <element id="Composition.section:referrerDetailsSection.mode">
-      <path value="Composition.section.mode"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:referrerDetailsSection.orderedBy">
-      <path value="Composition.section.orderedBy"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:referrerDetailsSection.orderedBy.coding.system">
-      <path value="Composition.section.orderedBy.coding.system"></path>
-      <min value="1"></min>
-    </element>
-    <element id="Composition.section:referrerDetailsSection.orderedBy.coding.version">
-      <path value="Composition.section.orderedBy.coding.version"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:referrerDetailsSection.orderedBy.coding.code">
-      <path value="Composition.section.orderedBy.coding.code"></path>
-      <min value="1"></min>
-    </element>
-    <element id="Composition.section:referrerDetailsSection.orderedBy.coding.display">
-    
-      <path value="Composition.section.orderedBy.coding.display"></path>
-      <min value="1"></min>
-    </element>
-    <element id="Composition.section:referrerDetailsSection.orderedBy.coding.userSelected">
-      <path value="Composition.section.orderedBy.coding.userSelected"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:referrerDetailsSection.orderedBy.text">
-    
-      <path value="Composition.section.orderedBy.text"></path>
-      <max value="0"></max>
+
     </element>
     <element id="Composition.section:referrerDetailsSection.entry">
       <path value="Composition.section.entry"></path>
@@ -2463,116 +1175,31 @@
       <path value="Composition.section.entry.reference"></path>
       <min value="1"></min>
     </element>
-    <element id="Composition.section:referrerDetailsSection.emptyReason">
-      <path value="Composition.section.emptyReason"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:referrerDetailsSection.section">
-      <path value="Composition.section.section"></path>
-      <max value="0"></max>
-    </element>
+
     <element id="Composition.section:safetyAlertsSection">
-     
+
       <path value="Composition.section"></path>
       <sliceName value="safetyAlertsSection"></sliceName>
       <max value="1"></max>
-      
+
     </element>
     <element id="Composition.section:safetyAlertsSection.title">
       <path value="Composition.section.title"></path>
-      <min value="1"></min>
       <fixedString value="Safety alerts"></fixedString>
-      <mustSupport value="false"></mustSupport>
-    </element>
-    <element id="Composition.section:safetyAlertsSection.code">
-      <path value="Composition.section.code"></path>
-      <min value="1"></min>
-      
-    </element>
-    <element id="Composition.section:safetyAlertsSection.code.coding">
-      <path value="Composition.section.code.coding"></path>
-      <min value="1"></min>
-      <max value="1"></max>
-    </element>
-    <element id="Composition.section:safetyAlertsSection.code.coding.system">
-      <path value="Composition.section.code.coding.system"></path>
-      <min value="1"></min>
-      <fixedUri value="http://snomed.info/sct"></fixedUri>
-      <mustSupport value="false"></mustSupport>
-    </element>
-    <element id="Composition.section:safetyAlertsSection.code.coding.version">
-      <path value="Composition.section.code.coding.version"></path>
-      <max value="0"></max>
+
     </element>
     <element id="Composition.section:safetyAlertsSection.code.coding.code">
       <path value="Composition.section.code.coding.code"></path>
-      <min value="1"></min>
       <fixedCode value="886931000000107"></fixedCode>
-      <mustSupport value="false"></mustSupport>
     </element>
     <element id="Composition.section:safetyAlertsSection.code.coding.display">
-    
+
       <path value="Composition.section.code.coding.display"></path>
-      <min value="1"></min>
+
       <fixedString value="Safety alerts"></fixedString>
-      <mustSupport value="false"></mustSupport>
+
     </element>
-    <element id="Composition.section:safetyAlertsSection.code.coding.userSelected">
-      <path value="Composition.section.code.coding.userSelected"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:safetyAlertsSection.code.text">
-    
-      <path value="Composition.section.code.text"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:safetyAlertsSection.text">
-      <path value="Composition.section.text"></path>
-      <min value="1"></min>
-      <mustSupport value="false"></mustSupport>
-    </element>
-    <element id="Composition.section:safetyAlertsSection.text.status">
-      <path value="Composition.section.text.status"></path>
-      <mustSupport value="false"></mustSupport>
-    </element>
-    <element id="Composition.section:safetyAlertsSection.text.div">
-      <path value="Composition.section.text.div"></path>
-      <mustSupport value="false"></mustSupport>
-    </element>
-    <element id="Composition.section:safetyAlertsSection.mode">
-      <path value="Composition.section.mode"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:safetyAlertsSection.orderedBy">
-      <path value="Composition.section.orderedBy"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:safetyAlertsSection.orderedBy.coding.system">
-      <path value="Composition.section.orderedBy.coding.system"></path>
-      <min value="1"></min>
-    </element>
-    <element id="Composition.section:safetyAlertsSection.orderedBy.coding.version">
-      <path value="Composition.section.orderedBy.coding.version"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:safetyAlertsSection.orderedBy.coding.code">
-      <path value="Composition.section.orderedBy.coding.code"></path>
-      <min value="1"></min>
-    </element>
-    <element id="Composition.section:safetyAlertsSection.orderedBy.coding.display">
-    
-      <path value="Composition.section.orderedBy.coding.display"></path>
-      <min value="1"></min>
-    </element>
-    <element id="Composition.section:safetyAlertsSection.orderedBy.coding.userSelected">
-      <path value="Composition.section.orderedBy.coding.userSelected"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:safetyAlertsSection.orderedBy.text">
-    
-      <path value="Composition.section.orderedBy.text"></path>
-      <max value="0"></max>
-    </element>
+
     <element id="Composition.section:safetyAlertsSection.entry">
       <path value="Composition.section.entry"></path>
       <type>
@@ -2580,137 +1207,35 @@
         <targetProfile value="https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Attachment-Binary-1"></targetProfile>
       </type>
     </element>
-    <element id="Composition.section:safetyAlertsSection.entry.reference">
-      <path value="Composition.section.entry.reference"></path>
-      <min value="1"></min>
-    </element>
-    <element id="Composition.section:safetyAlertsSection.emptyReason">
-      <path value="Composition.section.emptyReason"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:safetyAlertsSection.section">
-      <path value="Composition.section.section"></path>
-      <max value="0"></max>
-    </element>
     <element id="Composition.section:socialContextSection">
-     
       <path value="Composition.section"></path>
       <sliceName value="socialContextSection"></sliceName>
-      <max value="1"></max>
-      
     </element>
     <element id="Composition.section:socialContextSection.title">
       <path value="Composition.section.title"></path>
-      <min value="1"></min>
       <fixedString value="Social context"></fixedString>
-      <mustSupport value="false"></mustSupport>
-    </element>
-    <element id="Composition.section:socialContextSection.code">
-      <path value="Composition.section.code"></path>
-      <min value="1"></min>
-      
-    </element>
-    <element id="Composition.section:socialContextSection.code.coding">
-      <path value="Composition.section.code.coding"></path>
-      <min value="1"></min>
-      <max value="1"></max>
-    </element>
-    <element id="Composition.section:socialContextSection.code.coding.system">
-      <path value="Composition.section.code.coding.system"></path>
-      <min value="1"></min>
-      <fixedUri value="http://snomed.info/sct"></fixedUri>
-      <mustSupport value="false"></mustSupport>
-    </element>
-    <element id="Composition.section:socialContextSection.code.coding.version">
-      <path value="Composition.section.code.coding.version"></path>
-      <max value="0"></max>
+
     </element>
     <element id="Composition.section:socialContextSection.code.coding.code">
       <path value="Composition.section.code.coding.code"></path>
-      <min value="1"></min>
+
       <fixedCode value="887051000000101"></fixedCode>
-      <mustSupport value="false"></mustSupport>
+
     </element>
     <element id="Composition.section:socialContextSection.code.coding.display">
-    
+
       <path value="Composition.section.code.coding.display"></path>
-      <min value="1"></min>
+
       <fixedString value="Social context"></fixedString>
-      <mustSupport value="false"></mustSupport>
+
     </element>
-    <element id="Composition.section:socialContextSection.code.coding.userSelected">
-      <path value="Composition.section.code.coding.userSelected"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:socialContextSection.code.text">
-    
-      <path value="Composition.section.code.text"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:socialContextSection.text">
-      <path value="Composition.section.text"></path>
-      <min value="1"></min>
-    </element>
-    <element id="Composition.section:socialContextSection.text.status">
-      <path value="Composition.section.text.status"></path>
-      <mustSupport value="false"></mustSupport>
-    </element>
-    <element id="Composition.section:socialContextSection.text.div">
-      <path value="Composition.section.text.div"></path>
-      <mustSupport value="false"></mustSupport>
-    </element>
-    <element id="Composition.section:socialContextSection.mode">
-      <path value="Composition.section.mode"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:socialContextSection.orderedBy">
-      <path value="Composition.section.orderedBy"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:socialContextSection.orderedBy.coding.system">
-      <path value="Composition.section.orderedBy.coding.system"></path>
-      <min value="1"></min>
-    </element>
-    <element id="Composition.section:socialContextSection.orderedBy.coding.version">
-      <path value="Composition.section.orderedBy.coding.version"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:socialContextSection.orderedBy.coding.code">
-      <path value="Composition.section.orderedBy.coding.code"></path>
-      <min value="1"></min>
-    </element>
-    <element id="Composition.section:socialContextSection.orderedBy.coding.display">
-    
-      <path value="Composition.section.orderedBy.coding.display"></path>
-      <min value="1"></min>
-    </element>
-    <element id="Composition.section:socialContextSection.orderedBy.coding.userSelected">
-      <path value="Composition.section.orderedBy.coding.userSelected"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:socialContextSection.orderedBy.text">
-    
-      <path value="Composition.section.orderedBy.text"></path>
-      <max value="0"></max>
-    </element>
+
     <element id="Composition.section:socialContextSection.entry">
       <path value="Composition.section.entry"></path>
       <type>
         <code value="Reference"></code>
         <targetProfile value="https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Attachment-Binary-1"></targetProfile>
       </type>
-    </element>
-    <element id="Composition.section:socialContextSection.entry.reference">
-      <path value="Composition.section.entry.reference"></path>
-      <min value="1"></min>
-    </element>
-    <element id="Composition.section:socialContextSection.emptyReason">
-      <path value="Composition.section.emptyReason"></path>
-      <max value="0"></max>
-    </element>
-    <element id="Composition.section:socialContextSection.section">
-      <path value="Composition.section.section"></path>
-      <max value="0"></max>
     </element>
   </differential>
 </StructureDefinition>
