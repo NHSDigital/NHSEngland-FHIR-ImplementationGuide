@@ -16,11 +16,6 @@
     <name value="RIM Mapping" />
   </mapping>
   <mapping>
-    <identity value="servd" />
-    <uri value="http://www.omg.org/spec/ServD/1.0/" />
-    <name value="ServD" />
-  </mapping>
-  <mapping>
     <identity value="w5" />
     <uri value="http://hl7.org/fhir/fivews" />
     <name value="FiveWs Pattern Mapping" />
