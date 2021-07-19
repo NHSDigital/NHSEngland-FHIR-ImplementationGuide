@@ -30,8 +30,8 @@
       <path value="MessageHeader" />
       <constraint>
         <key value="nhsd-11" />
-        <severity value="error" />
-        <human value="replacementOf extension is mandatory for update messages" />
+        <severity value="warning" />
+        <human value="replacementOf extension is required for update messages" />
         <expression value="event.code.where(substring($this.length()-6) = 'update').exists().not() or (event.code.where(substring($this.length()-6) = 'update').exists() and extension('https://fhir.nhs.uk/StructureDefinition/Extension-replacementOf').exists())" />
         <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-MessageHeader" />
       </constraint>
