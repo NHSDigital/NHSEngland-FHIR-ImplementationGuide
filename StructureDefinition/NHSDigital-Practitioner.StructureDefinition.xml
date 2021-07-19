@@ -71,11 +71,7 @@
       <min value="1" />
       <mustSupport value="true" />
     </element>
-     <element id="Practitioner.identifier.value">
-      <path value="Practitioner.identifier.value" />
-      <min value="1" />
-    </element>
-     <element id="Practitioner.identifier.system">
+    <element id="Practitioner.identifier.system">
       <path value="Practitioner.identifier.system" />
       <min value="1" />
     </element>
@@ -120,6 +116,7 @@
     <element id="Practitioner.identifier:hcpcNumber.system">
       <path value="Practitioner.identifier.system" />
       <fixedUri value="https://fhir.hl7.org.uk/Id/hcpc-number" />
+    </element>
     <element id="Practitioner.identifier:nmcNumber">
       <path value="Practitioner.identifier" />
       <sliceName value="nmcNumber" />
