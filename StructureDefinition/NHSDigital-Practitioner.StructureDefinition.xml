@@ -79,15 +79,6 @@
       <path value="Practitioner.identifier.system" />
       <min value="1" />
     </element>
-    <element id="Practitioner.identifier:sdsUserID">
-      <path value="Practitioner.identifier" />
-      <sliceName value="sdsUserID" />
-      <max value="1" />
-    </element>
-     <element id="Practitioner.identifier:sdsUserID.system">
-      <path value="Practitioner.identifier.system" />
-      <fixedUri value="https://fhir.nhs.uk/Id/sds-user-id" />
-    </element>
     <element id="Practitioner.identifier:gmcCode">
       <path value="Practitioner.identifier" />
       <sliceName value="gmcCode" />
