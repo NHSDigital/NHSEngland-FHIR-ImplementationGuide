@@ -76,6 +76,7 @@
         <code value="Resource" />
         <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient" />
       </type>
+      </element>
     <element id="Bundle.entry.search">
       <path value="Bundle.entry.search" />
       <max value="0" />

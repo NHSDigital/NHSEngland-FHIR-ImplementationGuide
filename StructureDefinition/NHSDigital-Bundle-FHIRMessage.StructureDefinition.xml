@@ -74,8 +74,8 @@
       <sliceName value="messageHeader" />
       <min value="1" />
     </element>
-     <element id="Bundle.entry:messageHeader.resource">
-      <path value="Bundle.entry" />
+     <element id="Bundle.entry.resource:messageHeader">
+      <path value="Bundle.entry.resource" />
       <type>
         <code value="Resource" />
         <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-MessageHeader" />

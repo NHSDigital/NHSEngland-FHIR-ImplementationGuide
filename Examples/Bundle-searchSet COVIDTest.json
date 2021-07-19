@@ -26,7 +26,6 @@
             ]
           },
           "subject": {
-            "reference": "urn:uuid:edea022a-2d81-11eb-adc1-0242ac120002",
             "identifier": [
               {
                 "system": "https://fhir.nhs.uk/Id/nhs-number",
@@ -123,7 +122,6 @@
             ]
           },
           "subject": {
-            "reference": "urn:uuid:edea022a-2d81-11eb-adc1-0242ac120002",
             "identifier": [
               {
                 "system": "https://fhir.nhs.uk/Id/nhs-number",
@@ -196,22 +194,6 @@
         },
         "search": {
           "mode": "match"
-        }
-      },
-      {
-        "fullUrl": "urn:uuid:edea022a-2d81-11eb-adc1-0242ac120002",
-        "resource": {
-          "resourceType": "Patient",
-          "identifier": [
-            {
-              "system": "https://fhir.nhs.uk/Id/nhs-number",
-              "value": "9912003888"
-            }
-          ],
-          "birthDate": "1965-02-28"
-        },
-        "search": {
-          "mode": "include"
         }
       }
     ]
