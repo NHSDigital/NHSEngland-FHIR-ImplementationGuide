@@ -6,7 +6,7 @@
         <value value="22680dca-4369-4982-8925-afef2c67b958" />
     </identifier>
     <version value="1.0.0" />
-    <name value="dispenseclaim" />
+    <name value="NHSDigitalDispenseClaim" />
     <title value="Dispense Prescription Claim" />
     <status value="active" />
     <date value="2021-04-12" />

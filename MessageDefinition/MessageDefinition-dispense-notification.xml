@@ -6,7 +6,7 @@
         <value value="bf729ea8-280b-4109-b2f5-02ce8e51d870"></value>
     </identifier>
     <version value="1.0.0"></version>
-    <name value="dispensenotification"/>
+    <name value="NHSDigitalDispenseNotification"/>
     <title value="Pharmacy/Treatment Dispense"></title>
     <status value="active"></status>
     <date value="2020-10-02"></date>

@@ -6,7 +6,7 @@
         <value value="c81b88dc-760e-4b1e-9cdb-c5f853630664" />
     </identifier>
     <version value="1.0.0" />
-    <name value="vaccinations" />
+    <name value="NHSDigitalVaccinations" />
     <title value="Vaccinations notification" />
     <status value="active" />
     <date value="2020-11-21" />
