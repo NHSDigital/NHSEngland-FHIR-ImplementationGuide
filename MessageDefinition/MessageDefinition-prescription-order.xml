@@ -10,12 +10,13 @@
     <title value="Pharmacy/Treatment Order" />
     <status value="active" />
     <date value="2020-05-27" />
+    <base value="https://fhir.hl7.org.uk/MessageDefinition/prescription-order" />
     <eventCoding>
         <system value="https://fhir.nhs.uk/CodeSystem/message-event" />
         <code value="prescription-order" />
         <display value="Prescription Order" />
     </eventCoding>
-     <description value="Ordering of medications"/>
+    <description value="Ordering of medications"/>
     <category value="consequence" />
     <focus>
         <code value="MedicationRequest" />
@@ -23,7 +24,7 @@
         <min value="1" />
         <max value="4" />
     </focus>
-        <focus>
+    <focus>
         <code value="Patient" />
         <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient" />
         <min value="1" />
@@ -35,14 +36,14 @@
         <min value="0" />
         <max value="*" />
     </focus>
-     <focus>
+    <focus>
         <code value="Location" />
         <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Location" />
         <min value="1" />
         <max value="*" />
     </focus>
     <responseRequired value="on-error"></responseRequired>
-    <allowedResponse> 
-        <message value="https://fhir.nhs.uk/MessageDefinition/prescription-order-update"/>  
+    <allowedResponse>
+        <message value="https://fhir.nhs.uk/MessageDefinition/prescription-order-update"/>
     </allowedResponse>
 </MessageDefinition>

@@ -1,0 +1,33 @@
+<MessageDefinition xmlns="http://hl7.org/fhir">
+    <id value="e14489e6-6db4-4c92-9e60-264a00d0e753" />
+    <url value="https://fhir.hl7.org.uk/MessageDefinition/prescription-order" />
+    <identifier>
+        <system value="https://tools.ietf.org/html/rfc4122" />
+        <value value="e14489e6-6db4-4c92-9e60-264a00d0e753" />
+    </identifier>
+    <version value="1.0.0" />
+    <name value="prescriptionorder" />
+    <title value="Pharmacy/Treatment Order" />
+    <status value="active" />
+    <date value="2020-05-27" />
+    <eventCoding>
+        <system value="https://fhir.hl7.org.uk/CodeSystem/message-event" />
+        <code value="prescription-order" />
+        <display value="Prescription Order" />
+    </eventCoding>
+    <description value="Ordering of medications"/>
+    <category value="consequence" />
+    <focus>
+        <code value="MedicationRequest" />
+        <profile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-MedicationRequest" />
+        <min value="1" />
+        <max value="*" />
+    </focus>
+    <focus>
+        <code value="Patient" />
+        <profile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Patient" />
+        <min value="1" />
+        <max value="1" />
+    </focus>
+    <responseRequired value="on-error"></responseRequired>
+</MessageDefinition>
