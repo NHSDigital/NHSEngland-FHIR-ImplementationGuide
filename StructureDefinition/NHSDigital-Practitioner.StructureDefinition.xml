@@ -64,6 +64,12 @@
         <human value="DIN format must be NNNNNN" />
         <expression value="identifier.where(system='https://fhir.hl7.org.uk/Id/din-number').exists().not() or (identifier.where(system='https://fhir.hl7.org.uk/Id/din-number').exists()  and identifier.where(system='https://fhir.hl7.org.uk/Id/din-number').value.matches('^[0-9]{6}$'))" />
       </constraint>
+      <constraint>
+        <key value="prac-sds-user" />
+        <severity value="warning" />
+        <human value="Professional code (GMC, GMP, NMC, etc) is preferred." />
+        <expression value="identifier.count() != 1 or (identifier.count() = 1 and identifier.where(system='https://fhir.nhs.uk/Id/sds-user-id').exists().not())" />
+      </constraint>
     </element>
     <element id="Practitioner.identifier">
       <path value="Practitioner.identifier" />

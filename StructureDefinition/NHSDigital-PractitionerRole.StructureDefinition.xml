@@ -94,6 +94,12 @@
         <human value="DIN format must be NNNNNN" />
         <expression value="identifier.exists().not() or identifier.where(system='https://fhir.hl7.org.uk/Id/din-number').exists().not() or (identifier.where(system='https://fhir.hl7.org.uk/Id/din-number').exists()  and identifier.where(system='https://fhir.hl7.org.uk/Id/din-number').value.matches('^[0-9]{6}$'))" />
       </constraint>
+      <constraint>
+        <key value="role-sds-user" />
+        <severity value="warning" />
+        <human value="Professional code (GMC, GMP, NMC, etc) is preferred." />
+        <expression value="identifier.exists().not() or identifier.where(system='https://fhir.nhs.uk/Id/sds-user-id').exists().not()" />
+      </constraint>
       <mustSupport value="true" />
     </element>
     <element id="PractitionerRole.organization">
