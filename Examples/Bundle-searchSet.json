@@ -1,0 +1,207 @@
+{
+    "resourceType": "Bundle",
+    "id":"dd4c3e37-555d-47fc-9309-37539893e074",
+    "type": "searchset",
+    "total": 2,
+    "entry": [
+        {
+            "fullUrl": "Immunization/edea022a-2d81-11eb-adc1-0242ac120001",
+            "resource": {
+                "resourceType": "Immunization",
+                "id" :"edea022a-2d81-11eb-adc1-0242ac120001",
+                "extension": [
+                    {
+                        "url": "https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-VaccinationProcedure",
+                        "valueCodeableConcept": {
+                            "coding": [
+                                {
+                                    "system": "http://snomed.info/sct",
+                                    "code": "1324681000000101",
+                                    "display": "Administration of first dose of severe acute respiratory syndrome coronavirus 2 vaccine (procedure)"
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "identifier": [
+                    {
+                        "use": "secondary",
+                        "system": "https://supplierABC/identifiers/vacc",
+                        "value": "1324761000000100"
+                    }
+                ],
+                "status": "completed",
+                "vaccineCode": {
+                    "coding": [
+                        {
+                            "system": "http://snomed.info/sct",
+                            "code": "39114911000001105",
+                            "display": "COVID-19 Vaccine AstraZeneca (ChAdOx1 S [recombinant]) 5x10,000,000,000 viral particles/0.5ml dose solution for injection multidose vials (AstraZeneca UK Ltd) (product)"
+                        }
+                    ]
+                },
+                "patient": {
+                    "type": "Patient",
+                    "identifier": {
+                        "system": "https://fhir.nhs.uk/Id/nhs-number",
+                        "value": "9912003888"
+                    }
+                },
+                "occurrenceDateTime": "2020-12-23T13:00:08.476+00:00",
+                "recorded": "2020-12-23",
+                "primarySource": true,
+                "manufacturer": {
+                    "display": "AstraZeneca Ltd"
+                },
+                "lotNumber": "R04X",
+                "expirationDate": "2021-04-29",
+                "route": {
+                    "coding": [
+                        {
+                            "system": "http://snomed.info/sct",
+                            "code": "78421000",
+                            "display": "Intramuscular route (qualifier value)"
+                        }
+                    ]
+                },
+                "doseQuantity": {
+                    "value": 0.3,
+                    "unit": "mL",
+                    "system": "http://snomed.info/sct",
+                    "code": "258773002"
+                },
+                "performer": [
+                    {
+                        "actor": {
+                            "type": "Organization",
+                            "identifier": {
+                                "system": "https://fhir.nhs.uk/Id/ods-organization-code",
+                                "value": "RX809"
+                            }
+                        }
+                    }
+                ],
+                "reasonCode": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://snomed.info/sct",
+                                "code": "443684005",
+                                "display": "Disease outbreak (event)"
+                            }
+                        ]
+                    }
+                ],
+                "protocolApplied": [
+                    {
+                        "doseNumberPositiveInt": 1
+                    }
+                ]
+            },
+            "search": {
+                "mode": "match"
+            }
+        },
+        {
+            "fullUrl": "Immunization/edea022a-2d81-11eb-adc1-0242ac120000",
+            "resource": {
+                "resourceType": "Immunization",
+                "id" :"edea022a-2d81-11eb-adc1-0242ac120000",
+                "extension": [
+                    {
+                        "url": "https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-VaccinationProcedure",
+                        "valueCodeableConcept": {
+                            "coding": [
+                                {
+                                    "system": "http://snomed.info/sct",
+                                    "code": "1324691000000104",
+                                    "display": "Administration of second dose of severe acute respiratory syndrome coronavirus 2 vaccine (procedure)"
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "identifier": [
+                    {
+                        "use": "secondary",
+                        "system": "https://supplierABC/identifiers/vacc",
+                        "value": "1324761000000102"
+                    }
+                ],
+                "status": "completed",
+                "vaccineCode": {
+                    "coding": [
+                        {
+                            "system": "http://snomed.info/sct",
+                            "code": "39114911000001105",
+                            "display": "COVID-19 Vaccine AstraZeneca (ChAdOx1 S [recombinant]) 5x10,000,000,000 viral particles/0.5ml dose solution for injection multidose vials (AstraZeneca UK Ltd) (product)"
+                        }
+                    ]
+                },
+                "patient": {
+                    "type": "Patient",
+                    "identifier": {
+                        "system": "https://fhir.nhs.uk/Id/nhs-number",
+                        "value": "9912003888"
+                    }
+                },
+                "occurrenceDateTime": "2021-02-23T13:00:08.476+00:00",
+                "recorded": "2021-02-23",
+                "primarySource": false,
+                "reportOrigin": {
+                    "text": "RR8 - LEEDS TEACHING HOSPITALS NHS TRUST"
+                },
+                "manufacturer": {
+                    "display": "AstraZeneca Ltd"
+                },
+                "lotNumber": "A04Z",
+                "expirationDate": "2021-06-29",
+                "route": {
+                    "coding": [
+                        {
+                            "system": "http://snomed.info/sct",
+                            "code": "78421000",
+                            "display": "Intramuscular route (qualifier value)"
+                        }
+                    ]
+                },
+                "doseQuantity": {
+                    "value": 0.3,
+                    "unit": "mL",
+                    "system": "http://snomed.info/sct",
+                    "code": "258773002"
+                },
+                "performer": [
+                    {
+                        "actor": {
+                            "type": "Organization",
+                            "identifier": {
+                                "system": "https://fhir.nhs.uk/Id/ods-organization-code",
+                                "value": "RX809"
+                            }
+                        }
+                    }
+                ],
+                "reasonCode": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://snomed.info/sct",
+                                "code": "443684005",
+                                "display": "Disease outbreak (event)"
+                            }
+                        ]
+                    }
+                ],
+                "protocolApplied": [
+                    {
+                        "doseNumberPositiveInt": 2
+                    }
+                ]
+            },
+            "search": {
+                "mode": "match"
+            }
+        }
+    ]
+}

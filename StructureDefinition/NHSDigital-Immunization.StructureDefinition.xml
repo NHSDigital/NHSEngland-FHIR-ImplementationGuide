@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="7236d711-c336-4716-ae3e-d68d9511fe0c"/>
+  <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Immunization" />
+  <name value="NHSDigitalImmunization" />
+  <status value="draft" />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="workflow" />
+    <uri value="http://hl7.org/fhir/workflow" />
+    <name value="Workflow Pattern" />
+  </mapping>
+  <mapping>
+    <identity value="v2" />
+    <uri value="http://hl7.org/v2" />
+    <name value="HL7 v2 Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="rim" />
+    <uri value="http://hl7.org/v3" />
+    <name value="RIM Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="w5" />
+    <uri value="http://hl7.org/fhir/fivews" />
+    <name value="FiveWs Pattern Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="cda" />
+    <uri value="http://hl7.org/v3/cda" />
+    <name value="CDA (R2)" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Immunization" />
+  <baseDefinition value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Immunization" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Immunization.extension">
+      <path value="Immunization.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Immunization.extension:vaccinationProcedure">
+      <path value="Immunization.extension" />
+      <sliceName value="vaccinationProcedure" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-VaccinationProcedure" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <description value="https://fhir.nhs.uk/ValueSet/NHSDigital-VaccinationProcedure" />
+      </binding>
+    </element>
+    <element id="Immunization.identifier">
+      <path value="Immunization.identifier" />
+      <min value="1" />
+    </element>
+    <element id="Immunization.identifier.system">
+      <path value="Immunization.identifier.system" />
+      <min value="1" />
+    </element>
+    <element id="Immunization.identifier.value">
+      <path value="Immunization.identifier.value" />
+      <min value="1" />
+    </element>
+    <element id="Immunization.statusReason.coding">
+      <path value="Immunization.statusReason.coding" />
+      <min value="1" />
+    </element>
+    <element id="Immunization.statusReason.coding.system">
+      <path value="Immunization.statusReason.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="Immunization.statusReason.coding.code">
+      <path value="Immunization.statusReason.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Immunization.statusReason.coding.display">
+      <path value="Immunization.statusReason.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="Immunization.vaccineCode.coding">
+      <path value="Immunization.vaccineCode.coding" />
+      <min value="1" />
+    </element>
+    <element id="Immunization.vaccineCode.coding.system">
+      <path value="Immunization.vaccineCode.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="Immunization.vaccineCode.coding.code">
+      <path value="Immunization.vaccineCode.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Immunization.vaccineCode.coding.display">
+      <path value="Immunization.vaccineCode.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="Immunization.patient.identifier.system">
+      <path value="Immunization.patient.identifier.system" />
+      <min value="1" />
+    </element>
+    <element id="Immunization.patient.identifier.value">
+      <path value="Immunization.patient.identifier.value" />
+      <min value="1" />
+    </element>
+    <element id="Immunization.occurrence[x]">
+      <path value="Immunization.occurrence[x]" />
+      <type>
+        <code value="dateTime" />
+      </type>
+    </element>
+    <element id="Immunization.primarySource">
+      <path value="Immunization.primarySource" />
+      <min value="1" />
+    </element>
+    <element id="Immunization.manufacturer.display">
+      <path value="Immunization.manufacturer.display" />
+      <min value="1" />
+    </element>
+    <element id="Immunization.site">
+      <path value="Immunization.site" />
+      <binding>
+        <strength value="extensible" />
+        <valueSet value="https://fhir.hl7.org.uk/ValueSet/UKCore-BodySite" />
+      </binding>
+    </element>
+    <element id="Immunization.site.coding">
+      <path value="Immunization.site.coding" />
+      <min value="1" />
+    </element>
+    <element id="Immunization.site.coding.system">
+      <path value="Immunization.site.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="Immunization.site.coding.code">
+      <path value="Immunization.site.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Immunization.site.coding.display">
+      <path value="Immunization.site.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="Immunization.performer.actor.type">
+      <path value="Immunization.performer.actor.type" />
+      <min value="1" />
+    </element>
+    <element id="Immunization.performer.actor.identifier.system">
+      <path value="Immunization.performer.actor.identifier.system" />
+      <min value="1" />
+    </element>
+    <element id="Immunization.performer.actor.identifier.value">
+      <path value="Immunization.performer.actor.identifier.value" />
+      <min value="1" />
+    </element>
+    <element id="Immunization.reasonCode.coding">
+      <path value="Immunization.reasonCode.coding" />
+      <min value="1" />
+    </element>
+    <element id="Immunization.reasonCode.coding.system">
+      <path value="Immunization.reasonCode.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="Immunization.reasonCode.coding.code">
+      <path value="Immunization.reasonCode.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Immunization.reasonCode.coding.display">
+      <path value="Immunization.reasonCode.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="Immunization.protocolApplied.targetDisease">
+      <path value="Immunization.protocolApplied.targetDisease" />
+      <binding>
+        <strength value="required" />
+        <description value="(Work in progress) The vaccine preventable disease the dose is being administered for." />
+        <valueSet value="http://hl7.eu/fhir/ig/dgc/ValueSet/covid-19-diseases" />
+      </binding>
+    </element>
+  </differential>
+</StructureDefinition>

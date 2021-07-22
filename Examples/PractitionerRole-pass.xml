@@ -10,7 +10,7 @@
   </identifier>
   <practitioner>
     <identifier>
-      <system value="https://fhir.hl7.org.uk/Id/gmc-number" />
+      <system value="https://fhir.hl7.org.uk/Id/gmp-number" />
       <value value="G1234567" />
     </identifier>
     <display value="Dr Razia Ali" />
