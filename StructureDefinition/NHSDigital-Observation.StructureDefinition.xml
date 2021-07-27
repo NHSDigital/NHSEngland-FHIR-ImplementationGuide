@@ -96,11 +96,11 @@
       <sliceName value="covidTestingPillar" />
       <max value="1" />
       <fixedCoding>
-        <system value="https://fhir.nhs.uk/CodeSystem/covid-test-type" />
+        <system value="https://fhir.nhs.uk/CodeSystem/covid-test-pillar" />
       </fixedCoding>
       <binding>
         <strength value="required" />
-        <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDigital-COVIDTestType" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDigital-COVIDTestPillar" />
       </binding>
     </element>
     <element id="Observation.code">
