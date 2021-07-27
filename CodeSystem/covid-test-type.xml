@@ -14,6 +14,21 @@
     <concept>
         <code value="pillar-1" />
         <display value="pillar 1" />
-        <description value="swab testing in Public Health England (PHE) labs and NHS hospitals for those with a clinical need, and health and care workers"/>
+        <definition value="swab testing in Public Health England (PHE) labs and NHS hospitals for those with a clinical need, and health and care workers"/>
+    </concept>
+    <concept>
+        <code value="pillar-2" />
+        <display value="pillar 2" />
+        <definition value="swab testing for the wider population, as set out in government guidance"/>
+    </concept>
+    <concept>
+        <code value="pillar-3" />
+        <display value="pillar 3" />
+        <definition value="serology testing to show if people have antibodies from having had COVID-19"/>
+    </concept>
+    <concept>
+        <code value="pillar-4" />
+        <display value="pillar 4" />
+        <definition value="blood and swab testing for national surveillance supported by PHE, the Office for National Statistics (ONS), and research, academic, and scientific partners to learn more about the prevalence and spread of the virus and for other testing research purposes, such as the accuracy and ease of use of home testing"/>
     </concept>
 </CodeSystem>
