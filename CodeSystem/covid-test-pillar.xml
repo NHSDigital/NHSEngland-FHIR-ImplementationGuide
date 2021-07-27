@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <CodeSystem xmlns="http://hl7.org/fhir">
-    <id value="covid-test-type" />
-    <url value="https://fhir.nhs.uk/CodeSystem/covid-test-type" />
+    <id value="covid-test-pillar" />
+    <url value="https://fhir.nhs.uk/CodeSystem/covid-test-pillar" />
     <version value="1.0.0" />
-    <name value="covidtesttype" />
+    <name value="covidtestpillar" />
     <status value="active" />
     <date value="2021-07-27T00:00:00+00:00" />
     <publisher value="NHS Digital" />
-    <description value="COVID-19 Test Type (pillar)" />
+    <description value="COVID-19 Test Pillar" />
     <copyright value="Copyright © 2021 NHS Digital" />
     <caseSensitive value="true" />
     <content value="complete" />
