@@ -72,6 +72,10 @@
       <path value="Observation.identifier.value" />
       <min value="1" />
     </element>
+    <element id="Observation.category">
+      <path value="Observation.category" />
+      <mustSupport value="false" />
+    </element>
     <element id="Observation.category.coding">
       <path value="Observation.category.coding" />
       <slicing>
