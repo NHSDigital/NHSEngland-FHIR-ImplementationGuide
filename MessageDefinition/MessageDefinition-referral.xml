@@ -34,7 +34,7 @@
         <min value="1" />
         <max value="*" />
     </focus>
-     <focus>
+    <focus>
         <code value="Binary" />
         <min value="0" />
         <max value="*" />
