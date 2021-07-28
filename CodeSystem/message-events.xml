@@ -81,9 +81,14 @@
         <display value="Dispense Notification Update"/>
         <definition value="This message is used by the Dispensing System to notify the EPS System of an amendment to a previousy submitted dispense-notification"/>
     </concept>
-     <concept>
+    <concept>
         <code value="appointment"/>
         <display value="Appointment"/>
         <definition value="Pre-admit a patient / Patient Appointment"/>
+    </concept>
+    <concept>
+        <code value="referral" />
+        <display value="Patient Referral" />
+        <definition value="Patient referral/handover"/>
     </concept>
 </CodeSystem>

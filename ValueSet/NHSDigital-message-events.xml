@@ -94,5 +94,10 @@
             <code value="appointment"/>
             <display value="Appointment"/>
         </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/message-event"/>
+            <code value="referral" />
+            <display value="Patient Referral" />
+        </contains>
     </expansion>
 </ValueSet>

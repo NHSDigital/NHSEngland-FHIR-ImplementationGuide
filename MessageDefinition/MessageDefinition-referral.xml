@@ -1,0 +1,48 @@
+<MessageDefinition xmlns="http://hl7.org/fhir">
+    <id value="d04844d8-677e-4f5c-ab6e-6a2c1a2c5472" />
+    <url value="https://fhir.nhs.uk/MessageDefinition/referral" />
+    <identifier>
+        <system value="https://tools.ietf.org/html/rfc4122" />
+        <value value="d04844d8-677e-4f5c-ab6e-6a2c1a2c5472" />
+    </identifier>
+    <version value="1.0.0" />
+    <title value="Patient Referral/Handover" />
+    <status value="active" />
+    <date value="2021-07-28" />
+    <eventCoding>
+        <system value="https://fhir.nhs.uk/CodeSystem/message-event" />
+        <code value="referral" />
+        <display value="Patient Referral" />
+    </eventCoding>
+     <description value="Patient referral"/>
+    <category value="consequence" />
+    <focus>
+        <code value="ServiceRequest" />
+        <profile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-ServiceRequest" />
+        <min value="1" />
+        <max value="1" />
+    </focus>
+    <focus>
+        <code value="Patient" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient" />
+        <min value="1" />
+        <max value="1" />
+    </focus>
+     <focus>
+        <code value="DocumentReference" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-DocumentReference" />
+        <min value="1" />
+        <max value="*" />
+    </focus>
+     <focus>
+        <code value="Binary" />
+        <min value="0" />
+        <max value="*" />
+    </focus>
+    <focus>
+        <code value="Bundle" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Bundle-FHIRDocument" />
+        <min value="0" />
+        <max value="*" />
+    </focus>
+</MessageDefinition>
