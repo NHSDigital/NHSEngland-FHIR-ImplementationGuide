@@ -27,6 +27,17 @@
         }
     ],
     "status": "final",
+    "category": [
+        {
+            "coding": [
+                {
+                    "system": "https://fhir.nhs.uk/CodeSystem/covid-test-pillar",
+                    "code": "pillar-1",
+                    "display": "pillar 1"
+                }
+            ]
+        }
+    ],
     "code": {
         "coding": [
             {
@@ -80,9 +91,9 @@
     },
     "performer": [
         {
-            "type":"Organization",
+            "type": "Organization",
             "identifier": {
-                "type" : {
+                "type": {
                     "coding": [
                         {
                             "system": "https://fhir.nhs.uk/CodeSystem/organisation-role",
@@ -93,23 +104,23 @@
                 },
                 "value": "LFD004"
             },
-            "display" : "Add if possible"
+            "display": "Add if possible"
         },
         {
-            "type":"Organization",
+            "type": "Organization",
             "identifier": {
-                "type" : {
+                "type": {
                     "coding": [
                         {
                             "system": "https://fhir.nhs.uk/Id/OrgType",
                             "code": "TestCentreId",
-                            "display" : "Testing Centre"
+                            "display": "Testing Centre"
                         }
                     ]
                 },
                 "value": "WKE03"
             },
-            "display" : "Add if possible"
+            "display": "Add if possible"
         }
     ]
 }

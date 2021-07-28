@@ -6,9 +6,9 @@
     <title value="Interim version of UK Core Vaccination Procedure."/>
     <status value="draft" />
     <date value="2021-04-20T00:00:00+00:00" />
-    <publisher value="NHS Digitial" />
+    <publisher value="NHS Digital" />
     <contact>
-        <name value="NHS Digitial" />
+        <name value="NHS Digital" />
         <telecom>
             <system value="email" />
             <value value="interoperabilityteam@nhs.net" />
