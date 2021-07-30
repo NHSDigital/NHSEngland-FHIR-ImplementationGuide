@@ -29,4 +29,10 @@
   <type value="CapabilityStatement" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/CapabilityStatement" />
   <derivation value="constraint" />
+  <differential>
+    <element id="CapabilityStatement.publisher">
+      <path value="CapabilityStatement.publisher" />
+      <min value="1" />
+    </element>
+  </differential>
 </StructureDefinition>
