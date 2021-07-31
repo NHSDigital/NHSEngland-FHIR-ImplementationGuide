@@ -97,6 +97,7 @@
         </resource>
         <resource>
             <type value="Flag" />
+            <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Flag" />
             <interaction>
                 <code value="search-type" />
             </interaction>
