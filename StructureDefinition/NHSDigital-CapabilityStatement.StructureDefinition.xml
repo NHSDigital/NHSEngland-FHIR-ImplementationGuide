@@ -30,9 +30,67 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/CapabilityStatement" />
   <derivation value="constraint" />
   <differential>
+    <element id="CapabilityStatement.extension">
+      <path value="CapabilityStatement.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="CapabilityStatement.extension:myExtension">
+      <path value="CapabilityStatement.extension" />
+      <sliceName value="myExtension" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-APIDefinition" />
+      </type>
+    </element>
     <element id="CapabilityStatement.publisher">
       <path value="CapabilityStatement.publisher" />
       <min value="1" />
+    </element>
+    <element id="CapabilityStatement.rest.security.extension">
+      <path value="CapabilityStatement.rest.security.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="CapabilityStatement.rest.security.extension:oauthUris">
+      <path value="CapabilityStatement.rest.security.extension" />
+      <sliceName value="oauthUris" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://fhir-registry.smarthealthit.org/StructureDefinition/oauth-uris" />
+      </type>
+    </element>
+    <element id="CapabilityStatement.rest.resource.extension">
+      <path value="CapabilityStatement.rest.resource.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="CapabilityStatement.rest.resource.extension:searchParameterCombination">
+      <path value="CapabilityStatement.rest.resource.extension" />
+      <sliceName value="searchParameterCombination" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination" />
+      </type>
     </element>
   </differential>
 </StructureDefinition>
