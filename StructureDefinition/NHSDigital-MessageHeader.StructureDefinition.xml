@@ -54,6 +54,7 @@
         <code value="Extension" />
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-replacementOf" />
       </type>
+      <mustSupport value="true" />
     </element>
     <element id="MessageHeader.event[x]">
       <path value="MessageHeader.event[x]" />
@@ -64,6 +65,7 @@
         <strength value="required" />
         <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDigital-message-events" />
       </binding>
+      <mustSupport value="true" />
     </element>
     <element id="MessageHeader.event[x].system">
       <path value="MessageHeader.event[x].system" />
@@ -76,6 +78,7 @@
     <element id="MessageHeader.destination">
       <path value="MessageHeader.destination" />
       <min value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="MessageHeader.destination.receiver">
       <path value="MessageHeader.destination.receiver" />
@@ -85,7 +88,7 @@
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole" />
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Practitioner" />
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Organization" />
-      </type>
+      </type>   
     </element>
     <element id="MessageHeader.destination.receiver.extension">
       <path value="MessageHeader.destination.receiver.extension" />
@@ -127,6 +130,7 @@
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Practitioner" />
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Organization" />
       </type>
+      <mustSupport value="true" />
     </element>
     <element id="MessageHeader.sender.extension">
       <path value="MessageHeader.sender.extension" />
@@ -163,8 +167,8 @@
       <path value="MessageHeader.enterer" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-PractitionerRole" />
-        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Practitioner" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Practitioner" />
       </type>
     </element>
     <element id="MessageHeader.author">
@@ -185,6 +189,10 @@
     <element id="MessageHeader.author.identifier.value">
       <path value="MessageHeader.author.identifier.value" />
       <min value="1" />
+    </element>
+    <element id="MessageHeader.source">
+      <path value="MessageHeader.source" />
+       <mustSupport value="true" />
     </element>
     <element id="MessageHeader.responsible">
       <path value="MessageHeader.responsible" />
