@@ -118,23 +118,6 @@
         <code value="string" />
       </type>
     </element>
-    <element id="Extension.extension:implementationGuide.extension:fhirPackage">
-      <path value="Extension.extension.extension" />
-      <sliceName value="fhirPackage" />
-      <min value="1" />
-      <max value="1" />
-    </element>
-    <element id="Extension.extension:implementationGuide.extension:fhirPackage.url">
-      <path value="Extension.extension.extension.url" />
-      <fixedUri value="fhirPackage" />
-    </element>
-    <element id="Extension.extension:implementationGuide.extension:fhirPackage.value[x]">
-      <path value="Extension.extension.extension.value[x]" />
-      <min value="1" />
-      <type>
-        <code value="string" />
-      </type>
-    </element>
     <element id="Extension.extension:implementationGuide.extension:version">
       <path value="Extension.extension.extension" />
       <sliceName value="version" />
