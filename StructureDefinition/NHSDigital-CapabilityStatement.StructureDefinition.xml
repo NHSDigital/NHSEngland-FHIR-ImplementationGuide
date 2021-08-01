@@ -40,7 +40,7 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="CapabilityStatement.extension:apiDefinition">
+  <!--  <element id="CapabilityStatement.extension:apiDefinition">
       <path value="CapabilityStatement.extension" />
       <sliceName value="apiDefinition" />
       <min value="1" />
@@ -50,7 +50,7 @@
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-APIDefinition" />
       </type>
       <mustSupport value="true" />
-    </element>
+    </element> -->
     <element id="CapabilityStatement.status">
       <path value="CapabilityStatement.status" />
       <mustSupport value="true" />
