@@ -28,7 +28,7 @@
   <kind value="resource" />
   <abstract value="false" />
   <type value="Encounter" />
-  <baseDefinition value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Encounter" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Encounter" />
   <derivation value="constraint" />
   <differential>
     <element id="Encounter.identifier">

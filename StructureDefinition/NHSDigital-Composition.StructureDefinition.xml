@@ -33,7 +33,7 @@
   <kind value="resource" />
   <abstract value="false" />
   <type value="Composition" />
-  <baseDefinition value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Composition" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Composition" />
   <derivation value="constraint" />
   <differential>
     <element id="Composition.subject">
@@ -342,7 +342,7 @@
       <min value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Encounter" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Encounter" />
       </type>
     </element>
     <element id="Composition.section:dischargeDetailsSection.entry.reference">

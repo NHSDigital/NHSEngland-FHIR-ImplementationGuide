@@ -43,7 +43,7 @@
   <kind value="resource" />
   <abstract value="false" />
   <type value="DocumentReference" />
-  <baseDefinition value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-DocumentReference" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/DocumentReference" />
   <derivation value="constraint" />
   <differential>
     <element id="DocumentReference.type">
