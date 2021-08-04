@@ -23,7 +23,7 @@
   <kind value="resource" />
   <abstract value="false" />
   <type value="Bundle" />
-  <baseDefinition value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Bundle" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Bundle" />
   <derivation value="constraint" />
   <differential>
     <element id="Bundle.type">

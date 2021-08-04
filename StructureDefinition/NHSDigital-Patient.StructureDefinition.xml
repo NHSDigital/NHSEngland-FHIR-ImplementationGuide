@@ -22,46 +22,6 @@
         <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient" />
       </constraint>
     </element>
-    <element id="Patient.extension">
-      <path value="Patient.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="Patient.extension:nominatedPharmacy">
-      <path value="Patient.extension" />
-      <sliceName value="nominatedPharmacy" />
-      <definition value="This extension is used to indicate patient preferred pharmacy." />
-    </element>
-    <element id="Patient.extension:deathNotificationStatus">
-      <path value="Patient.extension" />
-      <sliceName value="deathNotificationStatus" />
-      <type>
-        <code value="Extension" />
-        <profile value="https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-DeathNotificationStatus" />
-      </type>
-    </element>
-    <element id="Patient.extension:medicalApplianceSupplier">
-      <path value="Patient.extension" />
-      <sliceName value="medicalApplianceSupplier" />
-      <max value="1" />
-      <type>
-        <code value="Extension" />
-        <profile value="https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-MedicalApplianceSupplier" />
-      </type>
-    </element>
-    <element id="Patient.extension:contactPreference">
-      <path value="Patient.extension" />
-      <sliceName value="contactPreference" />
-      <type>
-        <code value="Extension" />
-        <profile value="https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-ContactPreference" />
-      </type>
-    </element>
     <element id="Patient.identifier">
       <path value="Patient.identifier" />
       <definition value="At least one patient identifier, common to both sender and receiver. Where a traced NHS number is available for a patient this MUST be included in the list." />
