@@ -1,14 +1,13 @@
 {
-    "name": "uk.nhsdigital.r4",
-    "version": "2.1.12-discovery",
-    "description": "NHS Digital FHIR Implementation Guide",
-    "author": "nhsdigital",
-    "fhirVersions": [
-      "4.0.1"
-    ],
-    "dependencies": {
-      "UKCore.R4.STU.02.00.00": "2.0.0",
-      "hl7.fhir.r4.core": "4.0.1"
-    }
+  "name": "uk.nhsdigital.r4",
+  "version": "2.1.12-discovery",
+  "description": "NHS Digital FHIR Implementation Guide",
+  "author": "nhsdigital",
+  "fhirVersions": [
+    "4.0.1"
+  ],
+  "dependencies": {
+    "UKCore.R4.STU.02.00.00": "2.0.0",
+    "hl7.fhir.r4.core": "4.0.1"
   }
-  
+}
