@@ -73,7 +73,14 @@
     </element>
     <element id="Practitioner.identifier">
       <path value="Practitioner.identifier" />
-      <comment value="SHOULD contain a professional code or SDS-user-id." />
+      <comment value="SHOULD contain a professional code or SDS-user-id." />  
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
       <min value="1" />
       <mustSupport value="true" />
     </element>
