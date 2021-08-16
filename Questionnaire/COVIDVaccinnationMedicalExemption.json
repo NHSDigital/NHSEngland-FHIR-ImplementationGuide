@@ -1,0 +1,19 @@
+{
+    "resourceType": "Questionnaire",
+    "id": "c624f57d-347a-4f82-b92f-d0bf420cb813",
+    "url": "https://fhir.nhs.uk/Questionnaire/COVIDVaccinnationMedicalExemption",
+    "version": "0.0.1",
+    "title": "COVID Vaccinnation Medical Exemption",
+    "status": "draft",
+    "subjectType": [
+        "Patient"
+    ],
+    "item": [
+        {
+            "linkId": "COVID19-Vaccination-Exemption",
+            "text": "COVID-19 Vaccination Exemption",
+            "type": "boolean",
+            "required": true
+        }
+    ]
+}
