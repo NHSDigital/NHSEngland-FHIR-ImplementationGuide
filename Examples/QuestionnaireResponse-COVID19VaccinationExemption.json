@@ -1,0 +1,38 @@
+{
+    "resourceType": "QuestionnaireResponse",
+    "id": "2fa8f1b8-caea-4f3d-9978-c0839da568b2",
+    "questionnaire" : "https://fhir.nhs.uk/Questionnaire/COVIDVaccinnationMedicalExemption",
+    "status": "completed",
+    "subject": {
+        "identifier":  [
+            {
+                "system": "https://fhir.nhs.uk/Id/nhs-number",
+                "value": "9912003888"
+            }
+        ],
+        "display" : "Ivor Fritagelse"
+    },
+    "authored": "2021-08-13T17:15:00+00:00",
+    "author": {
+        "identifier": {
+            "system": "https://fhir.nhs.uk/Id/ods-organization-code",
+            "value": "B81001"
+        }
+    },
+    "source": {
+        "identifier":{
+            "system": "https://fhir.hl7.org.uk/Id/gmp-number",
+            "value": "G1234567"
+        }
+    },
+    "item": [
+        {
+            "linkId": "COVID19-Vaccination-Exemption",
+            "answer": [
+                {
+                    "valueBoolean": true
+                }
+            ]
+        }
+    ]
+}
