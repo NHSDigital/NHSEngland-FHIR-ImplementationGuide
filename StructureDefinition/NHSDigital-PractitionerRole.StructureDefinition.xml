@@ -48,12 +48,7 @@
     </element>
     <element id="PractitionerRole.identifier:sdsRoleProfileID.system">
       <path value="PractitionerRole.identifier.system" />
-      <min value="1" />
       <fixedUri value="https://fhir.nhs.uk/Id/sds-role-profile-id" />
-    </element>
-    <element id="PractitionerRole.identifier:sdsRoleProfileID.value">
-      <path value="PractitionerRole.identifier.value" />
-      <min value="1" />
     </element>
     <element id="PractitionerRole.identifier:nhsbsaSpuriousCode">
       <path value="PractitionerRole.identifier" />
@@ -62,12 +57,7 @@
     </element>
     <element id="PractitionerRole.identifier:nhsbsaSpuriousCode.system">
       <path value="PractitionerRole.identifier.system" />
-      <min value="1" />
       <fixedUri value="https://fhir.hl7.org.uk/Id/nhsbsa-spurious-code" />
-    </element>
-    <element id="PractitionerRole.identifier:nhsbsaSpuriousCode.value">
-      <path value="PractitionerRole.identifier.value" />
-      <min value="1" />
     </element>
     <element id="PractitionerRole.practitioner">
       <path value="PractitionerRole.practitioner" />
@@ -158,21 +148,33 @@
       <path value="PractitionerRole.organization.identifier.value" />
       <min value="1" />
     </element>
-    <element id="PractitionerRole.code:sdsJobRoleName">
-      <path value="PractitionerRole.code" />
-      <sliceName value="sdsJobRoleName" />
-    </element>
-    <element id="PractitionerRole.code:sdsJobRoleName.coding">
+    <element id="PractitionerRole.code.coding">
       <path value="PractitionerRole.code.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
       <min value="1" />
     </element>
-    <element id="PractitionerRole.code:sdsJobRoleName.coding.system">
+    <element id="PractitionerRole.code.coding.system">
       <path value="PractitionerRole.code.coding.system" />
       <min value="1" />
     </element>
-    <element id="PractitionerRole.code:sdsJobRoleName.coding.code">
+    <element id="PractitionerRole.code.coding.code">
       <path value="PractitionerRole.code.coding.code" />
       <min value="1" />
+    </element>
+    <element id="PractitionerRole.code.coding:sdsJobRoleName">
+      <path value="PractitionerRole.code.coding" />
+      <sliceName value="sdsJobRoleName" />
+      <max value="1" />
+    </element>
+    <element id="PractitionerRole.code.coding:sdsJobRoleName.system">
+      <path value="PractitionerRole.code.coding.system" />
+      <fixedUri value="https://fhir.hl7org.uk/CodeSystem/UKCore-SDSJobRoleName" />
     </element>
     <element id="PractitionerRole.specialty.coding">
       <path value="PractitionerRole.specialty.coding" />
