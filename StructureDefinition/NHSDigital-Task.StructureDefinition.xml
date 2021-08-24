@@ -41,6 +41,26 @@
         <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Task" />
       </constraint>
     </element>
+    <element id="Task.extension">
+      <path value="Task.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Task.extension:repeatInformation">
+      <path value="Task.extension" />
+      <sliceName value="repeatInformation" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-EPS-RepeatInformation" />
+      </type>
+    </element>
     <element id="Task.identifier">
       <path value="Task.identifier" />
       <min value="1" />
@@ -248,6 +268,46 @@
     <element id="Task.reasonCode.coding.display">
       <path value="Task.reasonCode.coding.display" />
       <min value="1" />
+    </element>
+    <element id="Task.input.extension">
+      <path value="Task.input.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Task.input.extension:dispensingInformation">
+      <path value="Task.input.extension" />
+      <sliceName value="dispensingInformation" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-EPS-DispensingInformation" />
+      </type>
+    </element>
+    <element id="Task.output.extension">
+      <path value="Task.output.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Task.output.extension:dispensingReleaseInformation">
+      <path value="Task.output.extension" />
+      <sliceName value="dispensingReleaseInformation" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-EPS-DispensingReleaseInformation" />
+      </type>
     </element>
   </differential>
 </StructureDefinition>
