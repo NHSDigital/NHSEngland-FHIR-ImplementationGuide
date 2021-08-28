@@ -148,6 +148,7 @@
     <element id="Task.code.coding:workflowCodes">
       <path value="Task.code.coding" />
       <sliceName value="workflowCodes" />
+      <min value="1" />
       <max value="1" />
       <binding>
         <strength value="required" />
