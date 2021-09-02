@@ -61,11 +61,11 @@
       <type>
         <code value="Coding" />
       </type>
+      <mustSupport value="true" />
       <binding>
         <strength value="required" />
         <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDigital-message-events" />
       </binding>
-      <mustSupport value="true" />
     </element>
     <element id="MessageHeader.event[x].system">
       <path value="MessageHeader.event[x].system" />
@@ -77,7 +77,6 @@
     </element>
     <element id="MessageHeader.destination">
       <path value="MessageHeader.destination" />
-      <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="MessageHeader.destination.receiver">
@@ -88,7 +87,7 @@
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole" />
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Practitioner" />
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Organization" />
-      </type>   
+      </type>
     </element>
     <element id="MessageHeader.destination.receiver.extension">
       <path value="MessageHeader.destination.receiver.extension" />
@@ -123,7 +122,6 @@
     </element>
     <element id="MessageHeader.sender">
       <path value="MessageHeader.sender" />
-      <min value="1" />
       <type>
         <code value="Reference" />
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole" />
@@ -192,7 +190,7 @@
     </element>
     <element id="MessageHeader.source">
       <path value="MessageHeader.source" />
-       <mustSupport value="true" />
+      <mustSupport value="true" />
     </element>
     <element id="MessageHeader.responsible">
       <path value="MessageHeader.responsible" />
