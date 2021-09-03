@@ -61,6 +61,16 @@
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-EPS-RepeatInformation" />
       </type>
     </element>
+    <element id="Task.extension:prescription">
+      <path value="Task.extension" />
+      <sliceName value="prescription" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-EPS-Prescription" />
+      </type>
+    </element>
     <element id="Task.identifier">
       <path value="Task.identifier" />
       <min value="1" />
