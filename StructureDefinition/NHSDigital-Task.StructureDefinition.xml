@@ -54,7 +54,6 @@
     <element id="Task.extension:repeatInformation">
       <path value="Task.extension" />
       <sliceName value="repeatInformation" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -64,7 +63,6 @@
     <element id="Task.extension:prescription">
       <path value="Task.extension" />
       <sliceName value="prescription" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -120,14 +118,11 @@
     </element>
     <element id="Task.code.coding">
       <path value="Task.code.coding" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="system" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
       <min value="1" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDigital-message-events" />
+      </binding>
     </element>
     <element id="Task.code.coding.system">
       <path value="Task.code.coding.system" />
@@ -140,62 +135,6 @@
     <element id="Task.code.coding.display">
       <path value="Task.code.coding.display" />
       <min value="1" />
-    </element>
-    <element id="Task.code.coding:dispensingCodes">
-      <path value="Task.code.coding" />
-      <sliceName value="dispensingCodes" />
-      <max value="1" />
-      <binding>
-        <strength value="required" />
-        <description value="Dispensing Codes" />
-        <valueSet value="https://fhir.nhs.uk/ValueSet/DM-task-code" />
-      </binding>
-    </element>
-    <element id="Task.code.coding:dispensingCodes.system">
-      <path value="Task.code.coding.system" />
-      <fixedUri value="http://hl7.org/fhir/CodeSystem/task-code" />
-    </element>
-    <element id="Task.code.coding:workflowCodes">
-      <path value="Task.code.coding" />
-      <sliceName value="workflowCodes" />
-      <min value="1" />
-      <max value="1" />
-      <binding>
-        <strength value="required" />
-        <description value="Workflow/event type code" />
-        <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDigital-message-events" />
-      </binding>
-    </element>
-    <element id="Task.code.coding:workflowCodes.system">
-      <path value="Task.code.coding.system" />
-      <fixedUri value="https://fhir.nhs.uk/CodeSystem/message-event" />
-    </element>
-    <element id="Task.code.coding:prescriptionTherapyCodesUK">
-      <path value="Task.code.coding" />
-      <sliceName value="prescriptionTherapyCodesUK" />
-      <max value="1" />
-      <binding>
-        <strength value="required" />
-        <description value="Prescription Course Of Therapy Codes" />
-        <valueSet value="https://fhir.nhs.uk/ValueSet/DM-medicationrequest-course-of-therapy" />
-      </binding>
-    </element>
-    <element id="Task.code.coding:prescriptionTherapyCodesUK.system">
-      <path value="Task.code.coding.system" />
-      <fixedUri value="https://fhir.nhs.uk/CodeSystem/medicationrequest-course-of-therapy" />
-    </element>
-    <element id="Task.code.coding:prescriptionTherapyCodes">
-      <path value="Task.code.coding" />
-      <sliceName value="prescriptionTherapyCodes" />
-      <max value="1" />
-      <binding>
-        <strength value="required" />
-        <valueSet value="https://fhir.nhs.uk/ValueSet/DM-medicationrequest-course-of-therapy" />
-      </binding>
-    </element>
-    <element id="Task.code.coding:prescriptionTherapyCodes.system">
-      <path value="Task.code.coding.system" />
-      <fixedUri value="http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy" />
     </element>
     <element id="Task.focus">
       <path value="Task.focus" />
@@ -293,7 +232,6 @@
     <element id="Task.input.extension:dispensingInformation">
       <path value="Task.input.extension" />
       <sliceName value="dispensingInformation" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -313,7 +251,6 @@
     <element id="Task.output.extension:dispensingReleaseInformation">
       <path value="Task.output.extension" />
       <sliceName value="dispensingReleaseInformation" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />

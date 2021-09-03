@@ -38,6 +38,10 @@
       <type>
         <code value="Coding" />
       </type>
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/DM-medicationrequest-course-of-therapy" />
+      </binding>
     </element>
     <element id="Extension.url">
       <path value="Extension.url" />
