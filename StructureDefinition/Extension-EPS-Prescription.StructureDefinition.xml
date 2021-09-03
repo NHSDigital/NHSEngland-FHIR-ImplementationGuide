@@ -24,16 +24,16 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Extension.extension:courseOfTherpyType">
+    <element id="Extension.extension:courseOfTherapyType">
       <path value="Extension.extension" />
-      <sliceName value="courseOfTherpyType" />
+      <sliceName value="courseOfTherapyType" />
       <max value="1" />
     </element>
-    <element id="Extension.extension:courseOfTherpyType.url">
+    <element id="Extension.extension:courseOfTherapyType.url">
       <path value="Extension.extension.url" />
-      <fixedUri value="courseOfTherpyType" />
+      <fixedUri value="courseOfTherapyType" />
     </element>
-    <element id="Extension.extension:courseOfTherpyType.value[x]">
+    <element id="Extension.extension:courseOfTherapyType.value[x]">
       <path value="Extension.extension.value[x]" />
       <type>
         <code value="Coding" />
