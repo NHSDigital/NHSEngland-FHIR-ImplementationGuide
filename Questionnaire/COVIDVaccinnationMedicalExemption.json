@@ -76,7 +76,7 @@
                     "linkId": "exemptionRecordedByUserRole-help"
                 }
             ]
-        }
+        },
         {
             "type": "dateTime",
             "required": false,
