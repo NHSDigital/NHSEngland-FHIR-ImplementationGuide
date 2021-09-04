@@ -89,6 +89,10 @@
       <path value="Task.groupIdentifier.value" />
       <min value="1" />
     </element>
+    <element id="Task.status">
+      <path value="Task.status" />
+      <mustSupport value="true" />
+    </element>
     <element id="Task.businessStatus">
       <path value="Task.businessStatus" />
       <binding>
@@ -115,6 +119,7 @@
     <element id="Task.code">
       <path value="Task.code" />
       <min value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="Task.code.coding">
       <path value="Task.code.coding" />
@@ -143,6 +148,7 @@
         <code value="Reference" />
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Bundle-FHIRMessage" />
       </type>
+      <mustSupport value="true" />
     </element>
     <element id="Task.focus.identifier">
       <path value="Task.focus.identifier" />
@@ -159,6 +165,7 @@
     <element id="Task.for">
       <path value="Task.for" />
       <min value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="Task.for.identifier">
       <path value="Task.for.identifier" />
@@ -176,6 +183,10 @@
       <path value="Task.authoredOn" />
       <min value="1" />
     </element>
+    <element id="Task.requester">
+      <path value="Task.requester" />
+      <mustSupport value="true" />
+    </element>
     <element id="Task.owner">
       <path value="Task.owner" />
       <min value="1" />
@@ -183,6 +194,7 @@
         <code value="Reference" />
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Organization" />
       </type>
+      <mustSupport value="true" />
     </element>
     <element id="Task.owner.identifier">
       <path value="Task.owner.identifier" />
@@ -219,6 +231,10 @@
       <path value="Task.reasonCode.coding.display" />
       <min value="1" />
     </element>
+    <element id="Task.input">
+      <path value="Task.input" />
+      <mustSupport value="true" />
+    </element>
     <element id="Task.input.extension">
       <path value="Task.input.extension" />
       <slicing>
@@ -237,6 +253,10 @@
         <code value="Extension" />
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-EPS-DispensingInformation" />
       </type>
+    </element>
+    <element id="Task.output">
+      <path value="Task.output" />
+      <mustSupport value="true" />
     </element>
     <element id="Task.output.extension">
       <path value="Task.output.extension" />
