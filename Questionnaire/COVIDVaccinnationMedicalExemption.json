@@ -1,7 +1,7 @@
 {
     "resourceType": "Questionnaire",
     "id": "c624f57d-347a-4f82-b92f-d0bf420cb813",
-    "url": "https://fhir.nhs.uk/Questionnaire/COVIDVacinnationMedicalExemption",
+    "url": "https://fhir.nhs.uk/Questionnaire/COVIDVaccinationMedicalExemption",
     "version": "0.0.1",
     "title": "COVID Vaccinnation Medical Exemption",
     "status": "draft",
@@ -10,10 +10,203 @@
     ],
     "item": [
         {
-            "linkId": "COVID19-Vaccination-Exemption",
-            "text": "COVID-19 Vaccination Exemption",
-            "type": "boolean",
-            "required": true
+            "type": "choice",
+            "code": [],
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                    "valueCodeableConcept": {
+                        "coding": [
+                            {
+                                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                "code": "drop-down",
+                                "display": "Drop down"
+                            }
+                        ],
+                        "text": "Drop down"
+                    }
+                }
+            ],
+            "required": true,
+            "linkId": "exemption-Status",
+            "text": "Exemption status",
+            "answerOption": [
+                {
+                    "valueCoding": {
+                        "code": "1",
+                        "display": "Approved: Exemption from COVID vaccination"
+                    }
+                },
+                {
+                    "valueCoding": {
+                        "code": "2",
+                        "display": "Approved: Exemption from COVID vaccination and testing"
+                    }
+                },
+                {
+                    "valueCoding": {
+                        "code": "3",
+                        "display": "Rejected: Exemption from COVID vaccination"
+                    }
+                },
+                {
+                    "valueCoding": {
+                        "code": "4",
+                        "display": "Rejected: Exemption from COVID vaccination and testing"
+                    }
+                }
+            ],
+            "item": [
+                {
+                    "text": "This will be the code associated with the option selected by the user.",
+                    "type": "display",
+                    "linkId": "exemption-Status-help"
+                }
+            ]
+        },
+        {
+            "type": "string",
+            "required": true,
+            "linkId": "exemptionRecordedByUserRole",
+            "text": "Exemption Recorded by user role",
+            "item": [
+                {
+                    "text": "The RBAC role associated with the user’s selected User Role Profile when the exemption outcome was recorded.",
+                    "type": "display",
+                    "linkId": "exemptionRecordedByUserRole-help"
+                }
+            ]
+        }
+        {
+            "type": "dateTime",
+            "required": false,
+            "linkId": "exemptionPeriodStart",
+            "text": "Exemption Period Start",
+            "item": [
+                {
+                    "text": "The date upon which the exemption outcome is recorded in SCRa. .",
+                    "type": "display",
+                    "linkId": "exemptionPeriodStart-help"
+                }
+            ]
+        },
+        {
+            "type": "dateTime",
+            "required": false,
+            "linkId": "exemptionPeriodEnd",
+            "text": "Exemption Period End",
+            "item": [
+                {
+                    "text": "The date upon which the exemption outcome is moved to history (i.e. removed/deleted).",
+                    "type": "display",
+                    "linkId": "exemptionPeriodEnd-help"
+                }
+            ]
+        },
+        {
+            "type": "group",
+            "required": false,
+            "text": "Removal Reason",
+            "item": [
+                {
+                    "type": "choice",
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                        "code": "drop-down",
+                                        "display": "Drop down"
+                                    }
+                                ],
+                                "text": "Drop down"
+                            }
+                        }
+                    ],
+                    "required": false,
+                    "linkId": "removalReasonCode",
+                    "text": "Removal Reason Code",
+                    "answerOption": [
+                        {
+                            "valueCoding": {
+                                "code": "5",
+                                "display": "Added in error"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "6",
+                                "display": "No longer required"
+                            }
+                        }
+                    ],
+                    "item": [
+                        {
+                            "text": "The code associated with the selected option will be provided.",
+                            "type": "display",
+                            "linkId": "removalReasonCode-help"
+                        }
+                    ]
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceProfile",
+                            "valueCanonical": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole"
+                        }
+                    ],
+                    "type": "reference",
+                    "required": false,
+                    "linkId": "RemovedByUser",
+                    "text": "Removed by User",
+                    "item": [
+                        {
+                            "text": "The name of the user who removed the exemption outcome from SCRa.",
+                            "type": "display",
+                            "linkId": "RemovedByUser-help"
+                        }
+                    ]
+                },
+                {
+                    "type": "string",
+                    "required": false,
+                    "linkId": "removedByUserRole",
+                    "text": "Removed by user role",
+                    "item": [
+                        {
+                            "text": "The RBAC role associated with the user’s selected User Role Profile when the exemption outcome was removed from SCRa.",
+                            "type": "display",
+                            "linkId": "removedByUserRole-help"
+                        }
+                    ]
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceProfile",
+                            "valueCanonical": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-Organization"
+                        }
+                    ],
+                    "type": "reference",
+                    "required": false,
+                    "linkId": "removedByOrganisation",
+                    "text": "Removed by organisation",
+                    "item": [
+                        {
+                            "text": "The name and ods code of the organisation associated with the selected User Role Profile when the exemption outcome was removed from SCRa.",
+                            "type": "display",
+                            "linkId": "removedByOrganisationName-help"
+                        }
+                    ]
+                },
+                {
+                    "text": "Only populated on historic (i.e. removed/deleted) exemption records. This is the reason for removal specified by the user.",
+                    "type": "display",
+                    "linkId": "undefined-help"
+                }
+            ]
         }
     ]
 }

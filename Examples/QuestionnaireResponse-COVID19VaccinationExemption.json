@@ -17,20 +17,41 @@
         "identifier": {
             "system": "https://fhir.nhs.uk/Id/ods-organization-code",
             "value": "B81001"
-        }
+        },
+        "display": "Austhorpe Springs Practice"
     },
     "source": {
         "identifier":{
-            "system": "https://fhir.hl7.org.uk/Id/gmp-number",
-            "value": "G1234567"
-        }
+            "system": "https://fhir.nhs.uk/Id/sds-user-id",
+            "value": "8901234567"
+        },
+        "display": "Ian Treater"
     },
     "item": [
         {
-            "linkId": "COVID19-Vaccination-Exemption",
+            "linkId": "exemption-Status",
             "answer": [
                 {
-                    "valueBoolean": true
+                    "valueCoding": {
+                        "code": "1",
+                        "display": "Approved: Exemption from COVID vaccination"
+                    }
+                }
+            ]
+        },
+        {
+            "linkId": "exemptionRecordedByUserRole",
+            "answer": [
+                {
+                    "valueString": "General Medical Practitioner"
+                }
+            ]
+        },
+        {
+            "linkId": "exemptionPeriodStart",
+            "answer": [
+                {
+                    "valueDateTime": "2021-08-13T17:15:00+00:00"
                 }
             ]
         }

@@ -41,6 +41,7 @@
         <code value="Reference" />
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient" />
       </type>
+      <mustSupport value="true" />
     </element>
     <element id="QuestionnaireResponse.subject.identifier.system">
       <path value="QuestionnaireResponse.subject.identifier.system" />
