@@ -28,7 +28,7 @@
                 }
             ],
             "required": true,
-            "linkId": "exemption-Status",
+            "linkId": "exemptionStatus",
             "text": "Exemption status",
             "answerOption": [
                 {
@@ -65,19 +65,6 @@
             ]
         },
         {
-            "type": "string",
-            "required": true,
-            "linkId": "exemptionRecordedByUserRole",
-            "text": "Exemption Recorded by user role",
-            "item": [
-                {
-                    "text": "The RBAC role associated with the user’s selected User Role Profile when the exemption outcome was recorded.",
-                    "type": "display",
-                    "linkId": "exemptionRecordedByUserRole-help"
-                }
-            ]
-        },
-        {
             "type": "dateTime",
             "required": false,
             "linkId": "exemptionPeriodStart",
@@ -104,8 +91,46 @@
             ]
         },
         {
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceProfile",
+                    "valueCanonical": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole"
+                }
+            ],
+            "type": "reference",
+            "required": true,
+            "linkId": "exemptionRecordedByUser",
+            "text": "Exemption by User"
+        },
+        {
+            "type": "string",
+            "required": true,
+            "linkId": "exemptionRecordedByUserRole",
+            "text": "Exemption Recorded by user role",
+            "item": [
+                {
+                    "text": "The RBAC role associated with the user’s selected User Role Profile when the exemption outcome was recorded.",
+                    "type": "display",
+                    "linkId": "exemptionRecordedByUserRole-help"
+                }
+            ]
+        },
+        {
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceProfile",
+                    "valueCanonical": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-Organization"
+                }
+            ],
+            "type": "reference",
+            "required": true,
+            "linkId": "exemptionRecordedByOrganization",
+            "text": "Exemption by Organization"
+        },
+        {
             "type": "group",
             "required": false,
+            "linkId": "removalReason",
             "text": "Removal Reason",
             "item": [
                 {
@@ -159,7 +184,7 @@
                     ],
                     "type": "reference",
                     "required": false,
-                    "linkId": "RemovedByUser",
+                    "linkId": "removedByUser",
                     "text": "Removed by User",
                     "item": [
                         {

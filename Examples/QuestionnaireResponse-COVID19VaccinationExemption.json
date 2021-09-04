@@ -22,19 +22,41 @@
     },
     "source": {
         "identifier":{
-            "system": "https://fhir.nhs.uk/Id/sds-user-id",
+            "system": "https://fhir.nhs.uk/Id/sds-role-profile-id",
             "value": "8901234567"
         },
         "display": "Ian Treater"
     },
     "item": [
         {
-            "linkId": "exemption-Status",
+            "linkId": "exemptionStatus",
             "answer": [
                 {
                     "valueCoding": {
                         "code": "1",
                         "display": "Approved: Exemption from COVID vaccination"
+                    }
+                }
+            ]
+        },
+        {
+            "linkId": "exemptionPeriodStart",
+            "answer": [
+                {
+                    "valueDateTime": "2021-08-13T17:15:00+00:00"
+                }
+            ]
+        },
+        {
+            "linkId": "exemptionRecordedByUser",
+            "answer": [
+                {
+                    "valueReference": {
+                        "identifier": {
+                            "system": "https://fhir.nhs.uk/Id/sds-role-profile-id",
+                            "value": "8901234567"
+                        },
+                        "display": "Ian Treater"
                     }
                 }
             ]
@@ -48,10 +70,16 @@
             ]
         },
         {
-            "linkId": "exemptionPeriodStart",
+            "linkId": "exemptionRecordedByOrganisation",
             "answer": [
                 {
-                    "valueDateTime": "2021-08-13T17:15:00+00:00"
+                    "valueReference": {
+                        "identifier": {
+                            "system": "https://fhir.nhs.uk/Id/ods-organization-code",
+                            "value": "B81001"
+                        },
+                        "display": "Austhorpe Springs Practice"
+                    }
                 }
             ]
         }
