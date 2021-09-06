@@ -32,6 +32,7 @@
     </element>
     <element id="QuestionnaireResponse.questionnaire">
       <path value="QuestionnaireResponse.questionnaire" />
+      <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="QuestionnaireResponse.subject">
@@ -63,7 +64,6 @@
     </element>
     <element id="QuestionnaireResponse.author">
       <path value="QuestionnaireResponse.author" />
-      <min value="1" />
       <type>
         <code value="Reference" />
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Organization" />
