@@ -66,7 +66,7 @@
         },
         {
             "type": "dateTime",
-            "required": false,
+            "required": true,
             "linkId": "exemptionPeriodStart",
             "text": "Exemption Period Start",
             "item": [
