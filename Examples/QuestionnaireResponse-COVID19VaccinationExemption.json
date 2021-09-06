@@ -13,20 +13,6 @@
         "display" : "Ivor Fritagelse"
     },
     "authored": "2021-08-13T17:15:00+00:00",
-    "author": {
-        "identifier": {
-            "system": "https://fhir.nhs.uk/Id/ods-organization-code",
-            "value": "B81001"
-        },
-        "display": "Austhorpe Springs Practice"
-    },
-    "source": {
-        "identifier":{
-            "system": "https://fhir.nhs.uk/Id/sds-role-profile-id",
-            "value": "8901234567"
-        },
-        "display": "Ian Treater"
-    },
     "item": [
         {
             "linkId": "exemptionStatus",
@@ -35,50 +21,6 @@
                     "valueCoding": {
                         "code": "1",
                         "display": "Approved: Exemption from COVID vaccination"
-                    }
-                }
-            ]
-        },
-        {
-            "linkId": "exemptionPeriodStart",
-            "answer": [
-                {
-                    "valueDateTime": "2021-08-13T17:15:00+00:00"
-                }
-            ]
-        },
-        {
-            "linkId": "exemptionRecordedByUser",
-            "answer": [
-                {
-                    "valueReference": {
-                        "identifier": {
-                            "system": "https://fhir.nhs.uk/Id/sds-role-profile-id",
-                            "value": "8901234567"
-                        },
-                        "display": "Ian Treater"
-                    }
-                }
-            ]
-        },
-        {
-            "linkId": "exemptionRecordedByUserRole",
-            "answer": [
-                {
-                    "valueString": "General Medical Practitioner"
-                }
-            ]
-        },
-        {
-            "linkId": "exemptionRecordedByOrganisation",
-            "answer": [
-                {
-                    "valueReference": {
-                        "identifier": {
-                            "system": "https://fhir.nhs.uk/Id/ods-organization-code",
-                            "value": "B81001"
-                        },
-                        "display": "Austhorpe Springs Practice"
                     }
                 }
             ]
