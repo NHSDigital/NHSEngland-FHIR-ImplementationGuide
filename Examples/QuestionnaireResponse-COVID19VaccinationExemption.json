@@ -24,6 +24,22 @@
                     }
                 }
             ]
+        },
+        {
+            "linkId": "exemptionPeriodStart",
+            "answer": [
+                {
+                    "valueDateTime": "2021-08-13T17:15:00+00:00"
+                }
+            ]
+        },
+        {
+            "linkId": "exemptionPeriodEnd",
+            "answer": [
+                {
+                    "valueDateTime": "2022-08-13T17:15:00+00:00"
+                }
+            ]
         }
     ]
 }
