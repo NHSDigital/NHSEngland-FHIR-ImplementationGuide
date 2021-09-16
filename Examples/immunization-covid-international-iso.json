@@ -46,7 +46,9 @@
         "identifier": {
             "system": "urn:iso:std:iso:3166",
             "value": "FR"
-        }
+        },
+        "display" :"France"
+
     },
     "manufacturer": {
         "display": "DREAMLAND Pharmaceuticals Ltd"
