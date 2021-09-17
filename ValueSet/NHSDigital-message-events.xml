@@ -2,14 +2,14 @@
 <ValueSet xmlns="http://hl7.org/fhir">
     <id value="nhsdigital-message-events" />
     <url value="https://fhir.nhs.uk/ValueSet/NHSDigital-message-events" />
-    <version value="1.0.8" />
+    <version value="1.0.9" />
     <name value="NHSMessageEvents" />
     <status value="active" />
     <description value="A ValueSet to identify the type of FHIR Message" />
     <compose>
         <include>
             <system value="https://fhir.nhs.uk/CodeSystem/message-event" />
-            <version value="1.0.14" />
+            <version value="1.0.15" />
         </include>
     </compose>
     <expansion>
@@ -19,7 +19,7 @@
         <offset value="0"/>
         <parameter>
             <name value="version"/>
-            <valueUri value="https://fhir.nhs.uk/CodeSystem/message-event|1.0.9"/>
+            <valueUri value="https://fhir.nhs.uk/CodeSystem/message-event|1.0.15"/>
         </parameter>
         <parameter>
             <name value="count"/>
@@ -29,11 +29,6 @@
             <name value="offset"/>
             <valueInteger value="0"/>
         </parameter>
-        <contains>
-            <system value="https://fhir.nhs.uk/CodeSystem/message-event"/>
-            <code value="dispense-claim"/>
-            <display value="Dispense Claim"/>
-        </contains>
         <contains>
             <system value="https://fhir.nhs.uk/CodeSystem/message-event"/>
             <code value="dispense-notification"/>
@@ -78,11 +73,6 @@
             <system value="https://fhir.nhs.uk/CodeSystem/message-event"/>
             <code value="vaccinations"/>
             <display value="Vaccinations"/>
-        </contains>
-        <contains>
-            <system value="https://fhir.nhs.uk/CodeSystem/message-event"/>
-            <code value="dispense-claim-update"/>
-            <display value="Dispense Claim Update"/>
         </contains>
         <contains>
             <system value="https://fhir.nhs.uk/CodeSystem/message-event"/>
