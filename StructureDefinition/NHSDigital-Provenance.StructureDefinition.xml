@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="360cc25d-b3c1-4404-a13a-7963a384280e"/>
-  <url value="https://fhir.nhs.uk/StructureDefinition/NHSDIgital-Provenance" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Provenance" />
   <name value="NHSDigitalProvenance" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
