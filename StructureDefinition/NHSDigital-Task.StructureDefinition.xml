@@ -124,10 +124,6 @@
     <element id="Task.code.coding">
       <path value="Task.code.coding" />
       <min value="1" />
-      <binding>
-        <strength value="required" />
-        <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDigital-message-events" />
-      </binding>
     </element>
     <element id="Task.code.coding.system">
       <path value="Task.code.coding.system" />
