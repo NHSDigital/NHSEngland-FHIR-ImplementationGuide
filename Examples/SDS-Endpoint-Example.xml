@@ -1,5 +1,5 @@
 <Endpoint xmlns="http://hl7.org/fhir">
-<id value="f0f0e921-92ca-4a88-a550-2dbb36f703af"></id>
+	<id value="f0f0e921-92ca-4a88-a550-2dbb36f703af"></id>
 	<extension url="https://fhir.nhs.uk/StructureDefinition/Extension-SDS-ReliabilityConfiguration">
 		<extension url="nhsMHSSyncReplyMode">
 			<valueString value="MSHSignalsOnly"></valueString>
