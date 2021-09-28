@@ -49,19 +49,15 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <min value="0" />
     </element>
     <element id="Extension.extension:nhsMHSSyncReplyMode">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Extension.extension" />
       <sliceName value="nhsMHSSyncReplyMode" />
       <short value="NHS Message Handling Service Synchronous Reply Mode" />
       <definition value="Synchronous Reply Mode" />
       <comment value="-" />
+      <min value="0" />
       <max value="1" />
     </element>
     <element id="Extension.extension:nhsMHSSyncReplyMode.url">
@@ -76,17 +72,12 @@
       </type>
     </element>
     <element id="Extension.extension:nhsMHSRetryInterval">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Extension.extension" />
       <sliceName value="nhsMHSRetryInterval" />
       <short value="NHS Message Handling Service Retry Interval" />
       <definition value="Retry Interval" />
       <comment value="-" />
+      <min value="0" />
       <max value="1" />
     </element>
     <element id="Extension.extension:nhsMHSRetryInterval.url">
@@ -101,17 +92,12 @@
       </type>
     </element>
     <element id="Extension.extension:nhsMHSRetries">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Extension.extension" />
       <sliceName value="nhsMHSRetries" />
       <short value="NHS Message Handling Service number of retries" />
       <definition value="Number of retries" />
       <comment value="-" />
+      <min value="0" />
       <max value="1" />
     </element>
     <element id="Extension.extension:nhsMHSRetries.url">
@@ -126,17 +112,12 @@
       </type>
     </element>
     <element id="Extension.extension:nhsMHSPersistDuration">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Extension.extension" />
       <sliceName value="nhsMHSPersistDuration" />
       <short value="NHS Message Handling Service Persist Duration" />
       <definition value="Persist Duration" />
       <comment value="-" />
+      <min value="0" />
       <max value="1" />
     </element>
     <element id="Extension.extension:nhsMHSPersistDuration.url">
@@ -151,17 +132,12 @@
       </type>
     </element>
     <element id="Extension.extension:nhsMHSDuplicateElimination">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Extension.extension" />
       <sliceName value="nhsMHSDuplicateElimination" />
       <short value="NHS Message Handling Service Duplicate Elimination" />
       <definition value="Duplicate Elimination" />
       <comment value="-" />
+      <min value="0" />
       <max value="1" />
     </element>
     <element id="Extension.extension:nhsMHSDuplicateElimination.url">
@@ -176,17 +152,12 @@
       </type>
     </element>
     <element id="Extension.extension:nhsMHSAckRequested">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Extension.extension" />
       <sliceName value="nhsMHSAckRequested" />
       <short value="NHS Message Handling Service Acknowledgement Requested" />
       <definition value="Acknowledgement Requested" />
       <comment value="-" />
+      <min value="0" />
       <max value="1" />
     </element>
     <element id="Extension.extension:nhsMHSAckRequested.url">
@@ -194,6 +165,25 @@
       <fixedUri value="nhsMHSAckRequested" />
     </element>
     <element id="Extension.extension:nhsMHSAckRequested.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <min value="1" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="Extension.extension:nhsMHSActor">
+      <path value="Extension.extension" />
+      <sliceName value="nhsMHSActor" />
+      <short value="NHS Message Handling Service Actor" />
+      <definition value="NHS NHS Message Handling Service Actor." />
+      <min value="0" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:nhsMHSActor.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="nhsMHSActor" />
+    </element>
+    <element id="Extension.extension:nhsMHSActor.value[x]">
       <path value="Extension.extension.value[x]" />
       <min value="1" />
       <type>
