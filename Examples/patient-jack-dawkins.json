@@ -3,20 +3,6 @@
     "id" : "18d69a47-1a29-4de5-a942-7fd278f09dad",
     "identifier": [
         {
-            "extension": [
-                {
-                  "url": "https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-NHSNumberVerificationStatus",
-                  "valueCodeableConcept": {
-                    "coding": [
-                      {
-                        "system": "https://fhir.hl7.org.uk/CodeSystem/UKCore-NHSNumberVerificationStatus",
-                        "code": "01",
-                        "display": "Number present and verified"
-                      }
-                    ]
-                  }
-                }
-              ],
             "system": "https://fhir.nhs.uk/Id/nhs-number",
             "value": "9912003888"
         }
