@@ -7,7 +7,7 @@
     "4.0.1"
   ],
   "dependencies": {
-    "UKCore.Release1": "1.0.1",
+    "UKCore.England": "1.0.0-test",
     "hl7.fhir.r4.core": "4.0.1"
   }
 }
