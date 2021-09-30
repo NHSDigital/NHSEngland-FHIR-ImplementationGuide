@@ -40,7 +40,7 @@
     <element id="Extension.extension:dateLastDispensed.value[x]">
       <path value="Extension.extension.value[x]" />
       <type>
-        <code value="date" />
+        <code value="dateTime" />
       </type>
     </element>
     <element id="Extension.extension:dispenseNotificationReference">

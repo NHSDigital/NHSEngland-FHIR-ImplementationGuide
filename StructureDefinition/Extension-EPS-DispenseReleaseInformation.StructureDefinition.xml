@@ -23,10 +23,12 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <min value="0" />
     </element>
     <element id="Extension.extension:dateLastIssuedDispensed">
       <path value="Extension.extension" />
       <sliceName value="dateLastIssuedDispensed" />
+      <min value="0" />
       <max value="1" />
     </element>
     <element id="Extension.extension:dateLastIssuedDispensed.url">
@@ -36,12 +38,13 @@
     <element id="Extension.extension:dateLastIssuedDispensed.value[x]">
       <path value="Extension.extension.value[x]" />
       <type>
-        <code value="date" />
+        <code value="dateTime" />
       </type>
     </element>
     <element id="Extension.extension:dateDownloaded">
       <path value="Extension.extension" />
       <sliceName value="dateDownloaded" />
+      <min value="0" />
       <max value="1" />
     </element>
     <element id="Extension.extension:dateDownloaded.url">
@@ -51,12 +54,13 @@
     <element id="Extension.extension:dateDownloaded.value[x]">
       <path value="Extension.extension.value[x]" />
       <type>
-        <code value="date" />
+        <code value="dateTime" />
       </type>
     </element>
     <element id="Extension.extension:dateClaimed">
       <path value="Extension.extension" />
       <sliceName value="dateClaimed" />
+      <min value="0" />
       <max value="1" />
     </element>
     <element id="Extension.extension:dateClaimed.url">
@@ -66,7 +70,7 @@
     <element id="Extension.extension:dateClaimed.value[x]">
       <path value="Extension.extension.value[x]" />
       <type>
-        <code value="date" />
+        <code value="dateTime" />
       </type>
     </element>
     <element id="Extension.url">
