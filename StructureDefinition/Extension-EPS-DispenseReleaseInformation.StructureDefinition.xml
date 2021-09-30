@@ -75,7 +75,7 @@
     </element>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="https://fhir.nhs.uk/StructureDefinition/Extension-EPS-DispensingInformation" />
+      <fixedUri value="https://fhir.nhs.uk/StructureDefinition/Extension-EPS-DispensingReleaseInformation" />
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />
