@@ -31,16 +31,6 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Task" />
   <derivation value="constraint" />
   <differential>
-    <element id="Task">
-      <path value="Task" />
-      <constraint>
-        <key value="nhds-10" />
-        <severity value="error" />
-        <human value="groupIdentifier and reasonCode are mandatory for EPS interactions" />
-        <expression value="code.coding.where(system = 'http://hl7.org/fhir/CodeSystem/task-code').exists().not() or (code.coding.where(system = 'http://hl7.org/fhir/CodeSystem/task-code').exists() and groupIdentifier.exists() and reasonCode.exists())" />
-        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Task" />
-      </constraint>
-    </element>
     <element id="Task.extension">
       <path value="Task.extension" />
       <slicing>
