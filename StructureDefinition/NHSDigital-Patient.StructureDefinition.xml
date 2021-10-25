@@ -62,24 +62,6 @@
       <path value="Patient.telecom" />
       <mustSupport value="true" />
     </element>
-    <element id="Patient.telecom.system.extension">
-      <path value="Patient.telecom.system.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="Patient.telecom.system.extension:otherContactSystem">
-      <path value="Patient.telecom.system.extension" />
-      <sliceName value="otherContactSystem" />
-      <type>
-        <code value="Extension" />
-        <profile value="https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-OtherContactSystem" />
-      </type>
-    </element>
     <element id="Patient.gender">
       <path value="Patient.gender" />
       <min value="1" />
@@ -104,15 +86,13 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <min value="0" />
     </element>
     <element id="Patient.address.extension:addressKey">
       <path value="Patient.address.extension" />
       <sliceName value="addressKey" />
+      <min value="0" />
       <max value="1" />
-      <type>
-        <code value="Extension" />
-        <profile value="https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-AddressKey" />
-      </type>
     </element>
     <element id="Patient.contact">
       <path value="Patient.contact" />
@@ -128,7 +108,6 @@
         <rules value="openAtEnd" />
       </slicing>
       <requirements value="GP Surgery SHOULD be provided. It is recommended the patients GP Surgery is the first item in the array and branch surgery is second. It is also suggested type and display (name of practice) is also included." />
-      <min value="1" />
       <max value="1" />
       <constraint>
         <key value="nhsd-5" />
@@ -155,7 +134,6 @@
       <path value="Patient.generalPractitioner" />
       <sliceName value="registeredGPPractice" />
       <definition value="Patient's registered GP Practice. Use V81998 for no registered practice and V81999 for not known as per NHS Data Dictionary guidelines." />
-      <min value="1" />
       <max value="1" />
     </element>
     <element id="Patient.generalPractitioner:registeredGPPractice.identifier.system">
