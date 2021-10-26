@@ -1,0 +1,67 @@
+{
+    "resourceType": "Task",
+    "id": "06570d9e-1dd7-49b6-8276-c903eef74b73",
+    "identifier": [
+        {
+            "system": "https://tools.ietf.org/html/rfc4122",
+            "value": "06570d9e-1dd7-49b6-8276-c903eef74b73"
+        }
+    ],
+    "basedOn" : {
+        "type" : "ServiceRequest",
+        "reference":"https://fhir.lth.nhs.uk/ServiceRequest/06570d9e-1dd7-49b6-8276-c903eef74b73",
+        "identifier" : {
+            "system":"https://fhir.nhs.uk/Id/UBRN",
+            "value":"06570d9e-1dd7-49b6-8276-c903eef74b73"
+        } 
+    },
+    "status": "requested",
+    "intent": "order",
+    "code": {
+        "coding": [
+            {
+                "system": "http://hl7.org/fhir/CodeSystem/task-code",
+                "code": "fulfill",
+                "display": "Fulfill the focal request"
+            }
+        ]
+    },
+    "focus": {
+        "reference": "https://fhir.lth.nhs.uk/Questionnaire/LTHPreAdmission"
+    },
+    "for": {
+        "identifier": {
+            "system": "https://fhir.nhs.uk/Id/nhs-number",
+            "value": "9446368138"
+        }
+    },
+    "owner": {
+        "identifier": {
+            "system": "https://fhir.nhs.uk/Id/ods-organization-code",
+            "value": "M12345"
+        }
+    },
+    "requester": {
+        "identifier": {
+            "system": "https://fhir.nhs.uk/Id/ods-organization-code",
+            "value": "RR8"
+        },
+        "display": "Leeds Teaching Hospitals"
+    },
+    "authoredOn": "2021-10-09T12:00:00+00:00",
+    "note": [
+        {
+            "text": "Please complete this referral form / pre admission form. This is needed before your referral can be processed."
+        }
+    ],
+    "reasonCode": {
+        "coding": [
+            {
+                "system": "http://snomed.info/sct",
+                "code": "273510007",
+                "display": "Health assessment questionnaire"
+            }
+        ],
+        "text": "Code is for demomonstration purposes and is probably not correct"
+    }
+}
