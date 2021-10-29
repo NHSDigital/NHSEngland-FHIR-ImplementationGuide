@@ -76,17 +76,17 @@
     </element>
     <element id="Observation.category">
       <path value="Observation.category" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="coding.system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
       <mustSupport value="false" />
     </element>
     <element id="Observation.category.coding">
       <path value="Observation.category.coding" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="system" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
       <min value="1" />
     </element>
     <element id="Observation.category.coding.system">
@@ -97,19 +97,15 @@
       <path value="Observation.category.coding.code" />
       <min value="1" />
     </element>
-    <element id="Observation.category.coding:covidTestingPillar">
-      <path value="Observation.category.coding" />
+    <element id="Observation.category:covidTestingPillar">
+      <path value="Observation.category" />
       <sliceName value="covidTestingPillar" />
-      <max value="1" />
-      <fixedCoding>
-        <system value="https://fhir.nhs.uk/CodeSystem/covid-test-pillar" />
-      </fixedCoding>
       <binding>
         <strength value="required" />
         <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDigital-COVIDTestPillar" />
       </binding>
     </element>
-    <element id="Observation.category.coding:covidTestingPillar.system">
+    <element id="Observation.category:covidTestingPillar.coding.system">
       <path value="Observation.category.coding.system" />
       <fixedUri value="https://fhir.nhs.uk/CodeSystem/covid-test-pillar" />
     </element>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="19354975-cb99-492c-b469-798ed7534b51"/>
+  <id value="19354975-cb99-492c-b469-798ed7534b51" />
   <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-DocumentReference" />
   <name value="NHSDigitalDocumentReference" />
   <status value="draft" />
@@ -69,6 +69,16 @@
       <path value="DocumentReference.type.coding.display" />
       <min value="1" />
     </element>
+    <element id="DocumentReference.context.practiceSetting">
+      <path value="DocumentReference.context.practiceSetting" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="coding.system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
     <element id="DocumentReference.context.practiceSetting.coding">
       <path value="DocumentReference.context.practiceSetting.coding" />
       <slicing>
@@ -79,29 +89,29 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="DocumentReference.context.practiceSetting.coding:NHSDataDictionaryCareSetting">
-      <path value="DocumentReference.context.practiceSetting.coding" />
+    <element id="DocumentReference.context.practiceSetting:NHSDataDictionaryCareSetting">
+      <path value="DocumentReference.context.practiceSetting" />
       <sliceName value="NHSDataDictionaryCareSetting" />
-      <fixedCoding>
-        <system value="https://fhir.nhs.uk/CodeSystem/NHSDataModelAndDictionary-treatment-function" />
-      </fixedCoding>
       <binding>
         <strength value="extensible" />
-        <description value="NHS Data Dictionery Treatment Function" />
         <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDataModelAndDictionary-treatment-function" />
       </binding>
     </element>
-    <element id="DocumentReference.context.practiceSetting.coding:UKCoreCareSetting">
-      <path value="DocumentReference.context.practiceSetting.coding" />
+    <element id="DocumentReference.context.practiceSetting:NHSDataDictionaryCareSetting.coding.system">
+      <path value="DocumentReference.context.practiceSetting.coding.system" />
+      <fixedUri value="https://fhir.nhs.uk/CodeSystem/NHSDataModelAndDictionary-treatment-function" />
+    </element>
+    <element id="DocumentReference.context.practiceSetting:UKCoreCareSetting">
+      <path value="DocumentReference.context.practiceSetting" />
       <sliceName value="UKCoreCareSetting" />
-      <fixedCoding>
-        <system value="http://snomed.info/sct" />
-      </fixedCoding>
       <binding>
         <strength value="extensible" />
-        <description value="UKCore Care Setting" />
         <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDigital-CareSettingType" />
       </binding>
+    </element>
+    <element id="DocumentReference.context.practiceSetting:UKCoreCareSetting.coding.system">
+      <path value="DocumentReference.context.practiceSetting.coding.system" />
+      <fixedUri value="http://snomed.info/sct" />
     </element>
   </differential>
 </StructureDefinition>
