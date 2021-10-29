@@ -5,4 +5,4 @@ This repository is used in the [NHS Digital FHIR Implementation Guide](https://s
 
  [![NHS Digital IOPS Validation)](https://github.com/NHSDigital/NHSDigital-FHIR-ImplementationGuide/actions/workflows/main.yml/badge.svg)](https://github.com/NHSDigital/NHSDigital-FHIR-ImplementationGuide/actions/workflows/main.yml)
 
- [Instructions for configuring the Firely Validation](https://github.com/FirelyTeam/firely-terminal-pipeline)
+
