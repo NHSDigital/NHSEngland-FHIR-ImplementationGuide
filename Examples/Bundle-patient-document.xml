@@ -10,7 +10,6 @@
         <fullUrl value="urn:uuid:ea7221b8-3cc0-4b11-bc95-585b056b5428" />
         <resource>
             <MessageHeader>
-                <!-- MESH mailbox ID of message sender -->
                 <source>
                     <endpoint value="urn:nhs-uk:addressing:ods:RR8" />
                 </source>
