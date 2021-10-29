@@ -15,7 +15,6 @@
         },
         {
             "contentReference": {
-                "type": "MedicationRequest",
                 "reference": "https://int.api.service.nhs.uk/electronic-prescriptions/MedicationRequest/a54219b8-f741-4c47-b662-e4f8dfa49ab6",
                 "identifier": {
                     "system": "https://fhir.nhs.uk/Id/prescription-order-item-number",

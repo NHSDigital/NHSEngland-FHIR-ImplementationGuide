@@ -69,20 +69,6 @@
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-Spine-CommunicationPayload" />
       </type>
     </element>
-    <element id="CommunicationRequest.payload.content[x]">
-      <path value="CommunicationRequest.payload.content[x]" />
-      <type>
-        <code value="string" />
-      </type>
-      <type>
-        <code value="Attachment" />
-      </type>
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/MedicationRequest" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/MedicationDispense" />
-      </type>
-    </element>
     <element id="CommunicationRequest.requester">
       <path value="CommunicationRequest.requester" />
       <min value="1" />
