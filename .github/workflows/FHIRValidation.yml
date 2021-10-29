@@ -1,0 +1,56 @@
+name: CI-Integration
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the master branch
+  push:
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+        with:
+          submodules: true
+      
+      - name: Install Python 3.8
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.8
+
+      - name: Upgrade python packaging tools
+        run: python -m pip install --upgrade pip setuptools wheel
+
+      - name: Install poetry and requests
+        run: pip install poetry requests
+
+      - name: Install dependencies
+        run: poetry install
+
+      - name: Set SPEC_VERSION env var
+        run: echo ::set-env name=SPEC_VERSION::$(poetry run python scripts/calculate_version.py)
+        env:
+          ACTIONS_ALLOW_UNSECURE_COMMANDS: true
+
+      - name: Install Java
+        run: sudo apt-get install --yes default-jre default-jdk
+
+      - name: Install node
+        run: |
+          wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+          curl -sL https://deb.nodesource.com/setup_13.x | sudo -E bash -
+          sudo apt-get install -y nodejs
+          
+      - name: Cache node modules
+        uses: actions/cache@v1
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-build-cache-npm-packages-${{ hashFiles('**/package-lock.json') }}
