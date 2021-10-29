@@ -28,6 +28,7 @@ jobs:
         uses: actions/checkout@master
         with:
           repository: NHSDigital/IOPS-Validation
+          path: validation
       
       - name: ls
         run: ls
