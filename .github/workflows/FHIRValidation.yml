@@ -21,20 +21,17 @@ jobs:
         with:
           submodules: true
       
-      - name: Check out my other private repo
+      - name: Check out IOPS-Validation
         uses: actions/checkout@master
         with:
           repository: NHSDigital/IOPS-Validation
           path: validation
 
-      - name: Check out my other private repo
+      - name: Check out validation-service-fhir-r4
         uses: actions/checkout@master
         with:
           repository: NHSDigital/validation-service-fhir-r4
           path: validation-service-fhir-r4
-      
-      - name: ls
-        run: ls
         
       - name: Install Python 3.8
         uses: actions/setup-python@v1
@@ -81,3 +78,11 @@ jobs:
       
       - name: Build FHIR Validator
         run: make -C validation-service-fhir-r4 build-latest
+
+      - name: Run FHIR Validator
+        run: 
+          nohup java -jar validation-service-fhir-r4/target/fhir-validator-0.0.1-SNAPSHOT.jar &
+          sleep 30
+        
+      - name: Run Test
+        run: make -C validation test
