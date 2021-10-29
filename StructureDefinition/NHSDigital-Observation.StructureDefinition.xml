@@ -50,10 +50,12 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <min value="0" />
     </element>
     <element id="Observation.extension:covid19Testing">
       <path value="Observation.extension" />
       <sliceName value="covid19Testing" />
+      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -106,6 +108,10 @@
         <strength value="required" />
         <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDigital-COVIDTestPillar" />
       </binding>
+    </element>
+    <element id="Observation.category.coding:covidTestingPillar.system">
+      <path value="Observation.category.coding.system" />
+      <fixedUri value="https://fhir.nhs.uk/CodeSystem/covid-test-pillar" />
     </element>
     <element id="Observation.code">
       <path value="Observation.code" />

@@ -57,10 +57,12 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <min value="0" />
     </element>
     <element id="CommunicationRequest.payload.extension:deviceContent">
       <path value="CommunicationRequest.payload.extension" />
       <sliceName value="deviceContent" />
+      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -77,6 +79,8 @@
       </type>
       <type>
         <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Resource" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/MedicationRequest" />
       </type>
     </element>
     <element id="CommunicationRequest.requester">
