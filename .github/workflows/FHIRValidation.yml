@@ -73,11 +73,8 @@ jobs:
       - name: Configure FHIR Validator
         run: make -C validation configure-validation
       
-      - name: Install FHIR Validator
-        run: make -C validation-service-fhir-r4 install
-      
       - name: Build FHIR Validator
-        run: make -C validation-service-fhir-r4 build
+        run: cd validation-service-fhir-r4 && mvn clean package
 
       - name: Run FHIR Validator
         run: 
