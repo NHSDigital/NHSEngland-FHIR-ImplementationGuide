@@ -28,7 +28,7 @@ jobs:
           path: validation
 
       - name: Check out validation-service-fhir-r4
-        uses: actions/checkout@master
+        uses: actions/checkout@EA-1585-update-hapi-5.5.1
         with:
           repository: NHSDigital/validation-service-fhir-r4
           path: validation-service-fhir-r4
