@@ -77,7 +77,7 @@ jobs:
         run: make -C validation-service-fhir-r4 install
       
       - name: Build FHIR Validator
-        run: make -C validation-service-fhir-r4 build-latest
+        run: make -C validation-service-fhir-r4 build
 
       - name: Run FHIR Validator
         run: 
