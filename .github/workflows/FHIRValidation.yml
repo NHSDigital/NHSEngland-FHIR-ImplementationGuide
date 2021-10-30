@@ -30,7 +30,7 @@ jobs:
       - name: Check out validation-service-fhir-r4
         uses: actions/checkout@master
         with:
-          repository: NHSDigital/validation-service-fhir-r4@EA-1585-update-hapi-5.5.1
+          repository: NHSDigital/validation-service-fhir-r4
           path: validation-service-fhir-r4
         
       - name: Install Python 3.8
