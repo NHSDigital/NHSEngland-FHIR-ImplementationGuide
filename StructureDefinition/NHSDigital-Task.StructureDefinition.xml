@@ -40,10 +40,12 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <min value="0" />
     </element>
     <element id="Task.extension:repeatInformation">
       <path value="Task.extension" />
       <sliceName value="repeatInformation" />
+      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -53,6 +55,7 @@
     <element id="Task.extension:prescription">
       <path value="Task.extension" />
       <sliceName value="prescription" />
+      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -197,7 +200,7 @@
     <element id="Task.reasonCode">
       <path value="Task.reasonCode" />
       <binding>
-        <strength value="required" />
+        <strength value="preferred" />
         <valueSet value="https://fhir.nhs.uk/ValueSet/DM-task-reason-code" />
       </binding>
     </element>
@@ -230,10 +233,12 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <min value="0" />
     </element>
     <element id="Task.input.extension:dispensingInformation">
       <path value="Task.input.extension" />
       <sliceName value="dispensingInformation" />
+      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -253,10 +258,12 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <min value="0" />
     </element>
     <element id="Task.output.extension:dispensingReleaseInformation">
       <path value="Task.output.extension" />
       <sliceName value="dispensingReleaseInformation" />
+      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
