@@ -1,4 +1,4 @@
-name: CI-Integration
+name: IOPS-FHIR-Validation
 
 # Controls when the workflow will run
 on:
