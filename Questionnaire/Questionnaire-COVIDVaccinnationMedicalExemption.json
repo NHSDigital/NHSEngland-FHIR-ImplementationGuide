@@ -98,13 +98,13 @@
                 }
             ],
             "type": "reference",
-            "required": true,
+            "required": false,
             "linkId": "exemptionRecordedByUser",
             "text": "Exemption by User"
         },
         {
             "type": "string",
-            "required": true,
+            "required": false,
             "linkId": "exemptionRecordedByUserRole",
             "text": "Exemption Recorded by user role",
             "item": [
@@ -123,7 +123,7 @@
                 }
             ],
             "type": "reference",
-            "required": true,
+            "required": false,
             "linkId": "exemptionRecordedByOrganization",
             "text": "Exemption by Organization"
         },

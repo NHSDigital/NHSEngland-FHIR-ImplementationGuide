@@ -1,4 +1,4 @@
-name: CI-Integration
+name: IOPS-FHIR-Validation
 
 # Controls when the workflow will run
 on:
@@ -31,6 +31,7 @@ jobs:
         uses: actions/checkout@master
         with:
           repository: NHSDigital/validation-service-fhir-r4
+          ref: testing
           path: validation-service-fhir-r4
         
       - name: Install Python 3.8
@@ -73,16 +74,13 @@ jobs:
       - name: Configure FHIR Validator
         run: make -C validation configure-validation
       
-      - name: Install FHIR Validator
-        run: make -C validation-service-fhir-r4 install
-      
       - name: Build FHIR Validator
-        run: make -C validation-service-fhir-r4 build-latest
+        run: cd validation-service-fhir-r4 && mvn clean package
 
       - name: Run FHIR Validator
         run: 
           nohup java -jar validation-service-fhir-r4/target/fhir-validator-0.0.1-SNAPSHOT.jar &
-          sleep 30
+          sleep 120
         
       - name: Run Test
         run: make -C validation test

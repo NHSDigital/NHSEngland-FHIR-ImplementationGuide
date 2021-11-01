@@ -3,3 +3,6 @@ StructureDefinition/Extension-UKCore*.xml
 StructureDefinition/Extension-UKCore*.json
 StructureDefinition/UKCore*.xml
 StructureDefinition/UKCore*.json
+validation
+IOPS-validation
+validation-service-fhir-r4
