@@ -128,7 +128,7 @@
             ],
             "type": "reference",
             "required": false,
-            "linkId": "exemptionRecordedByOrganization",
+            "linkId": "exemptionRecordedByOrganisation",
             "text": "Exemption by Organization"
         },
         {
