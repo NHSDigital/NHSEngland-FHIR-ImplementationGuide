@@ -2,7 +2,7 @@
     "resourceType": "Questionnaire",
     "id": "c624f57d-347a-4f82-b92f-d0bf420cb813",
     "url": "https://fhir.nhs.uk/Questionnaire/COVIDVaccinationMedicalExemption",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "title": "COVID Vaccinnation Medical Exemption",
     "status": "draft",
     "subjectType": [
@@ -33,24 +33,28 @@
             "answerOption": [
                 {
                     "valueCoding": {
+                        "system": "https://fhir.nhs.uk/CodeSystem/covid-vaccination-medical-exemption",
                         "code": "1",
                         "display": "Approved: Exemption from COVID vaccination"
                     }
                 },
                 {
                     "valueCoding": {
+                        "system": "https://fhir.nhs.uk/CodeSystem/covid-vaccination-medical-exemption",
                         "code": "2",
                         "display": "Approved: Exemption from COVID vaccination and testing"
                     }
                 },
                 {
                     "valueCoding": {
+                        "system": "https://fhir.nhs.uk/CodeSystem/covid-vaccination-medical-exemption",
                         "code": "3",
                         "display": "Rejected: Exemption from COVID vaccination"
                     }
                 },
                 {
                     "valueCoding": {
+                        "system": "https://fhir.nhs.uk/CodeSystem/covid-vaccination-medical-exemption",
                         "code": "4",
                         "display": "Rejected: Exemption from COVID vaccination and testing"
                     }
