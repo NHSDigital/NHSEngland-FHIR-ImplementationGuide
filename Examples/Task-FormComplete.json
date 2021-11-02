@@ -7,14 +7,16 @@
             "value": "06570d9e-1dd7-49b6-8276-c903eef74b73"
         }
     ],
-    "basedOn" : {
-        "type" : "ServiceRequest",
-        "reference":"https://fhir.lth.nhs.uk/ServiceRequest/06570d9e-1dd7-49b6-8276-c903eef74b73",
-        "identifier" : {
-            "system":"https://fhir.nhs.uk/Id/UBRN",
-            "value":"06570d9e-1dd7-49b6-8276-c903eef74b73"
-        } 
-    },
+    "basedOn": [
+        {
+            "type": "ServiceRequest",
+            "reference": "https://fhir.lth.nhs.uk/ServiceRequest/06570d9e-1dd7-49b6-8276-c903eef74b73",
+            "identifier": {
+                "system": "https://fhir.nhs.uk/Id/UBRN",
+                "value": "06570d9e-1dd7-49b6-8276-c903eef74b73"
+            }
+        }
+    ],
     "status": "requested",
     "intent": "order",
     "code": {
@@ -27,7 +29,10 @@
         ]
     },
     "focus": {
-        "reference": "https://fhir.lth.nhs.uk/Questionnaire/LTHPreAdmission"
+        "identifier": {
+            "system": "https://fhir.lth.nhs.uk/Questionnaire",
+            "value": "LTHPreAdmission"
+        }
     },
     "for": {
         "identifier": {
