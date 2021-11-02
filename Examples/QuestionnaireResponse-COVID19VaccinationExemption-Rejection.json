@@ -33,6 +33,7 @@
             "answer": [
                 {
                     "valueCoding": {
+                        "system": "https://fhir.nhs.uk/CodeSystem/covid-vaccination-medical-exemption",
                         "code": "4",
                         "display": "Rejected: Exemption from COVID vaccination and testing"
                     }

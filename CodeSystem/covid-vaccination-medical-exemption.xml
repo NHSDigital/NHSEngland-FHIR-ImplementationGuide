@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<CodeSystem xmlns="http://hl7.org/fhir">
+    <id value="3a8f1e49-fb09-4c10-803d-d0afdce0b02d" />
+    <url value="https://fhir.nhs.uk/CodeSystem/covid-vaccination-medical-exemption" />
+    <version value="1.0.0" />
+    <name value="covid-vaccination-medical-exemption" />
+    <status value="active" />
+    <date value="2021-11-02T00:00:00+00:00" />
+    <publisher value="NHS Digital" />
+    <description value="COVID-19 Vaccination Medical Exemption" />
+    <copyright value="Copyright © 2021 NHS Digital" />
+    <caseSensitive value="true" />
+    <content value="complete" />
+    <concept>
+        <code value="1" />
+        <display value="Approved: Exemption from COVID vaccination" />
+    </concept>
+    <concept>
+        <code value="2" />
+        <display value="Approved: Exemption from COVID vaccination and testing" />   
+    </concept>
+    <concept>
+        <code value="3" />
+        <display value="Rejected: Exemption from COVID vaccination" />
+    </concept>
+    <concept>
+        <code value="4" />
+        <display value="Rejected: Exemption from COVID vaccination and testing" />
+    </concept>
+</CodeSystem>

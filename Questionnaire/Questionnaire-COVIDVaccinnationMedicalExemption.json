@@ -33,24 +33,28 @@
             "answerOption": [
                 {
                     "valueCoding": {
+                        "system": "https://fhir.nhs.uk/CodeSystem/covid-vaccination-medical-exemption",
                         "code": "1",
                         "display": "Approved: Exemption from COVID vaccination"
                     }
                 },
                 {
                     "valueCoding": {
+                        "system": "https://fhir.nhs.uk/CodeSystem/covid-vaccination-medical-exemption",
                         "code": "2",
                         "display": "Approved: Exemption from COVID vaccination and testing"
                     }
                 },
                 {
                     "valueCoding": {
+                        "system": "https://fhir.nhs.uk/CodeSystem/covid-vaccination-medical-exemption",
                         "code": "3",
                         "display": "Rejected: Exemption from COVID vaccination"
                     }
                 },
                 {
                     "valueCoding": {
+                        "system": "https://fhir.nhs.uk/CodeSystem/covid-vaccination-medical-exemption",
                         "code": "4",
                         "display": "Rejected: Exemption from COVID vaccination and testing"
                     }
