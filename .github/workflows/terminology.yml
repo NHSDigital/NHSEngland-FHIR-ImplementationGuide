@@ -76,6 +76,10 @@ jobs:
         
       - name: Configure FHIR Validator
         run: make -C validation configure-validation
+        env:
+          CI: true
+          ONTO_CLIENT_ID: ${{ secrets.ONTO_CLIENT_ID }}
+          ONTO_CLIENT_SECRET: ${{ secrets.ONTO_CLIENT_SECRET }}
       
       - name: Build FHIR Validator
         run: cd validation-service-fhir-r4 && mvn clean package
