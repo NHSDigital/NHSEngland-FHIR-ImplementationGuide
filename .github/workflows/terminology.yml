@@ -83,7 +83,7 @@ jobs:
       - name: Run FHIR Validator
         run: 
           nohup java -jar validation-service-fhir-r4/target/fhir-validator-0.0.1-SNAPSHOT.jar &
-          sleep 120
+          sleep 180
         
       - name: Run Test
         run: make -C validation test
