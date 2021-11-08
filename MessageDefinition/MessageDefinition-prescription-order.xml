@@ -25,26 +25,8 @@
         <max value="4" />
     </focus>
     <focus>
-        <code value="Patient" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient" />
-        <min value="1" />
-        <max value="1" />
-    </focus>
-    <focus>
-        <code value="PractitionerRole" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole" />
-        <min value="1" />
-        <max value="*" />
-    </focus>
-    <focus>
         <code value="CommunicationRequest" />
         <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-CommunicationRequest" />
-        <min value="0" />
-        <max value="*" />
-    </focus>
-    <focus>
-        <code value="Location" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Location" />
         <min value="0" />
         <max value="*" />
     </focus>
