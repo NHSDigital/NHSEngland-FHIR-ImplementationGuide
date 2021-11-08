@@ -20,7 +20,7 @@
     <category value="consequence" />
     <focus>
         <code value="MedicationRequest" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationRequest" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationRequest-Message" />
         <min value="1" />
         <max value="4" />
     </focus>
