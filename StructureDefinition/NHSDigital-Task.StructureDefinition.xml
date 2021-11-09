@@ -86,9 +86,10 @@
     <element id="Task.reasonCode.coding:SNOMED">
       <path value="Task.reasonCode.coding" />
       <sliceName value="SNOMED" />
-      <fixedCoding>
-        <system value="http://snomed.info/sct" />
-      </fixedCoding>
+    </element>
+    <element id="Task.reasonCode.coding:SNOMED.system">
+      <path value="Task.reasonCode.coding.system" />
+      <fixedUri value="http://snomed.info/sct" />
     </element>
     <element id="Task.input">
       <path value="Task.input" />
