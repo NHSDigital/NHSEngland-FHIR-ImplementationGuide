@@ -86,8 +86,8 @@ jobs:
 
       - name: Run FHIR Validator
         run: 
-          nohup java -jar validation-service-fhir-r4/target/fhir-validator-0.0.1-SNAPSHOT.jar &
-          sleep 180
+          nohup java -jar validation-service-fhir-r4/target/fhir-validator-0.0.1-SNAPSHOT.jar -Dhapi.fhir.terminology.use_remote=true -Dhapi.fhir.terminology.client_id=${{ secrets.ONTO_CLIENT_ID }} -Dhapi.fhir.terminology.client_secret=${{ secrets.ONTO_CLIENT_SECRET }} &
+          sleep 60
         
       - name: Run Test
         run: make -C validation test
