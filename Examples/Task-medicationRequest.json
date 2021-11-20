@@ -1,0 +1,51 @@
+{
+    "resourceType": "Task",
+    "status": "requested",
+    "intent": "order",
+    "code": {
+        "coding": [
+            {
+                "system": "http://hl7.org/fhir/CodeSystem/task-code",
+                "code": "fulfill",
+                "display": "Fulfill the focal request"
+            }
+        ]
+    },
+    "focus": {
+        "reference" : "https://api.service.nhs.uk/electronic-prescriptions/FHIR/R4/MedicationRequest/A7B86F8D-1D7C-FC28-E050-D20AE3A215F0",
+        "identifier": {
+            "system": "https://fhir.nhs.uk/Id/prescription-order-item-number",
+            "value": "A7B86F8D-1D7C-FC28-E050-D20AE3A215F0"
+        },
+        "display": "Morphine 10mg modified-release tablets"
+    },
+    "for": {
+        "identifier": {
+            "system": "https://fhir.nhs.uk/Id/nhs-number",
+            "value": "9446368138"
+        }
+    },
+    "owner": {
+        "identifier": {
+            "system": "https://fhir.nhs.uk/Id/ods-organization-code",
+            "value": "M12345"
+        }
+    },
+    "requester": {
+        "identifier": {
+            "system": "https://fhir.nhs.uk/Id/ods-organization-code",
+            "value": "RR8"
+        },
+        "display": "Leeds Teaching Hospitals"
+    },
+    "authoredOn": "2021-10-09T12:00:00+00:00",
+    "reasonCode": {
+        "coding": [
+            {
+                "system": "http://snomed.info/sct",
+                "code": "33633005",
+                "display": "Prescription of drug"
+            }
+        ]
+    }
+}
