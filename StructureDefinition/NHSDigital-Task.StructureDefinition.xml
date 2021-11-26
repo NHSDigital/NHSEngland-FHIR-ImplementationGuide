@@ -10,6 +10,26 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Task" />
   <derivation value="constraint" />
   <differential>
+    <element id="Task.extension">
+      <path value="Task.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Task.extension:agent">
+      <path value="Task.extension" />
+      <sliceName value="agent" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-Provenance-agent" />
+      </type>
+    </element>
     <element id="Task.identifier">
       <path value="Task.identifier" />
       <min value="1" />
