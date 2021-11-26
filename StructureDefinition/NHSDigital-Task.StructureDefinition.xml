@@ -19,10 +19,13 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <min value="0" />
     </element>
     <element id="Task.extension:agent">
       <path value="Task.extension" />
       <sliceName value="agent" />
+      <short value="Provenance of the resource" />
+      <definition value="Is used as the author on request resources." />
       <min value="0" />
       <max value="1" />
       <type>
