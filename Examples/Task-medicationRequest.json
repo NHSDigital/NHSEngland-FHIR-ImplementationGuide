@@ -1,5 +1,16 @@
 {
     "resourceType": "Task",
+    "extension": [
+        {
+            "url" : "https://fhir.nhs.uk/StructureDefinition/Extension-Provenance-agent",
+            "valueReference" : {
+                "identifier": {
+                    "system": "https://fhir.nhs.uk/Id/sds-role-profile-id",
+                    "value": "100102238986"
+                }
+            }
+        }
+    ],
     "status": "requested",
     "intent": "order",
     "code": {
