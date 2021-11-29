@@ -69,6 +69,30 @@
       <path value="DocumentReference.type.coding.display" />
       <min value="1" />
     </element>
+    <element id="DocumentReference.subject">
+      <path value="DocumentReference.subject" />
+      <constraint>
+        <key value="patient-reference" />
+        <severity value="warning" />
+        <human value="subject - An identifier reference plus a display name or resource reference must be provided" />
+        <expression value="(reference.exists() or (identifier.exists() and display.exists()))" />
+      </constraint>
+      <constraint>
+        <key value="patient-nhs" />
+        <severity value="error" />
+        <human value="Supplied NHS Number is outside the English and Welsh NHS Number range or length of the number is wrong." />
+        <expression value="identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').exists().not() or (identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').exists()  and identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').value.matches('^([456789]{1}[0-9]{9})$'))" />
+        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Claim" />
+      </constraint>
+    </element>
+    <element id="DocumentReference.subject.identifier.system">
+      <path value="DocumentReference.subject.identifier.system" />
+      <min value="1" />
+    </element>
+    <element id="DocumentReference.subject.identifier.value">
+      <path value="DocumentReference.subject.identifier.value" />
+      <min value="1" />
+    </element>
     <element id="DocumentReference.context.practiceSetting">
       <path value="DocumentReference.context.practiceSetting" />
       <binding>

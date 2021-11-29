@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="7236d711-c336-4716-ae3e-d68d9511fe0c"/>
+  <id value="7236d711-c336-4716-ae3e-d68d9511fe0c" />
   <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Immunization" />
   <name value="NHSDigitalImmunization" />
   <status value="draft" />
@@ -101,6 +101,22 @@
     <element id="Immunization.vaccineCode.coding.display">
       <path value="Immunization.vaccineCode.coding.display" />
       <min value="1" />
+    </element>
+    <element id="Immunization.patient">
+      <path value="Immunization.patient" />
+      <constraint>
+        <key value="patient-reference" />
+        <severity value="warning" />
+        <human value="subject - An identifier reference plus a display name or resource reference must be provided" />
+        <expression value="(reference.exists() or (identifier.exists() and display.exists()))" />
+      </constraint>
+      <constraint>
+        <key value="patient-nhs" />
+        <severity value="error" />
+        <human value="Supplied NHS Number is outside the English and Welsh NHS Number range or length of the number is wrong." />
+        <expression value="identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').exists().not() or (identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').exists()  and identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').value.matches('^([456789]{1}[0-9]{9})$'))" />
+        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Claim" />
+      </constraint>
     </element>
     <element id="Immunization.patient.identifier.system">
       <path value="Immunization.patient.identifier.system" />
