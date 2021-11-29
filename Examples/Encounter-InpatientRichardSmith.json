@@ -36,7 +36,7 @@
     "subject": {
         "identifier": {
             "system": "https://fhir.nhs.uk/Id/nhs-number",
-            "value": "987123456"
+            "value": "9871234567"
         },
         "display": "Richard Smith"
     },
