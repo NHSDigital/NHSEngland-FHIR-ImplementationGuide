@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="67329733-af3b-40f1-95f8-a83812dc0a43"/>
-  <url value="https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-PractitionerRole-account" />
-  <name value="ExtensionPractitionerRoleAccount" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-Account" />
+  <name value="ExtensionNHSDigitalAccount" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
   <mapping>
@@ -20,19 +20,24 @@
     <type value="element" />
     <expression value="Claim" />
   </context>
+   <context>
+    <type value="element" />
+    <expression value="MedicationRequest" />
+  </context>
   <type value="Extension" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
   <derivation value="constraint" />
   <differential>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-PractitionerRole-account" />
+      <fixedUri value="https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-Account" />
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Account" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Organization" />
       </type>
     </element>
     <element id="Extension.value[x].identifier.system">

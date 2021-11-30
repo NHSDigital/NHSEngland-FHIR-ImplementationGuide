@@ -28,29 +28,6 @@
         <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole" />
       </constraint>
     </element>
-    <element id="PractitionerRole.extension">
-      <path value="PractitionerRole.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="0" />
-    </element>
-    <element id="PractitionerRole.extension:account">
-      <path value="PractitionerRole.extension" />
-      <sliceName value="account" />
-      <short value="Cost Centre for this role" />
-      <definition value="Is used as the account code." />
-      <min value="0" />
-      <max value="1" />
-      <type>
-        <code value="Extension" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-PractitionerRole-account" />
-      </type>
-    </element>
     <element id="PractitionerRole.identifier">
       <path value="PractitionerRole.identifier" />
       <slicing>
