@@ -1,0 +1,40 @@
+<CodeSystem xmlns="http://hl7.org/fhir">
+    <id value="message-reason-servicerequest" />
+    <url value="https://fhir.nhs.uk/CodeSystem/message-reason-servicerequest" />
+    <identifier>
+        <system value="https://fhir.nhs.uk/identifier/message-reason-code" />
+        <value value="message-reason-service-request" />
+    </identifier>
+    <version value="1.0.0" />
+    <name value="messagereasonservicerequest" />
+    <title value="Message Reason Service Request" />
+    <status value="active" />
+    <date value="2021-11-25" />
+    <publisher value="NHS Digital" />
+    <contact>
+        <name value="NHS Digital" />
+        <telecom>
+            <system value="email" />
+            <value value="interoperabilityteam@nhs.net" />
+            <use value="work" />
+        </telecom>
+    </contact>
+    <description value="Message Reason Service Request codes." />
+    <copyright value="Copyright &#169; 2021 NHS Digital" />
+    <content value="complete" />
+    <concept>
+        <code value="new" />
+        <display value="New" />
+        <definition value="New Service Request." />
+    </concept>
+    <concept>
+        <code value="update" />
+        <display value="Update" />
+        <definition value="Update to a Service Request." />
+    </concept>
+    <concept>
+        <code value="delete" />
+        <display value="Delete" />
+        <definition value="Delete a Service Request." />
+    </concept>
+</CodeSystem>
