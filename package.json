@@ -9,5 +9,6 @@
   "dependencies": {
     "hl7.fhir.r4.core": "4.0.1",
     "UKCore.Release1.test": "1.2.2-prerelease"
-  }
+  },
+  "jurisdiction" : "urn:iso:std:iso:3166:GB-ENG"
 }
