@@ -36,12 +36,27 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Provenance" />
   <derivation value="constraint" />
   <differential>
+   <element id="Provenance.agent">
+      <path value="Provenance.agent" />
+      <mustSupport value="true" />
+    </element>
     <element id="Provenance.agent.who">
       <path value="Provenance.agent.who" />
       <type>
         <code value="Reference" />
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole" />
       </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Provenance.signature">
+      <path value="Provenance.signature" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Provenance.signature.data">
+      <path value="Provenance.signature.data" />
+      <min value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="Provenance.signature.who">
       <path value="Provenance.signature.who" />
@@ -50,6 +65,7 @@
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Practitioner" />
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole" />
       </type>
+      <mustSupport value="true" />
     </element>
   </differential>
 </StructureDefinition>
