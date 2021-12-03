@@ -15,8 +15,8 @@
         {
             "who": {
                 "identifier": {
-                    "system": "https://fhir.nhs.uk/Id/sds-role-profile-id",
-                    "value": "125686540025"
+                    "system": "https://fhir.hl7.org.uk/Id/gmc-number",
+                    "value": "C9876543"
                 }
             }
         }
