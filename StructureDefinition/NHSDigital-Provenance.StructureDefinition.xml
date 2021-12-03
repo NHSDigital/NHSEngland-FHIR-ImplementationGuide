@@ -97,5 +97,9 @@
       </type>
       <mustSupport value="true" />
     </element>
+    <element id="Provenance.signature.who.reference">
+      <path value="Provenance.signature.who.reference" />
+      <min value="1" />
+    </element>
   </differential>
 </StructureDefinition>
