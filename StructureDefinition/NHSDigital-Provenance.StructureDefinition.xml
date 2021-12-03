@@ -67,6 +67,18 @@
       </type>
       <mustSupport value="true" />
     </element>
+    <element id="Provenance.agent.who.identifier">
+      <path value="Provenance.agent.who.identifier" />
+      <min value="1" />
+    </element>
+    <element id="Provenance.agent.who.identifier.system">
+      <path value="Provenance.agent.who.identifier.system" />
+      <min value="1" />
+    </element>
+    <element id="Provenance.agent.who.identifier.value">
+      <path value="Provenance.agent.who.identifier.value" />
+      <min value="1" />
+    </element>
     <element id="Provenance.signature">
       <path value="Provenance.signature" />
       <min value="1" />
