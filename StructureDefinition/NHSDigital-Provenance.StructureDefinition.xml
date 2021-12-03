@@ -58,6 +58,10 @@
       <min value="1" />
       <mustSupport value="true" />
     </element>
+     <element id="Provenance.signature.when">
+      <path value="Provenance.signature.when" />
+      <mustSupport value="true" />
+    </element>
     <element id="Provenance.signature.who">
       <path value="Provenance.signature.who" />
       <type>
