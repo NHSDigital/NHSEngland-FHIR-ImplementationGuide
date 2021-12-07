@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSystem xmlns="http://hl7.org/fhir">
+    <id value="message-category-servicerequest"/>
+    <url value="https://fhir.nhs.uk/CodeSystem/message-category-servicerequest"/>
+    <identifier>
+        <system value="https://fhir.nhs.uk/identifier/CodeSystem"/>
+        <value value="message-category-servicerequest"/>
+    </identifier>
+    <version value="1.0.0"/>
+    <name value="messagecategoryservicerequest"/>
+    <title value="Message Category Service Request"/>
+    <status value="active"/>
+    <date value="2021-12-07"/>
+    <publisher value="NHS Digital"/>
+    <contact>
+        <name value="NHS Digital" />
+        <telecom>
+            <system value="email" />
+            <value value="interoperabilityteam@nhs.net" />
+            <use value="work" />
+        </telecom>
+    </contact>
+    <description value="Common messaging categories for Service Requests."/>
+    <copyright value="Copyright &#169; 2021 NHS Digital" />
+    <caseSensitive value="true"/>
+    <content value="complete"/>
+    <concept>
+        <code value="validation" />
+        <display value="For Validation" />
+        <definition value="A Service Request for Validation"/>
+    </concept>
+    <concept>
+        <code value="case-transfer" />
+        <display value="For Transfer of Care" />
+        <definition value="A Service Request for Transfer of Care"/>
+    </concept>
+</CodeSystem>
