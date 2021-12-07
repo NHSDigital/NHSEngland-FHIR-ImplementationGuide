@@ -35,16 +35,6 @@
         <definition value="A Service Request - response to the service"/>
     </concept>
     <concept>
-        <code value="validation-request" />
-        <display value="Validation Request - Request" />
-        <definition value="A Validation Request - request for service"/>
-    </concept>
-    <concept>
-        <code value="validation-response" />
-        <display value="Validation Request - Response" />
-        <definition value="A Validation Request - response to the service"/>
-    </concept>
-    <concept>
         <code value="booking-request" />
         <display value="Booking Request - Request" />
         <definition value="A Booking Request - request for service"/>
