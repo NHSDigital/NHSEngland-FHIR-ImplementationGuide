@@ -36,12 +36,62 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Provenance" />
   <derivation value="constraint" />
   <differential>
+    <element id="Provenance.target">
+      <path value="Provenance.target" />
+      <type>
+        <code value="Reference" />
+        <aggregation value="bundled" />
+      </type>
+    </element>
+    <element id="Provenance.target.identifier">
+      <path value="Provenance.target.identifier" />
+      <min value="1" />
+    </element>
+    <element id="Provenance.target.identifier.system">
+      <path value="Provenance.target.identifier.system" />
+      <min value="1" />
+    </element>
+    <element id="Provenance.target.identifier.value">
+      <path value="Provenance.target.identifier.value" />
+      <min value="1" />
+    </element>
+   <element id="Provenance.agent">
+      <path value="Provenance.agent" />
+      <mustSupport value="true" />
+    </element>
     <element id="Provenance.agent.who">
       <path value="Provenance.agent.who" />
       <type>
         <code value="Reference" />
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole" />
       </type>
+       <constraint>
+        <key value="who-reference" />
+        <severity value="warning" />
+        <human value="agent.who - An identifier reference plus a display name or resource reference must be provided" />
+        <expression value="(reference.exists() or identifier.exists())" />
+      </constraint>
+      <mustSupport value="true" />
+    </element>
+    <element id="Provenance.agent.who.identifier">
+      <path value="Provenance.agent.who.identifier" />
+    </element>
+    <element id="Provenance.agent.who.identifier.system">
+      <path value="Provenance.agent.who.identifier.system" />
+      <min value="1" />
+    </element>
+    <element id="Provenance.agent.who.identifier.value">
+      <path value="Provenance.agent.who.identifier.value" />
+      <min value="1" />
+    </element>
+    <element id="Provenance.signature">
+      <path value="Provenance.signature" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+     <element id="Provenance.signature.when">
+      <path value="Provenance.signature.when" />
+      <mustSupport value="true" />
     </element>
     <element id="Provenance.signature.who">
       <path value="Provenance.signature.who" />
@@ -50,6 +100,11 @@
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Practitioner" />
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole" />
       </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Provenance.signature.who.reference">
+      <path value="Provenance.signature.who.reference" />
+      <min value="1" />
     </element>
   </differential>
 </StructureDefinition>
