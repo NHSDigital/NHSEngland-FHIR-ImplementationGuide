@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-PractitionerRole-account" />
+  <name value="ExtensionNHSDigitalPractitionerRoleaccount" />
+  <status value="draft" />
+  <fhirVersion value="4.0.1" />
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <context>
+    <type value="element" />
+    <expression value="PractitionerRole" />
+  </context>
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Extension">
+      <path value="Extension" />
+      <max value="1" />
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url" />
+      <fixedUri value="https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-PractitionerRole-account" />
+    </element>
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Account" />
+      </type>
+    </element>
+    <element id="Extension.value[x].identifier">
+      <path value="Extension.value[x].identifier" />
+      <min value="1" />
+    </element>
+    <element id="Extension.value[x].identifier.system">
+      <path value="Extension.value[x].identifier.system" />
+      <min value="1" />
+    </element>
+    <element id="Extension.value[x].identifier.value">
+      <path value="Extension.value[x].identifier.value" />
+      <min value="1" />
+    </element>
+  </differential>
+</StructureDefinition>
