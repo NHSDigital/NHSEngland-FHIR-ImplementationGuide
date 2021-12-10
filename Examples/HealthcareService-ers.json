@@ -1,0 +1,77 @@
+{
+  "resourceType": "HealthcareService",
+  "id": "76de72bc-f001-49fa-84c6-af15a4fdb72c",
+  "identifier": [
+    {
+      "use": "official",
+      "system": "http://fhir.nhs.net/Id/ers-service",
+      "value": "11021"
+    }
+  ],
+  "active": true,
+  "providedBy": {
+    "identifier": {
+      "system": "https://fhir.nhs.uk/Id/ods-organization-code",
+      "value": "RBA"
+    }
+  },
+  "type": [
+    {
+      "coding": [
+        {
+          "system": "https://fhir.nhs.uk/CodeSystem/eRS-ClinicType",
+          "code": "LIPID_MANAGEMENT"
+        }
+      ]
+    }
+  ],
+  "specialty": [
+    {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "394592004",
+          "display": "Clinical oncology"
+        }
+      ]
+    }
+  ],
+  "location": [
+    {
+      "reference": "urn:uuid:8a5d7d67-64fb-44ec-9802-2dc214bb3dcb"
+    }
+  ],
+  "name": "SOMERSET BOWEL CANCER SCREENING CENTRE",
+  "telecom": [
+    {
+      "system": "phone",
+      "value": "0113 922 4984",
+      "use": "work"
+    },
+    {
+      "system": "email",
+      "value": "directaddress@example.com",
+      "use": "work"
+    }
+  ],
+  "availableTime": [
+    {
+      "daysOfWeek": [
+        "mon",
+        "tue",
+        "wed",
+        "thu"
+      ],
+      "availableStartTime": "08:30:00",
+      "availableEndTime": "05:30:00"
+    },
+    {
+      "daysOfWeek": [
+        "sat",
+        "fri"
+      ],
+      "availableStartTime": "09:30:00",
+      "availableEndTime": "04:30:00"
+    }
+  ]
+}
