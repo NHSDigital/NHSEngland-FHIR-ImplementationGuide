@@ -36,6 +36,7 @@
     <element id="Extension.value[x].identifier.system">
       <path value="Extension.value[x].identifier.system" />
       <min value="1" />
+      <fixedUri value="https://fhir.nhs.uk/Id/ods-organization-code" />
     </element>
     <element id="Extension.value[x].identifier.value">
       <path value="Extension.value[x].identifier.value" />
