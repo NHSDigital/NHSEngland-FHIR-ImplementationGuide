@@ -46,7 +46,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-PractitionerRole-account" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-Account-code" />
       </type>
     </element>
     <element id="PractitionerRole.identifier">
