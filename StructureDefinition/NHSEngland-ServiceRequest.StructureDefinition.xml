@@ -7,7 +7,7 @@
   <kind value="resource" />
   <abstract value="false" />
   <type value="ServiceRequest" />
-  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/ServiceRequest" />
+  <baseDefinition value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-ServiceRequest" />
   <derivation value="constraint" />
   <differential>
     <element id="ServiceRequest.subject.identifier">
