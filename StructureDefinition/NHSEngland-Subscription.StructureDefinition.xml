@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="https://fhir.nhs.uk/StructureDefinition/NHSEngland-Subscription" />
+  <name value="NHSEnglandSubscription" />
+  <status value="draft" />
+  <fhirVersion value="4.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Subscription" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Subscription" />
+  <derivation value="constraint" />
+</StructureDefinition>
