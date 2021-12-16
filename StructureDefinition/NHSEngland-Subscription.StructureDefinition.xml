@@ -9,4 +9,10 @@
   <type value="Subscription" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Subscription" />
   <derivation value="constraint" />
+  <differential>
+    <element id="Subscription">
+      <path value="Subscription" />
+      <comment value="Reserved for BaRS and eRS use" />
+    </element>
+  </differential>
 </StructureDefinition>
