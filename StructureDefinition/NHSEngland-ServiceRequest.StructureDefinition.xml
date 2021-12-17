@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="https://fhir.nhs.uk/StructureDefinition/NHSEngland-ServiceRequest" />
+  <name value="NHSEnglandServiceRequest" />
+  <status value="draft" />
+  <fhirVersion value="4.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="ServiceRequest" />
+  <baseDefinition value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-ServiceRequest" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="ServiceRequest.subject.identifier">
+      <path value="ServiceRequest.subject.identifier" />
+      <min value="1" />
+    </element>
+    <element id="ServiceRequest.subject.identifier.system">
+      <path value="ServiceRequest.subject.identifier.system" />
+      <min value="1" />
+    </element>
+    <element id="ServiceRequest.subject.identifier.value">
+      <path value="ServiceRequest.subject.identifier.value" />
+      <min value="1" />
+    </element>
+    <element id="ServiceRequest.requester">
+      <path value="ServiceRequest.requester" />
+      <min value="1" />
+    </element>
+    <element id="ServiceRequest.requester.identifier">
+      <path value="ServiceRequest.requester.identifier" />
+      <min value="1" />
+    </element>
+    <element id="ServiceRequest.requester.identifier.system">
+      <path value="ServiceRequest.requester.identifier.system" />
+      <min value="1" />
+    </element>
+    <element id="ServiceRequest.requester.identifier.value">
+      <path value="ServiceRequest.requester.identifier.value" />
+      <min value="1" />
+    </element>
+    <element id="ServiceRequest.performer.identifier">
+      <path value="ServiceRequest.performer.identifier" />
+      <min value="1" />
+    </element>
+    <element id="ServiceRequest.performer.identifier.system">
+      <path value="ServiceRequest.performer.identifier.system" />
+      <min value="1" />
+    </element>
+    <element id="ServiceRequest.performer.identifier.value">
+      <path value="ServiceRequest.performer.identifier.value" />
+      <min value="1" />
+    </element>
+  </differential>
+</StructureDefinition>
