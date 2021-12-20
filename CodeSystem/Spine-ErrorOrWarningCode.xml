@@ -1,7 +1,7 @@
 <CodeSystem xmlns="http://hl7.org/fhir">
    <id value="NHSDigital-ErrorOrWarningCode" />
    <url value="https://fhir.nhs.uk/CodeSystem/Spine-ErrorOrWarningCode" />
-   <version value="2.0.0" />
+   <version value="2.1.0" />
    <name value="spineerrororwarningcode" />
    <status value="active" />
    <date value="2020-08-27T00:00:00+00:00" />
@@ -132,5 +132,10 @@
       <code value="POLLING_MESSAGE_FAILURE" />
       <display value="Polling message failure" />
       <definition value="When polling an ID, a message was found to be in a failed state, so there is nothing else to be done and should be considered a failure." />
+   </concept>
+   <concept>
+      <code value="INVALID_METHOD" />
+      <display value="Invalid method" />
+      <definition value="The request method is not permitted." />
    </concept>
 </CodeSystem>
