@@ -56,8 +56,11 @@ jobs:
         env:
           ACTIONS_ALLOW_UNSECURE_COMMANDS: true
 
-      - name: Install Java
-        run: sudo apt-get install --yes default-jre default-jdk
+      - name: Set up JDK 11
+        uses: actions/setup-java@v2
+        with:
+          java-version: '11'
+          distribution: 'adopt'
 
       - name: Install node
         run: |
