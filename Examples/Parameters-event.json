@@ -1,0 +1,86 @@
+{
+    "resourceType": "Parameters",
+    "id": "8cfc9cff-1d9a-40b2-9c00-2dfde1f3ee98",
+    "parameter":  [
+        {
+            "name": "identifier",
+            "valueIdentifier": {
+                "value": "8cfc9cff-1d9a-40b2-9c00-2dfde1f3ee98"
+            }
+        },
+        {
+            "name": "type",
+            "valueCode": "create"
+        },
+        {
+            "name": "recorded",
+            "valueDateTime": "2022-01-07T15:06:00+00:00"
+        },
+        {
+            "name": "reference",
+            "valueReference" : {
+                "type" : "Task",
+                "reference" : "https://fhir.leedsth.nhs.uk/Task/44596c71-e63b-4059-8aca-76d9b339a76c"
+            }
+        },
+        {
+            "name": "resource",
+            "resource": {
+                "resourceType": "Task",
+                "id" : "44596c71-e63b-4059-8aca-76d9b339a76c",
+                "status": "accepted",
+                "intent": "order",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://hl7.org/fhir/CodeSystem/task-code",
+                            "code": "fulfill",
+                            "display": "Fulfill the focal request"
+                        }
+                    ]
+                },
+                "focus": {
+                    "reference" : "https://api.ers-service.nhs.uk/FHIR/R4/ServiceRequest/dafb61c6-7042-40aa-a72d-843f1936b573",
+                    "identifier" : {
+                        "system" : "https://fhir.nhs.uk/Id/UBRN",
+                        "value" : "44596c71-e63b-4059-8aca-76d9b339a76c"
+                    }
+                },
+                "for": {
+                    "identifier": {
+                        "system": "https://fhir.nhs.uk/Id/nhs-number",
+                        "value": "9446368138"
+                    }
+                },
+                "owner": {
+                    "reference" : "https://directory.spineservices.nhs.uk/R4/Organization/RR8",
+                    "identifier": {
+                        "system": "https://fhir.nhs.uk/Id/ods-organization-code",
+                        "value": "RR8"
+                    }
+                },
+                "requester": {
+                    "reference" : "https://api.nhs.uk/spine-directory/FHIR/R4/Practitioner/3415870201",
+                    "identifier": {
+                        "system": "https://fhir.hl7.org.uk/Id/gmp-number",
+                        "value": "G1234567"
+                      }
+                },
+                "authoredOn": "2021-10-09T12:00:00+00:00",
+                "reasonCode": {
+                    "coding": [
+                        {
+                            "system": "http://snomed.info/sct",
+                            "code": "306185001",
+                            "display": "Referral to cardiac surgery service"
+                        },
+                        {
+                            "system": "https://fhir.nhs.uk/CodeSystem/eRS-SPECIALTY",
+                            "code": "CARDIOLOGY"
+                          }
+                    ]
+                }
+            }
+        }
+    ]
+}
