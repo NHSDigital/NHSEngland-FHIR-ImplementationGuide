@@ -60,10 +60,9 @@
                     }
                 },
                 "requester": {
-                    "reference" : "https://api.nhs.uk/spine-directory/FHIR/R4/Practitioner/3415870201",
                     "identifier": {
-                        "system": "https://fhir.hl7.org.uk/Id/gmp-number",
-                        "value": "G1234567"
+                        "system": "https://fhir.nhs.uk/Id/ods-organization-code",
+                        "value": "GP0001"
                       }
                 },
                 "authoredOn": "2021-10-09T12:00:00+00:00",

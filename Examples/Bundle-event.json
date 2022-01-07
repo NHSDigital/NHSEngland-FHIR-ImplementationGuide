@@ -28,18 +28,6 @@
                     "display" : "NHS Digital Spine"
 
                 },
-                "destination":  [
-                    {
-                        "endpoint": "urn:nhs-uk:addressing:ods:GP0001",
-                        "receiver": {
-                            "identifier": {
-                                "system": "https://fhir.nhs.uk/Id/ods-organization-code",
-                                "value": "GP0001"
-                            },
-                            "display": "Cumbria Starling Medical Centre"
-                        }
-                    }
-                ],
                 "focus":  [
                     {
                         "reference": "urn:uuid:70c35c4a-65f4-4a03-bcf7-d1041ab999fd"
