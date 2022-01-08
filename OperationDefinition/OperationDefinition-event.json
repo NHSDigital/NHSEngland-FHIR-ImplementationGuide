@@ -53,7 +53,7 @@
             "type": "dateTime"
         },
         {
-            "name": "reference",
+            "name": "eventReference",
             "use": "in",
             "min": 1,
             "max": "1",
@@ -61,7 +61,7 @@
             "type": "Reference"
         },
         {
-            "name": "resource",
+            "name": "eventResource",
             "use": "in",
             "min": 0,
             "max": "1",

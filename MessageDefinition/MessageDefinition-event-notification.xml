@@ -18,7 +18,7 @@
      <description value="Notification of events."/>
     <category value="notification" />
     <focus>
-        <code value="Parameter" />
+        <code value="Parameters" />
         <min value="1" />
         <max value="1" />
     </focus>
