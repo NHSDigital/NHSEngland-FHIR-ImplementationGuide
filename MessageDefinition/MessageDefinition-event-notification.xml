@@ -19,6 +19,7 @@
     <category value="notification" />
     <focus>
         <code value="Parameters" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/NHSEngland-Parameters-SubscriptionStatus" />
         <min value="1" />
         <max value="1" />
     </focus>
