@@ -49,7 +49,7 @@
                         "part" : [
                             {
                                 "name": "eventNumber",
-                                "valueIntegerType": "1"
+                                "valueInteger": "1"
                             },
                             {
                                 "name": "timestamp",
