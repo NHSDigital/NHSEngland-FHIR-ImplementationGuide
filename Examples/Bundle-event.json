@@ -17,8 +17,8 @@
                 },
                 "eventCoding": {
                     "system": "https://fhir.nhs.uk/CodeSystem/message-event",
-                    "code": "event-notification",
-                    "display": "Event Notification"
+                    "code": "subscription-notification",
+                    "display": "Subscription Event Notification"
                 },
                 "sender": {
                     "identifier": {
@@ -55,7 +55,7 @@
                         "valueDateTime": "2022-01-07T15:06:00+00:00"
                     },
                     {
-                        "name": "eventReference",
+                        "name": "notificationEventReference",
                         "valueReference" : {
                             "type" : "Task",
                             "reference" : "https://fhir.leedsth.nhs.uk/Task/44596c71-e63b-4059-8aca-76d9b339a76c"

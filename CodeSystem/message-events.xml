@@ -82,8 +82,8 @@
         <definition value="Patient referral/handover"/>
     </concept>
     <concept>
-        <code value="event-notification" />
-        <display value="Event Notification" />
+        <code value="subscription-notification" />
+        <display value="Subscription Event Notification" />
         <definition value="Event Notification"/>
     </concept>
 </CodeSystem>

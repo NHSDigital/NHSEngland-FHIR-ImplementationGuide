@@ -6,7 +6,7 @@
     },
     "url": "https://fhir.nhs.uk/OperationDefinition/Task-release-message",
     "version": "4.0.1",
-    "name": "event",
+    "name": "subscriptionEvent",
     "status": "draft",
     "kind": "operation",
     "date": "2022-01-07T14:00:00+00:00",
@@ -21,9 +21,9 @@
             ]
         }
     ],
-    "description": "Mock of event API",
-    "code": "event",
-    "comment": "Mock of event API",
+    "description": "Mock of subscription event API",
+    "code": "subscriptionEvent",
+    "comment": "Mock of subscription event API",
     "system": true,
     "type": false,
     "instance": false,
@@ -53,7 +53,7 @@
             "type": "dateTime"
         },
         {
-            "name": "eventReference",
+            "name": "notificationEventReference",
             "use": "in",
             "min": 1,
             "max": "1",
@@ -61,12 +61,20 @@
             "type": "Reference"
         },
         {
-            "name": "eventResource",
+            "name": "notificationEventResource",
             "use": "in",
             "min": 0,
             "max": "1",
             "documentation": "The event resource. Mandatory for subscription event submission",
             "type": "Resource"
+        },
+        {
+            "name": "topic",
+            "use": "in",
+            "min": 0,
+            "max": "1",
+            "documentation": "Reference to the SubscriptionTopic this notification relates to (topics are related to event triggers in other HL7 standards) ",
+            "type": "canonical"
         },
         {
             "name": "return",
