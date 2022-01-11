@@ -30,8 +30,13 @@
         <definition value="A Service Request for Validation"/>
     </concept>
     <concept>
-        <code value="case-transfer" />
-        <display value="For Transfer of Care" />
+        <code value="referral" />
+        <display value="Transfer of Care" />
         <definition value="A Service Request for Transfer of Care"/>
+    </concept>
+    <concept>
+        <code value="request" />
+        <display value="Request for service (eg: blood test)" />
+        <definition value="A Service Request"/>
     </concept>
 </CodeSystem>
