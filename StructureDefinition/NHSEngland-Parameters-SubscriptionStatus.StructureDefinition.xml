@@ -146,6 +146,10 @@
       <short value="Reference to the SubscriptionTopic this notification relates to" />
       <max value="1" />
     </element>
+    <element id="Parameters.parameter:topic.name">
+      <path value="Parameters.parameter.name" />
+      <fixedString value="topic" />
+    </element>
     <element id="Parameters.parameter:topic.value[x]">
       <path value="Parameters.parameter.value[x]" />
       <min value="1" />
