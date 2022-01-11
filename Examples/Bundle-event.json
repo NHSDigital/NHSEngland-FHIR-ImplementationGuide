@@ -53,7 +53,7 @@
                             },
                             {
                                 "name": "timestamp",
-                                "valueDateTime": "2022-01-07T15:06:00+00:00"
+                                "valueInstant": "2022-01-07T15:06:00+00:00"
                             },
                             {
                                 "name": "focus",
