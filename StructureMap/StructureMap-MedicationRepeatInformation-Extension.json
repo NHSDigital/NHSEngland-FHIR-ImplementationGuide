@@ -1,6 +1,7 @@
 {
   "resourceType": "StructureMap",
   "id": "1",
+  "status": "draft",
   "meta": {
     "versionId": "39",
     "lastUpdated": "2022-01-11T15:15:39.398+00:00"
