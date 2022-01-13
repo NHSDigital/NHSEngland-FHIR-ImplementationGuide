@@ -4,7 +4,7 @@
     "meta": {
         "lastUpdated": "2022-01-07T14:00:00+00:00"
     },
-    "url": "https://fhir.nhs.uk/OperationDefinition/Task-release-message",
+    "url": "https://fhir.nhs.uk/OperationDefinition/subscription-event",
     "version": "4.0.1",
     "name": "subscriptionEvent",
     "status": "draft",
