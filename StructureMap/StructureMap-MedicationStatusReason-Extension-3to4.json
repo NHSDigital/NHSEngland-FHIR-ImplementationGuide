@@ -1,16 +1,17 @@
 {
   "resourceType": "StructureMap",
-  "id": "1",
+  "id": "4",
+  "status": "draft",
   "meta": {
-    "versionId": "39",
-    "lastUpdated": "2022-01-11T15:15:39.398+00:00"
+    "versionId": "1",
+    "lastUpdated": "2022-01-13T11:23:18.359+00:00"
   },
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><pre>map &quot;http://basic.test/medication-request&quot; = &quot;basic-test-medication-requesta&quot;\r\n\r\n\r\nuses &quot;http://hl7.org/fhir/StructureDefinition/MedicationRequest&quot; alias MedicationRequest as source\r\nuses &quot;http://hl7.org/fhir/StructureDefinition/MedicationRequest&quot; alias MedicationRequest as target\r\nuses &quot;http://hl7.org/fhir/StructureDefinition/CodeableConcept&quot; alias CodeableConcept as source\r\nuses &quot;http://hl7.org/fhir/StructureDefinition/CodeableConcept&quot; alias CodeableConcept as target\r\nuses &quot;http://hl7.org/fhir/StructureDefinition/Coding&quot; alias Coding as source\r\nuses &quot;http://hl7.org/fhir/StructureDefinition/Coding&quot; alias Coding as target\r\n\r\ngroup MedicationRequest(source src : MedicationRequest, target tgt : MedicationRequest) {\r\n  src.extension as ext where $this.url = 'https://fhir.nhs.uk/STU3/StructureDefinition/Extension-CareConnect-MedicationStatusReason-1' -&gt; tgt.statusReason as vt then {\r\n    ext.extension as vs where $this.url = 'statusReason' -&gt; tgt.statusReason as vt1 then {\r\n      vs.value : CodeableConcept as vs1 -&gt; tgt.statusReason as vt2 then CodeableConceptStatusReason(vs1, vt2);\r\n    };\r\n  };\r\n}\r\n\r\ngroup CodeableConceptStatusReason(source src : CodeableConcept, target tgt : CodeableConcept) {\r\n  // src.coding -&gt; tgt.coding; the short form is only woking when you have a &lt;&lt;type&gt;&gt;\r\n  src.coding -&gt; tgt.coding;\r\n  src.text as text -&gt; tgt.text = text;\r\n}\r\n\r\ngroup Coding(source src : Coding, target tgt : Coding) &lt;&lt;type+&gt;&gt; {\r\n  src.system as system where $this = 'https://fhir.nhs.uk/STU3/CodeSystem/CareConnect-PrescriptionType-1' -&gt; tgt.system = 'UPDATED CODESYSTEM HERE';\r\n  src.version as version -&gt; tgt.version = version;\r\n  src.code as code -&gt; tgt.code = code;\r\n  src.display as display -&gt; tgt.display = display;\r\n  src.userSelected as userSelected -&gt; tgt.userSelected = userSelected;\r\n}\r\n\r\n</pre></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><pre>map &quot;http://fhir.nhs.uk/StructureMap/MedicationStatusReason-Extension-3to4&quot; = &quot;R3 to R4 conversion for CareConnect MedicationStatusReason extension&quot;\r\n\r\n\r\nuses &quot;http://hl7.org/fhir/StructureDefinition/MedicationRequest&quot; alias MedicationRequest as source\r\nuses &quot;http://hl7.org/fhir/StructureDefinition/MedicationRequest&quot; alias MedicationRequest as target\r\n\r\ngroup MedicationRequest(source src : MedicationRequest, target tgt : MedicationRequest) {\r\n  src.extension as ext where $this.url = 'https://fhir.nhs.uk/STU3/StructureDefinition/Extension-CareConnect-MedicationStatusReason-1' -&gt; tgt.statusReason as vt then {\r\n    ext.extension as vs where $this.url = 'statusReason' -&gt; tgt.statusReason as vt1 then {\r\n      vs.value : CodeableConcept as vs1 -&gt; tgt.statusReason as vt2 then CodeableConceptStatusReason(vs1, vt2);\r\n    };\r\n  };\r\n}\r\n\r\ngroup CodeableConceptStatusReason(source src : CodeableConcept, target tgt : CodeableConcept) {\r\n  // src.coding -&gt; tgt.coding; the short form is only woking when you have a &lt;&lt;type&gt;&gt;\r\n  src.coding -&gt; tgt.coding;\r\n  src.text as text -&gt; tgt.text = text;\r\n}\r\n\r\ngroup Coding(source src : Coding, target tgt : Coding) &lt;&lt;type+&gt;&gt; {\r\n  src.system as system -&gt; tgt.system = system;\r\n  src.version as version -&gt; tgt.version = version;\r\n  src.code as code -&gt; tgt.code = code;\r\n  src.display as display -&gt; tgt.display = display;\r\n  src.userSelected as userSelected -&gt; tgt.userSelected = userSelected;\r\n}\r\n\r\n</pre></div>"
   },
-  "url": "http://basic.test/medication-request",
-  "name": "basic-test-medication-requesta",
+  "url": "http://fhir.nhs.uk/StructureMap/MedicationStatusReason-Extension-3to4",
+  "name": "R3 to R4 conversion for CareConnect MedicationStatusReason extension",
   "structure": [ {
     "url": "http://hl7.org/fhir/StructureDefinition/MedicationRequest",
     "mode": "source",
@@ -19,22 +20,6 @@
     "url": "http://hl7.org/fhir/StructureDefinition/MedicationRequest",
     "mode": "target",
     "alias": "MedicationRequest"
-  }, {
-    "url": "http://hl7.org/fhir/StructureDefinition/CodeableConcept",
-    "mode": "source",
-    "alias": "CodeableConcept"
-  }, {
-    "url": "http://hl7.org/fhir/StructureDefinition/CodeableConcept",
-    "mode": "target",
-    "alias": "CodeableConcept"
-  }, {
-    "url": "http://hl7.org/fhir/StructureDefinition/Coding",
-    "mode": "source",
-    "alias": "Coding"
-  }, {
-    "url": "http://hl7.org/fhir/StructureDefinition/Coding",
-    "mode": "target",
-    "alias": "Coding"
   } ],
   "group": [ {
     "name": "MedicationRequest",
@@ -158,8 +143,7 @@
       "source": [ {
         "context": "src",
         "element": "system",
-        "variable": "system",
-        "condition": "$this = 'https://fhir.nhs.uk/STU3/CodeSystem/CareConnect-PrescriptionType-1'"
+        "variable": "system"
       } ],
       "target": [ {
         "context": "tgt",
@@ -167,7 +151,7 @@
         "element": "system",
         "transform": "copy",
         "parameter": [ {
-          "valueString": "UPDATED CODESYSTEM HERE"
+          "valueId": "system"
         } ]
       } ]
     }, {
