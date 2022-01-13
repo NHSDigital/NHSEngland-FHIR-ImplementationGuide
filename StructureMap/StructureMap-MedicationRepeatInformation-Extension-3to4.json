@@ -1,0 +1,262 @@
+{
+  "resourceType": "StructureMap",
+  "id": "3",
+  "status": "draft",
+  "meta": {
+    "versionId": "1",
+    "lastUpdated": "2022-01-13T11:14:54.242+00:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><pre>map &quot;http://fhir.nhs.uk/StructureMap/MedicationRepeatInformation-Extension-3to4&quot; = &quot;R3 to R4 conversion for CareConnect MedicationRepeatInformation extension&quot;\r\n\r\n\r\nuses &quot;http://hl7.org/fhir/StructureDefinition/MedicationRequest&quot; alias MedicationRequest as source\r\nuses &quot;http://hl7.org/fhir/StructureDefinition/MedicationRequest&quot; alias MedicationRequest as target\r\n\r\ngroup MedicationRequest(source src : MedicationRequest, target tgt : MedicationRequest) {\r\n  src.extension as ext where $this.url = 'https://fhir.nhs.uk/STU3/StructureDefinition/Extension-CareConnect-MedicationRepeatInformation-1' -&gt;  tgt.extension as tgtext,  tgtext.url = 'https://fhir.nhs.uk/StructureDefinition/Extension-UKCore-MedicationRepeatInformation' then {\r\n    ext.extension as vs where $this.url = 'numberOfRepeatPrescriptionsIssued' -&gt;  tgtext.extension = create('Extension') as vt,  vt.url = 'numberOfRepeatPrescriptionsIssued' then ExtensionUnsignedIntValue(vs, vt);\r\n    ext.extension as vs where $this.url = 'authorisationExpiryDate' -&gt;  tgtext.extension = create('Extension') as vt,  vt.url = 'authorisationExpiryDate' then ExtensionDateTimeValue(vs, vt);\r\n  };\r\n  src.extension as ext where $this.url = 'https://fhir.nhs.uk/STU3/StructureDefinition/Extension-CareConnect-MedicationRepeatInformation-1' -&gt; tgt.extension as tgtext then {\r\n    ext.extension as vs where $this.url = 'numberOfRepeatPrescriptionsAllowed' -&gt; tgt.dispenseRequest as vt then DispenseRequest(vs, vt);\r\n  };\r\n}\r\n\r\ngroup ExtensionUnsignedIntValue(source src, target tgt) {\r\n  src.value as vs -&gt;  tgt.value = create('unsignedInt') as vt,  vt.value = vs;\r\n}\r\n\r\ngroup ExtensionDateTimeValue(source src, target tgt) {\r\n  src.value as vs -&gt;  tgt.value = create('dateTime') as vt,  vt.value = vs;\r\n}\r\n\r\ngroup DispenseRequest(source src, target tgt) {\r\n  src.value as vs -&gt;  tgt.numberOfRepeatsAllowed = create('unsignedInt') as vt,  vt.value = vs;\r\n}\r\n\r\n</pre></div>"
+  },
+  "url": "http://fhir.nhs.uk/StructureMap/MedicationRepeatInformation-Extension-3to4",
+  "name": "R3 to R4 conversion for CareConnect MedicationRepeatInformation extension",
+  "structure": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/MedicationRequest",
+    "mode": "source",
+    "alias": "MedicationRequest"
+  }, {
+    "url": "http://hl7.org/fhir/StructureDefinition/MedicationRequest",
+    "mode": "target",
+    "alias": "MedicationRequest"
+  } ],
+  "group": [ {
+    "name": "MedicationRequest",
+    "typeMode": "none",
+    "input": [ {
+      "name": "src",
+      "type": "MedicationRequest",
+      "mode": "source"
+    }, {
+      "name": "tgt",
+      "type": "MedicationRequest",
+      "mode": "target"
+    } ],
+    "rule": [ {
+      "name": "extension",
+      "source": [ {
+        "context": "src",
+        "element": "extension",
+        "variable": "ext",
+        "condition": "$this.url = 'https://fhir.nhs.uk/STU3/StructureDefinition/Extension-CareConnect-MedicationRepeatInformation-1'"
+      } ],
+      "target": [ {
+        "context": "tgt",
+        "contextType": "variable",
+        "element": "extension",
+        "variable": "tgtext"
+      }, {
+        "context": "tgtext",
+        "contextType": "variable",
+        "element": "url",
+        "transform": "copy",
+        "parameter": [ {
+          "valueString": "https://fhir.nhs.uk/StructureDefinition/Extension-UKCore-MedicationRepeatInformation"
+        } ]
+      } ],
+      "rule": [ {
+        "name": "extension",
+        "source": [ {
+          "context": "ext",
+          "element": "extension",
+          "variable": "vs",
+          "condition": "$this.url = 'numberOfRepeatPrescriptionsIssued'"
+        } ],
+        "target": [ {
+          "context": "tgtext",
+          "contextType": "variable",
+          "element": "extension",
+          "variable": "vt",
+          "transform": "create",
+          "parameter": [ {
+            "valueString": "Extension"
+          } ]
+        }, {
+          "context": "vt",
+          "contextType": "variable",
+          "element": "url",
+          "transform": "copy",
+          "parameter": [ {
+            "valueString": "numberOfRepeatPrescriptionsIssued"
+          } ]
+        } ],
+        "dependent": [ {
+          "name": "ExtensionUnsignedIntValue",
+          "variable": [ "vs", "vt" ]
+        } ]
+      }, {
+        "name": "extension",
+        "source": [ {
+          "context": "ext",
+          "element": "extension",
+          "variable": "vs",
+          "condition": "$this.url = 'authorisationExpiryDate'"
+        } ],
+        "target": [ {
+          "context": "tgtext",
+          "contextType": "variable",
+          "element": "extension",
+          "variable": "vt",
+          "transform": "create",
+          "parameter": [ {
+            "valueString": "Extension"
+          } ]
+        }, {
+          "context": "vt",
+          "contextType": "variable",
+          "element": "url",
+          "transform": "copy",
+          "parameter": [ {
+            "valueString": "authorisationExpiryDate"
+          } ]
+        } ],
+        "dependent": [ {
+          "name": "ExtensionDateTimeValue",
+          "variable": [ "vs", "vt" ]
+        } ]
+      } ]
+    }, {
+      "name": "extension",
+      "source": [ {
+        "context": "src",
+        "element": "extension",
+        "variable": "ext",
+        "condition": "$this.url = 'https://fhir.nhs.uk/STU3/StructureDefinition/Extension-CareConnect-MedicationRepeatInformation-1'"
+      } ],
+      "target": [ {
+        "context": "tgt",
+        "contextType": "variable",
+        "element": "extension",
+        "variable": "tgtext"
+      } ],
+      "rule": [ {
+        "name": "extension",
+        "source": [ {
+          "context": "ext",
+          "element": "extension",
+          "variable": "vs",
+          "condition": "$this.url = 'numberOfRepeatPrescriptionsAllowed'"
+        } ],
+        "target": [ {
+          "context": "tgt",
+          "contextType": "variable",
+          "element": "dispenseRequest",
+          "variable": "vt"
+        } ],
+        "dependent": [ {
+          "name": "DispenseRequest",
+          "variable": [ "vs", "vt" ]
+        } ]
+      } ]
+    } ]
+  }, {
+    "name": "ExtensionUnsignedIntValue",
+    "typeMode": "none",
+    "input": [ {
+      "name": "src",
+      "mode": "source"
+    }, {
+      "name": "tgt",
+      "mode": "target"
+    } ],
+    "rule": [ {
+      "name": "value",
+      "source": [ {
+        "context": "src",
+        "element": "value",
+        "variable": "vs"
+      } ],
+      "target": [ {
+        "context": "tgt",
+        "contextType": "variable",
+        "element": "value",
+        "variable": "vt",
+        "transform": "create",
+        "parameter": [ {
+          "valueString": "unsignedInt"
+        } ]
+      }, {
+        "context": "vt",
+        "contextType": "variable",
+        "element": "value",
+        "transform": "copy",
+        "parameter": [ {
+          "valueId": "vs"
+        } ]
+      } ]
+    } ]
+  }, {
+    "name": "ExtensionDateTimeValue",
+    "typeMode": "none",
+    "input": [ {
+      "name": "src",
+      "mode": "source"
+    }, {
+      "name": "tgt",
+      "mode": "target"
+    } ],
+    "rule": [ {
+      "name": "value",
+      "source": [ {
+        "context": "src",
+        "element": "value",
+        "variable": "vs"
+      } ],
+      "target": [ {
+        "context": "tgt",
+        "contextType": "variable",
+        "element": "value",
+        "variable": "vt",
+        "transform": "create",
+        "parameter": [ {
+          "valueString": "dateTime"
+        } ]
+      }, {
+        "context": "vt",
+        "contextType": "variable",
+        "element": "value",
+        "transform": "copy",
+        "parameter": [ {
+          "valueId": "vs"
+        } ]
+      } ]
+    } ]
+  }, {
+    "name": "DispenseRequest",
+    "typeMode": "none",
+    "input": [ {
+      "name": "src",
+      "mode": "source"
+    }, {
+      "name": "tgt",
+      "mode": "target"
+    } ],
+    "rule": [ {
+      "name": "value",
+      "source": [ {
+        "context": "src",
+        "element": "value",
+        "variable": "vs"
+      } ],
+      "target": [ {
+        "context": "tgt",
+        "contextType": "variable",
+        "element": "numberOfRepeatsAllowed",
+        "variable": "vt",
+        "transform": "create",
+        "parameter": [ {
+          "valueString": "unsignedInt"
+        } ]
+      }, {
+        "context": "vt",
+        "contextType": "variable",
+        "element": "value",
+        "transform": "copy",
+        "parameter": [ {
+          "valueId": "vs"
+        } ]
+      } ]
+    } ]
+  } ]
+}
