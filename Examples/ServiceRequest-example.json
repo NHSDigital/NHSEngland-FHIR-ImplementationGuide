@@ -1,9 +1,7 @@
 {
     "resourceType": "ServiceRequest",
+    "id" :"bcefbb0c-afa5-4b87-ac37-4c18742989d9",
     "meta": {
-        "profile": [
-            "https://fhir.nhs.uk/StructureDefinition/BARSUKCoreServiceRequest"
-        ],
         "lastUpdated": "2021-10-11T15:23:30+00:00"
     },
     "status": "active",
@@ -23,7 +21,8 @@
         "identifier": {
             "system": "https://fhir.nhs.uk/Id/nhs-number",
             "value": "3478526985"
-        }
+        },
+        "display":"Julie Jones"
     },
     "encounter": {
         "reference": "urn:uuid:8c63d621-4d86-4f57-8699-e8e22d49935d"
