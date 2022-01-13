@@ -1,0 +1,137 @@
+{
+    "resourceType": "ServiceRequest",
+    "meta": {
+        "profile": [
+            "https://fhir.nhs.uk/StructureDefinition/BARSUKCoreServiceRequest"
+        ],
+        "lastUpdated": "2021-10-11T15:23:30+00:00"
+    },
+    "status": "active",
+    "intent": "plan",
+    "category": [
+        {
+            "coding": [
+                {
+                    "system": "https://fhir.nhs.uk/CodeSystem/message-category-servicerequest",
+                    "code": "case-transfer",
+                    "display": "For Transfer of Care"
+                }
+            ]
+        }
+    ],
+    "subject": {
+        "identifier": {
+            "system": "https://fhir.nhs.uk/Id/nhs-number",
+            "value": "3478526985"
+        }
+    },
+    "encounter": {
+        "reference": "urn:uuid:8c63d621-4d86-4f57-8699-e8e22d49935d"
+    },
+    "occurrencePeriod": {
+        "start": "2021-10-13T16:20:27+07:00"
+    },
+    "authoredOn": "2021-10-13T16:28:00+07:00",
+    "requester": {
+        "identifier": {
+            "system": "https://fhir.nhs.uk/Id/sds-role-profile-id",
+            "value": "PT2489"
+        },
+        "display": "Marcy Blake"
+    },
+    "performer": [
+        {
+            "identifier": {
+                "system": "https://fhir.nhs.uk/Id/ods-organization-code",
+                "value": "RR8"
+            },
+            "display": "Leeds Teaching NHS Trust"
+        }
+    ],
+    "locationReference": [
+        {
+            "reference": "urn:uuid:2ec99e82-a0af-4b70-bd53-1869d84b2ad1"
+        }
+    ],
+    "reasonCode": [
+        {
+            "coding": [
+                {
+                    "system": "https://fhir.nhs.uk/Id/pathways-sd-code",
+                    "code": "4389",
+                    "display": "ED post tonsillectomy bleeding"
+                }
+            ],
+            "text": "Pathways Assessment SD Code"
+        },
+        {
+            "coding": [
+                {
+                    "system": "https://fhir.nhs.uk/Id/pathways-dx-code",
+                    "code": "DX02",
+                    "display": "The individual needs to attend an emergency treatment centre within 1 hour."
+                }
+            ],
+            "text": "Pathways Assessment DX Code"
+        },
+        {
+            "coding": [
+                {
+                    "system": "https://fhir.nhs.uk/Id/pathways-template",
+                    "code": "PA21",
+                    "display": "Chest and Upper Back Pain"
+                }
+            ],
+            "text": "Presenting Complaint - selected Pathway or Template"
+        },
+        {
+            "coding": [
+                {
+                    "system": "https://fhir.nhs.uk/Id/pathways-sg-code",
+                    "code": "1010",
+                    "display": "Allergic Reaction"
+                }
+            ],
+            "text": "Pathways Assessment SG Code - Chief Complaint"
+        },
+        {
+            "coding": [
+                {
+                    "system": "https://fhir.nhs.uk/Id/ValueSetTBC",
+                    "code": "PlanRequest",
+                    "display": "Plan or Requested Action"
+                }
+            ],
+            "text": "Physical examination of reported chest pain"
+        }
+    ],
+    "reasonReference": [
+        {
+            "reference": "urn:uuid:f2d2a6f8-1ef5-40a6-a697-849bb1264a91",
+            "display": "Person reported complaints or issues (Symptoms)"
+        }
+    ],
+    "supportingInfo": [
+        {
+            "reference": "urn:uuid:65508934-c9e6-46d2-a393-af096b502daf",
+            "display": "Rejected Services - Patient Choice in Service Selection - Details"
+        },
+        {
+            "reference": "urn:uuid:41e591ab-d333-4fb8-87b4-d35f740b6bfc",
+            "display": "Rejected Services - Patient Choice in Service Selection - Flag"
+        },
+        {
+            "reference": "urn:uuid:e53b2595-7875-4687-80e9-23a0c8cb8ea0",
+            "display": "Person expectations and wishes"
+        },
+        {
+            "reference": "urn:uuid:ea37a499-245c-40e9-b0fa-df4383c4d413",
+            "display": "Safeguarding Concerns Flag"
+        },
+        {
+            "reference": "urn:uuid:75f0e2c7-79db-4518-8a03-edcf096fccbb",
+            "display": "Additional Information Sources"
+        }
+    ],
+    "patientInstruction": "ADVICE GIVEN: If there are any new symptoms, or if the condition gets worse, changes or you have any other concerns, call us back."
+}
