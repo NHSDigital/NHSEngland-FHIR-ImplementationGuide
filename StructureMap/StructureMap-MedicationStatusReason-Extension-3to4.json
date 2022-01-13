@@ -1,6 +1,7 @@
 {
   "resourceType": "StructureMap",
   "id": "4",
+  "status": "draft",
   "meta": {
     "versionId": "1",
     "lastUpdated": "2022-01-13T11:23:18.359+00:00"
@@ -11,7 +12,6 @@
   },
   "url": "http://fhir.nhs.uk/StructureMap/MedicationStatusReason-Extension-3to4",
   "name": "R3 to R4 conversion for CareConnect MedicationStatusReason extension",
-  "status": "draft",
   "structure": [ {
     "url": "http://hl7.org/fhir/StructureDefinition/MedicationRequest",
     "mode": "source",
