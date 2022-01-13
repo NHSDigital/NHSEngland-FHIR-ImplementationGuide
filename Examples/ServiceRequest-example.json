@@ -10,9 +10,9 @@
         {
             "coding": [
                 {
-                    "system": "https://fhir.nhs.uk/CodeSystem/message-category-servicerequest",
-                    "code": "case-transfer",
-                    "display": "For Transfer of Care"
+                    "system": "http://snomed.info/sct",
+                    "code": "409063005",
+                    "display": "Counselling"
                 }
             ]
         }

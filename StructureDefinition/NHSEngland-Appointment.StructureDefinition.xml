@@ -18,12 +18,19 @@
       <path value="Appointment.identifier.value" />
       <min value="1" />
     </element>
+    <element id="Appointment.serviceCategory">
+      <path value="Appointment.serviceCategory" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDataModelAndDictionary-treatment-function" />
+      </binding>
+    </element>
     <element id="Appointment.serviceType">
       <path value="Appointment.serviceType" />
       <definition value="UKCore will probably use this ValueSet https://fhir.hl7.org.uk/ValueSet/UKCore-CareSettingType&#xD;&#xA;&#xD;&#xA;At present we will base this on NHS Data Dictionary ValueSet" />
       <binding>
         <strength value="required" />
-        <description value="https://fhir.nhs.uk/ValueSet/NHSDataModelAndDictionary-treatment-function" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDataModelAndDictionary-treatment-function" />
       </binding>
     </element>
     <element id="Appointment.specialty">
