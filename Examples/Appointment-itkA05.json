@@ -54,7 +54,8 @@
                     "value": "3333333333"
                 },
                 "display": "Fredrica Smith"
-            }
+            },
+            "status" : "needs-action"
         },
         {
             "type": [
@@ -74,7 +75,8 @@
                     "value": "C3456789"
                 },
                 "display": "Samual Darwin"
-            }
+            },
+            "status" : "accepted"
         },
         {
             "actor": {
@@ -92,7 +94,8 @@
                     "system": "http://fhir.nhs.net/Id/ers-service",
                     "value": "12000"
                 }
-            }
+            },
+            "status": "accepted"
         }
     ]
 }
