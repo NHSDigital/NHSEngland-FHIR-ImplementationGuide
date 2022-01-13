@@ -10,6 +10,30 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Appointment" />
   <derivation value="constraint" />
   <differential>
+    <element id="Appointment.identifier.system">
+      <path value="Appointment.identifier.system" />
+      <min value="1" />
+    </element>
+    <element id="Appointment.identifier.value">
+      <path value="Appointment.identifier.value" />
+      <min value="1" />
+    </element>
+    <element id="Appointment.serviceType">
+      <path value="Appointment.serviceType" />
+      <definition value="UKCore will probably use this ValueSet https://fhir.hl7.org.uk/ValueSet/UKCore-CareSettingType&#xD;&#xA;&#xD;&#xA;At present we will base this on NHS Data Dictionary ValueSet" />
+      <binding>
+        <strength value="required" />
+        <description value="https://fhir.nhs.uk/ValueSet/NHSDataModelAndDictionary-treatment-function" />
+      </binding>
+    </element>
+    <element id="Appointment.specialty">
+      <path value="Appointment.specialty" />
+      <binding>
+        <strength value="required" />
+        <description value="NHS Dictionary Main Specialty" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDataModelAndDictionary-clinical-specialty" />
+      </binding>
+    </element>
     <element id="Appointment.participant.actor.identifier">
       <path value="Appointment.participant.actor.identifier" />
       <min value="1" />

@@ -1,0 +1,98 @@
+{
+    "resourceType": "Appointment",
+    "id": "366a7b5b-650a-4ddf-bc25-468d59f67ea8",
+    "status": "booked",
+    "serviceCategory": [
+        {
+            "coding": [
+                {
+                    "system": "https://fhir.nhs.uk/CodeSystem/NHSDataModelAndDictionary-treatment-function",
+                    "code": "300",
+                    "display": "GENERAL MEDICINE"
+                }
+            ]
+        }
+    ],
+    "specialty": [
+        {
+            "coding": [
+                {
+                    "system": "https://fhir.nhs.uk/CodeSystem/NHSDataModelAndDictionary-clinical-specialty",
+                    "code": "340",
+                    "display": "Respiratory Medicine"
+                }
+            ]
+        }
+    ],
+    "appointmentType": {
+        "coding": [
+            {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0276",
+                "code": "ROUTINE",
+                "display": "Routine appointment - default if not valued"
+            }
+        ]
+    },
+    "description": "Discussion on the results of your recent tests",
+    "start": "2022-01-13T09:00:00Z",
+    "end": "2022-01-13T09:30:00Z",
+    "created": "2022-01-13",
+    "basedOn": [
+        {
+            "identifier": {
+                "system": "https://fhir.nhs.uk/Id/UBRN",
+                "value": "000000070000"
+            }
+        }
+    ],
+    "participant": [
+        {
+            "actor": {
+                "type" : "Patient",
+                "identifier": {
+                    "system": "https://fhir.nhs.uk/Id/nhs-number",
+                    "value": "3333333333"
+                },
+                "display": "Fredrica Smith"
+            }
+        },
+        {
+            "type": [
+                {
+                    "coding": [
+                        {
+                            "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                            "code": "ATND"
+                        }
+                    ]
+                }
+            ],
+            "actor": {
+                "type" : "Practitioner",
+                "identifier": {
+                    "system": "https://fhir.hl7.org.uk/Id/gmc-number",
+                    "value": "C3456789"
+                },
+                "display": "Samual Darwin"
+            }
+        },
+        {
+            "actor": {
+                "type" : "Location",
+                "reference": "Location/1123",
+                "display": "A Ward, West Wing, Elmet Hospital"
+            },
+            "required": "required",
+            "status": "accepted"
+        },
+        {
+            "actor": {
+                "type" : "HealthcareService",
+                "identifier": {
+                    "system": "http://fhir.nhs.net/Id/ers-service",
+                    "value": "12000"
+                }
+            }
+        }
+    ]
+}

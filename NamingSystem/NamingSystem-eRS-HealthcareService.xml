@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<NamingSystem xmlns="http://hl7.org/fhir">
+    <id value="faa9e944-fcc4-4ff3-b53e-0c0be07d6a3c"/>
+    <name value="ershealthcareserice"/>
+    <status value="draft"/>
+    <kind value="identifier"/>
+    <date value="2022-01-13"/>
+    <publisher value="NHS Digital"/>
+    <responsible value="NHS Digital"/>
+    <description value="identifier of a healthcare service in eRS"/>
+    <usage value="EPS"/>
+    <uniqueId>
+        <type value="uri"/>
+        <value value="http://fhir.nhs.net/Id/ers-service"/>
+        <preferred value="true"/>
+    </uniqueId>
+</NamingSystem>
