@@ -10,15 +10,11 @@
         },
         {
             "name": "type",
-            "valueCode": "create"
+            "valueCode": "event-notification"
         },
         {
             "name": "notificationEvent",
             "part": [
-                {
-                    "name": "eventNumber",
-                    "valueInteger": "1"
-                },
                 {
                     "name": "timestamp",
                     "valueInstant": "2022-01-07T15:06:00+00:00"
@@ -93,6 +89,9 @@
                     }
                 }
             ]
+        },
+        {
+            "topic" : "https://fhir.nhs.uk/SubscriptionTopic/referral-sent"
         }
     ]
 }

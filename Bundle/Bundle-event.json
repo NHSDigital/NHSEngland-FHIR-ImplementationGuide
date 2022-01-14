@@ -76,7 +76,7 @@
                     },
                     {
                         "name" : "topic",
-                        "valueCanonical": "https://spine.nhs.uk/SubscriptionTopc/fulfil-prescription"
+                        "valueCanonical": "https://fhir.nhs.uk/SubscriptionTopic/referral-sent"
                     }
                 ]
             }
