@@ -119,10 +119,6 @@
       <path value="HealthcareService.specialty.coding.code" />
       <min value="1" />
     </element>
-    <element id="HealthcareService.specialty.coding.display">
-      <path value="HealthcareService.specialty.coding.display" />
-      <min value="1" />
-    </element>
     <element id="HealthcareService.specialty.coding:NHSDataDictionarySpecialty">
       <path value="HealthcareService.specialty.coding" />
       <sliceName value="NHSDataDictionarySpecialty" />
