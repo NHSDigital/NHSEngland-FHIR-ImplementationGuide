@@ -149,6 +149,19 @@
       <path value="HealthcareService.specialty.coding.system" />
       <fixedUri value="http://snomed.info/sct" />
     </element>
+    <element id="HealthcareService.specialty.coding:eRSSpecialty">
+      <path value="HealthcareService.specialty.coding" />
+      <sliceName value="eRSSpecialty" />
+      <binding>
+        <strength value="preferred" />
+        <description value="Specific specialty associated with the agency." />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDigital-eRS-Specialty" />
+      </binding>
+    </element>
+    <element id="HealthcareService.specialty.coding:eRSSpecialty.system">
+      <path value="HealthcareService.specialty.coding.system" />
+      <fixedUri value="https://fhir.nhs.uk/CodeSystem/NHSDigital-Specialty" />
+    </element>
     <element id="HealthcareService.location">
       <path value="HealthcareService.location" />
       <type>
@@ -189,6 +202,28 @@
     <element id="HealthcareService.telecom.use">
       <path value="HealthcareService.telecom.use" />
       <min value="1" />
+    </element>
+    <element id="HealthcareService.serviceProvisionCode.coding">
+      <path value="HealthcareService.serviceProvisionCode.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="HealthcareService.serviceProvisionCode.coding:eRSClinicType">
+      <path value="HealthcareService.serviceProvisionCode.coding" />
+      <sliceName value="eRSClinicType" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDigital-eRS-ClinicType" />
+      </binding>
+    </element>
+    <element id="HealthcareService.serviceProvisionCode.coding:eRSClinicType.system">
+      <path value="HealthcareService.serviceProvisionCode.coding.system" />
+      <fixedUri value="https://fhir.nhs.uk/CodeSystem/NHSDigital-ClinicType" />
     </element>
     <element id="HealthcareService.availableTime">
       <path value="HealthcareService.availableTime" />
