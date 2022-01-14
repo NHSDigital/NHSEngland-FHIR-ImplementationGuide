@@ -41,7 +41,7 @@
                 "resourceType": "Parameters",
                 "parameter":  [
                     {
-                        "name": "stauts",
+                        "name": "status",
                         "valueCode": "active"
                     },
                     {
