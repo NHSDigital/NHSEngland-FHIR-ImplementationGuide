@@ -15,11 +15,11 @@
       "value": "RBA"
     }
   },
-  "type": [
+  "serviceProvisionCode": [
     {
       "coding": [
         {
-          "system": "https://fhir.nhs.uk/CodeSystem/eRS-ClinicType",
+          "system": "https://fhir.nhs.uk/CodeSystem/NHSDigital-ClinicType",
           "code": "LIPID_MANAGEMENT"
         }
       ]

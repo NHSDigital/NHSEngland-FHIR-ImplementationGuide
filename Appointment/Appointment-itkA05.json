@@ -39,6 +39,7 @@
     "created": "2022-01-13",
     "basedOn": [
         {
+            "type": "ServiceRequest",
             "identifier": {
                 "system": "https://fhir.nhs.uk/Id/UBRN",
                 "value": "000000070000"
@@ -51,9 +52,9 @@
                 "type" : "Patient",
                 "identifier": {
                     "system": "https://fhir.nhs.uk/Id/nhs-number",
-                    "value": "3333333333"
+                    "value": "9478526985"
                 },
-                "display": "Fredrica Smith"
+                "display":"Julie Jones"
             },
             "status" : "needs-action"
         },

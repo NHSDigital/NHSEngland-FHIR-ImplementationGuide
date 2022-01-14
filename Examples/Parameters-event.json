@@ -20,14 +20,14 @@
             "name": "notificationEventReference",
             "valueReference" : {
                 "type" : "Task",
-                "reference" : "https://fhir.leedsth.nhs.uk/Task/44596c71-e63b-4059-8aca-76d9b339a76c"
+                "reference" : "https://fhir.leedsth.nhs.uk/Task/000000070000"
             }
         },
         {
             "name": "notificationEventResource",
             "resource": {
                 "resourceType": "Task",
-                "id" : "44596c71-e63b-4059-8aca-76d9b339a76c",
+                "id" : "000000070000",
                 "status": "accepted",
                 "intent": "order",
                 "code": {
@@ -43,7 +43,7 @@
                     "reference" : "https://api.ers-service.nhs.uk/FHIR/R4/ServiceRequest/dafb61c6-7042-40aa-a72d-843f1936b573",
                     "identifier" : {
                         "system" : "https://fhir.nhs.uk/Id/UBRN",
-                        "value" : "44596c71-e63b-4059-8aca-76d9b339a76c"
+                        "value" : "000000070000"
                     }
                 },
                 "for": {
@@ -74,7 +74,7 @@
                             "display": "Referral to cardiac surgery service"
                         },
                         {
-                            "system": "https://fhir.nhs.uk/CodeSystem/eRS-SPECIALTY",
+                            "system": "https://fhir.nhs.uk/CodeSystem/NHSDigital-Specialty",
                             "code": "CARDIOLOGY"
                           }
                     ]

@@ -1,6 +1,6 @@
 {
     "resourceType": "Task",
-    "id" : "44596c71-e63b-4059-8aca-76d9b339a76c",
+    "id" : "000000070000",
     "status": "requested",
     "intent": "order",
     "code": {
@@ -16,7 +16,7 @@
         "reference" : "https://api.ers-service.nhs.uk/FHIR/R4/ServiceRequest/dafb61c6-7042-40aa-a72d-843f1936b573",
         "identifier" : {
             "system" : "https://fhir.nhs.uk/Id/UBRN",
-            "value" : "44596c71-e63b-4059-8aca-76d9b339a76c"
+            "value" : "000000070000"
         }
     },
     "for": {
@@ -33,10 +33,9 @@
         }
     },
     "requester": {
-        "reference" : "https://api.nhs.uk/spine-directory/FHIR/R4/Practitioner/3415870201",
         "identifier": {
-            "system": "https://fhir.hl7.org.uk/Id/gmp-number",
-            "value": "G1234567"
+            "system": "https://fhir.nhs.uk/Id/ods-organization-code",
+            "value": "GP0001"
           }
     },
     "authoredOn": "2021-10-09T12:00:00+00:00",
@@ -46,11 +45,7 @@
                 "system": "http://snomed.info/sct",
                 "code": "306185001",
                 "display": "Referral to cardiac surgery service"
-            },
-            {
-                "system": "https://fhir.nhs.uk/CodeSystem/eRS-SPECIALTY",
-                "code": "CARDIOLOGY"
-              }
+            }
         ]
     }
 }

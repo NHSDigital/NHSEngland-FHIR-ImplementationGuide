@@ -1,0 +1,2660 @@
+{
+    "resourceType": "CodeSystem",
+    "id": "eRS-ClinicType-1",
+    "url": "https://fhir.nhs.uk/CodeSystem/NHSDigital-ClinicType",
+    "version": "1.0.0",
+    "name": "NHSDigitalClinicType",
+    "status": "draft",
+    "date": "2016-06-27",
+    "publisher": "NHS Digital",
+    "contact": [
+      {
+        "name": "Interoperability Team",
+        "telecom": [
+          {
+            "system": "email",
+            "value": "interoperabilityteam@nhs.net",
+            "use": "work"
+          }
+        ]
+      }
+    ],
+    "description": "CodeSystem for eRS Clinic Type",
+    "copyright": "Copyright © 2017 NHS Digital",
+    "caseSensitive": true,
+    "content": "complete",
+    "concept": [
+      {
+        "code": "2WW_BONE",
+        "display": "2WW Bone"
+      },
+      {
+        "code": "2WW_BRAIN",
+        "display": "2WW Brain"
+      },
+      {
+        "code": "2WW_BREAST",
+        "display": "2WW Breast"
+      },
+      {
+        "code": "2WW_CANCER_OF_UNKNOWN_PRIMARY",
+        "display": "2WW Cancer of Unknown Primary"
+      },
+      {
+        "code": "2WW_CHILDREN_AND_YOUNG_PEOPLE",
+        "display": "2WW Children and Young People"
+      },
+      {
+        "code": "2WW_GYNAECOLOGY",
+        "display": "2WW Gynaecology"
+      },
+      {
+        "code": "2WW_HAEMATOLOGY",
+        "display": "2WW Haematology"
+      },
+      {
+        "code": "2WW_HEAD_AND_NECK",
+        "display": "2WW Head and Neck"
+      },
+      {
+        "code": "2WW_LOWER_GI",
+        "display": "2WW Lower GI"
+      },
+      {
+        "code": "2WW_LUNG",
+        "display": "2WW Lung"
+      },
+      {
+        "code": "2WW_SARCOMA",
+        "display": "2WW Sarcoma"
+      },
+      {
+        "code": "2WW_SKIN",
+        "display": "2WW Skin"
+      },
+      {
+        "code": "2WW_UPPER_GI",
+        "display": "2WW Upper GI"
+      },
+      {
+        "code": "2WW_UROLOGY",
+        "display": "2WW Urology"
+      },
+      {
+        "code": "2WW_OTHER",
+        "display": "2WW Other"
+      },
+      {
+        "code": "ALLERGY_1",
+        "display": "Allergy"
+      },
+      {
+        "code": "FOOD_AND_DRUG_ALLERGY",
+        "display": "Food and Drug Allergy"
+      },
+      {
+        "code": "ARRHYTHMIA",
+        "display": "Arrhythmia"
+      },
+      {
+        "code": "CARDIOLOGY_GENETICS",
+        "display": "Cardiology Genetics"
+      },
+      {
+        "code": "CONGENITAL_HEART_DISEASE",
+        "display": "Congenital Heart Disease"
+      },
+      {
+        "code": "HEART_FAILURE",
+        "display": "Heart Failure"
+      },
+      {
+        "code": "HYPERTENSION_1",
+        "display": "Hypertension"
+      },
+      {
+        "code": "ISCHAEMIC_HEART_DISEASE",
+        "display": "Ischaemic Heart Disease"
+      },
+      {
+        "code": "LIPID_MANAGEMENT",
+        "display": "Lipid Management"
+      },
+      {
+        "code": "NOT_OTHERWISE_SPECIFIED_1",
+        "display": "Not Otherwise Specified"
+      },
+      {
+        "code": "RAPID_ACCESS_CHEST_PAIN_INC_EXERCISE_ECG",
+        "display": "Rapid Access Chest Pain inc Exercise ECG"
+      },
+      {
+        "code": "VALVE_DISORDERS",
+        "display": "Valve Disorders"
+      },
+      {
+        "code": "ACUTE_ACCESS_CARDIOLOGY",
+        "display": "Acute Access Cardiology"
+      },
+      {
+        "code": "GENERAL_ADULT_1",
+        "display": "General Adult"
+      },
+      {
+        "code": "ALLERGY_2",
+        "display": "Allergy"
+      },
+      {
+        "code": "AUDIOLOGY_1",
+        "display": "Audiology"
+      },
+      {
+        "code": "CARDIOLOGY",
+        "display": "Cardiology"
+      },
+      {
+        "code": "COMMUNITY_PAEDIATRIC",
+        "display": "Community Paediatric"
+      },
+      {
+        "code": "DENTISTRY_ORTHODONTICS",
+        "display": "Dentistry / Orthodontics"
+      },
+      {
+        "code": "DERMATOLOGY_1",
+        "display": "Dermatology"
+      },
+      {
+        "code": "DEVELOPMENTAL_LEARNING_DISABILITIES",
+        "display": "Developmental / Learning Disabilities"
+      },
+      {
+        "code": "DIABETES_1",
+        "display": "Diabetes"
+      },
+      {
+        "code": "ENDOCRINOLOGY",
+        "display": "Endocrinology"
+      },
+      {
+        "code": "ENT",
+        "display": "ENT"
+      },
+      {
+        "code": "GASTROENTEROLOGY_1",
+        "display": "Gastroenterology"
+      },
+      {
+        "code": "GYNAECOLOGY",
+        "display": "Gynaecology"
+      },
+      {
+        "code": "GYNAECOLOGY_PREGNANCY_ADVICE",
+        "display": "Gynaecology - Pregnancy Advice"
+      },
+      {
+        "code": "HAEMATOLOGY",
+        "display": "Haematology"
+      },
+      {
+        "code": "IMMUNOLOGY",
+        "display": "Immunology"
+      },
+      {
+        "code": "METABOLIC_DISORDERS_1",
+        "display": "Metabolic Disorders"
+      },
+      {
+        "code": "NEPHROLOGY_1",
+        "display": "Nephrology"
+      },
+      {
+        "code": "NEUROLOGY",
+        "display": "Neurology"
+      },
+      {
+        "code": "ONCOLOGY_ESTABLISHED_DIAGNOSIS_1",
+        "display": "Oncology (Established Diagnosis)"
+      },
+      {
+        "code": "OPHTHAL_NOT_OTHERWISE_SPECIFIED",
+        "display": "Ophthal - Not Otherwise Specified"
+      },
+      {
+        "code": "OPHTHAL_ORTHOPTICS",
+        "display": "Ophthal - Orthoptics"
+      },
+      {
+        "code": "OPHTHAL_STRABISMUS_OCULAR_MOTILITY",
+        "display": "Ophthal - Strabismus / Ocular Motility"
+      },
+      {
+        "code": "ORAL_AND_MAXILLOFACIAL_SURGERY",
+        "display": "Oral and Maxillofacial Surgery"
+      },
+      {
+        "code": "ORTHOPAEDICS",
+        "display": "Orthopaedics"
+      },
+      {
+        "code": "OTHER_MEDICAL",
+        "display": "Other Medical"
+      },
+      {
+        "code": "PLASTIC_SURGERY",
+        "display": "Plastic Surgery"
+      },
+      {
+        "code": "RESPIRATORY_1",
+        "display": "Respiratory"
+      },
+      {
+        "code": "RHEUMATOLOGY",
+        "display": "Rheumatology"
+      },
+      {
+        "code": "SURGERY_NOT_OTHERWISE_SPECIFIED",
+        "display": "Surgery - Not otherwise specified"
+      },
+      {
+        "code": "UROLOGY_1",
+        "display": "Urology"
+      },
+      {
+        "code": "ACUTE_ACCESS",
+        "display": "Acute Access"
+      },
+      {
+        "code": "ADOLESCENT_MEDICINE",
+        "display": "Adolescent Medicine"
+      },
+      {
+        "code": "AUDIOLOGY_2",
+        "display": "Audiology"
+      },
+      {
+        "code": "BEHAVIOURAL_PROBLEMS_1",
+        "display": "Behavioural Problems"
+      },
+      {
+        "code": "CONTINENCE_INCONTINENCE",
+        "display": "Continence/Incontinence"
+      },
+      {
+        "code": "DIETETIC",
+        "display": "Dietetic"
+      },
+      {
+        "code": "GENERAL_BABY_CLINIC",
+        "display": "General Baby Clinic"
+      },
+      {
+        "code": "GENERAL_INFANT",
+        "display": "General Infant"
+      },
+      {
+        "code": "GENETICS_1",
+        "display": "Genetics"
+      },
+      {
+        "code": "IMMUNISATION",
+        "display": "Immunisation"
+      },
+      {
+        "code": "INFECTIOUS_DISEASES_1",
+        "display": "Infectious Diseases"
+      },
+      {
+        "code": "NEONATAL",
+        "display": "Neonatal"
+      },
+      {
+        "code": "PAEDIATRIC_HAEMOPHILIA_1",
+        "display": "Paediatric Haemophilia"
+      },
+      {
+        "code": "PAEDIATRICS_DIABETES",
+        "display": "Paediatrics Diabetes"
+      },
+      {
+        "code": "PHLEBOTOMY",
+        "display": "Phlebotomy"
+      },
+      {
+        "code": "RENAL",
+        "display": "Renal"
+      },
+      {
+        "code": "DIETETICS_PHASING_OUT",
+        "display": "Dietetics (phasing out)"
+      },
+      {
+        "code": "ALLERGY_3",
+        "display": "Allergy"
+      },
+      {
+        "code": "DERMATOLOGY_2",
+        "display": "Dermatology"
+      },
+      {
+        "code": "DIETETICS",
+        "display": "Dietetics"
+      },
+      {
+        "code": "GENERAL_MEDICINE_1",
+        "display": "General Medicine"
+      },
+      {
+        "code": "MUSCULOSKELETAL_RHEUMATOLOGY",
+        "display": "Musculoskeletal / Rheumatology"
+      },
+      {
+        "code": "ONCOLOGY_ESTABLISHED_DIAGNOSIS",
+        "display": "Oncology (established diagnosis)"
+      },
+      {
+        "code": "PODIATRY",
+        "display": "Podiatry"
+      },
+      {
+        "code": "PSYCHOLOGICAL_MEDICINE",
+        "display": "Psychological Medicine"
+      },
+      {
+        "code": "WOMENNULLS_HEALTH",
+        "display": "Women's Health"
+      },
+      {
+        "code": "ENDODONTICS",
+        "display": "Endodontics"
+      },
+      {
+        "code": "NOT_OTHERWISE_SPECIFIED_2",
+        "display": "Not Otherwise Specified"
+      },
+      {
+        "code": "ORTHODONTICS",
+        "display": "Orthodontics"
+      },
+      {
+        "code": "PERIODONTICS",
+        "display": "Periodontics"
+      },
+      {
+        "code": "PROSTHODONTICS",
+        "display": "Prosthodontics"
+      },
+      {
+        "code": "SURGICAL_DENTISTRY",
+        "display": "Surgical Dentistry"
+      },
+      {
+        "code": "GENERAL_RESTORATIVE_DENTISTRY",
+        "display": "General Restorative Dentistry"
+      },
+      {
+        "code": "XXX_DO_NOT_USE_XXX",
+        "display": "XXX DO NOT USE XXX"
+      },
+      {
+        "code": "ACNE",
+        "display": "Acne"
+      },
+      {
+        "code": "BASAL_CELL_CARCINOMA_1",
+        "display": "Basal Cell Carcinoma"
+      },
+      {
+        "code": "CONNECTIVE_TISSUE_DISEASE",
+        "display": "Connective Tissue Disease"
+      },
+      {
+        "code": "COSMETIC_CAMOUFLAGE",
+        "display": "Cosmetic Camouflage"
+      },
+      {
+        "code": "ECZEMA_AND_DERMATITIS",
+        "display": "Eczema and Dermatitis"
+      },
+      {
+        "code": "HAIR",
+        "display": "Hair"
+      },
+      {
+        "code": "LASER_CLINICS",
+        "display": "Laser Clinics"
+      },
+      {
+        "code": "LEG_ULCER_1",
+        "display": "Leg Ulcer"
+      },
+      {
+        "code": "MALE_GENITAL_SKIN_DISORDERS",
+        "display": "Male Genital Skin Disorders"
+      },
+      {
+        "code": "NAILS",
+        "display": "Nails"
+      },
+      {
+        "code": "NOT_OTHERWISE_SPECIFIED_3",
+        "display": "Not Otherwise Specified"
+      },
+      {
+        "code": "ONCOLOGY_ESTABLISHED_DIAGNOSIS_3",
+        "display": "Oncology (Established Diagnosis)"
+      },
+      {
+        "code": "PATCH_TESTING_FOR_CONTACT_DERMATITIS",
+        "display": "Patch Testing for Contact Dermatitis"
+      },
+      {
+        "code": "PSORIASIS",
+        "display": "Psoriasis"
+      },
+      {
+        "code": "SKIN_SURGERY_FOR_BENIGN_SKIN_LESIONS",
+        "display": "Skin Surgery for Benign Skin Lesions"
+      },
+      {
+        "code": "VULVAL_SKIN_DISORDERS",
+        "display": "Vulval Skin Disorders"
+      },
+      {
+        "code": "CHANGING_LESIONS",
+        "display": "Changing Lesions"
+      },
+      {
+        "code": "GENITAL_DERMATOLOGY",
+        "display": "Genital Dermatology"
+      },
+      {
+        "code": "KERATOPATHIES",
+        "display": "Keratopathies"
+      },
+      {
+        "code": "ORAL_DERMATOLOGY",
+        "display": "Oral Dermatology"
+      },
+      {
+        "code": "RAPID_ACCESS_1",
+        "display": "Rapid Access"
+      },
+      {
+        "code": "VASCULAR",
+        "display": "Vascular"
+      },
+      {
+        "code": "PAEDIATRIC_DERMATOLOGY",
+        "display": "Paediatric Dermatology"
+      },
+      {
+        "code": "GENERAL_ADULT_2",
+        "display": "General Adult"
+      },
+      {
+        "code": "HAIR_AND_NAILS",
+        "display": "Hair and Nails"
+      },
+      {
+        "code": "SKIN_LYMPHOMA",
+        "display": "Skin Lymphoma"
+      },
+      {
+        "code": "SKIN_PHOTOSENSITIVITY",
+        "display": "Skin photosensitivity"
+      },
+      {
+        "code": "ERECTILE_DYSFUNCTION_1",
+        "display": "Erectile Dysfunction"
+      },
+      {
+        "code": "GENERAL_DIABETIC_MANAGEMENT",
+        "display": "General Diabetic Management"
+      },
+      {
+        "code": "PODIATRY_AND_FOOT",
+        "display": "Podiatry and Foot"
+      },
+      {
+        "code": "PREGNANCY_AND_MATERNAL",
+        "display": "Pregnancy and Maternal"
+      },
+      {
+        "code": "RENAL_DIABETES_1",
+        "display": "Renal Diabetes"
+      },
+      {
+        "code": "PAEDIATRIC_1",
+        "display": "Paediatric"
+      },
+      {
+        "code": "PAEDIATRIC_TRANSITIONAL",
+        "display": "Paediatric Transitional"
+      },
+      {
+        "code": "YOUNG_ADULT",
+        "display": "Young Adult"
+      },
+      {
+        "code": "GENERAL_DIABETIC_MEDICINE",
+        "display": "General Diabetic Medicine"
+      },
+      {
+        "code": "COLONIC_IMAGING_ASSESSMENT_ADVICE",
+        "display": "Colonic Imaging Assessment / Advice"
+      },
+      {
+        "code": "FLEXIBLE_SIGMOIDOSCOPY",
+        "display": "Flexible Sigmoidoscopy"
+      },
+      {
+        "code": "GASTROSCOPY",
+        "display": "Gastroscopy"
+      },
+      {
+        "code": "BONE_DENSITY_SCAN_DEXA",
+        "display": "Bone Density Scan (DEXA)"
+      },
+      {
+        "code": "CT",
+        "display": "CT"
+      },
+      {
+        "code": "FLUOROSCOPY_AND_BARIUM_STUDIES",
+        "display": "Fluoroscopy and Barium Studies"
+      },
+      {
+        "code": "INTRAVENOUS_UROGRAM_IVU",
+        "display": "Intravenous Urogram (IVU)"
+      },
+      {
+        "code": "MRI",
+        "display": "MRI"
+      },
+      {
+        "code": "NUCLEAR_MEDICINE",
+        "display": "Nuclear Medicine"
+      },
+      {
+        "code": "ULTRASOUND_1",
+        "display": "Ultrasound"
+      },
+      {
+        "code": "X_RAY_PLAIN_FILM",
+        "display": "X Ray Plain Film"
+      },
+      {
+        "code": "PET_CT",
+        "display": "PET CT"
+      },
+      {
+        "code": "BLOOD_TEST",
+        "display": "Blood Test"
+      },
+      {
+        "code": "AUDIOLOGY_HEARING_AID_ASSESS_AND_FIT",
+        "display": "Audiology - Hearing Aid Assess and Fit"
+      },
+      {
+        "code": "AUDIOLOGY_HEARING_AID_REVIEW",
+        "display": "Audiology - Hearing Aid Review"
+      },
+      {
+        "code": "AUDIOLOGY_HEARING_ASSESS_REASSESS",
+        "display": "Audiology - Hearing Assess / Reassess"
+      },
+      {
+        "code": "CARDIAC_PHYSIOLOGY_BP_MONITORING",
+        "display": "Cardiac Physiology - BP Monitoring"
+      },
+      {
+        "code": "CARDIAC_PHYSIOLOGY_ECG",
+        "display": "Cardiac Physiology - ECG"
+      },
+      {
+        "code": "CARDIAC_PHYSIOLOGY_ECHOCARDIOGRAM",
+        "display": "Cardiac Physiology - Echocardiogram"
+      },
+      {
+        "code": "GI_PHYSIOLOGY_UREA_BREATH_TEST",
+        "display": "GI Physiology - Urea Breath Test"
+      },
+      {
+        "code": "NEUROPHYSIOLOGY_EEG_ROUTINE",
+        "display": "Neurophysiology - EEG (Routine)"
+      },
+      {
+        "code": "NEUROPHYSIOLOGY_NERVE_CONDUCTION_STUDIES",
+        "display": "Neurophysiology-Nerve Conduction Studies"
+      },
+      {
+        "code": "NEUROPHYS_NERVE_CONDUCTION_FOR_CTS",
+        "display": "Neurophys - Nerve Conduction for CTS"
+      },
+      {
+        "code": "PRE_AND_POST_EXERCISE_ABPI",
+        "display": "Pre and Post Exercise ABPI"
+      },
+      {
+        "code": "RESPIRATORY_BLOOD_GAS_ANALYSIS",
+        "display": "Respiratory - Blood Gas Analysis"
+      },
+      {
+        "code": "RESPIRATORY_CPAP_ASSESSMENT",
+        "display": "Respiratory - CPAP Assessment"
+      },
+      {
+        "code": "RESPIRATORY_FULL_LUNG_FUNCTION",
+        "display": "Respiratory - Full Lung Function"
+      },
+      {
+        "code": "RESPIRATORY_OXYGEN_ASSESSMENT",
+        "display": "Respiratory - Oxygen Assessment"
+      },
+      {
+        "code": "RESPIRATORY_SLEEP_APNOEA_SCREENING",
+        "display": "Respiratory - Sleep Apnoea Screening"
+      },
+      {
+        "code": "RESPIRATORY_SPIROMETRY_BRONCHODILATOR",
+        "display": "Respiratory - Spirometry Bronchodilator"
+      },
+      {
+        "code": "URODYNAMICS_FREE_FLOW_RESIDUAL_URINE",
+        "display": "Urodynamics - Free Flow / Residual Urine"
+      },
+      {
+        "code": "URODYNAMICS_PAD_TESTS",
+        "display": "Urodynamics - Pad Tests"
+      },
+      {
+        "code": "VASCULAR_ABPI_MEASUREMENT",
+        "display": "Vascular - ABPI Measurement"
+      },
+      {
+        "code": "VASCULAR_AORTIC_ANEURYSM_ASSESSMENT",
+        "display": "Vascular - Aortic Aneurysm Assessment"
+      },
+      {
+        "code": "OPHTHALMOLOGY_CATARACT_ASSESSMENT",
+        "display": "Ophthalmology - Cataract Assessment"
+      },
+      {
+        "code": "OPHTHALMOLOGY_GLAUCOMA_ASSESSMENT",
+        "display": "Ophthalmology - Glaucoma Assessment"
+      },
+      {
+        "code": "AUDIOLOGY_BALANCE_DIZZINESS",
+        "display": "Audiology - Balance / Dizziness"
+      },
+      {
+        "code": "AUDIOLOGY_TINNITUS",
+        "display": "Audiology - Tinnitus"
+      },
+      {
+        "code": "CARDIAC_PHYSIOLOGY_EXERCISE_STRESS_TEST",
+        "display": "Cardiac Physiology-Exercise Stress Test"
+      },
+      {
+        "code": "RESPIRATORY_BRONCHODILATOR_ASSESSMENT",
+        "display": "Respiratory - Bronchodilator Assessment"
+      },
+      {
+        "code": "URODYNAMICS_RESIDUAL_URINE",
+        "display": "Urodynamics - Residual Urine"
+      },
+      {
+        "code": "CARDIOVASCULAR_DISEASE_RISK_MANAGEMENT",
+        "display": "Cardiovascular Disease Risk Management"
+      },
+      {
+        "code": "DIABETES_2",
+        "display": "Diabetes"
+      },
+      {
+        "code": "EATING_DISORDERS_SEE_MENTAL_HEALTH",
+        "display": "Eating Disorders - see Mental Health"
+      },
+      {
+        "code": "FOOD_ALLERGY_AND_INTOLERANCE",
+        "display": "Food Allergy and Intolerance"
+      },
+      {
+        "code": "GASTROENTEROLOGY_2",
+        "display": "Gastroenterology"
+      },
+      {
+        "code": "NOT_OTHERWISE_SPECIFIED_4",
+        "display": "Not Otherwise Specified"
+      },
+      {
+        "code": "UNDERNUTRITION",
+        "display": "Undernutrition"
+      },
+      {
+        "code": "WEIGHT_MANAGEMENT_1",
+        "display": "Weight Management"
+      },
+      {
+        "code": "ENDOCRINE_INCL_DIABETES_PHASING_OUT",
+        "display": "Endocrine (incl Diabetes) (phasing out)"
+      },
+      {
+        "code": "NUTRITIONAL_ADV_SUPPORT_PHASING_OUT",
+        "display": "Nutritional Adv / Support (phasing out)"
+      },
+      {
+        "code": "BALANCE_DIZZINESS",
+        "display": "Balance / Dizziness"
+      },
+      {
+        "code": "EAR",
+        "display": "Ear"
+      },
+      {
+        "code": "FACIAL_PLASTIC_AND_SKIN_LESIONS",
+        "display": "Facial Plastic and Skin Lesions"
+      },
+      {
+        "code": "HEARING_TESTS_AIDS_SEE_DIAG_PHYS_MEAS",
+        "display": "Hearing Tests/Aids - see Diag Phys Meas"
+      },
+      {
+        "code": "NECK_LUMP_THYROID",
+        "display": "Neck Lump / Thyroid"
+      },
+      {
+        "code": "NOSE_SINUS",
+        "display": "Nose / Sinus"
+      },
+      {
+        "code": "NOT_OTHERWISE_SPECIFIED_5",
+        "display": "Not Otherwise Specified"
+      },
+      {
+        "code": "ONCOLOGY_ESTABLISHED_DIAGNOSIS_4",
+        "display": "Oncology (Established Diagnosis)"
+      },
+      {
+        "code": "SALIVARY_GLAND",
+        "display": "Salivary Gland"
+      },
+      {
+        "code": "SLEEP_APNOEA_SEE_SLEEP_MEDICINE",
+        "display": "Sleep Apnoea - see Sleep Medicine"
+      },
+      {
+        "code": "SNORING_NOT_SLEEP_APNOEA",
+        "display": "Snoring (not Sleep Apnoea)"
+      },
+      {
+        "code": "THROAT_INCL_VOICE_SWALLOWING",
+        "display": "Throat (incl Voice / Swallowing)"
+      },
+      {
+        "code": "TINNITUS",
+        "display": "Tinnitus"
+      },
+      {
+        "code": "ACUTE_ACCESS_ENT",
+        "display": "Acute Access ENT"
+      },
+      {
+        "code": "AUDIOLOGY_PAEDIATRIC",
+        "display": "Audiology Paediatric"
+      },
+      {
+        "code": "GENERAL_ADULT_3",
+        "display": "General Adult"
+      },
+      {
+        "code": "GENERAL_PAEDIATRICS",
+        "display": "General Paediatrics"
+      },
+      {
+        "code": "AUDIOLOGY_3",
+        "display": "Audiology"
+      },
+      {
+        "code": "CRANIOFACIAL_1",
+        "display": "Craniofacial"
+      },
+      {
+        "code": "OTOLOGY",
+        "display": "Otology"
+      },
+      {
+        "code": "SWALLOWING_1",
+        "display": "Swallowing"
+      },
+      {
+        "code": "THYROID_PARATHYROID_1",
+        "display": "Thyroid / Parathyroid"
+      },
+      {
+        "code": "VOICE_DISORDER",
+        "display": "Voice Disorder"
+      },
+      {
+        "code": "GENERAL_ENT",
+        "display": "General ENT"
+      },
+      {
+        "code": "ADRENAL_DISORDERS",
+        "display": "Adrenal Disorders"
+      },
+      {
+        "code": "ENDOCRINE_PREGNANCY_1",
+        "display": "Endocrine Pregnancy"
+      },
+      {
+        "code": "GYNAECOLOGICAL_ENDOCRINOLOGY",
+        "display": "Gynaecological Endocrinology"
+      },
+      {
+        "code": "LIPID_DISORDERS_1",
+        "display": "Lipid Disorders"
+      },
+      {
+        "code": "METABOLIC_BONE_DISORDERS",
+        "display": "Metabolic Bone Disorders"
+      },
+      {
+        "code": "NOT_OTHERWISE_SPECIFIED_6",
+        "display": "Not Otherwise Specified"
+      },
+      {
+        "code": "ONCOLOGY_ESTABLISHED_DIAGNOSIS_5",
+        "display": "Oncology (Established Diagnosis)"
+      },
+      {
+        "code": "PITUITARY_HYPOTHALAMIC",
+        "display": "Pituitary & Hypothalamic"
+      },
+      {
+        "code": "THYROID_PARATHYROID_2",
+        "display": "Thyroid / Parathyroid"
+      },
+      {
+        "code": "RAPID_ACCESS_2",
+        "display": "Rapid Access"
+      },
+      {
+        "code": "DIABETIC_MEDICINE",
+        "display": "Diabetic Medicine"
+      },
+      {
+        "code": "GENERAL_ENDOCRINOLOGY",
+        "display": "General Endocrinology"
+      },
+      {
+        "code": "METABOLIC_DISORDERS_2",
+        "display": "Metabolic Disorders"
+      },
+      {
+        "code": "GENERAL_MEDICINE_2",
+        "display": "General Medicine"
+      },
+      {
+        "code": "TRANSIENT_ISCHEMIC_ATTACK",
+        "display": "Transient Ischemic Attack"
+      },
+      {
+        "code": "HYPERTENSION_2",
+        "display": "Hypertension"
+      },
+      {
+        "code": "LIPID_DISORDERS_2",
+        "display": "Lipid Disorders"
+      },
+      {
+        "code": "METABOLIC_MEDICINE",
+        "display": "Metabolic Medicine"
+      },
+      {
+        "code": "OSTEOPOROSIS",
+        "display": "Osteoporosis"
+      },
+      {
+        "code": "UPPER_GI_1",
+        "display": "Upper GI"
+      },
+      {
+        "code": "RAPID_ACCESS_3",
+        "display": "Rapid Access"
+      },
+      {
+        "code": "GENETICS_2",
+        "display": "Genetics"
+      },
+      {
+        "code": "GENITO_URINARY_MEDICINE",
+        "display": "Genito-Urinary Medicine"
+      },
+      {
+        "code": "COGNITIVE_DISORDERS_1",
+        "display": "Cognitive Disorders"
+      },
+      {
+        "code": "FALLS",
+        "display": "Falls"
+      },
+      {
+        "code": "METABOLIC_BONE_DISEASES",
+        "display": "Metabolic Bone Diseases"
+      },
+      {
+        "code": "MOVEMENT_DISORDERS_1",
+        "display": "Movement Disorders"
+      },
+      {
+        "code": "NOT_OTHERWISE_SPECIFIED_7",
+        "display": "Not Otherwise Specified"
+      },
+      {
+        "code": "STROKE_NOT_TIA_1",
+        "display": "Stroke (not TIA)"
+      },
+      {
+        "code": "STROKE_TIA",
+        "display": "Stroke/TIA"
+      },
+      {
+        "code": "GENERAL_GERIATRIC_MEDICINE",
+        "display": "General Geriatric Medicine"
+      },
+      {
+        "code": "COLORECTAL_SURGERY",
+        "display": "Colorectal Surgery"
+      },
+      {
+        "code": "ENDOSCOPY_SEE_DIAGNOSTIC_ENDOSCOPY",
+        "display": "Endoscopy - see Diagnostic Endoscopy"
+      },
+      {
+        "code": "GALLSTONES",
+        "display": "Gallstones"
+      },
+      {
+        "code": "HEPATOLOGY",
+        "display": "Hepatology"
+      },
+      {
+        "code": "INFLAMMATORY_BOWEL_DISEASE_IBD",
+        "display": "Inflammatory Bowel Disease (IBD)"
+      },
+      {
+        "code": "LOWER_GI_MEDICAL_EXCL_IBD",
+        "display": "Lower GI (medical) excl IBD"
+      },
+      {
+        "code": "ONCOLOGY_ESTABLISHED_DIAGNOSIS_6",
+        "display": "Oncology (Established Diagnosis)"
+      },
+      {
+        "code": "UPPER_GI_INCL_DYSPEPSIA",
+        "display": "Upper GI incl Dyspepsia"
+      },
+      {
+        "code": "RAPID_ACCESS_4",
+        "display": "Rapid Access"
+      },
+      {
+        "code": "DIRECT_ACCESS_GASTROSCOPY_OTHER",
+        "display": "Direct Access Gastroscopy (Other)"
+      },
+      {
+        "code": "ENDOSCOPY_LOWER_GI",
+        "display": "Endoscopy (Lower GI)"
+      },
+      {
+        "code": "ENDOSCOPY_UPPER_GI",
+        "display": "Endoscopy (Upper GI)"
+      },
+      {
+        "code": "FUNCTIONAL_BOWEL_DISORDERS",
+        "display": "Functional Bowel Disorders"
+      },
+      {
+        "code": "GENERAL_GASTROENTEROLOGY",
+        "display": "General Gastroenterology"
+      },
+      {
+        "code": "INFLAMMATORY_BOWEL_DISEASE",
+        "display": "Inflammatory Bowel Disease"
+      },
+      {
+        "code": "DO_NOT_USE_AFTER_30_01_09_DYSPEPSIA",
+        "display": "DO NOT USE AFTER 30/01/09 - Dyspepsia"
+      },
+      {
+        "code": "DO_NOT_USE_AFTER_30_01_09_LOWER_GI",
+        "display": "DO NOT USE AFTER 30/01/09 - Lower GI"
+      },
+      {
+        "code": "DO_NOT_USE_HEPATOLOGY_SPECIALIST",
+        "display": "DO NOT USE - Hepatology - Specialist"
+      },
+      {
+        "code": "COLPOSCOPY",
+        "display": "Colposcopy"
+      },
+      {
+        "code": "EARLY_PREGNANCY_ASSESSMENT",
+        "display": "Early Pregnancy Assessment"
+      },
+      {
+        "code": "FAMILY_PLANNING",
+        "display": "Family Planning"
+      },
+      {
+        "code": "INFERTILITY",
+        "display": "Infertility"
+      },
+      {
+        "code": "MENOPAUSE",
+        "display": "Menopause"
+      },
+      {
+        "code": "MENSTRUAL_DISORDERS",
+        "display": "Menstrual Disorders"
+      },
+      {
+        "code": "NOT_OTHERWISE_SPECIFIED_8",
+        "display": "Not Otherwise Specified"
+      },
+      {
+        "code": "ONCOLOGY_ESTABLISHED_DIAGNOSIS_7",
+        "display": "Oncology (Established Diagnosis)"
+      },
+      {
+        "code": "PELVIC_PAIN",
+        "display": "Pelvic Pain"
+      },
+      {
+        "code": "PERINEAL_REPAIR",
+        "display": "Perineal Repair"
+      },
+      {
+        "code": "POST_MENOPAUSAL_BLEEDING",
+        "display": "Post Menopausal Bleeding"
+      },
+      {
+        "code": "PREGNANCY_ADVISORY_SERVICE",
+        "display": "Pregnancy Advisory Service"
+      },
+      {
+        "code": "PSYCHOSEXUAL",
+        "display": "Psychosexual"
+      },
+      {
+        "code": "RECURRENT_MISCARRIAGE",
+        "display": "Recurrent Miscarriage"
+      },
+      {
+        "code": "UROGYNAECOLOGY_PROLAPSE",
+        "display": "Urogynaecology / Prolapse"
+      },
+      {
+        "code": "VULVAL_AND_PERINEAL_LESIONS",
+        "display": "Vulval and Perineal Lesions"
+      },
+      {
+        "code": "MENORRHAGIA",
+        "display": "Menorrhagia"
+      },
+      {
+        "code": "RAPID_ACCESS_GYNAECOLOGY",
+        "display": "Rapid Access Gynaecology"
+      },
+      {
+        "code": "REPRODUCTIVE_ENDOCRINE",
+        "display": "Reproductive Endocrine"
+      },
+      {
+        "code": "REPRODUCTIVE_MEDICINE",
+        "display": "Reproductive Medicine"
+      },
+      {
+        "code": "URODYNAMICS_1",
+        "display": "Urodynamics"
+      },
+      {
+        "code": "USS_GYNAECOLOGY",
+        "display": "USS Gynaecology"
+      },
+      {
+        "code": "ADOLESCENT_GYNAECOLOGY",
+        "display": "Adolescent Gynaecology"
+      },
+      {
+        "code": "GENERAL_ADULT_4",
+        "display": "General Adult"
+      },
+      {
+        "code": "PELVIC_FLOOR",
+        "display": "Pelvic Floor"
+      },
+      {
+        "code": "WELL_WOMAN",
+        "display": "Well Woman"
+      },
+      {
+        "code": "ANTI_COAGULANT",
+        "display": "Anti Coagulant"
+      },
+      {
+        "code": "CLOTTING_DISORDERS",
+        "display": "Clotting Disorders"
+      },
+      {
+        "code": "HAEMOGLOBINOPATHIES_1",
+        "display": "Haemoglobinopathies"
+      },
+      {
+        "code": "NOT_OTHERWISE_SPECIFIED_9",
+        "display": "Not Otherwise Specified"
+      },
+      {
+        "code": "ONCOLOGY_ESTABLISHED_DIAGNOSIS_8",
+        "display": "Oncology (Established Diagnosis)"
+      },
+      {
+        "code": "RAPID_ACCESS_5",
+        "display": "Rapid Access"
+      },
+      {
+        "code": "GENERAL_HAEMATOLOGY",
+        "display": "General Haematology"
+      },
+      {
+        "code": "EXERCISE",
+        "display": "Exercise"
+      },
+      {
+        "code": "SMOKING_CESSATION",
+        "display": "Smoking Cessation"
+      },
+      {
+        "code": "WEIGHT_MANAGEMENT_2",
+        "display": "Weight Management"
+      },
+      {
+        "code": "AUTOIMMUNE_DISEASE",
+        "display": "Autoimmune Disease"
+      },
+      {
+        "code": "IMMUNODEFICIENCY",
+        "display": "Immunodeficiency"
+      },
+      {
+        "code": "NOT_OTHERWISE_SPECIFIED_10",
+        "display": "Not Otherwise Specified"
+      },
+      {
+        "code": "GENERAL_CLINICAL_IMMUNOLOGY",
+        "display": "General Clinical Immunology"
+      },
+      {
+        "code": "BONE_AND_JOINT_INFECTION",
+        "display": "Bone and Joint Infection"
+      },
+      {
+        "code": "CHRONIC_FATIGUE_SYNDROME",
+        "display": "Chronic Fatigue Syndrome"
+      },
+      {
+        "code": "FEVER",
+        "display": "Fever"
+      },
+      {
+        "code": "HIV",
+        "display": "HIV"
+      },
+      {
+        "code": "NOT_OTHERWISE_SPECIFIED_11",
+        "display": "Not Otherwise Specified"
+      },
+      {
+        "code": "TRAVEL_ADVICE",
+        "display": "Travel Advice"
+      },
+      {
+        "code": "TROPICAL_INFECTIONS",
+        "display": "Tropical Infections"
+      },
+      {
+        "code": "TUBERCULOSIS_1",
+        "display": "Tuberculosis"
+      },
+      {
+        "code": "VIRAL_HEPATITIS_NOT_HEP_A",
+        "display": "Viral Hepatitis (not Hep A)"
+      },
+      {
+        "code": "GENERAL_INFECTIOUS_DISEASES",
+        "display": "General Infectious Diseases"
+      },
+      {
+        "code": "LEARNING_DISABILITIES",
+        "display": "Learning Disabilities"
+      },
+      {
+        "code": "ANXIETY_DEPRESSION_STRESS_MILD_MODERATE_1",
+        "display": "Anxiety/Depression/Stress: Mild/Moderate"
+      },
+      {
+        "code": "ANXIETY_DEPRESSION_STRESS_SEVERE_2",
+        "display": "Anxiety/Depression/Stress: Severe"
+      },
+      {
+        "code": "DRUG_ALCOHOL_PROBLEMS_1",
+        "display": "Drug/Alcohol Problems"
+      },
+      {
+        "code": "EATING_DISORDERS_1",
+        "display": "Eating Disorders"
+      },
+      {
+        "code": "MEMORY_PROBLEMS",
+        "display": "Memory Problems"
+      },
+      {
+        "code": "NOT_OTHERWISE_SPECIFIED_12",
+        "display": "Not Otherwise Specified"
+      },
+      {
+        "code": "PERI_AND_POST_NATAL_ISSUES",
+        "display": "Peri and Post-Natal Issues"
+      },
+      {
+        "code": "PSYCHOLOGICAL_DISORDERS_DIFFICULTIES",
+        "display": "Psychological Disorders/Difficulties"
+      },
+      {
+        "code": "PSYCHOTIC_DISORDERS_1",
+        "display": "Psychotic Disorders"
+      },
+      {
+        "code": "SELF_HARM_1",
+        "display": "Self Harm"
+      },
+      {
+        "code": "SEXUAL_ISSUES",
+        "display": "Sexual Issues"
+      },
+      {
+        "code": "ANXIETY_DEPRESSION_STRESS_MILD_MODERATE",
+        "display": "Anxiety/Depression/Stress: Mild/Moderate"
+      },
+      {
+        "code": "ANXIETY_DEPRESSION_STRESS_SEVERE",
+        "display": "Anxiety/Depression/Stress: Severe"
+      },
+      {
+        "code": "BEHAVIOURAL_PROBLEMS_2",
+        "display": "Behavioural Problems"
+      },
+      {
+        "code": "DRUG_ALCOHOL_PROBLEMS_2",
+        "display": "Drug/Alcohol Problems"
+      },
+      {
+        "code": "EATING_DISORDERS_2",
+        "display": "Eating Disorders"
+      },
+      {
+        "code": "EMOTIONAL_PROBLEMS",
+        "display": "Emotional Problems"
+      },
+      {
+        "code": "NOT_OTHERWISE_SPECIFIED_13",
+        "display": "Not Otherwise Specified"
+      },
+      {
+        "code": "PSYCHOTIC_DISORDERS_2",
+        "display": "Psychotic Disorders"
+      },
+      {
+        "code": "SCHOOL_REFUSAL",
+        "display": "School Refusal"
+      },
+      {
+        "code": "SELF_HARM_2",
+        "display": "Self Harm"
+      },
+      {
+        "code": "SLEEP_PROBLEMS",
+        "display": "Sleep Problems"
+      },
+      {
+        "code": "HYPERTENSION_3",
+        "display": "Hypertension"
+      },
+      {
+        "code": "NEPHROLOGY_2",
+        "display": "Nephrology"
+      },
+      {
+        "code": "RENAL_DIABETES_2",
+        "display": "Renal Diabetes"
+      },
+      {
+        "code": "METABOLIC_DISORDERS_3",
+        "display": "Metabolic Disorders"
+      },
+      {
+        "code": "VASCULITIS",
+        "display": "Vasculitis"
+      },
+      {
+        "code": "COGNITIVE_DISORDERS_2",
+        "display": "Cognitive Disorders"
+      },
+      {
+        "code": "EPILEPSY",
+        "display": "Epilepsy"
+      },
+      {
+        "code": "HEADACHE",
+        "display": "Headache"
+      },
+      {
+        "code": "NEUROMUSCULAR",
+        "display": "Neuromuscular"
+      },
+      {
+        "code": "NOT_OTHERWISE_SPECIFIED_14",
+        "display": "Not Otherwise Specified"
+      },
+      {
+        "code": "ONCOLOGY_ESTABLISHED_DIAGNOSIS_9",
+        "display": "Oncology (Established Diagnosis)"
+      },
+      {
+        "code": "PARKINSONS_MOVEMENT_DISORDERS",
+        "display": "Parkinsons / Movement Disorders"
+      },
+      {
+        "code": "SLEEP_SEE_SLEEP_MEDICINE_1",
+        "display": "Sleep - see Sleep Medicine"
+      },
+      {
+        "code": "STROKE_NOT_TIA_2",
+        "display": "Stroke (not TIA)"
+      },
+      {
+        "code": "TRANSIENT_ISCHAEMIC_ATTACK",
+        "display": "Transient Ischaemic Attack"
+      },
+      {
+        "code": "ACUTE_BRAIN_INJURY",
+        "display": "Acute Brain Injury"
+      },
+      {
+        "code": "BOTULINUM_TOXIN",
+        "display": "Botulinum Toxin"
+      },
+      {
+        "code": "CEREBROVASCULAR",
+        "display": "Cerebrovascular"
+      },
+      {
+        "code": "TRANSIENT_ISCHAEMIC_ATTACK_STROKE",
+        "display": "Transient Ischaemic Attack/Stroke"
+      },
+      {
+        "code": "GENERAL_ADULT_5",
+        "display": "General Adult"
+      },
+      {
+        "code": "HEAD_INJURY",
+        "display": "Head Injury"
+      },
+      {
+        "code": "MOTOR_NEURONE_DISEASE",
+        "display": "Motor Neurone Disease"
+      },
+      {
+        "code": "MULTIPLE_SCLEROSIS",
+        "display": "Multiple Sclerosis"
+      },
+      {
+        "code": "SLEEP_FATIGUE",
+        "display": "Sleep/Fatigue"
+      },
+      {
+        "code": "MOVEMENT_DISORDERS_2",
+        "display": "Movement Disorders"
+      },
+      {
+        "code": "NOT_OTHERWISE_SPECIFIED_15",
+        "display": "Not Otherwise Specified"
+      },
+      {
+        "code": "SPINAL_1",
+        "display": "Spinal"
+      },
+      {
+        "code": "GENERAL_NEUROSURGERY",
+        "display": "General Neurosurgery"
+      },
+      {
+        "code": "ANTENATAL",
+        "display": "Antenatal"
+      },
+      {
+        "code": "DIABETES_3",
+        "display": "Diabetes"
+      },
+      {
+        "code": "ENDOCRINE_PREGNANCY_2",
+        "display": "Endocrine Pregnancy"
+      },
+      {
+        "code": "GENETICS_3",
+        "display": "Genetics"
+      },
+      {
+        "code": "HAEMOGLOBINOPATHIES_2",
+        "display": "Haemoglobinopathies"
+      },
+      {
+        "code": "MATERNAL_FOETAL_RISK",
+        "display": "Maternal/Foetal Risk"
+      },
+      {
+        "code": "MATERNAL_MEDICINE",
+        "display": "Maternal Medicine"
+      },
+      {
+        "code": "MULTIPLE_PREGNANCY",
+        "display": "Multiple Pregnancy"
+      },
+      {
+        "code": "NOT_OTHERWISE_SPECIFIED_16",
+        "display": "Not Otherwise Specified"
+      },
+      {
+        "code": "USS_OBSTETRICS",
+        "display": "USS Obstetrics"
+      },
+      {
+        "code": "GENERAL_OBSTETRICS",
+        "display": "General Obstetrics"
+      },
+      {
+        "code": "FALLS_SEE_GERIATRIC_MEDICINE_1",
+        "display": "Falls - See Geriatric Medicine"
+      },
+      {
+        "code": "NOT_OTHERWISE_SPECIFIED_17",
+        "display": "Not Otherwise Specified"
+      },
+      {
+        "code": "UPPER_LIMB_SPLINTING",
+        "display": "Upper Limb / Splinting"
+      },
+      {
+        "code": "WHEELCHAIR_SEATING",
+        "display": "Wheelchair / Seating"
+      },
+      {
+        "code": "CATARACT",
+        "display": "Cataract"
+      },
+      {
+        "code": "CORNEA",
+        "display": "Cornea"
+      },
+      {
+        "code": "DIABETIC_MEDICAL_RETINA",
+        "display": "Diabetic Medical Retina"
+      },
+      {
+        "code": "EXTERNAL_EYE_DISEASE",
+        "display": "External Eye Disease"
+      },
+      {
+        "code": "GLAUCOMA",
+        "display": "Glaucoma"
+      },
+      {
+        "code": "LASER_YAG_CAPSULOTOMY",
+        "display": "Laser (YAG capsulotomy)"
+      },
+      {
+        "code": "LOW_VISION",
+        "display": "Low Vision"
+      },
+      {
+        "code": "NEURO_OPHTHALMOLOGY",
+        "display": "Neuro-Ophthalmology"
+      },
+      {
+        "code": "NOT_OTHERWISE_SPECIFIED_18",
+        "display": "Not Otherwise Specified"
+      },
+      {
+        "code": "OCULOPLASTICS_ORBITS_LACRIMAL",
+        "display": "Oculoplastics/Orbits/Lacrimal"
+      },
+      {
+        "code": "ONCOLOGY_ESTABLISHED_DIAGNOSIS_10",
+        "display": "Oncology (Established Diagnosis)"
+      },
+      {
+        "code": "ORTHOPTICS",
+        "display": "Orthoptics"
+      },
+      {
+        "code": "OTHER_MEDICAL_RETINA",
+        "display": "Other Medical Retina"
+      },
+      {
+        "code": "SQUINT_OCULAR_MOTILITY",
+        "display": "Squint / Ocular Motility"
+      },
+      {
+        "code": "VITREORETINAL",
+        "display": "Vitreoretinal"
+      },
+      {
+        "code": "EYELID_ADNEXAL_DISORDER",
+        "display": "Eyelid (Adnexal) Disorder"
+      },
+      {
+        "code": "LACRIMAL",
+        "display": "Lacrimal"
+      },
+      {
+        "code": "MEDICAL_RETINA",
+        "display": "Medical Retina"
+      },
+      {
+        "code": "METABOLIC_EYE_DISEASES_1",
+        "display": "Metabolic Eye Diseases"
+      },
+      {
+        "code": "GENERAL_ADULT_6",
+        "display": "General Adult"
+      },
+      {
+        "code": "GENERAL_PAEDIATRIC_1",
+        "display": "General Paediatric"
+      },
+      {
+        "code": "STRABISMUS_OCULAR_MOTILITY_PAEDIATRICS",
+        "display": "Strabismus/Ocular Motility (Paediatrics)"
+      },
+      {
+        "code": "OPHTHALMIC_URGENT",
+        "display": "Ophthalmic Urgent"
+      },
+      {
+        "code": "FACIAL_DEFORMITY",
+        "display": "Facial Deformity"
+      },
+      {
+        "code": "FACIAL_PLASTICS",
+        "display": "Facial Plastics"
+      },
+      {
+        "code": "HEAD_AND_NECK_LUMPS_NOT_2WW",
+        "display": "Head and Neck Lumps (not 2WW)"
+      },
+      {
+        "code": "NOT_OTHERWISE_SPECIFIED_19",
+        "display": "Not Otherwise Specified"
+      },
+      {
+        "code": "ONCOLOGY_ESTABLISHED_DIAGNOSIS_11",
+        "display": "Oncology (Established Diagnosis)"
+      },
+      {
+        "code": "ORAL_SURGERY",
+        "display": "Oral Surgery"
+      },
+      {
+        "code": "SALIVARY_GLAND_DISEASE",
+        "display": "Salivary Gland Disease"
+      },
+      {
+        "code": "PAEDIATRIC_FACIAL_DEFORMITY",
+        "display": "Paediatric Facial Deformity"
+      },
+      {
+        "code": "PAEDIATRIC_NOT_OTHERWISE_SPECIFIED",
+        "display": "Paediatric Not Otherwise Specified"
+      },
+      {
+        "code": "PAEDIATRIC_ORAL_SURGERY",
+        "display": "Paediatric Oral Surgery"
+      },
+      {
+        "code": "RAPID_ACCESS_FACIAL_SKIN",
+        "display": "Rapid Access Facial Skin"
+      },
+      {
+        "code": "RAPID_ACCESS_NECK_LUMPS",
+        "display": "Rapid Access Neck Lumps"
+      },
+      {
+        "code": "FOOT_AND_ANKLE",
+        "display": "Foot and Ankle"
+      },
+      {
+        "code": "FRACTURE_NON_EMERGENCY",
+        "display": "Fracture - Non Emergency"
+      },
+      {
+        "code": "HAND_AND_WRIST",
+        "display": "Hand and Wrist"
+      },
+      {
+        "code": "HIP",
+        "display": "Hip"
+      },
+      {
+        "code": "KNEE",
+        "display": "Knee"
+      },
+      {
+        "code": "LIMB_DEFORMITY_RECONSTRUCTION",
+        "display": "Limb Deformity/Reconstruction"
+      },
+      {
+        "code": "ONCOLOGY_ESTABLISHED_DIAGNOSIS_12",
+        "display": "Oncology (Established Diagnosis)"
+      },
+      {
+        "code": "PODIATRIC_SURGERY",
+        "display": "Podiatric Surgery"
+      },
+      {
+        "code": "SHOULDER_AND_ELBOW",
+        "display": "Shoulder and Elbow"
+      },
+      {
+        "code": "SPINE_BACK_PAIN_NOT_SCOLIOSIS_DEFORM",
+        "display": "Spine - Back Pain (not Scoliosis/Deform)"
+      },
+      {
+        "code": "SPINE_NECK_PAIN",
+        "display": "Spine - Neck Pain"
+      },
+      {
+        "code": "SPINE_SCOLIOSIS_AND_DEFORMITY",
+        "display": "Spine - Scoliosis and Deformity"
+      },
+      {
+        "code": "SPORTS_TRAUMA",
+        "display": "Sports Trauma"
+      },
+      {
+        "code": "LOWER_LIMB_1",
+        "display": "Lower Limb"
+      },
+      {
+        "code": "PAIN_MANAGEMENT_1",
+        "display": "Pain Management"
+      },
+      {
+        "code": "SPINAL_2",
+        "display": "Spinal"
+      },
+      {
+        "code": "UPPER_LIMB_1",
+        "display": "Upper Limb"
+      },
+      {
+        "code": "GENERAL_PAEDIATRIC_TRAUMA_ORTHOPAEDICS",
+        "display": "General Paediatric Trauma & Orthopaedics"
+      },
+      {
+        "code": "RAPID_ACCESS_TRAUMA_ORTHOPAEDICS",
+        "display": "Rapid Access Trauma & Orthopaedics"
+      },
+      {
+        "code": "GENERAL_ADULT_TRAUMA_ORTHOPAEDICS",
+        "display": "General Adult Trauma & Orthopaedics"
+      },
+      {
+        "code": "GENERAL_SPINE",
+        "display": "General Spine"
+      },
+      {
+        "code": "HIP_AND_KNEE",
+        "display": "Hip and Knee"
+      },
+      {
+        "code": "ORTHOPAEDIC_RHEUMATOID",
+        "display": "Orthopaedic Rheumatoid"
+      },
+      {
+        "code": "ORTHOTICS",
+        "display": "Orthotics"
+      },
+      {
+        "code": "PROSTHETICS",
+        "display": "Prosthetics"
+      },
+      {
+        "code": "PAIN_MANAGEMENT_2",
+        "display": "Pain Management"
+      },
+      {
+        "code": "PALLIATIVE_MEDICINE",
+        "display": "Palliative Medicine"
+      },
+      {
+        "code": "CARDIOVASCULAR",
+        "display": "Cardiovascular"
+      },
+      {
+        "code": "FALLS_SEE_GERIATRIC_MEDICINE",
+        "display": "Falls - see Geriatric Medicine"
+      },
+      {
+        "code": "GYNAECOLOGICAL_PHYSIOTHERAPY",
+        "display": "Gynaecological Physiotherapy"
+      },
+      {
+        "code": "MUSCULOSKELETAL_1",
+        "display": "Musculoskeletal"
+      },
+      {
+        "code": "NEUROLOGICAL",
+        "display": "Neurological"
+      },
+      {
+        "code": "NOT_OTHERWISE_SPECIFIED_20",
+        "display": "Not Otherwise Specified"
+      },
+      {
+        "code": "OBSTETRIC_PHYSIOTHERAPY",
+        "display": "Obstetric Physiotherapy"
+      },
+      {
+        "code": "ONCOLOGY_ESTABLISHED_DIAGNOSIS_13",
+        "display": "Oncology (established diagnosis)"
+      },
+      {
+        "code": "RESPIRATORY_2",
+        "display": "Respiratory"
+      },
+      {
+        "code": "UROLOGICAL_PHYSIOTHERAPY",
+        "display": "Urological Physiotherapy"
+      },
+      {
+        "code": "CARDIAC_RESPIRATORY_PHASING_OUT",
+        "display": "Cardiac / Respiratory (phasing out)"
+      },
+      {
+        "code": "AT_RISK_FOOT",
+        "display": "At Risk Foot"
+      },
+      {
+        "code": "BIOMECHANICAL",
+        "display": "Biomechanical"
+      },
+      {
+        "code": "DIABETES_NOT_ULCER",
+        "display": "Diabetes (not Ulcer)"
+      },
+      {
+        "code": "NAIL_SURGERY",
+        "display": "Nail Surgery"
+      },
+      {
+        "code": "NOT_OTHERWISE_SPECIFIED_21",
+        "display": "Not Otherwise Specified"
+      },
+      {
+        "code": "PODIATRIC_DERMATOLOGY",
+        "display": "Podiatric Dermatology"
+      },
+      {
+        "code": "PODIATRIC_HEALTH_EDUCATION",
+        "display": "Podiatric Health Education"
+      },
+      {
+        "code": "PODIATRIC_MSK_INCL_RHEUMATOLOGY",
+        "display": "Podiatric MSK - incl rheumatology"
+      },
+      {
+        "code": "PODIATRIC_SURGERY_EXCL_NAIL_SURGERY",
+        "display": "Podiatric Surgery - excl nail surgery"
+      },
+      {
+        "code": "MINOR_SURGERY_PHASING_OUT",
+        "display": "Minor Surgery (phasing out)"
+      },
+      {
+        "code": "RHEUMATIC_DISEASES_PHASING_OUT",
+        "display": "Rheumatic Diseases (phasing out)"
+      },
+      {
+        "code": "NEURO_REHABILITATION",
+        "display": "Neuro-rehabilitation"
+      },
+      {
+        "code": "NOT_OTHERWISE_SPECIFIED_22",
+        "display": "Not Otherwise Specified"
+      },
+      {
+        "code": "GENERAL_REHABILITATION",
+        "display": "General Rehabilitation"
+      },
+      {
+        "code": "ALLERGY_4",
+        "display": "Allergy"
+      },
+      {
+        "code": "ASTHMA",
+        "display": "Asthma"
+      },
+      {
+        "code": "COPD",
+        "display": "COPD"
+      },
+      {
+        "code": "CYSTIC_FIBROSIS",
+        "display": "Cystic Fibrosis"
+      },
+      {
+        "code": "INTERSTITIAL_LUNG_DISEASE",
+        "display": "Interstitial Lung Disease"
+      },
+      {
+        "code": "NOT_OTHERWISE_SPECIFIED_23",
+        "display": "Not Otherwise Specified"
+      },
+      {
+        "code": "OCCUPATIONAL_LUNG_DISEASE",
+        "display": "Occupational Lung Disease"
+      },
+      {
+        "code": "ONCOLOGY_ESTABLISHED_DIAGNOSIS_14",
+        "display": "Oncology (Established Diagnosis)"
+      },
+      {
+        "code": "SLEEP_SEE_SLEEP_MEDICINE_2",
+        "display": "Sleep - see Sleep Medicine"
+      },
+      {
+        "code": "TUBERCULOSIS_2",
+        "display": "Tuberculosis"
+      },
+      {
+        "code": "RAPID_ACCESS_6",
+        "display": "Rapid Access"
+      },
+      {
+        "code": "GENERAL_THORACIC_MEDICINE",
+        "display": "General Thoracic Medicine"
+      },
+      {
+        "code": "IMMUNOTHERAPY",
+        "display": "Immunotherapy"
+      },
+      {
+        "code": "BONE_OSTEOPOROSIS",
+        "display": "Bone / Osteoporosis"
+      },
+      {
+        "code": "INFLAMMATORY_ARTHRITIS",
+        "display": "Inflammatory Arthritis"
+      },
+      {
+        "code": "MUSCULOSKELETAL_2",
+        "display": "Musculoskeletal"
+      },
+      {
+        "code": "OTHER_AUTOIMMUNE_RHEUMATIC_DISEASE",
+        "display": "Other Autoimmune Rheumatic Disease"
+      },
+      {
+        "code": "SPINAL_DISORDERS",
+        "display": "Spinal Disorders"
+      },
+      {
+        "code": "PAIN_MANAGEMENT_3",
+        "display": "Pain Management"
+      },
+      {
+        "code": "PHYSIOTHERAPY",
+        "display": "Physiotherapy"
+      },
+      {
+        "code": "RAPID_ACCESS_RHEUMATOLOGY",
+        "display": "Rapid Access Rheumatology"
+      },
+      {
+        "code": "SOFT_TISSUE_CLINIC",
+        "display": "Soft Tissue Clinic"
+      },
+      {
+        "code": "GENERAL_PAEDIATRIC_2",
+        "display": "General Paediatric"
+      },
+      {
+        "code": "GENERAL_ADULT_7",
+        "display": "General Adult"
+      },
+      {
+        "code": "ACUTE_RESPONSE_PHASING_OUT",
+        "display": "Acute Response (phasing out)"
+      },
+      {
+        "code": "AUTOIMMUNE_RHEUM_DISORDERS_PHASING_OUT",
+        "display": "Autoimmune Rheum Disorders (phasing out)"
+      },
+      {
+        "code": "CHRONIC_MSK_PAIN_PHASING_OUT",
+        "display": "Chronic MSK Pain (phasing out)"
+      },
+      {
+        "code": "EXCESSIVE_INTRUSIVE_SLEEPINESS",
+        "display": "Excessive / Intrusive Sleepiness"
+      },
+      {
+        "code": "INSOMNIA",
+        "display": "Insomnia"
+      },
+      {
+        "code": "PARASOMNIA_AND_OTHER_SLEEP_DISORDERS",
+        "display": "Parasomnia and Other Sleep Disorders"
+      },
+      {
+        "code": "SLEEP_APNOEA_SLEEP_DISORDERED_BREATHING",
+        "display": "Sleep Apnoea/Sleep Disordered Breathing"
+      },
+      {
+        "code": "GENERAL_SLEEP_STUDIES",
+        "display": "General Sleep Studies"
+      },
+      {
+        "code": "COMMUNICATION",
+        "display": "Communication"
+      },
+      {
+        "code": "SWALLOWING_2",
+        "display": "Swallowing"
+      },
+      {
+        "code": "EXERCISE_MEDICINE",
+        "display": "Exercise Medicine"
+      },
+      {
+        "code": "NON_SURGICAL_MUSCULOSKELETAL",
+        "display": "Non-Surgical Musculoskeletal"
+      },
+      {
+        "code": "SOFT_TISSUE_INJURY",
+        "display": "Soft Tissue Injury"
+      },
+      {
+        "code": "SPORTS_INJURY",
+        "display": "Sports Injury"
+      },
+      {
+        "code": "SPORTS_MEDICINE",
+        "display": "Sports Medicine"
+      },
+      {
+        "code": "FH_OF_BREAST_CANCER_NON_2WW",
+        "display": "FH of Breast Cancer (non 2WW)"
+      },
+      {
+        "code": "MAMMOPLASTY_NON_2WW",
+        "display": "Mammoplasty (non 2WW)"
+      },
+      {
+        "code": "ONCOLOGY_ESTABLISHED_DIAGNOSIS_NON_2WW",
+        "display": "Oncology Established Diagnosis (non 2WW)"
+      },
+      {
+        "code": "OTHER_SYMPTOMATIC_BREAST_2WW",
+        "display": "Other symptomatic Breast (2WW)"
+      },
+      {
+        "code": "RAPID_ACCESS_7",
+        "display": "Rapid Access"
+      },
+      {
+        "code": "BREAST_ONE_STOP_UNIT",
+        "display": "Breast One Stop Unit"
+      },
+      {
+        "code": "GENERAL_BREAST_SURGERY",
+        "display": "General Breast Surgery"
+      },
+      {
+        "code": "CARDIAC_SURGERY_1",
+        "display": "Cardiac Surgery"
+      },
+      {
+        "code": "THORACIC_SURGERY",
+        "display": "Thoracic Surgery"
+      },
+      {
+        "code": "GENERAL_CARDIOTHORACIC_SURGERY",
+        "display": "General Cardiothoracic Surgery"
+      },
+      {
+        "code": "ENDOCRINE_SURGERY",
+        "display": "Endocrine Surgery"
+      },
+      {
+        "code": "HERNIAS",
+        "display": "Hernias"
+      },
+      {
+        "code": "LUMPS_AND_BUMPS",
+        "display": "Lumps and Bumps"
+      },
+      {
+        "code": "GENERAL_SURGERY",
+        "display": "General Surgery"
+      },
+      {
+        "code": "MALE_STERILISATION_REVERSAL",
+        "display": "Male Sterilisation/Reversal"
+      },
+      {
+        "code": "MINOR_SURGERY",
+        "display": "Minor Surgery"
+      },
+      {
+        "code": "RAPID_ACCESS_GENERAL_SURGERY",
+        "display": "Rapid Access General Surgery"
+      },
+      {
+        "code": "ENDOSCOPY_1",
+        "display": "Endoscopy"
+      },
+      {
+        "code": "UPPER_GI_2",
+        "display": "Upper GI"
+      },
+      {
+        "code": "BASAL_CELL_CARCINOMA_2",
+        "display": "Basal Cell Carcinoma"
+      },
+      {
+        "code": "BURNS",
+        "display": "Burns"
+      },
+      {
+        "code": "CRANIOFACIAL_2",
+        "display": "Craniofacial"
+      },
+      {
+        "code": "GYNAECOLOGY_AND_PERINEAL_RECONSTRUCTION",
+        "display": "Gynaecology and Perineal Reconstruction"
+      },
+      {
+        "code": "LASER",
+        "display": "Laser"
+      },
+      {
+        "code": "LOWER_LIMB_2",
+        "display": "Lower Limb"
+      },
+      {
+        "code": "MAMMOPLASTY",
+        "display": "Mammoplasty"
+      },
+      {
+        "code": "MINOR_PLASTIC_SURGERY",
+        "display": "Minor Plastic Surgery"
+      },
+      {
+        "code": "NOT_OTHERWISE_SPECIFIED_24",
+        "display": "Not Otherwise Specified"
+      },
+      {
+        "code": "ONCOLOGY_ESTABLISHED_DIAGNOSIS_15",
+        "display": "Oncology (Established Diagnosis)"
+      },
+      {
+        "code": "UPPER_LIMB_2",
+        "display": "Upper Limb"
+      },
+      {
+        "code": "VASCULAR_MALFORMATION",
+        "display": "Vascular Malformation"
+      },
+      {
+        "code": "RAPID_ACCESS_8",
+        "display": "Rapid Access"
+      },
+      {
+        "code": "PAEDIATRIC_PLASTIC_SURGERY",
+        "display": "Paediatric Plastic Surgery"
+      },
+      {
+        "code": "GENERAL_PLASTIC_SURGERY",
+        "display": "General Plastic Surgery"
+      },
+      {
+        "code": "ARTERIAL",
+        "display": "Arterial"
+      },
+      {
+        "code": "LEG_ULCER_2",
+        "display": "Leg Ulcer"
+      },
+      {
+        "code": "LYMPHOEDEMA",
+        "display": "Lymphoedema"
+      },
+      {
+        "code": "NOT_OTHERWISE_SPECIFIED_25",
+        "display": "Not Otherwise Specified"
+      },
+      {
+        "code": "VARICOSE_VEINS",
+        "display": "Varicose Veins"
+      },
+      {
+        "code": "DOPPLER_TEST",
+        "display": "Doppler Test"
+      },
+      {
+        "code": "ANEURYSM",
+        "display": "Aneurysm"
+      },
+      {
+        "code": "GENERAL_VASCULAR_SURGERY",
+        "display": "General Vascular Surgery"
+      },
+      {
+        "code": "IN_CONTINENCE",
+        "display": "(In) Continence"
+      },
+      {
+        "code": "ERECTILE_DYSFUNCTION_ANDROLOGY",
+        "display": "Erectile Dysfunction/Andrology"
+      },
+      {
+        "code": "HAEMATURIA_NOT_2WW",
+        "display": "Haematuria (not 2WW)"
+      },
+      {
+        "code": "MALE_INFERTILITY",
+        "display": "Male Infertility"
+      },
+      {
+        "code": "NOT_OTHERWISE_SPECIFIED_26",
+        "display": "Not Otherwise Specified"
+      },
+      {
+        "code": "ONCOLOGY_ESTABLISHED_DIAGNOSIS_16",
+        "display": "Oncology (Established Diagnosis)"
+      },
+      {
+        "code": "PROSTATE",
+        "display": "Prostate"
+      },
+      {
+        "code": "URINARY_CALCULUS",
+        "display": "Urinary Calculus"
+      },
+      {
+        "code": "VASECTOMY",
+        "display": "Vasectomy"
+      },
+      {
+        "code": "FEMALE_AND_RECONSTRUCTION",
+        "display": "Female and Reconstruction"
+      },
+      {
+        "code": "GENDER_REASSIGNMENT",
+        "display": "Gender Reassignment"
+      },
+      {
+        "code": "GENERAL_UROLOGY",
+        "display": "General Urology"
+      },
+      {
+        "code": "MALE_RECONSTRUCTION",
+        "display": "Male Reconstruction"
+      },
+      {
+        "code": "PAEDIATRIC_2",
+        "display": "Paediatric"
+      },
+      {
+        "code": "RAPID_ACCESS_UROLOGY",
+        "display": "Rapid Access Urology"
+      },
+      {
+        "code": "URODYNAMICS_2",
+        "display": "Urodynamics"
+      },
+      {
+        "code": "UROGYNAECOLOGY",
+        "display": "Urogynaecology"
+      },
+      {
+        "code": "ANDROLOGY",
+        "display": "Andrology"
+      },
+      {
+        "code": "ERECTILE_DYSFUNCTION_2",
+        "display": "Erectile Dysfunction"
+      },
+      {
+        "code": "GENERAL_RADIOLOGY",
+        "display": "General Radiology"
+      },
+      {
+        "code": "ULTRASOUND_2",
+        "display": "Ultrasound"
+      },
+      {
+        "code": "GENERAL_NEONATOLOGY",
+        "display": "General Neonatology"
+      },
+      {
+        "code": "FOETAL_CARDIOLOGY",
+        "display": "Foetal Cardiology"
+      },
+      {
+        "code": "GENERAL_PAEDIATRIC_CARDIOLOGY",
+        "display": "General Paediatric Cardiology"
+      },
+      {
+        "code": "PULMONARY_HYPERTENSION",
+        "display": "Pulmonary Hypertension"
+      },
+      {
+        "code": "GENERAL_PAEDIATRIC_DENTISTRY",
+        "display": "General Paediatric Dentistry"
+      },
+      {
+        "code": "GENERAL_PAEDIATRIC_NEUROLOGY",
+        "display": "General Paediatric Neurology"
+      },
+      {
+        "code": "CARDIAC_SURGERY_2",
+        "display": "Cardiac Surgery"
+      },
+      {
+        "code": "GENERAL_PAEDIATRIC_SURGERY",
+        "display": "General Paediatric Surgery"
+      },
+      {
+        "code": "NEUROSURGERY",
+        "display": "Neurosurgery"
+      },
+      {
+        "code": "UPPER_LIMB_3",
+        "display": "Upper Limb"
+      },
+      {
+        "code": "UROLOGY_2",
+        "display": "Urology"
+      },
+      {
+        "code": "GENERAL_WELL_BABIES",
+        "display": "General Well Babies"
+      },
+      {
+        "code": "CONTACT_LENS",
+        "display": "Contact Lens"
+      },
+      {
+        "code": "EYE_SCREENING",
+        "display": "Eye Screening"
+      },
+      {
+        "code": "GENETIC_EYE_DISORDER",
+        "display": "Genetic Eye Disorder"
+      },
+      {
+        "code": "LOW_VISUAL_AID",
+        "display": "Low Visual Aid"
+      },
+      {
+        "code": "MEDICAL_RETINAL",
+        "display": "Medical Retinal"
+      },
+      {
+        "code": "METABOLIC_EYE_DISEASES_2",
+        "display": "Metabolic Eye Diseases"
+      },
+      {
+        "code": "GENERAL_MEDICAL_OPHTHALMOLOGY",
+        "display": "General Medical Ophthalmology"
+      },
+      {
+        "code": "GENERAL_PAEDIATRIC_ORAL_SURGERY",
+        "display": "General Paediatric Oral Surgery"
+      },
+      {
+        "code": "GENERAL_ADULT_ORAL_SURGERY",
+        "display": "General Adult Oral Surgery"
+      },
+      {
+        "code": "AUTOIMMUNE_DISEASES",
+        "display": "Autoimmune Diseases"
+      },
+      {
+        "code": "GEN_ADULT_CLINICAL_IMMUNOLOGY_ALLERGY",
+        "display": "Gen Adult Clinical Immunology & Allergy"
+      },
+      {
+        "code": "GENERAL_CLINICAL_IMMUNOLOGY_AND_ALLERGY",
+        "display": "General Clinical Immunology and Allergy"
+      },
+      {
+        "code": "IMMUNE_DEFICIENCY",
+        "display": "Immune Deficiency"
+      },
+      {
+        "code": "PAEDIATRIC_CARDIAC_SURGERY",
+        "display": "Paediatric Cardiac Surgery"
+      },
+      {
+        "code": "GENERAL_CARDIAC_SURGERY",
+        "display": "General Cardiac Surgery"
+      },
+      {
+        "code": "GENERAL_THORACIC_SURGERY",
+        "display": "General Thoracic Surgery"
+      },
+      {
+        "code": "GEN_HEPATOBILARY_PANCREATIC_SURGERY",
+        "display": "Gen. Hepatobilary & Pancreatic Surgery"
+      },
+      {
+        "code": "GENERAL_HEPATOLOGY",
+        "display": "General Hepatology"
+      },
+      {
+        "code": "INFECTIOUS_DISEASES_2",
+        "display": "Infectious Diseases"
+      },
+      {
+        "code": "METABOLIC_LIVER_DISEASES",
+        "display": "Metabolic Liver Diseases"
+      },
+      {
+        "code": "RAPID_ACCESS_9",
+        "display": "Rapid Access"
+      },
+      {
+        "code": "COLONOSCOPY",
+        "display": "Colonoscopy"
+      },
+      {
+        "code": "FLEXI_SIGMOIDOSCOPY",
+        "display": "Flexi Sigmoidoscopy"
+      },
+      {
+        "code": "GENERAL_COLORECTAL_SURGERY",
+        "display": "General Colorectal Surgery"
+      },
+      {
+        "code": "GENERAL_RECTAL",
+        "display": "General Rectal"
+      },
+      {
+        "code": "ENDOSCOPY_2",
+        "display": "Endoscopy"
+      },
+      {
+        "code": "RAPID_ACCESS_10",
+        "display": "Rapid Access"
+      },
+      {
+        "code": "GENERAL_UPPER_GASTROINTESTINAL_SURGERY",
+        "display": "General Upper Gastrointestinal Surgery"
+      },
+      {
+        "code": "PAEDIATRIC_3",
+        "display": "Paediatric"
+      },
+      {
+        "code": "DERMATOLOGY_3",
+        "display": "Dermatology"
+      },
+      {
+        "code": "GENERAL_TROPICAL_MEDICINE",
+        "display": "General Tropical Medicine"
+      },
+      {
+        "code": "LEPROSY_LEISHMONIASIS",
+        "display": "Leprosy/Leishmoniasis"
+      },
+      {
+        "code": "OPHTHALMOLOGY",
+        "display": "Ophthalmology"
+      },
+      {
+        "code": "GENERAL_ADULT_MENTAL_ILLNESS",
+        "display": "General Adult Mental Illness"
+      },
+      {
+        "code": "GENERAL_PAEDIATRIC_AUDIOLOGICAL_MEDICINE",
+        "display": "General Paediatric Audiological Medicine"
+      },
+      {
+        "code": "GENERAL_ADULT_AUDIOLOGICAL_MEDICINE",
+        "display": "General Adult Audiological Medicine"
+      },
+      {
+        "code": "GENERAL_AUDIOLOGICAL_MEDICINE",
+        "display": "General Audiological Medicine"
+      },
+      {
+        "code": "GENERAL_BONE_AND_MARROW_TRANSPLANTATION",
+        "display": "General Bone and Marrow Transplantation"
+      },
+      {
+        "code": "ACUTE_ACCESS_BURNS_CARE",
+        "display": "Acute Access Burns Care"
+      },
+      {
+        "code": "BURNS_CARE_REHABILITATION",
+        "display": "Burns Care Rehabilitation"
+      },
+      {
+        "code": "GENERAL_BURNS_CARE",
+        "display": "General Burns Care"
+      },
+      {
+        "code": "GENERAL_CHEMICAL_PATHOLOGY",
+        "display": "General Chemical Pathology"
+      },
+      {
+        "code": "GENETIC_DISORDERS",
+        "display": "Genetic Disorders"
+      },
+      {
+        "code": "LIPID_DISORDERS_3",
+        "display": "Lipid Disorders"
+      },
+      {
+        "code": "METABOLIC_DISORDERS_4",
+        "display": "Metabolic Disorders"
+      },
+      {
+        "code": "GENERAL_CHILD_AND_ADOLESCENT_PSYCHIATRY",
+        "display": "General Child and Adolescent Psychiatry"
+      },
+      {
+        "code": "GENERAL_CLINICAL_MICROBIOLOGY",
+        "display": "General Clinical Microbiology"
+      },
+      {
+        "code": "PAEDIATRIC_ONCOLOGY_1",
+        "display": "Paediatric Oncology"
+      },
+      {
+        "code": "BREAST_ONCOLOGY_1",
+        "display": "Breast Oncology"
+      },
+      {
+        "code": "DERMATOLOGICAL_ONCOLOGY_1",
+        "display": "Dermatological Oncology"
+      },
+      {
+        "code": "GASTROINTESTINAL_ONCOLOGY_1",
+        "display": "Gastrointestinal Oncology"
+      },
+      {
+        "code": "GENERAL_CLINICAL_ONCOLOGY",
+        "display": "General Clinical Oncology"
+      },
+      {
+        "code": "GYNAECOLOGICAL_ONCOLOGY_1",
+        "display": "Gynaecological Oncology"
+      },
+      {
+        "code": "HAEMATOLOGICAL_ONCOLOGY_1",
+        "display": "Haematological Oncology"
+      },
+      {
+        "code": "HEAD_AND_NECK_ONCOLOGY_1",
+        "display": "Head and Neck Oncology"
+      },
+      {
+        "code": "NEURO_ONCOLOGY_1",
+        "display": "Neuro-oncology"
+      },
+      {
+        "code": "ORTHOPAEDIC_ONCOLOGY_1",
+        "display": "Orthopaedic Oncology"
+      },
+      {
+        "code": "THORACIC_ONCOLOGY_1",
+        "display": "Thoracic Oncology"
+      },
+      {
+        "code": "UROLOGICAL_ONCOLOGY_1",
+        "display": "Urological Oncology"
+      },
+      {
+        "code": "GENERAL_CLINICAL_PHARMACOLOGY",
+        "display": "General Clinical Pharmacology"
+      },
+      {
+        "code": "GENERAL_CLINICAL_PHYSIOLOGY",
+        "display": "General Clinical Physiology"
+      },
+      {
+        "code": "GENERAL_DENTAL_MEDICINE",
+        "display": "General Dental Medicine"
+      },
+      {
+        "code": "GENERAL_FORENSIC_PSYCHIATRY",
+        "display": "General Forensic Psychiatry"
+      },
+      {
+        "code": "GENERAL_GYNAECOLOGICAL_ONCOLOGY",
+        "display": "General Gynaecological Oncology"
+      },
+      {
+        "code": "PAEDIATRIC_HAEMOPHILIA_2",
+        "display": "Paediatric Haemophilia"
+      },
+      {
+        "code": "GENERAL_HAEMOPHILIA",
+        "display": "General Haemophilia"
+      },
+      {
+        "code": "GENERAL_INTERVENTIONAL_RADIOLOGY",
+        "display": "General Interventional Radiology"
+      },
+      {
+        "code": "PAEDIATRIC_ONCOLOGY_2",
+        "display": "Paediatric Oncology"
+      },
+      {
+        "code": "XXXDO_NOT_USE_XXX",
+        "display": "XXXDO NOT USE XXX"
+      },
+      {
+        "code": "BREAST_ONCOLOGY_2",
+        "display": "Breast Oncology"
+      },
+      {
+        "code": "DERMATOLOGICAL_ONCOLOGY_2",
+        "display": "Dermatological Oncology"
+      },
+      {
+        "code": "GASTROINTESTINAL_ONCOLOGY_2",
+        "display": "Gastrointestinal Oncology"
+      },
+      {
+        "code": "GENERAL_MEDICAL_ONCOLOGY",
+        "display": "General Medical Oncology"
+      },
+      {
+        "code": "GYNAECOLOGICAL_ONCOLOGY_2",
+        "display": "Gynaecological Oncology"
+      },
+      {
+        "code": "HAEMATOLOGICAL_ONCOLOGY_2",
+        "display": "Haematological Oncology"
+      },
+      {
+        "code": "HEAD_AND_NECK_ONCOLOGY_2",
+        "display": "Head and Neck Oncology"
+      },
+      {
+        "code": "NEURO_ONCOLOGY_2",
+        "display": "Neuro-oncology"
+      },
+      {
+        "code": "ORTHOPAEDIC_ONCOLOGY_2",
+        "display": "Orthopaedic Oncology"
+      },
+      {
+        "code": "THORACIC_ONCOLOGY_2",
+        "display": "Thoracic Oncology"
+      },
+      {
+        "code": "UROLOGICAL_ONCOLOGY_2",
+        "display": "Urological Oncology"
+      },
+      {
+        "code": "GENERAL_OLD_AGE_PSYCHIATRY",
+        "display": "General Old Age Psychiatry"
+      },
+      {
+        "code": "PAEDIATRIC_ORTHODONTICS",
+        "display": "Paediatric Orthodontics"
+      },
+      {
+        "code": "GENERAL_ORTHODONTICS",
+        "display": "General Orthodontics"
+      },
+      {
+        "code": "GENERAL_PSYCHOTHERAPY",
+        "display": "General Psychotherapy"
+      },
+      {
+        "code": "GENERAL_TRANSPLANTATION_SURGERY",
+        "display": "General Transplantation Surgery"
+      },
+      {
+        "code": "INJECTION_AND_DRAINAGE",
+        "display": "Injection and Drainage"
+      },
+      {
+        "code": "TUMOUR_ABLATION",
+        "display": "Tumour Ablation"
+      },
+      {
+        "code": "VASCULAR_AND_STENT",
+        "display": "Vascular and Stent"
+      }
+    ]
+  }

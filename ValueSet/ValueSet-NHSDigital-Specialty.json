@@ -1,0 +1,30 @@
+{
+    "resourceType": "ValueSet",
+    "id": "c4880a00-b908-4877-9b71-4f3b8a50faee",
+    "url": "https://fhir.nhs.uk/ValueSet/NHSDigital-eRS-Specialty",
+    "version": "1.0.0",
+    "name": "NHSDigitaleRSSpecialty",
+    "status": "draft",
+    "publisher": "NHS Digital",
+    "contact": [
+      {
+        "name": "Interoperability Team",
+        "telecom": [
+          {
+            "system": "email",
+            "value": "interoperabilityteam@nhs.net",
+            "use": "work"
+          }
+        ]
+      }
+    ],
+    "description": "A valueset to describe the specialty of request. The values must be downloaded directly from e-RS.",
+    "copyright": "Copyright © 2017 NHS Digital",
+    "compose": {
+      "include": [
+        {
+          "system": "https://fhir.nhs.uk/CodeSystem/NHSDigital-Specialty"
+        }
+      ]
+    }
+  }

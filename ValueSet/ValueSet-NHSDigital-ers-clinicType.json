@@ -1,0 +1,33 @@
+{
+    "resourceType": "ValueSet",
+    "id": "bb928767-263e-457c-9ee0-1a3d239ddc10",
+    "meta": {
+      "lastUpdated": "2017-10-05T00:00:00+01:00"
+    },
+    "url": "https://fhir.nhs.uk/ValueSet/NHSDigital-eRS-ClinicType",
+    "version": "1.0.0",
+    "name": "eRSClinicType",
+    "status": "draft",
+    "publisher": "NHS Digital",
+    "contact": [
+      {
+        "name": "Interoperability Team",
+        "telecom": [
+          {
+            "system": "email",
+            "value": "interoperabilityteam@nhs.net",
+            "use": "work"
+          }
+        ]
+      }
+    ],
+    "description": "A valueset to describe the clinic type",
+    "copyright": "Copyright © 2017 NHS Digital",
+    "compose": {
+      "include": [
+        {
+          "system": "https://fhir.nhs.uk/CodeSystem/NHSDigital-ClinicType"
+        }
+      ]
+    }
+  }
