@@ -19,67 +19,70 @@
         {
             "name": "notificationEventReference",
             "valueReference" : {
-                "type" : "Task",
-                "reference" : "https://fhir.leedsth.nhs.uk/Task/000000070000"
+                "type" : "ServiceRequest",
+                "reference" : "https://fhir.leedsth.nhs.uk/ServiceRequest/1d3fa61f-ae15-4fe4-9393-c98e3bbdfbb0"
             }
         },
         {
             "name": "notificationEventResource",
             "resource": {
-                "resourceType": "Task",
-                "id" : "000000070000",
-                "status": "accepted",
-                "intent": "order",
+                "resourceType": "ServiceRequest",
+                "id" :"1d3fa61f-ae15-4fe4-9393-c98e3bbdfbb0",
+                "meta": {
+                    "lastUpdated": "2021-10-11T15:23:30+00:00"
+                },
+                "identifier": [{
+                    "system": "https://fhir.nhs.uk/Id/UBRN",
+                    "value": "000000070000"
+                }],
+                "status": "active",
+                "intent": "plan",
                 "code": {
                     "coding": [
                         {
-                            "system": "http://hl7.org/fhir/CodeSystem/task-code",
-                            "code": "fulfill",
-                            "display": "Fulfill the focal request"
+                            "system":"http://snomed.info/sct",
+                            "code":"127783003",
+                            "display":"Spirometry (procedure)"
                         }
                     ]
                 },
-                "focus": {
-                    "reference" : "https://api.ers-service.nhs.uk/FHIR/R4/ServiceRequest/dafb61c6-7042-40aa-a72d-843f1936b573",
-                    "identifier" : {
-                        "system" : "https://fhir.nhs.uk/Id/UBRN",
-                        "value" : "000000070000"
-                    }
-                },
-                "for": {
+                "subject": {
                     "identifier": {
                         "system": "https://fhir.nhs.uk/Id/nhs-number",
-                        "value": "9446368138"
-                    }
+                        "value": "9478526985"
+                    },
+                    "display":"Julie Jones"
                 },
-                "owner": {
-                    "reference" : "https://directory.spineservices.nhs.uk/R4/Organization/RR8",
-                    "identifier": {
-                        "system": "https://fhir.nhs.uk/Id/ods-organization-code",
-                        "value": "RR8"
-                    }
+                "occurrencePeriod": {
+                    "start": "2021-10-13T16:20:27+07:00"
                 },
+                "authoredOn": "2021-10-13T16:28:00+07:00",
                 "requester": {
                     "identifier": {
                         "system": "https://fhir.nhs.uk/Id/ods-organization-code",
                         "value": "GP0001"
                       }
                 },
-                "authoredOn": "2021-10-09T12:00:00+00:00",
-                "reasonCode": {
-                    "coding": [
-                        {
-                            "system": "http://snomed.info/sct",
-                            "code": "306185001",
-                            "display": "Referral to cardiac surgery service"
+                "performer": [
+                    {
+                        "type": "Organization",
+                        "identifier": {
+                            "system": "https://fhir.nhs.uk/Id/ods-organization-code",
+                            "value": "RR8"
                         },
-                        {
-                            "system": "https://fhir.nhs.uk/CodeSystem/NHSDigital-Specialty",
-                            "code": "CARDIOLOGY"
-                          }
-                    ]
-                }
+                        "display": "Leeds Teaching NHS Trust"
+                    },
+                    {
+                        "type":"HealthcareService",
+                        "identifier": {
+                            "system": "http://fhir.nhs.net/Id/ers-service",
+                            "value": "11021"
+                        }
+                    }
+                ],
+                "patientInstruction": "ADVICE GIVEN: If there are any new symptoms, or if the condition gets worse, changes or you have any other concerns, call us back."
             }
+            
         }
     ]
 }

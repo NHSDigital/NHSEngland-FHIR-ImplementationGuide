@@ -9,7 +9,7 @@
         }
     ],
     "reason": "Monitor tasks that we have requested",
-    "criteria": "Task?requester:identifier=https://fhir.nhs.uk/Id/ods-organization-code|GP0001",
+    "criteria": "ServiceRequest?requester:identifier=https://fhir.nhs.uk/Id/ods-organization-code|GP0001",
     "channel": {
         "type": "message",
         "endpoint": "https://fhir.mygpsupplier.nhs.uk/$process-message"

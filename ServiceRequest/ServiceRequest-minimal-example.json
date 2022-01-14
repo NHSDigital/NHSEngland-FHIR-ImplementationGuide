@@ -4,19 +4,21 @@
     "meta": {
         "lastUpdated": "2021-10-11T15:23:30+00:00"
     },
+    "identifier": [{
+        "system": "https://fhir.nhs.uk/Id/UBRN",
+        "value": "000000070000"
+    }],
     "status": "active",
     "intent": "plan",
-    "category": [
-        {
-            "coding": [
-                {
-                    "system": "http://snomed.info/sct",
-                    "code": "409063005",
-                    "display": "Counselling"
-                }
-            ]
-        }
-    ],
+    "code": {
+        "coding": [
+            {
+                "system":"http://snomed.info/sct",
+                "code":"127783003",
+                "display":"Spirometry (procedure)"
+            }
+        ]
+    },
     "subject": {
         "identifier": {
             "system": "https://fhir.nhs.uk/Id/nhs-number",
@@ -36,11 +38,19 @@
     },
     "performer": [
         {
+            "type": "Organization",
             "identifier": {
                 "system": "https://fhir.nhs.uk/Id/ods-organization-code",
                 "value": "RR8"
             },
             "display": "Leeds Teaching NHS Trust"
+        },
+        {
+            "type":"HealthcareService",
+            "identifier": {
+                "system": "http://fhir.nhs.net/Id/ers-service",
+                "value": "11021"
+            }
         }
     ],
     "patientInstruction": "ADVICE GIVEN: If there are any new symptoms, or if the condition gets worse, changes or you have any other concerns, call us back."

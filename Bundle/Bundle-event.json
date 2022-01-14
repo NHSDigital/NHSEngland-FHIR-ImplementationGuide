@@ -58,8 +58,12 @@
                             {
                                 "name": "focus",
                                 "valueReference" : {
-                                    "type" : "Task",
-                                    "reference" : "https://fhir.leedsth.nhs.uk/Task/000000070000"
+                                    "type" : "ServiceRequest",
+                                    "reference" : "https://fhir.leedsth.nhs.uk/ServiceRequest/1d3fa61f-ae15-4fe4-9393-c98e3bbdfbb0",
+                                    "identifier" : {
+                                        "system": "https://fhir.nhs.uk/Id/UBRN",
+                                        "value": "000000070000"
+                                    }
                                 }
                             }
                         ]

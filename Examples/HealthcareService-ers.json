@@ -12,7 +12,7 @@
   "providedBy": {
     "identifier": {
       "system": "https://fhir.nhs.uk/Id/ods-organization-code",
-      "value": "RBA"
+      "value": "RR8"
     }
   },
   "serviceProvisionCode": [
@@ -20,7 +20,23 @@
       "coding": [
         {
           "system": "https://fhir.nhs.uk/CodeSystem/NHSDigital-ClinicType",
-          "code": "LIPID_MANAGEMENT"
+          "code": "RESPIRATORY_SLEEP_APNOEA_SCREENING"
+        }
+      ]
+    },
+    {
+      "coding": [
+        {
+          "system": "https://fhir.nhs.uk/CodeSystem/NHSDigital-ClinicType",
+          "code": "RESPIRATORY_2"
+        }
+      ]
+    },
+    {
+      "coding": [
+        {
+          "system": "https://fhir.nhs.uk/CodeSystem/NHSDigital-ClinicType",
+          "code": "RESPIRATORY_SPIROMETRY_BRONCHODILATOR"
         }
       ]
     }
@@ -29,9 +45,13 @@
     {
       "coding": [
         {
-          "system": "http://snomed.info/sct",
-          "code": "394592004",
-          "display": "Clinical oncology"
+          "system": "https://fhir.nhs.uk/CodeSystem/NHSDigital-Specialty",
+          "code": "RESPIRATORY_MEDICINE"
+        },
+        {
+          "system": "https://fhir.nhs.uk/CodeSystem/NHSDataModelAndDictionary-clinical-specialty",
+          "code": "340",
+          "display": "Respiratory Medicine"
         }
       ]
     }
@@ -41,7 +61,7 @@
       "reference": "urn:uuid:8a5d7d67-64fb-44ec-9802-2dc214bb3dcb"
     }
   ],
-  "name": "SOMERSET BOWEL CANCER SCREENING CENTRE",
+  "name": "ELMET ClNICAL CENTRE",
   "telecom": [
     {
       "system": "phone",
