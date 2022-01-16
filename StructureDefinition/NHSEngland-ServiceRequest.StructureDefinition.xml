@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="https://fhir.nhs.uk/StructureDefinition/NHSEngland-ServiceRequest" />
-  <name value="NHSEnglandServiceRequest" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/England-ServiceRequest" />
+  <name value="EnglandServiceRequest" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
   <kind value="resource" />

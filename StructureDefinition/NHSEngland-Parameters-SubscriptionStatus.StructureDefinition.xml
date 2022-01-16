@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="https://fhir.nhs.uk/StructureDefinition/NHSEngland-Parameters-SubscriptionStatus" />
-  <name value="NHSEnglandParametersSubscriptionStatus" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/England-Parameters-SubscriptionStatus" />
+  <name value="EnglandParametersSubscriptionStatus" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
   <kind value="resource" />
