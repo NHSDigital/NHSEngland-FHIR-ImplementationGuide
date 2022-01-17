@@ -35,6 +35,15 @@
       <path value="Encounter.identifier" />
       <definition value="In ITK HL7v2 this is PV1.19 Visit Number .&#xD;&#xA;&#xD;&#xA;Identifier(s) by which this encounter is known." />
       <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.identifier.system">
+      <path value="Encounter.identifier.system" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.identifier.value">
+      <path value="Encounter.identifier.value" />
+      <min value="1" />
     </element>
     <element id="Encounter.class">
       <path value="Encounter.class" />

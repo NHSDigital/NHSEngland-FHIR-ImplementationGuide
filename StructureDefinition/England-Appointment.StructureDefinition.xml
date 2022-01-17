@@ -13,6 +13,7 @@
     <element id="Appointment.identifier">
       <path value="Appointment.identifier" />
       <min value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="Appointment.identifier.system">
       <path value="Appointment.identifier.system" />

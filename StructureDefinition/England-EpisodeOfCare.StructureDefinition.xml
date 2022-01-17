@@ -13,10 +13,27 @@
     <element id="EpisodeOfCare.identifier">
       <path value="EpisodeOfCare.identifier" />
       <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="EpisodeOfCare.identifier.system">
+      <path value="EpisodeOfCare.identifier.system" />
+      <min value="1" />
+    </element>
+    <element id="EpisodeOfCare.identifier.value">
+      <path value="EpisodeOfCare.identifier.value" />
+      <min value="1" />
     </element>
     <element id="EpisodeOfCare.patient">
       <path value="EpisodeOfCare.patient" />
       <mustSupport value="true" />
+    </element>
+    <element id="EpisodeOfCare.patient.identifier.system">
+      <path value="EpisodeOfCare.patient.identifier.system" />
+      <min value="1" />
+    </element>
+    <element id="EpisodeOfCare.patient.identifier.value">
+      <path value="EpisodeOfCare.patient.identifier.value" />
+      <min value="1" />
     </element>
     <element id="EpisodeOfCare.referralRequest">
       <path value="EpisodeOfCare.referralRequest" />

@@ -14,6 +14,14 @@
       <path value="ServiceRequest.identifier" />
       <min value="1" />
     </element>
+    <element id="ServiceRequest.identifier.system">
+      <path value="ServiceRequest.identifier.system" />
+      <min value="1" />
+    </element>
+    <element id="ServiceRequest.identifier.value">
+      <path value="ServiceRequest.identifier.value" />
+      <min value="1" />
+    </element>
     <element id="ServiceRequest.basedOn">
       <path value="ServiceRequest.basedOn" />
       <type>

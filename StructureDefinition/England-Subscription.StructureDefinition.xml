@@ -14,5 +14,17 @@
       <path value="Subscription" />
       <comment value="Reserved for BaRS and eRS use" />
     </element>
+    <element id="Subscription.status">
+      <path value="Subscription.status" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Subscription.criteria">
+      <path value="Subscription.criteria" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Subscription.channel">
+      <path value="Subscription.channel" />
+      <mustSupport value="true" />
+    </element>
   </differential>
 </StructureDefinition>
