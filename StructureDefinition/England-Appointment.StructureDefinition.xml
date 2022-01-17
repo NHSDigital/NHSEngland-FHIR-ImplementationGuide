@@ -51,6 +51,11 @@
         <code value="Reference" />
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-ServiceRequest" />
       </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Appointment.participant">
+      <path value="Appointment.participant" />
+      <mustSupport value="true" />
     </element>
     <element id="Appointment.participant.actor.identifier">
       <path value="Appointment.participant.actor.identifier" />

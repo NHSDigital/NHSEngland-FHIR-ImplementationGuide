@@ -69,6 +69,7 @@
         <expression value="identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').exists().not() or (identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').exists()  and identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').value.matches('^([456789]{1}[0-9]{9})$'))" />
         <source value="https://fhir.nhs.uk/StructureDefinition/England-Encounter" />
       </constraint>
+      <mustSupport value="true" />
     </element>
     <element id="Encounter.subject.identifier.system">
       <path value="Encounter.subject.identifier.system" />
@@ -96,6 +97,14 @@
     <element id="Encounter.participant">
       <path value="Encounter.participant" />
       <definition value="In HL7v2 this is PV1.7 Attending Doctor, PV1.8 Referring Doctor and PV1.9 Consulting Doctoer&#xD;&#xA;&#xD;&#xA;The list of people responsible for providing the service." />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.appointment">
+      <path value="Encounter.appointment" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-Appointment" />
+      </type>
     </element>
     <element id="Encounter.period">
       <path value="Encounter.period" />

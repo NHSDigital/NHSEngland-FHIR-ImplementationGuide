@@ -14,12 +14,17 @@
       <path value="EpisodeOfCare.identifier" />
       <min value="1" />
     </element>
+    <element id="EpisodeOfCare.patient">
+      <path value="EpisodeOfCare.patient" />
+      <mustSupport value="true" />
+    </element>
     <element id="EpisodeOfCare.referralRequest">
       <path value="EpisodeOfCare.referralRequest" />
       <type>
         <code value="Reference" />
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-ServiceRequest" />
       </type>
+      <mustSupport value="true" />
     </element>
   </differential>
 </StructureDefinition>

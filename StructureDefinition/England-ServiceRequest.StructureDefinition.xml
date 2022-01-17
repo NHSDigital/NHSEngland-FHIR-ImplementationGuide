@@ -22,6 +22,11 @@
         <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-MedicationRequest" />
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-ServiceRequest" />
       </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="ServiceRequest.subject">
+      <path value="ServiceRequest.subject" />
+      <mustSupport value="true" />
     </element>
     <element id="ServiceRequest.subject.identifier">
       <path value="ServiceRequest.subject.identifier" />
@@ -45,6 +50,7 @@
     <element id="ServiceRequest.requester">
       <path value="ServiceRequest.requester" />
       <min value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="ServiceRequest.requester.identifier">
       <path value="ServiceRequest.requester.identifier" />
@@ -57,6 +63,10 @@
     <element id="ServiceRequest.requester.identifier.value">
       <path value="ServiceRequest.requester.identifier.value" />
       <min value="1" />
+    </element>
+    <element id="ServiceRequest.performer">
+      <path value="ServiceRequest.performer" />
+      <mustSupport value="true" />
     </element>
     <element id="ServiceRequest.performer.identifier">
       <path value="ServiceRequest.performer.identifier" />
