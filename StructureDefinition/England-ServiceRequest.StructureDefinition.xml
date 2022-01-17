@@ -10,6 +10,10 @@
   <baseDefinition value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-ServiceRequest" />
   <derivation value="constraint" />
   <differential>
+    <element id="ServiceRequest.identifier">
+      <path value="ServiceRequest.identifier" />
+      <min value="1" />
+    </element>
     <element id="ServiceRequest.basedOn">
       <path value="ServiceRequest.basedOn" />
       <type>
@@ -30,6 +34,13 @@
     <element id="ServiceRequest.subject.identifier.value">
       <path value="ServiceRequest.subject.identifier.value" />
       <min value="1" />
+    </element>
+    <element id="ServiceRequest.encounter">
+      <path value="ServiceRequest.encounter" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-Encounter" />
+      </type>
     </element>
     <element id="ServiceRequest.requester">
       <path value="ServiceRequest.requester" />

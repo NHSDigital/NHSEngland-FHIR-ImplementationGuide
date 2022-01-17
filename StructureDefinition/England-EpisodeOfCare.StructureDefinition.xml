@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="https://fhir.nhs.uk/StructureDefinition/England-EpisodeOfCare" />
+  <name value="EnglandEpisodeOfCare" />
+  <status value="draft" />
+  <fhirVersion value="4.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="EpisodeOfCare" />
+  <baseDefinition value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-EpisodeOfCare" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="EpisodeOfCare.identifier">
+      <path value="EpisodeOfCare.identifier" />
+      <min value="1" />
+    </element>
+    <element id="EpisodeOfCare.referralRequest">
+      <path value="EpisodeOfCare.referralRequest" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-ServiceRequest" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>
