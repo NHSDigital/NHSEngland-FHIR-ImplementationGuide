@@ -96,6 +96,14 @@
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-EpisodeOfCare" />
       </type>
     </element>
+    <element id="Encounter.episodeOfCare.identifier.system">
+      <path value="Encounter.episodeOfCare.identifier.system" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.episodeOfCare.identifier.value">
+      <path value="Encounter.episodeOfCare.identifier.value" />
+      <min value="1" />
+    </element>
     <element id="Encounter.basedOn">
       <path value="Encounter.basedOn" />
       <type>
@@ -103,10 +111,30 @@
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-ServiceRequest" />
       </type>
     </element>
+    <element id="Encounter.basedOn.identifier.system">
+      <path value="Encounter.basedOn.identifier.system" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.basedOn.identifier.value">
+      <path value="Encounter.basedOn.identifier.value" />
+      <min value="1" />
+    </element>
     <element id="Encounter.participant">
       <path value="Encounter.participant" />
       <definition value="In HL7v2 this is PV1.7 Attending Doctor, PV1.8 Referring Doctor and PV1.9 Consulting Doctoer&#xD;&#xA;&#xD;&#xA;The list of people responsible for providing the service." />
       <mustSupport value="true" />
+    </element>
+    <element id="Encounter.participant.individual">
+      <path value="Encounter.participant.individual" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.participant.individual.identifier.system">
+      <path value="Encounter.participant.individual.identifier.system" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.participant.individual.identifier.value">
+      <path value="Encounter.participant.individual.identifier.value" />
+      <min value="1" />
     </element>
     <element id="Encounter.appointment">
       <path value="Encounter.appointment" />
@@ -118,6 +146,10 @@
     <element id="Encounter.period">
       <path value="Encounter.period" />
       <definition value="ITK Hl7v2 PV1.44 Admit Date/Time PV1.45 Discharge Date/Time&#xD;&#xA;&#xD;&#xA;The start and end time of the encounter." />
+    </element>
+    <element id="Encounter.reasonCode">
+      <path value="Encounter.reasonCode" />
+      <mustSupport value="true" />
     </element>
     <element id="Encounter.hospitalization.dischargeDisposition">
       <path value="Encounter.hospitalization.dischargeDisposition" />

@@ -23,6 +23,10 @@
       <path value="EpisodeOfCare.identifier.value" />
       <min value="1" />
     </element>
+    <element id="EpisodeOfCare.diagnosis">
+      <path value="EpisodeOfCare.diagnosis" />
+      <mustSupport value="true" />
+    </element>
     <element id="EpisodeOfCare.patient">
       <path value="EpisodeOfCare.patient" />
       <mustSupport value="true" />

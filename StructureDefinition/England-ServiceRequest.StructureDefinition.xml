@@ -32,6 +32,18 @@
       </type>
       <mustSupport value="true" />
     </element>
+    <element id="ServiceRequest.basedOn.identifier">
+      <path value="ServiceRequest.basedOn.identifier" />
+      <mustSupport value="true" />
+    </element>
+    <element id="ServiceRequest.basedOn.identifier.system">
+      <path value="ServiceRequest.basedOn.identifier.system" />
+      <min value="1" />
+    </element>
+    <element id="ServiceRequest.basedOn.identifier.value">
+      <path value="ServiceRequest.basedOn.identifier.value" />
+      <min value="1" />
+    </element>
     <element id="ServiceRequest.subject">
       <path value="ServiceRequest.subject" />
       <mustSupport value="true" />
@@ -63,6 +75,7 @@
     <element id="ServiceRequest.requester.identifier">
       <path value="ServiceRequest.requester.identifier" />
       <min value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="ServiceRequest.requester.identifier.system">
       <path value="ServiceRequest.requester.identifier.system" />
@@ -79,6 +92,7 @@
     <element id="ServiceRequest.performer.identifier">
       <path value="ServiceRequest.performer.identifier" />
       <min value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="ServiceRequest.performer.identifier.system">
       <path value="ServiceRequest.performer.identifier.system" />
@@ -87,6 +101,10 @@
     <element id="ServiceRequest.performer.identifier.value">
       <path value="ServiceRequest.performer.identifier.value" />
       <min value="1" />
+    </element>
+    <element id="ServiceRequest.reasonCode">
+      <path value="ServiceRequest.reasonCode" />
+      <mustSupport value="true" />
     </element>
   </differential>
 </StructureDefinition>

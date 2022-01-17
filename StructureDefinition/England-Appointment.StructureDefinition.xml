@@ -46,6 +46,10 @@
         <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDataModelAndDictionary-clinical-specialty" />
       </binding>
     </element>
+    <element id="Appointment.reasonCode">
+      <path value="Appointment.reasonCode" />
+      <mustSupport value="true" />
+    </element>
     <element id="Appointment.basedOn">
       <path value="Appointment.basedOn" />
       <type>
@@ -53,6 +57,18 @@
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-ServiceRequest" />
       </type>
       <mustSupport value="true" />
+    </element>
+    <element id="Appointment.basedOn.identifier">
+      <path value="Appointment.basedOn.identifier" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Appointment.basedOn.identifier.system">
+      <path value="Appointment.basedOn.identifier.system" />
+      <min value="1" />
+    </element>
+    <element id="Appointment.basedOn.identifier.value">
+      <path value="Appointment.basedOn.identifier.value" />
+      <min value="1" />
     </element>
     <element id="Appointment.participant">
       <path value="Appointment.participant" />
