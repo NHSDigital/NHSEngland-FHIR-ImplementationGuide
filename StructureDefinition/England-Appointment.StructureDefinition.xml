@@ -10,6 +10,10 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Appointment" />
   <derivation value="constraint" />
   <differential>
+    <element id="Appointment.identifier">
+      <path value="Appointment.identifier" />
+      <min value="1" />
+    </element>
     <element id="Appointment.identifier.system">
       <path value="Appointment.identifier.system" />
       <min value="1" />
@@ -40,6 +44,13 @@
         <description value="NHS Dictionary Main Specialty" />
         <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDataModelAndDictionary-clinical-specialty" />
       </binding>
+    </element>
+    <element id="Appointment.basedOn">
+      <path value="Appointment.basedOn" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-ServiceRequest" />
+      </type>
     </element>
     <element id="Appointment.participant.actor.identifier">
       <path value="Appointment.participant.actor.identifier" />

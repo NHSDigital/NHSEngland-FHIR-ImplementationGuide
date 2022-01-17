@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="641d2bce-32f0-415d-903b-c3905e4c2483"/>
-  <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Encounter" />
-  <name value="NHSDigitalEncounter" />
+  <id value="641d2bce-32f0-415d-903b-c3905e4c2483" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/England-Encounter" />
+  <name value="EnglandEncounter" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
   <mapping>
@@ -34,6 +34,7 @@
     <element id="Encounter.identifier">
       <path value="Encounter.identifier" />
       <definition value="In ITK HL7v2 this is PV1.19 Visit Number .&#xD;&#xA;&#xD;&#xA;Identifier(s) by which this encounter is known." />
+      <min value="1" />
     </element>
     <element id="Encounter.class">
       <path value="Encounter.class" />
@@ -59,12 +60,14 @@
         <severity value="warning" />
         <human value="subject - An identifier reference plus a display name or resource reference must be provided" />
         <expression value="(reference.exists() or (identifier.exists() and display.exists()))" />
+        <source value="https://fhir.nhs.uk/StructureDefinition/England-Encounter" />
       </constraint>
       <constraint>
         <key value="patient-nhs" />
         <severity value="error" />
         <human value="Supplied NHS Number is outside the English and Welsh NHS Number range or length of the number is wrong." />
         <expression value="identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').exists().not() or (identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').exists()  and identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').value.matches('^([456789]{1}[0-9]{9})$'))" />
+        <source value="https://fhir.nhs.uk/StructureDefinition/England-Encounter" />
       </constraint>
     </element>
     <element id="Encounter.subject.identifier.system">
@@ -78,6 +81,13 @@
     <element id="Encounter.episodeOfCare">
       <path value="Encounter.episodeOfCare" />
       <definition value="In ITK HL7v2 this may be PV1.50 Alternate Visit ID (if this is a Stay or Episode identifier)&#xD;&#xA;&#xD;&#xA;Where a specific encounter should be classified as a part of a specific episode(s) of care this field should be used. This association can facilitate grouping of related encounters together for a specific purpose, such as government reporting, issue tracking, association via a common problem.  The association is recorded on the encounter as these are typically created after the episode of care and grouped on entry rather than editing the episode of care to append another encounter to it (the episode of care could span years)." />
+    </element>
+    <element id="Encounter.basedOn">
+      <path value="Encounter.basedOn" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-ServiceRequest" />
+      </type>
     </element>
     <element id="Encounter.participant">
       <path value="Encounter.participant" />
