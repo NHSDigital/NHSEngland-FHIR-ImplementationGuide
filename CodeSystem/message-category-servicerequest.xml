@@ -6,11 +6,11 @@
         <system value="https://fhir.nhs.uk/identifier/CodeSystem"/>
         <value value="message-category-servicerequest"/>
     </identifier>
-    <version value="1.0.0"/>
+    <version value="1.0.1"/>
     <name value="messagecategoryservicerequest"/>
     <title value="Message Category Service Request"/>
     <status value="active"/>
-    <date value="2021-12-07"/>
+    <date value="2022-01-20"/>
     <publisher value="NHS Digital"/>
     <contact>
         <name value="NHS Digital" />
