@@ -3,29 +3,29 @@
     "meta": {
         "versionId": "0"
     },
-    "identifier" :[
+    "identifier": [
         {
-            "system":"http://fhir.nhs.net/Id/ers-workflow",
-            "value":"1234"
+            "system": "http://fhir.nhs.net/Id/ers-workflow",
+            "value": "1234"
         }
     ],
     "contained": [
         {
-            "id" : "prt",
-            "resourceType" : "PractitionerRole",
-            "practitioner" : {
-              "identifier" : {
-                "system" : "http://fhir.nhs.net/Id/sds-user-id",
-                "value" : "103264992985"
-              }
+            "id": "prt",
+            "resourceType": "PractitionerRole",
+            "practitioner": {
+                "identifier": {
+                    "system": "http://fhir.nhs.net/Id/sds-user-id",
+                    "value": "103264992985"
+                }
             },
-            "organization" : {
-              "identifier" : {
-                "system" : "https://fhir.nhs.uk/Id/ods-organization-code",
-                "value" : "R69"
-              }
+            "organization": {
+                "identifier": {
+                    "system": "https://fhir.nhs.uk/Id/ods-organization-code",
+                    "value": "R69"
+                }
             }
-          }
+        }
     ],
     "resourceType": "Task",
     "focus": {
@@ -36,7 +36,7 @@
         }
     },
     "status": "requested",
-    "intent":"option",
+    "intent": "option",
     "code": [
         {
             "coding": [
@@ -64,11 +64,6 @@
     },
     "authoredOn": "2021-09-23T13:40:06.259000+00:00",
     "requester": {
-        "reference" : "#prt"
-    },
-    "note": [
-        {
-            "text": "Please advise me on this patient who ...(information about patient)"
-        }
-    ]
+        "reference": "#prt"
+    }
 }
