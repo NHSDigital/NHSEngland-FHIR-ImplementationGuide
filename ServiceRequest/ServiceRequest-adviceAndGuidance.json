@@ -1,0 +1,96 @@
+{
+    "id": "000000070000",
+    "meta": {
+        "versionId": "5"
+    },
+    "identifier": [{
+        "system": "https://fhir.nhs.uk/Id/UBRN",
+        "value": "000000070000"
+    }],
+    "resourceType" : "ServiceRequest",
+    "contained": [
+        {
+            "id": "pr",
+            "resourceType": "PractitionerRole",
+            "practitioner": {
+                "identifier": {
+                    "system": "http://fhir.nhs.net/Id/sds-user-id",
+                    "value": "921600556514"
+                }
+            },
+            "code": [
+                {
+                    "coding": [
+                        {
+                            "system": "https://fhir.nhs.uk/CodeSystem/eRS-BusinessFunction",
+                            "code": "REFERRING_CLINICIAN"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "status": "active",
+    "intent": "plan",
+    "category": [
+        {
+            "coding": [
+                {
+                    "system": "http://snomed.info/sct",
+                    "code": "409063005",
+                    "display": "Counselling"
+                }
+            ]
+        }
+    ],
+    "subject": {
+        "identifier": {
+            "system": "http://fhir.nhs.net/Id/nhs-number",
+            "value": "9912003888"
+        }
+    },
+    "requester": {
+        "reference": "#pr",
+        "identifier": {
+            "system": "https://fhir.nhs.uk/Id/ods-organization-code",
+            "value": "R68"
+        }
+    },
+    "priority": "routine",
+    "code": {
+        "coding": [{
+            "system": "https://fhir.nhs.uk/STU3/CodeSystem/eRS-ClinicType-1",
+            "code": "HEART_FAILURE"
+            }]
+    },
+    "orderDetail": [
+        {
+            "coding": [{
+                "system": "https://fhir.nhs.uk/CodeSystem/eRS-CommissioningProvisioning",
+                "code": "ALL_AVAILABLE_FOR_BOOKING"
+            }]
+        },
+        {
+            "coding": [{
+                "system": "https://fhir.nhs.uk/CodeSystem/NHSDigital-Specialty",
+                "code": "CARDIOLOGY"
+            }]
+        },
+        {
+            "coding": [{
+                "system": "https://fhir.nhs.uk/CodeSystem/eRS-Options",
+                "code": "ageAndGenderAppropriate"
+            }]
+        }
+    ],
+    "performer" : [
+        {
+            "type":"HealthcareService",
+            "identifier": {
+                "system": "http://fhir.nhs.net/Id/ers-service",
+                "value": "11014"
+            },
+            "display": "Cardiology Advice Service"
+        }
+    ]  
+}
