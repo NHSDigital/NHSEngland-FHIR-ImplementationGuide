@@ -18,16 +18,12 @@
                     "value": "921600556514"
                 }
             },
-            "code": [
-                {
-                    "coding": [
-                        {
-                            "system": "https://fhir.nhs.uk/CodeSystem/eRS-BusinessFunction",
-                            "code": "REFERRING_CLINICIAN"
-                        }
-                    ]
+            "organization" : {
+                "identifier": {
+                    "system": "https://fhir.nhs.uk/Id/ods-organization-code",
+                    "value": "R68"
                 }
-            ]
+            }
         }
     ],
     "status": "active",
@@ -50,11 +46,7 @@
         }
     },
     "requester": {
-        "reference": "#pr",
-        "identifier": {
-            "system": "https://fhir.nhs.uk/Id/ods-organization-code",
-            "value": "R68"
-        }
+        "reference": "#pr"
     },
     "priority": "routine",
     "code": {
