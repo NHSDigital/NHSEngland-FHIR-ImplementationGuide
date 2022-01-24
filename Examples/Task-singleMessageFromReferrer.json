@@ -1,0 +1,74 @@
+{
+    "id": "bf7ab4c4-bafb-495e-8a61-1aa40309eaed",
+    "meta": {
+        "versionId": "0"
+    },
+    "identifier" :[
+        {
+            "system":"http://fhir.nhs.net/Id/ers-workflow",
+            "value":"1234"
+        }
+    ],
+    "contained": [
+        {
+            "id" : "prt",
+            "resourceType" : "PractitionerRole",
+            "practitioner" : {
+              "identifier" : {
+                "system" : "http://fhir.nhs.net/Id/sds-user-id",
+                "value" : "103264992985"
+              }
+            },
+            "organization" : {
+              "identifier" : {
+                "system" : "https://fhir.nhs.uk/Id/ods-organization-code",
+                "value" : "R69"
+              }
+            }
+          }
+    ],
+    "resourceType": "Task",
+    "focus": {
+        "type": "ServiceRequest",
+        "identifier": {
+            "system": "https://fhir.nhs.uk/Id/UBRN",
+            "value": "000000070000"
+        }
+    },
+    "status": "requested",
+    "intent":"option",
+    "code": [
+        {
+            "coding": [
+                {
+                    "system": "http://snomed.info/sct",
+                    "code": "409063005",
+                    "display": "Counselling"
+                }
+            ]
+        }
+    ],
+    "owner": [
+        {
+            "identifier": {
+                "system": "http://fhir.nhs.net/Id/ers-service",
+                "value": "11014"
+            }
+        }
+    ],
+    "for": {
+        "identifier": {
+            "system": "http://fhir.nhs.net/Id/nhs-number",
+            "value": "9912003888"
+        }
+    },
+    "authoredOn": "2021-09-23T13:40:06.259000+00:00",
+    "requester": {
+        "reference" : "#prt"
+    },
+    "note": [
+        {
+            "text": "Please advise me on this patient who ...(information about patient)"
+        }
+    ]
+}
