@@ -55,7 +55,7 @@
         </resource>
         <resource>
             <type value="DocumentReference" />
-            <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-DocumentReference" />
+            <profile value="https://fhir.nhs.uk/StructureDefinition/England-DocumentReference" />
             <interaction>
                 <code value="search-type" />
             </interaction>
