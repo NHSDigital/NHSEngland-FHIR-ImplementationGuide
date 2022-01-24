@@ -84,5 +84,8 @@
             },
             "display": "Cardiology Advice Service"
         }
-    ]  
+    ],
+    "supportInfo" : [{
+        "reference": "DocumentReference/5da894e0-a57e-43e9-a1a1-e283a484003c"
+    }]
 }
