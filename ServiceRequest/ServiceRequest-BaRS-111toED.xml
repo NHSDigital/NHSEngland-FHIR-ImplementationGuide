@@ -1,0 +1,99 @@
+<ServiceRequest>
+                <meta>
+                    <lastUpdated value="2021-10-11T15:23:30+00:00" />
+                    <profile value="https://fhir.nhs.uk/StructureDefinition/BARSUKCoreServiceRequest" />
+                </meta>
+                <status value="active" />
+                <intent value="plan" />
+                <category>
+                    <coding>
+                        <system value="https://fhir.nhs.uk/CodeSystem/message-category-servicerequest" />
+                        <code value="case-transfer" />
+                        <display value="For Transfer of Care" />
+                    </coding>
+                </category>
+                <subject>
+                    <reference value="urn:uuid:9589fb37-87a2-48d8-968f-b371429208a8" />
+                </subject>
+                <encounter>
+                    <reference value="urn:uuid:8c63d621-4d86-4f57-8699-e8e22d49935d" />
+                </encounter>
+                <occurrencePeriod>
+                    <start value="2021-10-13T16:20:27+07:00" />
+                </occurrencePeriod>
+                <authoredOn value="2021-10-13T16:28:00+07:00" />
+                <requester>
+                    <reference value="urn:uuid:7d948662-bade-450e-b6c5-9bb6ee39cb56" />
+                </requester>
+                <performer>
+                    <reference value="urn:uuid:d5ffd0cd-ec7e-48a1-84f1-91f4c0eb8fc5" />
+                </performer>
+                <locationReference>
+                    <reference value="urn:uuid:2ec99e82-a0af-4b70-bd53-1869d84b2ad1" />
+                </locationReference>
+                <reasonCode>
+                    <coding>
+                        <system value="https://fhir.nhs.uk/Id/pathways-sd-code" />
+                        <code value="4389" />
+                        <display value="ED post tonsillectomy bleeding" />
+                    </coding>
+                    <text value="Pathways Assessment SD Code" />
+                </reasonCode>
+                <reasonCode>
+                    <coding>
+                        <system value="https://fhir.nhs.uk/Id/pathways-dx-code" />
+                        <code value="DX02" />
+                        <display value="The individual needs to attend an emergency treatment centre within 1 hour." />
+                    </coding>
+                    <text value="Pathways Assessment DX Code" />
+                </reasonCode>
+                <reasonCode>
+                    <coding>
+                        <system value="https://fhir.nhs.uk/Id/pathways-template" />
+                        <code value="PA21" />
+                        <display value="Chest and Upper Back Pain" />
+                    </coding>
+                    <text value="Presenting Complaint - selected Pathway or Template" />
+                </reasonCode>
+                <reasonCode>
+                    <coding>
+                        <system value="https://fhir.nhs.uk/Id/pathways-sg-code" />
+                        <code value="1010" />
+                        <display value="Allergic Reaction" />
+                    </coding>
+                    <text value="Pathways Assessment SG Code - Chief Complaint" />
+                </reasonCode>
+                <reasonCode>
+                    <coding>
+                        <system value="https://fhir.nhs.uk/Id/ValueSetTBC" />
+                        <code value="PlanRequest" />
+                        <display value="Plan or Requested Action" />
+                    </coding>
+                    <text value="Physical examination of reported chest pain" />
+                </reasonCode>
+                <reasonReference>
+                    <reference value="urn:uuid:f2d2a6f8-1ef5-40a6-a697-849bb1264a91" />
+                    <display value="Person reported complaints or issues (Symptoms)" />
+                </reasonReference>
+                <supportingInfo>
+                    <reference value="urn:uuid:65508934-c9e6-46d2-a393-af096b502daf" />
+                    <display value="Rejected Services - Patient Choice in Service Selection - Details" />
+                </supportingInfo>
+                <supportingInfo>
+                    <reference value="urn:uuid:41e591ab-d333-4fb8-87b4-d35f740b6bfc" />
+                    <display value="Rejected Services - Patient Choice in Service Selection - Flag" />
+                </supportingInfo>
+                <supportingInfo>
+                    <reference value="urn:uuid:e53b2595-7875-4687-80e9-23a0c8cb8ea0" />
+                    <display value="Person expectations and wishes" />
+                </supportingInfo>
+                <supportingInfo>
+                    <reference value="urn:uuid:ea37a499-245c-40e9-b0fa-df4383c4d413" />
+                    <display value="Safeguarding Concerns Flag" />
+                </supportingInfo>
+                <supportingInfo>
+                    <reference value="urn:uuid:75f0e2c7-79db-4518-8a03-edcf096fccbb" />
+                    <display value="Additional Information Sources" />
+                </supportingInfo>
+                <patientInstruction value="ADVICE GIVEN: If there are any new symptoms, or if the condition gets worse, changes or you have any other concerns, call us back." />
+            </ServiceRequest>
