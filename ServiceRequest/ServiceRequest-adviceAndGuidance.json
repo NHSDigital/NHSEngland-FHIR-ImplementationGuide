@@ -54,7 +54,7 @@
     "code": {
         "coding": [
             {
-                "system": "https://fhir.nhs.uk/STU3/CodeSystem/eRS-ClinicType-1",
+                "system": "https://fhir.nhs.uk/CodeSystem/NHSDigital-ClinicType",
                 "code": "HEART_FAILURE"
             }
         ]

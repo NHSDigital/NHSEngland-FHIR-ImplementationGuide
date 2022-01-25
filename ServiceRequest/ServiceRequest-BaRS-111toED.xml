@@ -5,13 +5,6 @@
                 </meta>
                 <status value="active" />
                 <intent value="plan" />
-                <category>
-                    <coding>
-                        <system value="https://fhir.nhs.uk/CodeSystem/message-category-servicerequest" />
-                        <code value="case-transfer" />
-                        <display value="For Transfer of Care" />
-                    </coding>
-                </category>
                 <subject>
                     <reference value="urn:uuid:9589fb37-87a2-48d8-968f-b371429208a8" />
                 </subject>
