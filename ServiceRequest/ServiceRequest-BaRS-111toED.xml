@@ -1,17 +1,9 @@
 <ServiceRequest>
                 <meta>
                     <lastUpdated value="2021-10-11T15:23:30+00:00" />
-                    <profile value="https://fhir.nhs.uk/StructureDefinition/BARSUKCoreServiceRequest" />
                 </meta>
                 <status value="active" />
                 <intent value="plan" />
-                <category>
-                    <coding>
-                        <system value="https://fhir.nhs.uk/CodeSystem/message-category-servicerequest" />
-                        <code value="case-transfer" />
-                        <display value="For Transfer of Care" />
-                    </coding>
-                </category>
                 <subject>
                     <reference value="urn:uuid:9589fb37-87a2-48d8-968f-b371429208a8" />
                 </subject>
