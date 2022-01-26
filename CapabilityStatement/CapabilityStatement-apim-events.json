@@ -10,16 +10,16 @@
     "description": "API Definition for central BaRS events",
     "kind": "requirements",
     "fhirVersion": "4.0.1",
-    "format":  [
+    "format": [
         "application/fhir+json"
     ],
-    "rest":  [
+    "rest": [
         {
             "mode": "server",
             "security": {
-                "service":  [
+                "service": [
                     {
-                        "coding":  [
+                        "coding": [
                             {
                                 "system": "http://terminology.hl7.org/CodeSystem/restful-security-service",
                                 "code": "OAuth",
@@ -29,7 +29,29 @@
                     }
                 ]
             },
-            "operation":  [
+            "resource": [
+                {
+                    "type": "ServiceRequest",
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/England-ServiceRequest",
+                    "documentation": "Supports Referrals and advice guidance requests",
+                    "interaction": [
+                        {
+                            "code": "read"
+                        },
+                        {
+                            "code": "search-type"
+                        }
+                    ],
+                    "searchParam": [
+                        {
+                            "name": "patient:identifier",
+                            "type": "token",
+                            "documentation": "The patient identifier (e.g. NHS Number) that the service request is about"
+                        }
+                    ]
+                }
+            ],
+            "operation": [
                 {
                     "name": "subscriptionEvent",
                     "definition": "https://fhir.nhs.uk/OperationDefinition/subscription-event"

@@ -1,13 +1,13 @@
 {
     "resourceType": "CapabilityStatement",
     "id": "b2a5d2b7-f47e-4b75-bed9-f2e79a08d263",
-    "url": "https://fhir.nhs.uk/CapabilityStatement/supplier-events-api",
+    "url": "https://fhir.nhs.uk/CapabilityStatement/supplier-bars-api",
     "version": "3.0.0",
     "name": "SupplierEvents",
     "status": "active",
     "date": "2021-04-28T00:00:00+00:00",
     "publisher": "digital.nhs.uk",
-    "description": "API Definition for central BaRS events",
+    "description": "API Definition for central BaRS",
     "kind": "requirements",
     "fhirVersion": "4.0.1",
     "format":  [

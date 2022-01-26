@@ -43,6 +43,16 @@
                         },
                         {
                             "code": "update"
+                        },
+                        {
+                            "code": "search-type"
+                        }
+                    ],
+                    "searchParam": [
+                        {
+                            "name": "patient:identifier",
+                            "type": "token",
+                            "documentation": "The patient identifier (e.g. NHS Number) that the service request is about"
                         }
                     ]
                 },
