@@ -49,6 +49,38 @@
                             "documentation": "The patient identifier (e.g. NHS Number) that the service request is about"
                         }
                     ]
+                },
+                {
+                    "type": "Slot",
+                    "interaction": [
+                        {
+                            "code": "read"
+                        },
+                        {
+                            "code": "search-type"
+                        }
+                    ],
+                    "searchParam": [
+                       
+                    ]
+                },
+                {
+                    "type": "Appointment",
+                    "interaction": [
+                        {
+                            "code": "read"
+                        },
+                        {
+                            "code": "search-type"
+                        }
+                    ],
+                    "searchParam": [
+                        {
+                            "name": "patient:identifier",
+                            "type": "token",
+                            "documentation": "Search for appointment for a patient by NHS Number"
+                        }
+                    ]
                 }
             ],
             "operation":  [
