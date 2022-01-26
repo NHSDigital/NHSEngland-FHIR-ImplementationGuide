@@ -29,6 +29,28 @@
                     }
                 ]
             },
+            "resource": [
+                {
+                    "type": "ServiceRequest",
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/England-ServiceRequest",
+                    "documentation": "Supports Referrals and advice guidance requests",
+                    "interaction": [
+                        {
+                            "code": "read"
+                        },
+                        {
+                            "code": "search-type"
+                        }
+                    ],
+                    "searchParam": [
+                        {
+                            "name": "patient:identifier",
+                            "type": "token",
+                            "documentation": "The patient identifier (e.g. NHS Number) that the service request is about"
+                        }
+                    ]
+                }
+            ],
             "operation":  [
                 {
                     "name": "process-message",
