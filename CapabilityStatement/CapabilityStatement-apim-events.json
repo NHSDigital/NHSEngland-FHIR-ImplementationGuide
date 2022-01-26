@@ -31,9 +31,8 @@
             },
             "operation":  [
                 {
-                    "name": "process-message",
-                    "definition": "http://hl7.org/fhir/OperationDefinition/MessageHeader-process-message",
-                    "documentation": "Destination of both subscription-notifications and BaRS referrals"
+                    "name": "subscriptionEvent",
+                    "definition": "https://fhir.nhs.uk/OperationDefinition/subscription-event"
                 }
             ]
         }
