@@ -1,0 +1,95 @@
+{
+    "resourceType": "CapabilityStatement",
+    "id": "8803e391-f306-42d3-8302-655c1dc49236",
+    "url": "https://fhir.nhs.uk/CapabilityStatement/apim-ers",
+    "version": "3.0.0",
+    "name": "APIMeRS",
+    "status": "active",
+    "date": "2021-04-28T00:00:00+00:00",
+    "publisher": "digital.nhs.uk",
+    "description": "API definition for eRS",
+    "kind": "instance",
+    "fhirVersion": "4.0.1",
+    "format": [
+        "application/fhir+json"
+    ],
+    "rest": [
+        {
+            "mode": "server",
+            "security": {
+                "service": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/restful-security-service",
+                                "code": "OAuth",
+                                "display": "OAuth2 Token"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "resource": [
+                {
+                    "type": "ServiceRequest",
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/England-ServiceRequest",
+                    "documentation" : "Supports Referrals and advice guidance requests",
+                    "interaction": [
+                        {
+                            "code": "read"
+                        },
+                        {
+                            "code": "create"
+                        },
+                        {
+                            "code": "update"
+                        }
+                    ]
+                },
+                {
+                    "type": "Task",
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-Task",
+                    "documentation" : "Supports worklists",
+                    "interaction": [
+                        {
+                            "code": "read"
+                        },
+                        {
+                            "code": "update"
+                        },
+                        {
+                            "code": "create"
+                        }
+                    ]
+                },
+                {
+                    "type": "DocumentReference",
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/England-DocumentReference",
+                    "documentation" : "Used to index supporting information documents - documents themselves use Binary",
+                    "interaction": [
+                        {
+                            "code": "read"
+                        },
+                        {
+                            "code": "update"
+                        },
+                        {
+                            "code": "create"
+                        }
+                    ]
+                },
+                {
+                    "type": "Binary",
+                    "interaction": [
+                        {
+                            "code": "read"
+                        },
+                        {
+                            "code": "create"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
