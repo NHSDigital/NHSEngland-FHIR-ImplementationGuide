@@ -48,10 +48,6 @@
       <path value="ServiceRequest.subject" />
       <mustSupport value="true" />
     </element>
-    <element id="ServiceRequest.subject.identifier">
-      <path value="ServiceRequest.subject.identifier" />
-      <min value="1" />
-    </element>
     <element id="ServiceRequest.subject.identifier.system">
       <path value="ServiceRequest.subject.identifier.system" />
       <min value="1" />
