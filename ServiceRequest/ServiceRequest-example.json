@@ -5,6 +5,12 @@
         "lastUpdated": "2021-10-11T15:23:30+00:00"
     },
     "status": "active",
+    "identifier": [
+        {
+            "system": "https://fhir.nhs.uk/Id/UBRN",
+            "value": "000000070001"
+        }
+    ],
     "intent": "plan",
     "category": [
         {

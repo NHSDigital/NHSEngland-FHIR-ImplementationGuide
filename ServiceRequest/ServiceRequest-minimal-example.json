@@ -6,7 +6,7 @@
     },
     "identifier": [{
         "system": "https://fhir.nhs.uk/Id/UBRN",
-        "value": "000000070000"
+        "value": "000000070002"
     }],
     "status": "active",
     "intent": "plan",

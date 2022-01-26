@@ -11,6 +11,12 @@
             }
         }
     ],
+    "identifier": [
+        {
+            "system": "https://tools.ietf.org/html/rfc4122",
+            "value": "4e2f8449-b87b-4425-901d-747b94499276"
+        }
+    ],
     "status": "requested",
     "intent": "order",
     "code": {

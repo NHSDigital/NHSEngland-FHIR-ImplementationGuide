@@ -3,6 +3,12 @@
     "id" : "000000070000",
     "status": "requested",
     "intent": "order",
+    "identifier": [
+        {
+            "system": "https://tools.ietf.org/html/rfc4122",
+            "value": "f9ba86b1-2c3d-441f-840f-324396128771"
+        }
+    ],
     "code": {
         "coding": [
             {
