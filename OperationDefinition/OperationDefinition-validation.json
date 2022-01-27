@@ -1,0 +1,48 @@
+{
+    "resourceType": "OperationDefinition",
+    "id": "68a5d3a2-0197-43dc-88e9-6da18c058468",
+    "meta": {
+        "lastUpdated": "2022-01-07T14:00:00+00:00"
+    },
+    "url": "https://fhir.nhs.uk/OperationDefinition/validation",
+    "version": "4.0.1",
+    "name": "validation",
+    "status": "draft",
+    "kind": "operation",
+    "date": "2022-01-07T14:00:00+00:00",
+    "publisher": "NHS Digital",
+    "contact": [
+        {
+            "telecom": [
+                {
+                    "system": "email",
+                    "value": "interoperabilityteam@nhs.net"
+                }
+            ]
+        }
+    ],
+    "description": "NHS Validation Service Operation",
+    "code": "validation",
+    "comment": "NHS Validation Service Operation",
+    "system": true,
+    "type": false,
+    "instance": false,
+    "parameter": [
+        {
+            "name": "resource",
+            "use": "in",
+            "min": 1,
+            "max": "1",
+            "documentation": "The resource to be validated",
+            "type": "DomainResource"
+        },
+        {
+            "name": "return",
+            "use": "out",
+            "min": 1,
+            "max": "1",
+            "documentation": "response to the event POST",
+            "type": "OperationOutcome"
+        }
+    ]
+}
