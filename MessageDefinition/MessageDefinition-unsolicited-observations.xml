@@ -15,7 +15,7 @@
         <code value="unsolicited-observations" />
         <display value="Unsolicited Observations" />
     </eventCoding>
-     <description value="Unsolicited transmission of an observation message"/>
+    <description value="Unsolicited transmission of an observation message"/>
     <category value="notification" />
     <focus>
         <code value="DiagnosticReport" />
