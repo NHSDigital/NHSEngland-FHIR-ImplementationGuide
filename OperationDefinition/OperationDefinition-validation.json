@@ -25,6 +25,7 @@
     "code": "validation",
     "comment": "NHS Validation Service Operation",
     "system": true,
+    "affectsState" : false,
     "type": false,
     "instance": false,
     "parameter": [

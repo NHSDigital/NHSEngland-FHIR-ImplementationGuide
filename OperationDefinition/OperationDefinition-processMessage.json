@@ -25,6 +25,7 @@
     "system" : true,
     "type" : false,
     "instance" : false,
+    "affectsState" : true,
     "parameter" : [{
       "name" : "content",
       "use" : "in",

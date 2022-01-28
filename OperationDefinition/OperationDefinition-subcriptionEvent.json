@@ -26,6 +26,7 @@
     "comment": "Mock of subscription event API",
     "system": true,
     "type": false,
+    "affectsState" : true,
     "instance": false,
     "parameter": [
         {

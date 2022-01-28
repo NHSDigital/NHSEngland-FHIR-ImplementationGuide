@@ -184,6 +184,10 @@
             </searchParam>
         </resource>
         <resource>
+            <type value="OperationDefinition" />
+            <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-OperationDefinition" />
+        </resource>
+        <resource>
             <type value="Patient" />
             <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient" />
             <interaction>
