@@ -9,6 +9,7 @@
     <title value="Patient Notification" />
     <status value="active" />
     <date value="2020-10-29" />
+    <description value="Changes to a patient resource/demographics"/>
     <eventCoding>
         <system value="https://fhir.nhs.uk/CodeSystem/message-event" />
         <code value="patient-notification" />

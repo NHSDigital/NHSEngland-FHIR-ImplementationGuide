@@ -39,11 +39,12 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <min value="0" />
     </element>
     <element id="CapabilityStatement.extension:apiDefinition">
       <path value="CapabilityStatement.extension" />
       <sliceName value="apiDefinition" />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -92,12 +93,12 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <min value="0" />
     </element>
     <element id="CapabilityStatement.rest.security.extension:oauthUris">
       <path value="CapabilityStatement.rest.security.extension" />
       <sliceName value="oauthUris" />
       <min value="0" />
-      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://fhir-registry.smarthealthit.org/StructureDefinition/oauth-uris" />
@@ -117,12 +118,12 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <min value="0" />
     </element>
     <element id="CapabilityStatement.rest.resource.extension:searchParameterCombination">
       <path value="CapabilityStatement.rest.resource.extension" />
       <sliceName value="searchParameterCombination" />
       <min value="0" />
-      <max value="*" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination" />
