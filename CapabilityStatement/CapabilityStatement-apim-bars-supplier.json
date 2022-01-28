@@ -1,13 +1,13 @@
 {
     "resourceType": "CapabilityStatement",
     "id": "b2a5d2b7-f47e-4b75-bed9-f2e79a08d263",
-    "url": "https://fhir.nhs.uk/CapabilityStatement/supplier-bars-api",
+    "url": "https://fhir.nhs.uk/CapabilityStatement/apim-bars-supplier",
     "version": "3.0.0",
     "name": "SupplierEvents",
     "status": "active",
     "date": "2021-04-28T00:00:00+00:00",
     "publisher": "digital.nhs.uk",
-    "description": "API Definition for central BaRS",
+    "description": "API Definition for BaRS (supplier)",
     "kind": "requirements",
     "fhirVersion": "4.0.1",
     "format":  [
@@ -36,10 +36,12 @@
                     "documentation": "Supports Referrals and advice guidance requests",
                     "interaction": [
                         {
-                            "code": "read"
+                            "code": "read",
+                            "documentation": "Get a specific referral"
                         },
                         {
-                            "code": "search-type"
+                            "code": "search-type",
+                            "documentation" : "Get referral/s for a patient"
                         }
                     ],
                     "searchParam": [
@@ -53,25 +55,45 @@
                 {
                     "type": "Slot",
                     "interaction": [
+                        
                         {
-                            "code": "read"
-                        },
-                        {
-                            "code": "search-type"
+                            "code": "search-type",
+                            "documentation" : "Get slots"
                         }
                     ],
                     "searchParam": [
-                       
+                        {
+                            "name": "status",
+                            "type": "token",
+                            "documentation": "The free/busy status of the appointment"
+                        },
+                        {
+                            "name": "start",
+                            "type": "date",
+                            "documentation": "Appointment date/time."
+                        },
+                        {
+                            "name": "start",
+                            "type": "date",
+                            "documentation": "Appointment date/time."
+                        },
+                        {
+                            "name": "end",
+                            "type": "date",
+                            "documentation": "Appointment date/time."
+                        }
                     ]
                 },
                 {
                     "type": "Appointment",
                     "interaction": [
                         {
-                            "code": "read"
+                            "code": "read",
+                            "documentation": "Get a specific booking"
                         },
                         {
-                            "code": "search-type"
+                            "code": "search-type",
+                            "documentation": "Get Bookings for a patient"
                         }
                     ],
                     "searchParam": [
@@ -81,6 +103,15 @@
                             "documentation": "Search for appointment for a patient by NHS Number"
                         }
                     ]
+                },
+                {
+                    "type": "MessageDefinition",
+                    "interaction": [
+                        {
+                            "code": "read",
+                            "documentation" : "Get Message Definition"
+                        }
+                    ]
                 }
             ],
             "operation":  [
@@ -88,6 +119,20 @@
                     "name": "process-message",
                     "definition": "https://fhir.nhs.uk/OperationDefinition/MessageHeader-process-message",
                     "documentation": "Destination of both subscription-notifications and BaRS referrals"
+                }
+            ]
+        }
+    ],
+    "messaging":  [
+        {
+            "supportedMessage":  [
+                {
+                    "mode": "receiver",
+                    "definition": "MessageDefinition/bars-send-servicerequest"
+                },
+                {
+                    "mode": "receiver",
+                    "definition": "MessageDefinition/bars-validationresponse"
                 }
             ]
         }
