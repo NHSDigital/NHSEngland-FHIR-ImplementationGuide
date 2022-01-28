@@ -73,14 +73,14 @@
                             "documentation": "Appointment date/time."
                         },
                         {
-                            "name": "start",
+                            "name": "end",
                             "type": "date",
                             "documentation": "Appointment date/time."
                         },
                         {
-                            "name": "end",
-                            "type": "date",
-                            "documentation": "Appointment date/time."
+                            "name": "_include",
+                            "type": "composite",
+                            "documentation": "Inclusions that drive the rescusive depth of the search"
                         }
                     ]
                 },
