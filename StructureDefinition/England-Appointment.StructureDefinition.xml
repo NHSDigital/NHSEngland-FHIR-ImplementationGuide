@@ -73,10 +73,6 @@
       <path value="Appointment.participant" />
       <mustSupport value="true" />
     </element>
-    <element id="Appointment.participant.actor.identifier">
-      <path value="Appointment.participant.actor.identifier" />
-      <min value="1" />
-    </element>
     <element id="Appointment.participant.actor.identifier.system">
       <path value="Appointment.participant.actor.identifier.system" />
       <min value="1" />

@@ -90,6 +90,7 @@
                 },
                 {
                     "type": "Binary",
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-Binary",
                     "interaction": [
                         {
                             "code": "read"
