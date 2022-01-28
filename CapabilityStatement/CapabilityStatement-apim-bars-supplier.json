@@ -128,11 +128,11 @@
             "supportedMessage":  [
                 {
                     "mode": "receiver",
-                    "definition": "MessageDefinition/bars-send-servicerequest"
+                    "definition": "https://fhir.nhs.uk/MessageDefinition/bars-send-servicerequest"
                 },
                 {
                     "mode": "receiver",
-                    "definition": "MessageDefinition/bars-validationresponse"
+                    "definition": "https://fhir.nhs.uk/MessageDefinition/bars-validationresponse"
                 }
             ]
         }
