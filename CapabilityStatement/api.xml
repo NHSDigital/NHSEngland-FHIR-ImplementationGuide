@@ -23,6 +23,10 @@
             </service>
         </security>
         <resource>
+            <type value="CapabilityStatement" />
+            <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-CapabilityStatement" />
+        </resource>
+        <resource>
             <type value="CommunicationRequest" />
             <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-CommunicationRequest" />
         </resource>
@@ -160,6 +164,10 @@
                 <type value="date" />
                 <documentation value="The code of the observation type" />
             </searchParam>
+        </resource>
+        <resource>
+            <type value="MessageDefinition" />
+            <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-MessageDefinition" />
         </resource>
         <resource>
             <type value="Organization" />

@@ -54,6 +54,7 @@
                 },
                 {
                     "type": "Slot",
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/England-Slot",
                     "interaction": [
                         
                         {
@@ -86,6 +87,7 @@
                 },
                 {
                     "type": "Appointment",
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/England-Appointment",
                     "interaction": [
                         {
                             "code": "read",
@@ -106,6 +108,7 @@
                 },
                 {
                     "type": "MessageDefinition",
+                    "profile" : "https://fhir.nhs.uk/StructureDefinition/NHSDigital-MessageDefinition",
                     "interaction": [
                         {
                             "code": "read",

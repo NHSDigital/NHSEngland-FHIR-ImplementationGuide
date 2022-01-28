@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="https://fhir.nhs.uk/StructureDefinition/England-Slot" />
+  <name value="EnglandSlot" />
+  <status value="draft" />
+  <fhirVersion value="4.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Slot" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Slot" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Slot.identifier">
+      <path value="Slot.identifier" />
+      <min value="1" />
+    </element>
+    <element id="Slot.identifier.value">
+      <path value="Slot.identifier.value" />
+      <min value="1" />
+    </element>
+  </differential>
+</StructureDefinition>
