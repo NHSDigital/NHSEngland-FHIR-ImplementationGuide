@@ -121,7 +121,6 @@
     <element id="Extension.extension:implementationGuide.extension:version">
       <path value="Extension.extension.extension" />
       <sliceName value="version" />
-      <min value="1" />
       <max value="1" />
     </element>
     <element id="Extension.extension:implementationGuide.extension:version.url">
@@ -130,7 +129,6 @@
     </element>
     <element id="Extension.extension:implementationGuide.extension:version.value[x]">
       <path value="Extension.extension.extension.value[x]" />
-      <min value="1" />
     </element>
     <element id="Extension.extension:implementationGuide.url">
       <path value="Extension.extension.url" />
