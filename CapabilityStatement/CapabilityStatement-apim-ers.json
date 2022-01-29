@@ -1,6 +1,44 @@
 {
     "resourceType": "CapabilityStatement",
     "id": "8803e391-f306-42d3-8302-655c1dc49236",
+    "extension": [
+        {
+            "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-APIDefinition",
+            "extension": [
+                {
+                    "url": "implementationGuide",
+                    "extension": [
+                        {
+                            "url": "name",
+                            "valueString": "ukcore.release1.test"
+                        }
+                    ]
+                },
+                {
+                    "url": "implementationGuide",
+                    "extension": [
+                        {
+                            "url": "name",
+                            "valueString": "uk.nhsdigital.r4.test"
+                        }
+                    ]
+                },
+                {
+                    "url": "openApi",
+                    "extension": [
+                        {
+                            "url": "documentation",
+                            "valueUri": "https://digital.nhs.uk/developer/api-catalogue/e-referral-service-fhir"
+                        },
+                        {
+                            "url": "description",
+                            "valueString": "e-Referral Service - FHIR API"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
     "url": "https://fhir.nhs.uk/CapabilityStatement/apim-ers",
     "version": "3.0.0",
     "name": "APIMeRS",

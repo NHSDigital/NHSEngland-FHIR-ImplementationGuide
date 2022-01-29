@@ -1,5 +1,43 @@
 {
     "resourceType": "CapabilityStatement",
+    "extension": [
+        {
+            "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-APIDefinition",
+            "extension": [
+                {
+                    "url": "implementationGuide",
+                    "extension": [
+                        {
+                            "url": "name",
+                            "valueString": "ukcore.release1.test"
+                        }
+                    ]
+                },
+                {
+                    "url": "implementationGuide",
+                    "extension": [
+                        {
+                            "url": "name",
+                            "valueString": "uk.nhsdigital.r4.test"
+                        }
+                    ]
+                },
+                {
+                    "url": "openApi",
+                    "extension": [
+                        {
+                            "url": "documentation",
+                            "valueUri": "https://digital.nhs.uk/developer/api-catalogue/booking-and-referral-fhir"
+                        },
+                        {
+                            "url": "description",
+                            "valueString": "Booking and Referral - FHIR API"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
     "id": "091068ce-9aac-4b93-b0a2-947b97a223cc",
     "url": "https://fhir.nhs.uk/CapabilityStatement/apim-events",
     "version": "3.0.0",

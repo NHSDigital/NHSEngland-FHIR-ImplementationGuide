@@ -1,5 +1,56 @@
 {
     "resourceType": "CapabilityStatement",
+    "extension": [
+        {
+            "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-APIDefinition",
+            "extension": [
+                {
+                    "url": "implementationGuide",
+                    "extension": [
+                        {
+                            "url": "name",
+                            "valueString": "ukcore.release1.test"
+                        }
+                    ]
+                },
+                {
+                    "url": "implementationGuide",
+                    "extension": [
+                        {
+                            "url": "name",
+                            "valueString": "uk.nhsdigital.r4.test"
+                        }
+                    ]
+                },
+                {
+                    "url": "openApi",
+                    "extension": [
+                        {
+                            "url": "documentation",
+                            "valueUri": "https://digital.nhs.uk/developer/api-catalogue/booking-and-referral-fhir"
+                        },
+                        {
+                            "url": "description",
+                            "valueString": "Booking and Referral - FHIR API"
+                        }
+                    ]
+                },
+                {
+                    "url": "openApi",
+                    "extension": [
+                        {
+                            "url": "documentation",
+                            "valueUri": "https://simplifier.net/guide/nhsbookingandreferrals/home"
+                        },
+                        {
+                            "url": "description",
+                            "valueString": "NHS Bookings and Referrals"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
     "id": "b2a5d2b7-f47e-4b75-bed9-f2e79a08d263",
     "url": "https://fhir.nhs.uk/CapabilityStatement/apim-bars-supplier",
     "version": "3.0.0",
@@ -111,8 +162,15 @@
                     "profile" : "https://fhir.nhs.uk/StructureDefinition/NHSDigital-MessageDefinition",
                     "interaction": [
                         {
-                            "code": "read",
-                            "documentation" : "Get Message Definition"
+                            "code": "search-type",
+                            "documentation" : "Find Message Definition"
+                        }
+                    ],
+                    "searchParam": [
+                        {
+                            "name": "url",
+                            "type": "token",
+                            "documentation": "The uri that identifies the MessageDefintiion"
                         }
                     ]
                 }
@@ -131,11 +189,11 @@
             "supportedMessage":  [
                 {
                     "mode": "receiver",
-                    "definition": "https://fhir.nhs.uk/MessageDefinition/bars-send-servicerequest"
+                    "definition": "https://fhir.nhs.uk/MessageDefinition/bars-message-servicerequest-request"
                 },
                 {
                     "mode": "receiver",
-                    "definition": "https://fhir.nhs.uk/MessageDefinition/bars-validationresponse"
+                    "definition": "https://fhir.nhs.uk/MessageDefinition/bars-message-servicerequest-response"
                 }
             ]
         }
