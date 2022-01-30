@@ -74,16 +74,96 @@
                     "documentation" : "Supports Referrals and advice guidance requests",
                     "interaction": [
                         {
-                            "code": "read"
+                            "code": "read",
+                            "extension":  [
+                                {
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-APIDefinition-Examples",
+                                    "extension":  [
+                                        {
+                                            "url": "response",
+                                            "extension":  [
+                                                {
+                                                    "url": "resource",
+                                                    "valueCode": "ServiceRequest"
+                                                },
+                                                {
+                                                    "url": "id",
+                                                    "valueString": "832db7fa-ebdd-44b6-ab3b-8329c2d43149"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
                         },
                         {
-                            "code": "create"
+                            "code": "create",
+                            "extension":  [
+                                {
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-APIDefinition-Examples",
+                                    "extension":  [
+                                        {
+                                            "url": "request",
+                                            "extension":  [
+                                                {
+                                                    "url": "resource",
+                                                    "valueCode": "ServiceRequest"
+                                                },
+                                                {
+                                                    "url": "id",
+                                                    "valueString": "832db7fa-ebdd-44b6-ab3b-8329c2d43149"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
                         },
                         {
-                            "code": "update"
+                            "code": "update",
+                            "extension":  [
+                                {
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-APIDefinition-Examples",
+                                    "extension":  [
+                                        {
+                                            "url": "request",
+                                            "extension":  [
+                                                {
+                                                    "url": "resource",
+                                                    "valueCode": "ServiceRequest"
+                                                },
+                                                {
+                                                    "url": "id",
+                                                    "valueString": "832db7fa-ebdd-44b6-ab3b-8329c2d43149"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
                         },
                         {
-                            "code": "search-type"
+                            "code": "search-type",
+                            "extension":  [
+                                {
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-APIDefinition-Examples",
+                                    "extension":  [
+                                        {
+                                            "url": "response",
+                                            "extension":  [
+                                                {
+                                                    "url": "resource",
+                                                    "valueCode": "ServiceRequest"
+                                                },
+                                                {
+                                                    "url": "id",
+                                                    "valueString": "832db7fa-ebdd-44b6-ab3b-8329c2d43149"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
                         }
                     ],
                     "searchParam": [
@@ -100,13 +180,73 @@
                     "documentation" : "Supports worklists",
                     "interaction": [
                         {
-                            "code": "read"
+                            "code": "read",
+                            "extension":  [
+                                {
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-APIDefinition-Examples",
+                                    "extension":  [
+                                        {
+                                            "url": "response",
+                                            "extension":  [
+                                                {
+                                                    "url": "resource",
+                                                    "valueCode": "Task"
+                                                },
+                                                {
+                                                    "url": "id",
+                                                    "valueString": "000000070000"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
                         },
                         {
-                            "code": "update"
+                            "code": "update",
+                            "extension":  [
+                                {
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-APIDefinition-Examples",
+                                    "extension":  [
+                                        {
+                                            "url": "request",
+                                            "extension":  [
+                                                {
+                                                    "url": "resource",
+                                                    "valueCode": "Task"
+                                                },
+                                                {
+                                                    "url": "id",
+                                                    "valueString": "000000070000"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
                         },
                         {
-                            "code": "create"
+                            "code": "create",
+                            "extension":  [
+                                {
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-APIDefinition-Examples",
+                                    "extension":  [
+                                        {
+                                            "url": "request",
+                                            "extension":  [
+                                                {
+                                                    "url": "resource",
+                                                    "valueCode": "Task"
+                                                },
+                                                {
+                                                    "url": "id",
+                                                    "valueString": "000000070000"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
                         }
                     ]
                 },
