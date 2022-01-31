@@ -69,9 +69,19 @@
             },
             "resource": [
                 {
+                    "type": "Appointment",
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/England-Appointment",
+                    "interaction": [
+                        {
+                            "code": "create",
+                            "documentation" : "[A016 - Book or defer appointment](https://digital.nhs.uk/developer/api-catalogue/e-referral-service-fhir#api-Default-a016-book-or-defer-appointment)"
+                        }
+                    ]
+                },
+                {
                     "type": "ServiceRequest",
                     "profile": "https://fhir.nhs.uk/StructureDefinition/England-ServiceRequest",
-                    "documentation" : "Supports Referrals and advice guidance requests",
+                    "documentation" : "Supports Referrals and advice guidance requests (new)",
                     "interaction": [
                         {
                             "code": "read",
@@ -200,7 +210,8 @@
                                         }
                                     ]
                                 }
-                            ]
+                            ],
+                            "documentation": "[A005 - Retrieve referral request](https://digital.nhs.uk/developer/api-catalogue/e-referral-service-fhir#api-Default-a005-retrieve-referral-request)"
                         },
                         {
                             "code": "update",
@@ -223,7 +234,8 @@
                                         }
                                     ]
                                 }
-                            ]
+                            ],
+                            "documentation": "[A013 - Accept referral](https://digital.nhs.uk/developer/api-catalogue/e-referral-service-fhir#api-Default-a013-accept-referral) and [A014 - Reject referral](https://digital.nhs.uk/developer/api-catalogue/e-referral-service-fhir#api-Default-a014-reject-referral)"
                         },
                         {
                             "code": "create",
@@ -247,6 +259,87 @@
                                     ]
                                 }
                             ]
+                        },
+                        {
+                            "code": "search-type",
+                            "extension":  [
+                                {
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-APIDefinition-Examples",
+                                    "extension":  [
+                                        {
+                                            "url": "response",
+                                            "extension":  [
+                                                {
+                                                    "url": "resource",
+                                                    "valueCode": "Task"
+                                                },
+                                                {
+                                                    "url": "id",
+                                                    "valueString": "000000070000"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ],
+                            "documentation" : "See also [A008 - Retrieve referral worklist](https://digital.nhs.uk/developer/api-catalogue/e-referral-service-fhir#api-Default-a008-retrieve-worklist)"
+                        }
+                    ],
+                    "searchParam":  [
+                        {
+                            "name": "owner",
+                            "type": "reference",
+                            "documentation": "Search by task owner"
+                        },
+                        {
+                            "name": "code",
+                            "type": "token",
+                            "documentation": "Search by task code (worklist type)"
+                        }
+                    ]
+                },
+                {
+                    "type": "Slot",
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/England-Slot",
+                    "interaction": [
+                        {
+                            "code": "search-type",
+                            "documentation" : "[A015 - Retrieve appointment slots](https://digital.nhs.uk/developer/api-catalogue/e-referral-service-fhir#api-Default-a015-retrieve-appointment-slots)"
+                        }
+                    ],
+                    "searchParam":  [
+                        {
+                            "name": "appointment-type",
+                            "type": "token",
+                            "documentation": "The style of appointment or patient that may be booked in the slot (not service type)"
+                        },
+                        {
+                            "name": "schedule.actor:HealthcareService",
+                            "type": "reference",
+                            "documentation": "A single service ID is required to indicate the service for which appointment slots are required."
+                        }
+                        ,
+                        {
+                            "name": "status",
+                            "type": "token",
+                            "documentation": "The free/busy status of the appointment"
+                        }
+                    ]
+                },
+                {
+                    "type": "HealthcareService",
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-HealthcareService",
+                    "interaction": [
+                        {
+                            "code": "search-type",
+                            "documentation" : "[A010 - Patient service search](https://digital.nhs.uk/developer/api-catalogue/e-referral-service-fhir#api-Default-a010-patient-service-search)"
+                        }
+                    ],
+                    "searchParam":  [
+                        {
+                            "name": "service-type",
+                            "type": "token",
+                            "documentation": "The type of service provided by this healthcare service"
                         }
                     ]
                 },
@@ -257,24 +350,25 @@
                     "interaction": [
                         {
                             "code": "read"
-                        },
-                        {
-                            "code": "update"
-                        },
-                        {
-                            "code": "create"
                         }
                     ]
+                },
+                {
+                    "type": "List",
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/England-DocumentReference",
+                    "documentation" : "To represent the short list of healthcare services for a referral"
                 },
                 {
                     "type": "Binary",
                     "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-Binary",
                     "interaction": [
                         {
-                            "code": "read"
+                            "code": "read",
+                            "documentation" : "[A006 - Retrieve attachment](https://digital.nhs.uk/developer/api-catalogue/e-referral-service-fhir#api-Default-a006-retrieve-attachment)"
                         },
                         {
-                            "code": "create"
+                            "code": "create",
+                            "documentation": "[A020 - Upload file to document store](https://digital.nhs.uk/developer/api-catalogue/e-referral-service-fhir#api-Default-a020-upload-file-to-document-store)"
                         }
                     ]
                 }
