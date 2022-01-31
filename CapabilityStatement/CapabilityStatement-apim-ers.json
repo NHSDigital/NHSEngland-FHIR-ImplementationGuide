@@ -74,7 +74,27 @@
                     "interaction": [
                         {
                             "code": "create",
-                            "documentation" : "[A016 - Book or defer appointment](https://digital.nhs.uk/developer/api-catalogue/e-referral-service-fhir#api-Default-a016-book-or-defer-appointment)"
+                            "documentation" : "[A016 - Book or defer appointment](https://digital.nhs.uk/developer/api-catalogue/e-referral-service-fhir#api-Default-a016-book-or-defer-appointment)",
+                            "extension":  [
+                                {
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-APIDefinition-Examples",
+                                    "extension":  [
+                                        {
+                                            "url": "request",
+                                            "extension":  [
+                                                {
+                                                    "url": "resource",
+                                                    "valueCode": "Appointment"
+                                                },
+                                                {
+                                                    "url": "id",
+                                                    "valueString": "391d8d18-159a-4af8-a935-2238ed4db867"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
                         }
                     ]
                 },
@@ -333,6 +353,10 @@
                         {
                             "code": "search-type",
                             "documentation" : "[A010 - Patient service search](https://digital.nhs.uk/developer/api-catalogue/e-referral-service-fhir#api-Default-a010-patient-service-search)"
+                        },
+                        {
+                            "code": "read",
+                            "documentation" : "Unable to find existing matching service"
                         }
                     ],
                     "searchParam":  [
@@ -340,6 +364,11 @@
                             "name": "service-type",
                             "type": "token",
                             "documentation": "The type of service provided by this healthcare service"
+                        },
+                        {
+                            "name": "identifier",
+                            "type": "token",
+                            "documentation": "Can't find this parameter presume need to: External identifiers for this item"
                         }
                     ]
                 },

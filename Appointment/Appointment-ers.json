@@ -1,0 +1,40 @@
+{
+    "id": "391d8d18-159a-4af8-a935-2238ed4db867",
+    "resourceType": "Appointment",
+    "status": "booked",
+    "description": "e-Referral Appointment",
+    "start": "2022-07-11T12:00:00+00:00",
+    "end": "2022-07-11T13:00:00+00:00",
+    "slot": [
+        {
+            "reference": "Slot/11000021"
+        }
+    ],
+    "basedOn": [
+        {
+            "reference": "ServiceRequest/000000070000"
+        }
+    ],
+    "participant": [
+        {
+            "type": "HealthcareService",
+            "actor": {
+                "identifier": {
+                    "system": "http://fhir.nhs.net/Id/ers-service",
+                    "value": "11000"
+                }
+            },
+            "status": "accepted"
+        },
+        {
+            "type" : "Patient",
+            "actor": {
+                "identifier": {
+                    "system": "http://fhir.nhs.net/Id/nhs-number",
+                    "value": "9912003888"
+                }
+            },
+            "status": "accepted"
+        }
+    ]
+}
