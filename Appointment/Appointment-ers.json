@@ -17,8 +17,8 @@
     ],
     "participant": [
         {
-            "type": "HealthcareService",
             "actor": {
+                "type": "HealthcareService",
                 "identifier": {
                     "system": "http://fhir.nhs.net/Id/ers-service",
                     "value": "11000"
@@ -27,8 +27,8 @@
             "status": "accepted"
         },
         {
-            "type" : "Patient",
             "actor": {
+                "type": "Patient",
                 "identifier": {
                     "system": "http://fhir.nhs.net/Id/nhs-number",
                     "value": "9912003888"
