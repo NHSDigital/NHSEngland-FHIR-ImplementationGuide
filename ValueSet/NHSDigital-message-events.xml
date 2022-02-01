@@ -18,6 +18,7 @@
     </compose>
     <expansion>
         <identifier value="dcbf0434-1a7a-4010-bb62-a76855757c2d"/>
+        <timestamp value="2022-01-01T09:37:24+00:00"/>
         <parameter>
             <name value="version"/>
             <valueUri value="https://fhir.nhs.uk/CodeSystem/message-event|1.0.16"/>
