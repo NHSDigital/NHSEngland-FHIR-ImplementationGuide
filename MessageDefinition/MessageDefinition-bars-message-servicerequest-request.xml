@@ -4,7 +4,7 @@
         <profile value="https://fhir.nhs.uk/StructureDefinition/BARSMessageDefinition-ServiceRequest-Request" />
     </meta>
     <url value="https://fhir.nhs.uk/MessageDefinition/bars-message-servicerequest-request" />
-    <name value="BARS Message Definition ServiceRequest - Request CaseTransfer" />
+    <description value="BARS Message Definition ServiceRequest - Request CaseTransfer" />
     <title value="BARS Message Definition ServiceRequest - Request CaseTransfer" />
     <status value="active" />
     <date value="2021-12-08" />
