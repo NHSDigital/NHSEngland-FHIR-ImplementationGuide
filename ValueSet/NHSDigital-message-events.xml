@@ -2,7 +2,7 @@
 <ValueSet xmlns="http://hl7.org/fhir">
     <id value="nhsdigital-message-events" />
     <url value="https://fhir.nhs.uk/ValueSet/NHSDigital-message-events" />
-    <version value="1.0.9" />
+    <version value="1.0.10" />
     <name value="NHSMessageEvents" />
     <status value="active" />
     <description value="A ValueSet to identify the type of FHIR Message" />
@@ -11,12 +11,13 @@
             <system value="https://fhir.nhs.uk/CodeSystem/message-event" />
             <version value="1.0.16" />
         </include>
+        <include>
+            <system value="https://fhir.nhs.uk/CodeSystem/message-event-servicerequest" />
+            <version value="1.0.0" />
+        </include>
     </compose>
     <expansion>
         <identifier value="dcbf0434-1a7a-4010-bb62-a76855757c2d"/>
-        <timestamp value="2021-05-15T05:23:06+10:00"/>
-        <total value="13"/>
-        <offset value="0"/>
         <parameter>
             <name value="version"/>
             <valueUri value="https://fhir.nhs.uk/CodeSystem/message-event|1.0.16"/>
@@ -93,6 +94,26 @@
             <system value="https://fhir.nhs.uk/CodeSystem/message-event"/>
             <code value="subscription-notification" />
             <display value="Subscription Event Notification" />
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/message-event-servicerequest"/>
+            <code value="servicerequest-request" />
+            <display value="Service Request - Request" />
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/message-event-servicerequest"/>
+            <code value="servicerequest-response" />
+            <display value="Service Request - Response" />
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/message-event-servicerequest"/>
+            <code value="booking-request" />
+            <display value="Booking Request - Request" />
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/message-event-servicerequest"/>
+            <code value="booking-response" />
+            <display value="Booking Request - Response" />
         </contains>
     </expansion>
 </ValueSet>
