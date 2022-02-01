@@ -57,6 +57,7 @@
     <element id="Patient.name.given">
       <path value="Patient.name.given" />
       <mustSupport value="true" />
+      <max value="5"/>
     </element>
     <element id="Patient.telecom">
       <path value="Patient.telecom" />
