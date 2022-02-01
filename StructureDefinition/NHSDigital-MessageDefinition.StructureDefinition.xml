@@ -13,20 +13,28 @@
     <element id="MessageDefinition.url">
       <path value="MessageDefinition.url" />
       <min value="1" />
+       <mustSupport value="true" />
     </element>
     <element id="MessageDefinition.description">
       <path value="MessageDefinition.description" />
       <min value="1" />
+       <mustSupport value="true" />
     </element>
     <element id="MessageDefinition.event[x]">
       <path value="MessageDefinition.event[x]" />
       <type>
         <code value="Coding" />
       </type>
+       <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDigital-message-events" />
+      </binding>
     </element>
     <element id="MessageDefinition.focus">
       <path value="MessageDefinition.focus" />
       <min value="1" />
+       <mustSupport value="true" />
     </element>
   </differential>
 </StructureDefinition>

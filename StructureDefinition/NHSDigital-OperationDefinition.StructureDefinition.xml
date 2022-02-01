@@ -15,6 +15,7 @@
       <path value="OperationDefinition.affectsState" />
       <definition value="This is used to indicate method." />
       <min value="1" />
+       <mustSupport value="true" />
     </element>
   </differential>
 </StructureDefinition>
