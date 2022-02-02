@@ -124,7 +124,8 @@
                                         }
                                     ]
                                 }
-                            ]
+                            ],
+                            "documentation": "[A005 - Retrieve referral request](https://digital.nhs.uk/developer/api-catalogue/e-referral-service-fhir#api-Default-a005-retrieve-referral-request)"
                         },
                         {
                             "code": "create",
@@ -230,8 +231,8 @@
                                         }
                                     ]
                                 }
-                            ],
-                            "documentation": "[A005 - Retrieve referral request](https://digital.nhs.uk/developer/api-catalogue/e-referral-service-fhir#api-Default-a005-retrieve-referral-request)"
+                            ]
+                           
                         },
                         {
                             "code": "update",
