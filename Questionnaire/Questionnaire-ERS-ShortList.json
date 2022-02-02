@@ -13,13 +13,15 @@
       "linkId": "specialty",
       "type": "choice",
       "required": false,
-      "text": "specialty"
+      "text": "specialty",
+      "answerValueSet": "https://fhir.nhs.uk/ValueSet/NHSDigital-eRS-ClinicType"
     },
     {
       "linkId": "supportedPriority",
       "type": "choice",
       "required": false,
-      "text": "Supported Priority"
+      "text": "Supported Priority",
+      "answerValueSet" : "http://hl7.org/fhir/ValueSet/request-priority"
     },
     {
       "linkId": "services",
