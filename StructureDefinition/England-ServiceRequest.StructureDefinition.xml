@@ -124,7 +124,8 @@
       <path value="ServiceRequest.supportingInfo" />
       <type>
         <code value="Reference" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/England-DocumentReference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Resource" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-DocumentReference" />
         <aggregation value="referenced" />
       </type>
     </element>
