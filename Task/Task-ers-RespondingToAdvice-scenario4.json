@@ -1,7 +1,7 @@
 {
-    "id": "bf7ab4c4-bafb-495e-8a61-1aa40309eaed",
+    "id": "33fddbce-6d2c-453a-9351-4822bb55e402",
     "meta": {
-        "versionId": "2"
+        "versionId": "4"
     },
     "identifier": [
         {
@@ -17,9 +17,9 @@
             "value": "000000070000"
         }
     },
-    "status": "requested",
+    "status": "completed",
     "intent": "option",
-    "priority" :"routine",
+    "priority" :"urgent",
     "code": {
         "coding": [
             {
@@ -35,7 +35,7 @@
             "value": "9912003888"
         }
     },
-    "authoredOn": "2022-01-21T16:58:06.259000+00:00",
+    "authoredOn": "2022-01-25T13:28:06.259000+00:00",
     "requester": {
         "type": "Practitioner",
         "identifier": {
@@ -45,18 +45,7 @@
     },
     "note": [
         {
-            "text": "Here's some advice"
-        }
-    ],
-    "output":[
-        {
-            "type" : {
-               "text" :"Something to represent attachment"
-            },
-            "valueReference": {
-                "type" : "DocumentReference",
-                "reference": "DocumentReference/1"
-            }
+            "text": "Converting this to a referral"
         }
     ]
 }

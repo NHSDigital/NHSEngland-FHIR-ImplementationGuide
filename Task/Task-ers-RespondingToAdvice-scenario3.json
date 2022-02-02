@@ -1,7 +1,7 @@
 {
     "id": "33fddbce-6d2c-453a-9351-4822bb55e402",
     "meta": {
-        "versionId": "2"
+        "versionId": "3"
     },
     "identifier": [
         {
@@ -20,18 +20,15 @@
     "status": "requested",
     "intent": "option",
     "priority" :"urgent",
-    "code": [
-        {
-            "coding": [
-                {
-                    "system": "http://snomed.info/sct",
-                    "code": "409063005",
-                    "display": "Counselling"
-                }
-            ],
-            "text" :"Something to represent advice and guidance"
-        }
-    ],
+    "code": {
+        "coding": [
+            {
+                "system": "http://hl7.org/fhir/CodeSystem/task-code",
+                "code": "fulfill",
+                "display": "Fulfill the focal request"
+            }
+        ]
+    },
     "for": {
         "identifier": {
             "system": "http://fhir.nhs.net/Id/nhs-number",
