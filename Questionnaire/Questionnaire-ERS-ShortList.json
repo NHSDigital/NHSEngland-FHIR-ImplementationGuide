@@ -10,16 +10,19 @@
   "resourceType": "Questionnaire",
   "item": [
     {
+      "linkId": "specialty",
       "type": "choice",
       "required": false,
       "text": "specialty"
     },
     {
+      "linkId": "supportedPriority",
       "type": "choice",
       "required": false,
       "text": "Supported Priority"
     },
     {
+      "linkId": "services",
       "type": "reference",
       "required": false,
       "repeats": true,
