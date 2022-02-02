@@ -1,0 +1,29 @@
+{
+  "id": "57c3cfbb-6730-4aab-ba68-b0a3d636212d",
+  "version": "0.0.2",
+  "subjectType": [
+    "Patient"
+  ],
+  "status": "draft",
+  "url": "https://fhir.nhs.uk/Questionnaire/ERS-ShortList",
+  "title": "ERS-ShortList",
+  "resourceType": "Questionnaire",
+  "item": [
+    {
+      "type": "choice",
+      "required": false,
+      "text": "specialty"
+    },
+    {
+      "type": "choice",
+      "required": false,
+      "text": "Supported Priority"
+    },
+    {
+      "type": "reference",
+      "required": false,
+      "repeats": true,
+      "text": "Services"
+    }
+  ]
+}
