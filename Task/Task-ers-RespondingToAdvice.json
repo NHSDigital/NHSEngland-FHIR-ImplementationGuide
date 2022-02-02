@@ -29,7 +29,7 @@
                     "display": "Counselling"
                 }
             ],
-            "description" : "NEED SOMETHING WHICH SAYS ADVICE AND GUIDANCE"
+            "text" :"Something to represent advice and guidance"
         }
     ],
     "for": {
@@ -51,10 +51,10 @@
             "text": "Here's some advice"
         }
     ],
-    "ouput":[
+    "output":[
         {
             "type" : {
-                "description" : "Attachment to the advice and guidance response"
+               "text" :"Something to represent attachment"
             },
             "valueReference": {
                 "type" : "DocumentReference",
