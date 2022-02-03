@@ -9,11 +9,11 @@
             "extension": [
                 {
                     "url": "sourceSystem",
-                    "valueCode" : "ers"
+                    "valueCode": "ers"
                 },
                 {
                     "url": "status",
-                    "valueCode" : "unbooked"
+                    "valueCode": "unbooked"
                 }
             ]
         }
@@ -24,15 +24,15 @@
             "value": "18253b86-9878-4c3f-b854-af0a9b7728a3"
         }
     ],
-    "basedOn" : {
-        "reference" : "ServiceRequest/832db7fa-ebdd-44b6-ab3b-8329c2d43149",
-        "identifier": 
-            {
+    "basedOn": [
+        {
+            "reference": "ServiceRequest/832db7fa-ebdd-44b6-ab3b-8329c2d43149",
+            "identifier": {
                 "system": "https://fhir.nhs.uk/Id/UBRN",
                 "value": "000000070000"
             }
-        
-    },
+        }
+    ],
     "resourceType": "ServiceRequest",
     "status": "active",
     "intent": "order",
@@ -61,12 +61,12 @@
     },
     "supportingInfo": [
         {
-            "type" : "DocumentReference",
+            "type": "DocumentReference",
             "reference": "DocumentReference/5da894e0-a57e-43e9-a1a1-e283a484003c"
         },
         {
-            "type" : "QuestionnaireResponse",
-            "reference" : "QuestionnaireResponse/d9d4cf80-3f9d-4435-9f3b-e6efb09ad654"
+            "type": "QuestionnaireResponse",
+            "reference": "QuestionnaireResponse/d9d4cf80-3f9d-4435-9f3b-e6efb09ad654"
         }
     ],
     "note": [
