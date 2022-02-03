@@ -348,6 +348,65 @@
                     ]
                 },
                 {
+                    "type" : "Questionnaire",
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-Questionnaire"
+                },
+                {
+                    "type" : "QuestionnaireResponse",
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-QuestionnaireResponse",
+                    "interaction": [
+                        {
+                            "code": "create",
+                            "documentation" : "Use this api to create a shortlist",
+                            "extension":  [
+                                {
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-APIDefinition-Examples",
+                                    "extension":  [
+                                        {
+                                            "url": "request",
+                                            "extension":  [
+                                                {
+                                                    "url": "resource",
+                                                    "valueCode": "QuestionnaireResponse"
+                                                },
+                                                {
+                                                    "url": "id",
+                                                    "valueString": "d9d4cf80-3f9d-4435-9f3b-e6efb09ad654"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "code": "read",
+                            "documentation" : "Use this api to retrieve a shortlist",
+                            "extension":  [
+                                {
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-APIDefinition-Examples",
+                                    "extension":  [
+                                        {
+                                            "url": "response",
+                                            "extension":  [
+                                                {
+                                                    "url": "resource",
+                                                    "valueCode": "QuestionnaireResponse"
+                                                },
+                                                {
+                                                    "url": "id",
+                                                    "valueString": "d9d4cf80-3f9d-4435-9f3b-e6efb09ad654"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+                ,
+                {
                     "type": "HealthcareService",
                     "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-HealthcareService",
                     "interaction": [
