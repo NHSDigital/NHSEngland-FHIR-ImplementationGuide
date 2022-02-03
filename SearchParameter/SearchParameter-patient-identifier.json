@@ -1,6 +1,6 @@
  {
       "resourceType" : "SearchParameter",
-      "id" : "",
+      "id" : "adf0b03e-6e52-4b72-9a16-19f4a4561ccf",
       "url" : "https://fhir.nhs.uk/SearchParameter/clinical-patient-identifier",
       "version" : "4.0.1",
       "name" : "patient identifier",
