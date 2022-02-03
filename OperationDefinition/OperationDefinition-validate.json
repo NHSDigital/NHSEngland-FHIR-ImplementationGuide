@@ -22,7 +22,7 @@
         }
     ],
     "description": "NHS Validation Service Operation",
-    "code": "validation",
+    "code": "validate",
     "comment": "NHS Validation Service Operation",
     "system": true,
     "affectsState" : false,
