@@ -53,7 +53,12 @@
     },
     "supportingInfo": [
         {
+            "type" : "DocumentReference",
             "reference": "DocumentReference/5da894e0-a57e-43e9-a1a1-e283a484003c"
+        },
+        {
+            "type" : "QuestionnaireResponse",
+            "reference" : "QuestionnaireResponse/d9d4cf80-3f9d-4435-9f3b-e6efb09ad654"
         }
     ],
     "note": [

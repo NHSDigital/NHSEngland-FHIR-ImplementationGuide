@@ -1,0 +1,56 @@
+{
+    "resourceType": "QuestionnaireResponse",
+    "id": "d9d4cf80-3f9d-4435-9f3b-e6efb09ad654",
+    "questionnaire": "https://fhir.nhs.uk/Questionnaire/ERS-ShortList",
+    "status": "completed",
+    "subject": {
+        "identifier": {
+            "system": "http://fhir.nhs.net/Id/nhs-number",
+            "value": "9912003888"
+        }
+    },
+    "authored": "2022-01-11T16:40:00+00:00",
+    "source": {
+        "type": "Practitioner",
+        "identifier": {
+            "system": "http://fhir.nhs.net/Id/sds-user-id",
+            "value": "921600556514"
+        }
+    },
+    "item": [
+        {
+            "linkId": "specialty",
+            "answer": [
+                {
+                    "valueCoding": { 
+                        "system": "https://fhir.nhs.uk/CodeSystem/NHSDigital-ClinicType",
+                        "code": "GENERAL_MEDICINE_1"
+                    }
+                }
+            ]
+        },
+        {
+            "linkId": "supportedPriority",
+            "answer": [
+                {
+                    "valueCoding": "routine"
+                }
+            ]
+        },
+        {
+            "linkId": "services",
+            "answer": [
+                {
+                    "valueReference": {
+                        "reference" : "HealthcareService/76de72bc-f001-49fa-84c6-af15a4fdb72c"
+                    }
+                },
+                {
+                    "valueReference": {
+                        "reference" : "HealthcareService/54b0506d-49af-4245-9d40-d7d64902055e"
+                    }
+                }
+            ]
+        }
+    ]
+}
