@@ -202,7 +202,7 @@
                             "name": "patient:identifier",
                             "type": "token",
                             "documentation": "The patient identifier (e.g. NHS Number) that the service request is about",
-                            "definition" : "https://fhir.nhs.uk/SearchParameter/clinical-patient-identifier"
+                            "definition" : "https://fhir.nhs.uk/SearchParameter/servicerequest-patient-identifier"
                         }
                     ]
                 },
