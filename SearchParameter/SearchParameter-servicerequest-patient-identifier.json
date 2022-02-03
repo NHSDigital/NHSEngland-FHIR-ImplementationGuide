@@ -1,0 +1,20 @@
+ {
+      "resourceType" : "SearchParameter",
+      "id" : "adf0b03e-6e52-4b72-9a16-19f4a4561ccf",
+      "url" : "https://fhir.nhs.uk/SearchParameter/servicerequest-patient-identifier",
+      "version" : "4.0.1",
+      "name" : "serviceequestpatientidentifier",
+      "status" : "draft",
+      "experimental" : false,
+      "date" : "2022-02-03T09:29:23+11:00",
+      "publisher" : "NHS Digital",
+      "description" : "Search on an identifier of the Patient, usualy NHS Number",
+      "code" : "patient:identifier",
+      "base" : [
+      "ServiceRequest"],
+      "type" : "token",
+      "expression" : "ServiceRequest.subject.identifier.where(resolve() is Patient)",
+      "xpathUsage" : "normal",
+      "target" : ["Patient",
+      "Group"]
+    }
