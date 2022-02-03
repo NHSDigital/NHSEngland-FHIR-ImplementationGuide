@@ -7,7 +7,8 @@
         "identifier": {
             "system": "http://fhir.nhs.net/Id/nhs-number",
             "value": "9912003888"
-        }
+        },
+        "display": "A Patient"
     },
     "authored": "2022-01-11T16:40:00+00:00",
     "source": {
