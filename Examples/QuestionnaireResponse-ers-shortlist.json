@@ -3,11 +3,15 @@
     "id": "d9d4cf80-3f9d-4435-9f3b-e6efb09ad654",
     "questionnaire": "https://fhir.nhs.uk/Questionnaire/ERS-ShortList",
     "status": "completed",
+    "basedOn" : [{
+        "reference" : "ServiceRequest/832db7fa-ebdd-44b6-ab3b-8329c2d43149"
+    }],
     "subject": {
         "identifier": {
             "system": "http://fhir.nhs.net/Id/nhs-number",
             "value": "9912003888"
-        }
+        },
+        "display": "A Patient"
     },
     "authored": "2022-01-11T16:40:00+00:00",
     "source": {
@@ -34,6 +38,7 @@
             "answer": [
                 {
                     "valueCoding": {
+                        "system": "http://hl7.org/fhir/request-priority",
                         "code": "routine"
                     }
                 }

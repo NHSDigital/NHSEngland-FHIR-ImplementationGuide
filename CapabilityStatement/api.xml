@@ -265,6 +265,10 @@
             </searchParam>
         </resource>
         <resource>
+            <type value="ServiceRequest" />
+            <profile value="https://fhir.nhs.uk/StructureDefinition/England-ServiceRequest" />
+        </resource>
+        <resource>
             <type value="Device" />
             <profile value="https://fhir.nhs.uk/StructureDefinition/SDS-Device" />
         </resource>

@@ -27,7 +27,7 @@
       <min value="0" />
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-ERS-AdviceAndGuidance" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-ERS-Referral" />
       </type>
     </element>
     <element id="ServiceRequest.identifier">

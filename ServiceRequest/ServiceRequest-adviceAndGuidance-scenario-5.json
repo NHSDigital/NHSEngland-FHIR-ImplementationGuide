@@ -1,7 +1,7 @@
 {
-    "id": "832db7fa-ebdd-44b6-ab3b-8329c2d43149",
+    "id": "18253b86-9878-4c3f-b854-af0a9b7728a3",
     "meta": {
-        "versionId": "5"
+        "versionId": "1"
     },
     "extension": [
         {
@@ -9,19 +9,28 @@
             "extension": [
                 {
                     "url": "sourceSystem",
-                    "valueCode" : "ers"
+                    "valueCode": "ers"
                 },
                 {
-                    "url": "authorisedToRefer",
-                    "valueCode" : "authorised"
+                    "url": "status",
+                    "valueCode": "unbooked"
                 }
             ]
         }
     ],
     "identifier": [
         {
-            "system": "https://fhir.nhs.uk/Id/UBRN",
-            "value": "000000070000"
+            "system": "https://fhir.nhs.uk/Id/ers-referral-id",
+            "value": "18253b86-9878-4c3f-b854-af0a9b7728a3"
+        }
+    ],
+    "basedOn": [
+        {
+            "reference": "ServiceRequest/832db7fa-ebdd-44b6-ab3b-8329c2d43149",
+            "identifier": {
+                "system": "https://fhir.nhs.uk/Id/UBRN",
+                "value": "000000070000"
+            }
         }
     ],
     "resourceType": "ServiceRequest",
@@ -46,19 +55,18 @@
         "coding": [
             {
                 "system": "https://fhir.nhs.uk/CodeSystem/NHSDigital-ClinicType",
-                "code": "HEART_FAILURE"
+                "code": "GENERAL_MEDICINE_1"
             }
-        ],
-        "text": "SHOULD BE SAYING ADVICE AND GUIDANCE HERE??"
+        ]
     },
     "supportingInfo": [
         {
-            "type" : "DocumentReference",
+            "type": "DocumentReference",
             "reference": "DocumentReference/5da894e0-a57e-43e9-a1a1-e283a484003c"
         },
         {
-            "type" : "QuestionnaireResponse",
-            "reference" : "QuestionnaireResponse/d9d4cf80-3f9d-4435-9f3b-e6efb09ad654"
+            "type": "QuestionnaireResponse",
+            "reference": "QuestionnaireResponse/d9d4cf80-3f9d-4435-9f3b-e6efb09ad654"
         }
     ],
     "note": [
