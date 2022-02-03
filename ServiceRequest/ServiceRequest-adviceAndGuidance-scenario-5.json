@@ -1,7 +1,7 @@
 {
-    "id": "832db7fa-ebdd-44b6-ab3b-8329c2d43149",
+    "id": "18253b86-9878-4c3f-b854-af0a9b7728a3",
     "meta": {
-        "versionId": "5"
+        "versionId": "1"
     },
     "extension": [
         {
@@ -12,18 +12,27 @@
                     "valueCode" : "ers"
                 },
                 {
-                    "url": "authorisedToRefer",
-                    "valueCode" : "authorised"
+                    "url": "status",
+                    "valueCode" : "unbooked"
                 }
             ]
         }
     ],
     "identifier": [
         {
-            "system": "https://fhir.nhs.uk/Id/UBRN",
-            "value": "000000070000"
+            "system": "https://fhir.nhs.uk/Id/ers-referral-id",
+            "value": "18253b86-9878-4c3f-b854-af0a9b7728a3"
         }
     ],
+    "basedOn" : {
+        "reference" : "ServiceRequest/832db7fa-ebdd-44b6-ab3b-8329c2d43149",
+        "identifier": 
+            {
+                "system": "https://fhir.nhs.uk/Id/UBRN",
+                "value": "000000070000"
+            }
+        
+    },
     "resourceType": "ServiceRequest",
     "status": "active",
     "intent": "order",
@@ -46,10 +55,9 @@
         "coding": [
             {
                 "system": "https://fhir.nhs.uk/CodeSystem/NHSDigital-ClinicType",
-                "code": "HEART_FAILURE"
+                "code": "GENERAL_MEDICINE_1"
             }
-        ],
-        "text": "SHOULD BE SAYING ADVICE AND GUIDANCE HERE??"
+        ]
     },
     "supportingInfo": [
         {

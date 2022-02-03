@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="https://fhir.nhs.uk/StructureDefinition/Extension-ERS-AdviceAndGuidance" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/Extension-ERS-Referral" />
   <name value="ExtensionERSAdviceAndGuidance" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
@@ -27,7 +27,7 @@
         </discriminator>
         <rules value="open" />
       </slicing>
-      <min value="2" />
+      <min value="1" />
     </element>
     <element id="Extension.extension:sourceSystem">
       <path value="Extension.extension" />
@@ -49,7 +49,6 @@
     <element id="Extension.extension:authorisedToRefer">
       <path value="Extension.extension" />
       <sliceName value="authorisedToRefer" />
-      <min value="1" />
       <max value="1" />
     </element>
     <element id="Extension.extension:authorisedToRefer.url">
@@ -63,9 +62,25 @@
         <code value="code" />
       </type>
     </element>
+    <element id="Extension.extension:status">
+      <path value="Extension.extension" />
+      <sliceName value="status" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:status.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="status" />
+    </element>
+    <element id="Extension.extension:status.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <min value="1" />
+      <type>
+        <code value="code" />
+      </type>
+    </element>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="https://fhir.nhs.uk/StructureDefinition/Extension-ERS-AdviceAndGuidance" />
+      <fixedUri value="https://fhir.nhs.uk/StructureDefinition/Extension-ERS-Referral" />
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />
