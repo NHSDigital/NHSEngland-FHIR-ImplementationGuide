@@ -155,9 +155,56 @@
                             "documentation": "A postalCode specified in an address"
                         },
                         {
+                            "name": "address-postalcode",
+                            "type": "string",
+                            "documentation": "Correction to actual PDS API. A postalCode specified in an address"
+                        },
+                        {
                             "name": "general-practitioner:identifier",
+                            "type": "token",
+                            "documentation": "Correction to PDS API. Patient's nominated general practitioner, not the organization that manages the record"
+                        },
+                        {
+                            "name": "general-practitioner",
                             "type": "reference",
-                            "documentation": "Patient's nominated general practitioner, not the organization that manages the record"
+                            "documentation": "Correction to PDS API. Patient's nominated general practitioner, not the organization that manages the record"
+                        }
+                    ]
+                },
+                {
+                    "type": "RelatedPerson",
+                    "profile": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-RelatedPerson",
+                    "documentation" : "Get a Patients related people",
+                    "interaction" :[
+                        {
+                            "code" : "search-type",
+                            "extension":  [
+                                {
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-APIDefinition-Examples",
+                                    "extension":  [
+                                        {
+                                            "url": "response",
+                                            "extension":  [
+                                                {
+                                                    "url": "resource",
+                                                    "valueCode": "RelatedPerson"
+                                                },
+                                                {
+                                                    "url": "id",
+                                                    "valueString": "507B7621"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "searchParam": [
+                        {
+                            "name": "patient",
+                            "type": "reference",
+                            "documentation": "Patients NHS Number"
                         }
                     ]
                 }
