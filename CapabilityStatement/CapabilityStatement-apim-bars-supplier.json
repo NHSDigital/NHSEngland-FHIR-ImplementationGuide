@@ -61,16 +61,16 @@
     "description": "API Definition for BaRS (supplier)",
     "kind": "requirements",
     "fhirVersion": "4.0.1",
-    "format":  [
+    "format": [
         "application/fhir+json"
     ],
-    "rest":  [
+    "rest": [
         {
             "mode": "server",
             "security": {
-                "service":  [
+                "service": [
                     {
-                        "coding":  [
+                        "coding": [
                             {
                                 "system": "http://terminology.hl7.org/CodeSystem/restful-security-service",
                                 "code": "OAuth",
@@ -92,7 +92,7 @@
                         },
                         {
                             "code": "search-type",
-                            "documentation" : "Get referral/s for a patient"
+                            "documentation": "Get referral/s for a patient"
                         }
                     ],
                     "searchParam": [
@@ -107,10 +107,9 @@
                     "type": "Slot",
                     "profile": "https://fhir.nhs.uk/StructureDefinition/England-Slot",
                     "interaction": [
-                        
                         {
                             "code": "search-type",
-                            "documentation" : "Get slots"
+                            "documentation": "Get slots"
                         }
                     ],
                     "searchParam": [
@@ -153,17 +152,28 @@
                         {
                             "name": "patient:identifier",
                             "type": "token",
-                            "documentation": "Search for appointment for a patient by NHS Number"
+                            "documentation": "Search for appointment for a patient by NHS Number",
+                            "extension": [
+                                {
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-APIDefinition-Examples",
+                                    "extension": [
+                                        {
+                                            "url": "required",
+                                            "valueBoolean": true
+                                        }
+                                    ]
+                                }
+                            ]
                         }
                     ]
                 },
                 {
                     "type": "MessageDefinition",
-                    "profile" : "https://fhir.nhs.uk/StructureDefinition/NHSDigital-MessageDefinition",
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-MessageDefinition",
                     "interaction": [
                         {
                             "code": "search-type",
-                            "documentation" : "Find Message Definition"
+                            "documentation": "Find Message Definition"
                         }
                     ],
                     "searchParam": [
@@ -175,7 +185,7 @@
                     ]
                 }
             ],
-            "operation":  [
+            "operation": [
                 {
                     "name": "process-message",
                     "definition": "https://fhir.nhs.uk/OperationDefinition/MessageHeader-process-message",
@@ -184,9 +194,9 @@
             ]
         }
     ],
-    "messaging":  [
+    "messaging": [
         {
-            "supportedMessage":  [
+            "supportedMessage": [
                 {
                     "mode": "receiver",
                     "definition": "https://fhir.nhs.uk/MessageDefinition/bars-message-servicerequest-request"
