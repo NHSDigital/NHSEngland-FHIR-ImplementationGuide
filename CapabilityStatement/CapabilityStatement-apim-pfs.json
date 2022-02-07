@@ -1,0 +1,151 @@
+{
+    "resourceType": "CapabilityStatement",
+    "id": "58225e8b-6abe-4f73-8bbb-c1a633f51712",
+    "extension": [
+        {
+            "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-APIDefinition",
+            "extension": [
+                {
+                    "url": "implementationGuide",
+                    "extension": [
+                        {
+                            "url": "name",
+                            "valueString": "ukcore.release1.test"
+                        }
+                    ]
+                },
+                {
+                    "url": "implementationGuide",
+                    "extension": [
+                        {
+                            "url": "name",
+                            "valueString": "uk.nhsdigital.r4.test"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "url": "https://fhir.nhs.uk/CapabilityStatement/apim-pfs",
+    "version": "3.0.0",
+    "name": "APIMPFS",
+    "status": "active",
+    "date": "2021-04-28T00:00:00+00:00",
+    "publisher": "digital.nhs.uk",
+    "description": "API definition for PDS",
+    "kind": "requirements",
+    "fhirVersion": "4.0.1",
+    "format": [
+        "application/fhir+json"
+    ],
+    "rest": [
+        {
+            "mode": "server",
+            "security": {
+                "service": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/restful-security-service",
+                                "code": "OAuth",
+                                "display": "OAuth2 Token"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "resource": [
+                {
+                    "type": "AllergyIntolerance",
+                    "profile": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-AllergyIntolerance",
+                    "interaction": [
+                        {
+                            "code": "search-type"
+                        }
+                    ],
+                    "searchParam": [
+                        {
+                            "name": "patient:identifier",
+                            "type": "token",
+                            "documentation": "My allergies"
+                        }
+                    ]
+                },
+                {
+                    "type": "Patient",
+                    "profile": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Patient",
+                    "interaction": [
+                        {
+                            "code": "read"
+                        },
+                        {
+                            "code": "search-type"
+                        }
+                    ],
+                    "searchParam": [
+                        {
+                            "name": "patient:identifier",
+                            "type": "token",
+                            "documentation": "My allergies"
+                        }
+                    ]
+                },
+                {
+                    "type": "RelatedPerson",
+                    "profile": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-RelatedPerson",
+                    "interaction": [
+                        {
+                            "code": "read"
+                        },
+                        {
+                            "code": "search-type"
+                        }
+                    ],
+                    "searchParam": [
+                        {
+                            "name": "patient:identifier",
+                            "type": "token",
+                            "documentation": "My allergies"
+                        }
+                    ]
+                },
+                {
+                    "type": "Organization",
+                    "profile": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Organizationt",
+                    "interaction": [
+                        {
+                            "code": "read"
+                        }
+                    ]
+                },
+                {
+                    "type": "Practitioner",
+                    "profile": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Practitioner",
+                    "interaction": [
+                        {
+                            "code": "read"
+                        }
+                    ]
+                },
+                {
+                    "type": "PractitionerRole",
+                    "profile": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-PractitionerRole",
+                    "interaction": [
+                        {
+                            "code": "read"
+                        }
+                    ]
+                },
+                {
+                    "type": "Encounter",
+                    "profile": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Encounter",
+                    "interaction": [
+                        {
+                            "code": "read"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
