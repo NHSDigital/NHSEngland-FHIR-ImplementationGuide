@@ -10,18 +10,10 @@
   "resourceType": "Questionnaire",
   "item": [
     {
-      "linkId": "specialty",
-      "type": "choice",
+      "linkId": "searchCriteria",
+      "type": "string",
       "required": false,
-      "text": "specialty",
-      "answerValueSet": "https://fhir.nhs.uk/ValueSet/NHSDigital-eRS-ClinicType"
-    },
-    {
-      "linkId": "supportedPriority",
-      "type": "choice",
-      "required": false,
-      "text": "Supported Priority",
-      "answerValueSet" : "http://hl7.org/fhir/ValueSet/request-priority"
+      "text": "criteria"
     },
     {
       "linkId": "services",
