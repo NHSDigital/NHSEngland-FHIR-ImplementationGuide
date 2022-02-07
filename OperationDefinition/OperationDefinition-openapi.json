@@ -4,9 +4,9 @@
     "meta": {
         "lastUpdated": "2022-01-07T14:00:00+00:00"
     },
-    "url": "https://fhir.nhs.uk/OperationDefinition/validate",
+    "url": "https://fhir.nhs.uk/OperationDefinition/openapi",
     "version": "4.0.1",
-    "name": "validate",
+    "name": "openapi",
     "status": "draft",
     "kind": "operation",
     "date": "2022-01-07T14:00:00+00:00",
@@ -21,9 +21,9 @@
             ]
         }
     ],
-    "description": "NHS Validation Service Operation",
-    "code": "validate",
-    "comment": "NHS Validation Service Operation",
+    "description": "OAS Specification Support",
+    "code": "openapi",
+    "comment": "Converts a FHIR CapabilityStatement into an openApi specification",
     "system": true,
     "affectsState" : false,
     "type": false,
@@ -35,15 +35,15 @@
             "min": 1,
             "max": "1",
             "documentation": "The resource to be validated",
-            "type": "DomainResource"
+            "type": "CapabilityStatement"
         },
         {
             "name": "return",
             "use": "out",
             "min": 1,
             "max": "1",
-            "documentation": "response to the event POST",
-            "type": "OperationOutcome"
+            "documentation": "The OAS equivalent of the CapabilityStatement in JSON format (YML may also be returned)",
+            "type": "Type"
         }
     ]
 }
