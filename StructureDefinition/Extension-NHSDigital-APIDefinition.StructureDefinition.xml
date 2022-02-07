@@ -32,7 +32,6 @@
     <element id="Extension.extension:openApi">
       <path value="Extension.extension" />
       <sliceName value="openApi" />
-      <min value="1" />
     </element>
     <element id="Extension.extension:openApi.extension">
       <path value="Extension.extension.extension" />
