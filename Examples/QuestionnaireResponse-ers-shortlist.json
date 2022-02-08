@@ -23,24 +23,10 @@
     },
     "item": [
         {
-            "linkId": "specialty",
+            "linkId": "searchCriteria",
             "answer": [
                 {
-                    "valueCoding": { 
-                        "system": "https://fhir.nhs.uk/CodeSystem/NHSDigital-ClinicType",
-                        "code": "GENERAL_MEDICINE_1"
-                    }
-                }
-            ]
-        },
-        {
-            "linkId": "supportedPriority",
-            "answer": [
-                {
-                    "valueCoding": {
-                        "system": "http://hl7.org/fhir/request-priority",
-                        "code": "routine"
-                    }
+                    "valueString": "HealthcareService?supportedSpecialty=general-medicine&supportedPriority=routine"
                 }
             ]
         },
