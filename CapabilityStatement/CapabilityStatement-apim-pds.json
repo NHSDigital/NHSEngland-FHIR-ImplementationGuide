@@ -77,7 +77,7 @@
                             "code": "read",
                             "extension":  [
                                 {
-                                    "url": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-APIDefinition-OAS",
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/Exentsion-NHSDigital-APIDefinition-OAS",
                                     "extension":  [
                                         {
                                             "url": "example",
@@ -105,7 +105,7 @@
                             "code": "search-type",
                             "extension":  [
                                 {
-                                    "url": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-APIDefinition-OAS",
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/Exentsion-NHSDigital-APIDefinition-OAS",
                                     "extension":  [
                                         {
                                             "url": "example",
@@ -184,7 +184,7 @@
                             "code" : "search-type",
                             "extension":  [
                                 {
-                                    "url": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-APIDefinition-OAS",
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/Exentsion-NHSDigital-APIDefinition-OAS",
                                     "extension":  [
                                         {
                                             "url": "example",
