@@ -133,9 +133,51 @@
       <path value="CapabilityStatement.rest.resource.profile" />
       <min value="1" />
     </element>
+    <element id="CapabilityStatement.rest.resource.interaction.extension">
+      <path value="CapabilityStatement.rest.resource.interaction.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="CapabilityStatement.rest.resource.interaction.extension:OAS">
+      <path value="CapabilityStatement.rest.resource.interaction.extension" />
+      <sliceName value="OAS" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-APIDefinition-OAS" />
+      </type>
+    </element>
     <element id="CapabilityStatement.messaging">
       <path value="CapabilityStatement.messaging" />
       <mustSupport value="true" />
+    </element>
+    <element id="CapabilityStatement.messaging.supportedMessage.extension">
+      <path value="CapabilityStatement.messaging.supportedMessage.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="CapabilityStatement.messaging.supportedMessage.extension:OAS">
+      <path value="CapabilityStatement.messaging.supportedMessage.extension" />
+      <sliceName value="OAS" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-APIDefinition-OAS" />
+      </type>
     </element>
   </differential>
 </StructureDefinition>

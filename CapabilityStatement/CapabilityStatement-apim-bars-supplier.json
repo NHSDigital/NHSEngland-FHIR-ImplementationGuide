@@ -62,7 +62,8 @@
     "kind": "requirements",
     "fhirVersion": "4.0.1",
     "format": [
-        "application/fhir+json"
+        "application/fhir+json",
+        "application/fhir+xml"
     ],
     "rest": [
         {
@@ -97,7 +98,7 @@
                     ],
                     "searchParam": [
                         {
-                            "name": "patient:identifier",
+                            "name": "patientIdentifier",
                             "type": "token",
                             "documentation": "The patient identifier (e.g. NHS Number) that the service request is about"
                         }
@@ -150,12 +151,12 @@
                     ],
                     "searchParam": [
                         {
-                            "name": "patient:identifier",
+                            "name": "patientIdentifier",
                             "type": "token",
                             "documentation": "Search for appointment for a patient by NHS Number",
                             "extension": [
                                 {
-                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-APIDefinition-Examples",
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-APIDefinition-OAS",
                                     "extension": [
                                         {
                                             "url": "required",
@@ -172,15 +173,8 @@
                     "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-MessageDefinition",
                     "interaction": [
                         {
-                            "code": "search-type",
+                            "code": "read",
                             "documentation": "Find Message Definition"
-                        }
-                    ],
-                    "searchParam": [
-                        {
-                            "name": "url",
-                            "type": "token",
-                            "documentation": "The uri that identifies the MessageDefintiion"
                         }
                     ]
                 }
