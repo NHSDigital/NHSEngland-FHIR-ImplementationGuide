@@ -80,15 +80,17 @@
                                     "url": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-APIDefinition-OAS",
                                     "extension":  [
                                         {
-                                            "url": "response",
-                                            "extension":  [
+                                            "url": "example",
+                                            "extension": [
                                                 {
-                                                    "url": "resource",
-                                                    "valueCode": "Patient"
+                                                    "url": "request",
+                                                    "valueBoolean": false
                                                 },
                                                 {
-                                                    "url": "id",
-                                                    "valueString": "6aa13139-201b-4a54-9608-b49331a46d90"
+                                                    "url": "value",
+                                                    "valueReference": {
+                                                        "reference": "Patient/6aa13139-201b-4a54-9608-b49331a46d90"
+                                                    }
                                                 }
                                             ]
                                         }
@@ -106,15 +108,17 @@
                                     "url": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-APIDefinition-OAS",
                                     "extension":  [
                                         {
-                                            "url": "response",
-                                            "extension":  [
+                                            "url": "example",
+                                            "extension": [
                                                 {
-                                                    "url": "resource",
-                                                    "valueCode": "Patient"
+                                                    "url": "request",
+                                                    "valueBoolean": false
                                                 },
                                                 {
-                                                    "url": "id",
-                                                    "valueString": "6aa13139-201b-4a54-9608-b49331a46d90"
+                                                    "url": "value",
+                                                    "valueReference": {
+                                                        "reference": "Patient/6aa13139-201b-4a54-9608-b49331a46d90"
+                                                    }
                                                 }
                                             ]
                                         }
@@ -183,15 +187,17 @@
                                     "url": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-APIDefinition-OAS",
                                     "extension":  [
                                         {
-                                            "url": "response",
-                                            "extension":  [
+                                            "url": "example",
+                                            "extension": [
                                                 {
-                                                    "url": "resource",
-                                                    "valueCode": "RelatedPerson"
+                                                    "url": "request",
+                                                    "valueBoolean": false
                                                 },
                                                 {
-                                                    "url": "id",
-                                                    "valueString": "507B7621"
+                                                    "url": "value",
+                                                    "valueReference": {
+                                                        "reference": "RelatedPerson/507B7621"
+                                                    }
                                                 }
                                             ]
                                         }

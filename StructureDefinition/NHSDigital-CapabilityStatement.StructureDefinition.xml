@@ -133,8 +133,8 @@
       <path value="CapabilityStatement.rest.resource.profile" />
       <min value="1" />
     </element>
-    <element id="CapabilityStatement.rest.interaction.extension">
-      <path value="CapabilityStatement.rest.interaction.extension" />
+    <element id="CapabilityStatement.rest.resource.interaction.extension">
+      <path value="CapabilityStatement.rest.resource.interaction.extension" />
       <slicing>
         <discriminator>
           <type value="value" />
@@ -144,31 +144,9 @@
       </slicing>
       <min value="0" />
     </element>
-    <element id="CapabilityStatement.rest.interaction.extension:OAS">
-      <path value="CapabilityStatement.rest.interaction.extension" />
+    <element id="CapabilityStatement.rest.resource.interaction.extension:OAS">
+      <path value="CapabilityStatement.rest.resource.interaction.extension" />
       <sliceName value="OAS" />
-      <min value="0" />
-      <max value="*" />
-      <type>
-        <code value="Extension" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-APIDefinition-OAS" />
-      </type>
-    </element>
-    <element id="CapabilityStatement.rest.searchParam.extension">
-      <path value="CapabilityStatement.rest.searchParam.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="0" />
-    </element>
-    <element id="CapabilityStatement.rest.searchParam.extension:OAS-required">
-      <path value="CapabilityStatement.rest.searchParam.extension" />
-      <sliceName value="OAS-required" />
-      <short value="Only required is supported here" />
       <min value="0" />
       <max value="1" />
       <type>

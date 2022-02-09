@@ -8,7 +8,7 @@
   <abstract value="false" />
   <context>
     <type value="element" />
-    <expression value="CapabilityStatement.rest.interaction" />
+    <expression value="CapabilityStatement.rest.resource.interaction" />
   </context>
   <context>
     <type value="element" />
@@ -16,7 +16,7 @@
   </context>
   <context>
     <type value="element" />
-    <expression value="CapabilityStatement.rest.searchParam" />
+    <expression value="CapabilityStatement.rest.resource.searchParam" />
   </context>
   <type value="Extension" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
