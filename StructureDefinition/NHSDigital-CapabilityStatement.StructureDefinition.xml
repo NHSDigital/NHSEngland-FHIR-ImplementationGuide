@@ -151,7 +151,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-APIDefinition-OAS" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-APIDefinition-OAS" />
       </type>
     </element>
     <element id="CapabilityStatement.messaging">
@@ -176,7 +176,7 @@
       <max value="*" />
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-APIDefinition-OAS" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-APIDefinition-OAS" />
       </type>
     </element>
   </differential>
