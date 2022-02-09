@@ -133,9 +133,51 @@
       <path value="CapabilityStatement.rest.resource.profile" />
       <min value="1" />
     </element>
+    <element id="CapabilityStatement.rest.interaction.extension">
+      <path value="CapabilityStatement.rest.interaction.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="CapabilityStatement.rest.interaction.extension:OAS">
+      <path value="CapabilityStatement.rest.interaction.extension" />
+      <sliceName value="OAS" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-APIDefinition-OAS" />
+      </type>
+    </element>
     <element id="CapabilityStatement.messaging">
       <path value="CapabilityStatement.messaging" />
       <mustSupport value="true" />
+    </element>
+    <element id="CapabilityStatement.messaging.supportedMessage.extension">
+      <path value="CapabilityStatement.messaging.supportedMessage.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="CapabilityStatement.messaging.supportedMessage.extension:OAS">
+      <path value="CapabilityStatement.messaging.supportedMessage.extension" />
+      <sliceName value="OAS" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-APIDefinition-OAS" />
+      </type>
     </element>
   </differential>
 </StructureDefinition>

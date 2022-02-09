@@ -156,7 +156,7 @@
                             "documentation": "Search for appointment for a patient by NHS Number",
                             "extension": [
                                 {
-                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-APIDefinition-Examples",
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-APIDefinition-OAS",
                                     "extension": [
                                         {
                                             "url": "required",
