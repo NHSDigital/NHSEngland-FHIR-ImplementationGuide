@@ -198,6 +198,32 @@
                 {
                     "mode": "receiver",
                     "definition": "https://fhir.nhs.uk/MessageDefinition/bars-message-servicerequest-response"
+                },
+                {
+                    "mode": "receiver",
+                    "definition": "https://fhir.nhs.uk/MessageDefinition/subscription-notification",
+                    "extension":  [
+                        {
+                            "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-APIDefinition-OAS",
+                            "extension":  [
+                                {
+                                    "url": "example",
+                                    "extension": [
+                                        {
+                                            "url": "request",
+                                            "valueBoolean": true
+                                        },
+                                        {
+                                            "url": "value",
+                                            "valueReference": {
+                                                "reference": "Bundle/950831dd-2603-442d-9a07-e4b6cd2ac544"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
                 }
             ]
         }

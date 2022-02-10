@@ -70,7 +70,29 @@
             "operation": [
                 {
                     "name": "subscriptionEvent",
-                    "definition": "https://fhir.nhs.uk/OperationDefinition/subscription-event"
+                    "definition": "https://fhir.nhs.uk/OperationDefinition/subscription-event",
+                    "extension":  [
+                        {
+                            "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-APIDefinition-OAS",
+                            "extension":  [
+                                {
+                                    "url": "example",
+                                    "extension": [
+                                        {
+                                            "url": "request",
+                                            "valueBoolean": true
+                                        },
+                                        {
+                                            "url": "value",
+                                            "valueReference": {
+                                                "reference": "Parameters/8cfc9cff-1d9a-40b2-9c00-2dfde1f3ee98"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
                 }
             ]
         }

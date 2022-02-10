@@ -21,7 +21,7 @@
             ]
         }
     ],
-    "description": "Mock of subscription event API",
+    "description": "Mock of subscription event API. This is based on [FHIR R5 SubscriptionStatus](https://build.fhir.org/subscriptionstatus.html)",
     "code": "subscriptionEvent",
     "comment": "Mock of subscription event API",
     "system": true,
