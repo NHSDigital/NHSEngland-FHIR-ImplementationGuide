@@ -15,6 +15,11 @@
             ]
         }
     ],
+    "identifier": [
+        {
+            "value": "be735573-9f24-42e1-ae98-af89d632e4bf"
+        }
+    ],
     "resourceType": "ServiceRequest",
     "status": "draft",
     "intent": "order",
