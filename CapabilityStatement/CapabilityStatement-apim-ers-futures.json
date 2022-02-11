@@ -157,7 +157,7 @@
                                                 },
                                                 {
                                                     "url": "description",
-                                                    "valueMarkdown":  "code should be an Evaluation procedure code (SNOMED CT 386053000)?"
+                                                    "valueMarkdown":  "code should be a child concept of Evaluation procedure code (SNOMED CT 386053000)?"
                                                     
                                                 }
                                             ]
@@ -182,7 +182,7 @@
                                                 },
                                                 {
                                                     "url": "description",
-                                                    "valueMarkdown":  "code should be an Patient Referral procedure code (SNOMED CT 3457005)?"
+                                                    "valueMarkdown":  "code should be a child concept of Patient Referral procedure code (SNOMED CT 3457005)?"
                                                     
                                                 }
                                             ]
@@ -522,11 +522,55 @@
                     "interaction": [
                         {
                             "code": "search-type",
-                            "documentation": "[A010 - Patient service search](https://digital.nhs.uk/developer/api-catalogue/e-referral-service-fhir#api-Default-a010-patient-service-search)"
+                            "documentation": "[A010 - Patient service search](https://digital.nhs.uk/developer/api-catalogue/e-referral-service-fhir#api-Default-a010-patient-service-search)",
+                            "extension": [
+                                {
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-APIDefinition-OAS",
+                                    "extension": [
+                                        {
+                                            "url": "example",
+                                            "extension": [
+                                                {
+                                                    "url": "request",
+                                                    "valueBoolean": false
+                                                },
+                                                {
+                                                    "url": "value",
+                                                    "valueReference": {
+                                                        "reference": "HealthcareService/76de72bc-f001-49fa-84c6-af15a4fdb72c"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
                         },
                         {
                             "code": "read",
-                            "documentation": "Unable to find existing matching service"
+                            "documentation": "Unable to find existing matching service",
+                            "extension": [
+                                {
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-APIDefinition-OAS",
+                                    "extension": [
+                                        {
+                                            "url": "example",
+                                            "extension": [
+                                                {
+                                                    "url": "request",
+                                                    "valueBoolean": false
+                                                },
+                                                {
+                                                    "url": "value",
+                                                    "valueReference": {
+                                                        "reference": "HealthcareService/76de72bc-f001-49fa-84c6-af15a4fdb72c"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
                         }
                     ],
                     "searchParam": [
@@ -548,14 +592,56 @@
                     "documentation": "Used to index supporting information documents - documents themselves use Binary",
                     "interaction": [
                         {
-                            "code": "read"
+                            "code": "read",
+                            "extension": [
+                                {
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-APIDefinition-OAS",
+                                    "extension": [
+                                        {
+                                            "url": "example",
+                                            "extension": [
+                                                {
+                                                    "url": "request",
+                                                    "valueBoolean": false
+                                                },
+                                                {
+                                                    "url": "value",
+                                                    "valueReference": {
+                                                        "reference": "DocumentReference/5da894e0-a57e-43e9-a1a1-e283a484003c"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "code": "create",
+                            "extension": [
+                                {
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-APIDefinition-OAS",
+                                    "extension": [
+                                        {
+                                            "url": "example",
+                                            "extension": [
+                                                {
+                                                    "url": "request",
+                                                    "valueBoolean": true
+                                                },
+                                                {
+                                                    "url": "value",
+                                                    "valueReference": {
+                                                        "reference": "DocumentReference/5da894e0-a57e-43e9-a1a1-e283a484003c"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
                         }
                     ]
-                },
-                {
-                    "type": "List",
-                    "profile": "https://fhir.nhs.uk/StructureDefinition/England-DocumentReference",
-                    "documentation": "To represent the short list of healthcare services for a referral"
                 },
                 {
                     "type": "Binary",
