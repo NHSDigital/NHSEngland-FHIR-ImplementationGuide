@@ -91,6 +91,16 @@
                                                     "valueReference": {
                                                         "reference": "Appointment/391d8d18-159a-4af8-a935-2238ed4db867"
                                                     }
+                                                },
+                                                {
+                                                    "url": "summary",
+                                                    "valueMarkdown":  "Reviewing a Triage Deferral (Triage Scenario Three)"
+                                                    
+                                                },
+                                                {
+                                                    "url": "description",
+                                                    "valueMarkdown":  "This is linked to the reivewing a Task [PUT /Task](#/Task/put_Task)."
+                                                    
                                                 }
                                             ]
                                         }
@@ -157,7 +167,7 @@
                                                 },
                                                 {
                                                     "url": "description",
-                                                    "valueMarkdown":  "code should be a child concept of Evaluation procedure code (SNOMED CT 386053000)?"
+                                                    "valueMarkdown":  "code should be a child concept of Evaluation procedure code (SNOMED CT 386053000)?. The advice and guidance referral is created along with a corresponding worklist (FHIR Task) item. These are retrieved via the [GET /Task](#/Task/get_Task) API and responses are sent via the [PUT /Task](#/Task/put_Task) API."
                                                     
                                                 }
                                             ]
@@ -182,7 +192,32 @@
                                                 },
                                                 {
                                                     "url": "description",
-                                                    "valueMarkdown":  "code should be a child concept of Patient Referral procedure code (SNOMED CT 3457005)?"
+                                                    "valueMarkdown":  "code should be a child concept of Patient Referral procedure code (SNOMED CT 3457005)? \n\n Following from the advice and guidnace workflow completing, it has been decided to refer the patient to a service. Note the use of basedOn to reference the original advice and guidance request. "
+                                                    
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "url": "example",
+                                            "extension": [
+                                                {
+                                                    "url": "request",
+                                                    "valueBoolean": true
+                                                },
+                                                {
+                                                    "url": "value",
+                                                    "valueReference": {
+                                                        "reference": "ServiceRequest/be735573-9f24-42e1-ae98-af89d632e4bf"
+                                                    }
+                                                },
+                                                {
+                                                    "url": "summary",
+                                                    "valueMarkdown":  "Initial Referral Creation (Triage Scenario One)"
+                                                    
+                                                },
+                                                {
+                                                    "url": "description",
+                                                    "valueMarkdown":  "Note: the status is set to `draft` until this referral is triaged this can not be acted upon."
                                                     
                                                 }
                                             ]
@@ -250,9 +285,14 @@
                             "definition": "https://fhir.nhs.uk/SearchParameter/servicerequest-patient-identifier"
                         },
                         {
+                            "name": "_id",
+                            "type": "string",
+                            "documentation": "Search for ServiceRequest by logical id."
+                        },
+                        {
                             "name": "_history",
                             "type": "special",
-                            "documentation": "Return the history of Task, the conversation."
+                            "documentation": "Return the history of ServiceRequest."
                         }
                     ]
                 },
@@ -308,6 +348,10 @@
                                                 {
                                                     "url": "summary",
                                                     "valueMarkdown": "Responding to Advice (A+G Scenario Two)"
+                                                },
+                                                {
+                                                    "url": "description",
+                                                    "valueMarkdown": "A user (sds-user-id=0987654321) responds to the worklist item. They attach an advice document which has been previously uploaded via the [POST /Binary](#/Binary/post_Binary) POST / and [POST /DocumentReference](#/DocumentReference/post_DocumentReference) endpoints. "
                                                 }
                                             ]
                                         },
@@ -330,7 +374,7 @@
                                                 },
                                                 {
                                                     "url": "description",
-                                                    "valueMarkdown": "The Task.priority is increased to urgent."
+                                                    "valueMarkdown": "The Task.priority is increased to urgent. The use of PATCH /Task can also be considered as an alternative for this interaction."
                                                 }
                                             ]
                                         },
@@ -353,7 +397,32 @@
                                                 },
                                                 {
                                                     "url": "description",
-                                                    "valueMarkdown": "The Task.status is completed. See POST /ServiceRequest create referral (scenario Five)"
+                                                    "valueMarkdown": "The Task.status is completed. See [POST /ServiceRequest](#/ServiceRequest/post_ServiceRequest) for the new referral (scenario Five)"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "url": "example",
+                                            "extension": [
+                                                {
+                                                    "url": "request",
+                                                    "valueBoolean": true
+                                                },
+                                                {
+                                                    "url": "value",
+                                                    "valueReference": {
+                                                        "reference": "Task/c18dbbe5-4f8d-4b49-a434-6e55a93fab31"
+                                                    }
+                                                },
+                                                {
+                                                    "url": "summary",
+                                                    "valueMarkdown":  "Reviewing a Triage Deferral (Triage Scenario Three)"
+                                                    
+                                                },
+                                                {
+                                                    "url": "description",
+                                                    "valueMarkdown":  "Task.status set to completed. Review advice linked in Task.output. Next actions to mark as to book or create an Appointment [POST /Appointment](#/Appointment/post_Appointment)"
+                                                    
                                                 }
                                             ]
                                         }
@@ -378,8 +447,18 @@
                                                 {
                                                     "url": "value",
                                                     "valueReference": {
-                                                        "reference": "Task/bf7ab4c4-bafb-495e-8a61-1aa40309eaed"
+                                                        "reference": "Task/c18dbbe5-4f8d-4b49-a434-6e55a93fab31"
                                                     }
+                                                },
+                                                {
+                                                    "url": "summary",
+                                                    "valueMarkdown":  "Deferral Creation (Triage Scenario Two)"
+                                                    
+                                                },
+                                                {
+                                                    "url": "description",
+                                                    "valueMarkdown":  "Task.code not set, need advice on code. [PUT /Task](#/Task/put_Task) is used to reply to the deferral."
+                                                    
                                                 }
                                             ]
                                         }
@@ -424,6 +503,11 @@
                             "name": "code",
                             "type": "token",
                             "documentation": "Search by task code (worklist type)"
+                        },
+                        {
+                            "name": "_history",
+                            "type": "special",
+                            "documentation": "Return the history of a Task."
                         }
                     ]
                 },

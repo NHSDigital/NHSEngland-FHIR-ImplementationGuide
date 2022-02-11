@@ -10,6 +10,27 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Appointment" />
   <derivation value="constraint" />
   <differential>
+    <element id="Appointment.extension">
+      <path value="Appointment.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="Appointment.extension:requester">
+      <path value="Appointment.extension" />
+      <sliceName value="requester" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-Provenance-agent" />
+      </type>
+    </element>
     <element id="Appointment.identifier">
       <path value="Appointment.identifier" />
       <mustSupport value="true" />
