@@ -149,6 +149,41 @@
                                                     "valueReference": {
                                                         "reference": "ServiceRequest/832db7fa-ebdd-44b6-ab3b-8329c2d43149"
                                                     }
+                                                },
+                                                {
+                                                    "url": "summary",
+                                                    "valueMarkdown":  "Initial Advice Creation (A+G Scenario One)"
+                                                    
+                                                },
+                                                {
+                                                    "url": "description",
+                                                    "valueMarkdown":  "code should be an Evaluation procedure code (SNOMED CT 386053000)?"
+                                                    
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "url": "example",
+                                            "extension": [
+                                                {
+                                                    "url": "request",
+                                                    "valueBoolean": true
+                                                },
+                                                {
+                                                    "url": "value",
+                                                    "valueReference": {
+                                                        "reference": "ServiceRequest/18253b86-9878-4c3f-b854-af0a9b7728a3"
+                                                    }
+                                                },
+                                                {
+                                                    "url": "summary",
+                                                    "valueMarkdown":  "Create Referral (A+G Scenario Five)"
+                                                    
+                                                },
+                                                {
+                                                    "url": "description",
+                                                    "valueMarkdown":  "code should be an Patient Referral procedure code (SNOMED CT 3457005)?"
+                                                    
                                                 }
                                             ]
                                         }
@@ -213,6 +248,11 @@
                             "type": "token",
                             "documentation": "The patient identifier (e.g. NHS Number) that the service request is about",
                             "definition": "https://fhir.nhs.uk/SearchParameter/servicerequest-patient-identifier"
+                        },
+                        {
+                            "name": "_history",
+                            "type": "special",
+                            "documentation": "Return the history of Task, the conversation."
                         }
                     ]
                 },
@@ -264,13 +304,63 @@
                                                     "valueReference": {
                                                         "reference": "Task/bf7ab4c4-bafb-495e-8a61-1aa40309eaed"
                                                     }
+                                                },
+                                                {
+                                                    "url": "summary",
+                                                    "valueMarkdown": "Responding to Advice (A+G Scenario Two)"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "url": "example",
+                                            "extension": [
+                                                {
+                                                    "url": "request",
+                                                    "valueBoolean": true
+                                                },
+                                                {
+                                                    "url": "value",
+                                                    "valueReference": {
+                                                        "reference": "Task/33fddbce-6d2c-453a-9351-4822bb55e402"
+                                                    }
+                                                },
+                                                {
+                                                    "url": "summary",
+                                                    "valueMarkdown": "Requesting additional advice, increasing priority (A+G Scenario Three)"
+                                                },
+                                                {
+                                                    "url": "description",
+                                                    "valueMarkdown": "The Task.priority is increased to urgent."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "url": "example",
+                                            "extension": [
+                                                {
+                                                    "url": "request",
+                                                    "valueBoolean": true
+                                                },
+                                                {
+                                                    "url": "value",
+                                                    "valueReference": {
+                                                        "reference": "Task/a9b9f0f4-cc37-4ea3-bd4b-16d15ddbe63b"
+                                                    }
+                                                },
+                                                {
+                                                    "url": "summary",
+                                                    "valueMarkdown": "Provider converts advice request (A+G Scenario Four and Six)"
+                                                },
+                                                {
+                                                    "url": "description",
+                                                    "valueMarkdown": "The Task.status is completed. See POST /ServiceRequest create referral (scenario Five)"
                                                 }
                                             ]
                                         }
                                     ]
                                 }
                             ],
-                            "documentation": "[A013 - Accept referral](https://digital.nhs.uk/developer/api-catalogue/e-referral-service-fhir#api-Default-a013-accept-referral) and [A014 - Reject referral](https://digital.nhs.uk/developer/api-catalogue/e-referral-service-fhir#api-Default-a014-reject-referral)"
+                            "documentation": "See also [A013 - Accept referral](https://digital.nhs.uk/developer/api-catalogue/e-referral-service-fhir#api-Default-a013-accept-referral) and [A014 - Reject referral](https://digital.nhs.uk/developer/api-catalogue/e-referral-service-fhir#api-Default-a014-reject-referral)"
                         },
                         {
                             "code": "create",
@@ -302,7 +392,6 @@
                             "extension": [
                                 {
                                     "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-APIDefinition-OAS",
-                                    
                                     "extension": [
                                         {
                                             "url": "example",
