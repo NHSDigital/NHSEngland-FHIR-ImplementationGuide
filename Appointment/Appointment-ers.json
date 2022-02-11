@@ -1,18 +1,30 @@
 {
     "id": "391d8d18-159a-4af8-a935-2238ed4db867",
     "resourceType": "Appointment",
+    "extension": [
+        {
+            "url": "https://fhir.nhs.uk/StructureDefinition/Extension-Provenance-agent",
+            "valueReference": {
+                "identifier": {
+                    "system": "https://fhir.nhs.uk/Id/sds-user-id",
+                    "value": "123456789"
+                }
+            }
+        }
+    ],
     "status": "booked",
     "description": "e-Referral Appointment",
-    "start": "2022-07-11T12:00:00+00:00",
-    "end": "2022-07-11T13:00:00+00:00",
+    "created": "2022-02-01T13:32:00+00:00",
+    "start": "2022-02-03T13:30:00+00:00",
+    "end": "2022-02-03T14:00:00+00:00",
     "slot": [
         {
-            "reference": "Slot/11000021"
+            "reference": "Slot/1e55e6d5-8d57-4dbb-8220-98cb9d9ec50d"
         }
     ],
     "basedOn": [
         {
-            "reference": "ServiceRequest/000000070000"
+            "reference": "ServiceRequest/be735573-9f24-42e1-ae98-af89d632e4bf"
         }
     ],
     "participant": [
@@ -31,7 +43,7 @@
                 "type": "Patient",
                 "identifier": {
                     "system": "http://fhir.nhs.net/Id/nhs-number",
-                    "value": "9912003888"
+                    "value": "9999998887"
                 }
             },
             "status": "accepted"

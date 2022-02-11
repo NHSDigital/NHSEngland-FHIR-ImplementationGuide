@@ -91,6 +91,16 @@
                                                     "valueReference": {
                                                         "reference": "Appointment/391d8d18-159a-4af8-a935-2238ed4db867"
                                                     }
+                                                },
+                                                {
+                                                    "url": "summary",
+                                                    "valueMarkdown":  "Reviewing a Triage Deferral (Triage Scenario Three)"
+                                                    
+                                                },
+                                                {
+                                                    "url": "description",
+                                                    "valueMarkdown":  "This is linked to the reivewing a Task [PUT /Task](#/Task/put_Task)."
+                                                    
                                                 }
                                             ]
                                         }
@@ -149,6 +159,66 @@
                                                     "valueReference": {
                                                         "reference": "ServiceRequest/832db7fa-ebdd-44b6-ab3b-8329c2d43149"
                                                     }
+                                                },
+                                                {
+                                                    "url": "summary",
+                                                    "valueMarkdown":  "Initial Advice Creation (A+G Scenario One)"
+                                                    
+                                                },
+                                                {
+                                                    "url": "description",
+                                                    "valueMarkdown":  "code should be a child concept of Evaluation procedure code (SNOMED CT 386053000)?. The advice and guidance referral is created along with a corresponding worklist (FHIR Task) item. These are retrieved via the [GET /Task](#/Task/get_Task) API and responses are sent via the [PUT /Task](#/Task/put_Task) API."
+                                                    
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "url": "example",
+                                            "extension": [
+                                                {
+                                                    "url": "request",
+                                                    "valueBoolean": true
+                                                },
+                                                {
+                                                    "url": "value",
+                                                    "valueReference": {
+                                                        "reference": "ServiceRequest/18253b86-9878-4c3f-b854-af0a9b7728a3"
+                                                    }
+                                                },
+                                                {
+                                                    "url": "summary",
+                                                    "valueMarkdown":  "Create Referral (A+G Scenario Five)"
+                                                    
+                                                },
+                                                {
+                                                    "url": "description",
+                                                    "valueMarkdown":  "code should be a child concept of Patient Referral procedure code (SNOMED CT 3457005)? \n\n Following from the advice and guidnace workflow completing, it has been decided to refer the patient to a service. Note the use of basedOn to reference the original advice and guidance request. "
+                                                    
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "url": "example",
+                                            "extension": [
+                                                {
+                                                    "url": "request",
+                                                    "valueBoolean": true
+                                                },
+                                                {
+                                                    "url": "value",
+                                                    "valueReference": {
+                                                        "reference": "ServiceRequest/be735573-9f24-42e1-ae98-af89d632e4bf"
+                                                    }
+                                                },
+                                                {
+                                                    "url": "summary",
+                                                    "valueMarkdown":  "Initial Referral Creation (Triage Scenario One)"
+                                                    
+                                                },
+                                                {
+                                                    "url": "description",
+                                                    "valueMarkdown":  "Note: the status is set to `draft` until this referral is triaged this can not be acted upon."
+                                                    
                                                 }
                                             ]
                                         }
@@ -213,6 +283,16 @@
                             "type": "token",
                             "documentation": "The patient identifier (e.g. NHS Number) that the service request is about",
                             "definition": "https://fhir.nhs.uk/SearchParameter/servicerequest-patient-identifier"
+                        },
+                        {
+                            "name": "_id",
+                            "type": "string",
+                            "documentation": "Search for ServiceRequest by logical id."
+                        },
+                        {
+                            "name": "_history",
+                            "type": "special",
+                            "documentation": "Return the history of ServiceRequest."
                         }
                     ]
                 },
@@ -264,13 +344,92 @@
                                                     "valueReference": {
                                                         "reference": "Task/bf7ab4c4-bafb-495e-8a61-1aa40309eaed"
                                                     }
+                                                },
+                                                {
+                                                    "url": "summary",
+                                                    "valueMarkdown": "Responding to Advice (A+G Scenario Two)"
+                                                },
+                                                {
+                                                    "url": "description",
+                                                    "valueMarkdown": "A user (sds-user-id=0987654321) responds to the worklist item. They attach an advice document which has been previously uploaded via the [POST /Binary](#/Binary/post_Binary) POST / and [POST /DocumentReference](#/DocumentReference/post_DocumentReference) endpoints. "
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "url": "example",
+                                            "extension": [
+                                                {
+                                                    "url": "request",
+                                                    "valueBoolean": true
+                                                },
+                                                {
+                                                    "url": "value",
+                                                    "valueReference": {
+                                                        "reference": "Task/33fddbce-6d2c-453a-9351-4822bb55e402"
+                                                    }
+                                                },
+                                                {
+                                                    "url": "summary",
+                                                    "valueMarkdown": "Requesting additional advice, increasing priority (A+G Scenario Three)"
+                                                },
+                                                {
+                                                    "url": "description",
+                                                    "valueMarkdown": "The Task.priority is increased to urgent. The use of PATCH /Task can also be considered as an alternative for this interaction."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "url": "example",
+                                            "extension": [
+                                                {
+                                                    "url": "request",
+                                                    "valueBoolean": true
+                                                },
+                                                {
+                                                    "url": "value",
+                                                    "valueReference": {
+                                                        "reference": "Task/a9b9f0f4-cc37-4ea3-bd4b-16d15ddbe63b"
+                                                    }
+                                                },
+                                                {
+                                                    "url": "summary",
+                                                    "valueMarkdown": "Provider converts advice request (A+G Scenario Four and Six)"
+                                                },
+                                                {
+                                                    "url": "description",
+                                                    "valueMarkdown": "The Task.status is completed. See [POST /ServiceRequest](#/ServiceRequest/post_ServiceRequest) for the new referral (scenario Five)"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "url": "example",
+                                            "extension": [
+                                                {
+                                                    "url": "request",
+                                                    "valueBoolean": true
+                                                },
+                                                {
+                                                    "url": "value",
+                                                    "valueReference": {
+                                                        "reference": "Task/c18dbbe5-4f8d-4b49-a434-6e55a93fab31"
+                                                    }
+                                                },
+                                                {
+                                                    "url": "summary",
+                                                    "valueMarkdown":  "Reviewing a Triage Deferral (Triage Scenario Three)"
+                                                    
+                                                },
+                                                {
+                                                    "url": "description",
+                                                    "valueMarkdown":  "Task.status set to completed. Review advice linked in Task.output. Next actions to mark as to book or create an Appointment [POST /Appointment](#/Appointment/post_Appointment)"
+                                                    
                                                 }
                                             ]
                                         }
                                     ]
                                 }
                             ],
-                            "documentation": "[A013 - Accept referral](https://digital.nhs.uk/developer/api-catalogue/e-referral-service-fhir#api-Default-a013-accept-referral) and [A014 - Reject referral](https://digital.nhs.uk/developer/api-catalogue/e-referral-service-fhir#api-Default-a014-reject-referral)"
+                            "documentation": "See also [A013 - Accept referral](https://digital.nhs.uk/developer/api-catalogue/e-referral-service-fhir#api-Default-a013-accept-referral) and [A014 - Reject referral](https://digital.nhs.uk/developer/api-catalogue/e-referral-service-fhir#api-Default-a014-reject-referral)"
                         },
                         {
                             "code": "create",
@@ -288,8 +447,18 @@
                                                 {
                                                     "url": "value",
                                                     "valueReference": {
-                                                        "reference": "Task/bf7ab4c4-bafb-495e-8a61-1aa40309eaed"
+                                                        "reference": "Task/c18dbbe5-4f8d-4b49-a434-6e55a93fab31"
                                                     }
+                                                },
+                                                {
+                                                    "url": "summary",
+                                                    "valueMarkdown":  "Deferral Creation (Triage Scenario Two)"
+                                                    
+                                                },
+                                                {
+                                                    "url": "description",
+                                                    "valueMarkdown":  "Task.code not set, need advice on code. [PUT /Task](#/Task/put_Task) is used to reply to the deferral."
+                                                    
                                                 }
                                             ]
                                         }
@@ -302,7 +471,6 @@
                             "extension": [
                                 {
                                     "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-APIDefinition-OAS",
-                                    
                                     "extension": [
                                         {
                                             "url": "example",
@@ -335,6 +503,11 @@
                             "name": "code",
                             "type": "token",
                             "documentation": "Search by task code (worklist type)"
+                        },
+                        {
+                            "name": "_history",
+                            "type": "special",
+                            "documentation": "Return the history of a Task."
                         }
                     ]
                 },
@@ -433,11 +606,55 @@
                     "interaction": [
                         {
                             "code": "search-type",
-                            "documentation": "[A010 - Patient service search](https://digital.nhs.uk/developer/api-catalogue/e-referral-service-fhir#api-Default-a010-patient-service-search)"
+                            "documentation": "[A010 - Patient service search](https://digital.nhs.uk/developer/api-catalogue/e-referral-service-fhir#api-Default-a010-patient-service-search)",
+                            "extension": [
+                                {
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-APIDefinition-OAS",
+                                    "extension": [
+                                        {
+                                            "url": "example",
+                                            "extension": [
+                                                {
+                                                    "url": "request",
+                                                    "valueBoolean": false
+                                                },
+                                                {
+                                                    "url": "value",
+                                                    "valueReference": {
+                                                        "reference": "HealthcareService/76de72bc-f001-49fa-84c6-af15a4fdb72c"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
                         },
                         {
                             "code": "read",
-                            "documentation": "Unable to find existing matching service"
+                            "documentation": "Unable to find existing matching service",
+                            "extension": [
+                                {
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-APIDefinition-OAS",
+                                    "extension": [
+                                        {
+                                            "url": "example",
+                                            "extension": [
+                                                {
+                                                    "url": "request",
+                                                    "valueBoolean": false
+                                                },
+                                                {
+                                                    "url": "value",
+                                                    "valueReference": {
+                                                        "reference": "HealthcareService/76de72bc-f001-49fa-84c6-af15a4fdb72c"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
                         }
                     ],
                     "searchParam": [
@@ -459,14 +676,56 @@
                     "documentation": "Used to index supporting information documents - documents themselves use Binary",
                     "interaction": [
                         {
-                            "code": "read"
+                            "code": "read",
+                            "extension": [
+                                {
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-APIDefinition-OAS",
+                                    "extension": [
+                                        {
+                                            "url": "example",
+                                            "extension": [
+                                                {
+                                                    "url": "request",
+                                                    "valueBoolean": false
+                                                },
+                                                {
+                                                    "url": "value",
+                                                    "valueReference": {
+                                                        "reference": "DocumentReference/5da894e0-a57e-43e9-a1a1-e283a484003c"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "code": "create",
+                            "extension": [
+                                {
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-APIDefinition-OAS",
+                                    "extension": [
+                                        {
+                                            "url": "example",
+                                            "extension": [
+                                                {
+                                                    "url": "request",
+                                                    "valueBoolean": true
+                                                },
+                                                {
+                                                    "url": "value",
+                                                    "valueReference": {
+                                                        "reference": "DocumentReference/5da894e0-a57e-43e9-a1a1-e283a484003c"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
                         }
                     ]
-                },
-                {
-                    "type": "List",
-                    "profile": "https://fhir.nhs.uk/StructureDefinition/England-DocumentReference",
-                    "documentation": "To represent the short list of healthcare services for a referral"
                 },
                 {
                     "type": "Binary",
