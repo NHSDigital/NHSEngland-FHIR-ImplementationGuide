@@ -34,7 +34,7 @@ jobs:
         uses: actions/checkout@master
         with:
           repository: NHSDigital/validation-service-fhir-r4
-          ref: testing
+          ref: main2
           path: validation-service-fhir-r4
         
       - name: Install Python 3.8
