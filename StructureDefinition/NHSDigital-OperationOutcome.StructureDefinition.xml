@@ -56,9 +56,17 @@
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-Spine-supportingInfo" />
       </type>
     </element>
+     <element id="OperationOutcome.issue">
+      <path value="OperationOutcome.issue" />
+      <constraint>
+        <key value="nhds-errrorcode" />
+        <severity value="error" />
+        <human value="An NHS Digital error or warning code is required" />
+        <expression value="(issue.severity = 'information') or ((issue.severity != 'information') and issue.details.empty().not()) " />
+      </constraint>
+    </element>
     <element id="OperationOutcome.issue.details">
       <path value="OperationOutcome.issue.details" />
-      <min value="1" />
     </element>
     <element id="OperationOutcome.issue.details.coding">
       <path value="OperationOutcome.issue.details.coding" />

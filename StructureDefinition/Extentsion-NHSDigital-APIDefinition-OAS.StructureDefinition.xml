@@ -10,6 +10,10 @@
     <type value="element" />
     <expression value="CapabilityStatement.rest.resource.interaction" />
   </context>
+    <context>
+    <type value="element" />
+    <expression value="CapabilityStatement.rest.resource.operation" />
+  </context>
   <context>
     <type value="element" />
     <expression value="CapabilityStatement.messaging.supportedMessage" />
