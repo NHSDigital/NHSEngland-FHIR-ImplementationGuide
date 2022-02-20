@@ -1,0 +1,18 @@
+ {
+      "resourceType" : "SearchParameter",
+      "id" : "ad9aeb9e-3bdb-40a3-b2ed-bbd3c8b61404",
+      "url" : "https://fhir.nhs.uk/SearchParameter/immunization-procedure-code",
+      "version" : "4.0.1",
+      "name" : "ImmunizationProcedureCode",
+      "status" : "draft",
+      "experimental" : false,
+      "date" : "2022-02-03T09:29:23+11:00",
+      "publisher" : "NHS Digital",
+      "description" : "Vaccine procedure followed",
+      "code" : "procedure-code",
+      "base" : [
+      "Immunization"],
+      "type" : "token",
+      "expression" : "Immunization.extension.where(url='https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-VaccinationProcedure').valueCodeableConcept",
+      "xpathUsage" : "normal"
+    }
