@@ -53,7 +53,7 @@
         }
     },
     "priority": "routine",
-    "code": {
+    "performerType": {
         "coding": [
             {
                 "system": "https://fhir.nhs.uk/CodeSystem/NHSDigital-ClinicType",

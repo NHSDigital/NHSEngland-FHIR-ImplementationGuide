@@ -21,7 +21,7 @@
             ]
         }
     ],
-    "code": {
+    "performerType": {
         "coding": [
             {
                 "system":"http://snomed.info/sct",
