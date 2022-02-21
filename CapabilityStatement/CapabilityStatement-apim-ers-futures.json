@@ -351,7 +351,7 @@
                                                 },
                                                 {
                                                     "url": "description",
-                                                    "valueMarkdown": "A user (sds-user-id=0987654321) responds to the worklist item. They attach an advice document which has been previously uploaded via the [POST /Binary](#/Binary/post_Binary) POST / and [POST /DocumentReference](#/DocumentReference/post_DocumentReference) endpoints. "
+                                                    "valueMarkdown": "A user (sds-user-id=0987654321) responds to the worklist item. A document can be attached to the ServiceRequest and Task by using the [POST /Binary](#/Binary/post_Binary) POST / and [POST /DocumentReference](#/DocumentReference/post_DocumentReference) endpoints. "
                                                 }
                                             ]
                                         },
@@ -718,6 +718,16 @@
                                                     "valueReference": {
                                                         "reference": "DocumentReference/5da894e0-a57e-43e9-a1a1-e283a484003c"
                                                     }
+                                                },
+                                                {
+                                                    "url": "summary",
+                                                    "valueMarkdown":  "Responding to Advice (A+G Scenario Two)"
+                                                    
+                                                },
+                                                {
+                                                    "url": "description",
+                                                    "valueMarkdown":  "Once the Task has been updated [PUT /Task](#/Task/put_Task), a DocumentReference is used to link in a previsouly posted document to the ServiceRequest and/or Task"
+                                                    
                                                 }
                                             ]
                                         }

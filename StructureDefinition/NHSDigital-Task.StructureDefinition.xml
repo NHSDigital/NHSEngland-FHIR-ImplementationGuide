@@ -50,6 +50,17 @@
       <path value="Task.code" />
       <mustSupport value="true" />
     </element>
+    <element id="Task.focus">
+      <path value="Task.focus" />
+      <definition value="The request being actioned or the resource being manipulated by this task.&#xD;&#xA;&#xD;&#xA;This includes a FHIR Message, this should be used with caution and is used here for EPS prescription-order." />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-Appointment" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-ServiceRequest" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Bundle-FHIRMessage" />
+        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-MedicationRequest" />
+      </type>
+    </element>
     <element id="Task.for">
       <path value="Task.for" />
       <min value="1" />
