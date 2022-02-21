@@ -23,6 +23,17 @@
     "resourceType": "ServiceRequest",
     "status": "draft",
     "intent": "order",
+    "category": [
+        {
+            "coding": [
+                {
+                    "system": "http://snomed.info/sct",
+                    "code": "3457005",
+                    "display": "Patient referral"
+                }
+            ]
+        }
+    ],
     "subject": {
         "identifier": {
             "system": "http://fhir.nhs.net/Id/nhs-number",

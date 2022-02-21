@@ -60,8 +60,33 @@
       <path value="ServiceRequest.basedOn.identifier.value" />
       <min value="1" />
     </element>
+    <element id="ServiceRequest.category">
+      <path value="ServiceRequest.category" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="ServiceRequest.category.coding">
+      <path value="ServiceRequest.category.coding" />
+      <min value="1" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/England-servicerequest-category" />
+      </binding>
+    </element>
+    <element id="ServiceRequest.category.coding.system">
+      <path value="ServiceRequest.category.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="ServiceRequest.category.coding.code">
+      <path value="ServiceRequest.category.coding.code" />
+      <min value="1" />
+    </element>
     <element id="ServiceRequest.subject">
       <path value="ServiceRequest.subject" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Patient" />
+      </type>
       <mustSupport value="true" />
     </element>
     <element id="ServiceRequest.subject.identifier.system">

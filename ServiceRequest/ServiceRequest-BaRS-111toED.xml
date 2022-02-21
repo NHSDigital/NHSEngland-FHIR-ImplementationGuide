@@ -8,6 +8,13 @@
     </identifier>
     <status value="active" />
     <intent value="plan" />
+    <category>
+        <coding>
+            <system value="http://snomed.info/sct" />
+            <code value="3457005" />
+            <display value="Patient referral" />
+        </coding>
+    </category>
     <subject>
         <reference value="urn:uuid:9589fb37-87a2-48d8-968f-b371429208a8" />
     </subject>
