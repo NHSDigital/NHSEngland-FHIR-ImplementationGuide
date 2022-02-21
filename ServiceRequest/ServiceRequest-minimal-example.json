@@ -10,7 +10,18 @@
     }],
     "status": "active",
     "intent": "plan",
-    "code": {
+    "category": [
+        {
+            "coding": [
+                {
+                    "system": "http://snomed.info/sct",
+                    "code": "3457005",
+                    "display": "Patient referral"
+                }
+            ]
+        }
+    ],
+    "performerType": {
         "coding": [
             {
                 "system":"http://snomed.info/sct",

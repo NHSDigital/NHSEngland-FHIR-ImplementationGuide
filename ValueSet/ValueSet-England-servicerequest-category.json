@@ -1,0 +1,45 @@
+{
+  "resourceType": "ValueSet",
+  "id": "a6876ad9-6ac5-431a-980d-b093a07e84d6",
+  "url": "https://fhir.nhs.uk/ValueSet/England-servicerequest-category",
+  "version": "0.0.1",
+  "name": "ServiceRequestCategory",
+  "title": "ServiceRequestCategory",
+  "status": "draft",
+  "date": "2022-11-13T06:00:00+00:00",
+  "publisher": "NHS Digital",
+  "contact": [
+    {
+      "name": "Interoperability Team",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "interoperabilityteam@nhs.net",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "description": "ServiceRequestCategory - top level UK SNOMED CT Referral Codes",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "409063005",
+            "display": "Counselling"
+          },
+          {
+            "code": "3457005",
+            "display": "Patient referral"
+          },
+          {
+            "code": "820641000000100",
+            "display": "Choose and book advice and guidance request"
+          }
+        ]
+      }
+    ]
+  }
+}

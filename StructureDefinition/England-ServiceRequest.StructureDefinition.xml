@@ -60,8 +60,64 @@
       <path value="ServiceRequest.basedOn.identifier.value" />
       <min value="1" />
     </element>
+    <element id="ServiceRequest.category">
+      <path value="ServiceRequest.category" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="ServiceRequest.category.coding">
+      <path value="ServiceRequest.category.coding" />
+      <min value="1" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/England-servicerequest-category" />
+      </binding>
+    </element>
+    <element id="ServiceRequest.category.coding.system">
+      <path value="ServiceRequest.category.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="ServiceRequest.category.coding.code">
+      <path value="ServiceRequest.category.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="ServiceRequest.code">
+      <path value="ServiceRequest.code" />
+      <definition value="A code that identifies a particular service (i.e., procedure, diagnostic investigation, or panel of investigations) that have been requested.&#xD;&#xA;&#xD;&#xA;Ideally this should be a child code of the ServiceRequest.category" />
+    </element>
+    <element id="ServiceRequest.code.coding">
+      <path value="ServiceRequest.code.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="ServiceRequest.code.coding:SNOMEDProcedureCode">
+      <path value="ServiceRequest.code.coding" />
+      <sliceName value="SNOMEDProcedureCode" />
+      <min value="1" />
+      <fixedCoding>
+        <system value="http://snomed.info/sct" />
+      </fixedCoding>
+    </element>
+    <element id="ServiceRequest.code.coding:SNOMEDProcedureCode.system">
+      <path value="ServiceRequest.code.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="ServiceRequest.code.coding:SNOMEDProcedureCode.code">
+      <path value="ServiceRequest.code.coding.code" />
+      <min value="1" />
+    </element>
     <element id="ServiceRequest.subject">
       <path value="ServiceRequest.subject" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Patient" />
+      </type>
       <mustSupport value="true" />
     </element>
     <element id="ServiceRequest.subject.identifier.system">
@@ -95,6 +151,10 @@
     <element id="ServiceRequest.requester.identifier.value">
       <path value="ServiceRequest.requester.identifier.value" />
       <min value="1" />
+    </element>
+    <element id="ServiceRequest.performerType">
+      <path value="ServiceRequest.performerType" />
+      <definition value="At present examples use eRS clinic type codes" />
     </element>
     <element id="ServiceRequest.performer">
       <path value="ServiceRequest.performer" />

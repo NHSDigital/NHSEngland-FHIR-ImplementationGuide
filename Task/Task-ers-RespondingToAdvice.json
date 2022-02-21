@@ -47,16 +47,5 @@
         {
             "text": "Here's some advice"
         }
-    ],
-    "output":[
-        {
-            "type" : {
-               "text" :"Something to represent attachment"
-            },
-            "valueReference": {
-                "type" : "DocumentReference",
-                "reference": "DocumentReference/5da894e0-a57e-43e9-a1a1-e283a484003c"
-            }
-        }
     ]
 }

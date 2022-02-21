@@ -44,16 +44,5 @@
         {
             "text": "Some additional comments"
         }
-    ],
-    "output":[
-        {
-            "type" : {
-               "text" :"Something to represent type review details.txt"
-            },
-            "valueReference": {
-                "type" : "DocumentReference",
-                "reference": "DocumentReference/b1a29e96-ff24-406f-831d-b6025e06ea94"
-            }
-        }
     ]
 }

@@ -33,6 +33,17 @@
             }
         }
     ],
+    "category": [
+        {
+            "coding": [
+                {
+                    "system": "http://snomed.info/sct",
+                    "code": "820641000000100",
+                    "display": "Choose and book advice and guidance request"
+                }
+            ]
+        }
+    ],
     "resourceType": "ServiceRequest",
     "status": "active",
     "intent": "order",
@@ -51,7 +62,7 @@
         }
     },
     "priority": "routine",
-    "code": {
+    "performerType": {
         "coding": [
             {
                 "system": "https://fhir.nhs.uk/CodeSystem/NHSDigital-ClinicType",
