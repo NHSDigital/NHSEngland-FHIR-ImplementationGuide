@@ -26,5 +26,17 @@
                 "creation": "2022-01-31"
             }
         }
-    ]
+    ],
+    "context": {
+        "related" : [
+            {
+                "type": "ServiceRequest",
+                "reference": "ServiceRequest/be735573-9f24-42e1-ae98-af89d632e4bf"
+            },
+            {
+                "type": "Task",
+                "reference": "Task/f66e4cd7-207c-4b7d-9ac9-80630c451125"
+            }
+        ]
+    }
 }

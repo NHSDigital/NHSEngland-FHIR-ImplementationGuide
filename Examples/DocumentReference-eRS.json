@@ -34,5 +34,17 @@
                 "creation": "2021-09-17"
             }
         }
-    ]
+    ],
+    "context": {
+        "related" : [
+            {
+                "type": "ServiceRequest",
+                "reference": "ServiceRequest/be735573-9f24-42e1-ae98-af89d632e4bf"
+            },
+            {
+                "type": "Task",
+                "reference": "Task/c18dbbe5-4f8d-4b49-a434-6e55a93fab31"
+            }
+        ]
+    }
 }
