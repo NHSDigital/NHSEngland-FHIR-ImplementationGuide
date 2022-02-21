@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-ServiceRequest-Workflow" />
+  <name value="ExtensionNHSDigitalServiceRequestWorkflow" />
+  <status value="draft" />
+  <fhirVersion value="4.0.1" />
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <context>
+    <type value="element" />
+    <expression value="ServiceRequest" />
+  </context>
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Extension.extension">
+      <path value="Extension.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="2" />
+    </element>
+    <element id="Extension.extension:businessStatus">
+      <path value="Extension.extension" />
+      <sliceName value="businessStatus" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:businessStatus.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="businessStatus" />
+    </element>
+    <element id="Extension.extension:businessStatus.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <type>
+        <code value="code" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://hl7.org/fhir/ValueSet/task-status" />
+      </binding>
+    </element>
+    <element id="Extension.extension:worklistItem">
+      <path value="Extension.extension" />
+      <sliceName value="worklistItem" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:worklistItem.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="worklistItem" />
+    </element>
+    <element id="Extension.extension:worklistItem.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Task" />
+      </type>
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url" />
+      <fixedUri value="https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-ServiceRequest-Workflow" />
+    </element>
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>
