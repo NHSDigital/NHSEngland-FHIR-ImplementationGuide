@@ -16,6 +16,21 @@
                     "valueCode": "unbooked"
                 }
             ]
+        },
+        {
+            "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-ServiceRequest-Workflow",
+            "extension": [
+                {
+                    "url": "businessStatus",
+                    "valueCode": "completed"
+                },
+                {
+                    "url": "worklistitem",
+                    "valueReference": {
+                        "reference": "Task/bf7ab4c4-bafb-495e-8a61-1aa40309eaed"
+                    }
+                }
+            ]
         }
     ],
     "identifier": [
