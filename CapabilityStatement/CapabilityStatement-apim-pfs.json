@@ -60,7 +60,29 @@
                     "profile": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-AllergyIntolerance",
                     "interaction": [
                         {
-                            "code": "search-type"
+                            "code": "search-type",
+                            "extension": [
+                                {
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-APIDefinition-OAS",
+                                    "extension": [
+                                        {
+                                            "url": "example",
+                                            "extension": [
+                                                {
+                                                    "url": "request",
+                                                    "valueBoolean": false
+                                                },
+                                                {
+                                                    "url": "value",
+                                                    "valueReference": {
+                                                        "reference": "AllergyIntolerance/UKCore-AllergyIntolerance-Amoxicillin-Example"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
                         }
                     ],
                     "searchParam": [
@@ -76,17 +98,61 @@
                     "profile": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Patient",
                     "interaction": [
                         {
-                            "code": "read"
+                            "code": "read",
+                            "extension": [
+                                {
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-APIDefinition-OAS",
+                                    "extension": [
+                                        {
+                                            "url": "example",
+                                            "extension": [
+                                                {
+                                                    "url": "request",
+                                                    "valueBoolean": false
+                                                },
+                                                {
+                                                    "url": "value",
+                                                    "valueReference": {
+                                                        "reference": "Patient/6aa13139-201b-4a54-9608-b49331a46d90"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
                         },
                         {
-                            "code": "search-type"
+                            "code": "search-type",
+                            "extension": [
+                                {
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-APIDefinition-OAS",
+                                    "extension": [
+                                        {
+                                            "url": "example",
+                                            "extension": [
+                                                {
+                                                    "url": "request",
+                                                    "valueBoolean": false
+                                                },
+                                                {
+                                                    "url": "value",
+                                                    "valueReference": {
+                                                        "reference": "Patient/6aa13139-201b-4a54-9608-b49331a46d90"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
                         }
                     ],
                     "searchParam": [
                         {
-                            "name": "patient:identifier",
+                            "name": "identifier",
                             "type": "token",
-                            "documentation": "My allergies"
+                            "documentation": "Search by NHS Number"
                         }
                     ]
                 },
@@ -95,10 +161,54 @@
                     "profile": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-RelatedPerson",
                     "interaction": [
                         {
-                            "code": "read"
+                            "code": "read",
+                            "extension": [
+                                {
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-APIDefinition-OAS",
+                                    "extension": [
+                                        {
+                                            "url": "example",
+                                            "extension": [
+                                                {
+                                                    "url": "request",
+                                                    "valueBoolean": false
+                                                },
+                                                {
+                                                    "url": "value",
+                                                    "valueReference": {
+                                                        "reference": "RelatedPerson/507B7621"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
                         },
                         {
-                            "code": "search-type"
+                            "code": "search-type",
+                            "extension": [
+                                {
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-APIDefinition-OAS",
+                                    "extension": [
+                                        {
+                                            "url": "example",
+                                            "extension": [
+                                                {
+                                                    "url": "request",
+                                                    "valueBoolean": false
+                                                },
+                                                {
+                                                    "url": "value",
+                                                    "valueReference": {
+                                                        "reference": "RelatedPerson/507B7621"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
                         }
                     ],
                     "searchParam": [
@@ -114,7 +224,29 @@
                     "profile": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Organizationt",
                     "interaction": [
                         {
-                            "code": "read"
+                            "code": "read",
+                            "extension": [
+                                {
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-APIDefinition-OAS",
+                                    "extension": [
+                                        {
+                                            "url": "example",
+                                            "extension": [
+                                                {
+                                                    "url": "request",
+                                                    "valueBoolean": false
+                                                },
+                                                {
+                                                    "url": "value",
+                                                    "valueReference": {
+                                                        "reference": "Organization/RR805"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
                         }
                     ]
                 },
@@ -123,7 +255,29 @@
                     "profile": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Practitioner",
                     "interaction": [
                         {
-                            "code": "read"
+                            "code": "read",
+                            "extension": [
+                                {
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-APIDefinition-OAS",
+                                    "extension": [
+                                        {
+                                            "url": "example",
+                                            "extension": [
+                                                {
+                                                    "url": "request",
+                                                    "valueBoolean": false
+                                                },
+                                                {
+                                                    "url": "value",
+                                                    "valueReference": {
+                                                        "reference": "Practitioner/78f00516-fc22-416b-b8b5-f4d2fd915a14"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
                         }
                     ]
                 },
@@ -132,7 +286,29 @@
                     "profile": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-PractitionerRole",
                     "interaction": [
                         {
-                            "code": "read"
+                            "code": "read",
+                            "extension": [
+                                {
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-APIDefinition-OAS",
+                                    "extension": [
+                                        {
+                                            "url": "example",
+                                            "extension": [
+                                                {
+                                                    "url": "request",
+                                                    "valueBoolean": false
+                                                },
+                                                {
+                                                    "url": "value",
+                                                    "valueReference": {
+                                                        "reference": "PractitionerRole/6dc16793-61c2-44b8-8d0f-f872101c016e"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
                         }
                     ]
                 },
@@ -141,7 +317,29 @@
                     "profile": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Encounter",
                     "interaction": [
                         {
-                            "code": "read"
+                            "code": "read",
+                            "extension": [
+                                {
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-APIDefinition-OAS",
+                                    "extension": [
+                                        {
+                                            "url": "example",
+                                            "extension": [
+                                                {
+                                                    "url": "request",
+                                                    "valueBoolean": false
+                                                },
+                                                {
+                                                    "url": "value",
+                                                    "valueReference": {
+                                                        "reference": "Encounter/9d222207-7b26-42a0-9abe-f9883a330662"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
                         }
                     ]
                 }

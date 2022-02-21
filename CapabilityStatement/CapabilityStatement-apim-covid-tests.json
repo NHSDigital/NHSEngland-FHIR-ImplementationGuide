@@ -1,0 +1,99 @@
+{
+    "resourceType": "CapabilityStatement",
+    "id": "fef2e9df-7e55-4a4b-af1a-f281583c5804",
+    "extension": [
+        {
+            "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-APIDefinition",
+            "extension": [
+                {
+                    "url": "implementationGuide",
+                    "extension": [
+                        {
+                            "url": "name",
+                            "valueString": "ukcore.release1.test"
+                        }
+                    ]
+                },
+                {
+                    "url": "implementationGuide",
+                    "extension": [
+                        {
+                            "url": "name",
+                            "valueString": "uk.nhsdigital.r4.test"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "url": "https://fhir.nhs.uk/CapabilityStatement/apim-covid-testhistory",
+    "version": "3.0.0",
+    "name": "APIMCOVIDTests",
+    "status": "active",
+    "date": "2021-04-28T00:00:00+00:00",
+    "publisher": "digital.nhs.uk",
+    "description": "API definition for COVID Test History",
+    "kind": "requirements",
+    "fhirVersion": "4.0.1",
+    "format": [
+        "application/fhir+json"
+    ],
+    "rest": [
+        {
+            "mode": "server",
+            "security": {
+                "service": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/restful-security-service",
+                                "code": "OAuth",
+                                "display": "OAuth2 Token"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "resource": [
+                {
+                    "type": "Observation",
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-Observation",
+                    "interaction": [
+                        {
+                            "code": "search-type",
+                            "extension": [
+                                {
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-APIDefinition-OAS",
+                                    "extension": [
+                                        {
+                                            "url": "example",
+                                            "extension": [
+                                                {
+                                                    "url": "request",
+                                                    "valueBoolean": false
+                                                },
+                                                {
+                                                    "url": "value",
+                                                    "valueReference": {
+                                                        "reference": "Observation/08fa43dc-6bda-456f-b10c-5bc8abaca855"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "searchParam": [
+                        {
+                            "name": "patient.identifier",
+                            "type": "token",
+                            "documentation": "NHS Number"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

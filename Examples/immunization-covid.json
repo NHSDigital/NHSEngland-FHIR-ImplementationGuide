@@ -77,7 +77,7 @@
                 "type": "Practitioner",
                 "identifier": {
                     "system": "https://fhir.hl7.org.uk/Id/nmc-number",
-                    "value": "5566789"
+                    "value": "55A6789A"
                 },
                 "display": "HOLDING, Rafferty"
             }
