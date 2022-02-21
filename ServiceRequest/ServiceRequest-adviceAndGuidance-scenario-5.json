@@ -25,7 +25,7 @@
                     "valueCode": "completed"
                 },
                 {
-                    "url": "worklistitem",
+                    "url": "worklistItem",
                     "valueReference": {
                         "reference": "Task/bf7ab4c4-bafb-495e-8a61-1aa40309eaed"
                     }
