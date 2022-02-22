@@ -1,0 +1,59 @@
+{
+    "resourceType": "Slot",
+    "id": "2779faeb-354f-4a78-9b5e-d878e88ea4e6",
+    "identifier":  [
+        {
+            "system": "https://tools.ietf.org/html/rfc4122",
+            "value": "4cc18add-5160-49bb-9995-0d0759751f8d"
+        }
+    ],
+    "serviceCategory":  [
+        {
+            "coding":  [
+                {
+                    "system": "http://snomed.info/sct",
+                    "code": "788007007",
+                    "display": "General practice service"
+                }
+            ]
+        }
+    ],
+    "serviceType":  [
+        {
+            "coding":  [
+                {
+                    "system": "http://snomed.info/sct",
+                    "code": "708190004",
+                    "display": "Immunology service"
+                }
+            ]
+        }
+    ],
+    "specialty":  [
+        {
+            "coding":  [
+                {
+                    "system": "http://snomed.info/sct",
+                    "code": "408480009",
+                    "display": "Clinical immunology"
+                }
+            ]
+        }
+    ],
+    "appointmentType": {
+        "coding":  [
+            {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0276",
+                "code": "WALKIN",
+                "display": "A previously unscheduled walk-in visit"
+            }
+        ]
+    },
+    "schedule": {
+        "reference": "Schedule/UKCore-Schedule-Immunization-Example"
+    },
+    "status": "free",
+    "start": "2022-12-20T11:20:00+07:00",
+    "end": "2022-12-20T11:40:00+07:00",
+    "comment": "Assessments should be performed before requesting appointments in this slot."
+}
