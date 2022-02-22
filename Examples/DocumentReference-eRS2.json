@@ -13,7 +13,7 @@
                         "url": "https://fhir.nhs.uk/STU3/StructureDefinition/Extension-eRS-AttachedBy",
                         "valueReference": {
                             "identifier": {
-                                "system": "http://fhir.nhs.net/Id/sds-user-id",
+                                "system": "https://fhir.nhs.uk/Id/sds-user-id",
                                 "value": "987654321"
                             }
                         }

@@ -75,8 +75,18 @@
                                                 {
                                                     "url": "value",
                                                     "valueReference": {
-                                                        "reference": "Observation/08fa43dc-6bda-456f-b10c-5bc8abaca855"
+                                                        "reference": "Bundle/c01c8284-5561-4825-9f0d-3bdcaf18c8d4"
                                                     }
+                                                },
+                                                {
+                                                    "url": "summary",
+                                                    "valueMarkdown":  "COVID-19 test history found"
+                                                    
+                                                },
+                                                {
+                                                    "url": "description",
+                                                    "valueMarkdown":  "Request **GET [baseUrl]/Observation?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9000000009**"
+                                                    
                                                 }
                                             ]
                                         }

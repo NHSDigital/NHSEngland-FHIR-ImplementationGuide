@@ -75,8 +75,18 @@
                                                 {
                                                     "url": "value",
                                                     "valueReference": {
-                                                        "reference": "Immunization/551ef667-1402-4c92-ba34-a0bb88b998dc"
+                                                        "reference": "Bundle/dd4c3e37-555d-47fc-9309-37539893e074"
                                                     }
+                                                },
+                                                {
+                                                    "url": "summary",
+                                                    "valueMarkdown":  "Immunisation history found"
+                                                    
+                                                },
+                                                {
+                                                    "url": "description",
+                                                    "valueMarkdown":  "Request **GET [baseUrl]/Immunization?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9000000009**"
+                                                    
                                                 }
                                             ]
                                         }

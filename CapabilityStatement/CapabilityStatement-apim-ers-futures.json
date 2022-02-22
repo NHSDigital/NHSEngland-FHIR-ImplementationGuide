@@ -267,8 +267,18 @@
                                                 {
                                                     "url": "value",
                                                     "valueReference": {
-                                                        "reference": "ServiceRequest/832db7fa-ebdd-44b6-ab3b-8329c2d43149"
+                                                        "reference": "Bundle/09568f32-5a1f-439d-b245-5457dc88827e"
                                                     }
+                                                },
+                                                {
+                                                    "url": "summary",
+                                                    "valueMarkdown":  "Referral found"
+                                                    
+                                                },
+                                                {
+                                                    "url": "description",
+                                                    "valueMarkdown":  "Request **GET [baseUrl]/ServiceRequest?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9912003888**"
+                                                    
                                                 }
                                             ]
                                         }
@@ -482,8 +492,18 @@
                                                 {
                                                     "url": "value",
                                                     "valueReference": {
-                                                        "reference": "Task/bf7ab4c4-bafb-495e-8a61-1aa40309eaed"
+                                                        "reference": "Bundle/22d00506-967b-4996-9893-e649cffab3ec"
                                                     }
+                                                },
+                                                {
+                                                    "url": "summary",
+                                                    "valueMarkdown":  "Worklist found"
+                                                    
+                                                },
+                                                {
+                                                    "url": "description",
+                                                    "valueMarkdown":  "Request **GET [baseUrl]/Task?for.identifier=https://fhir.nhs.uk/Id/nhs-number|9912003888**"
+                                                    
                                                 }
                                             ]
                                         }

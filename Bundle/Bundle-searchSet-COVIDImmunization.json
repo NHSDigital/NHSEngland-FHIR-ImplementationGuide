@@ -1,14 +1,20 @@
 {
     "resourceType": "Bundle",
-    "id":"dd4c3e37-555d-47fc-9309-37539893e074",
+    "id": "dd4c3e37-555d-47fc-9309-37539893e074",
     "type": "searchset",
     "total": 2,
+    "link": [
+        {
+          "relation": "self",
+          "url": "http://example.org/FHIR/R4/Immunization?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9000000009"
+        }
+      ],
     "entry": [
         {
-            "fullUrl": "Immunization/edea022a-2d81-11eb-adc1-0242ac120001",
+            "fullUrl": "Immunization/d11c69d8-7a50-4a54-a848-7648121e995f",
             "resource": {
                 "resourceType": "Immunization",
-                "id" :"edea022a-2d81-11eb-adc1-0242ac120001",
+                "id": "d11c69d8-7a50-4a54-a848-7648121e995f",
                 "extension": [
                     {
                         "url": "https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-VaccinationProcedure",
@@ -36,25 +42,35 @@
                         {
                             "system": "http://snomed.info/sct",
                             "code": "39114911000001105",
-                            "display": "COVID-19 Vaccine AstraZeneca (ChAdOx1 S [recombinant]) 5x10,000,000,000 viral particles/0.5ml dose suspension for injection multidose vials (AstraZeneca UK Ltd)"
+                            "display": "COVID-19 Vaccine AstraZeneca (ChAdOx1 S [recombinant]) 5x10,000,000,000 viral particles/0.5ml dose solution for injection multidose vials (AstraZeneca UK Ltd) (product)"
                         }
                     ]
                 },
                 "patient": {
+                    "reference": "Patient/24fcb63-669c-4a3c-af2b-caf55de167ec",
                     "type": "Patient",
                     "identifier": {
                         "system": "https://fhir.nhs.uk/Id/nhs-number",
-                        "value": "9912003888"
+                        "value": "9000000009"
                     }
                 },
-                "occurrenceDateTime": "2020-12-23T13:00:08.476+00:00",
-                "recorded": "2020-12-23",
+                "occurrenceDateTime": "2020-12-10T13:00:08.476000+00:00",
+                "recorded": "2020-12-10",
                 "primarySource": true,
                 "manufacturer": {
                     "display": "AstraZeneca Ltd"
                 },
                 "lotNumber": "R04X",
                 "expirationDate": "2021-04-29",
+                "site": {
+                    "coding": [
+                        {
+                            "system": "http://snomed.info/sct",
+                            "code": "368208006",
+                            "display": "Left upper arm structure (body structure)"
+                        }
+                    ]
+                },
                 "route": {
                     "coding": [
                         {
@@ -65,11 +81,12 @@
                     ]
                 },
                 "doseQuantity": {
-                    "value": 0.3,
-                    "unit": "mL",
                     "system": "http://snomed.info/sct",
-                    "code": "258773002"
+                    "value": 1,
+                    "unit": "pre-filled disposable injection",
+                    "code": "3318611000001103"
                 },
+                "reportOrigin": {},
                 "performer": [
                     {
                         "actor": {
@@ -77,7 +94,8 @@
                             "identifier": {
                                 "system": "https://fhir.nhs.uk/Id/ods-organization-code",
                                 "value": "RX809"
-                            }
+                            },
+                            "display": "TEST-SITE"
                         }
                     }
                 ],
@@ -103,10 +121,10 @@
             }
         },
         {
-            "fullUrl": "Immunization/edea022a-2d81-11eb-adc1-0242ac120000",
+            "fullUrl": "Immunization/8da02505-db94-40b6-a8ed-d5af5628e28c",
             "resource": {
                 "resourceType": "Immunization",
-                "id" :"edea022a-2d81-11eb-adc1-0242ac120000",
+                "id": "8da02505-db94-40b6-a8ed-d5af5628e28c",
                 "extension": [
                     {
                         "url": "https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-VaccinationProcedure",
@@ -114,8 +132,8 @@
                             "coding": [
                                 {
                                     "system": "http://snomed.info/sct",
-                                    "code": "1324691000000104",
-                                    "display": "Administration of second dose of severe acute respiratory syndrome coronavirus 2 vaccine (procedure)"
+                                    "code": "1324681000000102",
+                                    "display": "Administration of first dose of severe acute respiratory syndrome coronavirus 2 vaccine (procedure)"
                                 }
                             ]
                         }
@@ -134,28 +152,35 @@
                         {
                             "system": "http://snomed.info/sct",
                             "code": "39114911000001105",
-                            "display": "COVID-19 Vaccine AstraZeneca (ChAdOx1 S [recombinant]) 5x10,000,000,000 viral particles/0.5ml dose suspension for injection multidose vials (AstraZeneca UK Ltd)"
+                            "display": "COVID-19 Vaccine AstraZeneca (ChAdOx1 S [recombinant]) 5x10,000,000,000 viral particles/0.5ml dose solution for injection multidose vials (AstraZeneca UK Ltd) (product)"
                         }
                     ]
                 },
                 "patient": {
+                    "reference": "Patient/24fcb63-669c-4a3c-af2b-caf55de167ec",
                     "type": "Patient",
                     "identifier": {
                         "system": "https://fhir.nhs.uk/Id/nhs-number",
-                        "value": "9912003888"
+                        "value": "9000000009"
                     }
                 },
-                "occurrenceDateTime": "2021-02-23T13:00:08.476+00:00",
-                "recorded": "2021-02-23",
-                "primarySource": false,
-                "reportOrigin": {
-                    "text": "RR8 - LEEDS TEACHING HOSPITALS NHS TRUST"
-                },
+                "occurrenceDateTime": "2020-12-31T13:00:08.476000+00:00",
+                "recorded": "2020-12-31",
+                "primarySource": true,
                 "manufacturer": {
                     "display": "AstraZeneca Ltd"
                 },
-                "lotNumber": "A04Z",
-                "expirationDate": "2021-06-29",
+                "lotNumber": "R04X",
+                "expirationDate": "2021-04-29",
+                "site": {
+                    "coding": [
+                        {
+                            "system": "http://snomed.info/sct",
+                            "code": "368208006",
+                            "display": "Left upper arm structure (body structure)"
+                        }
+                    ]
+                },
                 "route": {
                     "coding": [
                         {
@@ -166,11 +191,12 @@
                     ]
                 },
                 "doseQuantity": {
-                    "value": 0.3,
-                    "unit": "mL",
                     "system": "http://snomed.info/sct",
-                    "code": "258773002"
+                    "value": 1,
+                    "unit": "pre-filled disposable injection",
+                    "code": "3318611000001103"
                 },
+                "reportOrigin": {},
                 "performer": [
                     {
                         "actor": {
@@ -178,7 +204,8 @@
                             "identifier": {
                                 "system": "https://fhir.nhs.uk/Id/ods-organization-code",
                                 "value": "RX809"
-                            }
+                            },
+                            "display": "TEST-SITE"
                         }
                     }
                 ],
@@ -195,12 +222,29 @@
                 ],
                 "protocolApplied": [
                     {
-                        "doseNumberPositiveInt": 2
+                        "doseNumberPositiveInt": 1
                     }
                 ]
             },
             "search": {
                 "mode": "match"
+            }
+        },
+        {
+            "fullUrl": "Patient/124fcb63-669c-4a3c-af2b-caf55de167ec",
+            "resource": {
+                "resourceType": "Patient",
+                "id": "124fcb63-669c-4a3c-af2b-caf55de167ec",
+                "identifier": [
+                    {
+                        "system": "https://fhir.nhs.uk/Id/nhs-number",
+                        "value": "9000000009"
+                    }
+                ],
+                "birthDate": "1965-02-28"
+            },
+            "search": {
+                "mode": "include"
             }
         }
     ]
