@@ -47,7 +47,6 @@
                     ]
                 },
                 "patient": {
-                    "reference": "Patient/24fcb63-669c-4a3c-af2b-caf55de167ec",
                     "type": "Patient",
                     "identifier": {
                         "system": "https://fhir.nhs.uk/Id/nhs-number",
@@ -157,7 +156,6 @@
                     ]
                 },
                 "patient": {
-                    "reference": "Patient/24fcb63-669c-4a3c-af2b-caf55de167ec",
                     "type": "Patient",
                     "identifier": {
                         "system": "https://fhir.nhs.uk/Id/nhs-number",
@@ -228,23 +226,6 @@
             },
             "search": {
                 "mode": "match"
-            }
-        },
-        {
-            "fullUrl": "Patient/124fcb63-669c-4a3c-af2b-caf55de167ec",
-            "resource": {
-                "resourceType": "Patient",
-                "id": "124fcb63-669c-4a3c-af2b-caf55de167ec",
-                "identifier": [
-                    {
-                        "system": "https://fhir.nhs.uk/Id/nhs-number",
-                        "value": "9000000009"
-                    }
-                ],
-                "birthDate": "1965-02-28"
-            },
-            "search": {
-                "mode": "include"
             }
         }
     ]
