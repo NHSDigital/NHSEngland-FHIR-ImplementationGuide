@@ -814,17 +814,22 @@
                             "documentation": "[A020 - Upload file to document store](https://digital.nhs.uk/developer/api-catalogue/e-referral-service-fhir#api-Default-a020-upload-file-to-document-store)",
                             "extension": [
                                 {
-                                    "url": "example",
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-APIDefinition-OAS",
                                     "extension": [
                                         {
-                                            "url": "request",
-                                            "valueBoolean": true
-                                        },
-                                        {
-                                            "url": "value",
-                                            "valueReference": {
-                                                "reference": "Binary/db60a89b-3989-4290-b373-2e4a7266e556"
-                                            }
+                                            "url": "example",
+                                            "extension": [
+                                                {
+                                                    "url": "request",
+                                                    "valueBoolean": true
+                                                },
+                                                {
+                                                    "url": "value",
+                                                    "valueReference": {
+                                                        "reference": "Binary/db60a89b-3989-4290-b373-2e4a7266e556"
+                                                    }
+                                                }
+                                            ]
                                         }
                                     ]
                                 }
