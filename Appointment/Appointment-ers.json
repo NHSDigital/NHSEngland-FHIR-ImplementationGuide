@@ -32,7 +32,7 @@
             "actor": {
                 "type": "HealthcareService",
                 "identifier": {
-                    "system": "http://fhir.nhs.net/Id/ers-service",
+                    "system": "http://fhir.nhs.uk/Id/ers-service",
                     "value": "11000"
                 }
             },
@@ -42,7 +42,7 @@
             "actor": {
                 "type": "Patient",
                 "identifier": {
-                    "system": "http://fhir.nhs.net/Id/nhs-number",
+                    "system": "https://fhir.nhs.uk/Id/nhs-number",
                     "value": "9999998887"
                 }
             },

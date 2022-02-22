@@ -11,7 +11,7 @@
     <usage value="EPS"/>
     <uniqueId>
         <type value="uri"/>
-        <value value="http://fhir.nhs.net/Id/ers-service"/>
+        <value value="http://fhir.nhs.uk/Id/ers-service"/>
         <preferred value="true"/>
     </uniqueId>
 </NamingSystem>

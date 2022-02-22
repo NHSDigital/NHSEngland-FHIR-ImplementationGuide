@@ -8,7 +8,7 @@
     }],
     "subject": {
         "identifier": {
-            "system": "http://fhir.nhs.net/Id/nhs-number",
+            "system": "https://fhir.nhs.uk/Id/nhs-number",
             "value": "9912003888"
         },
         "display": "A Patient"
@@ -17,7 +17,7 @@
     "source": {
         "type": "Practitioner",
         "identifier": {
-            "system": "http://fhir.nhs.net/Id/sds-user-id",
+            "system": "https://fhir.nhs.uk/Id/sds-user-id",
             "value": "921600556514"
         }
     },

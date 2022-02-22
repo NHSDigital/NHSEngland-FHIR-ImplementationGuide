@@ -3,12 +3,18 @@
     "id" : "c01c8284-5561-4825-9f0d-3bdcaf18c8d4",
     "type": "searchset",
     "total": 2,
+    "link": [
+      {
+        "relation": "self",
+        "url": "http://example.org/FHIR/R4/Observation?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9000000009"
+      }
+    ],
     "entry": [
       {
-        "fullUrl": "urn:uuid:edea022a-2d81-11eb-adc1-0242ac120004",
+        "fullUrl": "Observation/edea022a-2d81-11eb-adc1-0242ac120004",
         "resource": {
           "resourceType": "Observation",
-          "id": "SARS-CoV-2-ORGY",
+          "id": "edea022a-2d81-11eb-adc1-0242ac120004",
           "identifier": [
             {
               "system": "https://fhir.nhs.uk/Id/SpecimenId",
@@ -101,10 +107,10 @@
         }
       },
       {
-        "fullUrl": "urn:uuid:edea022a-2d81-11eb-adc1-0242ac120000",
+        "fullUrl": "Observation/edea022a-2d81-11eb-adc1-0242ac120000",
         "resource": {
           "resourceType": "Observation",
-          "id": "SARS-CoV-2-ORGY",
+          "id": "edea022a-2d81-11eb-adc1-0242ac120000",
           "identifier": [
             {
               "system": "https://fhir.nhs.uk/Id/SpecimenId",

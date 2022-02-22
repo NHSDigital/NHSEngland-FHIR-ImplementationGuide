@@ -5,7 +5,7 @@
     },
     "identifier": [
         {
-            "system": "http://fhir.nhs.net/Id/ers-deferral-id",
+            "system": "http://fhir.nhs.uk/Id/ers-deferral-id",
             "value": "c18dbbe5-4f8d-4b49-a434-6e55a93fab31"
         }
     ],
@@ -28,7 +28,7 @@
     },
     "for": {
         "identifier": {
-            "system": "http://fhir.nhs.net/Id/nhs-number",
+            "system": "https://fhir.nhs.uk/Id/nhs-number",
             "value": "9999998887"
         }
     },
@@ -36,7 +36,7 @@
     "requester": {
         "type": "Practitioner",
         "identifier": {
-            "system": "http://fhir.nhs.net/Id/sds-user-id",
+            "system": "https://fhir.nhs.uk/Id/sds-user-id",
             "value": "123456789"
         }
     },
