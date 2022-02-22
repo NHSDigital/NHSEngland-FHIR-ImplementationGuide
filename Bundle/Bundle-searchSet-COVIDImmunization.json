@@ -132,7 +132,7 @@
                             "coding": [
                                 {
                                     "system": "http://snomed.info/sct",
-                                    "code": "1324681000000102",
+                                    "code": "1324681000000101",
                                     "display": "Administration of first dose of severe acute respiratory syndrome coronavirus 2 vaccine (procedure)"
                                 }
                             ]
