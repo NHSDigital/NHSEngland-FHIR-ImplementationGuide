@@ -25,7 +25,7 @@
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />
-      <short value="Previous MessageHeader.identifier" />
+      <short value="Previous Bundle.identifier" />
       <definition value="Should be populated in update messages" />
       <min value="1" />
       <type>
