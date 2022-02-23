@@ -291,8 +291,7 @@
                         {
                             "name": "patient:identifier",
                             "type": "token",
-                            "documentation": "The patient identifier (e.g. NHS Number) that the service request is about",
-                            "definition": "https://fhir.nhs.uk/SearchParameter/servicerequest-patient-identifier"
+                            "documentation": "The patient identifier (e.g. NHS Number) that the service request is about"
                         },
                         {
                             "name": "_id",
@@ -569,7 +568,7 @@
                             "documentation": "The style of appointment or patient that may be booked in the slot (not service type)"
                         },
                         {
-                            "name": "schedule.actor:HealthcareService",
+                            "name": "schedule.actor",
                             "type": "reference",
                             "documentation": "A single service ID is required to indicate the service for which appointment slots are required."
                         },

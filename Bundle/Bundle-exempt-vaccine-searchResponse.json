@@ -5,7 +5,7 @@
     "total": 1,
     "entry": [
         {
-            "fullUrl": "urn:uuid:a60bfaec-8bc1-4906-9962-40eba5b48ea",
+            "fullUrl": "QuestionnaireResponse/a60bfaec-8bc1-4906-9962-40eba5b48ea",
             "resource": {
                 "resourceType": "QuestionnaireResponse",
                 "id": "2fa8f1b8-caea-4f3d-9978-c0839da568b2",
