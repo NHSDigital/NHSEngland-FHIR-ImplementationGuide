@@ -1,0 +1,28 @@
+{
+    "resourceType": "Appointment",
+    "id": "b7bc131d-e34d-426c-8ccb-2350a952cce9",
+    "status": "booked",
+    "description": "Reason for calling-",
+    "meta": {
+        "lastUpdated": "2022-12-11T15:01:30+00:00"
+    },
+    "start": "2022-12-20T11:20:00+07:00",
+    "end": "2022-12-20T11:40:00+07:00",
+    "slot": [{
+        "reference": "Slot/2779faeb-354f-4a78-9b5e-d878e88ea4e6"
+    }],
+    "created": "2021-10-11T15:01:30+00:00",
+    "participant": [ {
+        "status": "accepted",
+        "actor": {
+            "identifier": {
+                "system": "https://fhir.nhs.uk/Id/nhs-number",
+                "value": "9912003888"
+            }
+        }
+    } ],
+    "basedOn": [ {
+        "reference": "ServiceRequest/18253b86-9878-4c3f-b854-af0a9b7728a3",
+        "type": "ServiceRequest"
+    }]
+}
