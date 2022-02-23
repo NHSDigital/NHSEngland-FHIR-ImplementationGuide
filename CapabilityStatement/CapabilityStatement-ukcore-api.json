@@ -143,13 +143,17 @@
                             "type": "date",
                             "documentation": "Encounter date/time."
                         },{
-                            "name": "identifier"
+                            "name": "identifier",
+                            "type": "token"
                         },{
-                            "name": "status"
+                            "name": "status",
+                            "type": "token"
                         },{
-                            "name": "type"
+                            "name": "type",
+                            "type": "token"
                         },{
-                            "name": "class"
+                            "name": "class",
+                            "type": "token"
                         }
                     ]
                 },
@@ -205,10 +209,12 @@
                             "documentation": "Gender of the patient"
                         },
                         {
-                            "name": "given"
+                            "name": "given",
+                            "type": "string"
                         },
                         {
-                            "name": "name"
+                            "name": "name",
+                            "type": "string"
                         }
                     ]
                 }
