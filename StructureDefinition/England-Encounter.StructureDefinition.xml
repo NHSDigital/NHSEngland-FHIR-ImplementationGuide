@@ -91,10 +91,6 @@
     <element id="Encounter.episodeOfCare">
       <path value="Encounter.episodeOfCare" />
       <definition value="In ITK HL7v2 this may be PV1.50 Alternate Visit ID (if this is a Stay or Episode identifier)&#xD;&#xA;&#xD;&#xA;Where a specific encounter should be classified as a part of a specific episode(s) of care this field should be used. This association can facilitate grouping of related encounters together for a specific purpose, such as government reporting, issue tracking, association via a common problem.  The association is recorded on the encounter as these are typically created after the episode of care and grouped on entry rather than editing the episode of care to append another encounter to it (the episode of care could span years)." />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-EpisodeOfCare" />
-      </type>
     </element>
     <element id="Encounter.episodeOfCare.identifier.system">
       <path value="Encounter.episodeOfCare.identifier.system" />
