@@ -472,10 +472,64 @@
                             ]
                         },
                         {
-                            "code": "history-type"
+                            "code": "history-type",
+                            "extension": [
+                                {
+                                    "url": "example",
+                                    "extension": [
+                                        {
+                                            "url": "request",
+                                            "valueBoolean": false
+                                        },
+                                        {
+                                            "url": "value",
+                                            "valueReference": {
+                                                "reference": "Bundle/eeddf786-fa1b-41d4-b30a-7542e8cff7e4"
+                                            }
+                                        },
+                                        {
+                                            "url": "summary",
+                                            "valueMarkdown":  "A+G Guidance Conversation"
+                                            
+                                        },
+                                        {
+                                            "url": "description",
+                                            "valueMarkdown":  "Search on workflow history for a specific referral"
+                                            
+                                        }
+                                    ]
+                                }
+                            ]
                         },
                         {
-                            "code": "history-instance"
+                            "code": "history-instance",
+                            "extension": [
+                                {
+                                    "url": "example",
+                                    "extension": [
+                                        {
+                                            "url": "request",
+                                            "valueBoolean": false
+                                        },
+                                        {
+                                            "url": "value",
+                                            "valueReference": {
+                                                "reference": "Bundle/1f706390-a0bc-47d1-ac3a-86ce7e5c2f52"
+                                            }
+                                        },
+                                        {
+                                            "url": "summary",
+                                            "valueMarkdown":  "A+G Guidance Conversation"
+                                            
+                                        },
+                                        {
+                                            "url": "description",
+                                            "valueMarkdown":  "Search on a Id of a worklist/A+G workflow item"
+                                            
+                                        }
+                                    ]
+                                }
+                            ]
                         },
                         {
                             "code": "search-type",
@@ -524,6 +578,14 @@
                             "name": "code",
                             "type": "token",
                             "documentation": "Search by task code (worklist type)"
+                        },
+                        {
+                            "code" : "focus:identifier",
+                            "type" : "token"
+                        },
+                        {
+                            "code" : "focus",
+                            "type" : "reference"
                         }
                     ]
                 },
