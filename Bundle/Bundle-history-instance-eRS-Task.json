@@ -38,9 +38,9 @@
         "code": {
           "coding": [
             {
-              "system": "http://hl7.org/fhir/CodeSystem/task-code",
-              "code": "fulfill",
-              "display": "Fulfill the focal request"
+              "system": "http://snomed.info/sct",
+              "code": "386053000",
+              "display": "Evaluation procedure"
             }
           ]
         },
@@ -95,9 +95,9 @@
         "code": {
           "coding": [
             {
-              "system": "http://hl7.org/fhir/CodeSystem/task-code",
-              "code": "fulfill",
-              "display": "Fulfill the focal request"
+              "system": "http://snomed.info/sct",
+              "code": "386053000",
+              "display": "Evaluation procedure"
             }
           ]
         },
@@ -164,9 +164,9 @@
         "code": {
           "coding": [
             {
-              "system": "http://hl7.org/fhir/CodeSystem/task-code",
-              "code": "fulfill",
-              "display": "Fulfill the focal request"
+              "system": "http://snomed.info/sct",
+              "code": "386053000",
+              "display": "Evaluation procedure"
             }
           ]
         },

@@ -244,12 +244,6 @@
                             ]
                         },
                         {
-                            "code": "history-type"
-                        },
-                        {
-                            "code": "history-instance"
-                        },
-                        {
                             "code": "search-type",
                             "extension": [
                                 {
@@ -270,7 +264,7 @@
                                                 },
                                                 {
                                                     "url": "summary",
-                                                    "valueMarkdown": "Referral found"
+                                                    "valueMarkdown": "Search on NHS Number"
                                                 },
                                                 {
                                                     "url": "description",
@@ -288,6 +282,11 @@
                             "name": "patient:identifier",
                             "type": "token",
                             "documentation": "The patient identifier (e.g. NHS Number) that the service request is about"
+                        },
+                        {
+                            "name": "category",
+                            "type": "token",
+                            "documentation": "Classification of service"
                         }
                     ]
                 },
@@ -458,72 +457,6 @@
                             ]
                         },
                         {
-                            "code": "history-type",
-                            "extension": [
-                                {
-                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-APIDefinition-OAS",
-                                    "extension": [
-                                        {
-                                            "url": "example",
-                                            "extension": [
-                                                {
-                                                    "url": "request",
-                                                    "valueBoolean": false
-                                                },
-                                                {
-                                                    "url": "value",
-                                                    "valueReference": {
-                                                        "reference": "Bundle/eeddf786-fa1b-41d4-b30a-7542e8cff7e4"
-                                                    }
-                                                },
-                                                {
-                                                    "url": "summary",
-                                                    "valueMarkdown": "A+G Guidance Conversation"
-                                                },
-                                                {
-                                                    "url": "description",
-                                                    "valueMarkdown": "Search on workflow history for a specific referral"
-                                                }
-                                            ]
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "code": "history-instance",
-                            "extension": [
-                                {
-                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-APIDefinition-OAS",
-                                    "extension": [
-                                        {
-                                            "url": "example",
-                                            "extension": [
-                                                {
-                                                    "url": "request",
-                                                    "valueBoolean": false
-                                                },
-                                                {
-                                                    "url": "value",
-                                                    "valueReference": {
-                                                        "reference": "Bundle/1f706390-a0bc-47d1-ac3a-86ce7e5c2f52"
-                                                    }
-                                                },
-                                                {
-                                                    "url": "summary",
-                                                    "valueMarkdown": "A+G Guidance Conversation"
-                                                },
-                                                {
-                                                    "url": "description",
-                                                    "valueMarkdown": "Search on a Id of a worklist/A+G workflow item"
-                                                }
-                                            ]
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
                             "code": "search-type",
                             "extension": [
                                 {
@@ -544,11 +477,34 @@
                                                 },
                                                 {
                                                     "url": "summary",
-                                                    "valueMarkdown": "Worklist found"
+                                                    "valueMarkdown": "Search Task for Patient by NHS Number"
                                                 },
                                                 {
                                                     "url": "description",
                                                     "valueMarkdown": "Request **GET [baseUrl]/Task?for.identifier=https://fhir.nhs.uk/Id/nhs-number|9912003888**"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "url": "example",
+                                            "extension": [
+                                                {
+                                                    "url": "request",
+                                                    "valueBoolean": false
+                                                },
+                                                {
+                                                    "url": "value",
+                                                    "valueReference": {
+                                                        "reference": "Bundle/09568f32-5a1f-439d-b245-5457dc88827e"
+                                                    }
+                                                },
+                                                {
+                                                    "url": "summary",
+                                                    "valueMarkdown": "Search on Tasks related to a ServiceRequest with a specific Task.code"
+                                                },
+                                                {
+                                                    "url": "description",
+                                                    "valueMarkdown": "Request **GET [baseUrl]/Task?focus:identifier=https://fhir.nhs.uk/Id/UBRN|000000070000**&code=http://snomed.info/sct|386053000"
                                                 }
                                             ]
                                         }
@@ -567,7 +523,7 @@
                         {
                             "name": "code",
                             "type": "token",
-                            "documentation": "Search by task code (worklist type)"
+                            "documentation": "Search by task code"
                         },
                         {
                             "name": "focus:identifier",
