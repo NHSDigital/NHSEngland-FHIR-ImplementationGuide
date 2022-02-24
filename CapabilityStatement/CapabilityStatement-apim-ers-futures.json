@@ -580,11 +580,11 @@
                             "documentation": "Search by task code (worklist type)"
                         },
                         {
-                            "code" : "focus:identifier",
+                            "name" : "focus:identifier",
                             "type" : "token"
                         },
                         {
-                            "code" : "focus",
+                            "name" : "focus",
                             "type" : "reference"
                         }
                     ]
