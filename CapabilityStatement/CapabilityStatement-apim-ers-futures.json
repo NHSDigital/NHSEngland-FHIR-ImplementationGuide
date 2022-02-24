@@ -252,6 +252,12 @@
                             ]
                         },
                         {
+                            "code": "history-type"
+                        },
+                        {
+                            "code": "history-instance"
+                        },
+                        {
                             "code": "search-type",
                             "extension": [
                                 {
@@ -292,16 +298,6 @@
                             "name": "patient:identifier",
                             "type": "token",
                             "documentation": "The patient identifier (e.g. NHS Number) that the service request is about"
-                        },
-                        {
-                            "name": "_id",
-                            "type": "string",
-                            "documentation": "Search for ServiceRequest by logical id."
-                        },
-                        {
-                            "name": "_history",
-                            "type": "special",
-                            "documentation": "Return the history of ServiceRequest."
                         }
                     ]
                 },
@@ -476,6 +472,12 @@
                             ]
                         },
                         {
+                            "code": "history-type"
+                        },
+                        {
+                            "code": "history-instance"
+                        },
+                        {
                             "code": "search-type",
                             "extension": [
                                 {
@@ -522,11 +524,6 @@
                             "name": "code",
                             "type": "token",
                             "documentation": "Search by task code (worklist type)"
-                        },
-                        {
-                            "name": "_history",
-                            "type": "special",
-                            "documentation": "Return the history of a Task."
                         }
                     ]
                 },
