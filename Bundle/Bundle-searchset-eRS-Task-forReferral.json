@@ -6,7 +6,7 @@
   "link": [
     {
       "relation": "self",
-      "url": "http://example.org/FHIR/R4/Task?focus:identifier=https://fhir.nhs.uk/Id/UBRN|000000070000"
+      "url": "http://example.org/FHIR/R4/Task?focus:identifier=https://fhir.nhs.uk/Id/UBRN|000000070000&code=http://snomed.info/sct|386053000"
     }
   ],
   "entry": [
