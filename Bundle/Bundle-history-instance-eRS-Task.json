@@ -1,0 +1,195 @@
+{
+  "resourceType": "Bundle",
+  "id": "1f706390-a0bc-47d1-ac3a-86ce7e5c2f52",
+  "type": "history",
+  "total": 1,
+  "link": [
+    {
+      "relation": "self",
+      "url": "http://example.org/FHIR/R4/Task/bf7ab4c4-bafb-495e-8a61-1aa40309eaed/_history"
+    }
+  ],
+  "entry": [
+    {
+      "fullUrl": "Task/bf7ab4c4-bafb-495e-8a61-1aa40309eaed",
+      "request": {
+        "method": "POST",
+        "url": "Task"
+      },
+      "response": {
+        "status": "201",
+        "lastModified": "2022-01-21T16:58:06.259000+00:00"
+      },
+      "resource": {
+        "resourceType": "Task",
+        "id": "bf7ab4c4-bafb-495e-8a61-1aa40309eaed",
+        "meta": {
+          "versionId": "1"
+        },
+        "identifier": [
+          {
+            "system": "http://fhir.nhs.uk/Id/ers-advice-id",
+            "value": "bf7ab4c4-bafb-495e-8a61-1aa40309eaed"
+          }
+        ],
+        "status": "requested",
+        "intent": "option",
+        "priority": "routine",
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/CodeSystem/task-code",
+              "code": "fulfill",
+              "display": "Fulfill the focal request"
+            }
+          ]
+        },
+        "focus": {
+          "type": "ServiceRequest",
+          "identifier": {
+            "system": "https://fhir.nhs.uk/Id/UBRN",
+            "value": "000000070000"
+          }
+        },
+        "for": {
+          "identifier": {
+            "system": "http://fhir.nhs.uk/Id/nhs-number",
+            "value": "9912003888"
+          }
+        },
+        "authoredOn": "2022-01-21T16:58:06.259000+00:00",
+        "requester": {
+          "type": "Practitioner",
+          "identifier": {
+            "system": "http://fhir.nhs.uk/Id/sds-user-id",
+            "value": "0987654321"
+          }
+        }
+      }
+    },
+    {
+      "fullUrl": "Task/bf7ab4c4-bafb-495e-8a61-1aa40309eaed",
+      "request": {
+        "method": "PUT",
+        "url": "Task/bf7ab4c4-bafb-495e-8a61-1aa40309eaed"
+      },
+      "response": {
+        "status": "200",
+        "lastModified": "2022-01-22T17:18:06.259000+00:00"
+      },
+      "resource": {
+        "resourceType": "Task",
+        "id": "bf7ab4c4-bafb-495e-8a61-1aa40309eaed",
+        "meta": {
+          "versionId": "2"
+        },
+        "identifier": [
+          {
+            "system": "http://fhir.nhs.uk/Id/ers-advice-id",
+            "value": "bf7ab4c4-bafb-495e-8a61-1aa40309eaed"
+          }
+        ],
+        "status": "requested",
+        "intent": "option",
+        "priority": "routine",
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/CodeSystem/task-code",
+              "code": "fulfill",
+              "display": "Fulfill the focal request"
+            }
+          ]
+        },
+        "focus": {
+          "type": "ServiceRequest",
+          "identifier": {
+            "system": "https://fhir.nhs.uk/Id/UBRN",
+            "value": "000000070000"
+          }
+        },
+        "for": {
+          "identifier": {
+            "system": "http://fhir.nhs.uk/Id/nhs-number",
+            "value": "9912003888"
+          }
+        },
+        "authoredOn": "2022-01-21T16:58:06.259000+00:00",
+        "requester": {
+          "type": "Practitioner",
+          "identifier": {
+            "system": "http://fhir.nhs.uk/Id/sds-user-id",
+            "value": "0987654321"
+          }
+        },
+        "note": [
+          {
+            "text": "Here's some advice"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Task/bf7ab4c4-bafb-495e-8a61-1aa40309eaed",
+      "request": {
+        "method": "PUT",
+        "url": "Task/bf7ab4c4-bafb-495e-8a61-1aa40309eaed"
+      },
+      "response": {
+        "status": "200",
+        "lastModified": "2022-01-22T17:18:06.259000+00:00"
+      },
+      "resource": {
+        "id": "33fddbce-6d2c-453a-9351-4822bb55e402",
+        "meta": {
+          "versionId": "3"
+        },
+        "identifier": [
+          {
+            "system": "http://fhir.nhs.uk/Id/ers-advice-id",
+            "value": "bf7ab4c4-bafb-495e-8a61-1aa40309eaed"
+          }
+        ],
+        "resourceType": "Task",
+        "focus": {
+          "type": "ServiceRequest",
+          "identifier": {
+            "system": "https://fhir.nhs.uk/Id/UBRN",
+            "value": "000000070000"
+          }
+        },
+        "status": "requested",
+        "intent": "option",
+        "priority": "urgent",
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/CodeSystem/task-code",
+              "code": "fulfill",
+              "display": "Fulfill the focal request"
+            }
+          ]
+        },
+        "for": {
+          "identifier": {
+            "system": "https://fhir.nhs.uk/Id/nhs-number",
+            "value": "9912003888"
+          }
+        },
+        "authoredOn": "2022-01-21T17:18:06.259000+00:00",
+        "requester": {
+          "type": "Practitioner",
+          "identifier": {
+            "system": "https://fhir.nhs.uk/Id/sds-user-id",
+            "value": "1234567890"
+          }
+        },
+        "note": [
+          {
+            "text": "I think this is quite urgent, increasing the priority"
+          }
+        ]
+      }
+    }
+  ]
+}
