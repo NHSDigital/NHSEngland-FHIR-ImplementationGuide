@@ -94,13 +94,11 @@
                                                 },
                                                 {
                                                     "url": "summary",
-                                                    "valueMarkdown":  "Reviewing a Triage Deferral (Triage Scenario Three)"
-                                                    
+                                                    "valueMarkdown": "Reviewing a Triage Deferral (Triage Scenario Three)"
                                                 },
                                                 {
                                                     "url": "description",
-                                                    "valueMarkdown":  "This is linked to the reivewing a Task [PUT /Task](#/Task/put_Task)."
-                                                    
+                                                    "valueMarkdown": "This is linked to the reivewing a Task [PUT /Task](#/Task/put_Task)."
                                                 }
                                             ]
                                         }
@@ -162,13 +160,11 @@
                                                 },
                                                 {
                                                     "url": "summary",
-                                                    "valueMarkdown":  "Initial Advice Creation (A+G Scenario One)"
-                                                    
+                                                    "valueMarkdown": "Initial Advice Creation (A+G Scenario One)"
                                                 },
                                                 {
                                                     "url": "description",
-                                                    "valueMarkdown":  "code should be a child concept of Evaluation procedure code (SNOMED CT 386053000)?. The advice and guidance referral is created along with a corresponding worklist (FHIR Task) item. These are retrieved via the [GET /Task](#/Task/get_Task) API and responses are sent via the [PUT /Task](#/Task/put_Task) API."
-                                                    
+                                                    "valueMarkdown": "code should be a child concept of Evaluation procedure code (SNOMED CT 386053000)?. The advice and guidance referral is created along with a corresponding worklist (FHIR Task) item. These are retrieved via the [GET /Task](#/Task/get_Task) API and responses are sent via the [PUT /Task](#/Task/put_Task) API."
                                                 }
                                             ]
                                         },
@@ -187,13 +183,11 @@
                                                 },
                                                 {
                                                     "url": "summary",
-                                                    "valueMarkdown":  "Create Referral (A+G Scenario Five)"
-                                                    
+                                                    "valueMarkdown": "Create Referral (A+G Scenario Five)"
                                                 },
                                                 {
                                                     "url": "description",
-                                                    "valueMarkdown":  "code should be a child concept of Patient Referral procedure code (SNOMED CT 3457005)? \n\n Following from the advice and guidnace workflow completing, it has been decided to refer the patient to a service. Note the use of basedOn to reference the original advice and guidance request. "
-                                                    
+                                                    "valueMarkdown": "code should be a child concept of Patient Referral procedure code (SNOMED CT 3457005)? \n\n Following from the advice and guidnace workflow completing, it has been decided to refer the patient to a service. Note the use of basedOn to reference the original advice and guidance request. "
                                                 }
                                             ]
                                         },
@@ -212,13 +206,11 @@
                                                 },
                                                 {
                                                     "url": "summary",
-                                                    "valueMarkdown":  "Initial Referral Creation (Triage Scenario One)"
-                                                    
+                                                    "valueMarkdown": "Initial Referral Creation (Triage Scenario One)"
                                                 },
                                                 {
                                                     "url": "description",
-                                                    "valueMarkdown":  "Note: the status is set to `draft` until this referral is triaged this can not be acted upon. To create the actual defferal see [POST /Task](#/Task/post_Task)"
-                                                    
+                                                    "valueMarkdown": "Note: the status is set to `draft` until this referral is triaged this can not be acted upon. To create the actual defferal see [POST /Task](#/Task/post_Task)"
                                                 }
                                             ]
                                         }
@@ -278,13 +270,11 @@
                                                 },
                                                 {
                                                     "url": "summary",
-                                                    "valueMarkdown":  "Referral found"
-                                                    
+                                                    "valueMarkdown": "Referral found"
                                                 },
                                                 {
                                                     "url": "description",
-                                                    "valueMarkdown":  "Request **GET [baseUrl]/ServiceRequest?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9912003888**"
-                                                    
+                                                    "valueMarkdown": "Request **GET [baseUrl]/ServiceRequest?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9912003888**"
                                                 }
                                             ]
                                         }
@@ -421,13 +411,11 @@
                                                 },
                                                 {
                                                     "url": "summary",
-                                                    "valueMarkdown":  "Reviewing a Triage Deferral (Triage Scenario Three)"
-                                                    
+                                                    "valueMarkdown": "Reviewing a Triage Deferral (Triage Scenario Three)"
                                                 },
                                                 {
                                                     "url": "description",
-                                                    "valueMarkdown":  "Task.status set to completed. Review advice linked in Task.output. Next actions to mark as to book or create an Appointment [POST /Appointment](#/Appointment/post_Appointment)"
-                                                    
+                                                    "valueMarkdown": "Task.status set to completed. Review advice linked in Task.output. Next actions to mark as to book or create an Appointment [POST /Appointment](#/Appointment/post_Appointment)"
                                                 }
                                             ]
                                         }
@@ -457,13 +445,11 @@
                                                 },
                                                 {
                                                     "url": "summary",
-                                                    "valueMarkdown":  "Deferral Creation (Triage Scenario Two)"
-                                                    
+                                                    "valueMarkdown": "Deferral Creation (Triage Scenario Two)"
                                                 },
                                                 {
                                                     "url": "description",
-                                                    "valueMarkdown":  "Task.code not set, need advice on code. [PUT /Task](#/Task/put_Task) is used to reply to the deferral."
-                                                    
+                                                    "valueMarkdown": "Task.code not set, need advice on code. [PUT /Task](#/Task/put_Task) is used to reply to the deferral."
                                                 }
                                             ]
                                         }
@@ -475,27 +461,30 @@
                             "code": "history-type",
                             "extension": [
                                 {
-                                    "url": "example",
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-APIDefinition-OAS",
                                     "extension": [
                                         {
-                                            "url": "request",
-                                            "valueBoolean": false
-                                        },
-                                        {
-                                            "url": "value",
-                                            "valueReference": {
-                                                "reference": "Bundle/eeddf786-fa1b-41d4-b30a-7542e8cff7e4"
-                                            }
-                                        },
-                                        {
-                                            "url": "summary",
-                                            "valueMarkdown":  "A+G Guidance Conversation"
-                                            
-                                        },
-                                        {
-                                            "url": "description",
-                                            "valueMarkdown":  "Search on workflow history for a specific referral"
-                                            
+                                            "url": "example",
+                                            "extension": [
+                                                {
+                                                    "url": "request",
+                                                    "valueBoolean": false
+                                                },
+                                                {
+                                                    "url": "value",
+                                                    "valueReference": {
+                                                        "reference": "Bundle/eeddf786-fa1b-41d4-b30a-7542e8cff7e4"
+                                                    }
+                                                },
+                                                {
+                                                    "url": "summary",
+                                                    "valueMarkdown": "A+G Guidance Conversation"
+                                                },
+                                                {
+                                                    "url": "description",
+                                                    "valueMarkdown": "Search on workflow history for a specific referral"
+                                                }
+                                            ]
                                         }
                                     ]
                                 }
@@ -505,27 +494,30 @@
                             "code": "history-instance",
                             "extension": [
                                 {
-                                    "url": "example",
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-APIDefinition-OAS",
                                     "extension": [
                                         {
-                                            "url": "request",
-                                            "valueBoolean": false
-                                        },
-                                        {
-                                            "url": "value",
-                                            "valueReference": {
-                                                "reference": "Bundle/1f706390-a0bc-47d1-ac3a-86ce7e5c2f52"
-                                            }
-                                        },
-                                        {
-                                            "url": "summary",
-                                            "valueMarkdown":  "A+G Guidance Conversation"
-                                            
-                                        },
-                                        {
-                                            "url": "description",
-                                            "valueMarkdown":  "Search on a Id of a worklist/A+G workflow item"
-                                            
+                                            "url": "example",
+                                            "extension": [
+                                                {
+                                                    "url": "request",
+                                                    "valueBoolean": false
+                                                },
+                                                {
+                                                    "url": "value",
+                                                    "valueReference": {
+                                                        "reference": "Bundle/1f706390-a0bc-47d1-ac3a-86ce7e5c2f52"
+                                                    }
+                                                },
+                                                {
+                                                    "url": "summary",
+                                                    "valueMarkdown": "A+G Guidance Conversation"
+                                                },
+                                                {
+                                                    "url": "description",
+                                                    "valueMarkdown": "Search on a Id of a worklist/A+G workflow item"
+                                                }
+                                            ]
                                         }
                                     ]
                                 }
@@ -552,13 +544,11 @@
                                                 },
                                                 {
                                                     "url": "summary",
-                                                    "valueMarkdown":  "Worklist found"
-                                                    
+                                                    "valueMarkdown": "Worklist found"
                                                 },
                                                 {
                                                     "url": "description",
-                                                    "valueMarkdown":  "Request **GET [baseUrl]/Task?for.identifier=https://fhir.nhs.uk/Id/nhs-number|9912003888**"
-                                                    
+                                                    "valueMarkdown": "Request **GET [baseUrl]/Task?for.identifier=https://fhir.nhs.uk/Id/nhs-number|9912003888**"
                                                 }
                                             ]
                                         }
@@ -580,12 +570,12 @@
                             "documentation": "Search by task code (worklist type)"
                         },
                         {
-                            "name" : "focus:identifier",
-                            "type" : "token"
+                            "name": "focus:identifier",
+                            "type": "token"
                         },
                         {
-                            "name" : "focus",
-                            "type" : "reference"
+                            "name": "focus",
+                            "type": "reference"
                         }
                     ]
                 },
@@ -821,13 +811,11 @@
                                                 },
                                                 {
                                                     "url": "summary",
-                                                    "valueMarkdown":  "Responding to Advice (A+G Scenario Two)"
-                                                    
+                                                    "valueMarkdown": "Responding to Advice (A+G Scenario Two)"
                                                 },
                                                 {
                                                     "url": "description",
-                                                    "valueMarkdown":  "Once the Task has been updated [PUT /Task](#/Task/put_Task), a DocumentReference is used to link in a previsouly posted document to the ServiceRequest and/or Task"
-                                                    
+                                                    "valueMarkdown": "Once the Task has been updated [PUT /Task](#/Task/put_Task), a DocumentReference is used to link in a previsouly posted document to the ServiceRequest and/or Task"
                                                 }
                                             ]
                                         }
