@@ -1,28 +1,20 @@
 {
   "resourceType": "Bundle",
-  "id": "eeddf786-fa1b-41d4-b30a-7542e8cff7e4",
-  "type": "history",
+  "id": "1f706390-a0bc-47d1-ac3a-86ce7e5c2f52",
+  "type": "searchset",
   "total": 1,
   "link": [
     {
       "relation": "self",
-      "url": "http://example.org/FHIR/R4/Task/_history?focus:identifier=https://fhir.nhs.uk/Id/UBRN|000000070000"
+      "url": "http://example.org/FHIR/R4/Task?focus:identifier=https://fhir.nhs.uk/Id/UBRN|000000070000"
     }
   ],
   "entry": [
     {
-      "fullUrl": "Task/bf7ab4c4-bafb-495e-8a61-1aa40309eaed",
-      "request": {
-        "method": "POST",
-        "url": "Task"
-      },
-      "response": {
-        "status": "201",
-        "lastModified": "2022-01-21T16:58:06.259000+00:00"
-      },
+      "fullUrl": "Task/9676323f-5586-47eb-8967-51d9af9b461b",
       "resource": {
         "resourceType": "Task",
-        "id": "bf7ab4c4-bafb-495e-8a61-1aa40309eaed",
+        "id": "9676323f-5586-47eb-8967-51d9af9b461b",
         "meta": {
           "versionId": "1"
         },
@@ -69,14 +61,6 @@
     },
     {
       "fullUrl": "Task/bf7ab4c4-bafb-495e-8a61-1aa40309eaed",
-      "request": {
-        "method": "PUT",
-        "url": "Task/bf7ab4c4-bafb-495e-8a61-1aa40309eaed"
-      },
-      "response": {
-        "status": "200",
-        "lastModified": "2022-01-22T17:18:06.259000+00:00"
-      },
       "resource": {
         "resourceType": "Task",
         "id": "bf7ab4c4-bafb-495e-8a61-1aa40309eaed",
@@ -130,15 +114,7 @@
       }
     },
     {
-      "fullUrl": "Task/bf7ab4c4-bafb-495e-8a61-1aa40309eaed",
-      "request": {
-        "method": "PUT",
-        "url": "Task/bf7ab4c4-bafb-495e-8a61-1aa40309eaed"
-      },
-      "response": {
-        "status": "200",
-        "lastModified": "2022-01-22T17:18:06.259000+00:00"
-      },
+      "fullUrl": "Task/33fddbce-6d2c-453a-9351-4822bb55e402",
       "resource": {
         "id": "33fddbce-6d2c-453a-9351-4822bb55e402",
         "meta": {
