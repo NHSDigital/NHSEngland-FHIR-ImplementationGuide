@@ -98,11 +98,6 @@
                     ],
                     "searchParam": [
                         {
-                            "name": "patient:identifier",
-                            "type": "token",
-                            "documentation": "The patient identifier (e.g. NHS Number) that the service request is about"
-                        },
-                        {
                             "name": "patient.identifier",
                             "type": "token",
                             "documentation": "The patient identifier (e.g. NHS Number) that the service request is about"
@@ -163,22 +158,6 @@
                         }
                     ],
                     "searchParam": [
-                        {
-                            "name": "patient:identifier",
-                            "type": "token",
-                            "documentation": "Search for appointment for a patient by NHS Number",
-                            "extension": [
-                                {
-                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-APIDefinition-OAS",
-                                    "extension": [
-                                        {
-                                            "url": "required",
-                                            "valueBoolean": true
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
                         {
                             "name": "patient.identifier",
                             "type": "token",
