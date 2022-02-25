@@ -142,7 +142,6 @@
                         }
                     ],
                     "searchParam": [
-                       
                         {
                             "name": "patient:identifier",
                             "type": "token",
@@ -324,6 +323,10 @@
                             ]
                         }
                     ],
+                    "searchRevInclude": [
+                        "Appointment:based-on",
+                        "Task:focus"
+                    ],
                     "searchParam": [
                         {
                             "name": "patient:identifier",
@@ -334,6 +337,11 @@
                             "name": "category",
                             "type": "token",
                             "documentation": "Classification of service"
+                        },
+                        {
+                            "name": "_revinclude",
+                            "type": "composite",
+                            "documentation": "Inclusions that drive the rescursive depth of the search"
                         }
                     ]
                 },
