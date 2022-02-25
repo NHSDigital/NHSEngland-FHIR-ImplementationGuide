@@ -97,7 +97,7 @@
               "actor": {
                 "reference": "Location/1123",
                 "type": "Location",
-                "display": "A Ward, West Wing, Elmet Hospital"
+                "display": "A Ward, West Wing, Elmet NHS Hospital"
               },
               "required": "required",
               "status": "accepted"
@@ -108,7 +108,8 @@
                 "identifier": {
                   "system": "http://fhir.nhs.uk/Id/ers-service",
                   "value": "11021"
-                }
+                },
+                "display": "Respiratory Service, Elmet NHS Hospital"
               },
               "status": "accepted"
             }
