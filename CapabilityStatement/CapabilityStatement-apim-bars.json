@@ -119,12 +119,12 @@
                         }
                     ],
                     "searchInclude" : [
-                        "Schedule",
-                        "Practitioner",
-                        "PractitionerRole",
-                        "HealthcareService",
-                        "ProvidedBy",
-                        "Location"
+                        "Slot:schedule",
+                        "Schedule:actor:Practitioner",
+                        "Schedule:actor:PractitionerRole",
+                        "Schedule:actor:HealthcareService",
+                        "Schedule:actor:Organization",
+                        "Schedule:actor:Location"
                     ],
                     "searchParam": [
                         {
