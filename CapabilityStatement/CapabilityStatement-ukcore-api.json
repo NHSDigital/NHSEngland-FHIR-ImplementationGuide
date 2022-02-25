@@ -91,6 +91,11 @@
                             "documentation": "Search for appointment for a patient by NHS Number"
                         },
                         {
+                            "name": "patient.identifier",
+                            "type": "token",
+                            "documentation": "Search for appointment for a patient by NHS Number"
+                        },
+                        {
                             "name": "date",
                             "type": "date",
                             "documentation": "Appointment date/time."
@@ -131,10 +136,15 @@
                         {
                             "name": "patient",
                             "type": "reference",
-                            "documentation": "Search Encounters by NHS Number"
+                            "documentation": "Search Encounters by patient reference"
                         },
                         {
                             "name": "patient:identifier",
+                            "type": "token",
+                            "documentation": "The patient or group present at the encounter"
+                        },
+                        {
+                            "name": "patient.identifier",
                             "type": "token",
                             "documentation": "The patient or group present at the encounter"
                         },

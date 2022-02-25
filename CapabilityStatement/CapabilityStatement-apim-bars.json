@@ -52,13 +52,13 @@
         }
     ],
     "id": "b2a5d2b7-f47e-4b75-bed9-f2e79a08d263",
-    "url": "https://fhir.nhs.uk/CapabilityStatement/apim-bars-supplier",
+    "url": "https://fhir.nhs.uk/CapabilityStatement/apim-bars",
     "version": "3.0.0",
     "name": "SupplierEvents",
     "status": "active",
     "date": "2021-04-28T00:00:00+00:00",
     "publisher": "digital.nhs.uk",
-    "description": "API Definition for BaRS (supplier)",
+    "description": "API Definition for BaRS",
     "kind": "requirements",
     "fhirVersion": "4.0.1",
     "format": [
@@ -98,7 +98,12 @@
                     ],
                     "searchParam": [
                         {
-                            "name": "patientIdentifier",
+                            "name": "patient:identifier",
+                            "type": "token",
+                            "documentation": "The patient identifier (e.g. NHS Number) that the service request is about"
+                        },
+                        {
+                            "name": "patient.identifier",
                             "type": "token",
                             "documentation": "The patient identifier (e.g. NHS Number) that the service request is about"
                         }
@@ -113,6 +118,14 @@
                             "documentation": "Get slots"
                         }
                     ],
+                    "searchInclude" : [
+                        "Schedule",
+                        "Practitioner",
+                        "PractitionerRole",
+                        "HealthcareService",
+                        "ProvidedBy",
+                        "Location"
+                    ],
                     "searchParam": [
                         {
                             "name": "status",
@@ -122,12 +135,12 @@
                         {
                             "name": "start",
                             "type": "date",
-                            "documentation": "Appointment date/time."
+                            "documentation": "Appointment start date/time."
                         },
                         {
                             "name": "end",
                             "type": "date",
-                            "documentation": "Appointment date/time."
+                            "documentation": "Appointment end date/time."
                         },
                         {
                             "name": "_include",
@@ -151,7 +164,23 @@
                     ],
                     "searchParam": [
                         {
-                            "name": "patientIdentifier",
+                            "name": "patient:identifier",
+                            "type": "token",
+                            "documentation": "Search for appointment for a patient by NHS Number",
+                            "extension": [
+                                {
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-APIDefinition-OAS",
+                                    "extension": [
+                                        {
+                                            "url": "required",
+                                            "valueBoolean": true
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "patient.identifier",
                             "type": "token",
                             "documentation": "Search for appointment for a patient by NHS Number",
                             "extension": [
