@@ -18,7 +18,7 @@
         }
     },
     "status": "completed",
-    "intent": "option",
+    "intent": "order",
     "priority" :"urgent",
     "code": {
         "coding": [
