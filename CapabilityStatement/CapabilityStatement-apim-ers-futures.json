@@ -105,6 +105,53 @@
                                     ]
                                 }
                             ]
+                        },
+                        {
+                            "code": "search-type",
+                            "documentation": "Mock for NHS App Wayfinder project",
+                            "extension": [
+                                {
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-APIDefinition-OAS",
+                                    "extension": [
+                                        {
+                                            "url": "example",
+                                            "extension": [
+                                                {
+                                                    "url": "request",
+                                                    "valueBoolean": false
+                                                },
+                                                {
+                                                    "url": "value",
+                                                    "valueReference": {
+                                                        "reference": "Bundle/bfbd03d6-d389-43a9-851f-6c378cb9d758"
+                                                    }
+                                                },
+                                                {
+                                                    "url": "summary",
+                                                    "valueMarkdown": "Sample Patient Appointment search)"
+                                                },
+                                                {
+                                                    "url": "description",
+                                                    "valueMarkdown": "Request **GET [baseUrl]/Appointment?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9912003888&date=gt2022-01-14T10:00** /n Note the example is generated from NHS Digital ITK HLv2 ADT_A05 example."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "searchParam": [
+                       
+                        {
+                            "name": "patient:identifier",
+                            "type": "token",
+                            "documentation": "Search for appointment for a patient by NHS Number"
+                        },
+                        {
+                            "name": "date",
+                            "type": "date",
+                            "documentation": "Appointment date/time."
                         }
                     ]
                 },
