@@ -10,7 +10,7 @@
     <type value="element" />
     <expression value="CapabilityStatement.rest.resource.interaction" />
   </context>
-    <context>
+  <context>
     <type value="element" />
     <expression value="CapabilityStatement.rest.resource.operation" />
   </context>
@@ -37,7 +37,7 @@
       </slicing>
       <min value="0" />
     </element>
-     <element id="Extension.extension:schema">
+    <element id="Extension.extension:schema">
       <path value="Extension.extension" />
       <sliceName value="schema" />
       <min value="0" />
@@ -51,7 +51,7 @@
         </discriminator>
         <rules value="open" />
       </slicing>
-      <min value="1" />
+      <min value="0" />
     </element>
     <element id="Extension.extension:schema.extension:minimum">
       <path value="Extension.extension.extension" />
@@ -103,6 +103,30 @@
       <type>
         <code value="string" />
       </type>
+    </element>
+    <element id="Extension.extension:schema.extension:required">
+      <path value="Extension.extension.extension" />
+      <sliceName value="required" />
+      <min value="0" />
+    </element>
+    <element id="Extension.extension:schema.extension:required.url">
+      <path value="Extension.extension.extension.url" />
+      <fixedUri value="required" />
+    </element>
+    <element id="Extension.extension:schema.extension:required.value[x]">
+      <path value="Extension.extension.extension.value[x]" />
+      <min value="1" />
+      <type>
+        <code value="boolean" />
+      </type>
+    </element>
+    <element id="Extension.extension:schema.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="schema" />
+    </element>
+    <element id="Extension.extension:schema.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <max value="0" />
     </element>
     <element id="Extension.extension:example">
       <path value="Extension.extension" />
@@ -213,23 +237,6 @@
     <element id="Extension.extension:example.value[x]">
       <path value="Extension.extension.value[x]" />
       <max value="0" />
-    </element>
-    <element id="Extension.extension:required">
-      <path value="Extension.extension" />
-      <sliceName value="required" />
-      <min value="0" />
-      <max value="1" />
-    </element>
-    <element id="Extension.extension:required.url">
-      <path value="Extension.extension.url" />
-      <fixedUri value="required" />
-    </element>
-    <element id="Extension.extension:required.value[x]">
-      <path value="Extension.extension.value[x]" />
-      <min value="1" />
-      <type>
-        <code value="boolean" />
-      </type>
     </element>
     <element id="Extension.url">
       <path value="Extension.url" />
