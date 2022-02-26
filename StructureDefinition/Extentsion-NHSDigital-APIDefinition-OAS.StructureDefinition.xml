@@ -37,6 +37,73 @@
       </slicing>
       <min value="0" />
     </element>
+     <element id="Extension.extension:schema">
+      <path value="Extension.extension" />
+      <sliceName value="schema" />
+      <min value="0" />
+    </element>
+    <element id="Extension.extension:schema.extension">
+      <path value="Extension.extension.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="Extension.extension:schema.extension:minimum">
+      <path value="Extension.extension.extension" />
+      <sliceName value="minimum" />
+      <min value="0" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:schema.extension:minimum.url">
+      <path value="Extension.extension.extension.url" />
+      <fixedUri value="minimum" />
+    </element>
+    <element id="Extension.extension:schema.extension:minimum.value[x]">
+      <path value="Extension.extension.extension.value[x]" />
+      <min value="1" />
+      <type>
+        <code value="integer" />
+      </type>
+    </element>
+    <element id="Extension.extension:schema.extension:maximum">
+      <path value="Extension.extension.extension" />
+      <sliceName value="maximum" />
+      <min value="0" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:schema.extension:maximum.url">
+      <path value="Extension.extension.extension.url" />
+      <fixedUri value="maximum" />
+    </element>
+    <element id="Extension.extension:schema.extension:maximum.value[x]">
+      <path value="Extension.extension.extension.value[x]" />
+      <min value="1" />
+      <type>
+        <code value="integer" />
+      </type>
+    </element>
+    <element id="Extension.extension:schema.extension:exampleParameter">
+      <path value="Extension.extension.extension" />
+      <sliceName value="exampleParameter" />
+      <min value="0" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:schema.extension:exampleParameter.url">
+      <path value="Extension.extension.extension.url" />
+      <fixedUri value="exampleParameter" />
+    </element>
+    <element id="Extension.extension:schema.extension:exampleParameter.value[x]">
+      <path value="Extension.extension.extension.value[x]" />
+      <min value="1" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
     <element id="Extension.extension:example">
       <path value="Extension.extension" />
       <sliceName value="example" />
