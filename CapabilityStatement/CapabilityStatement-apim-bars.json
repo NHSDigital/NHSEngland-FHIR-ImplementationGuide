@@ -167,8 +167,25 @@
                                     "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-APIDefinition-OAS",
                                     "extension": [
                                         {
-                                            "url": "required",
-                                            "valueBoolean": true
+                                            "url": "schema",
+                                            "extension": [
+                                                {
+                                                    "url": "required",
+                                                    "valueBoolean": true
+                                                },
+                                                {
+                                                    "url": "minimum",
+                                                    "valueInteger": 1
+                                                },
+                                                {
+                                                    "url": "maximum",
+                                                    "valueInteger": 1
+                                                },
+                                                {
+                                                    "url": "exampleParameter",
+                                                    "valueString": "https://fhir.nhs.uk/Id/nhs-number|9000000009"
+                                                }
+                                            ]
                                         }
                                     ]
                                 }
