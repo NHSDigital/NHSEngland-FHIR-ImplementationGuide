@@ -84,12 +84,12 @@
       <path value="Extension.extension.value[x]" />
       <max value="0" />
     </element>
-    <element id="Extension.extension:FHIRPakcage">
+    <element id="Extension.extension:FHIRPackage">
       <path value="Extension.extension" />
-      <sliceName value="FHIRPakcage" />
+      <sliceName value="FHIRPackage" />
       <min value="1" />
     </element>
-    <element id="Extension.extension:FHIRPakcage.extension">
+    <element id="Extension.extension:FHIRPackage.extension">
       <path value="Extension.extension.extension" />
       <slicing>
         <discriminator>
@@ -99,40 +99,40 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Extension.extension:FHIRPakcage.extension:name">
+    <element id="Extension.extension:FHIRPackage.extension:name">
       <path value="Extension.extension.extension" />
       <sliceName value="name" />
       <min value="1" />
       <max value="1" />
     </element>
-    <element id="Extension.extension:FHIRPakcage.extension:name.url">
+    <element id="Extension.extension:FHIRPackage.extension:name.url">
       <path value="Extension.extension.extension.url" />
       <fixedUri value="name" />
     </element>
-    <element id="Extension.extension:FHIRPakcage.extension:name.value[x]">
+    <element id="Extension.extension:FHIRPackage.extension:name.value[x]">
       <path value="Extension.extension.extension.value[x]" />
       <min value="1" />
       <type>
         <code value="string" />
       </type>
     </element>
-    <element id="Extension.extension:FHIRPakcage.extension:version">
+    <element id="Extension.extension:FHIRPackage.extension:version">
       <path value="Extension.extension.extension" />
       <sliceName value="version" />
       <max value="1" />
     </element>
-    <element id="Extension.extension:FHIRPakcage.extension:version.url">
+    <element id="Extension.extension:FHIRPackage.extension:version.url">
       <path value="Extension.extension.extension.url" />
       <fixedUri value="version" />
     </element>
-    <element id="Extension.extension:FHIRPakcage.extension:version.value[x]">
+    <element id="Extension.extension:FHIRPackage.extension:version.value[x]">
       <path value="Extension.extension.extension.value[x]" />
     </element>
-    <element id="Extension.extension:FHIRPakcage.url">
+    <element id="Extension.extension:FHIRPackage.url">
       <path value="Extension.extension.url" />
-      <fixedUri value="FHIRPakcage" />
+      <fixedUri value="FHIRPackage" />
     </element>
-    <element id="Extension.extension:FHIRPakcage.value[x]">
+    <element id="Extension.extension:FHIRPackage.value[x]">
       <path value="Extension.extension.value[x]" />
       <max value="0" />
     </element>

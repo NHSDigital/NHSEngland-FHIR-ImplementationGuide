@@ -5,7 +5,7 @@
             "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-CapabilityStatement-Package",
             "extension": [
                 {
-                    "url": "FHIRPakcage",
+                    "url": "FHIRPackage",
                     "extension": [
                         {
                             "url": "name",
@@ -14,7 +14,7 @@
                     ]
                 },
                 {
-                    "url": "FHIRPakcage",
+                    "url": "FHIRPackage",
                     "extension": [
                         {
                             "url": "name",
@@ -113,7 +113,7 @@
                             "documentation": "Get slots"
                         }
                     ],
-                    "searchInclude" : [
+                    "searchInclude": [
                         "Slot:schedule",
                         "Schedule:actor:Practitioner",
                         "Schedule:actor:PractitionerRole",
@@ -164,28 +164,23 @@
                             "documentation": "Search for appointment for a patient by NHS Number",
                             "extension": [
                                 {
-                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-CapabilityStatement-Examples",
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-CapabilityStatement-QueryParameters",
                                     "extension": [
                                         {
-                                            "url": "schema",
-                                            "extension": [
-                                                {
-                                                    "url": "required",
-                                                    "valueBoolean": true
-                                                },
-                                                {
-                                                    "url": "minimum",
-                                                    "valueInteger": 1
-                                                },
-                                                {
-                                                    "url": "maximum",
-                                                    "valueInteger": 1
-                                                },
-                                                {
-                                                    "url": "exampleParameter",
-                                                    "valueString": "https://fhir.nhs.uk/Id/nhs-number|9000000009"
-                                                }
-                                            ]
+                                            "url": "required",
+                                            "valueBoolean": true
+                                        },
+                                        {
+                                            "url": "minimum",
+                                            "valueInteger": 1
+                                        },
+                                        {
+                                            "url": "maximum",
+                                            "valueInteger": 1
+                                        },
+                                        {
+                                            "url": "exampleParameter",
+                                            "valueString": "https://fhir.nhs.uk/Id/nhs-number|9000000009"
                                         }
                                     ]
                                 }
@@ -227,10 +222,10 @@
                 {
                     "mode": "receiver",
                     "definition": "https://fhir.nhs.uk/MessageDefinition/subscription-notification",
-                    "extension":  [
+                    "extension": [
                         {
                             "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-CapabilityStatement-Examples",
-                            "extension":  [
+                            "extension": [
                                 {
                                     "url": "example",
                                     "extension": [
