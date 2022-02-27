@@ -33,7 +33,7 @@
           }
         ],
         "status": "requested",
-        "intent": "option",
+        "intent": "order",
         "priority": "routine",
         "code": {
           "coding": [
@@ -90,7 +90,7 @@
           }
         ],
         "status": "requested",
-        "intent": "option",
+        "intent": "order",
         "priority": "routine",
         "code": {
           "coding": [
@@ -159,7 +159,7 @@
           }
         },
         "status": "requested",
-        "intent": "option",
+        "intent": "order",
         "priority": "urgent",
         "code": {
           "coding": [

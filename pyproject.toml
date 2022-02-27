@@ -15,7 +15,7 @@ authors = [
 
 readme = 'README.md'
 
-repository = "https://github.com/NHSDigital/NHSDigital-FHIR-Medicines-ImplementationGuide"
+repository = "https://github.com/NHSDigital/NHSDigital-FHIR-Medicines-FHIRPackage"
 homepage = ""
 
 keywords = ["healthcare", "uk", "nhs"] #TODO add additional keywords

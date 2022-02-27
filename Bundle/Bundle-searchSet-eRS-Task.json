@@ -29,7 +29,7 @@
             }
           ],
           "status": "requested",
-          "intent": "option",
+          "intent": "order",
           "priority": "routine",
           "code": {
             "coding": [

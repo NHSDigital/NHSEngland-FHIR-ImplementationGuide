@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-APIDefinition" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-CapabilityStatement-Package" />
   <name value="ExtensionNHSDigitalAPIDefinition" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
@@ -84,12 +84,12 @@
       <path value="Extension.extension.value[x]" />
       <max value="0" />
     </element>
-    <element id="Extension.extension:implementationGuide">
+    <element id="Extension.extension:FHIRPackage">
       <path value="Extension.extension" />
-      <sliceName value="implementationGuide" />
+      <sliceName value="FHIRPackage" />
       <min value="1" />
     </element>
-    <element id="Extension.extension:implementationGuide.extension">
+    <element id="Extension.extension:FHIRPackage.extension">
       <path value="Extension.extension.extension" />
       <slicing>
         <discriminator>
@@ -99,46 +99,46 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Extension.extension:implementationGuide.extension:name">
+    <element id="Extension.extension:FHIRPackage.extension:name">
       <path value="Extension.extension.extension" />
       <sliceName value="name" />
       <min value="1" />
       <max value="1" />
     </element>
-    <element id="Extension.extension:implementationGuide.extension:name.url">
+    <element id="Extension.extension:FHIRPackage.extension:name.url">
       <path value="Extension.extension.extension.url" />
       <fixedUri value="name" />
     </element>
-    <element id="Extension.extension:implementationGuide.extension:name.value[x]">
+    <element id="Extension.extension:FHIRPackage.extension:name.value[x]">
       <path value="Extension.extension.extension.value[x]" />
       <min value="1" />
       <type>
         <code value="string" />
       </type>
     </element>
-    <element id="Extension.extension:implementationGuide.extension:version">
+    <element id="Extension.extension:FHIRPackage.extension:version">
       <path value="Extension.extension.extension" />
       <sliceName value="version" />
       <max value="1" />
     </element>
-    <element id="Extension.extension:implementationGuide.extension:version.url">
+    <element id="Extension.extension:FHIRPackage.extension:version.url">
       <path value="Extension.extension.extension.url" />
       <fixedUri value="version" />
     </element>
-    <element id="Extension.extension:implementationGuide.extension:version.value[x]">
+    <element id="Extension.extension:FHIRPackage.extension:version.value[x]">
       <path value="Extension.extension.extension.value[x]" />
     </element>
-    <element id="Extension.extension:implementationGuide.url">
+    <element id="Extension.extension:FHIRPackage.url">
       <path value="Extension.extension.url" />
-      <fixedUri value="implementationGuide" />
+      <fixedUri value="FHIRPackage" />
     </element>
-    <element id="Extension.extension:implementationGuide.value[x]">
+    <element id="Extension.extension:FHIRPackage.value[x]">
       <path value="Extension.extension.value[x]" />
       <max value="0" />
     </element>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-APIDefinition" />
+      <fixedUri value="https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-CapabilityStatement-Package" />
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />
