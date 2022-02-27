@@ -72,8 +72,8 @@
       <path value="CapabilityStatement.fhirVersion" />
       <mustSupport value="true" />
     </element>
-    <element id="CapabilityStatement.FHIRPackage">
-      <path value="CapabilityStatement.FHIRPackage" />
+    <element id="CapabilityStatement.implementationGuide">
+      <path value="CapabilityStatement.implementationGuide" />
       <mustSupport value="true" />
     </element>
     <element id="CapabilityStatement.rest">
