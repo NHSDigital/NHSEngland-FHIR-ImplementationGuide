@@ -147,20 +147,12 @@
     </element>
     <element id="ServiceRequest.requester">
       <path value="ServiceRequest.requester" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-PractitionerRole" />
+      </type>
       <min value="1" />
       <mustSupport value="true" />
-    </element>
-    <element id="ServiceRequest.requester.identifier">
-      <path value="ServiceRequest.requester.identifier" />
-      <mustSupport value="true" />
-    </element>
-    <element id="ServiceRequest.requester.identifier.system">
-      <path value="ServiceRequest.requester.identifier.system" />
-      <min value="1" />
-    </element>
-    <element id="ServiceRequest.requester.identifier.value">
-      <path value="ServiceRequest.requester.identifier.value" />
-      <min value="1" />
     </element>
     <element id="ServiceRequest.performerType">
       <path value="ServiceRequest.performerType" />
