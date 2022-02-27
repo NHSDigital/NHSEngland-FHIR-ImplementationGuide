@@ -61,7 +61,7 @@
       <max value="1" />
     </element>
     <element id="Extension.extension:maximum.url">
-      <path value="Extension.extensionurl" />
+      <path value="Extension.extension.url" />
       <fixedUri value="maximum" />
     </element>
     <element id="Extension.extension:maximum.value[x]">
