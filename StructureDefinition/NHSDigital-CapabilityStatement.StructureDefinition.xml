@@ -41,9 +41,9 @@
       </slicing>
       <min value="0" />
     </element>
-    <element id="CapabilityStatement.extension:apiDefinition">
+    <element id="CapabilityStatement.extension:Package">
       <path value="CapabilityStatement.extension" />
-      <sliceName value="apiDefinition" />
+      <sliceName value="Package" />
       <min value="0" />
       <max value="1" />
       <type>

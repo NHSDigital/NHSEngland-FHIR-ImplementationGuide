@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="Extension-NHSDigital-CapabilityStatement-QueryParameters" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-CapabilityStatement-QueryParameters" />
   <name value="APIDefinitionOAS" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
@@ -104,8 +104,7 @@
         <code value="boolean" />
       </type>
     </element>
-    
-       <element id="Extension.url">
+    <element id="Extension.url">
       <path value="Extension.url" />
       <fixedUri value="https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-CapabilityStatement-QueryParameters" />
     </element>
