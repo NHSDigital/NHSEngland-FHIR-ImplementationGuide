@@ -2,10 +2,10 @@
     "resourceType": "CapabilityStatement",
     "extension": [
         {
-            "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-APIDefinition",
+            "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-CapabilityStatement-Package",
             "extension": [
                 {
-                    "url": "implementationGuide",
+                    "url": "FHIRPakcage",
                     "extension": [
                         {
                             "url": "name",
@@ -14,7 +14,7 @@
                     ]
                 },
                 {
-                    "url": "implementationGuide",
+                    "url": "FHIRPakcage",
                     "extension": [
                         {
                             "url": "name",
@@ -164,7 +164,7 @@
                             "documentation": "Search for appointment for a patient by NHS Number",
                             "extension": [
                                 {
-                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-APIDefinition-OAS",
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-CapabilityStatement-Examples",
                                     "extension": [
                                         {
                                             "url": "schema",
@@ -229,7 +229,7 @@
                     "definition": "https://fhir.nhs.uk/MessageDefinition/subscription-notification",
                     "extension":  [
                         {
-                            "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-APIDefinition-OAS",
+                            "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-CapabilityStatement-Examples",
                             "extension":  [
                                 {
                                     "url": "example",

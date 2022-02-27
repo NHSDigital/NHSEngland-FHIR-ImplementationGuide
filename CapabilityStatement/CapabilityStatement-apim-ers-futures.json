@@ -3,10 +3,10 @@
     "id": "8803e391-f306-42d3-8302-655c1dc49236",
     "extension": [
         {
-            "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-APIDefinition",
+            "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-CapabilityStatement-Package",
             "extension": [
                 {
-                    "url": "implementationGuide",
+                    "url": "FHIRPakcage",
                     "extension": [
                         {
                             "url": "name",
@@ -15,7 +15,7 @@
                     ]
                 },
                 {
-                    "url": "implementationGuide",
+                    "url": "FHIRPakcage",
                     "extension": [
                         {
                             "url": "name",
@@ -77,7 +77,7 @@
                             "documentation": "[A016 - Book or defer appointment](https://digital.nhs.uk/developer/api-catalogue/e-referral-service-fhir#api-Default-a016-book-or-defer-appointment)",
                             "extension": [
                                 {
-                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-APIDefinition-OAS",
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-CapabilityStatement-Examples",
                                     "extension": [
                                         {
                                             "url": "example",
@@ -111,7 +111,7 @@
                             "documentation": "Mock for NHS App Wayfinder project",
                             "extension": [
                                 {
-                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-APIDefinition-OAS",
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-CapabilityStatement-Examples",
                                     "extension": [
                                         {
                                             "url": "example",
@@ -145,7 +145,35 @@
                         {
                             "name": "patient:identifier",
                             "type": "token",
-                            "documentation": "Search for appointment for a patient by NHS Number"
+                            "documentation": "Search for appointment for a patient by NHS Number",
+                            "extension": [
+                                {
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-CapabilityStatement-Examples",
+                                    "extension": [
+                                        {
+                                            "url": "schema",
+                                            "extension": [
+                                                {
+                                                    "url": "required",
+                                                    "valueBoolean": true
+                                                },
+                                                {
+                                                    "url": "minimum",
+                                                    "valueInteger": 1
+                                                },
+                                                {
+                                                    "url": "maximum",
+                                                    "valueInteger": 1
+                                                },
+                                                {
+                                                    "url": "exampleParameter",
+                                                    "valueString": "https://fhir.nhs.uk/Id/nhs-number|9000000009"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
                         },
                         {
                             "name": "date",
@@ -163,7 +191,7 @@
                             "code": "read",
                             "extension": [
                                 {
-                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-APIDefinition-OAS",
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-CapabilityStatement-Examples",
                                     "extension": [
                                         {
                                             "url": "example",
@@ -189,7 +217,7 @@
                             "code": "create",
                             "extension": [
                                 {
-                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-APIDefinition-OAS",
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-CapabilityStatement-Examples",
                                     "extension": [
                                         {
                                             "url": "example",
@@ -268,7 +296,7 @@
                             "code": "update",
                             "extension": [
                                 {
-                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-APIDefinition-OAS",
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-CapabilityStatement-Examples",
                                     "extension": [
                                         {
                                             "url": "example",
@@ -293,7 +321,7 @@
                             "code": "search-type",
                             "extension": [
                                 {
-                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-APIDefinition-OAS",
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-CapabilityStatement-Examples",
                                     "extension": [
                                         {
                                             "url": "example",
@@ -331,7 +359,35 @@
                         {
                             "name": "patient:identifier",
                             "type": "token",
-                            "documentation": "The patient identifier (e.g. NHS Number) that the service request is about"
+                            "documentation": "The patient identifier (e.g. NHS Number) that the service request is about",
+                            "extension": [
+                                {
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-CapabilityStatement-Examples",
+                                    "extension": [
+                                        {
+                                            "url": "schema",
+                                            "extension": [
+                                                {
+                                                    "url": "required",
+                                                    "valueBoolean": true
+                                                },
+                                                {
+                                                    "url": "minimum",
+                                                    "valueInteger": 1
+                                                },
+                                                {
+                                                    "url": "maximum",
+                                                    "valueInteger": 1
+                                                },
+                                                {
+                                                    "url": "exampleParameter",
+                                                    "valueString": "https://fhir.nhs.uk/Id/nhs-number|9000000009"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
                         },
                         {
                             "name": "category",
@@ -354,7 +410,7 @@
                             "code": "read",
                             "extension": [
                                 {
-                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-APIDefinition-OAS",
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-CapabilityStatement-Examples",
                                     "extension": [
                                         {
                                             "url": "example",
@@ -379,7 +435,7 @@
                             "code": "update",
                             "extension": [
                                 {
-                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-APIDefinition-OAS",
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-CapabilityStatement-Examples",
                                     "extension": [
                                         {
                                             "url": "example",
@@ -482,7 +538,7 @@
                             "code": "create",
                             "extension": [
                                 {
-                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-APIDefinition-OAS",
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-CapabilityStatement-Examples",
                                     "extension": [
                                         {
                                             "url": "example",
@@ -515,7 +571,7 @@
                             "code": "search-type",
                             "extension": [
                                 {
-                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-APIDefinition-OAS",
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-CapabilityStatement-Examples",
                                     "extension": [
                                         {
                                             "url": "example",
@@ -599,7 +655,7 @@
                             "documentation": "[A015 - Retrieve appointment slots](https://digital.nhs.uk/developer/api-catalogue/e-referral-service-fhir#api-Default-a015-retrieve-appointment-slots)",
                             "extension": [
                                 {
-                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-APIDefinition-OAS",
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-CapabilityStatement-Examples",
                                     "extension": [
                                         {
                                             "url": "example",
@@ -652,7 +708,7 @@
                             "documentation": "Use this api to create a shortlist",
                             "extension": [
                                 {
-                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-APIDefinition-OAS",
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-CapabilityStatement-Examples",
                                     "extension": [
                                         {
                                             "url": "example",
@@ -678,7 +734,7 @@
                             "documentation": "Use this api to retrieve a shortlist",
                             "extension": [
                                 {
-                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-APIDefinition-OAS",
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-CapabilityStatement-Examples",
                                     "extension": [
                                         {
                                             "url": "example",
@@ -710,7 +766,7 @@
                             "documentation": "[A010 - Patient service search](https://digital.nhs.uk/developer/api-catalogue/e-referral-service-fhir#api-Default-a010-patient-service-search)",
                             "extension": [
                                 {
-                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-APIDefinition-OAS",
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-CapabilityStatement-Examples",
                                     "extension": [
                                         {
                                             "url": "example",
@@ -736,7 +792,7 @@
                             "documentation": "Unable to find existing matching service",
                             "extension": [
                                 {
-                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-APIDefinition-OAS",
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-CapabilityStatement-Examples",
                                     "extension": [
                                         {
                                             "url": "example",
@@ -780,7 +836,7 @@
                             "code": "read",
                             "extension": [
                                 {
-                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-APIDefinition-OAS",
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-CapabilityStatement-Examples",
                                     "extension": [
                                         {
                                             "url": "example",
@@ -805,7 +861,7 @@
                             "code": "create",
                             "extension": [
                                 {
-                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-APIDefinition-OAS",
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-CapabilityStatement-Examples",
                                     "extension": [
                                         {
                                             "url": "example",
@@ -845,7 +901,7 @@
                             "documentation": "[A006 - Retrieve attachment](https://digital.nhs.uk/developer/api-catalogue/e-referral-service-fhir#api-Default-a006-retrieve-attachment)",
                             "extension": [
                                 {
-                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-APIDefinition-OAS",
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-CapabilityStatement-Examples",
                                     "extension": [
                                         {
                                             "url": "example",
@@ -871,7 +927,7 @@
                             "documentation": "[A020 - Upload file to document store](https://digital.nhs.uk/developer/api-catalogue/e-referral-service-fhir#api-Default-a020-upload-file-to-document-store)",
                             "extension": [
                                 {
-                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-APIDefinition-OAS",
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-CapabilityStatement-Examples",
                                     "extension": [
                                         {
                                             "url": "example",

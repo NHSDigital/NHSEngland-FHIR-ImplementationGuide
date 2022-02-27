@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="Extension-NHSDigital-CapabilityStatement-QueryParameters" />
+  <name value="APIDefinitionOAS" />
+  <status value="draft" />
+  <fhirVersion value="4.0.1" />
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <context>
+    <type value="element" />
+    <expression value="CapabilityStatement.rest.resource.interaction" />
+  </context>
+  <context>
+    <type value="element" />
+    <expression value="CapabilityStatement.rest.resource.operation" />
+  </context>
+  <context>
+    <type value="element" />
+    <expression value="CapabilityStatement.messaging.supportedMessage" />
+  </context>
+  <context>
+    <type value="element" />
+    <expression value="CapabilityStatement.rest.resource.searchParam" />
+  </context>
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Extension.extension">
+      <path value="Extension.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="Extension.extension:schema">
+      <path value="Extension.extension" />
+      <sliceName value="schema" />
+      <min value="0" />
+    </element>
+    <element id="Extension.extension:schema.extension">
+      <path value="Extension.extension.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="Extension.extension:schema.extension:minimum">
+      <path value="Extension.extension.extension" />
+      <sliceName value="minimum" />
+      <min value="0" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:schema.extension:minimum.url">
+      <path value="Extension.extension.extension.url" />
+      <fixedUri value="minimum" />
+    </element>
+    <element id="Extension.extension:schema.extension:minimum.value[x]">
+      <path value="Extension.extension.extension.value[x]" />
+      <min value="1" />
+      <type>
+        <code value="integer" />
+      </type>
+    </element>
+    <element id="Extension.extension:schema.extension:maximum">
+      <path value="Extension.extension.extension" />
+      <sliceName value="maximum" />
+      <min value="0" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:schema.extension:maximum.url">
+      <path value="Extension.extension.extension.url" />
+      <fixedUri value="maximum" />
+    </element>
+    <element id="Extension.extension:schema.extension:maximum.value[x]">
+      <path value="Extension.extension.extension.value[x]" />
+      <min value="1" />
+      <type>
+        <code value="integer" />
+      </type>
+    </element>
+    <element id="Extension.extension:schema.extension:exampleParameter">
+      <path value="Extension.extension.extension" />
+      <sliceName value="exampleParameter" />
+      <min value="0" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:schema.extension:exampleParameter.url">
+      <path value="Extension.extension.extension.url" />
+      <fixedUri value="exampleParameter" />
+    </element>
+    <element id="Extension.extension:schema.extension:exampleParameter.value[x]">
+      <path value="Extension.extension.extension.value[x]" />
+      <min value="1" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="Extension.extension:schema.extension:required">
+      <path value="Extension.extension.extension" />
+      <sliceName value="required" />
+      <min value="0" />
+    </element>
+    <element id="Extension.extension:schema.extension:required.url">
+      <path value="Extension.extension.extension.url" />
+      <fixedUri value="required" />
+    </element>
+    <element id="Extension.extension:schema.extension:required.value[x]">
+      <path value="Extension.extension.extension.value[x]" />
+      <min value="1" />
+      <type>
+        <code value="boolean" />
+      </type>
+    </element>
+    <element id="Extension.extension:schema.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="schema" />
+    </element>
+    <element id="Extension.extension:schema.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <max value="0" />
+    </element>
+       <element id="Extension.url">
+      <path value="Extension.url" />
+      <fixedUri value="https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-CapabilityStatement-QueryParameters" />
+    </element>
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>

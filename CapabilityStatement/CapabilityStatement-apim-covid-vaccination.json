@@ -3,10 +3,10 @@
     "id": "2c4db263-f666-4746-b0e0-cd0b515554ae",
     "extension": [
         {
-            "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-APIDefinition",
+            "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-CapabilityStatement-Package",
             "extension": [
                 {
-                    "url": "implementationGuide",
+                    "url": "FHIRPakcage",
                     "extension": [
                         {
                             "url": "name",
@@ -15,7 +15,7 @@
                     ]
                 },
                 {
-                    "url": "implementationGuide",
+                    "url": "FHIRPakcage",
                     "extension": [
                         {
                             "url": "name",
@@ -63,7 +63,7 @@
                             "code": "search-type",
                             "extension": [
                                 {
-                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-APIDefinition-OAS",
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-CapabilityStatement-Examples",
                                     "extension": [
                                         {
                                             "url": "example",

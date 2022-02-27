@@ -48,7 +48,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-APIDefinition" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-CapabilityStatement-Package" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -72,8 +72,8 @@
       <path value="CapabilityStatement.fhirVersion" />
       <mustSupport value="true" />
     </element>
-    <element id="CapabilityStatement.implementationGuide">
-      <path value="CapabilityStatement.implementationGuide" />
+    <element id="CapabilityStatement.FHIRPakcage">
+      <path value="CapabilityStatement.FHIRPakcage" />
       <mustSupport value="true" />
     </element>
     <element id="CapabilityStatement.rest">
@@ -144,14 +144,14 @@
       </slicing>
       <min value="0" />
     </element>
-    <element id="CapabilityStatement.rest.resource.interaction.extension:OAS">
+    <element id="CapabilityStatement.rest.resource.interaction.extension:Examples">
       <path value="CapabilityStatement.rest.resource.interaction.extension" />
-      <sliceName value="OAS" />
+      <sliceName value="Examples" />
       <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-APIDefinition-OAS" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-CapabilityStatement-Examples" />
       </type>
     </element>
     <element id="CapabilityStatement.messaging">
@@ -169,14 +169,14 @@
       </slicing>
       <min value="0" />
     </element>
-    <element id="CapabilityStatement.messaging.supportedMessage.extension:OAS">
+    <element id="CapabilityStatement.messaging.supportedMessage.extension:Examples">
       <path value="CapabilityStatement.messaging.supportedMessage.extension" />
-      <sliceName value="OAS" />
+      <sliceName value="Examples" />
       <min value="0" />
       <max value="*" />
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-APIDefinition-OAS" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-CapabilityStatement-Examples" />
       </type>
     </element>
   </differential>
