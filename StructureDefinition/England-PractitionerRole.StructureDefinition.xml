@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="51533f7f-1fa3-4866-a200-01618d377455" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/England-PractitionerRole" />
+  <name value="EnglandPractitionerRole" />
+  <status value="draft" />
+  <fhirVersion value="4.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="PractitionerRole" />
+  <baseDefinition value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-PractitionerRole" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="PractitionerRole">
+      <path value="PractitionerRole" />
+      <constraint>
+        <key value="role-spurious" />
+        <severity value="warning" />
+        <human value="Spurious Code format must be G6NNNNNN or G7NNNNNN" />
+        <expression value="identifier.where(system='https://fhir.hl7.org.uk/Id/nhsbsa-spurious-code').exists().not() or (identifier.where(system='https://fhir.hl7.org.uk/Id/nhsbsa-spurious-code').exists()  and identifier.where(system='https://fhir.hl7.org.uk/Id/nhsbsa-spurious-code').value.matches('^[G]{1}[67]{1}[0-9]{6}$'))" />
+        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole" />
+      </constraint>
+      <constraint>
+        <key value="role-sds-role-profile" />
+        <severity value="warning" />
+        <human value="SDS Role Profile Id must be 12 digits" />
+        <expression value="identifier.where(system='https://fhir.nhs.uk/Id/sds-role-profile-id').exists().not() or (identifier.where(system='https://fhir.nhs.uk/Id/sds-role-profile-id').exists()  and identifier.where(system='https://fhir.nhs.uk/Id/sds-role-profile-id').value.matches('^[0-9]{12}$'))" />
+        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole" />
+      </constraint>
+    </element>
+    <element id="PractitionerRole.extension">
+      <path value="PractitionerRole.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="PractitionerRole.identifier">
+      <path value="PractitionerRole.identifier" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PractitionerRole.identifier:sdsRoleProfileID">
+      <path value="PractitionerRole.identifier" />
+      <sliceName value="sdsRoleProfileID" />
+      <min value="0" />
+      <max value="1" />
+    </element>
+    <element id="PractitionerRole.identifier:sdsRoleProfileID.system">
+      <path value="PractitionerRole.identifier.system" />
+      <fixedUri value="https://fhir.nhs.uk/Id/sds-role-profile-id" />
+    </element>
+    <element id="PractitionerRole.identifier:nhsbsaSpuriousCode">
+      <path value="PractitionerRole.identifier" />
+      <sliceName value="nhsbsaSpuriousCode" />
+      <max value="1" />
+    </element>
+    <element id="PractitionerRole.identifier:nhsbsaSpuriousCode.system">
+      <path value="PractitionerRole.identifier.system" />
+      <fixedUri value="https://fhir.hl7.org.uk/Id/nhsbsa-spurious-code" />
+    </element>
+    <element id="PractitionerRole.practitioner">
+      <path value="PractitionerRole.practitioner" />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Practitioner" />
+      </type>
+      <constraint>
+        <key value="nhsd-2" />
+        <severity value="warning" />
+        <human value="An identifier reference plus a display name or resource reference must be provided" />
+        <expression value="(reference.exists() or (identifier.exists() and display.exists()))" />
+        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole" />
+      </constraint>
+      <constraint>
+        <key value="role-nmc" />
+        <severity value="warning" />
+        <human value="NMC must be of the format NNANNNNA" />
+        <expression value="identifier.exists().not() or identifier.where(system='https://fhir.hl7.org.uk/Id/nmc-number').exists().not() or (identifier.where(system='https://fhir.hl7.org.uk/Id/nmc-number').exists()  and identifier.where(system='https://fhir.hl7.org.uk/Id/nmc-number').value.matches('^[0-9]{2}[A-Z]{1}[0-9]{4}[A-Z]{1}$'))" />
+        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole" />
+      </constraint>
+      <constraint>
+        <key value="role-gmp" />
+        <severity value="warning" />
+        <human value="GMP must be of the format GNNNNNNN and not be a spurious code (starts with G6 or G7)" />
+        <expression value="identifier.exists().not() or identifier.where(system='https://fhir.hl7.org.uk/Id/gmp-number').exists().not() or (identifier.where(system='https://fhir.hl7.org.uk/Id/gmp-number').exists()  and identifier.where(system='https://fhir.hl7.org.uk/Id/gmp-number').value.matches('^[G]{1}[01234589]{1}[0-9]{6}$'))" />
+        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole" />
+      </constraint>
+      <constraint>
+        <key value="role-gmc" />
+        <severity value="warning" />
+        <human value="GMC must be of the format CNNNNNNN" />
+        <expression value="identifier.exists().not() or identifier.where(system='https://fhir.hl7.org.uk/Id/gmc-number').exists().not() or (identifier.where(system='https://fhir.hl7.org.uk/Id/gmc-number').exists()  and identifier.where(system='https://fhir.hl7.org.uk/Id/gmc-number').value.matches('^[C]{1}[0-9]{7}$'))" />
+        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole" />
+      </constraint>
+      <constraint>
+        <key value="role-gphc" />
+        <severity value="warning" />
+        <human value="GPHC must be of the format NNNNNNN" />
+        <expression value="identifier.exists().not() or identifier.where(system='https://fhir.hl7.org.uk/Id/gphc-number').exists().not() or (identifier.where(system='https://fhir.hl7.org.uk/Id/gphc-number').exists()  and identifier.where(system='https://fhir.hl7.org.uk/Id/gphc-number').value.matches('^[0-9]{7}$'))" />
+        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole" />
+      </constraint>
+      <constraint>
+        <key value="role-hcpc" />
+        <severity value="warning" />
+        <human value="HCPC must be of the format AANNNNNN" />
+        <expression value="identifier.exists().not() or identifier.where(system='https://fhir.hl7.org.uk/Id/hcpc-number').exists().not() or (identifier.where(system='https://fhir.hl7.org.uk/Id/hcpc-number').exists()  and identifier.where(system='https://fhir.hl7.org.uk/Id/hcpc-number').value.matches('^[A-Z]{2}[0-9]{6}$'))" />
+        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole" />
+      </constraint>
+      <constraint>
+        <key value="role-din" />
+        <severity value="warning" />
+        <human value="DIN format must be NNNNNN" />
+        <expression value="identifier.exists().not() or identifier.where(system='https://fhir.hl7.org.uk/Id/din-number').exists().not() or (identifier.where(system='https://fhir.hl7.org.uk/Id/din-number').exists()  and identifier.where(system='https://fhir.hl7.org.uk/Id/din-number').value.matches('^[0-9]{6}$'))" />
+        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole" />
+      </constraint>
+      <constraint>
+        <key value="role-sds-user" />
+        <severity value="warning" />
+        <human value="Professional code (GMC, GMP, NMC, etc) is preferred." />
+        <expression value="identifier.exists().not() or identifier.where(system='https://fhir.nhs.uk/Id/sds-user-id').exists().not()" />
+        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole" />
+      </constraint>
+      <mustSupport value="true" />
+    </element>
+    <element id="PractitionerRole.organization">
+      <path value="PractitionerRole.organization" />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Organization" />
+      </type>
+      <constraint>
+        <key value="nhsd-1" />
+        <severity value="error" />
+        <human value="PractitionerRole.organization - An identifier reference plus a display name or resource reference must be provided" />
+        <expression value="(reference.exists() or (identifier.exists() and display.exists()))" />
+        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole" />
+      </constraint>
+      <mustSupport value="true" />
+    </element>
+    <element id="PractitionerRole.organization.identifier.system">
+      <path value="PractitionerRole.organization.identifier.system" />
+      <min value="1" />
+    </element>
+    <element id="PractitionerRole.organization.identifier.value">
+      <path value="PractitionerRole.organization.identifier.value" />
+      <min value="1" />
+    </element>
+    <element id="PractitionerRole.code.coding">
+      <path value="PractitionerRole.code.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="PractitionerRole.code.coding.system">
+      <path value="PractitionerRole.code.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="PractitionerRole.code.coding.code">
+      <path value="PractitionerRole.code.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="PractitionerRole.code.coding:sdsJobRoleName">
+      <path value="PractitionerRole.code.coding" />
+      <sliceName value="sdsJobRoleName" />
+      <max value="1" />
+    </element>
+    <element id="PractitionerRole.code.coding:sdsJobRoleName.system">
+      <path value="PractitionerRole.code.coding.system" />
+      <fixedUri value="https://fhir.hl7org.uk/CodeSystem/UKCore-SDSJobRoleName" />
+    </element>
+    <element id="PractitionerRole.specialty.coding">
+      <path value="PractitionerRole.specialty.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="PractitionerRole.specialty.coding.system">
+      <path value="PractitionerRole.specialty.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="PractitionerRole.specialty.coding.code">
+      <path value="PractitionerRole.specialty.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="PractitionerRole.specialty.coding.display">
+      <path value="PractitionerRole.specialty.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="PractitionerRole.specialty.coding:NHSDataDictionarySpecialty">
+      <path value="PractitionerRole.specialty.coding" />
+      <sliceName value="NHSDataDictionarySpecialty" />
+      <binding>
+        <strength value="required" />
+        <description value="NHS Data Dictionary Specialty" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDataModelAndDictionary-clinical-specialty" />
+      </binding>
+    </element>
+    <element id="PractitionerRole.specialty.coding:NHSDataDictionarySpecialty.system">
+      <path value="PractitionerRole.specialty.coding.system" />
+      <fixedUri value="https://fhir.nhs.uk/CodeSystem/NHSDataModelAndDictionary-clinical-specialty" />
+    </element>
+    <element id="PractitionerRole.specialty.coding:SNOMEDSpecialty">
+      <path value="PractitionerRole.specialty.coding" />
+      <sliceName value="SNOMEDSpecialty" />
+      <binding>
+        <strength value="preferred" />
+        <description value="Specific specialty associated with the agency." />
+        <valueSet value="http://hl7.org/fhir/ValueSet/c80-practice-codes" />
+      </binding>
+    </element>
+    <element id="PractitionerRole.specialty.coding:SNOMEDSpecialty.system">
+      <path value="PractitionerRole.specialty.coding.system" />
+      <fixedUri value="http://snomed.info/sct" />
+    </element>
+    <element id="PractitionerRole.healthcareService">
+      <path value="PractitionerRole.healthcareService" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-HealthcareService" />
+      </type>
+      <constraint>
+        <key value="nhsd-4" />
+        <severity value="error" />
+        <human value="PractitionerRole.healthcareService - An identifier reference plus a display name or resource reference must be provided" />
+        <expression value="(reference.exists() or (identifier.exists() and display.exists()))" />
+        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole" />
+      </constraint>
+      <mustSupport value="true" />
+    </element>
+    <element id="PractitionerRole.healthcareService.identifier.system">
+      <path value="PractitionerRole.healthcareService.identifier.system" />
+      <min value="1" />
+    </element>
+    <element id="PractitionerRole.healthcareService.identifier.value">
+      <path value="PractitionerRole.healthcareService.identifier.value" />
+      <min value="1" />
+    </element>
+    <element id="PractitionerRole.telecom">
+      <path value="PractitionerRole.telecom" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PractitionerRole.telecom.value">
+      <path value="PractitionerRole.telecom.value" />
+      <min value="1" />
+    </element>
+    <element id="PractitionerRole.telecom.use">
+      <path value="PractitionerRole.telecom.use" />
+      <min value="1" />
+    </element>
+  </differential>
+</StructureDefinition>
