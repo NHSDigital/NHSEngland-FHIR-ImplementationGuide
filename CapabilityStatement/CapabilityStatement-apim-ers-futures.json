@@ -382,7 +382,32 @@
                         {
                             "name": "category",
                             "type": "token",
-                            "documentation": "Classification of service"
+                            "documentation": "Classification of service",
+                            "extension": [
+                                {
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-CapabilityStatement-QueryParameters",
+                                    "extension": [
+                                        {
+                                            "url": "required",
+                                            "valueBoolean": false
+                                        },
+                                        {
+                                            "url": "minimum",
+                                            "valueInteger": 0
+                                        },
+                                        {
+                                            "url": "maximum",
+                                            "valueInteger": 1
+                                        },
+                                        {
+                                            "url": "allowedValues",
+                                            "valueReference": {
+                                                "reference": "https://fhir.nhs.uk/ValueSet/England-servicerequest-category"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
                         },
                         {
                             "name": "_revinclude",

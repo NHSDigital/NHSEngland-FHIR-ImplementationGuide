@@ -104,24 +104,24 @@
         <code value="boolean" />
       </type>
     </element>
-    <element id="Extension.extension:valueSet">
+    <element id="Extension.extension:allowedValues">
       <path value="Extension.extension" />
-      <sliceName value="valueSet" />
+      <sliceName value="allowedValues" />
       <min value="0" />
       <max value="1" />
     </element>
-    <element id="Extension.extension:valueSet.url">
+    <element id="Extension.extension:allowedValues.url">
       <path value="Extension.extension.url" />
-      <fixedUri value="valueSet" />
+      <fixedUri value="allowedValues" />
     </element>
-    <element id="Extension.extension:valueSet.value[x]">
+    <element id="Extension.extension:allowedValues.value[x]">
       <path value="Extension.extension.value[x]" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/ValueSet" />
       </type>
     </element>
-    <element id="Extension.extension:valueSet.value[x].reference">
+    <element id="Extension.extension:allowedValues.value[x].reference">
       <path value="Extension.extension.value[x].reference" />
       <min value="1" />
     </element>
