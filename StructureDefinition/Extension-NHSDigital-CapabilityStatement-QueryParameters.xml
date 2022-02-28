@@ -104,6 +104,45 @@
         <code value="boolean" />
       </type>
     </element>
+    <element id="Extension.extension:valueSet">
+      <path value="Extension.extension" />
+      <sliceName value="valueSet" />
+      <min value="0" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:valueSet.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="valueSet" />
+    </element>
+    <element id="Extension.extension:valueSet.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/ValueSet" />
+      </type>
+    </element>
+    <element id="Extension.extension:valueSet.value[x].reference">
+      <path value="Extension.extension.value[x].reference" />
+      <min value="1" />
+    </element>
+    <element id="Extension.extension:showCodeAndSystem">
+      <path value="Extension.extension" />
+      <sliceName value="showCodeAndSystem" />
+      <comment value="Default value is true, in the OAS both CodeSystem and Values will be displayed" />
+      <min value="0" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:showCodeAndSystem.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="showCodeAndSystem" />
+    </element>
+    <element id="Extension.extension:showCodeAndSystem.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <min value="1" />
+      <type>
+        <code value="boolean" />
+      </type>
+    </element>
     <element id="Extension.url">
       <path value="Extension.url" />
       <fixedUri value="https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-CapabilityStatement-QueryParameters" />
