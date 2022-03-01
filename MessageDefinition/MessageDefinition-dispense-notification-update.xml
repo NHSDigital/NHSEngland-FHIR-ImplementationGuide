@@ -5,11 +5,11 @@
         <system value="https://tools.ietf.org/html/rfc4122"></system>
         <value value="16aa190c-9ef3-49b3-b323-a40148f0f072"></value>
     </identifier>
-    <version value="1.0.0"></version>
+    <version value="1.0.1"></version>
     <name value="NHSDigitalDispenseNotificationUpdate" />
     <title value="Pharmacy/Treatment Dispense Update"></title>
-    <status value="active"></status>
-    <date value="2021-05-15"></date>
+    <status value="retired"></status>
+    <date value="2022-03-01"></date>
     <eventCoding>
         <system value="https://fhir.nhs.uk/CodeSystem/message-event"></system>
         <code value="dispense-notification-update"></code>
