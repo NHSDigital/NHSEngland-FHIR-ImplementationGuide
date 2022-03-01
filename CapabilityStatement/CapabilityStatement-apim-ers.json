@@ -1,0 +1,1029 @@
+{
+    "resourceType": "CapabilityStatement",
+    "id": "8803e391-f306-42d3-8302-655c1dc49236",
+    "extension": [
+        {
+            "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-CapabilityStatement-Package",
+            "extension": [
+                {
+                    "url": "FHIRPackage",
+                    "extension": [
+                        {
+                            "url": "name",
+                            "valueString": "ukcore.release1.test"
+                        }
+                    ]
+                },
+                {
+                    "url": "FHIRPackage",
+                    "extension": [
+                        {
+                            "url": "name",
+                            "valueString": "uk.nhsdigital.r4.test"
+                        }
+                    ]
+                },
+                {
+                    "url": "openApi",
+                    "extension": [
+                        {
+                            "url": "documentation",
+                            "valueUri": "https://digital.nhs.uk/developer/api-catalogue/e-referral-service-fhir"
+                        },
+                        {
+                            "url": "description",
+                            "valueString": "e-Referral Service - FHIR API"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "url": "https://fhir.nhs.uk/CapabilityStatement/apim-ers",
+    "version": "3.0.0",
+    "name": "APIMeRS",
+    "status": "active",
+    "date": "2021-04-28T00:00:00+00:00",
+    "publisher": "digital.nhs.uk",
+    "description": "API definition for eRS",
+    "kind": "requirements",
+    "fhirVersion": "4.0.1",
+    "format": [
+        "application/fhir+json"
+    ],
+    "rest": [
+        {
+            "mode": "server",
+            "security": {
+                "service": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/restful-security-service",
+                                "code": "OAuth",
+                                "display": "OAuth2 Token"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "resource": [
+                {
+                    "type": "Appointment",
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/England-Appointment",
+                    "interaction": [
+                        {
+                            "code": "create",
+                            "documentation": "[A016 - Book or defer appointment](https://digital.nhs.uk/developer/api-catalogue/e-referral-service-fhir#api-Default-a016-book-or-defer-appointment)",
+                            "extension": [
+                                {
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-CapabilityStatement-Examples",
+                                    "extension": [
+                                        {
+                                            "url": "example",
+                                            "extension": [
+                                                {
+                                                    "url": "request",
+                                                    "valueBoolean": true
+                                                },
+                                                {
+                                                    "url": "value",
+                                                    "valueReference": {
+                                                        "reference": "Appointment/391d8d18-159a-4af8-a935-2238ed4db867"
+                                                    }
+                                                },
+                                                {
+                                                    "url": "summary",
+                                                    "valueMarkdown": "Reviewing a Triage Deferral (Triage Scenario Three)"
+                                                },
+                                                {
+                                                    "url": "description",
+                                                    "valueMarkdown": "This is linked to the reivewing a Task [PUT /Task](#/Task/put_Task)."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "code": "search-type",
+                            "documentation": "Mock for NHS App Wayfinder project",
+                            "extension": [
+                                {
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-CapabilityStatement-Examples",
+                                    "extension": [
+                                        {
+                                            "url": "example",
+                                            "extension": [
+                                                {
+                                                    "url": "request",
+                                                    "valueBoolean": false
+                                                },
+                                                {
+                                                    "url": "value",
+                                                    "valueReference": {
+                                                        "reference": "Bundle/bfbd03d6-d389-43a9-851f-6c378cb9d758"
+                                                    }
+                                                },
+                                                {
+                                                    "url": "summary",
+                                                    "valueMarkdown": "Sample Patient Appointment search)"
+                                                },
+                                                {
+                                                    "url": "description",
+                                                    "valueMarkdown": "Request **GET [baseUrl]/Appointment?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9912003888&date=gt2022-01-14T10:00** /n Note the example is generated from NHS Digital ITK HLv2 ADT_A05 example."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "searchParam": [
+                        {
+                            "name": "patient:identifier",
+                            "type": "token",
+                            "documentation": "Search for appointment for a patient by NHS Number",
+                            "extension": [
+                                {
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-CapabilityStatement-QueryParameters",
+                                    "extension": [
+                                        {
+                                            "url": "required",
+                                            "valueBoolean": true
+                                        },
+                                        {
+                                            "url": "minimum",
+                                            "valueInteger": 1
+                                        },
+                                        {
+                                            "url": "maximum",
+                                            "valueInteger": 1
+                                        },
+                                        {
+                                            "url": "exampleParameter",
+                                            "valueString": "https://fhir.nhs.uk/Id/nhs-number|9000000009"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "date",
+                            "type": "date",
+                            "documentation": "Appointment date/time."
+                        }
+                    ]
+                },
+                {
+                    "type": "ServiceRequest",
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/England-ServiceRequest",
+                    "documentation": "Supports Referrals and advice guidance requests (new)",
+                    "interaction": [
+                        {
+                            "code": "read",
+                            "extension": [
+                                {
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-CapabilityStatement-Examples",
+                                    "extension": [
+                                        {
+                                            "url": "example",
+                                            "extension": [
+                                                {
+                                                    "url": "request",
+                                                    "valueBoolean": false
+                                                },
+                                                {
+                                                    "url": "value",
+                                                    "valueReference": {
+                                                        "reference": "ServiceRequest/832db7fa-ebdd-44b6-ab3b-8329c2d43149"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ],
+                            "documentation": "[A005 - Retrieve referral request](https://digital.nhs.uk/developer/api-catalogue/e-referral-service-fhir#api-Default-a005-retrieve-referral-request)"
+                        },
+                        {
+                            "code": "create",
+                            "extension": [
+                                {
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-CapabilityStatement-Examples",
+                                    "extension": [
+                                        {
+                                            "url": "example",
+                                            "extension": [
+                                                {
+                                                    "url": "request",
+                                                    "valueBoolean": true
+                                                },
+                                                {
+                                                    "url": "value",
+                                                    "valueReference": {
+                                                        "reference": "ServiceRequest/832db7fa-ebdd-44b6-ab3b-8329c2d43149"
+                                                    }
+                                                },
+                                                {
+                                                    "url": "summary",
+                                                    "valueMarkdown": "Initial Advice Creation (A+G Scenario One)"
+                                                },
+                                                {
+                                                    "url": "description",
+                                                    "valueMarkdown": "code should be a child concept of Evaluation procedure code (SNOMED CT 386053000)?. The advice and guidance referral is created along with a corresponding worklist (FHIR Task) item. These are retrieved via the [GET /Task](#/Task/get_Task) API and responses are sent via the [PUT /Task](#/Task/put_Task) API."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "url": "example",
+                                            "extension": [
+                                                {
+                                                    "url": "request",
+                                                    "valueBoolean": true
+                                                },
+                                                {
+                                                    "url": "value",
+                                                    "valueReference": {
+                                                        "reference": "ServiceRequest/18253b86-9878-4c3f-b854-af0a9b7728a3"
+                                                    }
+                                                },
+                                                {
+                                                    "url": "summary",
+                                                    "valueMarkdown": "Create Referral (A+G Scenario Five)"
+                                                },
+                                                {
+                                                    "url": "description",
+                                                    "valueMarkdown": "code should be a child concept of Patient Referral procedure code (SNOMED CT 3457005)? \n\n Following from the advice and guidnace workflow completing, it has been decided to refer the patient to a service. Note the use of basedOn to reference the original advice and guidance request. "
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "url": "example",
+                                            "extension": [
+                                                {
+                                                    "url": "request",
+                                                    "valueBoolean": true
+                                                },
+                                                {
+                                                    "url": "value",
+                                                    "valueReference": {
+                                                        "reference": "ServiceRequest/be735573-9f24-42e1-ae98-af89d632e4bf"
+                                                    }
+                                                },
+                                                {
+                                                    "url": "summary",
+                                                    "valueMarkdown": "Initial Referral Creation (Triage Scenario One)"
+                                                },
+                                                {
+                                                    "url": "description",
+                                                    "valueMarkdown": "Note: the status is set to `draft` until this referral is triaged this can not be acted upon. To create the actual defferal see [POST /Task](#/Task/post_Task)"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "code": "update",
+                            "extension": [
+                                {
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-CapabilityStatement-Examples",
+                                    "extension": [
+                                        {
+                                            "url": "example",
+                                            "extension": [
+                                                {
+                                                    "url": "request",
+                                                    "valueBoolean": true
+                                                },
+                                                {
+                                                    "url": "value",
+                                                    "valueReference": {
+                                                        "reference": "ServiceRequest/be735573-9f24-42e1-ae98-af89d632e4bf"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "code": "search-type",
+                            "extension": [
+                                {
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-CapabilityStatement-Examples",
+                                    "extension": [
+                                        {
+                                            "url": "example",
+                                            "extension": [
+                                                {
+                                                    "url": "request",
+                                                    "valueBoolean": false
+                                                },
+                                                {
+                                                    "url": "value",
+                                                    "valueReference": {
+                                                        "reference": "Bundle/09568f32-5a1f-439d-b245-5457dc88827e"
+                                                    }
+                                                },
+                                                {
+                                                    "url": "summary",
+                                                    "valueMarkdown": "Search on NHS Number"
+                                                },
+                                                {
+                                                    "url": "description",
+                                                    "valueMarkdown": "Request **GET [baseUrl]/ServiceRequest?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9912003888**"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "searchRevInclude": [
+                        "Appointment:based-on",
+                        "Task:focus"
+                    ],
+                    "searchParam": [
+                        {
+                            "name": "patient:identifier",
+                            "type": "token",
+                            "documentation": "The patient identifier (e.g. NHS Number) that the service request is about",
+                            "extension": [
+                                {
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-CapabilityStatement-QueryParameters",
+                                    "extension": [
+                                        {
+                                            "url": "required",
+                                            "valueBoolean": true
+                                        },
+                                        {
+                                            "url": "minimum",
+                                            "valueInteger": 1
+                                        },
+                                        {
+                                            "url": "maximum",
+                                            "valueInteger": 1
+                                        },
+                                        {
+                                            "url": "exampleParameter",
+                                            "valueString": "https://fhir.nhs.uk/Id/nhs-number|9000000009"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "category",
+                            "type": "token",
+                            "documentation": "Classification of service",
+                            "extension": [
+                                {
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-CapabilityStatement-QueryParameters",
+                                    "extension": [
+                                        {
+                                            "url": "required",
+                                            "valueBoolean": false
+                                        },
+                                        {
+                                            "url": "minimum",
+                                            "valueInteger": 0
+                                        },
+                                        {
+                                            "url": "maximum",
+                                            "valueInteger": 1
+                                        },
+                                        {
+                                            "url": "allowedValues",
+                                            "valueReference": {
+                                                "reference": "https://fhir.nhs.uk/ValueSet/England-servicerequest-category"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "_revinclude",
+                            "type": "composite",
+                            "documentation": "Inclusions that drive the rescursive depth of the search"
+                        }
+                    ]
+                },
+                {
+                    "type": "Task",
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-Task",
+                    "documentation": "Supports worklists",
+                    "interaction": [
+                        {
+                            "code": "read",
+                            "extension": [
+                                {
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-CapabilityStatement-Examples",
+                                    "extension": [
+                                        {
+                                            "url": "example",
+                                            "extension": [
+                                                {
+                                                    "url": "request",
+                                                    "valueBoolean": false
+                                                },
+                                                {
+                                                    "url": "value",
+                                                    "valueReference": {
+                                                        "reference": "Task/bf7ab4c4-bafb-495e-8a61-1aa40309eaed"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "code": "update",
+                            "extension": [
+                                {
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-CapabilityStatement-Examples",
+                                    "extension": [
+                                        {
+                                            "url": "example",
+                                            "extension": [
+                                                {
+                                                    "url": "request",
+                                                    "valueBoolean": true
+                                                },
+                                                {
+                                                    "url": "value",
+                                                    "valueReference": {
+                                                        "reference": "Task/bf7ab4c4-bafb-495e-8a61-1aa40309eaed"
+                                                    }
+                                                },
+                                                {
+                                                    "url": "summary",
+                                                    "valueMarkdown": "Responding to Advice (A+G Scenario Two)"
+                                                },
+                                                {
+                                                    "url": "description",
+                                                    "valueMarkdown": "A user (sds-user-id=0987654321) responds to the worklist item. A document can be attached to the ServiceRequest and Task by using the [POST /Binary](#/Binary/post_Binary) POST / and [POST /DocumentReference](#/DocumentReference/post_DocumentReference) endpoints. "
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "url": "example",
+                                            "extension": [
+                                                {
+                                                    "url": "request",
+                                                    "valueBoolean": true
+                                                },
+                                                {
+                                                    "url": "value",
+                                                    "valueReference": {
+                                                        "reference": "Task/33fddbce-6d2c-453a-9351-4822bb55e402"
+                                                    }
+                                                },
+                                                {
+                                                    "url": "summary",
+                                                    "valueMarkdown": "Requesting additional advice, increasing priority (A+G Scenario Three)"
+                                                },
+                                                {
+                                                    "url": "description",
+                                                    "valueMarkdown": "The Task.priority is increased to urgent. The use of PATCH /Task can also be considered as an alternative for this interaction."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "url": "example",
+                                            "extension": [
+                                                {
+                                                    "url": "request",
+                                                    "valueBoolean": true
+                                                },
+                                                {
+                                                    "url": "value",
+                                                    "valueReference": {
+                                                        "reference": "Task/a9b9f0f4-cc37-4ea3-bd4b-16d15ddbe63b"
+                                                    }
+                                                },
+                                                {
+                                                    "url": "summary",
+                                                    "valueMarkdown": "Provider converts advice request (A+G Scenario Four and Six)"
+                                                },
+                                                {
+                                                    "url": "description",
+                                                    "valueMarkdown": "The Task.status is completed. See [POST /ServiceRequest](#/ServiceRequest/post_ServiceRequest) for the new referral (scenario Five)"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "url": "example",
+                                            "extension": [
+                                                {
+                                                    "url": "request",
+                                                    "valueBoolean": true
+                                                },
+                                                {
+                                                    "url": "value",
+                                                    "valueReference": {
+                                                        "reference": "Task/f66e4cd7-207c-4b7d-9ac9-80630c451125"
+                                                    }
+                                                },
+                                                {
+                                                    "url": "summary",
+                                                    "valueMarkdown": "Reviewing a Triage Deferral (Triage Scenario Three)"
+                                                },
+                                                {
+                                                    "url": "description",
+                                                    "valueMarkdown": "Task.status set to completed. Review advice linked in Task.output. Next actions to mark as to book or create an Appointment [POST /Appointment](#/Appointment/post_Appointment)"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ],
+                            "documentation": "See also [A013 - Accept referral](https://digital.nhs.uk/developer/api-catalogue/e-referral-service-fhir#api-Default-a013-accept-referral) and [A014 - Reject referral](https://digital.nhs.uk/developer/api-catalogue/e-referral-service-fhir#api-Default-a014-reject-referral)"
+                        },
+                        {
+                            "code": "create",
+                            "extension": [
+                                {
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-CapabilityStatement-Examples",
+                                    "extension": [
+                                        {
+                                            "url": "example",
+                                            "extension": [
+                                                {
+                                                    "url": "request",
+                                                    "valueBoolean": true
+                                                },
+                                                {
+                                                    "url": "value",
+                                                    "valueReference": {
+                                                        "reference": "Task/c18dbbe5-4f8d-4b49-a434-6e55a93fab31"
+                                                    }
+                                                },
+                                                {
+                                                    "url": "summary",
+                                                    "valueMarkdown": "Deferral Creation (Triage Scenario Two)"
+                                                },
+                                                {
+                                                    "url": "description",
+                                                    "valueMarkdown": "Task.code not set, need advice on code. [PUT /Task](#/Task/put_Task) is used to reply to the deferral."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "code": "search-type",
+                            "extension": [
+                                {
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-CapabilityStatement-Examples",
+                                    "extension": [
+                                        {
+                                            "url": "example",
+                                            "extension": [
+                                                {
+                                                    "url": "request",
+                                                    "valueBoolean": false
+                                                },
+                                                {
+                                                    "url": "value",
+                                                    "valueReference": {
+                                                        "reference": "Bundle/22d00506-967b-4996-9893-e649cffab3ec"
+                                                    }
+                                                },
+                                                {
+                                                    "url": "summary",
+                                                    "valueMarkdown": "Search Task for Patient by NHS Number"
+                                                },
+                                                {
+                                                    "url": "description",
+                                                    "valueMarkdown": "Request **GET [baseUrl]/Task?for.identifier=https://fhir.nhs.uk/Id/nhs-number|9912003888**"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "url": "example",
+                                            "extension": [
+                                                {
+                                                    "url": "request",
+                                                    "valueBoolean": false
+                                                },
+                                                {
+                                                    "url": "value",
+                                                    "valueReference": {
+                                                        "reference": "Bundle/1f706390-a0bc-47d1-ac3a-86ce7e5c2f52"
+                                                    }
+                                                },
+                                                {
+                                                    "url": "summary",
+                                                    "valueMarkdown": "Search on Tasks related to a ServiceRequest with a specific Task.code"
+                                                },
+                                                {
+                                                    "url": "description",
+                                                    "valueMarkdown": "Request **GET [baseUrl]/Task?focus:identifier=https://fhir.nhs.uk/Id/UBRN|000000070000**&code=http://snomed.info/sct|386053000"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ],
+                            "documentation": "See also [A008 - Retrieve referral worklist](https://digital.nhs.uk/developer/api-catalogue/e-referral-service-fhir#api-Default-a008-retrieve-worklist)"
+                        }
+                    ],
+                    "searchParam": [
+                        {
+                            "name": "owner",
+                            "type": "reference",
+                            "documentation": "Search by task owner"
+                        },
+                        {
+                            "name": "code",
+                            "type": "token",
+                            "documentation": "Search by task code",
+                            "extension": [
+                                {
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-CapabilityStatement-QueryParameters",
+                                    "extension": [
+                                        {
+                                            "url": "required",
+                                            "valueBoolean": false
+                                        },
+                                        {
+                                            "url": "minimum",
+                                            "valueInteger": 0
+                                        },
+                                        {
+                                            "url": "maximum",
+                                            "valueInteger": 1
+                                        },
+                                        {
+                                            "url": "showCodeAndSystem",
+                                            "valueBoolean": true
+                                        },
+                                        {
+                                            "url": "allowedValues",
+                                            "valueReference": {
+                                                "reference": "https://fhir.nhs.uk/ValueSet/England-task-code"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "focus:identifier",
+                            "type": "token"
+                        },
+                        {
+                            "name": "focus",
+                            "type": "reference"
+                        }
+                    ]
+                },
+                {
+                    "type": "Slot",
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/England-Slot",
+                    "interaction": [
+                        {
+                            "code": "search-type",
+                            "documentation": "[A015 - Retrieve appointment slots](https://digital.nhs.uk/developer/api-catalogue/e-referral-service-fhir#api-Default-a015-retrieve-appointment-slots)",
+                            "extension": [
+                                {
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-CapabilityStatement-Examples",
+                                    "extension": [
+                                        {
+                                            "url": "example",
+                                            "extension": [
+                                                {
+                                                    "url": "request",
+                                                    "valueBoolean": false
+                                                },
+                                                {
+                                                    "url": "value",
+                                                    "valueReference": {
+                                                        "reference": "Slot/2779faeb-354f-4a78-9b5e-d878e88ea4e6"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "searchParam": [
+                        {
+                            "name": "appointment-type",
+                            "type": "token",
+                            "documentation": "The style of appointment or patient that may be booked in the slot (not service type)"
+                        },
+                        {
+                            "name": "schedule.actor:HealthcareService",
+                            "type": "reference",
+                            "documentation": "A single service ID is required to indicate the service for which appointment slots are required."
+                        },
+                        {
+                            "name": "status",
+                            "type": "token",
+                            "documentation": "The free/busy status of the appointment",
+                            "extension": [
+                                {
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-CapabilityStatement-QueryParameters",
+                                    "extension": [
+                                        {
+                                            "url": "required",
+                                            "valueBoolean": false
+                                        },
+                                        {
+                                            "url": "minimum",
+                                            "valueInteger": 0
+                                        },
+                                        {
+                                            "url": "maximum",
+                                            "valueInteger": 1
+                                        },
+                                        {
+                                            "url": "showCodeAndSystem",
+                                            "valueBoolean": false
+                                        },
+                                        {
+                                            "url": "allowedValues",
+                                            "valueReference": {
+                                                "reference": "http://hl7.org/fhir/ValueSet/slotstatus"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Questionnaire",
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-Questionnaire"
+                },
+                {
+                    "type": "QuestionnaireResponse",
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-QuestionnaireResponse",
+                    "interaction": [
+                        {
+                            "code": "create",
+                            "documentation": "Use this api to create a shortlist",
+                            "extension": [
+                                {
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-CapabilityStatement-Examples",
+                                    "extension": [
+                                        {
+                                            "url": "example",
+                                            "extension": [
+                                                {
+                                                    "url": "request",
+                                                    "valueBoolean": true
+                                                },
+                                                {
+                                                    "url": "value",
+                                                    "valueReference": {
+                                                        "reference": "QuestionnaireResponse/d9d4cf80-3f9d-4435-9f3b-e6efb09ad654"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "code": "read",
+                            "documentation": "Use this api to retrieve a shortlist",
+                            "extension": [
+                                {
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-CapabilityStatement-Examples",
+                                    "extension": [
+                                        {
+                                            "url": "example",
+                                            "extension": [
+                                                {
+                                                    "url": "request",
+                                                    "valueBoolean": false
+                                                },
+                                                {
+                                                    "url": "value",
+                                                    "valueReference": {
+                                                        "reference": "QuestionnaireResponse/d9d4cf80-3f9d-4435-9f3b-e6efb09ad654"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "HealthcareService",
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-HealthcareService",
+                    "interaction": [
+                        {
+                            "code": "search-type",
+                            "documentation": "[A010 - Patient service search](https://digital.nhs.uk/developer/api-catalogue/e-referral-service-fhir#api-Default-a010-patient-service-search)",
+                            "extension": [
+                                {
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-CapabilityStatement-Examples",
+                                    "extension": [
+                                        {
+                                            "url": "example",
+                                            "extension": [
+                                                {
+                                                    "url": "request",
+                                                    "valueBoolean": false
+                                                },
+                                                {
+                                                    "url": "value",
+                                                    "valueReference": {
+                                                        "reference": "HealthcareService/76de72bc-f001-49fa-84c6-af15a4fdb72c"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "code": "read",
+                            "documentation": "Unable to find existing matching service",
+                            "extension": [
+                                {
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-CapabilityStatement-Examples",
+                                    "extension": [
+                                        {
+                                            "url": "example",
+                                            "extension": [
+                                                {
+                                                    "url": "request",
+                                                    "valueBoolean": false
+                                                },
+                                                {
+                                                    "url": "value",
+                                                    "valueReference": {
+                                                        "reference": "HealthcareService/76de72bc-f001-49fa-84c6-af15a4fdb72c"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "searchParam": [
+                        {
+                            "name": "service-type",
+                            "type": "token",
+                            "documentation": "The type of service provided by this healthcare service"
+                        },
+                        {
+                            "name": "identifier",
+                            "type": "token",
+                            "documentation": "Can't find this parameter presume need to: External identifiers for this item"
+                        }
+                    ]
+                },
+                {
+                    "type": "DocumentReference",
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/England-DocumentReference",
+                    "documentation": "Used to index supporting information documents - documents themselves use Binary",
+                    "interaction": [
+                        {
+                            "code": "read",
+                            "extension": [
+                                {
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-CapabilityStatement-Examples",
+                                    "extension": [
+                                        {
+                                            "url": "example",
+                                            "extension": [
+                                                {
+                                                    "url": "request",
+                                                    "valueBoolean": false
+                                                },
+                                                {
+                                                    "url": "value",
+                                                    "valueReference": {
+                                                        "reference": "DocumentReference/5da894e0-a57e-43e9-a1a1-e283a484003c"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "code": "create",
+                            "extension": [
+                                {
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-CapabilityStatement-Examples",
+                                    "extension": [
+                                        {
+                                            "url": "example",
+                                            "extension": [
+                                                {
+                                                    "url": "request",
+                                                    "valueBoolean": true
+                                                },
+                                                {
+                                                    "url": "value",
+                                                    "valueReference": {
+                                                        "reference": "DocumentReference/5da894e0-a57e-43e9-a1a1-e283a484003c"
+                                                    }
+                                                },
+                                                {
+                                                    "url": "summary",
+                                                    "valueMarkdown": "Responding to Advice (A+G Scenario Two)"
+                                                },
+                                                {
+                                                    "url": "description",
+                                                    "valueMarkdown": "Once the Task has been updated [PUT /Task](#/Task/put_Task), a DocumentReference is used to link in a previsouly posted document to the ServiceRequest and/or Task"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Binary",
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-Binary",
+                    "interaction": [
+                        {
+                            "code": "read",
+                            "documentation": "[A006 - Retrieve attachment](https://digital.nhs.uk/developer/api-catalogue/e-referral-service-fhir#api-Default-a006-retrieve-attachment)",
+                            "extension": [
+                                {
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-CapabilityStatement-Examples",
+                                    "extension": [
+                                        {
+                                            "url": "example",
+                                            "extension": [
+                                                {
+                                                    "url": "request",
+                                                    "valueBoolean": false
+                                                },
+                                                {
+                                                    "url": "value",
+                                                    "valueReference": {
+                                                        "reference": "Binary/db60a89b-3989-4290-b373-2e4a7266e556"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "code": "create",
+                            "documentation": "[A020 - Upload file to document store](https://digital.nhs.uk/developer/api-catalogue/e-referral-service-fhir#api-Default-a020-upload-file-to-document-store)",
+                            "extension": [
+                                {
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-CapabilityStatement-Examples",
+                                    "extension": [
+                                        {
+                                            "url": "example",
+                                            "extension": [
+                                                {
+                                                    "url": "request",
+                                                    "valueBoolean": true
+                                                },
+                                                {
+                                                    "url": "value",
+                                                    "valueReference": {
+                                                        "reference": "Binary/db60a89b-3989-4290-b373-2e4a7266e556"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
