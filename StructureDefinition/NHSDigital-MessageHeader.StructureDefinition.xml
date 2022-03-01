@@ -227,6 +227,10 @@
       <path value="MessageHeader.reason.coding.code" />
       <min value="1" />
     </element>
+     <element id="MessageHeader.focus">
+      <path value="MessageHeader.focus" />
+      <min value="1" />
+    </element>
     <element id="MessageHeader.focus.reference">
       <path value="MessageHeader.focus.reference" />
       <min value="1" />
