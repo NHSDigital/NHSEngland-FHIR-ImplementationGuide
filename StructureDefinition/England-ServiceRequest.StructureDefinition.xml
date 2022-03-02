@@ -69,12 +69,16 @@
       <sliceName value="UBRN" />
       <short value="Unique Booking Reference Numbe" />
       <definition value="Unique Booking Reference Number&#xD;&#xA;(12 digit number used as an internal and external identifier of the referral), known as &quot;Booking Reference&quot; Patient side" />
-      <min value="1" />
       <max value="1" />
     </element>
     <element id="ServiceRequest.identifier:UBRN.system">
       <path value="ServiceRequest.identifier.system" />
+      <min value="1" />
       <fixedUri value="https://fhir.nhs.uk/Id/UBRN" />
+    </element>
+    <element id="ServiceRequest.identifier:UBRN.value">
+      <path value="ServiceRequest.identifier.value" />
+      <min value="1" />
     </element>
     <element id="ServiceRequest.basedOn">
       <path value="ServiceRequest.basedOn" />
