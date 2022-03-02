@@ -1,0 +1,18 @@
+{
+    "resourceType": "NamingSystem",
+    "id": "ers-service",
+    "name": "eRSservice",
+    "status": "draft",
+    "kind": "identifier",
+    "date": "2022-03-02",
+    "publisher": "NHS Digital",
+    "responsible": "NHS NHS e-Referral Service",
+    "description": "eRS HealthcareService Identifier",
+    "uniqueId":  [
+        {
+            "type": "uri",
+            "value": "https://fhir.nhs.uk/Id/ers-service",
+            "preferred": true
+        }
+    ]
+}

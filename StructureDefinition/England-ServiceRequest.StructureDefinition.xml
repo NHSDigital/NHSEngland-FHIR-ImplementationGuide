@@ -34,17 +34,49 @@
       <path value="ServiceRequest.extension" />
       <sliceName value="worklist" />
       <min value="0" />
-      <max value="*" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-ServiceRequest-Workflow" />
       </type>
     </element>
+    <element id="ServiceRequest.extension:referralState">
+      <path value="ServiceRequest.extension" />
+      <sliceName value="referralState" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-eRS-ReferralState" />
+      </type>
+    </element>
     <element id="ServiceRequest.identifier">
       <path value="ServiceRequest.identifier" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
       <min value="1" />
     </element>
     <element id="ServiceRequest.identifier.value">
+      <path value="ServiceRequest.identifier.value" />
+      <min value="1" />
+    </element>
+    <element id="ServiceRequest.identifier:UBRN">
+      <path value="ServiceRequest.identifier" />
+      <sliceName value="UBRN" />
+      <short value="Unique Booking Reference Numbe" />
+      <definition value="Unique Booking Reference Number&#xD;&#xA;(12 digit number used as an internal and external identifier of the referral), known as &quot;Booking Reference&quot; Patient side" />
+      <max value="1" />
+    </element>
+    <element id="ServiceRequest.identifier:UBRN.system">
+      <path value="ServiceRequest.identifier.system" />
+      <min value="1" />
+      <fixedUri value="https://fhir.nhs.uk/Id/UBRN" />
+    </element>
+    <element id="ServiceRequest.identifier:UBRN.value">
       <path value="ServiceRequest.identifier.value" />
       <min value="1" />
     </element>
@@ -147,11 +179,11 @@
     </element>
     <element id="ServiceRequest.requester">
       <path value="ServiceRequest.requester" />
+      <min value="1" />
       <type>
         <code value="Reference" />
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-PractitionerRole" />
       </type>
-      <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="ServiceRequest.performerType">

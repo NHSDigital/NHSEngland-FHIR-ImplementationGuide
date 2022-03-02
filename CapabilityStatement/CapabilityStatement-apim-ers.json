@@ -649,7 +649,36 @@
                         {
                             "name": "code",
                             "type": "token",
-                            "documentation": "Search by task code"
+                            "documentation": "Search by task code",
+                            "extension": [
+                                {
+                                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-CapabilityStatement-QueryParameters",
+                                    "extension": [
+                                        {
+                                            "url": "required",
+                                            "valueBoolean": false
+                                        },
+                                        {
+                                            "url": "minimum",
+                                            "valueInteger": 0
+                                        },
+                                        {
+                                            "url": "maximum",
+                                            "valueInteger": 1
+                                        },
+                                        {
+                                            "url": "showCodeAndSystem",
+                                            "valueBoolean": true
+                                        },
+                                        {
+                                            "url": "allowedValues",
+                                            "valueReference": {
+                                                "reference": "https://fhir.nhs.uk/ValueSet/England-task-code"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
                         },
                         {
                             "name": "focus:identifier",
