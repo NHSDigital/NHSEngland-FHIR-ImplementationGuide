@@ -1,0 +1,23 @@
+{
+    "resourceType": "NamingSystem",
+    "id": "ers-ubrn",
+    "name": "eRSUBRN",
+    "status": "draft",
+    "kind": "identifier",
+    "date": "2022-03-02",
+    "publisher": "NHS Digital",
+    "responsible": "NHS NHS e-Referral Service",
+    "description": "Unique Booking Reference Number",
+    "uniqueId":  [
+        {
+            "type": "uri",
+            "value": "https://fhir.nhs.uk/Id/UBRN",
+            "preferred": true
+        },
+        {
+            "type": "oid",
+            "value": "2.16.840.1.113883.2.1.3.2.4.1",
+            "preferred": false
+        }
+    ]
+}
