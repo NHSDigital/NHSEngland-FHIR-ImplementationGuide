@@ -30,18 +30,9 @@
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-ERS-Referral" />
       </type>
     </element>
-    <element id="ServiceRequest.extension:worklist">
+    <element id="ServiceRequest.extension:ERSReferralState">
       <path value="ServiceRequest.extension" />
-      <sliceName value="worklist" />
-      <min value="0" />
-      <type>
-        <code value="Extension" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-ServiceRequest-Workflow" />
-      </type>
-    </element>
-    <element id="ServiceRequest.extension:referralState">
-      <path value="ServiceRequest.extension" />
-      <sliceName value="referralState" />
+      <sliceName value="ERSReferralState" />
       <min value="0" />
       <max value="1" />
       <type>

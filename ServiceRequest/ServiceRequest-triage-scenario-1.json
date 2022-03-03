@@ -13,6 +13,9 @@
                     "valueCode": "unbooked"
                 }
             ]
+        },
+        {
+            "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-eRS-ReferralState"
         }
     ],
     "identifier": [
