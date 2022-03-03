@@ -833,6 +833,7 @@
                 },
                 {
                     "type": "CodeSystem",
+                    "profile" : "http://hl7.org/fhir/StructureDefinition/CodeSystem",
                     "interaction": [
                         {
                             "code": "search-type"
