@@ -18,12 +18,9 @@
             ]
         },
         {
-            "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-ServiceRequest-Workflow",
+            "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-eRS-ReferralState",
             "extension": [
-                {
-                    "url": "businessStatus",
-                    "valueCode": "completed"
-                },
+                
                 {
                     "url": "worklistItem",
                     "valueReference": {

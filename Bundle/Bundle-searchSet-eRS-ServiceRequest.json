@@ -35,6 +35,11 @@
                   "valueCode": "authorised"
                 }
               ]
+            },
+            {
+              "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-eRS-ReferralState",
+              "extension": [  
+              ]
             }
           ],
           "identifier": [
