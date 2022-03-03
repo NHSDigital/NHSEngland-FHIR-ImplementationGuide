@@ -68,13 +68,14 @@
         <code value="Coding" />
       </type>
       <binding>
-        <strength value="example" />
-        <valueSet value="http://hl7.org/fhir/ValueSet/appointment-cancellation-reason" />
+        <strength value="extensible" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDigital-eRS-AppointmentCancellationReason" />
       </binding>
     </element>
     <element id="Extension.extension:reason.value[x].system">
       <path value="Extension.extension.value[x].system" />
       <min value="1" />
+      <fixedUri value="https://fhir.nhs.uk/CodeSystem/NHSDigital-AppointmentCancellationReason" />
     </element>
     <element id="Extension.extension:reason.value[x].code">
       <path value="Extension.extension.value[x].code" />
