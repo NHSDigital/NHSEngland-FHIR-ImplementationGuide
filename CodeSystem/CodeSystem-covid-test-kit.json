@@ -1,0 +1,115 @@
+{
+    "resourceType": "CodeSystem",
+    "id": "959a0a2f-73e3-4c6e-8e99-babb6b3a4296",
+    "url": "https://fhir.nhs.uk/Id/Covid19-TestKit",
+    "version": "1.0.0",
+    "name": "COVID19TestKit",
+    "status": "active",
+    "date": "2022-03-02T00:00:00+00:00",
+    "publisher": "NHS Digital",
+    "description": "COVID-19 Test Kit",
+    "copyright": "Copyright © 2022 NHS Digital",
+    "caseSensitive": true,
+    "content": "complete",
+    "concept": [
+        {
+            "code": "lampore",
+            "display": "lampore",
+            "property": [
+                {
+                    "code": "pillar1",
+                    "valueBoolean": true
+                },
+                {
+                    "code": "pillar2",
+                    "valueBoolean": true
+                }
+            ]
+        },
+        {
+            "code": "rnalamp",
+            "display": "rnalamp",
+            "property": [
+                {
+                    "code": "pillar1",
+                    "valueBoolean": true
+                },
+                {
+                    "code": "pillar2",
+                    "valueBoolean": true
+                }
+            ]
+        },
+        {
+            "code": "directlamp",
+            "display": "directlamp",
+            "property": [
+                {
+                    "code": "pillar1",
+                    "valueBoolean": true
+                },
+                {
+                    "code": "pillar2",
+                    "valueBoolean": true
+                }
+            ]
+        },
+        {
+            "code": "lft",
+            "display": "lft",
+            "property": [
+                {
+                    "code": "pillar1",
+                    "valueBoolean": true
+                },
+                {
+                    "code": "pillar2",
+                    "valueBoolean": true
+                }
+            ]
+        },
+        {
+            "code": "ePCR",
+            "display": "ePCR",
+            "property": [
+                {
+                    "code": "pillar1",
+                    "valueBoolean": true
+                }
+            ]
+        },
+        {
+            "code": "rtPCR",
+            "display": "rtPCR","property": [
+                {
+                    "code": "pillar1",
+                    "valueBoolean": true
+                },
+                {
+                    "code": "pillar2",
+                    "valueBoolean": true
+                }
+            ]
+        },
+        {
+            "code": "pcr",
+            "display": "pcr",
+            "property": [
+                {
+                    "code": "pillar2",
+                    "valueBoolean": true
+                }
+            ]
+        },
+        {
+            "code": "SAMBAII",
+            "display": "SAMBAII",
+            "property": [
+                {
+                    "code": "pillar2",
+                    "valueBoolean": true
+                }
+            ]
+        }
+    ]
+}
