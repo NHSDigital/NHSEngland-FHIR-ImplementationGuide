@@ -348,7 +348,8 @@
                     ],
                     "searchRevInclude": [
                         "Appointment:based-on",
-                        "Task:focus"
+                        "Task:focus",
+                        "*"
                     ],
                     "searchParam": [
                         {
@@ -827,6 +828,21 @@
                                     ]
                                 }
                             ]
+                        }
+                    ]
+                },
+                {
+                    "type": "CodeSystem",
+                    "interaction": [
+                        {
+                            "code": "search-type"
+                        }
+                    ],
+                    "searchParam": [
+                        {
+                            "name": "url",
+                            "type": "uri",
+                            "documentation": "The uri that identifies the code system"
                         }
                     ]
                 },
