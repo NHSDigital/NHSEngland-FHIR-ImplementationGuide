@@ -52,10 +52,6 @@
         </discriminator>
         <rules value="open" />
       </slicing>
-      <binding>
-        <strength value="example" />
-        <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDataModelAndDictionary-treatment-function" />
-      </binding>
     </element>
     <element id="Appointment.serviceCategory.coding.system">
       <path value="Appointment.serviceCategory.coding.system" />
@@ -68,10 +64,6 @@
     <element id="Appointment.serviceCategory:NHSDataDictionaryTreatmentFunction">
       <path value="Appointment.serviceCategory" />
       <sliceName value="NHSDataDictionaryTreatmentFunction" />
-      <binding>
-        <strength value="required" />
-        <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDataModelAndDictionary-treatment-function" />
-      </binding>
     </element>
     <element id="Appointment.serviceCategory:NHSDataDictionaryTreatmentFunction.coding">
       <path value="Appointment.serviceCategory.coding" />
@@ -92,10 +84,6 @@
       <path value="Appointment.serviceCategory" />
       <sliceName value="eRSClinicType" />
       <max value="1" />
-      <binding>
-        <strength value="required" />
-        <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDigital-eRS-ClinicType" />
-      </binding>
     </element>
     <element id="Appointment.serviceCategory:eRSClinicType.coding">
       <path value="Appointment.serviceCategory.coding" />

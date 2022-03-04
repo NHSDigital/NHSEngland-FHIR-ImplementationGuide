@@ -20,20 +20,8 @@
             {
               "coding": [
                 {
-                  "system": "https://fhir.nhs.uk/CodeSystem/NHSDataModelAndDictionary-treatment-function",
-                  "code": "300",
-                  "display": "GENERAL MEDICINE"
-                }
-              ]
-            }
-          ],
-          "specialty": [
-            {
-              "coding": [
-                {
-                  "system": "https://fhir.nhs.uk/CodeSystem/NHSDataModelAndDictionary-clinical-specialty",
-                  "code": "340",
-                  "display": "Respiratory Medicine"
+                  "system": "https://fhir.nhs.uk/CodeSystem/NHSDigital-ClinicType",
+                  "code": "GENERAL_MEDICINE_1"
                 }
               ]
             }
