@@ -34,7 +34,6 @@
       <path value="ServiceRequest.extension" />
       <sliceName value="ERSReferralState" />
       <min value="0" />
-      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-eRS-ReferralState" />
@@ -180,6 +179,21 @@
     <element id="ServiceRequest.performerType">
       <path value="ServiceRequest.performerType" />
       <definition value="At present examples use eRS clinic type codes" />
+    </element>
+    <element id="ServiceRequest.performerType.coding">
+      <path value="ServiceRequest.performerType.coding" />
+      <binding>
+        <strength value="example" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDataModelAndDictionary-treatment-function" />
+      </binding>
+    </element>
+    <element id="ServiceRequest.performerType.coding.system">
+      <path value="ServiceRequest.performerType.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="ServiceRequest.performerType.coding.code">
+      <path value="ServiceRequest.performerType.coding.code" />
+      <min value="1" />
     </element>
     <element id="ServiceRequest.performer">
       <path value="ServiceRequest.performer" />
