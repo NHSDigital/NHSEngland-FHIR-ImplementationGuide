@@ -178,14 +178,14 @@
     </element>
     <element id="ServiceRequest.performerType">
       <path value="ServiceRequest.performerType" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="coding.system" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
       <definition value="At present examples use eRS clinic type codes" />
+    </element>
+    <element id="ServiceRequest.performerType.coding">
+      <path value="ServiceRequest.performerType.coding" />
+      <binding>
+        <strength value="example" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDataModelAndDictionary-treatment-function" />
+      </binding>
     </element>
     <element id="ServiceRequest.performerType.coding.system">
       <path value="ServiceRequest.performerType.coding.system" />
@@ -194,36 +194,6 @@
     <element id="ServiceRequest.performerType.coding.code">
       <path value="ServiceRequest.performerType.coding.code" />
       <min value="1" />
-    </element>
-    <element id="ServiceRequest.performerType:eRSClinicType">
-      <path value="ServiceRequest.performerType" />
-      <sliceName value="eRSClinicType" />
-    </element>
-    <element id="ServiceRequest.performerType:eRSClinicType.coding">
-      <path value="ServiceRequest.performerType.coding" />
-      <binding>
-        <strength value="required" />
-        <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDigital-eRS-ClinicType" />
-      </binding>
-    </element>
-    <element id="ServiceRequest.performerType:eRSClinicType.coding.system">
-      <path value="ServiceRequest.performerType.coding.system" />
-      <fixedUri value="https://fhir.nhs.uk/CodeSystem/NHSDigital-ClinicType" />
-    </element>
-    <element id="ServiceRequest.performerType:NHSTreatfunctionCode">
-      <path value="ServiceRequest.performerType" />
-      <sliceName value="NHSTreatfunctionCode" />
-    </element>
-    <element id="ServiceRequest.performerType:NHSTreatfunctionCode.coding">
-      <path value="ServiceRequest.performerType.coding" />
-      <binding>
-        <strength value="required" />
-        <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDataModelAndDictionary-treatment-function" />
-      </binding>
-    </element>
-    <element id="ServiceRequest.performerType:NHSTreatfunctionCode.coding.system">
-      <path value="ServiceRequest.performerType.coding.system" />
-      <fixedUri value="https://fhir.nhs.uk/CodeSystem/NHSDataModelAndDictionary-treatment-function" />
     </element>
     <element id="ServiceRequest.performer">
       <path value="ServiceRequest.performer" />
