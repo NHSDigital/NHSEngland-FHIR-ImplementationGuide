@@ -45,10 +45,68 @@
     </element>
     <element id="Appointment.serviceCategory">
       <path value="Appointment.serviceCategory" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="coding.system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <binding>
+        <strength value="example" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDataModelAndDictionary-treatment-function" />
+      </binding>
+    </element>
+    <element id="Appointment.serviceCategory.coding.system">
+      <path value="Appointment.serviceCategory.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="Appointment.serviceCategory.coding.code">
+      <path value="Appointment.serviceCategory.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Appointment.serviceCategory:NHSDataDictionaryTreatmentFunction">
+      <path value="Appointment.serviceCategory" />
+      <sliceName value="NHSDataDictionaryTreatmentFunction" />
       <binding>
         <strength value="required" />
         <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDataModelAndDictionary-treatment-function" />
       </binding>
+    </element>
+    <element id="Appointment.serviceCategory:NHSDataDictionaryTreatmentFunction.coding">
+      <path value="Appointment.serviceCategory.coding" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDataModelAndDictionary-treatment-function" />
+      </binding>
+    </element>
+    <element id="Appointment.serviceCategory:NHSDataDictionaryTreatmentFunction.coding.system">
+      <path value="Appointment.serviceCategory.coding.system" />
+      <fixedUri value="https://fhir.nhs.uk/CodeSystem/NHSDataModelAndDictionary-treatment-function" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDataModelAndDictionary-treatment-function" />
+      </binding>
+    </element>
+    <element id="Appointment.serviceCategory:eRSClinicType">
+      <path value="Appointment.serviceCategory" />
+      <sliceName value="eRSClinicType" />
+      <max value="1" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDigital-eRS-ClinicType" />
+      </binding>
+    </element>
+    <element id="Appointment.serviceCategory:eRSClinicType.coding">
+      <path value="Appointment.serviceCategory.coding" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDigital-eRS-ClinicType" />
+      </binding>
+    </element>
+    <element id="Appointment.serviceCategory:eRSClinicType.coding.system">
+      <path value="Appointment.serviceCategory.coding.system" />
+      <fixedUri value="https://fhir.nhs.uk/CodeSystem/NHSDigital-ClinicType" />
     </element>
     <element id="Appointment.serviceType">
       <path value="Appointment.serviceType" />
