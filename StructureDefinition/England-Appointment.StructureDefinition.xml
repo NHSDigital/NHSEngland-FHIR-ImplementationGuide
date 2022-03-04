@@ -75,10 +75,6 @@
     <element id="Appointment.serviceCategory:NHSDataDictionaryTreatmentFunction.coding.system">
       <path value="Appointment.serviceCategory.coding.system" />
       <fixedUri value="https://fhir.nhs.uk/CodeSystem/NHSDataModelAndDictionary-treatment-function" />
-      <binding>
-        <strength value="required" />
-        <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDataModelAndDictionary-treatment-function" />
-      </binding>
     </element>
     <element id="Appointment.serviceCategory:eRSClinicType">
       <path value="Appointment.serviceCategory" />
