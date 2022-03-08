@@ -29,6 +29,25 @@
             ]
         }
     ],
+    "contained": [
+        {
+          "resourceType": "PractitionerRole",
+          "id": "requester",
+          "practitioner": {
+            "identifier": {
+              "system": "https://fhir.nhs.uk/Id/sds-user-id",
+              "value": "0987654321"
+            }
+          },
+          "organization": {
+            "identifier": {
+              "system": "https://fhir.nhs.uk/Id/ods-organization-code",
+              "value": "RR8"
+            },
+            "display": "LEEDS TEACHING HOSPITALS NHS TRUST"
+          }
+        }
+      ],
     "identifier": [
         {
             "system": "https://fhir.nhs.uk/Id/ers-referral-id",
