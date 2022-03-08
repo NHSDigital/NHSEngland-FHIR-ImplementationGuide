@@ -172,7 +172,8 @@
       <min value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-PractitionerRole" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole-Contained" />
+        <aggregation value="contained" />
       </type>
       <mustSupport value="true" />
     </element>

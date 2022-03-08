@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="51533f7f-1fa3-4866-a200-01618d377455" />
-  <url value="https://fhir.nhs.uk/StructureDefinition/England-PractitionerRole" />
-  <name value="EnglandPractitionerRole" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole-Contained" />
+  <name value="NHSDigitalPractitionerRoleContained" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
   <kind value="resource" />
   <abstract value="false" />
   <type value="PractitionerRole" />
-  <baseDefinition value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-PractitionerRole" />
+  <baseDefinition value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole" />
   <derivation value="constraint" />
   <differential>
     <element id="PractitionerRole">
@@ -28,46 +28,9 @@
         <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole" />
       </constraint>
     </element>
-    <element id="PractitionerRole.extension">
-      <path value="PractitionerRole.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="0" />
-    </element>
     <element id="PractitionerRole.identifier">
       <path value="PractitionerRole.identifier" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="system" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
       <mustSupport value="true" />
-    </element>
-    <element id="PractitionerRole.identifier:sdsRoleProfileID">
-      <path value="PractitionerRole.identifier" />
-      <sliceName value="sdsRoleProfileID" />
-      <min value="0" />
-      <max value="1" />
-    </element>
-    <element id="PractitionerRole.identifier:sdsRoleProfileID.system">
-      <path value="PractitionerRole.identifier.system" />
-      <fixedUri value="https://fhir.nhs.uk/Id/sds-role-profile-id" />
-    </element>
-    <element id="PractitionerRole.identifier:nhsbsaSpuriousCode">
-      <path value="PractitionerRole.identifier" />
-      <sliceName value="nhsbsaSpuriousCode" />
-      <max value="1" />
-    </element>
-    <element id="PractitionerRole.identifier:nhsbsaSpuriousCode.system">
-      <path value="PractitionerRole.identifier.system" />
-      <fixedUri value="https://fhir.hl7.org.uk/Id/nhsbsa-spurious-code" />
     </element>
     <element id="PractitionerRole.practitioner">
       <path value="PractitionerRole.practitioner" />
@@ -134,6 +97,14 @@
       </constraint>
       <mustSupport value="true" />
     </element>
+    <element id="PractitionerRole.practitioner.identifier.system">
+      <path value="PractitionerRole.practitioner.identifier.system" />
+      <min value="1" />
+    </element>
+    <element id="PractitionerRole.practitioner.identifier.value">
+      <path value="PractitionerRole.practitioner.identifier.value" />
+      <min value="1" />
+    </element>
     <element id="PractitionerRole.organization">
       <path value="PractitionerRole.organization" />
       <min value="1" />
@@ -150,90 +121,18 @@
       </constraint>
       <mustSupport value="true" />
     </element>
+    <element id="PractitionerRole.organization.identifier">
+      <path value="PractitionerRole.organization.identifier" />
+      <min value="1" />
+    </element>
     <element id="PractitionerRole.organization.identifier.system">
       <path value="PractitionerRole.organization.identifier.system" />
       <min value="1" />
+      <fixedUri value="https://fhir.nhs.uk/Id/ods-organization-code" />
     </element>
     <element id="PractitionerRole.organization.identifier.value">
       <path value="PractitionerRole.organization.identifier.value" />
       <min value="1" />
-    </element>
-    <element id="PractitionerRole.code.coding">
-      <path value="PractitionerRole.code.coding" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="system" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="1" />
-    </element>
-    <element id="PractitionerRole.code.coding.system">
-      <path value="PractitionerRole.code.coding.system" />
-      <min value="1" />
-    </element>
-    <element id="PractitionerRole.code.coding.code">
-      <path value="PractitionerRole.code.coding.code" />
-      <min value="1" />
-    </element>
-    <element id="PractitionerRole.code.coding:sdsJobRoleName">
-      <path value="PractitionerRole.code.coding" />
-      <sliceName value="sdsJobRoleName" />
-      <max value="1" />
-    </element>
-    <element id="PractitionerRole.code.coding:sdsJobRoleName.system">
-      <path value="PractitionerRole.code.coding.system" />
-      <fixedUri value="https://fhir.hl7org.uk/CodeSystem/UKCore-SDSJobRoleName" />
-    </element>
-    <element id="PractitionerRole.specialty.coding">
-      <path value="PractitionerRole.specialty.coding" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="system" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="1" />
-    </element>
-    <element id="PractitionerRole.specialty.coding.system">
-      <path value="PractitionerRole.specialty.coding.system" />
-      <min value="1" />
-    </element>
-    <element id="PractitionerRole.specialty.coding.code">
-      <path value="PractitionerRole.specialty.coding.code" />
-      <min value="1" />
-    </element>
-    <element id="PractitionerRole.specialty.coding.display">
-      <path value="PractitionerRole.specialty.coding.display" />
-      <min value="1" />
-    </element>
-    <element id="PractitionerRole.specialty.coding:NHSDataDictionarySpecialty">
-      <path value="PractitionerRole.specialty.coding" />
-      <sliceName value="NHSDataDictionarySpecialty" />
-      <binding>
-        <strength value="required" />
-        <description value="NHS Data Dictionary Specialty" />
-        <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDataModelAndDictionary-clinical-specialty" />
-      </binding>
-    </element>
-    <element id="PractitionerRole.specialty.coding:NHSDataDictionarySpecialty.system">
-      <path value="PractitionerRole.specialty.coding.system" />
-      <fixedUri value="https://fhir.nhs.uk/CodeSystem/NHSDataModelAndDictionary-clinical-specialty" />
-    </element>
-    <element id="PractitionerRole.specialty.coding:SNOMEDSpecialty">
-      <path value="PractitionerRole.specialty.coding" />
-      <sliceName value="SNOMEDSpecialty" />
-      <binding>
-        <strength value="preferred" />
-        <description value="Specific specialty associated with the agency." />
-        <valueSet value="http://hl7.org/fhir/ValueSet/c80-practice-codes" />
-      </binding>
-    </element>
-    <element id="PractitionerRole.specialty.coding:SNOMEDSpecialty.system">
-      <path value="PractitionerRole.specialty.coding.system" />
-      <fixedUri value="http://snomed.info/sct" />
     </element>
     <element id="PractitionerRole.healthcareService">
       <path value="PractitionerRole.healthcareService" />
@@ -261,6 +160,7 @@
     </element>
     <element id="PractitionerRole.telecom">
       <path value="PractitionerRole.telecom" />
+      <definition value="Telephone number is a mandatory requirement for EPS" />
       <mustSupport value="true" />
     </element>
     <element id="PractitionerRole.telecom.value">

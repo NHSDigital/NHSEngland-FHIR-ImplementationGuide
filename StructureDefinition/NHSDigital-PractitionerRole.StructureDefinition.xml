@@ -58,13 +58,13 @@
         </discriminator>
         <rules value="open" />
       </slicing>
-      <min value="1" />
+      <definition value="| FHIR identifier | OID/HL7v3 | HL7v2 ITK | Format | Description | Professional Code  | Prescribing Code | &#xD;&#xA;|--|--|--|--|--|--|--|&#xD;&#xA;| https://fhir.hl7.org.uk/Id/nhsbsa-spurious-code |  |  | G[67]NNNNNN | NHS BSA Spurious Code [GENERAL MEDICAL PRACTITIONER PPD CODE](https://datadictionary.nhs.uk/attributes/general_medical_practitioner_ppd_code.html) | No | Yes |&#xD;&#xA;| https://fhir.nhs.uk/Id/sds-role-profile-id | 1.2.826.0.1285.0.2.0.67 | | 12 digits | SDS Role Profile Code | No | No | &#xD;&#xA;&#xD;&#xA;The *SDS Role Profile Code* should be sourced from NHS Identity (SmartCard), this is also held within the Spine Directory Service LDAP database.&#xD;&#xA;&#xD;&#xA;Holds *NHS BSA spurious codes* which are role specific *Doctor Index Number (DIN)*) codes. *NHS BSA spurious codes* are issued when a doctor issues medication outside of their normal role, normally at another organisation. In the example below, the doctor is working in a secondary role (with SDS Role Id of 100102238986), as this a has a spurious code of 2345213. If the doctor was prescribing in their primary role this *spurious code* would be absent.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;{&#xD;&#xA;  &quot;resourceType&quot;: &quot;PractitionerRole&quot;,&#xD;&#xA;  ...&#xD;&#xA;  &quot;identifier&quot;: [&#xD;&#xA;          {&#xD;&#xA;            &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/sds-role-profile-id&quot;,&#xD;&#xA;            &quot;value&quot;: &quot;100102238986&quot;&#xD;&#xA;          },&#xD;&#xA;          {&#xD;&#xA;            &quot;system&quot;: &quot;https://fhir.hl7.org.uk/Id/nhsbsa-spurious-code&quot;,&#xD;&#xA;            &quot;value&quot;: &quot;2345213&quot;&#xD;&#xA;          }&#xD;&#xA;        ],&#xD;&#xA;  ...&#xD;&#xA;}&#xD;&#xA;```" />
       <mustSupport value="true" />
     </element>
     <element id="PractitionerRole.identifier:sdsRoleProfileID">
       <path value="PractitionerRole.identifier" />
       <sliceName value="sdsRoleProfileID" />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
     </element>
     <element id="PractitionerRole.identifier:sdsRoleProfileID.system">
@@ -82,6 +82,7 @@
     </element>
     <element id="PractitionerRole.practitioner">
       <path value="PractitionerRole.practitioner" />
+      <definition value="This **MUST** either be a reference to a Practitioner resource or an identifier reference plus a display. In both cases the referenced resource or identfier reference should contain a professional code. &#xD;&#xA;&#xD;&#xA;It is recommended an *identifier reference* and *display* (practioner full name) is included. This identifier should be the Practitioner's primary professional code (see `NHSDigital-Practitioner` for details on professional codes). &#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;practitioner&quot;: {&#xD;&#xA;        &quot;display&quot;: &quot;Dr Smith&quot;,&#xD;&#xA;        &quot;identifier&quot;: {&#xD;&#xA;            &quot;system&quot;: &quot;https://fhir.hl7.org.uk/Id/gmc-number&quot;,&#xD;&#xA;            &quot;value&quot;: &quot;C9876543&quot;&#xD;&#xA;          }&#xD;&#xA;    },&#xD;&#xA;```&#xD;&#xA;&#xD;&#xA;For EPS, currently a *Resource reference* is required.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;practitioner&quot;: {&#xD;&#xA;        &quot;reference&quot;: &quot;urn:uuid:1557E58E-3B1E-41DD-B3B5-D4D393DC5A3D&quot;,&#xD;&#xA;        &quot;display&quot;: &quot;Dr Smith&quot;&#xD;&#xA;    },&#xD;&#xA;```" />
       <min value="1" />
       <type>
         <code value="Reference" />
@@ -147,6 +148,7 @@
     </element>
     <element id="PractitionerRole.organization">
       <path value="PractitionerRole.organization" />
+      <definition value="This **MUST** either be a reference to a Organization resource or an identifier reference. In both cases the reference must contain an ANANA/ODS organisation code. &#xD;&#xA;&#xD;&#xA;&#xD;&#xA;#### organisation resource references&#xD;&#xA;&#xD;&#xA;It is recommended an *identifier reference* is included. &#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;organization&quot;: {&#xD;&#xA;        &quot;identifier&quot;: {&#xD;&#xA;            &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/ods-organization-code&quot;,&#xD;&#xA;            &quot;value&quot;: &quot;RBA&quot;&#xD;&#xA;          },&#xD;&#xA;        &quot;display&quot;: &quot;TAUNTON AND SOMERSET NHS FOUNDATION TRUST&quot;&#xD;&#xA;    }&#xD;&#xA;```&#xD;&#xA;&#xD;&#xA;Optionally *Resource reference* can be provided. This is required in the current version of EPS but this will be changed to supporting the *identifier reference* only.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;organization&quot;: {&#xD;&#xA;        &quot;reference&quot;: &quot;urn:uuid:17c4270d-6966-4788-8cbc-1d1d63536b25&quot;,&#xD;&#xA;        &quot;identifier&quot;: {&#xD;&#xA;            &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/ods-organization-code&quot;,&#xD;&#xA;            &quot;value&quot;: &quot;RBA&quot;&#xD;&#xA;          },&#xD;&#xA;        &quot;display&quot;: &quot;TAUNTON AND SOMERSET NHS FOUNDATION TRUST&quot;&#xD;&#xA;    }&#xD;&#xA;```" />
       <min value="1" />
       <type>
         <code value="Reference" />
@@ -154,8 +156,8 @@
       </type>
       <constraint>
         <key value="nhsd-1" />
-        <severity value="error" />
-        <human value="PractitionerRole.organization - An identifier reference plus a display name or resource reference must be provided" />
+        <severity value="warning" />
+        <human value="PractitionerRole.organization - An identifier reference plus a display name or resource reference should be provided" />
         <expression value="(reference.exists() or (identifier.exists() and display.exists()))" />
         <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole" />
       </constraint>
@@ -168,6 +170,10 @@
     <element id="PractitionerRole.organization.identifier.value">
       <path value="PractitionerRole.organization.identifier.value" />
       <min value="1" />
+    </element>
+    <element id="PractitionerRole.code">
+      <path value="PractitionerRole.code" />
+      <definition value="Only supply if this is known (e.g. sourced from smartcard or SDS API).&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;code&quot;:  [&#xD;&#xA;        {&#xD;&#xA;            &quot;coding&quot;:  [&#xD;&#xA;                {&#xD;&#xA;                    &quot;system&quot;: &quot;https://fhir.hl7.org.uk/CodeSystem/UKCore-SDSJobRoleName&quot;,&#xD;&#xA;                    &quot;code&quot;: &quot;R0260&quot;,&#xD;&#xA;                    &quot;display&quot;: &quot;General Medical Practitioner&quot;&#xD;&#xA;                }&#xD;&#xA;            ]&#xD;&#xA;        }&#xD;&#xA;    ],&#xD;&#xA;```" />
     </element>
     <element id="PractitionerRole.code.coding">
       <path value="PractitionerRole.code.coding" />
@@ -196,6 +202,10 @@
     <element id="PractitionerRole.code.coding:sdsJobRoleName.system">
       <path value="PractitionerRole.code.coding.system" />
       <fixedUri value="https://fhir.hl7org.uk/CodeSystem/UKCore-SDSJobRoleName" />
+    </element>
+    <element id="PractitionerRole.specialty">
+      <path value="PractitionerRole.specialty" />
+      <definition value="This is should be the specialty linked to the role and is not necessarily the practitioners main specialty. &#xD;&#xA;&#xD;&#xA;This can be supplemented by SNOMED CT codes from {{link:http://hl7.org/fhir/ValueSet/c80-practice-codes}}, no ConceptMap currently exists for mapping between the two.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA; &quot;specialty&quot;: [&#xD;&#xA;        {&#xD;&#xA;            &quot;coding&quot;: [&#xD;&#xA;                {&#xD;&#xA;                    &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/NHSDataModelAndDictionary-clinical-specialty&quot;,&#xD;&#xA;                    &quot;code&quot;: &quot;100&quot;,&#xD;&#xA;                    &quot;display&quot;: &quot;GENERAL SURGERY&quot;&#xD;&#xA;                }&#xD;&#xA;            ]&#xD;&#xA;        }&#xD;&#xA;    ],&#xD;&#xA;```" />
     </element>
     <element id="PractitionerRole.specialty.coding">
       <path value="PractitionerRole.specialty.coding" />
@@ -248,6 +258,7 @@
     </element>
     <element id="PractitionerRole.location">
       <path value="PractitionerRole.location" />
+      <definition value="The contact address for the practitioner for the service they are providing in this role. This will often be the surgery address, clinic or service address. &#xD;&#xA;&#xD;&#xA;If using ODS Codes, the address on ODS must be checked to ensure it is correct. If the address is not correct, then *Resource reference* **MUST** be supplied.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;location&quot;:  [&#xD;&#xA;         {&#xD;&#xA;            &quot;identifier&quot;: {&#xD;&#xA;              &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/ods-organization-code&quot;,&#xD;&#xA;              &quot;value&quot;: &quot;RCB55&quot;&#xD;&#xA;            }&#xD;&#xA;            &quot;display&quot;: &quot;YORK HOSPITAL&quot;&#xD;&#xA;          }&#xD;&#xA;  ]&#xD;&#xA;```&#xD;&#xA;&#xD;&#xA;For EPS, currently a *Resource reference* is required.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;location&quot;:  [&#xD;&#xA;         {&#xD;&#xA;            &quot;reference&quot;: &quot;urn:uuid:ecc2db8e-3757-4758-a4f1-7f4c7e06662f&quot;,&#xD;&#xA;            &quot;display&quot;: &quot;YORK HOSPITAL&quot;&#xD;&#xA;          }&#xD;&#xA;  ]&#xD;&#xA;```" />
       <type>
         <code value="Reference" />
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Location" />
@@ -271,6 +282,7 @@
     </element>
     <element id="PractitionerRole.healthcareService">
       <path value="PractitionerRole.healthcareService" />
+      <definition value="**SHOULD** be provided for a practitioner in secondary care and will be a reference to clinic or service. This referenced resource or the identifier reference **SHOULD** contain a ODS/ANANA identifier. In secondary care Electronic Prescription Service (EPS) this will also be called **prescribing cost centre**. This is used for reimbursements from NHS BSA. In secondary care the healthchare/service cost centre may also be the ODS code for the clinic.&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;#### healthcareService Resource reference&#xD;&#xA;&#xD;&#xA;An *identifier reference* **MUST** be included. For secondary care organisations this will be the ODS/ANANA Cost Centre code given to a clinic. &#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;healthcareService&quot;:  &#xD;&#xA;    [&#xD;&#xA;         {&#xD;&#xA;            &quot;identifier&quot;: {&#xD;&#xA;              &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/ods-organization-code&quot;,&#xD;&#xA;              &quot;value&quot;: &quot;A99968&quot;&#xD;&#xA;            }&#xD;&#xA;            &quot;display&quot;: &quot;SOMERSET BOWEL CANCER SCREENING CENTRE&quot;&#xD;&#xA;          }&#xD;&#xA;    ]&#xD;&#xA;```&#xD;&#xA;&#xD;&#xA;Optionally *Resource reference* can be provided. This is required in the current version of EPS but this will be changed to supporting the *identifier reference* only.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;healthcareService&quot;:  &#xD;&#xA;    [&#xD;&#xA;         {&#xD;&#xA;            &quot;reference&quot;: &quot;urn:uuid:54b0506d-49af-4245-9d40-d7d64902055e&quot;,&#xD;&#xA;            &quot;identifier&quot;: {&#xD;&#xA;              &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/ods-organization-code&quot;,&#xD;&#xA;              &quot;value&quot;: &quot;A99968&quot;&#xD;&#xA;            }&#xD;&#xA;            &quot;display&quot;: &quot;SOMERSET BOWEL CANCER SCREENING CENTRE&quot;&#xD;&#xA;          }&#xD;&#xA;    ]&#xD;&#xA;```" />
       <max value="1" />
       <type>
         <code value="Reference" />
@@ -295,7 +307,7 @@
     </element>
     <element id="PractitionerRole.telecom">
       <path value="PractitionerRole.telecom" />
-      <min value="1" />
+      <definition value="At least one **telecom** number **MUST** be provided. &#xD;&#xA;Contact details that are specific to the role/location/service. Often practitioners have a dedicated line for each location (or service) that they work at and need to be able to define separate contact details for each of these. &#xD;&#xA;&#xD;&#xA;This is not the personnel contact number of the Practitioner, it the contact number for the practitioner in this role and may be the phone number of the clinic, main or branch surgery. &#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;telecom&quot;: [&#xD;&#xA;          {&#xD;&#xA;            &quot;system&quot;: &quot;phone&quot;,&#xD;&#xA;            &quot;value&quot;: &quot;01234567890&quot;,&#xD;&#xA;            &quot;use&quot;: &quot;work&quot;&#xD;&#xA;          }&#xD;&#xA;        ]&#xD;&#xA;```" />
       <mustSupport value="true" />
     </element>
     <element id="PractitionerRole.telecom.value">

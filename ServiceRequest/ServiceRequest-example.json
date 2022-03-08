@@ -4,6 +4,25 @@
     "meta": {
         "lastUpdated": "2021-10-11T15:23:30+00:00"
     },
+    "contained": [
+        {
+          "resourceType": "PractitionerRole",
+          "id": "requester",
+          "practitioner": {
+            "identifier": {
+              "system": "https://fhir.nhs.uk/Id/sds-user-id",
+              "value": "0987654321"
+            }
+          },
+          "organization": {
+            "identifier": {
+              "system": "https://fhir.nhs.uk/Id/ods-organization-code",
+              "value": "RR8"
+            },
+            "display": "LEEDS TEACHING HOSPITALS NHS TRUST"
+          }
+        }
+      ],
     "status": "active",
     "identifier": [
         {
@@ -38,10 +57,7 @@
     },
     "authoredOn": "2021-10-13T16:30:00+07:00",
     "requester": {
-        "identifier": {
-            "system": "https://fhir.nhs.uk/Id/ods-organization-code",
-            "value": "GP0001"
-          }
+        "reference": "#requester"
     },
     "performer": [
         {

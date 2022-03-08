@@ -1,6 +1,25 @@
 {
     "resourceType": "Task",
     "id": "06570d9e-1dd7-49b6-8276-c903eef74b73",
+    "contained": [
+        {
+            "resourceType": "PractitionerRole",
+            "id": "requester",
+            "practitioner": {
+                "identifier": {
+                    "system": "https://fhir.nhs.uk/Id/sds-user-id",
+                    "value": "0987654321"
+                }
+            },
+            "organization": {
+                "identifier": {
+                    "system": "https://fhir.nhs.uk/Id/ods-organization-code",
+                    "value": "RR8"
+                },
+                "display": "LEEDS TEACHING HOSPITALS NHS TRUST"
+            }
+        }
+    ],
     "identifier": [
         {
             "system": "https://tools.ietf.org/html/rfc4122",
@@ -47,11 +66,7 @@
         }
     },
     "requester": {
-        "identifier": {
-            "system": "https://fhir.nhs.uk/Id/ods-organization-code",
-            "value": "RR8"
-        },
-        "display": "Leeds Teaching Hospitals"
+        "reference": "#requester"
     },
     "authoredOn": "2021-10-09T12:00:00+00:00",
     "note": [

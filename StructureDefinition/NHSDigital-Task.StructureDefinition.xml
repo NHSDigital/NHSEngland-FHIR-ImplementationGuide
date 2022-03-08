@@ -10,6 +10,11 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Task" />
   <derivation value="constraint" />
   <differential>
+    <element id="Task">
+      <path value="Task" />
+      <definition value="FHIR Task usage and scope is defined as &#xD;&#xA;&#xD;&#xA;&gt; A task resource describes an activity that can be performed and tracks the state of completion of that activity. It is a representation that an activity should be or has been initiated, and eventually, represents the successful or unsuccessful completion of that activity. Note that there are a variety of processes associated with making and processing orders. Some orders may be handled immediately by automated systems but most require real world actions by one or more humans. Some orders can only be processed when other real world actions happen, such as a patient presenting themselves so that the action to be performed can actually be performed. Often these real world dependencies are only implicit in the order details." />
+      <comment value="Within NHS Digital this resource will often be associated with workflow management. &#xD;&#xA;&#xD;&#xA;Similar concepts exist outside of NHS Digital for example a GP system has the concept of Task and this includes:&#xD;&#xA;&#xD;&#xA;- telephone patient&#xD;&#xA;- form to complete&#xD;&#xA;- prescription&#xD;&#xA;- referral&#xD;&#xA;- book appointment&#xD;&#xA;- medication review&#xD;&#xA;&#xD;&#xA;These are complemented with more detailed Task management around:&#xD;&#xA;&#xD;&#xA;- pathology&#xD;&#xA;- medicine management and also includes EPS&#xD;&#xA;  - Rejected Prescriptions&#xD;&#xA;  - Cancelled Prescriptions&#xD;&#xA;  - Subsequent cancellation rejections &#xD;&#xA;- referrals&#xD;&#xA;&#xD;&#xA;NHS App also includes the ability to order **repeat prescriptions** which relates to the GP systems **prescriptions**." />
+    </element>
     <element id="Task.extension">
       <path value="Task.extension" />
       <slicing>
@@ -40,6 +45,7 @@
     </element>
     <element id="Task.status">
       <path value="Task.status" />
+      <definition value="These workflow tasks have `status` which indicates the Task status. &#xD;&#xA;&#xD;&#xA;The following diagram reflects the &quot;typical&quot; state machine for Task. Note that not all states will be supported by all workflows and that some workflows may support additional transitions, including transitions from terminal states (e.g. back to &quot;in-progress&quot; from &quot;failed&quot; or &quot;completed&quot;).&#xD;&#xA;&#xD;&#xA;&lt;img src=&quot;https://www.hl7.org/fhir/task-state-machine.svg&quot;&gt;&lt;/img&gt;&#xD;&#xA;&#xD;&#xA;For example: &#xD;&#xA;&#xD;&#xA;A patient requesting a repeat prescription would ask for task with code `fulfil` used with `103742009 | Renewal of prescription` and a status of `requested`.  &#xD;&#xA;Once reviewed (by a clinician), the task status would be changed to `accepted`. When the task is then picked up (`in-progress`) and the related *MedicationRequest* is sent, the status would change to `completed`." />
       <mustSupport value="true" />
     </element>
     <element id="Task.intent">
@@ -48,6 +54,7 @@
     </element>
     <element id="Task.code">
       <path value="Task.code" />
+      <definition value="The reasonCode's are complemented with [task-code](https://www.hl7.org/fhir/valueset-task-code.html) which indicates the type of action to be performed. &#xD;&#xA;&#xD;&#xA;For example:&#xD;&#xA;&#xD;&#xA;The code `fulfil` used with `182836005 | Review of medication` means a task to review medication.&#xD;&#xA;The code `approve` used with `103742009 | Renewal of prescription` is a task for a clinician to approve the issue of a repeat medication." />
       <mustSupport value="true" />
       <binding>
         <strength value="extensible" />
@@ -56,7 +63,7 @@
     </element>
     <element id="Task.focus">
       <path value="Task.focus" />
-      <definition value="The request being actioned or the resource being manipulated by this task.&#xD;&#xA;&#xD;&#xA;This includes a FHIR Message, this should be used with caution and is used here for EPS prescription-order." />
+      <definition value="Tasks are often generated as a consequence of other workflows or relate to FHIR Workflow resources. For example a repeat medication request will be related to a previous `MedicationRequest` or a medication reconciliation may relate to a hospital admissions `Encounter/EpisodeOfCare`. This is carried in the `focus` element.&#xD;&#xA;&#xD;&#xA;`focus` can be omitted. For example if an ED generated a Medication Review as a result of COPD Emergency encounter they may chose to include a reference to the Encounter but they may decide instead to use a more specific reasonCode such as `394720003 | Asthma medication review`." />
       <type>
         <code value="Reference" />
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-Appointment" />
@@ -100,10 +107,8 @@
       <path value="Task.requester" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Practitioner" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Organization" />
-        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-PractitionerRole" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole-Contained" />
+        <aggregation value="contained" />
       </type>
       <constraint>
         <key value="usercode-reference" />
@@ -185,6 +190,7 @@
     </element>
     <element id="Task.reasonCode">
       <path value="Task.reasonCode" />
+      <definition value="In FHIR Task these types of workflow would be represented via **reasonCode** and/or **reasonReference**&#xD;&#xA;&#xD;&#xA;For medication this is probably SNOMED CT based using codes under the SNOMED CT 182832007 Medication management and includes codes such as:&#xD;&#xA;&#xD;&#xA;| SNOMED CT | Display |&#xD;&#xA;|--|--|&#xD;&#xA;| 182836005 | Review of medication | &#xD;&#xA;| 430193006 | Medication Reconciliation |&#xD;&#xA;| 103742009 | Renewal of prescription |&#xD;&#xA;| 33633005 | Prescription of drug |&#xD;&#xA;| 373784005 | Dispensing medication |&#xD;&#xA;&#xD;&#xA;&lt;br/&gt;&#xD;&#xA;&#xD;&#xA;For referral management&#xD;&#xA;&#xD;&#xA;| SNOMED CT | Display |&#xD;&#xA;|--|--|&#xD;&#xA;| &lt;a href=&quot;https://ontoserver.csiro.au/shrimp/?concept=3457005&amp;version=http%3A%2F%2Fsnomed.info%2Fsct%2F83821000000107%2Fversion%2F20211124&amp;valueset=http%3A%2F%2Fsnomed.info%2Fsct%2F83821000000107%3Ffhir_vs&amp;fhir=https%3A%2F%2Fontology.nhs.uk%2Fauthoring%2Ffhir&quot;&gt;3457005&lt;/a&gt; | Patient Referral |&#xD;&#xA;| &lt;a href=&quot;https://ontoserver.csiro.au/shrimp/?concept=185499000&amp;version=http%3A%2F%2Fsnomed.info%2Fsct%2F83821000000107%2Fversion%2F20211124&amp;valueset=http%3A%2F%2Fsnomed.info%2Fsct%2F83821000000107%3Ffhir_vs&amp;fhir=https%3A%2F%2Fontology.nhs.uk%2Fauthoring%2Ffhir&quot;&gt;185499000&lt;/a&gt;| Expedite appointment |" />
       <mustSupport value="true" />
     </element>
     <element id="Task.reasonCode.coding">
