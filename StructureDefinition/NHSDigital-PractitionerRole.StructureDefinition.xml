@@ -64,7 +64,7 @@
     <element id="PractitionerRole.identifier:sdsRoleProfileID">
       <path value="PractitionerRole.identifier" />
       <sliceName value="sdsRoleProfileID" />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
     </element>
     <element id="PractitionerRole.identifier:sdsRoleProfileID.system">
