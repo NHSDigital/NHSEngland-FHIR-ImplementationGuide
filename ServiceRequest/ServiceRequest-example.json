@@ -57,10 +57,7 @@
     },
     "authoredOn": "2021-10-13T16:30:00+07:00",
     "requester": {
-        "identifier": {
-            "system": "https://fhir.nhs.uk/Id/ods-organization-code",
-            "value": "GP0001"
-          }
+        "reference": "#requester"
     },
     "performer": [
         {

@@ -8,7 +8,7 @@
   <kind value="resource" />
   <abstract value="false" />
   <type value="PractitionerRole" />
-  <baseDefinition value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-PractitionerRole" />
+  <baseDefinition value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole" />
   <derivation value="constraint" />
   <differential>
     <element id="PractitionerRole">
@@ -160,6 +160,7 @@
     </element>
     <element id="PractitionerRole.telecom">
       <path value="PractitionerRole.telecom" />
+      <definition value="Telephone number is a mandatory requirement for EPS" />
       <mustSupport value="true" />
     </element>
     <element id="PractitionerRole.telecom.value">
