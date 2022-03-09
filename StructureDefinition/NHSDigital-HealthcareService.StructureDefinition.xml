@@ -30,6 +30,7 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <definition value="**SHOULD** contain the service identifier e.g. the serviceId from &lt;a href=&quot;https://www.directoryofservices.nhs.uk/&quot;&gt;Directory of Service&lt;/a&gt; or &lt;a href=&quot;https://digital.nhs.uk/developer/api-catalogue/e-referral-service-fhir&quot;&gt;e-RS Directory Services&lt;/a&gt;&#xD;&#xA;&#xD;&#xA;**MAY** contain an ANANA/ODS code. &#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;identifier&quot;: [&#xD;&#xA;          {&#xD;&#xA;            &quot;use&quot;: &quot;official&quot;,&#xD;&#xA;            &quot;system&quot;: &quot;http://fhir.nhs.uk/Id/ers-service&quot;,&#xD;&#xA;            &quot;value&quot;: &quot;11021&quot;&#xD;&#xA;          }&#xD;&#xA;        ]&#xD;&#xA;```" />
       <comment value="MUST contain an ANANA/ODS code." />
       <min value="1" />
       <mustSupport value="true" />
@@ -64,6 +65,7 @@
     </element>
     <element id="HealthcareService.providedBy">
       <path value="HealthcareService.providedBy" />
+      <definition value="It is recommended an *identifier reference* using ODS code is used. &#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;providedBy&quot;: {&#xD;&#xA;        &quot;identifier&quot;: {&#xD;&#xA;            &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/ods-organization-code&quot;,&#xD;&#xA;            &quot;value&quot;: &quot;RBA&quot;&#xD;&#xA;          },&#xD;&#xA;        &quot;display&quot;: &quot;TAUNTON AND SOMERSET NHS FOUNDATION TRUST&quot;&#xD;&#xA;    }&#xD;&#xA;```" />
       <type>
         <code value="Reference" />
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Organization" />
@@ -91,6 +93,7 @@
     </element>
     <element id="HealthcareService.type">
       <path value="HealthcareService.type" />
+      <definition value="Type **SHOULD** be populated. &#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;type&quot;:  [&#xD;&#xA;        {&#xD;&#xA;            &quot;coding&quot;:  [&#xD;&#xA;                {&#xD;&#xA;                    &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/DoS-ClinicType&quot;,&#xD;&#xA;                    &quot;code&quot;: &quot;PHARMACY&quot;,&#xD;&#xA;                    &quot;display&quot;: &quot;Pharmacy&quot;&#xD;&#xA;                }&#xD;&#xA;            ]&#xD;&#xA;        }&#xD;&#xA;    ],&#xD;&#xA;```&#xD;&#xA;&#xD;&#xA;or &#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;type&quot;:  [&#xD;&#xA;        {&#xD;&#xA;            &quot;coding&quot;:  [&#xD;&#xA;                {&#xD;&#xA;                    &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/eRS-ClinicType&quot;,&#xD;&#xA;                    &quot;code&quot;: &quot;LIPID_MANAGEMENT&quot;&#xD;&#xA;                }&#xD;&#xA;            ]&#xD;&#xA;        }&#xD;&#xA;    ],&#xD;&#xA;```" />
       <mustSupport value="true" />
       <binding>
         <strength value="preferred" />
@@ -99,6 +102,7 @@
     </element>
     <element id="HealthcareService.specialty">
       <path value="HealthcareService.specialty" />
+      <definition value="Specialty **SHOULD** be from the {{link:http://hl7.org/fhir/ValueSet/c80-practice-codes}}&#xD;&#xA;and is the SNOMED equivalent of the [NHS Data Dictionary - Main Specialty and Treament Function Codes](https://datadictionary.nhs.uk/supporting_information/main_specialty_and_treatment_function_codes_table.html) and FHIR {{pagelink: NHSDataDictionaryClinicalSpecialty.md}}&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;specialty&quot;:  [&#xD;&#xA;        {&#xD;&#xA;            &quot;coding&quot;:  [&#xD;&#xA;                {&#xD;&#xA;                    &quot;system&quot;: &quot;http://snomed.info/sct&quot;,&#xD;&#xA;                    &quot;code&quot;: &quot;394579002&quot;,&#xD;&#xA;                    &quot;display&quot;: &quot;Cardiology&quot;&#xD;&#xA;                }&#xD;&#xA;            ]&#xD;&#xA;        }&#xD;&#xA;    ],&#xD;&#xA;```&#xD;&#xA;&#xD;&#xA;or using NHS Data Dictionary codes.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;specialty&quot;:  [&#xD;&#xA;        {&#xD;&#xA;            &quot;coding&quot;:  [&#xD;&#xA;                {&#xD;&#xA;                    &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/NHSDataModelAndDictionary-clinical-specialty&quot;,&#xD;&#xA;                    &quot;code&quot;: &quot;320&quot;,&#xD;&#xA;                    &quot;display&quot;: &quot;Cardiology&quot;&#xD;&#xA;                }&#xD;&#xA;            ]&#xD;&#xA;        }&#xD;&#xA;    ],&#xD;&#xA;```" />
       <mustSupport value="true" />
     </element>
     <element id="HealthcareService.specialty.coding">
@@ -160,6 +164,7 @@
     </element>
     <element id="HealthcareService.location">
       <path value="HealthcareService.location" />
+      <definition value="Reference to a location. ODS codes may be used, however this may differ from Directory of Services and so DoS addresses are preferred.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA; &quot;location&quot;:  [&#xD;&#xA;        {&#xD;&#xA;            &quot;reference&quot;: &quot;urn:uuid:8a5d7d67-64fb-44ec-9802-2dc214bb3dcb&quot;&#xD;&#xA;        }&#xD;&#xA;    ],&#xD;&#xA;```" />
       <type>
         <code value="Reference" />
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Location" />
@@ -183,11 +188,13 @@
     </element>
     <element id="HealthcareService.name">
       <path value="HealthcareService.name" />
+      <definition value="Name of the clinic or service.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA; &quot;name&quot;: &quot;SOMERSET BOWEL CANCER SCREENING CENTRE&quot;,&#xD;&#xA;```" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="HealthcareService.telecom">
       <path value="HealthcareService.telecom" />
+      <definition value="Contact details for the clinic or service. &#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;   &quot;telecom&quot;: [&#xD;&#xA;    {&#xD;&#xA;      &quot;system&quot;: &quot;phone&quot;,&#xD;&#xA;      &quot;value&quot;: &quot;0113 922 4984&quot;,&#xD;&#xA;      &quot;use&quot;: &quot;work&quot;&#xD;&#xA;    },&#xD;&#xA;    {&#xD;&#xA;      &quot;system&quot;: &quot;email&quot;,&#xD;&#xA;      &quot;value&quot;: &quot;directaddress@example.com&quot;,&#xD;&#xA;      &quot;use&quot;: &quot;work&quot;&#xD;&#xA;    }&#xD;&#xA;  ],&#xD;&#xA;```" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
@@ -223,6 +230,7 @@
     </element>
     <element id="HealthcareService.availableTime">
       <path value="HealthcareService.availableTime" />
+      <definition value="Opening times for the clinic or service. &#xD;&#xA;&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;availableTime&quot;: [&#xD;&#xA;    {&#xD;&#xA;      &quot;daysOfWeek&quot;: [&#xD;&#xA;        &quot;wed&quot;&#xD;&#xA;      ],&#xD;&#xA;      &quot;allDay&quot;: true&#xD;&#xA;    },&#xD;&#xA;    {&#xD;&#xA;      &quot;daysOfWeek&quot;: [&#xD;&#xA;        &quot;mon&quot;,&#xD;&#xA;        &quot;tue&quot;,&#xD;&#xA;        &quot;wed&quot;,&#xD;&#xA;        &quot;thu&quot;&#xD;&#xA;      ],&#xD;&#xA;      &quot;availableStartTime&quot;: &quot;08:30:00&quot;,&#xD;&#xA;      &quot;availableEndTime&quot;: &quot;05:30:00&quot;&#xD;&#xA;    },&#xD;&#xA;    {&#xD;&#xA;      &quot;daysOfWeek&quot;: [&#xD;&#xA;        &quot;sat&quot;,&#xD;&#xA;        &quot;fri&quot;&#xD;&#xA;      ],&#xD;&#xA;      &quot;availableStartTime&quot;: &quot;09:30:00&quot;,&#xD;&#xA;      &quot;availableEndTime&quot;: &quot;04:30:00&quot;&#xD;&#xA;    }&#xD;&#xA;  ],&#xD;&#xA;```" />
       <mustSupport value="true" />
     </element>
   </differential>
