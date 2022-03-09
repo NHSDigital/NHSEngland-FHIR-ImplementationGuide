@@ -43,18 +43,27 @@
       <min value="1" />
       <mustSupport value="true" />
     </element>
+    <element id="Task.groupIdentifier">
+      <path value="Task.groupIdentifier" />
+      <definition value="**EPS Only**&#xD;&#xA;&#xD;&#xA;An identifier to the original `prescription-order` **MUST** be present. Only the short form identifier needs to be supplied.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;groupIdentifier&quot;: {&#xD;&#xA;        &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/prescription-order-number&quot;,&#xD;&#xA;        &quot;value&quot;: &quot;88AF6C-C81007-00001C&quot;&#xD;&#xA;    },&#xD;&#xA;```" />
+    </element>
     <element id="Task.status">
       <path value="Task.status" />
       <definition value="These workflow tasks have `status` which indicates the Task status. &#xD;&#xA;&#xD;&#xA;The following diagram reflects the &quot;typical&quot; state machine for Task. Note that not all states will be supported by all workflows and that some workflows may support additional transitions, including transitions from terminal states (e.g. back to &quot;in-progress&quot; from &quot;failed&quot; or &quot;completed&quot;).&#xD;&#xA;&#xD;&#xA;&lt;img src=&quot;https://www.hl7.org/fhir/task-state-machine.svg&quot;&gt;&lt;/img&gt;&#xD;&#xA;&#xD;&#xA;For example: &#xD;&#xA;&#xD;&#xA;A patient requesting a repeat prescription would ask for task with code `fulfil` used with `103742009 | Renewal of prescription` and a status of `requested`.  &#xD;&#xA;Once reviewed (by a clinician), the task status would be changed to `accepted`. When the task is then picked up (`in-progress`) and the related *MedicationRequest* is sent, the status would change to `completed`." />
       <mustSupport value="true" />
     </element>
+    <element id="Task.statusReason">
+      <path value="Task.statusReason" />
+      <definition value="**For EPS only**&#xD;&#xA;&#xD;&#xA;| reasonCode | focus | status | CodeSystem |&#xD;&#xA;|--|--|--|--|&#xD;&#xA;| 373784005 - Dispensing medication | `dispense-notification` | `cancelled` | {{link:https://fhir.nhs.uk/CodeSystem/EPS-task-dispense-withdraw-reason}} |&#xD;&#xA;| 33633005 - Prescription of drug | `prescription-order` | `rejected` / `cancelled` / `failed` |  {{link:https://fhir.nhs.uk/CodeSystem/EPS-task-dispense-return-status-reason}} |&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;statusReason&quot;: [{&#xD;&#xA;        &quot;coding&quot;:  [&#xD;&#xA;            {&#xD;&#xA;                &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/EPS-task-dispense-withdraw-reason&quot;,&#xD;&#xA;                &quot;code&quot;: &quot;DA&quot;,&#xD;&#xA;                &quot;display&quot;: &quot;Dosage Amendments&quot;&#xD;&#xA;            }&#xD;&#xA;        ]&#xD;&#xA;    }]&#xD;&#xA;```" />
+    </element>
     <element id="Task.intent">
       <path value="Task.intent" />
+      <comment value="Is not processed by EPS and is included for FHIR compliance reasons. The value should always be `order`." />
       <mustSupport value="true" />
     </element>
     <element id="Task.code">
       <path value="Task.code" />
-      <definition value="The reasonCode's are complemented with [task-code](https://www.hl7.org/fhir/valueset-task-code.html) which indicates the type of action to be performed. &#xD;&#xA;&#xD;&#xA;For example:&#xD;&#xA;&#xD;&#xA;The code `fulfil` used with `182836005 | Review of medication` means a task to review medication.&#xD;&#xA;The code `approve` used with `103742009 | Renewal of prescription` is a task for a clinician to approve the issue of a repeat medication." />
+      <definition value="The reasonCode's are complemented with [task-code](https://www.hl7.org/fhir/valueset-task-code.html) which indicates the type of action to be performed. &#xD;&#xA;&#xD;&#xA;For example:&#xD;&#xA;&#xD;&#xA;The code `fulfil` used with `182836005 | Review of medication` means a task to review medication.&#xD;&#xA;The code `approve` used with `103742009 | Renewal of prescription` is a task for a clinician to approve the issue of a repeat medication.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA; &quot;code&quot;: {&#xD;&#xA;        &quot;coding&quot;:  [&#xD;&#xA;            {&#xD;&#xA;                &quot;system&quot;: &quot;http://hl7.org/fhir/CodeSystem/task-code&quot;,&#xD;&#xA;                &quot;code&quot;: &quot;fulfill&quot;,&#xD;&#xA;                &quot;display&quot;: &quot;Fulfill the focal request&quot;&#xD;&#xA;            }&#xD;&#xA;        ]&#xD;&#xA; ```" />
       <mustSupport value="true" />
       <binding>
         <strength value="extensible" />
@@ -63,7 +72,8 @@
     </element>
     <element id="Task.focus">
       <path value="Task.focus" />
-      <definition value="Tasks are often generated as a consequence of other workflows or relate to FHIR Workflow resources. For example a repeat medication request will be related to a previous `MedicationRequest` or a medication reconciliation may relate to a hospital admissions `Encounter/EpisodeOfCare`. This is carried in the `focus` element.&#xD;&#xA;&#xD;&#xA;`focus` can be omitted. For example if an ED generated a Medication Review as a result of COPD Emergency encounter they may chose to include a reference to the Encounter but they may decide instead to use a more specific reasonCode such as `394720003 | Asthma medication review`." />
+      <definition value="** EPS Only**&#xD;&#xA;&#xD;&#xA;This will be the `Bundle.identifier` of the message this Task is acting on. &#xD;&#xA;For Tasks with a reasonCode of `373784005 - Dispensing medication`  this will be a `dispense-notification` message. &#xD;&#xA;For Tasks with a reasonCode of `33633005 - Prescription of drug` this will be the `prescription-order` message from the Task/$release operation.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;focus&quot;: {&#xD;&#xA;        &quot;type&quot;: &quot;Bundle&quot;,&#xD;&#xA;        &quot;identifier&quot;: {&#xD;&#xA;            &quot;system&quot;: &quot;https://tools.ietf.org/html/rfc4122&quot;,&#xD;&#xA;            &quot;value&quot;: &quot;334a3195-1f6c-497a-8efe-d272ca9c4e38&quot;&#xD;&#xA;        }&#xD;&#xA;    },&#xD;&#xA;```" />
+      <comment value="Tasks are often generated as a consequence of other workflows or relate to FHIR Workflow resources. For example a repeat medication request will be related to a previous `MedicationRequest` or a medication reconciliation may relate to a hospital admissions `Encounter/EpisodeOfCare`. This is carried in the `focus` element.&#xD;&#xA;&#xD;&#xA;`focus` can be omitted. For example if an ED generated a Medication Review as a result of COPD Emergency encounter they may chose to include a reference to the Encounter but they may decide instead to use a more specific reasonCode such as `394720003 | Asthma medication review`." />
       <type>
         <code value="Reference" />
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-Appointment" />
@@ -71,9 +81,11 @@
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Bundle-FHIRMessage" />
         <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-MedicationRequest" />
       </type>
+      <mustSupport value="true" />
     </element>
     <element id="Task.for">
       <path value="Task.for" />
+      <definition value="A reference to the patient the Task is for. This will always be an identifier reference using the Patients NHSNumber.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;for&quot;: {&#xD;&#xA;        &quot;identifier&quot;: {&#xD;&#xA;            &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/nhs-number&quot;,&#xD;&#xA;            &quot;value&quot;: &quot;9446368138&quot;&#xD;&#xA;        }&#xD;&#xA;    },&#xD;&#xA;```" />
       <min value="1" />
       <constraint>
         <key value="patient-reference" />
@@ -103,8 +115,13 @@
       <path value="Task.for.identifier.value" />
       <min value="1" />
     </element>
+    <element id="Task.authoredOn">
+      <path value="Task.authoredOn" />
+      <definition value="Date and time the task was created.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;authoredOn&quot;: &quot;2020-12-21T17:03:20-00:00&quot;,&#xD;&#xA;```" />
+    </element>
     <element id="Task.requester">
       <path value="Task.requester" />
+      <definition value="Who is created the Request or the Event. In NHSDigital API's this **SHOULD** always be a PractitionerRole role reference.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA; &quot;requester&quot;: {&#xD;&#xA;        &quot;reference&quot;: &quot;#requester&quot;&#xD;&#xA;    },&#xD;&#xA;```&#xD;&#xA;&#xD;&#xA;This will reference a `contained` PractitionerRole (note: this resource only contains limited user metadata such as ODS Code, professional code and SDS User Profile Id). This resource should not hold data which is held in SDS, only enough information to identify the SDS Entry," />
       <type>
         <code value="Reference" />
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole-Contained" />
@@ -171,6 +188,8 @@
     </element>
     <element id="Task.owner">
       <path value="Task.owner" />
+      <short value="Responsible organisation" />
+      <definition value="Who is responsible for actioning the request Task (e.g. for a prescription-order this will be the pharmacy). &#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;owner&quot;: {&#xD;&#xA;        &quot;identifier&quot;: {&#xD;&#xA;            &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/ods-organization-code&quot;,&#xD;&#xA;            &quot;value&quot;: &quot;FB444&quot;&#xD;&#xA;        },&#xD;&#xA;        &quot;display&quot;: &quot;Freds Pharmacy&quot;&#xD;&#xA;    },&#xD;&#xA;```" />
       <type>
         <code value="Reference" />
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient" />
