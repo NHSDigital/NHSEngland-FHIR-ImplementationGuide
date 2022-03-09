@@ -192,9 +192,7 @@
       <definition value="Who is responsible for actioning the request Task (e.g. for a prescription-order this will be the pharmacy). &#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;owner&quot;: {&#xD;&#xA;        &quot;identifier&quot;: {&#xD;&#xA;            &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/ods-organization-code&quot;,&#xD;&#xA;            &quot;value&quot;: &quot;FB444&quot;&#xD;&#xA;        },&#xD;&#xA;        &quot;display&quot;: &quot;Freds Pharmacy&quot;&#xD;&#xA;    },&#xD;&#xA;```" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient" />
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Practitioner" />
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Organization" />
       </type>
       <mustSupport value="true" />
