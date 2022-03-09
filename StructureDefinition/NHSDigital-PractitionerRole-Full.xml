@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole-Full" />
+  <name value="NHSDigitalPractitionerRoleFull" />
+  <status value="draft" />
+  <fhirVersion value="4.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="PractitionerRole" />
+  <baseDefinition value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="PractitionerRole.identifier">
+      <path value="PractitionerRole.identifier" />
+      <min value="1" />
+    </element>
+    <element id="PractitionerRole.identifier:sdsRoleProfileID">
+      <path value="PractitionerRole.identifier" />
+      <sliceName value="sdsRoleProfileID" />
+      <min value="1" />
+    </element>
+    <element id="PractitionerRole.location">
+      <path value="PractitionerRole.location" />
+      <type>
+        <code value="Reference" />
+        <aggregation value="bundled" />
+      </type>
+    </element>
+    <element id="PractitionerRole.telecom">
+      <path value="PractitionerRole.telecom" />
+      <min value="1" />
+    </element>
+  </differential>
+</StructureDefinition>
