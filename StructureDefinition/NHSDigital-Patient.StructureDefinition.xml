@@ -22,9 +22,54 @@
         <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient" />
       </constraint>
     </element>
+    <element id="Patient.extension">
+      <path value="Patient.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="Patient.extension:medicalApplianceSupplier">
+      <path value="Patient.extension" />
+      <sliceName value="medicalApplianceSupplier" />
+      <definition value="```json&#xD;&#xA;{&#xD;&#xA;            &quot;url&quot;: &quot;https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-PreferredDispenserOrganization&quot;,&#xD;&#xA;            &quot;valueReference&quot;: {&#xD;&#xA;                &quot;identifier&quot;: {&#xD;&#xA;                    &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/ods-organization-code&quot;,&#xD;&#xA;                    &quot;value&quot;: &quot;Y23456&quot;&#xD;&#xA;                }&#xD;&#xA;            }&#xD;&#xA;        }&#xD;&#xA;```" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-MedicalApplianceSupplier" />
+      </type>
+    </element>
+    <element id="Patient.extension:nominatedPharmacy">
+      <path value="Patient.extension" />
+      <sliceName value="nominatedPharmacy" />
+      <definition value="A patient can choose up to three nominated dispensers to cover different contractor types:&#xD;&#xA;&#xD;&#xA;- Community Pharmacy&#xD;&#xA;- Appliance Contractor&#xD;&#xA;- Dispensing Doctor&#xD;&#xA;&#xD;&#xA;Each of those nominations is held in an Extension. &#xD;&#xA;&#xD;&#xA;All require a ODS/ANANA code from [Organisation Data Services](https://digital.nhs.uk/services/organisation-data-service). This contains download CSV files for these organisations, for API access please see  [Organisation Data Service - FHIR API](https://digital.nhs.uk/developer/api-catalogue/organisation-data-service-fhir)&#xD;&#xA;&#xD;&#xA;#### nominatedPharmacy (extension nominatedPharmacy)&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;extension&quot;:  [&#xD;&#xA;        {&#xD;&#xA;            &quot;url&quot;: &quot;https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-NominatedPharmacy&quot;,&#xD;&#xA;            &quot;valueReference&quot;: {&#xD;&#xA;                &quot;identifier&quot;: {&#xD;&#xA;                    &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/ods-organization-code&quot;,&#xD;&#xA;                    &quot;value&quot;: &quot;Y12345&quot;&#xD;&#xA;                }&#xD;&#xA;            }&#xD;&#xA;        },&#xD;&#xA;```" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-NominatedPharmacy" />
+      </type>
+    </element>
+    <element id="Patient.extension:preferredDispenserOrganization">
+      <path value="Patient.extension" />
+      <sliceName value="preferredDispenserOrganization" />
+      <definition value="```json&#xD;&#xA;{&#xD;&#xA;            &quot;url&quot;: &quot;https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-MedicalApplianceSupplier&quot;,&#xD;&#xA;            &quot;valueReference&quot;: {&#xD;&#xA;                &quot;identifier&quot;: {&#xD;&#xA;                    &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/ods-organization-code&quot;,&#xD;&#xA;                    &quot;value&quot;: &quot;Y34567&quot;&#xD;&#xA;                }&#xD;&#xA;            }&#xD;&#xA;        }&#xD;&#xA;```" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-PreferredDispenserOrganization" />
+      </type>
+    </element>
     <element id="Patient.identifier">
       <path value="Patient.identifier" />
-      <definition value="At least one patient identifier, common to both sender and receiver. Where a traced NHS number is available for a patient this MUST be included in the list." />
+      <short value="The patient's NHS number. The primary identifier of a patient, unique within NHS England and Wales. Always 10 digits and must be a valid NHS number." />
+      <definition value="At least one patient identifier, **MUST** be provided. &#xD;&#xA;&#xD;&#xA;Where a traced NHS number is available for a patient this MUST be included. In general an untraced NHS Number **MUST** not be used, if an untracted NHS Number is used the extension https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-NHSNumberVerificationStatus **MUST** be used.&#xD;&#xA;&#xD;&#xA;| Name | FHIR identifier | OID/HL7v3 | HL7v2 ITK | Format | Description |&#xD;&#xA;|--|--|--|--|--|--|&#xD;&#xA;| NHS Number | https://fhir.nhs.uk/Id/nhs-number | 2.16.840.1.113883.2.1.4.1 |  NHS | NNNNNNNNNN | NHS Number allocated to the patient in England and Wales  |&#xD;&#xA;| CHI Number | | 2.16.840.1.113883.2.1.3.2.4.16.53 | | NNNNNNNNNN | CHI Number allocated to the patient in Scotland |&#xD;&#xA;| NHS Logon ID | https://fhir.nhs.uk/Id/nhs-login-sub | | | uuid | NHS Login unique identifer which is referred to as sub in NHS Login (OpenID) |&#xD;&#xA;&#xD;&#xA;Local identifiers such as MRN **MUST** include a *system* which identifies NHS provider/assigning authority. &#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;identifier&quot;:  [&#xD;&#xA;        {&#xD;&#xA;            &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/nhs-number&quot;,&#xD;&#xA;            &quot;value&quot;: &quot;9000000009&quot;&#xD;&#xA;        },&#xD;&#xA;        {&#xD;&#xA;            &quot;system&quot;: &quot;https://fhir.elmet.nhs.uk/Id/MRN&quot;,&#xD;&#xA;            &quot;value&quot;: &quot;X54321&quot;&#xD;&#xA;        }&#xD;&#xA;    ],&#xD;&#xA;```" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
@@ -40,11 +85,14 @@
     </element>
     <element id="Patient.name">
       <path value="Patient.name" />
+      <definition value="At least one patient name must be provided. It is recommended a use is provided. &#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;name&quot;:  [&#xD;&#xA;        {&#xD;&#xA;            &quot;family&quot;: &quot;Smith&quot;,&#xD;&#xA;            &quot;given&quot;:  [&#xD;&#xA;                &quot;Jane&quot;&#xD;&#xA;            ],&#xD;&#xA;            &quot;prefix&quot;:  [&#xD;&#xA;                &quot;Mrs&quot;&#xD;&#xA;            ],&#xD;&#xA;            &quot;suffix&quot;:  [&#xD;&#xA;                &quot;MBE&quot;&#xD;&#xA;            ],&#xD;&#xA;            &quot;use&quot;: &quot;usual&quot;&#xD;&#xA;        }&#xD;&#xA;    ]&#xD;&#xA;```" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Patient.name.use">
       <path value="Patient.name.use" />
+      <short value="The following values are allowed:  usual, temp, nickname, old, maiden" />
+      <definition value="How this name should be used.&#xD;&#xA;&#xD;&#xA;- usual - Known as, conventional or the one patient normally uses. A patient always has a usual name.&#xD;&#xA;- temp - An alias or temporary name. This may also be used for temporary names assigned at birth or in emergency situations.&#xD;&#xA;- nickname - A name that the patient prefers to be addressed by, but is not part of their usual name.&#xD;&#xA;- old - This name is no longer in use (or was never correct, but retained for records).&#xD;&#xA;- maiden - Name changed for Marriage. A name used prior to changing name because of marriage. This term is not gender specific. The use of this term does not imply any particular history for a person's name.&#xD;&#xA;&#xD;&#xA;The following use codes are included in the name-use value set, but should not be used and is not be returned as part of a retrieval.&#xD;&#xA;&#xD;&#xA;- official - The formal name as registered in an official (government) registry, but which name might not be commonly used. May be called &quot;legal name&quot;.&#xD;&#xA;- anonymous - Anonymous assigned name, alias, or pseudonym (used to protect a person's identity for privacy reasons)." />
       <mapping>
         <identity value="MiM" />
         <map value="https://fhir.nhs.uk/ConceptMap/fhir-nameuse-to-v3-npfit-nameuse" />
@@ -56,25 +104,34 @@
     </element>
     <element id="Patient.name.given">
       <path value="Patient.name.given" />
+      <definition value="Given names, including any middle names." />
+      <max value="5" />
       <mustSupport value="true" />
-      <max value="5"/>
     </element>
     <element id="Patient.telecom">
       <path value="Patient.telecom" />
+      <definition value="List of contact points for the patient; for example, phone numbers or email addresses. When a patient tagged as `restricted` or `very restricted` is retrieved, all contact points are removed from the response.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;telecom&quot;:  [&#xD;&#xA;        {&#xD;&#xA;            &quot;system&quot;: &quot;phone&quot;,&#xD;&#xA;            &quot;use&quot;: &quot;work&quot;,&#xD;&#xA;            &quot;value&quot;: &quot;01632960587&quot;&#xD;&#xA;        }&#xD;&#xA;    ]&#xD;&#xA;```" />
       <mustSupport value="true" />
     </element>
     <element id="Patient.gender">
       <path value="Patient.gender" />
+      <definition value="Classification of the gender of a patient. The classification is phenotypical rather than genotypical, i.e. it does not provide codes for medical or scientific purposes. It is the administrative gender that the patient wishes to be known as. In some cases, this may not be the same as the patient’s registered birth gender, or their current clinical gender." />
       <min value="1" />
       <mustSupport value="false" />
     </element>
     <element id="Patient.birthDate">
       <path value="Patient.birthDate" />
+      <definition value="The date on which the patient was born or is officially deemed to have been born.&#xD;&#xA;&#xD;&#xA;It is a date in the format `yyyy-mm-dd`. Due to data quality issues on a small number of patients `yyyy-mm` and `yyyy` format may also be returned.&#xD;&#xA;&#xD;&#xA;When a patient tagged as `very restricted` is retrieved, birth date is removed from the response." />
       <min value="1" />
       <mustSupport value="true" />
     </element>
+    <element id="Patient.deceased[x]">
+      <path value="Patient.deceased[x]" />
+      <definition value="The date and time on which a person died or is officially deemed to have died, if applicable and known.&#xD;&#xA;&#xD;&#xA;It is a datetime in the format `yyyy-mm-ddTHH:MM:SS+HH:MM` or `yyyy-mm-dd`. Due to data quality issues on a small number of patients `yyyy-mm` and `yyyy` format may also be returned.&#xD;&#xA;&#xD;&#xA;When a patient tagged as `very restricted` is retrieved, death date is removed from the response." />
+    </element>
     <element id="Patient.address">
       <path value="Patient.address" />
+      <definition value="List of addresses associated with the patient.&#xD;&#xA;&#xD;&#xA;These are fully populated on a retrieval or a successful update, only the home address is returned on a search. When a patient tagged as `restricted` or `very restricted` is retrieved, all addresses are removed from the response.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;address&quot;:  [&#xD;&#xA;        {&#xD;&#xA;            &quot;line&quot;:  [&#xD;&#xA;                &quot;1 Trevelyan Square&quot;,&#xD;&#xA;                &quot;Boar Lane&quot;,&#xD;&#xA;                &quot;City Centre&quot;,&#xD;&#xA;                &quot;Leeds&quot;,&#xD;&#xA;                &quot;West Yorkshire&quot;&#xD;&#xA;            ],&#xD;&#xA;            &quot;postalCode&quot;: &quot;LS1 6AE&quot;,&#xD;&#xA;            &quot;use&quot;: &quot;home&quot;&#xD;&#xA;        }&#xD;&#xA;    ],&#xD;&#xA;```" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
@@ -92,11 +149,26 @@
     <element id="Patient.address.extension:addressKey">
       <path value="Patient.address.extension" />
       <sliceName value="addressKey" />
+      <definition value="Postal Address File (PAF) key associated with this address formatted as a FHIR extension. Empty if no PAF key for the address is known, or an object specifying the code system of the address key and the value of the address key." />
       <min value="0" />
       <max value="1" />
     </element>
+    <element id="Patient.address.use">
+      <path value="Patient.address.use" />
+      <short value="The following values are allowed: home, work, temp, billing" />
+      <definition value="Purpose of this address:&#xD;&#xA;&#xD;&#xA;- home - the home address is the patient's normal residence. Home address is also known as usual, main, registered, current or permanent address&#xD;&#xA;- temp - a temporary address is an address used for a set period of time, but where the patient's home, permanent address remains unchanged&#xD;&#xA;- billing - an address used for correspondence purposes only&#xD;&#xA;- work - an office address. This can be returned due to legacy data but cannot be added or replaced on update&#xD;&#xA;&#xD;&#xA;A patient should have no more than one current temp and/or billing address. However, historically this was constrained only by the integration requirements and was not enforced so theoretically more than one can exist for a patient when retrieving. Where multiple instances already exist for the patient it is not expected that local systems should manage those, but should choose the most appropriate one to maintain (e.g. by examining period dates).&#xD;&#xA;&#xD;&#xA;A home address is the patient's main residential address and should normally be used for all clinical and demographic purposes, including clinical and appointment correspondence. However additionally, temp and billing addresses may be provided by a patient when there is a requirement to record an alternative location for the purposes of unbroken care. When sending correspondence to a patient:&#xD;&#xA;&#xD;&#xA;- a present and valid billing address may take precedence over home and temp addresses. A patient should have only a single current billing address. An address is considered 'valid' according to its period start and end dates.&#xD;&#xA;- if no current billing address is provided, a temp address may take precedence over the home address, again if it is valid according to its period start and end dates.&#xD;&#xA;- if there is no valid, current billing and/or temp address, the home address must be used." />
+    </element>
+    <element id="Patient.address.line">
+      <path value="Patient.address.line" />
+      <definition value="All lines of the address except the postal code.&#xD;&#xA;&#xD;&#xA;Systems must apply the following formatting convention when adding or replacing addresses lines:&#xD;&#xA;&#xD;&#xA;- line 1 - premises ID and/or house name, e.g. Flat 1 or The Old Schoolhouse&#xD;&#xA;- line 2 - house number, dependent thoroughfare name and descriptor (if present), thoroughfare name and descriptor, e.g. 23 Mill Lane&#xD;&#xA;- line 3 - dependent locality/village, locality (if present), e.g. Boxgrove&#xD;&#xA;- line 4 - post town, e.g. Leeds&#xD;&#xA;- line 5 - county (if present), e.g. West Yorkshire&#xD;&#xA;&#xD;&#xA;If any of the lines are blank, they are not returned due to FHIR conformance constraints.&#xD;&#xA;&#xD;&#xA;must contain at most 5 items" />
+    </element>
+    <element id="Patient.multipleBirth[x]">
+      <path value="Patient.multipleBirth[x]" />
+      <comment value="The order in which the patient was born, with 1 indicating the first or only birth in the sequence, 2 indicating the second birth in the sequence, 3 indicating the third, and so on up to 7.&#xD;&#xA;&#xD;&#xA;There are two other valid values; 8 meaning Not applicable and 9 meaning Not known.&#xD;&#xA;&#xD;&#xA;1 ≤ value ≤ 9" />
+    </element>
     <element id="Patient.contact">
       <path value="Patient.contact" />
+      <definition value="A list of patient contacts. Only emergency contacts are returned and only emergency contacts should be added. Any other contacts should be added to the patients Related Person. Patients designate here any contact number they desire to be used in case of an emergency. Note, while a patient may also desire to record various related persons telecom details, these do not separately allow for a concept of emergency contact; only ranking. See RelatedPerson endpoint. When a patient tagged as restricted or very restricted is retrieved, all contacts are removed from the response." />
       <mustSupport value="false" />
     </element>
     <element id="Patient.generalPractitioner">
@@ -108,6 +180,7 @@
         </discriminator>
         <rules value="openAtEnd" />
       </slicing>
+      <definition value="GP Surgery **SHOULD** be provided. It is recommended the patients GP Surgery is the first item in the array and branch surgery is second. It is also suggested type and display (name of practice) is also included. &#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;generalPractitioner&quot;:  [&#xD;&#xA;        {&#xD;&#xA;            &quot;type&quot;: &quot;Organization&quot;&#xD;&#xA;            &quot;identifier&quot;: {&#xD;&#xA;                &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/ods-organization-code&quot;,&#xD;&#xA;                &quot;value&quot;: &quot;Y12345&quot;&#xD;&#xA;            },&#xD;&#xA;            &quot;display&quot;: &quot;Kirkgate Practice&quot;&#xD;&#xA;        }&#xD;&#xA;    ]&#xD;&#xA;```" />
       <requirements value="GP Surgery SHOULD be provided. It is recommended the patients GP Surgery is the first item in the array and branch surgery is second. It is also suggested type and display (name of practice) is also included." />
       <min value="1" />
       <max value="1" />
