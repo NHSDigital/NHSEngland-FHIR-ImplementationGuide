@@ -68,7 +68,7 @@
         }
     },
     "requester": {
-        "requester" : "#requester"
+        "reference" : "#requester"
     },
     "authoredOn": "2021-10-09T12:00:00+00:00",
     "reasonCode": {
