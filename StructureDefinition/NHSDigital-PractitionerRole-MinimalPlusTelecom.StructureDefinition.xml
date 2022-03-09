@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole-ContainedAndTelecom" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole-MinimalAndTelecom" />
   <name value="NHSDigitalPractitionerRoleContainedAndTelecom" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
   <kind value="resource" />
   <abstract value="false" />
   <type value="PractitionerRole" />
-  <baseDefinition value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole-Contained" />
+  <baseDefinition value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole" />
   <derivation value="constraint" />
   <differential>
     <element id="PractitionerRole.telecom">
