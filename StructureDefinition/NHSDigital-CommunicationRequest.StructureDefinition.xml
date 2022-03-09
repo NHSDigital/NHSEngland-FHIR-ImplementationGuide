@@ -21,6 +21,10 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/CommunicationRequest" />
   <derivation value="constraint" />
   <differential>
+    <element id="CommunicationRequest.status">
+      <path value="CommunicationRequest.status" />
+      <mustSupport value="true" />
+    </element>
     <element id="CommunicationRequest.medium">
       <path value="CommunicationRequest.medium" />
       <binding>
@@ -39,13 +43,16 @@
         <severity value="warning" />
         <human value="subject - An identifier reference plus a display name or resource reference must be provided" />
         <expression value="(reference.exists() or (identifier.exists() and display.exists()))" />
+        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-CommunicationRequest" />
       </constraint>
       <constraint>
         <key value="patient-nhs" />
         <severity value="error" />
         <human value="Supplied NHS Number is outside the English and Welsh NHS Number range or length of the number is wrong." />
         <expression value="identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').exists().not() or (identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').exists()  and identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').value.matches('^([456789]{1}[0-9]{9})$'))" />
+        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-CommunicationRequest" />
       </constraint>
+      <mustSupport value="true" />
     </element>
     <element id="CommunicationRequest.subject.identifier.system">
       <path value="CommunicationRequest.subject.identifier.system" />
@@ -57,8 +64,10 @@
     </element>
     <element id="CommunicationRequest.payload">
       <path value="CommunicationRequest.payload" />
+      <definition value="#### NHSApp&#xD;&#xA;&#xD;&#xA;**In App Messages** &#xD;&#xA;&#xD;&#xA;NHSApp supports a subset of Markdown for in-app messages, please see API documentation for more details. Only `contentString` is supported.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;  &#xD;&#xA;    &quot;payload&quot;:  [&#xD;&#xA;        {&#xD;&#xA;            &quot;contentString&quot;: &quot;You have a new appointment, please confirm you can attend. Open the Onboarded Third Party appointment [here](https://www.nhsapp.service.nhs.uk/appointments/hospital-appointments)&quot;&#xD;&#xA;        }&#xD;&#xA;    ]&#xD;&#xA;```&#xD;&#xA;&#xD;&#xA;**Push Notifications**&#xD;&#xA;&#xD;&#xA;Only `contentReference` is supported and this should contain the URL to a page within the NHS App to be opened when the notification is tapped. If this property is not specified, the App will open on the home screen.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;  &#xD;&#xA;    &quot;payload&quot;:  [&#xD;&#xA;        {&#xD;&#xA;            &quot;contentReference&quot;: {&#xD;&#xA;                &quot;reference&quot;: &quot;https://www.nhsapp.service.nhs.uk/patient/messages/app-messaging&quot;,&#xD;&#xA;                &quot;display&quot;: &quot;You have a new message. The message may contain something important.&quot;&#xD;&#xA;            }&#xD;&#xA;        }&#xD;&#xA;    ],&#xD;&#xA;```&#xD;&#xA;&#xD;&#xA;#### EPS&#xD;&#xA;&#xD;&#xA;**CommunicationRequest** is used in Electronic Prescription Service (EPS) to convey patient specific information. This includes:&#xD;&#xA;&#xD;&#xA;* patient information - messages to the patient&#xD;&#xA;* medications - list of authorised repeat medications which is contained on a FHIR List resource, details and example list of repeat medications can be found here {{pagelink:UKCore-List}}&#xD;&#xA;&#xD;&#xA;These would be traditionally printed on the right hand side of the FP10 stationery.&#xD;&#xA;&#xD;&#xA;**CommunicationRequest should not contain Clinical information regarding the prescriptions, these should be conveyed in the MedicationRequest resource.**&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA;    &quot;payload&quot;:  [&#xD;&#xA;        {&#xD;&#xA;            &quot;contentString&quot;: &quot;Please make an appointment to see your GP. Review date due&quot;&#xD;&#xA;        },&#xD;&#xA;        {&#xD;&#xA;            &quot;contentReference&quot;: {&#xD;&#xA;                &quot;reference&quot;: &quot;urn:uuid:d0f003a0-8763-43d5-a264-ce52a38901c9&quot;,&#xD;&#xA;                &quot;display&quot;: &quot;List of Repeat Medications for re-ordering&quot;&#xD;&#xA;            }&#xD;&#xA;        }&#xD;&#xA;    ],&#xD;&#xA;```" />
       <comment value="The payload will consist of message to the Patient and/or a reference to a list of active repeat medications." />
       <min value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="CommunicationRequest.payload.extension">
       <path value="CommunicationRequest.payload.extension" />
@@ -83,14 +92,15 @@
     </element>
     <element id="CommunicationRequest.requester">
       <path value="CommunicationRequest.requester" />
+      <definition value="The person/organisation making the communication request. This **SHOULD** use reference identifiers.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA;    &quot;requester&quot;: {&#xD;&#xA;        &quot;type&quot;: &quot;Organization&quot;,&#xD;&#xA;        &quot;identifier&quot;: {&#xD;&#xA;            &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/ods-organization-code&quot;,&#xD;&#xA;            &quot;value&quot;: &quot;RBA&quot;&#xD;&#xA;        },&#xD;&#xA;        &quot;display&quot;: &quot;TAUNTON AND SOMERSET NHS FOUNDATION TRUST&quot;&#xD;&#xA;    },&#xD;&#xA;```" />
       <min value="1" />
       <type>
         <code value="Reference" />
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Practitioner" />
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole" />
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Organization" />
       </type>
+      <mustSupport value="true" />
     </element>
     <element id="CommunicationRequest.requester.identifier.system">
       <path value="CommunicationRequest.requester.identifier.system" />
@@ -102,6 +112,7 @@
     </element>
     <element id="CommunicationRequest.recipient">
       <path value="CommunicationRequest.recipient" />
+      <definition value="The persons/organisations who will receive the communication request. This **SHOULD** use reference identifiers.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA;    &quot;recipient&quot;:  [&#xD;&#xA;        {&#xD;&#xA;            &quot;type&quot;: &quot;Patient&quot;,&#xD;&#xA;            &quot;identifier&quot;: {&#xD;&#xA;                &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/nhs-number&quot;,&#xD;&#xA;                &quot;value&quot;: &quot;9453740519&quot;&#xD;&#xA;            }&#xD;&#xA;        }&#xD;&#xA;    ]&#xD;&#xA;```" />
       <min value="1" />
       <type>
         <code value="Reference" />
@@ -113,6 +124,7 @@
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole" />
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-HealthcareService" />
       </type>
+      <mustSupport value="true" />
     </element>
     <element id="CommunicationRequest.recipient.identifier.system">
       <path value="CommunicationRequest.recipient.identifier.system" />

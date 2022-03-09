@@ -33,47 +33,53 @@
         <severity value="warning" />
         <human value="NMC must be of the format NNANNNNA" />
         <expression value="identifier.where(system='https://fhir.hl7.org.uk/Id/nmc-number').exists().not() or (identifier.where(system='https://fhir.hl7.org.uk/Id/nmc-number').exists()  and identifier.where(system='https://fhir.hl7.org.uk/Id/nmc-number').value.matches('^[0-9]{2}[A-Z]{1}[0-9]{4}[A-Z]{1}$'))" />
+        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Practitioner" />
       </constraint>
       <constraint>
         <key value="prac-gmp" />
         <severity value="warning" />
         <human value="GMP must be of the format GNNNNNNN and not be a spurious code (starts with G6 or G7)" />
         <expression value="identifier.where(system='https://fhir.hl7.org.uk/Id/gmp-number').exists().not() or (identifier.where(system='https://fhir.hl7.org.uk/Id/gmp-number').exists()  and identifier.where(system='https://fhir.hl7.org.uk/Id/gmp-number').value.matches('^[G]{1}[01234589]{1}[0-9]{6}$'))" />
+        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Practitioner" />
       </constraint>
       <constraint>
         <key value="prac-gmc" />
         <severity value="warning" />
         <human value="GMC must be of the format CNNNNNNN" />
         <expression value="identifier.where(system='https://fhir.hl7.org.uk/Id/gmc-number').exists().not() or (identifier.where(system='https://fhir.hl7.org.uk/Id/gmc-number').exists()  and identifier.where(system='https://fhir.hl7.org.uk/Id/gmc-number').value.matches('^[C]{1}[0-9]{7}$'))" />
+        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Practitioner" />
       </constraint>
       <constraint>
         <key value="prac-gphc" />
         <severity value="warning" />
         <human value="GPHC must be of the format NNNNNNN" />
         <expression value="identifier.where(system='https://fhir.hl7.org.uk/Id/gphc-number').exists().not() or (identifier.where(system='https://fhir.hl7.org.uk/Id/gphc-number').exists()  and identifier.where(system='https://fhir.hl7.org.uk/Id/gphc-number').value.matches('^[0-9]{7}$'))" />
+        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Practitioner" />
       </constraint>
       <constraint>
         <key value="prac-hcpc" />
         <severity value="warning" />
         <human value="HCPC must be of the format AANNNNNN" />
         <expression value="identifier.where(system='https://fhir.hl7.org.uk/Id/hcpc-number').exists().not() or (identifier.where(system='https://fhir.hl7.org.uk/Id/hcpc-number').exists()  and identifier.where(system='https://fhir.hl7.org.uk/Id/hcpc-number').value.matches('^[A-Z]{2}[0-9]{6}$'))" />
+        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Practitioner" />
       </constraint>
       <constraint>
         <key value="prac-din" />
         <severity value="warning" />
         <human value="DIN format must be NNNNNN" />
         <expression value="identifier.where(system='https://fhir.hl7.org.uk/Id/din-number').exists().not() or (identifier.where(system='https://fhir.hl7.org.uk/Id/din-number').exists()  and identifier.where(system='https://fhir.hl7.org.uk/Id/din-number').value.matches('^[0-9]{6}$'))" />
+        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Practitioner" />
       </constraint>
       <constraint>
         <key value="prac-sds-user" />
         <severity value="warning" />
         <human value="Professional code (GMC, GMP, NMC, etc) is preferred." />
         <expression value="identifier.count() != 1 or (identifier.count() = 1 and identifier.where(system='https://fhir.nhs.uk/Id/sds-user-id').exists().not())" />
+        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Practitioner" />
       </constraint>
     </element>
     <element id="Practitioner.identifier">
       <path value="Practitioner.identifier" />
-      <comment value="SHOULD contain a professional code or SDS-user-id." />  
       <slicing>
         <discriminator>
           <type value="value" />
@@ -81,12 +87,10 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <definition value="**SHOULD** contain a professional code.&#xD;&#xA;&#xD;&#xA;The inclusion of a professional code is strongly recommended. For consultants and doctors a prescribing code should be present. Please see [NHS Data Model and Dictionary](https://datadictionary.nhs.uk/) for details on these code.&#xD;&#xA;&#xD;&#xA;The *SDS User Id* should be sourced from NHS Identity (SmartCard), this is also held within the Spine Directory Service LDAP database. &#xD;&#xA;&#xD;&#xA;&#xD;&#xA;| FHIR identifier | OID/HL7v3 | HL7v2 ITK | Format | Description | Professional Code  | Prescribing Code | &#xD;&#xA;|--&#xD;&#xA;| https://fhir.hl7.org.uk/Id/gmp-number | 2.16.840.1.113883.2.1.3.2.4.16.62 | GMP | G[1234589]NNNNNN | General Medical Practitioner Code [GENERAL MEDICAL PRACTITIONER PPD CODE](https://datadictionary.nhs.uk/attributes/general_medical_practitioner_ppd_code.html) | Yes | No, also include DIN |&#xD;&#xA;| https://fhir.hl7.org.uk/Id/gmc-number | 2.16.840.1.113883.2.1.3.2.4.16.63 | GMC | CNNNNNNN |General Medical Council Code [CONSULTANT_CODE](https://datadictionary.nhs.uk/attributes/consultant_code.html) | Yes | Yes |&#xD;&#xA;| https://fhir.hl7.org.uk/Id/nmc-number | | | NNANNNNA |Nursing and Midwifery Council Code | Yes | Yes |&#xD;&#xA;| https://fhir.hl7.org.uk/Id/gphc-number | | | NNNNNNN |General Pharmaceutical Council Code |Yes | Yes  |&#xD;&#xA;| https://fhir.hl7.org.uk/Id/hcpc-number | | | AANNNNNN(*) |Health and Care Professional Council Code |Yes | Yes  |&#xD;&#xA;| https://fhir.hl7.org.uk/Id/din-number | 1.2.826.0.1285.0.2.1.54 | | NNNNNN | [DOCTOR INDEX NUMBER](https://datadictionary.nhs.uk/attributes/doctor_index_number.html)  | No | Yes |&#xD;&#xA;| https://fhir.nhs.uk/Id/sds-user-id | 1.2.826.0.1285.0.2.0.65 | |  | SDS User ID | No | No | &#xD;&#xA;&#xD;&#xA;Format&#xD;&#xA;&#xD;&#xA;- N = any number&#xD;&#xA;- A = any alpha&#xD;&#xA;&#xD;&#xA;(*) NHS Prescription Services systems require these prescriber codes to be 8 characters&#xD;&#xA;long. Additional zeroes (0) should be inserted immediately following the first 2 alpha&#xD;&#xA;characters to extend the code to 8 characters as necessary.&#xD;&#xA;&#xD;&#xA;| Code | Format | Example |&#xD;&#xA;|--&#xD;&#xA;| GP/medical prescriber (DIN) | NNNNNN | 954000 |&#xD;&#xA;| Nurse prescriber (NMC) | NNANNNNA | 71A2998E | &#xD;&#xA;| Pharmacist prescriber (GPHC) | NNNNNNN | 2033467 |&#xD;&#xA;| Optometrist prescriber | NN-NNNNN | 01-09491 |&#xD;&#xA;| Podiatrist prescriber (HCPC) | CHNNNNNN | CH029821 | &#xD;&#xA;| Physiotherapist prescriber (HCPC) | PHNNNNNN |PH095159&#xD;&#xA;| Radiographer prescriber (HCPC) | RANNNNNN | RA088262 | &#xD;&#xA;| Dietician prescriber (HCPC) | DTNNNNNN | DT012345 | &#xD;&#xA;| Paramedic prescriber (HCPC) | PANNNNNN | PA054321 |&#xD;&#xA;&#xD;&#xA;The *Doctor Index Number (DIN)* will be present in the resource even if they are prescribing using a different prescribing code. This code is called the *spurious code* is held within the `NHSDigital-PractitionerRole` resource and **MUST NOT** be contained in the Practitioner resource. &#xD;&#xA;&#xD;&#xA;In the example below, the practitioner (GP as they have a GMP Code) has a SDS User Id of 3415870201, GMP code of G1234567 and DIN code of 123456. If the GP was in a role, prescribing using a spurious code this would be found in the `PractitionerRole`.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;{&#xD;&#xA;  &quot;resourceType&quot;: &quot;Practitioner&quot;,&#xD;&#xA;  ...&#xD;&#xA;  &quot;identifier&quot;: [&#xD;&#xA;          {&#xD;&#xA;            &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/sds-user-id&quot;,&#xD;&#xA;            &quot;value&quot;: &quot;3415870201&quot;&#xD;&#xA;          },&#xD;&#xA;          {&#xD;&#xA;            &quot;system&quot;: &quot;https://fhir.hl7.org.uk/Id/gmp-number&quot;,&#xD;&#xA;            &quot;value&quot;: &quot;G1234567&quot;&#xD;&#xA;          },&#xD;&#xA;          {&#xD;&#xA;            &quot;system&quot;: &quot;https://fhir.hl7.org.uk/Id/din-number&quot;,&#xD;&#xA;            &quot;value&quot;: &quot;123456&quot;&#xD;&#xA;          }&#xD;&#xA;        ]&#xD;&#xA;  ...&#xD;&#xA;}&#xD;&#xA;```&#xD;&#xA;&#xD;&#xA;In the example below, the practitioner (Consultant as they have a GMC Code) has a SDS User Id of 1415870201, GMC code of C2134567.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;{&#xD;&#xA;  &quot;resourceType&quot;: &quot;Practitioner&quot;,&#xD;&#xA;  ...&#xD;&#xA;  &quot;identifier&quot;: [&#xD;&#xA;          {&#xD;&#xA;            &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/sds-user-id&quot;,&#xD;&#xA;            &quot;value&quot;: &quot;1415870201&quot;&#xD;&#xA;          },&#xD;&#xA;          {&#xD;&#xA;            &quot;system&quot;: &quot;https://fhir.hl7.org.uk/Id/gmc-number&quot;,&#xD;&#xA;            &quot;value&quot;: &quot;C2134567&quot;&#xD;&#xA;          }&#xD;&#xA;        ]&#xD;&#xA;  ...&#xD;&#xA;}&#xD;&#xA;```&#xD;&#xA;&#xD;&#xA;### Professional Code System Not Known&#xD;&#xA;&#xD;&#xA;In cases where the profession code is present but it is not certain what type of code this is, the `https://fhir.hl7.org.uk/Id/professional-code` system should be used. &#xD;&#xA;In the example below, 2134567 is probably a raw GMC code (without the preceding C) but we are not certain.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;{&#xD;&#xA;  &quot;resourceType&quot;: &quot;Practitioner&quot;,&#xD;&#xA;  ...&#xD;&#xA;  &quot;identifier&quot;: [&#xD;&#xA;          {&#xD;&#xA;            &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/sds-user-id&quot;,&#xD;&#xA;            &quot;value&quot;: &quot;1415870201&quot;&#xD;&#xA;          },&#xD;&#xA;          {&#xD;&#xA;            &quot;system&quot;: &quot;https://fhir.hl7.org.uk/Id/professional-code&quot;,&#xD;&#xA;            &quot;value&quot;: &quot;2134567&quot;&#xD;&#xA;          }&#xD;&#xA;        ]&#xD;&#xA;  ...&#xD;&#xA;}&#xD;&#xA;```" />
+      <comment value="SHOULD contain a professional code or SDS-user-id." />
       <min value="1" />
       <mustSupport value="true" />
-    </element>
-    <element id="Practitioner.identifier.system">
-      <path value="Practitioner.identifier.system" />
-      <min value="1" />
     </element>
     <element id="Practitioner.identifier:gmcCode">
       <path value="Practitioner.identifier" />
