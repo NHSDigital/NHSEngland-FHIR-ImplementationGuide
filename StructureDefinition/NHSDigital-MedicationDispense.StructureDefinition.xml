@@ -182,7 +182,7 @@
     </element>
     <element id="MedicationDispense.performer">
       <path value="MedicationDispense.performer" />
-      <definition value="The pharmacist and pharmacy MUST be present and MUST use `identifier references`. This means FHIR Practitioner, Organization and PractitionerRole resource are not included in the FHIR Message. Professional codes and ODS codes should be used instead. `sds-user-role-id` is permitted to identify a Practitioner(&amp; Role) but professional codes are preferred to support wider NHS interoperability.&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA; &quot;performer&quot;: [&#xD;&#xA;    {&#xD;&#xA;        &quot;actor&quot;: {&#xD;&#xA;            &quot;reference&quot; : &quot;#requester&quot;&#xD;&#xA;        }&#xD;&#xA;    }&#xD;&#xA;],&#xD;&#xA;```" />
+      <definition value="The pharmacist and pharmacy MUST be present and MUST use `identifier references`. This means FHIR Practitioner, Organization and PractitionerRole resource are not included in the FHIR Message. Professional codes and ODS codes should be used instead. `sds-user-role-id` is permitted to identify a Practitioner(&amp; Role) but professional codes are preferred to support wider NHS interoperability.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA; &quot;performer&quot;: [&#xD;&#xA;    {&#xD;&#xA;        &quot;actor&quot;: {&#xD;&#xA;            &quot;reference&quot; : &quot;#requester&quot;&#xD;&#xA;        }&#xD;&#xA;    }&#xD;&#xA;],&#xD;&#xA;```" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
@@ -190,7 +190,7 @@
       <path value="MedicationDispense.performer.actor" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole-MinimalAndTelecom" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole-MinimalPlusTelecom" />
         <aggregation value="contained" />
       </type>
     </element>
