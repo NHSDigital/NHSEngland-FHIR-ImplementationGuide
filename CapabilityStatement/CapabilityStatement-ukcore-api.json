@@ -49,7 +49,7 @@
             "resource": [
                 {
                     "type": "Appointment",
-                    "profile": "https://fhir.nhs.uk/StructureDefinition/England-Appointment",
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-Appointment",
                     "interaction": [
                        
                         {

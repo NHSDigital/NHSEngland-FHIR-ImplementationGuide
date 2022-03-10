@@ -76,8 +76,8 @@
       <comment value="Tasks are often generated as a consequence of other workflows or relate to FHIR Workflow resources. For example a repeat medication request will be related to a previous `MedicationRequest` or a medication reconciliation may relate to a hospital admissions `Encounter/EpisodeOfCare`. This is carried in the `focus` element.&#xD;&#xA;&#xD;&#xA;`focus` can be omitted. For example if an ED generated a Medication Review as a result of COPD Emergency encounter they may chose to include a reference to the Encounter but they may decide instead to use a more specific reasonCode such as `394720003 | Asthma medication review`." />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-Appointment" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-ServiceRequest" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Appointment" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-ServiceRequest" />
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Bundle-FHIRMessage" />
         <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-MedicationRequest" />
       </type>

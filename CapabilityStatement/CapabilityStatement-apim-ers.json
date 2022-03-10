@@ -70,7 +70,7 @@
             "resource": [
                 {
                     "type": "Appointment",
-                    "profile": "https://fhir.nhs.uk/StructureDefinition/England-Appointment",
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-Appointment",
                     "interaction": [
                         {
                             "code": "create",
@@ -179,7 +179,7 @@
                 },
                 {
                     "type": "ServiceRequest",
-                    "profile": "https://fhir.nhs.uk/StructureDefinition/England-ServiceRequest",
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-ServiceRequest",
                     "documentation": "Supports Referrals and advice guidance requests (new)",
                     "interaction": [
                         {
@@ -403,7 +403,7 @@
                                         {
                                             "url": "allowedValues",
                                             "valueReference": {
-                                                "reference": "https://fhir.nhs.uk/ValueSet/England-servicerequest-category"
+                                                "reference": "https://fhir.nhs.uk/ValueSet/NHSDigital-ServiceRequest-category"
                                             }
                                         }
                                     ]
@@ -919,7 +919,7 @@
                 },
                 {
                     "type": "DocumentReference",
-                    "profile": "https://fhir.nhs.uk/StructureDefinition/England-DocumentReference",
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-DocumentReference",
                     "documentation": "Used to index supporting information documents - documents themselves use Binary",
                     "interaction": [
                         {

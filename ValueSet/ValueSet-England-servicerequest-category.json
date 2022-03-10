@@ -1,7 +1,7 @@
 {
   "resourceType": "ValueSet",
   "id": "a6876ad9-6ac5-431a-980d-b093a07e84d6",
-  "url": "https://fhir.nhs.uk/ValueSet/England-servicerequest-category",
+  "url": "https://fhir.nhs.uk/ValueSet/NHSDigital-ServiceRequest-category",
   "version": "0.0.1",
   "name": "ServiceRequestCategory",
   "title": "ServiceRequestCategory",

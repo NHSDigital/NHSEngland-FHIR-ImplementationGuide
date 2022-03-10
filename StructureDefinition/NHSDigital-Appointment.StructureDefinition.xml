@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="https://fhir.nhs.uk/StructureDefinition/England-Appointment" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Appointment" />
   <name value="EnglandAppointment" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
@@ -116,7 +116,7 @@
       <path value="Appointment.basedOn" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-ServiceRequest" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-ServiceRequest" />
       </type>
       <mustSupport value="true" />
     </element>
