@@ -18,7 +18,7 @@
             ]
         },
         {
-            "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-eRS-ReferralState"
+            "url": "https://fhir.nhs.uk/StructureDefinition/Extension-eRS-ServiceRequest-State"
         }
     ],
     "contained": [
