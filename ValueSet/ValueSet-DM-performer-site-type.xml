@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+    <id value="b945f333-1be1-47d2-8117-cf6e602a395b"/>
+    <url value="https://fhir.nhs.uk/ValueSet/DM-performer-site-type"/>
+    <version value="4.0.1"/>
+    <name value="MedicationRequestPerformerSiteType"/>
+    <status value="draft"/>
+    <description value="MedicationRequest Performer Site Type"/>
+    <compose>
+        <include>
+            <system value="https://fhir.nhs.uk/CodeSystem/dispensing-site-preference"/>
+        </include>
+    </compose>
+    <expansion>
+        <identifier value="0ad4af0d-23be-47cf-bb9e-48e2e6508771"/>
+        <timestamp value="2020-07-29T17:17:01+10:00"/>
+        <total value="4"/>
+        <offset value="0"/>
+        <parameter>
+            <name value="version"/>
+            <valueUri value="https://fhir.nhs.uk/CodeSystem/dispensing-site-preference|1.0.0"/>
+        </parameter>
+        <parameter>
+            <name value="count"/>
+            <valueInteger value="2147483647"/>
+        </parameter>
+        <parameter>
+            <name value="offset"/>
+            <valueInteger value="0"/>
+        </parameter>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/dispensing-site-preference"/>
+            <code value="P1"/>
+            <display value="Other (e.g. Community Pharmacy)"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/dispensing-site-preference"/>
+            <code value="P2"/>
+            <display value="Appliance Contractor"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/dispensing-site-preference"/>
+            <code value="P3"/>
+            <display value="Dispensing Doctor"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/dispensing-site-preference"/>
+            <code value="0004"/>
+            <display value="None"/>
+        </contains>
+    </expansion>
+</ValueSet>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+    <id value="c1fabdce-2477-4b08-baa9-fa697a18ef74"/>
+    <url value="https://fhir.nhs.uk/ValueSet/DM-vs-prescription-charge"/>
+    <version value="4.0.1"/>
+    <name value="NHSBSAPrescriptionCharge"/>
+    <status value="draft"/>
+    <description value="NHSBSA Prescription Charge"/>
+    <compose>
+        <include>
+            <system value="https://fhir.nhs.uk/CodeSystem/DM-prescription-charge"/>
+            <version value="1.1.1" />
+        </include>
+    </compose>
+    <expansion>
+        <identifier value="b0f0e4f5-4971-4e43-8de3-1adf32a46e1c"/>
+        <timestamp value="2021-04-21T18:03:22+10:00"/>
+        <total value="3"/>
+        <offset value="0"/>
+        <parameter>
+            <name value="version"/>
+            <valueUri value="https://fhir.nhs.uk/CodeSystem/DM-prescription-charge|1.1.1"/>
+        </parameter>
+        <parameter>
+            <name value="count"/>
+            <valueInteger value="2147483647"/>
+        </parameter>
+        <parameter>
+            <name value="offset"/>
+            <valueInteger value="0"/>
+        </parameter>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/DM-prescription-charge"/>
+            <code value="not-paid"/>
+            <display value="Not Paid"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/DM-prescription-charge"/>
+            <code value="paid-twice"/>
+            <display value="Paid Twice"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/DM-prescription-charge"/>
+            <code value="paid-once"/>
+            <display value="Paid Once"/>
+        </contains>
+    </expansion>
+</ValueSet>

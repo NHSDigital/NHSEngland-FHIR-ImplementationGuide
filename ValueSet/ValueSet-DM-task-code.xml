@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+    <id value="4fea62fc-5110-48c1-9ae2-98a5295bb040"/>
+    <url value="https://fhir.nhs.uk/ValueSet/DM-task-code"/>
+    <version value="1.0.3"/>
+    <name value="TaskCode"/>
+    <status value="draft"/>
+    <description value="Task Code"/>
+    <compose>
+        <include>
+            <system value="http://hl7.org/fhir/CodeSystem/task-code"/>
+            <version value="4.0.1"/>
+        </include>
+    </compose>
+    <expansion>
+        <timestamp value="2021-04-13T12:00:00+00:00"/>
+        <contains>
+            <system value="http://hl7.org/fhir/CodeSystem/task-code"/>
+            <code value="replace"/>
+            <display value="Replace the focal resource with the input resource"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/CodeSystem/task-code"/>
+            <code value="change"/>
+            <display value="Change the focal resource"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/CodeSystem/task-code"/>
+            <code value="suspend"/>
+            <display value="Suspend the focal resource"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/CodeSystem/task-code"/>
+            <code value="approve"/>
+            <display value="Activate/approve the focal resource"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/CodeSystem/task-code"/>
+            <code value="abort"/>
+            <display value="Mark the focal resource as no longer active"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/CodeSystem/task-code"/>
+            <code value="fulfill"/>
+            <display value="Fulfill the focal request"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/CodeSystem/task-code"/>
+            <code value="resume"/>
+            <display value="Re-activate the focal resource"/>
+        </contains>
+        </expansion>
+</ValueSet>

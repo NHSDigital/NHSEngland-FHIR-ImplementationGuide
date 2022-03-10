@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-eRS-ReferralState" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/Extension-eRS-ServiceRequest-State" />
   <name value="ExtensionNHSDigitaleRSReferralState" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
@@ -106,17 +106,17 @@
         <code value="string" />
       </type>
     </element>
-    <element id="Extension.extension:worklistItem">
+    <element id="Extension.extension:stateResource">
       <path value="Extension.extension" />
-      <sliceName value="worklistItem" />
+      <sliceName value="stateResource" />
       <min value="0" />
       <max value="1" />
     </element>
-    <element id="Extension.extension:worklistItem.url">
+    <element id="Extension.extension:stateResource.url">
       <path value="Extension.extension.url" />
-      <fixedUri value="worklistItem" />
+      <fixedUri value="stateResource" />
     </element>
-    <element id="Extension.extension:worklistItem.value[x]">
+    <element id="Extension.extension:stateResource.value[x]">
       <path value="Extension.extension.value[x]" />
       <type>
         <code value="Reference" />
@@ -126,7 +126,7 @@
     </element>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-eRS-ReferralState" />
+      <fixedUri value="https://fhir.nhs.uk/StructureDefinition/Extension-eRS-ServiceRequest-State" />
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />

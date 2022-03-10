@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+    <id value="6dfcc209-1f80-4754-a0d2-73f5d4372e51"/>
+    <url value="https://fhir.nhs.uk/ValueSet/DM-medicationrequest-controlled-drug"/>
+    <version value="4.0.2"/>
+    <name value="MedicationRequestCategoryControlledDrug"/>
+    <status value="draft"/>
+    <description value="MedicationRequest Category Controlled Drug."/>
+    <compose>
+        <include>
+            <system value="https://fhir.nhs.uk/CodeSystem/medicationrequest-controlled-drug"/>
+            <version value="1.0.1"/>
+        </include>
+    </compose>
+    <expansion>
+        <timestamp value="2021-04-29T11:14:20+10:00"/>
+        <total value="7"/>
+        <offset value="0"/>
+        <parameter>
+            <name value="version"/>
+            <valueUri value="https://fhir.nhs.uk/CodeSystem/medicationrequest-controlled-drug|1.0.0"/>
+        </parameter>
+        <parameter>
+            <name value="count"/>
+            <valueInteger value="2147483647"/>
+        </parameter>
+        <parameter>
+            <name value="offset"/>
+            <valueInteger value="0"/>
+        </parameter>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/medicationrequest-controlled-drug"/>
+            <code value="CD3"/>
+            <display value="Schedule 3"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/medicationrequest-controlled-drug"/>
+            <code value="CD2"/>
+            <display value="Schedule 2"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/medicationrequest-controlled-drug"/>
+            <code value="CD5"/>
+            <display value="Schedule 5"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/medicationrequest-controlled-drug"/>
+            <code value="CD4-1"/>
+            <display value="Schedule 4 (Part I)"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/medicationrequest-controlled-drug"/>
+            <code value="CD4-2"/>
+            <display value="Schedule 4 (Part II)"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/medicationrequest-controlled-drug"/>
+            <code value="CD1"/>
+            <display value="Schedule 1"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/medicationrequest-controlled-drug"/>
+            <code value="CD4"/>
+            <display value="Schedule 4"/>
+        </contains>
+    </expansion>
+</ValueSet>

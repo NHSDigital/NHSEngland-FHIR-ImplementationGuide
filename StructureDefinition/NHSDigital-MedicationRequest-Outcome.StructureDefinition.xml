@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="d35adc97-8e55-4041-bd01-f4f5ee3dde47" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationRequest-Outcome" />
+  <name value="NHSDigitalMedicationRequestOutcome" />
+  <status value="draft" />
+  <fhirVersion value="4.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="MedicationRequest" />
+  <baseDefinition value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-MedicationRequest" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="MedicationRequest.extension">
+      <path value="MedicationRequest.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="MedicationRequest.extension:responsiblePractitioner">
+      <path value="MedicationRequest.extension" />
+      <sliceName value="responsiblePractitioner" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-DM-ResponsiblePractitioner" />
+      </type>
+    </element>
+    <element id="MedicationRequest.extension:prescriptionStatusHistory">
+      <path value="MedicationRequest.extension" />
+      <sliceName value="prescriptionStatusHistory" />
+      <definition value="The status history within EPS is primarily a technical Status and the statusReason will reflect current clinical status of the order." />
+      <min value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-DM-PrescriptionStatusHistory" />
+      </type>
+    </element>
+    <element id="MedicationRequest.identifier">
+      <path value="MedicationRequest.identifier" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="MedicationRequest.identifier:prescriptionOrderItem">
+      <path value="MedicationRequest.identifier" />
+      <sliceName value="prescriptionOrderItem" />
+      <short value="Prescription Order Item" />
+      <definition value="Unique Id of the MedicationRequest within EPS" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="MedicationRequest.identifier:prescriptionOrderItem.system">
+      <path value="MedicationRequest.identifier.system" />
+      <min value="1" />
+      <fixedUri value="https://fhir.nhs.uk/Id/prescription-order-item-number" />
+    </element>
+    <element id="MedicationRequest.identifier:prescriptionOrderItem.value">
+      <path value="MedicationRequest.identifier.value" />
+      <min value="1" />
+    </element>
+    <element id="MedicationRequest.subject">
+      <path value="MedicationRequest.subject" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient" />
+      </type>
+    </element>
+    <element id="MedicationRequest.subject.reference">
+      <path value="MedicationRequest.subject.reference" />
+      <min value="1" />
+    </element>
+    <element id="MedicationRequest.requester">
+      <path value="MedicationRequest.requester" />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole" />
+      </type>
+    </element>
+    <element id="MedicationRequest.requester.reference">
+      <path value="MedicationRequest.requester.reference" />
+      <min value="1" />
+    </element>
+    <element id="MedicationRequest.groupIdentifier">
+      <path value="MedicationRequest.groupIdentifier" />
+      <short value="order number for grouped MedicationRequests" />
+      <definition value="The short form prescription identifier" />
+      <comment value="ITK HL7v3 Mapping = The groupIdentifier is equivalent to ParentPrescription.id (prescription-order-number). The extension is used to carry the ParentPrescription.id (UUID)." />
+      <min value="1" />
+    </element>
+    <element id="MedicationRequest.groupIdentifier.system">
+      <path value="MedicationRequest.groupIdentifier.system" />
+      <min value="1" />
+      <fixedUri value="https://fhir.nhs.uk/Id/prescription-order-number" />
+    </element>
+    <element id="MedicationRequest.groupIdentifier.value">
+      <path value="MedicationRequest.groupIdentifier.value" />
+      <min value="1" />
+    </element>
+    <element id="MedicationRequest.dispenseRequest">
+      <path value="MedicationRequest.dispenseRequest" />
+      <min value="1" />
+    </element>
+    <element id="MedicationRequest.dispenseRequest.performer">
+      <path value="MedicationRequest.dispenseRequest.performer" />
+      <definition value="Indicates the intended dispensing Pharmacy specified by the patient. Can be sourced from nominatedPharmacy in the Patient Demographics Service (PDS)" />
+    </element>
+    <element id="MedicationRequest.dispenseRequest.performer.extension">
+      <path value="MedicationRequest.dispenseRequest.performer.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="MedicationRequest.dispenseRequest.performer.extension:practitionerRole">
+      <path value="MedicationRequest.dispenseRequest.performer.extension" />
+      <sliceName value="practitionerRole" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-DM-DispensingPerformer" />
+      </type>
+    </element>
+    <element id="MedicationRequest.dispenseRequest.performer.identifier">
+      <path value="MedicationRequest.dispenseRequest.performer.identifier" />
+      <min value="1" />
+    </element>
+    <element id="MedicationRequest.dispenseRequest.performer.identifier.system">
+      <path value="MedicationRequest.dispenseRequest.performer.identifier.system" />
+      <fixedUri value="https://fhir.nhs.uk/Id/ods-organization-code" />
+    </element>
+  </differential>
+</StructureDefinition>

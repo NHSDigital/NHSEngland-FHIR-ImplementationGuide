@@ -10,6 +10,18 @@
   <baseDefinition value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole-Minimal" />
   <derivation value="constraint" />
   <differential>
+    <element id="PractitionerRole.practitioner.identifier">
+      <path value="PractitionerRole.practitioner.identifier" />
+      <min value="1" />
+    </element>
+    <element id="PractitionerRole.practitioner.display">
+      <path value="PractitionerRole.practitioner.display" />
+      <min value="1" />
+    </element>
+    <element id="PractitionerRole.organization.display">
+      <path value="PractitionerRole.organization.display" />
+      <min value="1" />
+    </element>
     <element id="PractitionerRole.telecom">
       <path value="PractitionerRole.telecom" />
       <min value="1" />

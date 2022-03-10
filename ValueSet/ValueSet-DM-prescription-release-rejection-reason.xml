@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+    <id value="7b189398-9c1a-49c0-93a0-074e21af52c7"/>
+    <url value="https://fhir.nhs.uk/ValueSet/DM-prescription-release-rejection-reason"/>
+    <version value="16.34"/>
+    <name value="DMprescriptionreleaserejectionreason"/>
+    <date value="2021-06-03"/>
+    <status value="draft"/>
+    <description value="DM prescription release rejection reason"/>
+    <compose>
+        <include>
+            <system value="https://fhir.nhs.uk/CodeSystem/EPS-task-prescription-release-rejection-reason"/>
+            <version value="16.34"/>
+  <!--      AEA-1376      <concept>
+         
+            <code value="9006"/>
+            <display value="Format of date passed is invalid"/>
+        </concept>
+        <concept>
+  
+            <code value="0099"/>
+            <display value="Incompatible version of Request. [Additional Information (if any)]"/>
+        </concept>
+        <concept>
+       
+            <code value="5888"/>
+            <display value="Invalid message"/>
+        </concept> -->
+        <concept>
+            <code value="0006"/>
+            <display value="No more nominated prescriptions available"/>
+        </concept>
+        <concept>
+            <code value="0007"/>
+            <display value="Nominated download functionality disabled in spine"/>
+        </concept>
+        <concept>
+            <code value="0003"/>
+            <display value="Prescription cannot be found – contact your GP/prescriber"/>
+        </concept>
+        <concept>
+            <code value="0001"/>
+            <display value="Prescription has been cancelled"/>
+        </concept>
+        <concept>
+        
+            <code value="0005"/>
+            <display value="Prescription has been dispensed"/>
+        </concept>
+        <concept>
+            <code value="0002"/>
+            <display value="Prescription has expired"/>
+        </concept>
+        <concept>
+            <code value="0004"/>
+            <display value="Prescription is with another dispenser"/>
+        </concept>
+        <concept>
+            <code value="5000"/>
+            <display value="Unable to process message. [Additional Information (if any)]"/>
+        </concept>
+        </include>
+    </compose>
+     <expansion>
+        <identifier value="5b8ed2fb-ed41-4ae2-abd7-7d3337b25f69"/>
+        <timestamp value="2021-06-03T15:06:59+00:00"/>
+        <total value="8"/>
+        <offset value="0"/>
+        <parameter>
+            <name value="version"/>
+            <valueUri value="https://fhir.nhs.uk/CodeSystem/EPS-task-prescription-release-rejection-reason|16.34"/>
+        </parameter>
+        <parameter>
+            <name value="count"/>
+            <valueInteger value="2147483647"/>
+        </parameter>
+        <parameter>
+            <name value="offset"/>
+            <valueInteger value="0"/>
+        </parameter>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/EPS-task-prescription-release-rejection-reason"/>
+            <code value="0006"/>
+            <display value="No more nominated prescriptions available"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/EPS-task-prescription-release-rejection-reason"/>
+            <code value="0007"/>
+            <display value="Nominated download functionality disabled in spine"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/EPS-task-prescription-release-rejection-reason"/>
+            <code value="0003"/>
+            <display value="Prescription cannot be found – contact your GP/prescriber"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/EPS-task-prescription-release-rejection-reason"/>
+            <code value="0001"/>
+            <display value="Prescription has been cancelled"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/EPS-task-prescription-release-rejection-reason"/>
+            <code value="0005"/>
+            <display value="Prescription has been dispensed"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/EPS-task-prescription-release-rejection-reason"/>
+            <code value="0002"/>
+            <display value="Prescription has expired"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/EPS-task-prescription-release-rejection-reason"/>
+            <code value="0004"/>
+            <display value="Prescription is with another dispenser"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/EPS-task-prescription-release-rejection-reason"/>
+            <code value="5000"/>
+            <display value="Unable to process message. [Additional Information (if any)]"/>
+        </contains>
+    </expansion>
+</ValueSet>

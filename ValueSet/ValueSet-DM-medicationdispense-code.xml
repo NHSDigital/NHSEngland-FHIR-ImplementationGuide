@@ -1,0 +1,31 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+    <id value="6e882a7e-d0ab-400b-a382-ae162c1fb4c7" />
+    <url value="https://fhir.nhs.uk/ValueSet/NHSDigital-MedicationDispense-Code" />
+    <version value="1.0.1" />
+    <name value="DMMedicationDispenseCode" />
+    <title value="Digital Medicine MedicationDispense Code" />
+    <status value="draft" />
+    <date value="2020-11-26T00:00:00+00:00" />
+    <publisher value="NHS Digital" />
+    <contact>
+        <name value="NHS Digital" />
+        <telecom>
+            <system value="email" />
+            <value value="interoperabilityteam@nhs.net" />
+            <use value="work" />
+            <rank value="2" />
+        </telecom>
+    </contact>
+    <description value="A code from the SNOMED Clinical Terminology UK coding system to identify the medication." />
+    <copyright value="Copyright &#169; 2020 HL7 UK Licensed under the Apache License, Version 2.0 (the &quot;License&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at  http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. HL7&#174; FHIR&#174; standard Copyright &#169; 2011+ HL7  The HL7&#174; FHIR&#174; standard is used under the FHIR license. You may obtain a copy of the FHIR license at  https://www.hl7.org/fhir/license.html." />
+    <compose>
+        <include>
+            <system value="http://snomed.info/sct" />
+            <filter>
+                <property value="constraint" />
+                <op value="=" />
+                <value value="(^999000541000001108 |National Health Service dictionary of medicines and devices actual medicinal product simple reference set| OR ^999000551000001106 |National Health Service dictionary of medicines and devices actual medicinal product pack simple reference set| OR ^999000561000001109 |National Health Service dictionary of medicines and devices virtual medicinal product simple reference set| OR ^999000571000001104 |National Health Service dictionary of medicines and devices virtual medicinal product pack simple reference set|)" />
+            </filter>
+        </include>
+    </compose>
+</ValueSet>
