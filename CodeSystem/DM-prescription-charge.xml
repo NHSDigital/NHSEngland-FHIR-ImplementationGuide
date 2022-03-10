@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><CodeSystem xmlns="http://hl7.org/fhir">
+   <id value="DM-prescription-charge"/>
+   <url value="https://fhir.nhs.uk/CodeSystem/DM-prescription-charge"/>
+   <version value="1.1.1"/>
+   <name value="DMPrescriptionCharge"/>
+   <status value="active"/>
+   <date value="2018-05-18T00:00:00+00:00"/>
+   <publisher value="NHS Digital"/>
+   <contact>
+      <name value="Interoperability Team" />
+      <telecom>
+        <system value="email" />
+        <value value="interoperabilityteam@nhs.net" />
+        <use value="work" />
+      </telecom>
+    </contact>
+   <description value="A CodeSystem to identify the treatment type of prescription"/>
+   <copyright value="Copyright © 2004 HSCIC"/>
+   <caseSensitive value="true"/>
+   <content value="complete"/>
+   <concept>
+      <code value="paid-twice"/>
+      <display value="Paid Twice"/>
+   </concept>
+   <concept>
+      <code value="paid-once"/>
+      <display value="Paid Once"/>
+   </concept>
+   <concept>
+      <code value="not-paid"/>
+      <display value="Not Paid"/>
+   </concept>
+</CodeSystem>

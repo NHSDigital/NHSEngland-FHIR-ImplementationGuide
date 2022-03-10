@@ -1,0 +1,106 @@
+<CodeSystem xmlns="http://hl7.org/fhir">
+    <id value="prescription-charge-exemption" />
+    <url value="https://fhir.nhs.uk/CodeSystem/prescription-charge-exemption" />
+    <identifier>
+        <system value="https://fhir.nhs.uk/identifier/CodeSystem" />
+        <value value="prescription-charge-exemption" />
+    </identifier>
+    <version value="1.0.1" />
+    <name value="PrescriptionChargeExemption" />
+    <title value="Prescription Charge Exemption" />
+    <status value="draft" />
+    <experimental value="true" />
+    <date value="2020-10-08" />
+    <publisher value="NHS Digital" />
+    <contact>
+        <name value="Interoperability Team" />
+        <telecom>
+          <system value="email" />
+          <value value="interoperabilityteam@nhs.net" />
+          <use value="work" />
+        </telecom>
+      </contact>
+    <description value="MedicationRequest Status Reason. Taken from HL7v3 UK Cancellation Reason" />
+    <caseSensitive value="true" />
+    <content value="complete" />
+    <concept>
+        <code value="0000"></code>
+        <display value="Patient has paid appropriate charges at old rate" />
+    </concept>
+    <concept>
+        <code value="0001"></code>
+        <display value="Patient has paid appropriate charges" />
+    </concept>
+    <concept>
+        <code value="0002"></code>
+        <display value="Is 60 years of age or over or is under 16 years of age" />
+    </concept>
+    <concept>
+        <code value="0003"></code>
+        <display value="16, 17 or 18 and in full-time education" />
+    </concept>
+    <concept>
+        <code value="0004"></code>
+        <display value="is 60 years of age or over" />
+    </concept>
+    <concept>
+        <code value="0005"></code>
+        <display value="Maternity exemption certificate" />
+    </concept>
+    <concept>
+        <code value="0006"></code>
+        <display value="Medical exemption certificate" />
+    </concept>
+    <concept>
+        <code value="0007"></code>
+        <display value="Prescription prepayment certificate" />
+    </concept>
+    <concept>
+        <code value="0008"></code>
+        <display value="Prescription exemption certificate issued by Ministry of Defence" />
+    </concept>
+    <concept>
+        <code value="0009"></code>
+        <display value="HC2 (full help) certificate" />
+    </concept>
+    <concept>
+        <code value="0010"></code>
+        <display value="Was prescribed free-of-charge contraceptives" />
+    </concept>
+    <concept>
+        <code value="0011"></code>
+        <display value="Income support or Income-related Employment and Support Allowance" />
+    </concept>
+    <concept>
+        <code value="0012"></code>
+        <display value="Income based Job Seeker's Allowance" />
+    </concept>
+    <concept>
+        <code value="0013"></code>
+        <display value="Tax credit exemption certificate" />
+    </concept>
+    <concept>
+        <code value="0014"></code>
+        <display value="Pension Credit Guarantee Credit (including partners)" />
+    </concept>
+    <concept>
+        <code value="0015"></code>
+        <display value="Was prescribed free-of-charge HMP/prisoners/persons detained in other secure accommodation medication" />
+    </concept>
+    <concept>
+        <code value="0016"></code>
+        <display value="Universal Credit and meets the criteria" />
+    </concept>
+    <concept>
+        <code value="0017"></code>
+        <display value="Was prescribed free-of-charge STI sexual health medication" />
+    </concept>
+    <concept>
+        <code value="0018"></code>
+        <display value="Was prescribed free-of-charge mental health medication" />
+    </concept>
+    <concept>
+        <code value="0019"></code>
+        <display value="Was prescribed free-of-charge TB medication" />
+    </concept>
+</CodeSystem>

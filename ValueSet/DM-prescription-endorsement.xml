@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+    <id value="977ef4e4-de8a-405a-b444-e54b7daa17ed"/>
+    <url value="https://fhir.nhs.uk/ValueSet/DM-prescription-endorsement"/>
+    <version value="4.0.2"/>
+    <name value="NHSBSAPrescriptionEndorsement"/>
+    <status value="draft"/>
+    <description value="MedicationRequest Category Controlled Drug."/>
+    <compose>
+        <include>
+            <system value="https://fhir.nhs.uk/CodeSystem/medicationrequest-endorsement"/>
+            <version value="1.1.0" />
+        </include>
+    </compose>
+    <expansion>
+        <timestamp value="2021-04-13T12:00:00+00:00"/>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/medicationrequest-endorsement"/>
+            <code value="CC"/>
+            <display value="Contraceptive"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/medicationrequest-endorsement"/>
+            <code value="FS"/>
+            <display value="Sexual Health"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/medicationrequest-endorsement"/>
+            <code value="ACBS"/>
+            <display value="Advisory Committee on Borderline Substances"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/medicationrequest-endorsement"/>
+            <code value="SLS"/>
+            <display value="Selected List Scheme"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/medicationrequest-endorsement"/>
+            <code value="AF"/>
+            <display value="Food replacement/food supplement products"/>
+        </contains>
+    </expansion>
+</ValueSet>

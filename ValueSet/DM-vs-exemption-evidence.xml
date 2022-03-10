@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+    <id value="DM-vs-exemption-evidence"/>
+    <url value="https://fhir.nhs.uk/ValueSet/DM-vs-exemption-evidence"/>
+    <version value="4.0.1"/>
+    <name value="NHSBSAPrescriptionExemptionEvidence"/>
+    <status value="draft"/>
+    <description value="NHSBSA Prescription Exemption Evidence"/>
+    <compose>
+        <include>
+            <system value="https://fhir.nhs.uk/CodeSystem/DM-exemption-evidence"/>
+            <version value="1.1.0" />
+        </include>
+    </compose>
+    <expansion>
+        <identifier value="4359e9d3-b211-4e2c-8a30-067315e159e6"/>
+        <timestamp value="2021-04-21T18:12:36+10:00"/>
+        <total value="2"/>
+        <offset value="0"/>
+        <parameter>
+            <name value="version"/>
+            <valueUri value="https://fhir.nhs.uk/CodeSystem/DM-exemption-evidence|1.1.0"/>
+        </parameter>
+        <parameter>
+            <name value="count"/>
+            <valueInteger value="2147483647"/>
+        </parameter>
+        <parameter>
+            <name value="offset"/>
+            <valueInteger value="0"/>
+        </parameter>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/DM-exemption-evidence"/>
+            <code value="evidence-seen"/>
+            <display value="Evidence Seen"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/DM-exemption-evidence"/>
+            <code value="no-evidence-seen"/>
+            <display value="No Evidence Seen"/>
+        </contains>
+    </expansion>
+</ValueSet>

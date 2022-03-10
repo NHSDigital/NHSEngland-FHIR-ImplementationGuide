@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+    <id value="DM-dispensing-endorsement" />
+    <url value="https://fhir.nhs.uk/ValueSet/DM-dispensing-endorsement" />
+    <version value="4.0.1" />
+    <name value="NHSBSADispensingEndorsement" />
+    <status value="draft" />
+    <description value="NHSBSA Dispensing Endorsement" />
+    <compose>
+        <include>
+            <system value="https://fhir.nhs.uk/CodeSystem/medicationdispense-endorsement" />
+            <version value="1.0.1" />
+        </include>
+    </compose>
+    <expansion>
+        <identifier value="87832983-a74a-434e-adf6-79da5fdd5b95"/>
+        <timestamp value="2021-04-23T19:29:46+10:00"/>
+        <total value="13"/>
+        <offset value="0"/>
+        <parameter>
+            <name value="version"/>
+            <valueUri value="https://fhir.nhs.uk/CodeSystem/medicationdispense-endorsement|1.0.1"/>
+        </parameter>
+        <parameter>
+            <name value="count"/>
+            <valueInteger value="2147483647"/>
+        </parameter>
+        <parameter>
+            <name value="offset"/>
+            <valueInteger value="0"/>
+        </parameter>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/medicationdispense-endorsement"/>
+            <code value="BB"/>
+            <display value="Broken Bulk"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/medicationdispense-endorsement"/>
+            <code value="ED"/>
+            <display value="Extemporaneously dispensed "/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/medicationdispense-endorsement"/>
+            <code value="IP"/>
+            <display value="Invoice Price for less common products or special items"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/medicationdispense-endorsement"/>
+            <code value="MF"/>
+            <display value="Measured and Fitted"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/medicationdispense-endorsement"/>
+            <code value="NCSO"/>
+            <display value="No Cheaper Stock Obtainable"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/medicationdispense-endorsement"/>
+            <code value="NDEC"/>
+            <display value="No Dispenser Endorsement Code"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/medicationdispense-endorsement"/>
+            <code value="XP"/>
+            <display value="Out of Pocket Expenses"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/medicationdispense-endorsement"/>
+            <code value="PC"/>
+            <display value="Prescriber Contacted"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/medicationdispense-endorsement"/>
+            <code value="PNC"/>
+            <display value="Prescriber Not Contacted"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/medicationdispense-endorsement"/>
+            <code value="RC"/>
+            <display value="Rebate Claimed"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/medicationdispense-endorsement"/>
+            <code value="SSP"/>
+            <display value="Serious Shortage Protocol"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/medicationdispense-endorsement"/>
+            <code value="SP"/>
+            <display value="Special License"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/medicationdispense-endorsement"/>
+            <code value="ZD"/>
+            <display value="Zero Discount (List B only)"/>
+        </contains>
+    </expansion>
+</ValueSet>

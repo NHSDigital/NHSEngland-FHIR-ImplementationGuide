@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<CodeSystem xmlns="http://hl7.org/fhir">
+   <id value="prescription-type" />
+   <url value="https://fhir.nhs.uk/CodeSystem/prescription-type" />
+   <version value="1.1.4" />
+   <name value="PrescriptionType" />
+   <status value="active" />
+   <date value="2020-07-30T00:00:00+00:00" />
+   <publisher value="NHS Digital and NHS Business Services Authority" />
+   <contact>
+      <name value="Interoperability Team" />
+      <telecom>
+        <system value="email" />
+        <value value="interoperabilityteam@nhs.net" />
+        <use value="work" />
+      </telecom>
+    </contact>
+   <description value="A CodeSystem to identify the type of prescription" />
+   <copyright value="Copyright © 2004 HSCIC" />
+   <caseSensitive value="true" />
+   <content value="complete" />
+   <concept>
+      <code value="0101" />
+      <display value="Primary Care Prescriber – Medical Prescriber" />
+   </concept>
+   <concept>
+      <code value="0104" />
+      <display value="Primary Care Prescriber - Nurse Independent/Supplementary prescriber" />
+   </concept>
+   <concept>
+      <code value="0105" />
+      <display value="Primary Care Prescriber - Community Practitioner Nurse prescriber" />
+   </concept>
+   <concept>
+      <code value="0108" />
+      <display value="Primary Care Prescriber - Pharmacist Independent/Supplementary prescriber" />
+   </concept>
+   <concept>
+      <code value="0113" />
+      <display value="Primary Care Prescriber – Optometrist Independent/Supplementary prescriber" />
+   </concept>
+   <concept>
+      <code value="0114" />
+      <display value="Primary Care Prescriber – Podiatrist/Chiropodist Independent/Supplementary prescriber" />
+   </concept>
+   <concept>
+      <code value="0116" />
+      <display value="Primary Care Prescriber – Radiographer Independent/Supplementary prescriber" />
+   </concept>
+   <concept>
+      <code value="0117" />
+      <display value="Primary Care Prescriber - Physiotherapist Independent/Supplementary prescriber" />
+   </concept>
+   <concept>
+      <code value="0124" />
+      <display value="Primary Care Prescriber – Dietician Supplementary prescriber" />
+   </concept>
+   <concept>
+      <code value="0125" />
+      <display value="Primary Care Prescriber – Paramedic Independent/Supplementary prescriber" />
+   </concept>
+   <concept>
+      <code value="0607" />
+      <display value="Dental Prescribing – Dentist" />
+   </concept>
+   <concept>
+      <code value="1001" />
+      <display value="Outpatient Community Prescriber - Medical Prescriber" />
+   </concept>
+   <concept>
+      <code value="1101" />
+      <display value="Outpatient Pharmacy Prescriber - Medical Prescriber" />
+   </concept>
+   <concept>
+      <code value="1201" />
+      <display value="Outpatient Homecare Prescriber - Medical Prescriber" />
+   </concept>
+   <concept>
+      <code value="0901" />
+      <display value="Private prescribing - GP" />
+   </concept>
+   <concept>
+      <code value="0904" />
+      <display value="Private prescribing - Nurse prescribing" />
+   </concept>
+   <concept>
+      <code value="0908" />
+      <display value="Private prescribing - Pharmacist prescribing" />
+   </concept>
+   <concept>
+      <code value="0913" />
+      <display value="Private prescribing - Optometrist" />
+   </concept>
+   <concept>
+      <code value="0914" />
+      <display value="Private prescribing - Podiatrist Chiropodist" />
+   </concept>
+   <concept>
+      <code value="0916" />
+      <display value="Private prescribing - Radiographer" />
+   </concept>
+   <concept>
+      <code value="0917" />
+      <display value="Private prescribing - Physiotherapist" />
+   </concept>
+   <concept>
+      <code value="0924" />
+      <display value="Private prescribing - Dietician" />
+   </concept>
+   <concept>
+      <code value="0925" />
+      <display value="Private prescribing - Paramedic" />
+   </concept>
+   <concept>
+      <code value="1004" />
+      <display value="Outpatient Community Prescriber - Nurse Independent Supplementary prescriber" />
+      <definition value="FP10SS (HP) Hospital outpatient prescriptions dispensed in a community pharmacy" />
+   </concept>
+   <concept>
+      <code value="1005" />
+      <display value="Outpatient Community Prescriber - Community Practitioner Nurse prescriber" />
+      <definition value="FP10SS (HP) Hospital outpatient prescriptions dispensed in a community pharmacy" />
+   </concept>
+   <concept>
+      <code value="1008" />
+      <display value="Outpatient Community Prescriber - Pharmacist Independent Supplementary prescriber" />
+      <definition value="FP10SS (HP) Hospital outpatient prescriptions dispensed in a community pharmacy" />
+   </concept>
+   <concept>
+      <code value="1013" />
+      <display value="Outpatient Community Prescriber – Optometrist Independent Supplementary prescriber" />
+      <definition value="FP10SS (HP) Hospital outpatient prescriptions dispensed in a community pharmacy" />
+   </concept>
+   <concept>
+      <code value="1014" />
+      <display value="Outpatient Community Prescriber – Podiatrist Chiropodist Independent Supplementary prescriber" />
+      <definition value="FP10SS (HP) Hospital outpatient prescriptions dispensed in a community pharmacy" />
+   </concept>
+   <concept>
+      <code value="1016" />
+      <display value="Outpatient Community Prescriber – Radiographer Independent Supplementary prescriber" />
+      <definition value="FP10SS (HP) Hospital outpatient prescriptions dispensed in a community pharmacy" />
+   </concept>
+   <concept>
+      <code value="1017" />
+      <display value="Outpatient Community Prescriber - Physiotherapist Independent Supplementary prescriber" />
+      <definition value="FP10SS (HP) Hospital outpatient prescriptions dispensed in a community pharmacy" />
+   </concept>
+   <concept>
+      <code value="1024" />
+      <display value="Outpatient Community Prescriber – Dietician Supplementary prescriber" />
+      <definition value="FP10SS (HP) Hospital outpatient prescriptions dispensed in a community pharmacy" />
+   </concept>
+   <concept>
+      <code value="1025" />
+      <display value="Outpatient Community Prescriber – Paramedic Independent Supplementary prescriber" />
+      <definition value="FP10SS (HP) Hospital outpatient prescriptions dispensed in a community pharmacy" />
+   </concept>
+
+   <concept>
+      <code value="1104" />
+      <display value="Outpatient Hospital Pharmacy Prescriber - Nurse Independent Supplementary prescriber" />
+      <definition value="NON- FP10 Hospital outpatient prescriptions dispensed in their own hospital pharmacy" />
+   </concept>
+   <concept>
+      <code value="1105" />
+      <display value="Outpatient Hospital Pharmacy Prescriber - Community Practitioner Nurse prescriber" />
+      <definition value="NON- FP10 Hospital outpatient prescriptions dispensed in their own hospital pharmacy" />
+   </concept>
+   <concept>
+      <code value="1108" />
+      <display value="Outpatient Hospital Pharmacy Prescriber - Pharmacist Independent Supplementary prescriber" />
+      <definition value="NON- FP10 Hospital outpatient prescriptions dispensed in their own hospital pharmacy" />
+   </concept>
+   <concept>
+      <code value="1113" />
+      <display value="Outpatient Hospital Pharmacy Prescriber – Optometrist Independent Supplementary prescriber" />
+      <definition value="NON- FP10 Hospital outpatient prescriptions dispensed in their own hospital pharmacy" />
+   </concept>
+   <concept>
+      <code value="1114" />
+      <display value="Outpatient Hospital Pharmacy Prescriber – Podiatrist Chiropodist Independent Supplementary prescriber" />
+      <definition value="NON- FP10 Hospital outpatient prescriptions dispensed in their own hospital pharmacy" />
+   </concept>
+   <concept>
+      <code value="1116" />
+      <display value="Outpatient Hospital Pharmacy Prescriber – Radiographer Independent Supplementary prescriber" />
+      <definition value="NON- FP10 Hospital outpatient prescriptions dispensed in their own hospital pharmacy" />
+   </concept>
+   <concept>
+      <code value="1117" />
+      <display value="Outpatient Hospital Pharmacy Prescriber - Physiotherapist Independent Supplementary prescriber" />
+      <definition value="NON- FP10 Hospital outpatient prescriptions dispensed in their own hospital pharmacy" />
+   </concept>
+   <concept>
+      <code value="1124" />
+      <display value="Outpatient Hospital Pharmacy Prescriber – Dietician Supplementary prescriber" />
+      <definition value="NON- FP10 Hospital outpatient prescriptions dispensed in their own hospital pharmacy" />
+   </concept>
+   <concept>
+      <code value="1125" />
+      <display value="Outpatient Hospital Pharmacy Prescriber – Paramedic Independent Supplementary prescriber" />
+      <definition value="NON- FP10 Hospital outpatient prescriptions dispensed in their own hospital pharmacy" />
+   </concept>
+   <concept>
+      <code value="1204" />
+      <display value="Outpatient Homecare Prescriber - Nurse Independent Supplementary prescriber" />
+      <definition value="NON- FP10 Hospital outpatient prescriptions dispensed by Homecare" />
+   </concept>
+   <concept>
+      <code value="1205" />
+      <display value="Outpatient Homecare Prescriber - Community Practitioner Nurse prescriber" />
+      <definition value="NON- FP10 Hospital outpatient prescriptions dispensed by Homecare" />
+   </concept>
+   <concept>
+      <code value="1208" />
+      <display value="Outpatient Homecare Prescriber - Pharmacist Independent Supplementary prescriber" />
+      <definition value="NON- FP10 Hospital outpatient prescriptions dispensed by Homecare" />
+   </concept>
+   <concept>
+      <code value="1213" />
+      <display value="Outpatient Homecare Prescriber – Optometrist Independent Supplementary prescriber" />
+      <definition value="NON- FP10 Hospital outpatient prescriptions dispensed by Homecare" />
+   </concept>
+   <concept>
+      <code value="1214" />
+      <display value="Outpatient Homecare Prescriber – Podiatrist Chiropodist Independent Supplementary prescriber" />
+      <definition value="NON- FP10 Hospital outpatient prescriptions dispensed by Homecare" />
+   </concept>
+   <concept>
+      <code value="1216" />
+      <display value="Outpatient Homecare Prescriber – Radiographer Independent Supplementary prescriber" />
+      <definition value="NON- FP10 Hospital outpatient prescriptions dispensed by Homecare" />
+   </concept>
+   <concept>
+      <code value="1217" />
+      <display value="Outpatient Homecare Prescriber - Physiotherapist Independent Supplementary prescriber" />
+      <definition value="NON- FP10 Hospital outpatient prescriptions dispensed by Homecare" />
+   </concept>
+   <concept>
+      <code value="1224" />
+      <display value="Outpatient Homecare Prescriber – Dietician Supplementary prescriber" />
+      <definition value="NON- FP10 Hospital outpatient prescriptions dispensed by Homecare" />
+   </concept>
+   <concept>
+      <code value="1225" />
+      <display value="Outpatient Homecare Prescriber – Paramedic Independent Supplementary prescriber" />
+      <definition value="NON- FP10 Hospital outpatient prescriptions dispensed by Homecare" />
+   </concept>
+
+</CodeSystem>

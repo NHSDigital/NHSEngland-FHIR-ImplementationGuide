@@ -1,0 +1,13 @@
+{
+	"resourceType": "SearchParameter",
+	"url": "https://fhir.nhs.uk/SearchParameter/group-identifier",
+	"id": "338e6ade-61b6-45a7-a624-dd8c334f0835",
+	"name": "group-identifier",
+	"description": "How to search by Group Identifier in FHIR MedicationRequest",
+	"base": [ "MedicationRequest" ],
+	"status": "active",
+	"code": "group",
+	"type": "token",
+	"expression": "MedicationRequest.groupIdentifier",
+	"xpathUsage": "normal"
+}
