@@ -137,7 +137,7 @@
       <path value="Claim.provider" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole-ContainedAndTelecom" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole-MinimalPlusTelecom" />
         <aggregation value="contained" />
       </type>
       <mustSupport value="true" />
