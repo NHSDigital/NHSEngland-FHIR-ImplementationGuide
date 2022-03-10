@@ -1,0 +1,96 @@
+{
+    "resourceType": "CodeSystem",
+    "id": "ab44db7d-d6f8-4b2f-a89c-b5037b8f7fe8",
+    "url": "https://fhir.nhs.uk/CodeSystem/medicationdispense-endorsement",
+    "identifier":  [
+        {
+            "system": "https://fhir.nhs.uk/identifier/CodeSystem",
+            "value": "medicationdispense-endorsement"
+        }
+    ],
+    "version": "1.0.1",
+    "name": "DispensingEndorsement",
+    "title": "Dispensing Endorsement",
+    "status": "draft",
+    "experimental": true,
+    "date": "2013-04-21",
+    "publisher": "NHS Digital",
+    "contact":  [
+        {
+            "name": "Interoperability Team",
+            "telecom":  [
+                {
+                    "system": "email",
+                    "value": "interoperabilityteam@nhs.net",
+                    "use": "work"
+                }
+            ]
+        }
+    ],
+    "description": "Guidance for Endorsement in the Electronic Prescription Service v6.7 [Sub-Prog / Project ETP NPFIT-ETP-EIM-0015.20 ]",
+    "caseSensitive": true,
+    "content": "complete",
+    "concept":  [
+        {
+            "code": "BB",
+            "display": "Broken Bulk",
+            "definition": "No Supporting Information Required"
+        },
+        {
+            "code": "IP",
+            "display": "Invoice Price for less common products or special items",
+            "definition": "Supporting Information Required"
+        },
+        {
+            "code": "MF",
+            "display": "Measured and Fitted",
+            "definition": "No Supporting Information Required"
+        },
+        {
+            "code": "NCSO",
+            "display": "No Cheaper Stock Obtainable",
+            "definition": "Supporting Information Required"
+        },
+        {
+            "code": "PC",
+            "display": "Prescriber Contacted",
+            "definition": "Supporting Information Required"
+        },
+        {
+            "code": "PNC",
+            "display": "Prescriber Not Contacted",
+            "definition": "Supporting Information Required"
+        },
+        {
+            "code": "RC",
+            "display": "Rebate Claimed",
+            "definition": "No Supporting Information Required"
+        },
+        {
+            "code": "XP",
+            "display": "Out of Pocket Expenses",
+            "definition": "Supporting Information Required"
+        },
+        {
+            "code": "ZD",
+            "display": "Zero Discount (List B only)",
+            "definition": "No Supporting"
+        },
+        {
+            "code": "SP",
+            "display": "Special License"
+        },
+        {
+            "code": "ED",
+            "display": "Extemporaneously dispensed"
+        },
+        {
+            "code": "NDEC",
+            "display": "No Dispenser Endorsement Code"
+        },
+        {
+            "code": "SSP",
+            "display": "Serious Shortage Protocol"
+        }
+    ]
+}

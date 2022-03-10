@@ -1,0 +1,49 @@
+{
+    "resourceType": "ValueSet",
+    "id": "3b63b0bf-d67c-4ab5-92f7-d495b9aaa382",
+    "url": "https://fhir.nhs.uk/ValueSet/DM-vs-exemption-evidence",
+    "version": "4.0.1",
+    "name": "NHSBSAPrescriptionExemptionEvidence",
+    "status": "draft",
+    "description": "NHSBSA Prescription Exemption Evidence",
+    "compose": {
+        "include":  [
+            {
+                "system": "https://fhir.nhs.uk/CodeSystem/DM-exemption-evidence",
+                "version": "1.1.0"
+            }
+        ]
+    },
+    "expansion": {
+        "identifier": "4359e9d3-b211-4e2c-8a30-067315e159e6",
+        "timestamp": "2021-04-21T18:12:36+10:00",
+        "total": 2,
+        "offset": 0,
+        "parameter":  [
+            {
+                "name": "version",
+                "valueUri": "https://fhir.nhs.uk/CodeSystem/DM-exemption-evidence|1.1.0"
+            },
+            {
+                "name": "count",
+                "valueInteger": 2147483647
+            },
+            {
+                "name": "offset",
+                "valueInteger": 0
+            }
+        ],
+        "contains":  [
+            {
+                "system": "https://fhir.nhs.uk/CodeSystem/DM-exemption-evidence",
+                "code": "evidence-seen",
+                "display": "Evidence Seen"
+            },
+            {
+                "system": "https://fhir.nhs.uk/CodeSystem/DM-exemption-evidence",
+                "code": "no-evidence-seen",
+                "display": "No Evidence Seen"
+            }
+        ]
+    }
+}

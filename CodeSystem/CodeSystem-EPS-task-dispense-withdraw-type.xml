@@ -1,0 +1,42 @@
+<CodeSystem xmlns="http://hl7.org/fhir">
+    <id value="bdeb77c1-4788-4ed0-ae4a-4b181c200944" />
+    <url value="https://fhir.nhs.uk/CodeSystem/EPS-task-dispense-withdraw-type" />
+    <identifier>
+        <system value="https://fhir.nhs.uk/identifier/CodeSystem" />
+        <value value="EPS-task-dispense-withdraw-type" />
+    </identifier>
+    <version value="01" />
+    <name value="EPSDispenseWithdrawType" />
+    <title value="EPS Dispense Withdraw Type" />
+    <status value="draft" />
+    <experimental value="false" />
+    <date value="2005-04-05" />
+    <publisher value="NHS Digital" />
+    <contact>
+        <name value="Interoperability Team" />
+        <telecom>
+            <system value="email" />
+            <value value="interoperabilityteam@nhs.net" />
+            <use value="work" />
+        </telecom>
+    </contact>
+    <description value="EPS Dispense Withdraw Reason. Taken from HL7v3 UK Cancellation Reason Response" />
+    <caseSensitive value="true" />
+    <content value="complete" />
+    <concept>
+        <code value="PS"></code>
+        <display value="Protocol Supply" />
+    </concept>
+    <concept>
+        <code value="PA"></code>
+        <display value="Personal Administration" />
+    </concept>
+    <concept>
+        <code value="LD"></code>
+        <display value="Last Dispense" />
+    </concept>
+    <concept>
+        <code value="AD"></code>
+        <display value="All Dispenses for an instance" />
+    </concept>
+</CodeSystem>

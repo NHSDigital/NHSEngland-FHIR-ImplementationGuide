@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ValueSet xmlns="http://hl7.org/fhir">
-    <id value="DM-vs-prescription-charge"/>
+    <id value="c1fabdce-2477-4b08-baa9-fa697a18ef74"/>
     <url value="https://fhir.nhs.uk/ValueSet/DM-vs-prescription-charge"/>
     <version value="4.0.1"/>
     <name value="NHSBSAPrescriptionCharge"/>
