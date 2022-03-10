@@ -121,7 +121,7 @@
       <type>
         <code value="Reference" />
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Task" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-Appointment" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Appointment" />
       </type>
     </element>
     <element id="Extension.url">

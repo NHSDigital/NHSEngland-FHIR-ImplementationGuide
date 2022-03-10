@@ -84,7 +84,7 @@
             "resource": [
                 {
                     "type": "ServiceRequest",
-                    "profile": "https://fhir.nhs.uk/StructureDefinition/England-ServiceRequest",
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-ServiceRequest",
                     "documentation": "Supports Referrals and advice guidance requests",
                     "interaction": [
                         {
@@ -146,7 +146,7 @@
                 },
                 {
                     "type": "Appointment",
-                    "profile": "https://fhir.nhs.uk/StructureDefinition/England-Appointment",
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-Appointment",
                     "interaction": [
                         {
                             "code": "read",

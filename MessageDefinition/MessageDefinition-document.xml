@@ -18,7 +18,7 @@
     <category value="consequence" />
     <focus>
         <code value="DocumentReference" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/England-DocumentReference" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-DocumentReference" />
         <min value="1" />
         <max value="*" />
     </focus>

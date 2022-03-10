@@ -104,7 +104,7 @@
       <path value="Encounter.basedOn" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-ServiceRequest" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-ServiceRequest" />
       </type>
     </element>
     <element id="Encounter.basedOn.identifier.system">
@@ -136,7 +136,7 @@
       <path value="Encounter.appointment" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-Appointment" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Appointment" />
       </type>
     </element>
     <element id="Encounter.period">

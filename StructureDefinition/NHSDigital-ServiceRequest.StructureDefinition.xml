@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="https://fhir.nhs.uk/StructureDefinition/England-ServiceRequest" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-ServiceRequest" />
   <name value="EnglandServiceRequest" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
@@ -76,7 +76,7 @@
         <code value="Reference" />
         <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-CarePlan" />
         <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-MedicationRequest" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-ServiceRequest" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-ServiceRequest" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -102,7 +102,7 @@
       <min value="1" />
       <binding>
         <strength value="required" />
-        <valueSet value="https://fhir.nhs.uk/ValueSet/England-servicerequest-category" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDigital-ServiceRequest-category" />
       </binding>
     </element>
     <element id="ServiceRequest.category.coding.system">
@@ -221,7 +221,7 @@
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Resource" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-DocumentReference" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-DocumentReference" />
         <aggregation value="referenced" />
       </type>
     </element>
