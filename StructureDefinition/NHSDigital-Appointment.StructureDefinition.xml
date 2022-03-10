@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Appointment" />
-  <name value="EnglandAppointment" />
+  <name value="NHSDigitalAppointment" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
   <kind value="resource" />
