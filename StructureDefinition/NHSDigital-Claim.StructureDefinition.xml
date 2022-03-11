@@ -40,27 +40,32 @@
     <element id="Claim.extension:replacementOf">
       <path value="Claim.extension" />
       <sliceName value="replacementOf" />
+      <short value="Used to reference a previous Claim" />
+      <definition value="Used for replacement Claims, this should reference the Claim.identifier of the Claim being replaced.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA;  &quot;extension&quot;:  [&#xD;&#xA;        {&#xD;&#xA;            &quot;url&quot;: &quot;https://fhir.nhs.uk/StructureDefinition/Extension-replacementOf&quot;,&#xD;&#xA;            &quot;valueIdentifier&quot;: {&#xD;&#xA;                &quot;value&quot;: &quot;46055273-3001-41bd-86a0-f8dba7f2161a&quot;&#xD;&#xA;            }&#xD;&#xA;        }&#xD;&#xA;    ],&#xD;&#xA;&#xD;&#xA;```" />
       <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-replacementOf" />
       </type>
+      <mustSupport value="true" />
     </element>
     <element id="Claim.extension:agent">
       <path value="Claim.extension" />
       <sliceName value="agent" />
       <short value="Provenance of the resource" />
-      <definition value="Is used as the author on request resources." />
+      <definition value="The person submitting/authoring the Claim&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA;   &quot;extension&quot;:  [&#xD;&#xA;        {&#xD;&#xA;            &quot;url&quot;: &quot;https://fhir.nhs.uk/StructureDefinition/Extension-Provenance-agent&quot;,&#xD;&#xA;            &quot;valueReference&quot;: {&#xD;&#xA;                &quot;identifier&quot;: {&#xD;&#xA;                    &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/sds-role-profile-id&quot;,&#xD;&#xA;                    &quot;value&quot;: &quot;884562163557&quot;&#xD;&#xA;                },&#xD;&#xA;                &quot;display&quot;: &quot;dummy full name&quot;&#xD;&#xA;            }&#xD;&#xA;        }&#xD;&#xA;    ],&#xD;&#xA;```" />
       <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-Provenance-agent" />
       </type>
+      <mustSupport value="true" />
     </element>
     <element id="Claim.identifier">
       <path value="Claim.identifier" />
+      <definition value="**MUST** be unique for each Claim. In EPS this must be a UUID with a system of `https://fhir.nhs.uk/Id/prescription-dispense-item-number`&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA;      &quot;identifier&quot;:  [&#xD;&#xA;          {&#xD;&#xA;              &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/prescription-dispense-item-number&quot;,&#xD;&#xA;              &quot;value&quot;: &quot;4509B70D-D8B8-EA03-1105-64557CB54A29&quot;&#xD;&#xA;          }&#xD;&#xA;      ],&#xD;&#xA;&#xD;&#xA;```" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
@@ -74,6 +79,7 @@
     </element>
     <element id="Claim.status">
       <path value="Claim.status" />
+      <definition value="For EPS the following **MUST** be used.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA;      &quot;status&quot;: &quot;active&quot;,&#xD;&#xA;      &quot;type&quot;: {&#xD;&#xA;          &quot;coding&quot;:  [&#xD;&#xA;              {&#xD;&#xA;                   &quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/claim-type&quot;,&#xD;&#xA;                    &quot;code&quot;: &quot;pharmacy&quot;,&#xD;&#xA;                    &quot;display&quot;: &quot;Pharmacy&quot;&#xD;&#xA;             }             &#xD;&#xA;          ]&#xD;&#xA;      },&#xD;&#xA;      &quot;use&quot;: &quot;claim&quot;,&#xD;&#xA;&#xD;&#xA;```" />
       <mustSupport value="true" />
     </element>
     <element id="Claim.type">
@@ -100,6 +106,7 @@
     </element>
     <element id="Claim.patient">
       <path value="Claim.patient" />
+      <definition value="**MUST** be an identifier reference using the Patients NHS Number.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA;      &quot;patient&quot;: {&#xD;&#xA;          &quot;identifier&quot;: {&#xD;&#xA;              &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/nhs-number&quot;,&#xD;&#xA;              &quot;value&quot;: &quot;2300992742&quot;&#xD;&#xA;          }&#xD;&#xA;      },&#xD;&#xA;&#xD;&#xA;```" />
       <constraint>
         <key value="patient-reference" />
         <severity value="error" />
@@ -131,10 +138,12 @@
     </element>
     <element id="Claim.created">
       <path value="Claim.created" />
+      <definition value="The date of the Claim&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA;  &quot;created&quot;: &quot;2004-09-16T16:30:00+00:00&quot;,&#xD;&#xA;&#xD;&#xA;```" />
       <mustSupport value="true" />
     </element>
     <element id="Claim.provider">
       <path value="Claim.provider" />
+      <definition value="The organisation responsible for the claim, this must be a reference to a contained PractitoinerRole&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA; &quot;provider&quot;: {&#xD;&#xA;        &quot;reference&quot; : &quot;#provider&quot;&#xD;&#xA;    },&#xD;&#xA;```.&#xD;&#xA;&#xD;&#xA;The contained PractitionerRole&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;{&#xD;&#xA;    &quot;resourceType&quot;: &quot;Claim&quot;,&#xD;&#xA;    &quot;id&quot;: &quot;258E153F-567B-4D60-B045-BA315A6B8DB0&quot;,&#xD;&#xA;    &quot;contained&quot;: [&#xD;&#xA;        {&#xD;&#xA;            &quot;resourceType&quot;: &quot;PractitionerRole&quot;,&#xD;&#xA;            &quot;id&quot;: &quot;provider&quot;,&#xD;&#xA;            &quot;practitioner&quot;: {&#xD;&#xA;                &quot;identifier&quot;: {&#xD;&#xA;                    &quot;system&quot;: &quot;https://fhir.hl7.org.uk/Id/gphc-number&quot;,&#xD;&#xA;                    &quot;value&quot;: &quot;2344242&quot;&#xD;&#xA;                },&#xD;&#xA;                &quot;display&quot;: &quot;|Bob||Buller|&quot;&#xD;&#xA;            },&#xD;&#xA;            &quot;organization&quot;: {&#xD;&#xA;                &quot;identifier&quot;: {&#xD;&#xA;                    &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/ods-organization-code&quot;,&#xD;&#xA;                    &quot;value&quot;: &quot;FA976&quot;&#xD;&#xA;                },&#xD;&#xA;                &quot;display&quot;: &quot;Bob's Pharmacy&quot;&#xD;&#xA;            },&#xD;&#xA;            &quot;telecom&quot;: [&#xD;&#xA;                {&#xD;&#xA;                    &quot;system&quot;: &quot;phone&quot;,&#xD;&#xA;                    &quot;use&quot;: &quot;work&quot;,&#xD;&#xA;                    &quot;value&quot;: &quot;01234567890&quot;&#xD;&#xA;                }&#xD;&#xA;            ]&#xD;&#xA;        }&#xD;&#xA;    ],&#xD;&#xA;```" />
       <type>
         <code value="Reference" />
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole-MinimalPlusTelecom" />
@@ -154,6 +163,11 @@
       <path value="Claim.provider.identifier.value" />
       <min value="1" />
     </element>
+    <element id="Claim.priority">
+      <path value="Claim.priority" />
+      <definition value="Desired processing ugency. Fixed value.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;priority&quot;: {&#xD;&#xA;        &quot;coding&quot;: [&#xD;&#xA;            {&#xD;&#xA;                &quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/processpriority&quot;,&#xD;&#xA;                &quot;code&quot;: &quot;normal&quot;&#xD;&#xA;            }&#xD;&#xA;        ]&#xD;&#xA;    }&#xD;&#xA;```" />
+      <mustSupport value="true" />
+    </element>
     <element id="Claim.priority.coding">
       <path value="Claim.priority.coding" />
       <min value="1" />
@@ -171,6 +185,7 @@
     </element>
     <element id="Claim.prescription">
       <path value="Claim.prescription" />
+      <definition value="References to the original prescription, the `groupIdentifier` contains both the ShortForm prescription id and long form UUID variant. See [NHSDigital-MedicationRequest](https://simplifier.net/resolve?target=simplifier&amp;scope=uk.nhsdigital.r4&amp;canonical=https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationRequest) for more details.&#xD;&#xA;&#xD;&#xA;This MUST not be used to reference the MedicationRequest.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA;&quot;prescription&quot;: {&#xD;&#xA;    &quot;extension&quot;: [&#xD;&#xA;        {&#xD;&#xA;            &quot;url&quot;: &quot;https://fhir.nhs.uk/StructureDefinition/Extension-DM-GroupIdentifier&quot;,&#xD;&#xA;            &quot;extension&quot;: [&#xD;&#xA;                {&#xD;&#xA;                    &quot;url&quot;: &quot;shortForm&quot;,&#xD;&#xA;                    &quot;valueIdentifier&quot;: {&#xD;&#xA;                        &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/prescription-order-number&quot;,&#xD;&#xA;                        &quot;value&quot;: &quot;82D996-C81010-11DB12&quot;&#xD;&#xA;                    }&#xD;&#xA;                },&#xD;&#xA;                {&#xD;&#xA;                    &quot;url&quot;: &quot;UUID&quot;,&#xD;&#xA;                    &quot;valueIdentifier&quot;: {&#xD;&#xA;                        &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/prescription&quot;,&#xD;&#xA;                        &quot;value&quot;: &quot;b2fc79f0-2793-4736-9b2d-0976c21e73a5&quot;&#xD;&#xA;                    }&#xD;&#xA;                }&#xD;&#xA;            ]&#xD;&#xA;        }&#xD;&#xA;    ]&#xD;&#xA;},&#xD;&#xA;&#xD;&#xA;```" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
@@ -243,6 +258,7 @@
     </element>
     <element id="Claim.payee">
       <path value="Claim.payee" />
+      <definition value="The recipient of benefits payable. This is the ODS Code of the Pharmacy (provider) making the Claim.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA;&quot;payee&quot;: {&#xD;&#xA;    &quot;type&quot;: {&#xD;&#xA;        &quot;coding&quot;: [&#xD;&#xA;            {&#xD;&#xA;                &quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/payeetype&quot;,&#xD;&#xA;                &quot;value&quot;: &quot;provider&quot;,&#xD;&#xA;                &quot;display&quot;: &quot;Provider&quot;&#xD;&#xA;            }&#xD;&#xA;        ]&#xD;&#xA;    },&#xD;&#xA;    &quot;party&quot;: {&#xD;&#xA;        &quot;identifier&quot;: {&#xD;&#xA;            &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/ods-organization-code&quot;,&#xD;&#xA;            &quot;value&quot;: &quot;AB123&quot;&#xD;&#xA;        },&#xD;&#xA;        &quot;display&quot;: &quot;The Simple Pharmacy&quot;&#xD;&#xA;    }&#xD;&#xA;}&#xD;&#xA;```" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
@@ -288,6 +304,8 @@
     </element>
     <element id="Claim.insurance">
       <path value="Claim.insurance" />
+      <definition value="For EPS this is the NHS Business Services Authority. The sequence value must always be 1.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA;&quot;insurance&quot;:  [&#xD;&#xA;    {&#xD;&#xA;        &quot;sequence&quot;: 1,&#xD;&#xA;        &quot;focal&quot;: true,&#xD;&#xA;        &quot;coverage&quot;: {&#xD;&#xA;            &quot;identifier&quot;: {&#xD;&#xA;                &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/ods-organization-code&quot;,&#xD;&#xA;                &quot;value&quot;: &quot;T1450&quot;&#xD;&#xA;            },&#xD;&#xA;            &quot;display&quot;: &quot;NHS BUSINESS SERVICES AUTHORITY&quot;&#xD;&#xA;        }&#xD;&#xA;    }&#xD;&#xA;],&#xD;&#xA;```" />
+      <max value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Claim.insurance.coverage.identifier">
@@ -306,6 +324,7 @@
     </element>
     <element id="Claim.item">
       <path value="Claim.item" />
+      <definition value="&lt;table class=&quot;regular&quot; style=&quot;width:100%&quot;&gt;&#xD;&#xA; &lt;thead&gt;&#xD;&#xA;   &lt;tr&gt;&#xD;&#xA;     &lt;th data-no-sort width=&quot;25%&quot;&gt;&lt;/th&gt;&#xD;&#xA;     &lt;th data-no-sort width=&quot;25%&quot;&gt;item (prescription)&lt;/th&gt;&#xD;&#xA;     &lt;th data-no-sort width=&quot;25%&quot;&gt;detail (requested medication)&lt;/th&gt;&#xD;&#xA;     &lt;th data-no-sort width=&quot;25%&quot;&gt;subDetail (dispensed medication)&lt;/th&gt;&#xD;&#xA;   &lt;/tr&gt;&#xD;&#xA; &lt;/thead&gt;&#xD;&#xA; &lt;tbody&gt;&#xD;&#xA;  &lt;tr&gt;&#xD;&#xA;    &lt;td&gt;&#xD;&#xA;    productOrService&#xD;&#xA;    &lt;/td&gt;&#xD;&#xA;    &lt;td&gt;&#xD;&#xA;    16076005 Prescription&#xD;&#xA;    &lt;/td&gt;&#xD;&#xA;    &lt;td&gt;&#xD;&#xA;    dm+d code of requested medication&#xD;&#xA;    &lt;/td&gt;&#xD;&#xA;    &lt;td&gt;&#xD;&#xA;    dm+d code of dispensed medication&#xD;&#xA;    &lt;/td&gt;&#xD;&#xA;   &lt;/tr&gt;&#xD;&#xA;   &lt;tr&gt;&#xD;&#xA;    &lt;td&gt;&#xD;&#xA;    programCode&#xD;&#xA;    &lt;/td&gt;&#xD;&#xA;    &lt;td&gt;&#xD;&#xA;    exemptionEvidence&#xD;&#xA;    prescriptionChargeExemption&#xD;&#xA;    &lt;/td&gt;&#xD;&#xA;    &lt;td&gt;&#xD;&#xA;    prescriptionCharge&#xD;&#xA;    dispensingEndorsement&#xD;&#xA;    additionalInstructions&#xD;&#xA;    &lt;/td&gt;&#xD;&#xA;    &lt;td&gt;&#xD;&#xA;    &lt;/td&gt;&#xD;&#xA;   &lt;/tr&gt;&#xD;&#xA;   &lt;tr&gt;&#xD;&#xA;   &lt;tr&gt;&#xD;&#xA;    &lt;td&gt;&#xD;&#xA;    modifier&#xD;&#xA;    &lt;/td&gt;&#xD;&#xA;    &lt;td&gt;&#xD;&#xA;    &lt;/td&gt;&#xD;&#xA;    &lt;td&gt;&#xD;&#xA;    MedicationDispenseType&#xD;&#xA;    &lt;/td&gt;&#xD;&#xA;    &lt;td&gt;&#xD;&#xA;    &lt;/td&gt;&#xD;&#xA;   &lt;/tr&gt;&#xD;&#xA;   &lt;tr&gt;&#xD;&#xA;     &lt;tr&gt;&#xD;&#xA;    &lt;td&gt;&#xD;&#xA;    quantity&#xD;&#xA;    &lt;/td&gt;&#xD;&#xA;    &lt;td&gt;&#xD;&#xA;    &lt;/td&gt;&#xD;&#xA;    &lt;td&gt;&#xD;&#xA;    MedicationRequest.quantity&#xD;&#xA;    &lt;/td&gt;&#xD;&#xA;    &lt;td&gt;&#xD;&#xA;    MedicationDispense.quantity&#xD;&#xA;    &lt;/td&gt;&#xD;&#xA;   &lt;/tr&gt;&#xD;&#xA;   &lt;tr&gt;&#xD;&#xA;   &lt;/tbody&gt;&#xD;&#xA;&lt;/table&gt;" />
       <min value="1" />
       <max value="1" />
       <mustSupport value="true" />
@@ -324,16 +343,20 @@
     <element id="Claim.item.extension:prescriptionStatus">
       <path value="Claim.item.extension" />
       <sliceName value="prescriptionStatus" />
+      <definition value="This will generally match the value of the last `dispense-notification` message.&#xD;&#xA;&#xD;&#xA;This should match the `status` of the associated [NHSDigital-Task](https://simplifier.net/resolve?target=simplifier&amp;scope=uk.nhsdigital.r4&amp;canonical=https://fhir.nhs.uk/StructureDefinition/NHSDigital-Task)&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA;&quot;extension&quot;: [&#xD;&#xA;    {&#xD;&#xA;        &quot;url&quot;: &quot;https://fhir.nhs.uk/StructureDefinition/Extension-EPS-TaskBusinessStatus&quot;,&#xD;&#xA;        &quot;valueCoding&quot;: {&#xD;&#xA;            &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/EPS-task-business-status&quot;,&#xD;&#xA;            &quot;code&quot;: &quot;0006&quot;,&#xD;&#xA;            &quot;display&quot;: &quot;Dispensed&quot;&#xD;&#xA;        }&#xD;&#xA;    }&#xD;&#xA;]," />
       <min value="1" />
       <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-EPS-TaskBusinessStatus" />
       </type>
+      <mustSupport value="true" />
     </element>
     <element id="Claim.item.extension:prescriptionStatusReason">
       <path value="Claim.item.extension" />
       <sliceName value="prescriptionStatusReason" />
+      <short value="Prescription Status Reason" />
+      <definition value="Mandatory if the medication was not dispensed. &#xD;&#xA;This should match the `statusReason` of the associated [NHSDigital-Task](https://simplifier.net/resolve?target=simplifier&amp;scope=uk.nhsdigital.r4&amp;canonical=https://fhir.nhs.uk/StructureDefinition/NHSDigital-Task)&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA;&quot;extension&quot;: [&#xD;&#xA;    {&#xD;&#xA;        &quot;url&quot;: &quot;https://fhir.nhs.uk/StructureDefinition/Extension-EPS-TaskBusinessStatusReason&quot;,&#xD;&#xA;        &quot;valueCoding&quot;: {&#xD;&#xA;            &quot;system&quot;: &quot;https://fhir.nhs.uk/ValueSet/DM-medicationdispense-status-reason&quot;,&#xD;&#xA;            &quot;code&quot;: &quot;0001&quot;,&#xD;&#xA;            &quot;display&quot;: &quot;Not required as instructed by the patient&quot;&#xD;&#xA;        }&#xD;&#xA;    }&#xD;&#xA;],&#xD;&#xA;&#xD;&#xA;```" />
       <min value="0" />
       <max value="1" />
       <type>
@@ -348,6 +371,7 @@
     </element>
     <element id="Claim.item.productOrService">
       <path value="Claim.item.productOrService" />
+      <definition value="Mandatory fixed value.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA;&quot;productOrService&quot;: {&#xD;&#xA;    &quot;coding&quot;:  [&#xD;&#xA;        {&#xD;&#xA;            &quot;system&quot;: &quot;http://snomed.info/sct&quot;,&#xD;&#xA;            &quot;code&quot;: &quot;16076005&quot;,&#xD;&#xA;            &quot;display&quot;: &quot;Prescription&quot;&#xD;&#xA;        }&#xD;&#xA;    ]&#xD;&#xA;},&#xD;&#xA;&#xD;&#xA;```" />
       <comment value="To be expanded. At present a fixed SNOMED CT value" />
     </element>
     <element id="Claim.item.productOrService.coding">
@@ -380,7 +404,7 @@
         <rules value="open" />
       </slicing>
       <short value="PrescriptionChargeExemption" />
-      <definition value="Describes possible reasons for someone not having to pay prescription charges." />
+      <definition value="Exemption evidence - code to denote which evidence for exemption has been seen.&#xD;&#xA;&#xD;&#xA;Prescription Charge Exemption - code to denote the exemption reason&#xD;&#xA;&#xD;&#xA;&quot;programCode&quot;: [&#xD;&#xA;    {&#xD;&#xA;        &quot;coding&quot;: [&#xD;&#xA;              {&#xD;&#xA;                &quot;code&quot;: &quot;0001&quot;,&#xD;&#xA;                &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/prescription-charge-exemption&quot;,&#xD;&#xA;                &quot;display&quot;: &quot;Patient has paid appropriate charges&quot;&#xD;&#xA;              }&#xD;&#xA;            ]&#xD;&#xA;          },&#xD;&#xA;          {&#xD;&#xA;            &quot;coding&quot;: [&#xD;&#xA;              {&#xD;&#xA;                &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/DM-exemption-evidence&quot;,&#xD;&#xA;                &quot;code&quot;: &quot;no-evidence-seen&quot;,&#xD;&#xA;                &quot;display&quot;: &quot;No Evidence Seen&quot;&#xD;&#xA;              }&#xD;&#xA;            ]&#xD;&#xA;          }&#xD;&#xA;        ]&#xD;&#xA;&#xD;&#xA;```" />
       <mustSupport value="true" />
       <binding>
         <strength value="example" />
@@ -403,6 +427,7 @@
       <path value="Claim.item.programCode" />
       <sliceName value="exemptionEvidence" />
       <max value="1" />
+      <mustSupport value="true" />
       <binding>
         <strength value="extensible" />
         <valueSet value="https://fhir.nhs.uk/ValueSet/DM-vs-exemption-evidence" />
@@ -422,6 +447,7 @@
       <sliceName value="prescriptionChargeExemption" />
       <min value="1" />
       <max value="1" />
+      <mustSupport value="true" />
       <binding>
         <strength value="required" />
         <description value="Prescription Charge Exemption" />
@@ -439,6 +465,7 @@
     </element>
     <element id="Claim.item.detail">
       <path value="Claim.item.detail" />
+      <definition value="A claim detail line. Relates to MedicationRequest" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
@@ -456,6 +483,8 @@
     <element id="Claim.item.detail.extension:medicationRequest">
       <path value="Claim.item.detail.extension" />
       <sliceName value="medicationRequest" />
+      <short value="MedicationRequest reference" />
+      <definition value="This should match the `identifier` of the associated [NHSDigital-MedicationRequest](https://simplifier.net/resolve?target=simplifier&amp;scope=uk.nhsdigital.r4&amp;canonical=https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationRequest)&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA;&quot;extension&quot;:  [&#xD;&#xA;    {&#xD;&#xA;        &quot;url&quot;: &quot;https://fhir.nhs.uk/StructureDefinition/Extension-ClaimMedicationRequestReference&quot;,&#xD;&#xA;        &quot;valueReference&quot;: {&#xD;&#xA;            &quot;identifier&quot;: {&#xD;&#xA;                &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/prescription-order-item-number&quot;,&#xD;&#xA;                &quot;value&quot;: &quot;33560bee-bc0c-4e3b-a155-71591eee9ca5&quot;&#xD;&#xA;            }&#xD;&#xA;        }&#xD;&#xA;    }&#xD;&#xA;],&#xD;&#xA;&#xD;&#xA;```" />
       <min value="1" />
       <max value="1" />
       <type>
@@ -487,10 +516,12 @@
     </element>
     <element id="Claim.item.detail.sequence">
       <path value="Claim.item.detail.sequence" />
+      <definition value="An integer to identify the item within the resource. Fixed value.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA;&quot;sequence&quot;: 1,&#xD;&#xA;&#xD;&#xA;```" />
       <mustSupport value="true" />
     </element>
     <element id="Claim.item.detail.productOrService">
       <path value="Claim.item.detail.productOrService" />
+      <definition value="This should match the `medicationCodeableConcept` of the associated [NHSDigital-MedicationRequest](https://simplifier.net/resolve?target=simplifier&amp;scope=uk.nhsdigital.r4&amp;canonical=https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationRequest)&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA;&quot;productOrService&quot;: {&#xD;&#xA;    &quot;coding&quot;:  [&#xD;&#xA;        {&#xD;&#xA;            &quot;system&quot;: &quot;http://snomed.info/sct&quot;,&#xD;&#xA;            &quot;code&quot;: &quot;322237000&quot;,&#xD;&#xA;            &quot;display&quot;: &quot;Paracetamol 500mg soluble tablets&quot;&#xD;&#xA;        }&#xD;&#xA;    ]&#xD;&#xA;},&#xD;&#xA;&#xD;&#xA;```" />
       <mustSupport value="true" />
       <binding>
         <strength value="required" />
@@ -500,6 +531,7 @@
     </element>
     <element id="Claim.item.detail.modifier">
       <path value="Claim.item.detail.modifier" />
+      <definition value="If the code is `0002 - Item not dispensed` then the extension `prescriptionStatusReason` is required.&#xD;&#xA;&#xD;&#xA;This should match the `type` of the last associated [NHSDigital-MedicationDispense](https://simplifier.net/resolve?target=simplifier&amp;scope=uk.nhsdigital.r4&amp;canonical=https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationDispense)&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA;&quot;modifier&quot;:  [&#xD;&#xA;    {&#xD;&#xA;        &quot;coding&quot;:  [&#xD;&#xA;            {&#xD;&#xA;                &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/medicationdispense-type&quot;,&#xD;&#xA;                &quot;code&quot;: &quot;0001&quot;,&#xD;&#xA;                &quot;display&quot;: &quot;Item fully dispensed&quot;&#xD;&#xA;            }&#xD;&#xA;        ]&#xD;&#xA;    }&#xD;&#xA;],&#xD;&#xA;&#xD;&#xA;```" />
       <min value="1" />
       <mustSupport value="true" />
       <binding>
@@ -518,12 +550,13 @@
         <rules value="open" />
       </slicing>
       <short value="Dispensing Endorsement and Charge Payment" />
-      <definition value="Dispensing Endorsement  - Details of the endorsement(s) to support the claim for this medication item. &#xD;&#xA;&#xD;&#xA;Charge Payment - Details on whether a prescription charge was paid for the medication treatment." />
+      <definition value="Dispensing Endorsement  - Details of the endorsement(s) to support the claim for this medication item. &#xD;&#xA;&#xD;&#xA;Charge Payment - Details on whether a prescription charge was paid for the medication treatment.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA;&quot;programCode&quot;:  [&#xD;&#xA;    {&#xD;&#xA;        &quot;coding&quot;:  [&#xD;&#xA;            {&#xD;&#xA;                &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/DM-prescription-charge&quot;,&#xD;&#xA;                &quot;code&quot;: &quot;paid-once&quot;,&#xD;&#xA;                &quot;display&quot;: &quot;Paid Once&quot;&#xD;&#xA;            }&#xD;&#xA;        ]&#xD;&#xA;    },&#xD;&#xA;    {&#xD;&#xA;        &quot;coding&quot;:  [&#xD;&#xA;            {&#xD;&#xA;                &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/medicationdispense-endorsement&quot;,&#xD;&#xA;                &quot;code&quot;: &quot;IP&quot;,&#xD;&#xA;                &quot;display&quot;: &quot;Invoice Price&quot;&#xD;&#xA;            }&#xD;&#xA;        ]&#xD;&#xA;    }&#xD;&#xA;],&#xD;&#xA;&#xD;&#xA;```" />
       <mustSupport value="true" />
     </element>
     <element id="Claim.item.detail.programCode.coding">
       <path value="Claim.item.detail.programCode.coding" />
       <min value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="Claim.item.detail.programCode.coding.system">
       <path value="Claim.item.detail.programCode.coding.system" />
@@ -538,6 +571,7 @@
       <sliceName value="prescriptionCharge" />
       <min value="1" />
       <max value="1" />
+      <mustSupport value="true" />
       <binding>
         <strength value="required" />
         <valueSet value="https://fhir.nhs.uk/ValueSet/DM-vs-prescription-charge" />
@@ -550,6 +584,7 @@
     <element id="Claim.item.detail.programCode:dispensingEndorsement">
       <path value="Claim.item.detail.programCode" />
       <sliceName value="dispensingEndorsement" />
+      <mustSupport value="true" />
       <binding>
         <strength value="required" />
         <description value="Program specific reason codes" />
@@ -562,10 +597,12 @@
     </element>
     <element id="Claim.item.detail.quantity">
       <path value="Claim.item.detail.quantity" />
+      <definition value="This should match the `quantity` of the associated [NHSDigital-MedicationRequest](https://simplifier.net/resolve?target=simplifier&amp;scope=uk.nhsdigital.r4&amp;canonical=https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationRequest)&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA;&quot;quantity&quot;: {&#xD;&#xA;    &quot;value&quot;: 200,&#xD;&#xA;    &quot;unit&quot;: &quot;unit dose&quot;,&#xD;&#xA;    &quot;system&quot;: &quot;http://snomed.info/sct&quot;,&#xD;&#xA;    &quot;code&quot;: &quot;408102007&quot;&#xD;&#xA;},&#xD;&#xA;&#xD;&#xA;```" />
       <mustSupport value="true" />
     </element>
     <element id="Claim.item.detail.subDetail">
       <path value="Claim.item.detail.subDetail" />
+      <definition value="subDetail is only present if the medication has been dispensed." />
       <mustSupport value="true" />
     </element>
     <element id="Claim.item.detail.subDetail.extension">
@@ -601,10 +638,12 @@
     </element>
     <element id="Claim.item.detail.subDetail.sequence">
       <path value="Claim.item.detail.subDetail.sequence" />
+      <definition value="An integer id for each medication dispense.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA;&quot;sequence&quot;: 1,&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;```" />
       <mustSupport value="true" />
     </element>
     <element id="Claim.item.detail.subDetail.productOrService">
       <path value="Claim.item.detail.subDetail.productOrService" />
+      <definition value="This should match the `medicationCodeableConcept` of the associated [NHSDigital-MedicationDispense](https://simplifier.net/resolve?target=simplifier&amp;scope=uk.nhsdigital.r4&amp;canonical=https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationDispense)&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA;&quot;productOrService&quot;: {&#xD;&#xA;    &quot;coding&quot;:  [&#xD;&#xA;        {&#xD;&#xA;            &quot;system&quot;: &quot;http://snomed.info/sct&quot;,&#xD;&#xA;            &quot;code&quot;: &quot;3416211000001106&quot;,&#xD;&#xA;            &quot;display&quot;: &quot;Salbutamol 100micrograms/dose inhaler (Sandoz Ltd) 200 dose&quot;&#xD;&#xA;        }&#xD;&#xA;    ]&#xD;&#xA;},&#xD;&#xA;&#xD;&#xA;```" />
       <mustSupport value="true" />
       <binding>
         <strength value="extensible" />
@@ -614,6 +653,7 @@
     </element>
     <element id="Claim.item.detail.subDetail.quantity">
       <path value="Claim.item.detail.subDetail.quantity" />
+      <definition value="This should match the `quantity` of the associated [NHSDigital-MedicationDispense](https://simplifier.net/resolve?target=simplifier&amp;scope=uk.nhsdigital.r4&amp;canonical=https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationDispense)&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA;&quot;quantity&quot;: {&#xD;&#xA;    &quot;value&quot;: 200,&#xD;&#xA;    &quot;unit&quot;: &quot;unit dose&quot;,&#xD;&#xA;    &quot;system&quot;: &quot;http://snomed.info/sct&quot;,&#xD;&#xA;    &quot;code&quot;: &quot;408102007&quot;&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;```" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
