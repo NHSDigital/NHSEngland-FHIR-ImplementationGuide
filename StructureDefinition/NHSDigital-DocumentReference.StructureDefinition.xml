@@ -48,7 +48,6 @@
   <differential>
     <element id="DocumentReference.identifier">
       <path value="DocumentReference.identifier" />
-      <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="DocumentReference.status">
