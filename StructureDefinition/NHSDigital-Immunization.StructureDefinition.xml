@@ -26,11 +26,11 @@
       <path value="Immunization.extension" />
       <sliceName value="vaccinationProcedure" />
       <min value="0" />
+      <mustSupport value="true" />
       <binding>
         <strength value="required" />
         <description value="https://fhir.nhs.uk/ValueSet/NHSDigital-VaccinationProcedure" />
       </binding>
-      <mustSupport value="true" />
     </element>
     <element id="Immunization.identifier">
       <path value="Immunization.identifier" />
@@ -80,7 +80,6 @@
     </element>
     <element id="Immunization.patient">
       <path value="Immunization.patient" />
-      <mustSupport value="true" />
       <constraint>
         <key value="patient-reference" />
         <severity value="warning" />
@@ -95,6 +94,7 @@
         <expression value="identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').exists().not() or (identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').exists()  and identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').value.matches('^([456789]{1}[0-9]{9})$'))" />
         <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Immunization" />
       </constraint>
+      <mustSupport value="true" />
     </element>
     <element id="Immunization.occurrence[x]">
       <path value="Immunization.occurrence[x]" />
@@ -114,11 +114,11 @@
     </element>
     <element id="Immunization.site">
       <path value="Immunization.site" />
+      <mustSupport value="true" />
       <binding>
         <strength value="extensible" />
         <valueSet value="https://fhir.hl7.org.uk/ValueSet/UKCore-BodySite" />
       </binding>
-      <mustSupport value="true" />
     </element>
     <element id="Immunization.site.coding">
       <path value="Immunization.site.coding" />
@@ -138,11 +138,10 @@
     </element>
     <element id="Immunization.performer.actor">
       <path value="Immunization.performer.actor" />
-      <mustSupport value="true" />
       <constraint>
         <key value="usercode-reference" />
         <severity value="error" />
-        <human value="An identifier reference plus a display name or resource reference must be provided" />
+        <human value="An identifier reference or resource reference must be provided" />
         <expression value="(reference.exists() or identifier.exists())" />
         <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Immunization" />
       </constraint>
@@ -195,6 +194,7 @@
         <expression value="identifier.where(system='https://fhir.nhs.uk/Id/sds-role-profile-id').exists().not() or (identifier.where(system='https://fhir.nhs.uk/Id/sds-role-profile-id').exists()  and identifier.where(system='https://fhir.nhs.uk/Id/sds-role-profile-id').value.matches('^[0-9]{12}$'))" />
         <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole" />
       </constraint>
+      <mustSupport value="true" />
     </element>
     <element id="Immunization.performer.actor.type">
       <path value="Immunization.performer.actor.type" />
@@ -227,12 +227,12 @@
     </element>
     <element id="Immunization.protocolApplied.targetDisease">
       <path value="Immunization.protocolApplied.targetDisease" />
+      <mustSupport value="true" />
       <binding>
         <strength value="required" />
         <description value="(Work in progress) The vaccine preventable disease the dose is being administered for." />
         <valueSet value="http://hl7.eu/fhir/ig/dgc/ValueSet/covid-19-diseases" />
       </binding>
-      <mustSupport value="true" />
     </element>
   </differential>
 </StructureDefinition>
