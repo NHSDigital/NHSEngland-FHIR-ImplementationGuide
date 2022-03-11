@@ -117,7 +117,7 @@
       <path value="Patient.gender" />
       <definition value="Classification of the gender of a patient. The classification is phenotypical rather than genotypical, i.e. it does not provide codes for medical or scientific purposes. It is the administrative gender that the patient wishes to be known as. In some cases, this may not be the same as the patient’s registered birth gender, or their current clinical gender." />
       <min value="1" />
-      <mustSupport value="false" />
+      <mustSupport value="true" />
     </element>
     <element id="Patient.birthDate">
       <path value="Patient.birthDate" />
@@ -169,7 +169,7 @@
     <element id="Patient.contact">
       <path value="Patient.contact" />
       <definition value="A list of patient contacts. Only emergency contacts are returned and only emergency contacts should be added. Any other contacts should be added to the patients Related Person. Patients designate here any contact number they desire to be used in case of an emergency. Note, while a patient may also desire to record various related persons telecom details, these do not separately allow for a concept of emergency contact; only ranking. See RelatedPerson endpoint. When a patient tagged as restricted or very restricted is retrieved, all contacts are removed from the response." />
-      <mustSupport value="false" />
+      <mustSupport value="true" />
     </element>
     <element id="Patient.generalPractitioner">
       <path value="Patient.generalPractitioner" />
