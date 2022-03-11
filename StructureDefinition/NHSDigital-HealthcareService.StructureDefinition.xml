@@ -39,6 +39,7 @@
       <path value="HealthcareService.identifier" />
       <sliceName value="ersServiceId" />
       <max value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="HealthcareService.identifier:ersServiceId.system">
       <path value="HealthcareService.identifier.system" />
@@ -53,6 +54,7 @@
       <path value="HealthcareService.identifier" />
       <sliceName value="dosServiceId" />
       <max value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="HealthcareService.identifier:dosServiceId.system">
       <path value="HealthcareService.identifier.system" />
@@ -126,6 +128,7 @@
     <element id="HealthcareService.specialty.coding:NHSDataDictionarySpecialty">
       <path value="HealthcareService.specialty.coding" />
       <sliceName value="NHSDataDictionarySpecialty" />
+      <mustSupport value="true" />
       <binding>
         <strength value="required" />
         <description value="NHS Data Dictionary Specialty/Treatment Function Code" />
@@ -139,6 +142,7 @@
     <element id="HealthcareService.specialty.coding:SNOMEDPracticeCode">
       <path value="HealthcareService.specialty.coding" />
       <sliceName value="SNOMEDPracticeCode" />
+      <mustSupport value="true" />
       <binding>
         <strength value="preferred" />
         <description value="Specific specialty associated with the agency." />
@@ -152,6 +156,7 @@
     <element id="HealthcareService.specialty.coding:eRSSpecialty">
       <path value="HealthcareService.specialty.coding" />
       <sliceName value="eRSSpecialty" />
+      <mustSupport value="true" />
       <binding>
         <strength value="preferred" />
         <description value="Specific specialty associated with the agency." />
@@ -206,6 +211,10 @@
       <path value="HealthcareService.telecom.use" />
       <min value="1" />
     </element>
+    <element id="HealthcareService.serviceProvisionCode">
+      <path value="HealthcareService.serviceProvisionCode" />
+      <mustSupport value="true" />
+    </element>
     <element id="HealthcareService.serviceProvisionCode.coding">
       <path value="HealthcareService.serviceProvisionCode.coding" />
       <slicing>
@@ -219,6 +228,7 @@
     <element id="HealthcareService.serviceProvisionCode.coding:eRSClinicType">
       <path value="HealthcareService.serviceProvisionCode.coding" />
       <sliceName value="eRSClinicType" />
+      <mustSupport value="true" />
       <binding>
         <strength value="required" />
         <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDigital-eRS-ClinicType" />

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="76b4a80a-a0af-4882-962b-9769a7910954"/>
+  <id value="76b4a80a-a0af-4882-962b-9769a7910954" />
   <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-OperationOutcome" />
   <version value="1.1.1" />
   <name value="NHSDigitalOperationOutcome" />
@@ -24,6 +24,10 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/OperationOutcome" />
   <derivation value="constraint" />
   <differential>
+    <element id="OperationOutcome">
+      <path value="OperationOutcome" />
+      <definition value="A collection of error, warning, or information messages that result from a system action.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;{&#xD;&#xA;    &quot;resourceType&quot;: &quot;OperationOutcome&quot;,&#xD;&#xA;    &quot;id&quot;: &quot;1a388581-dbbe-43e3-9054-f5976c0245e5&quot;,&#xD;&#xA;    &quot;issue&quot;:  [&#xD;&#xA;        {&#xD;&#xA;            &quot;severity&quot;: &quot;information&quot;,&#xD;&#xA;            &quot;code&quot;: &quot;processing&quot;,&#xD;&#xA;            &quot;diagnostics&quot;: &quot;This element does not match any known slice defined in the profile https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient&quot;,&#xD;&#xA;            &quot;location&quot;:  [&#xD;&#xA;                &quot;Patient.identifier[1]&quot;,&#xD;&#xA;                &quot;Line 1, Col 651&quot;&#xD;&#xA;            ]&#xD;&#xA;        },&#xD;&#xA;        {&#xD;&#xA;            &quot;severity&quot;: &quot;error&quot;,&#xD;&#xA;            &quot;code&quot;: &quot;processing&quot;,&#xD;&#xA;            &quot;diagnostics&quot;: &quot;Patient.gender: minimum required = 1, but only found 0 (from https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient)&quot;,&#xD;&#xA;            &quot;location&quot;:  [&#xD;&#xA;                &quot;Patient&quot;,&#xD;&#xA;                &quot;Line 1, Col 37&quot;&#xD;&#xA;            ]&#xD;&#xA;        }&#xD;&#xA;    ]&#xD;&#xA;}&#xD;&#xA;```" />
+    </element>
     <element id="OperationOutcome.id">
       <path value="OperationOutcome.id" />
       <short value="uniqueRequestID" />
@@ -32,6 +36,7 @@
     <element id="OperationOutcome.meta">
       <path value="OperationOutcome.meta" />
       <min value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="OperationOutcome.meta.lastUpdated">
       <path value="OperationOutcome.meta.lastUpdated" />
@@ -46,32 +51,46 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <min value="0" />
     </element>
     <element id="OperationOutcome.extension:supportingInfo">
       <path value="OperationOutcome.extension" />
       <sliceName value="supportingInfo" />
       <definition value="Information relevant to this OperationOutcome. For EPS release rejections this may be the pharmacy which is currently owns the prescription task/order." />
+      <min value="0" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-Spine-supportingInfo" />
       </type>
     </element>
-     <element id="OperationOutcome.issue">
+    <element id="OperationOutcome.issue">
       <path value="OperationOutcome.issue" />
       <constraint>
         <key value="nhds-errrorcode" />
         <severity value="error" />
         <human value="An NHS Digital error or warning code is required" />
-        <expression value="(issue.severity = 'information') or ((issue.severity != 'information') and issue.details.empty().not()) " />
+        <expression value="(issue.severity = 'information') or ((issue.severity != 'information') and issue.details.empty().not())" />
+        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-OperationOutcome" />
       </constraint>
+      <mustSupport value="true" />
+    </element>
+    <element id="OperationOutcome.issue.severity">
+      <path value="OperationOutcome.issue.severity" />
+      <mustSupport value="true" />
+    </element>
+    <element id="OperationOutcome.issue.code">
+      <path value="OperationOutcome.issue.code" />
+      <mustSupport value="true" />
     </element>
     <element id="OperationOutcome.issue.details">
       <path value="OperationOutcome.issue.details" />
+      <mustSupport value="true" />
     </element>
     <element id="OperationOutcome.issue.details.coding">
       <path value="OperationOutcome.issue.details.coding" />
       <min value="1" />
       <max value="1" />
+      <mustSupport value="true" />
       <binding>
         <strength value="extensible" />
         <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDigital-OperationOutcome-Codes|1.0.0" />
@@ -84,6 +103,21 @@
     <element id="OperationOutcome.issue.details.coding.code">
       <path value="OperationOutcome.issue.details.coding.code" />
       <min value="1" />
+    </element>
+    <element id="OperationOutcome.issue.diagnostics">
+      <path value="OperationOutcome.issue.diagnostics" />
+      <definition value="Additional diagnostic information about the issue. User readable version of the message. Include url's for further information or other information helpful for the user to understand the error." />
+      <mustSupport value="true" />
+    </element>
+    <element id="OperationOutcome.issue.location">
+      <path value="OperationOutcome.issue.location" />
+      <definition value="Use the JSON Pointer standard to describe the source of the error - e.g. parameter, or payload value." />
+      <mustSupport value="true" />
+    </element>
+    <element id="OperationOutcome.issue.expression">
+      <path value="OperationOutcome.issue.expression" />
+      <definition value="FHIRPath of element(s) related to issue" />
+      <mustSupport value="true" />
     </element>
   </differential>
 </StructureDefinition>
