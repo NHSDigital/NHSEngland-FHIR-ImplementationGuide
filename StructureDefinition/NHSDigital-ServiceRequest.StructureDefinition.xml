@@ -29,6 +29,7 @@
         <code value="Extension" />
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-ERS-Referral" />
       </type>
+      <mustSupport value="true" />
     </element>
     <element id="ServiceRequest.extension:ERSReferralState">
       <path value="ServiceRequest.extension" />
@@ -38,6 +39,7 @@
         <code value="Extension" />
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-eRS-ServiceRequest-State" />
       </type>
+      <mustSupport value="true" />
     </element>
     <element id="ServiceRequest.identifier">
       <path value="ServiceRequest.identifier" />
@@ -49,6 +51,7 @@
         <rules value="open" />
       </slicing>
       <min value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="ServiceRequest.identifier.value">
       <path value="ServiceRequest.identifier.value" />
@@ -60,6 +63,7 @@
       <short value="Unique Booking Reference Numbe" />
       <definition value="Unique Booking Reference Number&#xD;&#xA;(12 digit number used as an internal and external identifier of the referral), known as &quot;Booking Reference&quot; Patient side" />
       <max value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="ServiceRequest.identifier:UBRN.system">
       <path value="ServiceRequest.identifier.system" />
@@ -96,6 +100,7 @@
       <path value="ServiceRequest.category" />
       <min value="1" />
       <max value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="ServiceRequest.category.coding">
       <path value="ServiceRequest.category.coding" />
@@ -115,6 +120,7 @@
     </element>
     <element id="ServiceRequest.code">
       <path value="ServiceRequest.code" />
+      <mustSupport value="true" />
       <definition value="A code that identifies a particular service (i.e., procedure, diagnostic investigation, or panel of investigations) that have been requested.&#xD;&#xA;&#xD;&#xA;Ideally this should be a child code of the ServiceRequest.category" />
     </element>
     <element id="ServiceRequest.code.coding">
@@ -180,6 +186,7 @@
     <element id="ServiceRequest.performerType">
       <path value="ServiceRequest.performerType" />
       <definition value="At present examples use eRS clinic type codes" />
+      <mustSupport value="true" />
     </element>
     <element id="ServiceRequest.performerType.coding">
       <path value="ServiceRequest.performerType.coding" />
@@ -218,6 +225,7 @@
     </element>
     <element id="ServiceRequest.supportingInfo">
       <path value="ServiceRequest.supportingInfo" />
+      <mustSupport value="true" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Resource" />

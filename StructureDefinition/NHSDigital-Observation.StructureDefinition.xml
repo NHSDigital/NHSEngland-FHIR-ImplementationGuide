@@ -5,36 +5,6 @@
   <name value="NHSDigitalObservation" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
-  <mapping>
-    <identity value="workflow" />
-    <uri value="http://hl7.org/fhir/workflow" />
-    <name value="Workflow Pattern" />
-  </mapping>
-  <mapping>
-    <identity value="sct-concept" />
-    <uri value="http://snomed.info/conceptdomain" />
-    <name value="SNOMED CT Concept Domain Binding" />
-  </mapping>
-  <mapping>
-    <identity value="v2" />
-    <uri value="http://hl7.org/v2" />
-    <name value="HL7 v2 Mapping" />
-  </mapping>
-  <mapping>
-    <identity value="rim" />
-    <uri value="http://hl7.org/v3" />
-    <name value="RIM Mapping" />
-  </mapping>
-  <mapping>
-    <identity value="w5" />
-    <uri value="http://hl7.org/fhir/fivews" />
-    <name value="FiveWs Pattern Mapping" />
-  </mapping>
-  <mapping>
-    <identity value="sct-attr" />
-    <uri value="http://snomed.org/attributebinding" />
-    <name value="SNOMED CT Attribute Binding" />
-  </mapping>
   <kind value="resource" />
   <abstract value="false" />
   <type value="Observation" />
@@ -61,10 +31,12 @@
         <code value="Extension" />
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-COVID19-TestResult" />
       </type>
+      <mustSupport value="true" />
     </element>
     <element id="Observation.identifier">
       <path value="Observation.identifier" />
       <min value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="Observation.identifier.system">
       <path value="Observation.identifier.system" />
@@ -76,7 +48,7 @@
     </element>
     <element id="Observation.category">
       <path value="Observation.category" />
-      <mustSupport value="false" />
+      <mustSupport value="true" />
       <binding>
         <strength value="extensible" />
         <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDigital-COVIDTestPillar" />
@@ -90,18 +62,22 @@
       <path value="Observation.category.coding.system" />
       <min value="1" />
       <fixedUri value="https://fhir.nhs.uk/CodeSystem/covid-test-pillar" />
+      <mustSupport value="true" />
     </element>
     <element id="Observation.category.coding.code">
       <path value="Observation.category.coding.code" />
       <min value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="Observation.code">
       <path value="Observation.code" />
+      <mustSupport value="true" />
       <definition value="Describes what was observed. Sometimes this is called the observation &quot;name&quot;. SNOMED preferred." />
     </element>
     <element id="Observation.subject">
       <path value="Observation.subject" />
       <min value="1" />
+      <mustSupport value="true" />
       <constraint>
         <key value="patient-reference" />
         <severity value="warning" />
@@ -126,6 +102,7 @@
     <element id="Observation.effective[x]">
       <path value="Observation.effective[x]" />
       <min value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="Observation.method.coding.system">
       <path value="Observation.method.coding.system" />
