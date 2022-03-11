@@ -165,6 +165,7 @@
         <code value="Extension" />
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-DM-PrescriptionStatusHistory" />
       </type>
+      <mustSupport value="true" />
     </element>
     <element id="MedicationRequest.extension:NHSBSAprescriptionType">
       <path value="MedicationRequest.extension" />
@@ -202,6 +203,7 @@
         <code value="Extension" />
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-EPS-DispensingInformation" />
       </type>
+      <mustSupport value="true" />
     </element>
     <element id="MedicationRequest.identifier">
       <path value="MedicationRequest.identifier" />
@@ -383,7 +385,7 @@
     </element>
     <element id="MedicationRequest.requester">
       <path value="MedicationRequest.requester" />
-      <definition value="The requester must contain a resource reference to the Practitioner who has electronically signed the prescription.&#xD;&#xA;&#xD;&#xA;If the `requester` can not take responsibility for the prescription, i.e. they would not be the prescriber on the FP10. Then the **extension responsiblePractitioner** must be populated." />
+      <definition value="The requester must contain a resource reference to the Practitioner who has electronically signed the prescription.&#xD;&#xA;&#xD;&#xA;If the `requester` can not take responsibility for the prescription, i.e. they would not be the prescriber on the FP10. Then the **extension responsiblePractitioner** must be populated.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;requester&quot;: {&#xD;&#xA;    &quot;reference&quot;: &quot;urn:uuid:56166769-c1c4-4d07-afa8-132b5dfca666&quot;&#xD;&#xA;},&#xD;&#xA;```" />
       <min value="1" />
       <type>
         <code value="Reference" />
@@ -424,6 +426,7 @@
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/ImmunizationRecommendation" />
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationRequest" />
       </type>
+      <mustSupport value="true" />
     </element>
     <element id="MedicationRequest.basedOn.extension">
       <path value="MedicationRequest.basedOn.extension" />
@@ -531,6 +534,16 @@
         <code value="Dosage" />
         <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Dosage" />
       </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationRequest.dosageInstruction.additionalInstruction">
+      <path value="MedicationRequest.dosageInstruction.additionalInstruction" />
+      <definition value="These sections **MUST** be used only be used to pass notes regarding the prescription to the pharmacist or patient. Lists of repeat medications and general practice notifications to the patient **SHOULD** be recorded in [NHSDigital-CommunicationRequest](https://simplifier.net/guide/nhsdigital/NHSDigital-CommunicationRequest) resource.&#xD;&#xA;&#xD;&#xA;Patient instructions for taking the drug are contained with in the `patientInstruction` and `additionalInstruction` as per the guidance in [Dosage Structure Overview](https://developer.nhs.uk/apis/dose-syntax-implementation/dosage-overview.html)&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;dosageInstruction&quot;: [&#xD;&#xA;    {&#xD;&#xA;        &quot;text&quot;: &quot;10 milligram, Inject, Subcutaneous route, once weekly&quot;,&#xD;&#xA;        &quot;additionalInstruction&quot;: [&#xD;&#xA;            &quot;coding&quot;: [&#xD;&#xA;                {&#xD;&#xA;                    &quot;system&quot;: &quot;http://snomed.info/sct&quot;,&#xD;&#xA;                    &quot;code&quot;: &quot;421769005&quot;,&#xD;&#xA;                    &quot;display&quot;: &quot;Follow directions&quot;&#xD;&#xA;                }&#xD;&#xA;            ],&#xD;&#xA;        ],&#xD;&#xA;        &quot;patientInstruction&quot;: &quot;As directed&quot;&#xD;&#xA;    }&#xD;&#xA;]&#xD;&#xA;```" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationRequest.dosageInstruction.patientInstruction">
+      <path value="MedicationRequest.dosageInstruction.patientInstruction" />
+      <definition value="These sections **MUST** be used only be used to pass notes regarding the prescription to the pharmacist or patient. Lists of repeat medications and general practice notifications to the patient **SHOULD** be recorded in [NHSDigital-CommunicationRequest](https://simplifier.net/guide/nhsdigital/NHSDigital-CommunicationRequest) resource.&#xD;&#xA;&#xD;&#xA;Patient instructions for taking the drug are contained with in the `patientInstruction` and `additionalInstruction` as per the guidance in [Dosage Structure Overview](https://developer.nhs.uk/apis/dose-syntax-implementation/dosage-overview.html)&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;dosageInstruction&quot;: [&#xD;&#xA;    {&#xD;&#xA;        &quot;text&quot;: &quot;10 milligram, Inject, Subcutaneous route, once weekly&quot;,&#xD;&#xA;        &quot;additionalInstruction&quot;: [&#xD;&#xA;            &quot;coding&quot;: [&#xD;&#xA;                {&#xD;&#xA;                    &quot;system&quot;: &quot;http://snomed.info/sct&quot;,&#xD;&#xA;                    &quot;code&quot;: &quot;421769005&quot;,&#xD;&#xA;                    &quot;display&quot;: &quot;Follow directions&quot;&#xD;&#xA;                }&#xD;&#xA;            ],&#xD;&#xA;        ],&#xD;&#xA;        &quot;patientInstruction&quot;: &quot;As directed&quot;&#xD;&#xA;    }&#xD;&#xA;]&#xD;&#xA;```" />
       <mustSupport value="true" />
     </element>
     <element id="MedicationRequest.dispenseRequest">
