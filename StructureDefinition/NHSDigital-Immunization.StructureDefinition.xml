@@ -5,31 +5,6 @@
   <name value="NHSDigitalImmunization" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
-  <mapping>
-    <identity value="workflow" />
-    <uri value="http://hl7.org/fhir/workflow" />
-    <name value="Workflow Pattern" />
-  </mapping>
-  <mapping>
-    <identity value="v2" />
-    <uri value="http://hl7.org/v2" />
-    <name value="HL7 v2 Mapping" />
-  </mapping>
-  <mapping>
-    <identity value="rim" />
-    <uri value="http://hl7.org/v3" />
-    <name value="RIM Mapping" />
-  </mapping>
-  <mapping>
-    <identity value="w5" />
-    <uri value="http://hl7.org/fhir/fivews" />
-    <name value="FiveWs Pattern Mapping" />
-  </mapping>
-  <mapping>
-    <identity value="cda" />
-    <uri value="http://hl7.org/v3/cda" />
-    <name value="CDA (R2)" />
-  </mapping>
   <kind value="resource" />
   <abstract value="false" />
   <type value="Immunization" />
@@ -55,10 +30,12 @@
         <strength value="required" />
         <description value="https://fhir.nhs.uk/ValueSet/NHSDigital-VaccinationProcedure" />
       </binding>
+      <mustSupport value="true" />
     </element>
     <element id="Immunization.identifier">
       <path value="Immunization.identifier" />
       <min value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="Immunization.identifier.system">
       <path value="Immunization.identifier.system" />
@@ -87,6 +64,7 @@
     <element id="Immunization.vaccineCode.coding">
       <path value="Immunization.vaccineCode.coding" />
       <min value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="Immunization.vaccineCode.coding.system">
       <path value="Immunization.vaccineCode.coding.system" />
@@ -102,6 +80,7 @@
     </element>
     <element id="Immunization.patient">
       <path value="Immunization.patient" />
+      <mustSupport value="true" />
       <constraint>
         <key value="patient-reference" />
         <severity value="warning" />
@@ -122,10 +101,12 @@
       <type>
         <code value="dateTime" />
       </type>
+      <mustSupport value="true" />
     </element>
     <element id="Immunization.primarySource">
       <path value="Immunization.primarySource" />
       <min value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="Immunization.manufacturer.display">
       <path value="Immunization.manufacturer.display" />
@@ -137,6 +118,7 @@
         <strength value="extensible" />
         <valueSet value="https://fhir.hl7.org.uk/ValueSet/UKCore-BodySite" />
       </binding>
+      <mustSupport value="true" />
     </element>
     <element id="Immunization.site.coding">
       <path value="Immunization.site.coding" />
@@ -156,6 +138,7 @@
     </element>
     <element id="Immunization.performer.actor">
       <path value="Immunization.performer.actor" />
+      <mustSupport value="true" />
       <constraint>
         <key value="usercode-reference" />
         <severity value="error" />
@@ -228,6 +211,7 @@
     <element id="Immunization.reasonCode.coding">
       <path value="Immunization.reasonCode.coding" />
       <min value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="Immunization.reasonCode.coding.system">
       <path value="Immunization.reasonCode.coding.system" />
@@ -248,6 +232,7 @@
         <description value="(Work in progress) The vaccine preventable disease the dose is being administered for." />
         <valueSet value="http://hl7.eu/fhir/ig/dgc/ValueSet/covid-19-diseases" />
       </binding>
+      <mustSupport value="true" />
     </element>
   </differential>
 </StructureDefinition>
