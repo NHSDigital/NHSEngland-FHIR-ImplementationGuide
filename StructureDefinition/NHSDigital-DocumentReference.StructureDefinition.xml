@@ -46,8 +46,17 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/DocumentReference" />
   <derivation value="constraint" />
   <differential>
+    <element id="DocumentReference.identifier">
+      <path value="DocumentReference.identifier" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.status">
+      <path value="DocumentReference.status" />
+      <mustSupport value="true" />
+    </element>
     <element id="DocumentReference.type">
       <path value="DocumentReference.type" />
+      <mustSupport value="true" />
       <binding>
         <strength value="extensible" />
         <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDigital-DocumentType" />
@@ -69,8 +78,13 @@
       <path value="DocumentReference.type.coding.display" />
       <min value="1" />
     </element>
+    <element id="DocumentReference.category">
+      <path value="DocumentReference.category" />
+      <mustSupport value="true" />
+    </element>
     <element id="DocumentReference.subject">
       <path value="DocumentReference.subject" />
+      <definition value="A reference to a [NHSDigital-Patient](https://simplifier.net/resolve?target=simplifier&amp;scope=uk.nhsdigital.r4&amp;canonical=https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient) and/or an identifier reference using NHSNumber. Only traced NHS Numbers may be used. &#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA;    &quot;subject&quot;: {&#xD;&#xA;        &quot;reference&quot;: &quot;urn:uuid:edea022a-2d81-11eb-adc1-0242ac120002&quot;,&#xD;&#xA;        &quot;identifier&quot;: [&#xD;&#xA;            {&#xD;&#xA;                &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/nhs-number&quot;,&#xD;&#xA;                &quot;value&quot;: &quot;9912003888&quot;&#xD;&#xA;            }&#xD;&#xA;        ]&#xD;&#xA;    },&#xD;&#xA;&#xD;&#xA;```&#xD;&#xA;&#xD;&#xA;Preference is for a reference to a Patient resource, however current document flows may only support limited metadata." />
       <constraint>
         <key value="patient-reference" />
         <severity value="warning" />
@@ -85,6 +99,7 @@
         <expression value="identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').exists().not() or (identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').exists()  and identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').value.matches('^([456789]{1}[0-9]{9})$'))" />
         <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-DocumentReference" />
       </constraint>
+      <mustSupport value="true" />
     </element>
     <element id="DocumentReference.subject.identifier.system">
       <path value="DocumentReference.subject.identifier.system" />
@@ -94,8 +109,58 @@
       <path value="DocumentReference.subject.identifier.value" />
       <min value="1" />
     </element>
+    <element id="DocumentReference.author">
+      <path value="DocumentReference.author" />
+      <definition value="A resource reference to a contained [NHSDigital-PractitionerRole](https://simplifier.net/resolve?target=simplifier&amp;scope=uk.nhsdigital.r4&amp;canonical=https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole)&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA;    &quot;author&quot;: [&#xD;&#xA;        {&#xD;&#xA;          &quot;reference&quot; : &quot;#author&quot;,&#xD;&#xA;        }&#xD;&#xA;    ]&#xD;&#xA;```&#xD;&#xA;&#xD;&#xA;The contained resource: &#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;{&#xD;&#xA;  &quot;resourceType&quot;: &quot;DocumentReference&quot;,&#xD;&#xA;  &quot;id&quot;: &quot;a9b9f0f4-cc37-4ea3-bd4b-16d15ddbe63b&quot;,&#xD;&#xA;  &quot;contained&quot;: [&#xD;&#xA;    {&#xD;&#xA;      &quot;resourceType&quot;: &quot;PractitionerRole&quot;,&#xD;&#xA;      &quot;id&quot;: &quot;author&quot;,&#xD;&#xA;      &quot;practitioner&quot;: {&#xD;&#xA;        &quot;identifier&quot;: {&#xD;&#xA;          &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/sds-user-id&quot;,&#xD;&#xA;          &quot;value&quot;: &quot;0987654321&quot;&#xD;&#xA;        }&#xD;&#xA;      },&#xD;&#xA;      &quot;organization&quot;: {&#xD;&#xA;        &quot;identifier&quot;: {&#xD;&#xA;          &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/ods-organization-code&quot;,&#xD;&#xA;          &quot;value&quot;: &quot;RR8&quot;&#xD;&#xA;        },&#xD;&#xA;        &quot;display&quot;: &quot;LEEDS TEACHING HOSPITALS NHS TRUST&quot;&#xD;&#xA;      }&#xD;&#xA;    }&#xD;&#xA;  ],&#xD;&#xA;```" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.custodian">
+      <path value="DocumentReference.custodian" />
+      <definition value="An identifier reference to an ODS Organisation. &#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA;        &quot;custodian&quot;: {&#xD;&#xA;                &quot;identifier&quot;: {&#xD;&#xA;                    &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/ods-organization-code&quot;,&#xD;&#xA;                    &quot;value&quot;: &quot;VNE51&quot;&#xD;&#xA;                },&#xD;&#xA;                &quot;display&quot;: &quot;The Pharmacy System&quot;&#xD;&#xA;        }&#xD;&#xA;```" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Organization" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.content">
+      <path value="DocumentReference.content" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.content.attachment">
+      <path value="DocumentReference.content.attachment" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.content.attachment.contentType">
+      <path value="DocumentReference.content.attachment.contentType" />
+      <definition value="A listed of supported document types (mime types) should be provided, this is likely to include:&#xD;&#xA;&#xD;&#xA;- FHIR Documents&#xD;&#xA;- PDF&#xD;&#xA;- html&#xD;&#xA;- jpeg/jpg&#xD;&#xA;- png" />
+    </element>
+    <element id="DocumentReference.content.attachment.data">
+      <path value="DocumentReference.content.attachment.data" />
+      <definition value="**SHOULD** not be used. Use url to link to the actual document" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.content.attachment.url">
+      <path value="DocumentReference.content.attachment.url" />
+      <definition value="For REST interactions this **MUST** be a url to the actual document. For messaging interactions this must be an internal resource reference to the actual document." />
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.context">
+      <path value="DocumentReference.context" />
+      <mustSupport value="true" />
+    </element>
     <element id="DocumentReference.context.practiceSetting">
       <path value="DocumentReference.context.practiceSetting" />
+      <definition value="It is recommended a care setting code should be provided" />
+      <mustSupport value="true" />
       <binding>
         <strength value="extensible" />
         <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDigital-CareSettingType" />

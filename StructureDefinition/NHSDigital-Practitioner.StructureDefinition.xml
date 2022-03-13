@@ -96,6 +96,7 @@
       <path value="Practitioner.identifier" />
       <sliceName value="gmcCode" />
       <max value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="Practitioner.identifier:gmcCode.system">
       <path value="Practitioner.identifier.system" />
@@ -105,6 +106,7 @@
       <path value="Practitioner.identifier" />
       <sliceName value="gmpCode" />
       <max value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="Practitioner.identifier:gmpCode.system">
       <path value="Practitioner.identifier.system" />
@@ -113,6 +115,7 @@
     <element id="Practitioner.identifier:dinCode">
       <path value="Practitioner.identifier" />
       <sliceName value="dinCode" />
+      <mustSupport value="true" />
     </element>
     <element id="Practitioner.identifier:dinCode.system">
       <path value="Practitioner.identifier.system" />
@@ -121,6 +124,7 @@
     <element id="Practitioner.identifier:gphcCode">
       <path value="Practitioner.identifier" />
       <sliceName value="gphcCode" />
+      <mustSupport value="true" />
     </element>
     <element id="Practitioner.identifier:gphcCode.system">
       <path value="Practitioner.identifier.system" />
@@ -129,6 +133,7 @@
     <element id="Practitioner.identifier:hcpcNumber">
       <path value="Practitioner.identifier" />
       <sliceName value="hcpcNumber" />
+      <mustSupport value="true" />
     </element>
     <element id="Practitioner.identifier:hcpcNumber.system">
       <path value="Practitioner.identifier.system" />
@@ -137,6 +142,7 @@
     <element id="Practitioner.identifier:nmcNumber">
       <path value="Practitioner.identifier" />
       <sliceName value="nmcNumber" />
+      <mustSupport value="true" />
     </element>
     <element id="Practitioner.identifier:nmcNumber.system">
       <path value="Practitioner.identifier.system" />
@@ -145,6 +151,10 @@
     <element id="Practitioner.name">
       <path value="Practitioner.name" />
       <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Practitioner.telecom">
+      <path value="Practitioner.telecom" />
       <mustSupport value="true" />
     </element>
     <element id="Practitioner.telecom.value">

@@ -48,6 +48,7 @@
         <code value="Extension" />
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-Account-code" />
       </type>
+      <mustSupport value="true" />
     </element>
     <element id="PractitionerRole.identifier">
       <path value="PractitionerRole.identifier" />
@@ -65,6 +66,7 @@
       <path value="PractitionerRole.identifier" />
       <sliceName value="sdsRoleProfileID" />
       <max value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="PractitionerRole.identifier:sdsRoleProfileID.system">
       <path value="PractitionerRole.identifier.system" />
@@ -74,6 +76,7 @@
       <path value="PractitionerRole.identifier" />
       <sliceName value="nhsbsaSpuriousCode" />
       <max value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="PractitionerRole.identifier:nhsbsaSpuriousCode.system">
       <path value="PractitionerRole.identifier.system" />
@@ -173,6 +176,7 @@
     <element id="PractitionerRole.code">
       <path value="PractitionerRole.code" />
       <definition value="Only supply if this is known (e.g. sourced from smartcard or SDS API).&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;code&quot;:  [&#xD;&#xA;        {&#xD;&#xA;            &quot;coding&quot;:  [&#xD;&#xA;                {&#xD;&#xA;                    &quot;system&quot;: &quot;https://fhir.hl7.org.uk/CodeSystem/UKCore-SDSJobRoleName&quot;,&#xD;&#xA;                    &quot;code&quot;: &quot;R0260&quot;,&#xD;&#xA;                    &quot;display&quot;: &quot;General Medical Practitioner&quot;&#xD;&#xA;                }&#xD;&#xA;            ]&#xD;&#xA;        }&#xD;&#xA;    ],&#xD;&#xA;```" />
+      <mustSupport value="true" />
     </element>
     <element id="PractitionerRole.code.coding">
       <path value="PractitionerRole.code.coding" />
@@ -197,6 +201,7 @@
       <path value="PractitionerRole.code.coding" />
       <sliceName value="sdsJobRoleName" />
       <max value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="PractitionerRole.code.coding:sdsJobRoleName.system">
       <path value="PractitionerRole.code.coding.system" />
@@ -205,6 +210,7 @@
     <element id="PractitionerRole.specialty">
       <path value="PractitionerRole.specialty" />
       <definition value="This is should be the specialty linked to the role and is not necessarily the practitioners main specialty. &#xD;&#xA;&#xD;&#xA;This can be supplemented by SNOMED CT codes from {{link:http://hl7.org/fhir/ValueSet/c80-practice-codes}}, no ConceptMap currently exists for mapping between the two.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA; &quot;specialty&quot;: [&#xD;&#xA;        {&#xD;&#xA;            &quot;coding&quot;: [&#xD;&#xA;                {&#xD;&#xA;                    &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/NHSDataModelAndDictionary-clinical-specialty&quot;,&#xD;&#xA;                    &quot;code&quot;: &quot;100&quot;,&#xD;&#xA;                    &quot;display&quot;: &quot;GENERAL SURGERY&quot;&#xD;&#xA;                }&#xD;&#xA;            ]&#xD;&#xA;        }&#xD;&#xA;    ],&#xD;&#xA;```" />
+      <mustSupport value="true" />
     </element>
     <element id="PractitionerRole.specialty.coding">
       <path value="PractitionerRole.specialty.coding" />
@@ -232,6 +238,7 @@
     <element id="PractitionerRole.specialty.coding:NHSDataDictionarySpecialty">
       <path value="PractitionerRole.specialty.coding" />
       <sliceName value="NHSDataDictionarySpecialty" />
+      <mustSupport value="true" />
       <binding>
         <strength value="required" />
         <description value="NHS Data Dictionary Specialty" />
@@ -245,6 +252,7 @@
     <element id="PractitionerRole.specialty.coding:SNOMEDSpecialty">
       <path value="PractitionerRole.specialty.coding" />
       <sliceName value="SNOMEDSpecialty" />
+      <mustSupport value="true" />
       <binding>
         <strength value="preferred" />
         <description value="Specific specialty associated with the agency." />

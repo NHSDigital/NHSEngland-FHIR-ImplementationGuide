@@ -35,6 +35,7 @@
     </element>
     <element id="Observation.identifier">
       <path value="Observation.identifier" />
+      <definition value="A unique identifier assigned to this observation.&#xD;&#xA;&#xD;&#xA;For COVID-19 Test History this will be The identifier will be the specimen id.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA;    &quot;identifier&quot;:  [&#xD;&#xA;        {&#xD;&#xA;            &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/SpecimenId&quot;,&#xD;&#xA;            &quot;value&quot;: &quot;eb89a392-5b20-11eb-ae93-0242ac130002&quot;&#xD;&#xA;        }&#xD;&#xA;    ],&#xD;&#xA;```" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
@@ -46,8 +47,14 @@
       <path value="Observation.identifier.value" />
       <min value="1" />
     </element>
+    <element id="Observation.status">
+      <path value="Observation.status" />
+      <definition value="The status of the result value.&#xD;&#xA;&#xD;&#xA;For COVID-19 Test History the status of the observation will always be `final`&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA;    &quot;status&quot;: &quot;final&quot;,&#xD;&#xA;```" />
+      <mustSupport value="true" />
+    </element>
     <element id="Observation.category">
       <path value="Observation.category" />
+      <definition value="This is an optional element. If used the category will always be `laboratory`&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA;    &quot;category&quot;:  [&#xD;&#xA;        {&#xD;&#xA;            &quot;coding&quot;:  [&#xD;&#xA;                {&#xD;&#xA;                    &quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/observation-category&quot;,&#xD;&#xA;                    &quot;code&quot;: &quot;laboratory&quot;,&#xD;&#xA;                    &quot;display&quot;: &quot;Laboratory&quot;&#xD;&#xA;                }&#xD;&#xA;            ],&#xD;&#xA;            &quot;text&quot;: &quot;Laboratory&quot;&#xD;&#xA;        }&#xD;&#xA;    ],&#xD;&#xA;```&#xD;&#xA;&#xD;&#xA;For COVID-19 Tests, the ValueSet **SHOULD** be used to indicate which test pillar the observation originated.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA;     &quot;category&quot;: [&#xD;&#xA;        {&#xD;&#xA;            &quot;coding&quot;: [&#xD;&#xA;                {&#xD;&#xA;                    &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/covid-test-pillar&quot;,&#xD;&#xA;                    &quot;code&quot;: &quot;pillar-1&quot;,&#xD;&#xA;                    &quot;display&quot;: &quot;pillar 1&quot;&#xD;&#xA;                }&#xD;&#xA;            ]&#xD;&#xA;        }&#xD;&#xA;    ],&#xD;&#xA;```" />
       <mustSupport value="true" />
       <binding>
         <strength value="extensible" />
@@ -71,25 +78,28 @@
     </element>
     <element id="Observation.code">
       <path value="Observation.code" />
+      <definition value="Type of observation, for COVID-10 see [Observation Definition](https://simplifier.net/guide/NHSDigital/Home/FHIRAssets/AllAssets/ObservationDefinition/ObservationDefinition.guide.md) for `code` values.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;    &quot;code&quot;: {&#xD;&#xA;        &quot;coding&quot;:  [&#xD;&#xA;            {&#xD;&#xA;                &quot;system&quot;: &quot;http://snomed.info/sct&quot;,&#xD;&#xA;                &quot;code&quot;: &quot;871555000&quot;,&#xD;&#xA;                &quot;display&quot;: &quot;Detection of ribonucleic acid of Severe acute respiratory syndrome coronavirus 2&quot;&#xD;&#xA;            }&#xD;&#xA;        ]&#xD;&#xA;    },&#xD;&#xA;```" />
       <mustSupport value="true" />
-      <definition value="Describes what was observed. Sometimes this is called the observation &quot;name&quot;. SNOMED preferred." />
     </element>
     <element id="Observation.subject">
       <path value="Observation.subject" />
+      <definition value="The NHS Number will be an identifier reference which can be used with PDS FHIR API to return Patient demographics. If a local Patient is available, a reference to this will be present (e.g. &quot;Patient/123&quot;)&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA;    &quot;subject&quot;: {&#xD;&#xA;        &quot;reference&quot;: &quot;Patient/123&quot;,&#xD;&#xA;        &quot;identifier&quot;:  [&#xD;&#xA;            {&#xD;&#xA;                &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/nhs-number&quot;,&#xD;&#xA;                &quot;value&quot;: &quot;987123456&quot;&#xD;&#xA;            }&#xD;&#xA;        ]&#xD;&#xA;    },&#xD;&#xA;```" />
       <min value="1" />
-      <mustSupport value="true" />
       <constraint>
         <key value="patient-reference" />
         <severity value="warning" />
         <human value="subject - An identifier reference plus a display name or resource reference must be provided" />
         <expression value="(reference.exists() or (identifier.exists() and display.exists()))" />
+        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Observation" />
       </constraint>
-       <constraint>
+      <constraint>
         <key value="patient-nhs" />
         <severity value="error" />
         <human value="Supplied NHS Number is outside the English and Welsh NHS Number range or length of the number is wrong." />
         <expression value="identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').exists().not() or (identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').exists()  and identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').value.matches('^([456789]{1}[0-9]{9})$'))" />
+        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Observation" />
       </constraint>
+      <mustSupport value="true" />
     </element>
     <element id="Observation.subject.identifier.system">
       <path value="Observation.subject.identifier.system" />
@@ -101,7 +111,39 @@
     </element>
     <element id="Observation.effective[x]">
       <path value="Observation.effective[x]" />
+      <definition value="The date and time the result was asserted.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA;    &quot;effectiveDateTime&quot;: &quot;2020-09-23T13:00:08.476+00:00&quot;&#xD;&#xA;```" />
       <min value="1" />
+      <type>
+        <code value="dateTime" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.performer">
+      <path value="Observation.performer" />
+      <definition value="Who was responsible for asserting the observed value as &quot;true&quot;. &#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA;&quot;performer&quot;: [&#xD;&#xA;  {&#xD;&#xA;    &quot;type&quot;: &quot;Organization&quot;,&#xD;&#xA;    &quot;identifier&quot;: {&#xD;&#xA;      &quot;type&quot;: {&#xD;&#xA;        &quot;coding&quot;: [&#xD;&#xA;          {&#xD;&#xA;            &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/organisation-role&quot;,&#xD;&#xA;            &quot;code&quot;: &quot;173&quot;,&#xD;&#xA;            &quot;display&quot;: &quot;PATHOLOGY LAB&quot;&#xD;&#xA;          }&#xD;&#xA;        ]&#xD;&#xA;      },&#xD;&#xA;      &quot;value&quot;: &quot;LFD004&quot;&#xD;&#xA;    }&#xD;&#xA;  },&#xD;&#xA;  {&#xD;&#xA;    &quot;type&quot;: &quot;Organization&quot;,&#xD;&#xA;    &quot;identifier&quot;: {&#xD;&#xA;      &quot;type&quot;: {&#xD;&#xA;        &quot;coding&quot;: [&#xD;&#xA;          {&#xD;&#xA;            &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/OrgType&quot;,&#xD;&#xA;            &quot;code&quot;: &quot;TestCentreId&quot;,&#xD;&#xA;            &quot;display&quot;: &quot;Testing Centre&quot;&#xD;&#xA;          }&#xD;&#xA;        ]&#xD;&#xA;      },&#xD;&#xA;      &quot;value&quot;: &quot;WKE03&quot;&#xD;&#xA;    }&#xD;&#xA;  }&#xD;&#xA;]&#xD;&#xA;&#xD;&#xA;```" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/CareTeam" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole" />
+      </type>
+      <constraint>
+        <key value="performer" />
+        <severity value="error" />
+        <human value="An identifier reference or resource reference must be provided" />
+        <expression value="(reference.exists() or identifier.exists())" />
+      </constraint>
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.value[x]">
+      <path value="Observation.value[x]" />
+      <definition value="### COVID-19 valueCodeableConcept &#xD;&#xA;&#xD;&#xA;The COVID 19 test result. This is a SNOMED CT from the valueSet associated with the `code`, see [Observation Definition](https://simplifier.net/guide/NHSDigital/Home/FHIRAssets/AllAssets/ObservationDefinition/ObservationDefinition.guide.md)&#xD;&#xA;&#xD;&#xA;```json &#xD;&#xA;&#xD;&#xA;    &quot;valueCodeableConcept&quot;: {&#xD;&#xA;        &quot;coding&quot;:  [&#xD;&#xA;            {&#xD;&#xA;                &quot;system&quot;: &quot;http://snomed.info/sct&quot;,&#xD;&#xA;                &quot;code&quot;: &quot;1240581000000104&quot;,&#xD;&#xA;                &quot;display&quot;: &quot;SARS-CoV-2 (severe acute respiratory syndrome coronavirus 2) detection result positive&quot;&#xD;&#xA;            }&#xD;&#xA;        ],&#xD;&#xA;        &quot;text&quot;: &quot;SARS-CoV-2-ORGY&quot;&#xD;&#xA;    },&#xD;&#xA;```" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.method">
+      <path value="Observation.method" />
+      <definition value="The name of the test that was performed, this is a SNOMED CT concept.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA;    &quot;method&quot;: {&#xD;&#xA;        &quot;coding&quot;:  [&#xD;&#xA;            {&#xD;&#xA;                &quot;system&quot;: &quot;http://snomed.info/sct&quot;,&#xD;&#xA;                &quot;code&quot;: &quot;1240461000000109&quot;,&#xD;&#xA;                &quot;display&quot;: &quot;Measurement of SARS-CoV-2 antibody (procedure)&quot;&#xD;&#xA;            }&#xD;&#xA;        ]&#xD;&#xA;    },&#xD;&#xA;```" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.method.coding.system">
@@ -116,6 +158,11 @@
       <path value="Observation.method.coding.display" />
       <min value="1" />
     </element>
+    <element id="Observation.specimen">
+      <path value="Observation.specimen" />
+      <definition value="For COVID-19 Test History. The identifier of the specimen used for the test.&#xD;&#xA; &#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA;    &quot;specimen&quot;: {&#xD;&#xA;        &quot;identifier&quot;: {&#xD;&#xA;            &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/SpecimenId&quot;,&#xD;&#xA;            &quot;value&quot;: &quot;eb89a392-5b20-11eb-ae93-0242ac130002&quot;&#xD;&#xA;        }&#xD;&#xA;    },&#xD;&#xA;```" />
+      <mustSupport value="true" />
+    </element>
     <element id="Observation.specimen.identifier.system">
       <path value="Observation.specimen.identifier.system" />
       <min value="1" />
@@ -123,6 +170,11 @@
     <element id="Observation.specimen.identifier.value">
       <path value="Observation.specimen.identifier.value" />
       <min value="1" />
+    </element>
+    <element id="Observation.device">
+      <path value="Observation.device" />
+      <definition value="Details of the [COVID-19 test kit](https://simplifier.net/resolve?target=simplifier&amp;scope=uk.nhsdigital.r4&amp;canonical=https://fhir.nhs.uk/Id/Covid19-TestKit) used.  &#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA;    &quot;device&quot;: {&#xD;&#xA;        &quot;identifier&quot;: {&#xD;&#xA;            &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/Covid19-TestKit&quot;,&#xD;&#xA;            &quot;value&quot;: &quot;LFT&quot;&#xD;&#xA;        },&#xD;&#xA;        &quot;display&quot;: &quot;Lateral Flow Test&quot;&#xD;&#xA;    }&#xD;&#xA;```" />
+      <mustSupport value="true" />
     </element>
     <element id="Observation.device.identifier.system">
       <path value="Observation.device.identifier.system" />

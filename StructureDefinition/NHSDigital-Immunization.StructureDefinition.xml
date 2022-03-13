@@ -22,18 +22,26 @@
       </slicing>
       <min value="0" />
     </element>
+    <element id="Immunization.extension:parentPresent">
+      <path value="Immunization.extension" />
+      <sliceName value="parentPresent" />
+      <min value="0" />
+      <mustSupport value="false" />
+    </element>
     <element id="Immunization.extension:vaccinationProcedure">
       <path value="Immunization.extension" />
       <sliceName value="vaccinationProcedure" />
+      <definition value="Where status=`completed` this is Mandatory&#xD;&#xA;This relates to the vaccine that was administered (procedure) and is a SNOMED CT from {{link:https://fhir.hl7.org.uk/ValueSet/UKCore-VaccinationProcedure}}&#xD;&#xA;&#xD;&#xA;In addition to the codes in the following codes are recommended.&#xD;&#xA;&#xD;&#xA;&lt;table&gt;&#xD;&#xA;&lt;thead&gt;&#xD;&#xA;&lt;th data-no-sort &gt;&#xD;&#xA;Vaccination Procedure&#xD;&#xA;&lt;/th&gt;&#xD;&#xA;&lt;th data-no-sort &gt;&#xD;&#xA;UK SNOMED self&#xD;&#xA;&lt;/th&gt;&#xD;&#xA;&lt;/thead&gt;&#xD;&#xA;&lt;tr&gt;&#xD;&#xA;&lt;td&gt;&#xD;&#xA;Administration of first dose of SARS-CoV-2 (severe acute respiratory syndrome coronavirus 2) vaccine&#xD;&#xA;&lt;/td&gt;&#xD;&#xA;&lt;td&gt;&#xD;&#xA;&lt;a href=&quot;https://termbrowser.nhs.uk/?perspective=full&amp;conceptId1=1324681000000101&quot; target=&quot;_blank&quot;&gt;1324681000000101&lt;/a&gt;&#xD;&#xA;&lt;/td&gt;&#xD;&#xA;&lt;/tr&gt;&#xD;&#xA;&lt;tr&gt;&#xD;&#xA;&lt;td&gt;&#xD;&#xA;Administration of second dose of SARS-CoV-2 (severe acute respiratory syndrome coronavirus 2) vaccine&#xD;&#xA;&lt;/td&gt;&#xD;&#xA;&lt;td&gt;&#xD;&#xA;&lt;a href=&quot;https://termbrowser.nhs.uk/?perspective=full&amp;conceptId1=1324691000000104&quot; target=&quot;_blank&quot;&gt;1324691000000104&lt;/a&gt;&#xD;&#xA;&lt;/td&gt;&#xD;&#xA;&lt;/tr&gt;&#xD;&#xA;&lt;/table&gt;&#xD;&#xA;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;extension&quot;:  [&#xD;&#xA;        {&#xD;&#xA;            &quot;url&quot;: &quot;https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-VaccinationProcedure&quot;,&#xD;&#xA;            &quot;valueCodeableConcept&quot;: {&#xD;&#xA;                &quot;coding&quot;:  [&#xD;&#xA;                    {&#xD;&#xA;                        &quot;system&quot;: &quot;http://snomed.info/sct&quot;,&#xD;&#xA;                        &quot;code&quot;: &quot;1324681000000101&quot;,&#xD;&#xA;                        &quot;display&quot;: &quot;Administration of first dose of severe acute respiratory syndrome coronavirus 2 vaccine (procedure)&quot;&#xD;&#xA;                    }&#xD;&#xA;                ]&#xD;&#xA;            }&#xD;&#xA;        }&#xD;&#xA;    ],&#xD;&#xA;```" />
       <min value="0" />
+      <mustSupport value="true" />
       <binding>
         <strength value="required" />
         <description value="https://fhir.nhs.uk/ValueSet/NHSDigital-VaccinationProcedure" />
       </binding>
-      <mustSupport value="true" />
     </element>
     <element id="Immunization.identifier">
       <path value="Immunization.identifier" />
+      <definition value="#### identifier.system&#xD;&#xA;&#xD;&#xA;A URI for the system that has allocated the vaccination identifier.&#xD;&#xA;Note, this must be unique within a given Supplier system or instance of Supplier system&#xD;&#xA;&#xD;&#xA;e.g. &#xD;&#xA;1) Example of a “single instance for all customers” Supplier system&#xD;&#xA;`https://supplierABC/identifiers/vacc`&#xD;&#xA;&#xD;&#xA;2) Example of “per customer instance” Supplier system&#xD;&#xA;`https://supplierABC/ODSCode/NKO41/identifiers/vacc`&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;#### identifier.value&#xD;&#xA;&#xD;&#xA;A unique identifier for the vaccination record, that is consistent between any subsequent update or delete records.&#xD;&#xA;&#xD;&#xA;Ideally this would be a GUID / UUID&#xD;&#xA;&#xD;&#xA;Value in combination with UNIQUE_ID_URI must be globally unique&#xD;&#xA;In other words, a combination of `identifier.value` and `identifier.system` act as composite primary key to allow lookup of any Adverse Reactions records from the corresponding Adverse Reaction data file.&#xD;&#xA;&#xD;&#xA;1) UUID example:&#xD;&#xA;`e045626e-4dc5-4df3-bc35-da25263f901e`&#xD;&#xA;&#xD;&#xA;2) Example of a “single instance for all customers” Supplier system&#xD;&#xA;`ACME-vacc123456`&#xD;&#xA;&#xD;&#xA;3) Example of “per customer instance” Supplier system&#xD;&#xA;`ACME-CUSTOMER1-vacc123456`&#xD;&#xA;`ACME-CUSTOMER2-vacc123456`" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
@@ -44,6 +52,11 @@
     <element id="Immunization.identifier.value">
       <path value="Immunization.identifier.value" />
       <min value="1" />
+    </element>
+    <element id="Immunization.status">
+      <path value="Immunization.status" />
+      <definition value="For a vaccination that has been administered, the status will be `completed`. This status **does not** indicate a vaccination course has been completed.&#xD;&#xA;When the vaccination has not been administered, the status will be `not-done` and a statusReason should be supplied." />
+      <mustSupport value="true" />
     </element>
     <element id="Immunization.statusReason.coding">
       <path value="Immunization.statusReason.coding" />
@@ -60,6 +73,10 @@
     <element id="Immunization.statusReason.coding.display">
       <path value="Immunization.statusReason.coding.display" />
       <min value="1" />
+    </element>
+    <element id="Immunization.vaccineCode">
+      <path value="Immunization.vaccineCode" />
+      <definition value="Where status is `completed` this is Mandatory. This indicates vaccine product administered. This should be a SNOMED CT code from {{link:https://fhir.hl7.org.uk/ValueSet/UKCore-VaccineCode}}&#xD;&#xA;AMPP codes should not be used.&#xD;&#xA;&#xD;&#xA;&lt;table&gt;&#xD;&#xA;&lt;thead&gt;&#xD;&#xA;&lt;th data-no-sort width=&quot;20%&quot;&gt;&#xD;&#xA;Vaccine Reference Set&#xD;&#xA;&lt;/th&gt;&#xD;&#xA;&lt;th data-no-sort width=&quot;25%&quot;&gt;&#xD;&#xA;UK SNOMED Members Of&#xD;&#xA;&lt;/th&gt;&#xD;&#xA;&lt;th data-no-sort width=&quot;25%&quot;&gt;&#xD;&#xA;UK SNOMED Descendents Of&#xD;&#xA;&lt;/th&gt;&#xD;&#xA;&lt;/thead&gt;&#xD;&#xA;&lt;tr&gt;&#xD;&#xA;&lt;td&gt;&#xD;&#xA;Meningococcal ACWY vaccines&#xD;&#xA;&lt;/td&gt;&#xD;&#xA;&lt;td&gt;&#xD;&#xA;&lt;a href=&quot;https://termbrowser.nhs.uk/?perspective=full&amp;conceptId1=999000811000001105&quot; target=&quot;_blank&quot;&gt;999000811000001105&lt;/a&gt;&#xD;&#xA;&lt;/td&gt;&#xD;&#xA;&lt;td&gt;&#xD;&#xA;&lt;/td&gt;&#xD;&#xA;&lt;/tr&gt;&#xD;&#xA;&lt;tr&gt;&#xD;&#xA;&lt;td&gt;&#xD;&#xA;Influenza vaccines prescribable within general practice&#xD;&#xA;&lt;/td&gt;&#xD;&#xA;&lt;td&gt;&#xD;&#xA;&lt;a href=&quot;https://termbrowser.nhs.uk/?perspective=full&amp;conceptId1=12465201000001105&quot; target=&quot;_blank&quot;&gt;12465201000001105&lt;/a&gt;&#xD;&#xA;&lt;/td&gt;&#xD;&#xA;&lt;td&gt;&#xD;&#xA;&lt;/td&gt;&#xD;&#xA;&lt;/tr&gt;&#xD;&#xA;&lt;tr&gt;&#xD;&#xA;&lt;td&gt;&#xD;&#xA;Meningococcal B vaccines&#xD;&#xA;&lt;/td&gt;&#xD;&#xA;&lt;td&gt;&#xD;&#xA;&lt;a href=&quot;https://termbrowser.nhs.uk/?perspective=full&amp;conceptId1=999000831000001104&quot; target=&quot;_blank&quot;&gt;999000831000001104&lt;/a&gt;&#xD;&#xA;&lt;/td&gt;&#xD;&#xA;&lt;td&gt;&#xD;&#xA;&lt;/td&gt;&#xD;&#xA;&lt;/tr&gt;&#xD;&#xA;&lt;tr&gt;&#xD;&#xA;&lt;td&gt;&#xD;&#xA;Pneumococcal vaccines&#xD;&#xA;&lt;/td&gt;&#xD;&#xA;&lt;td&gt;&#xD;&#xA;&lt;a href=&quot;https://termbrowser.nhs.uk/?perspective=full&amp;conceptId1=999000841000001106&quot; target=&quot;_blank&quot;&gt;999000841000001106&lt;/a&gt;&#xD;&#xA;&lt;/td&gt;&#xD;&#xA;&lt;td&gt;&#xD;&#xA;&lt;/td&gt;&#xD;&#xA;&lt;/tr&gt;&#xD;&#xA;&lt;tr&gt;&#xD;&#xA;&lt;td&gt;&#xD;&#xA;Seasonal Flu vaccines&#xD;&#xA;&lt;/td&gt;&#xD;&#xA;&lt;td&gt;&#xD;&#xA;&lt;a href=&quot;https://termbrowser.nhs.uk/?perspective=full&amp;conceptId1=999000821000001101&quot; target=&quot;_blank&quot;&gt;999000821000001101&lt;/a&gt;&#xD;&#xA;&lt;/td&gt;&#xD;&#xA;&lt;td&gt;&#xD;&#xA;&lt;/td&gt;&#xD;&#xA;&lt;/tr&gt;&#xD;&#xA;&lt;tr&gt;&#xD;&#xA;&lt;td&gt;&#xD;&#xA;COVID-19 vaccines&#xD;&#xA;&lt;/td&gt;&#xD;&#xA;&lt;td&gt;&#xD;&#xA;&lt;/td&gt;&#xD;&#xA;&lt;td&gt;&#xD;&#xA;&lt;a href=&quot;https://termbrowser.nhs.uk/?perspective=full&amp;conceptId1=39330711000001103&quot; target=&quot;_blank&quot;&gt;39330711000001103&lt;/a&gt;&#xD;&#xA;&lt;/td&gt;&#xD;&#xA;&lt;/tr&gt;&#xD;&#xA;&lt;/table&gt;&#xD;&#xA;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;vaccineCode&quot;: {&#xD;&#xA;        &quot;coding&quot;:  [&#xD;&#xA;            {&#xD;&#xA;                &quot;system&quot;: &quot;http://snomed.info/sct&quot;,&#xD;&#xA;                &quot;code&quot;: &quot;39114911000001105&quot;,&#xD;&#xA;                &quot;display&quot;: &quot;COVID-19 Vaccine AstraZeneca (ChAdOx1 S [recombinant]) 5x10,000,000,000 viral particles/0.5ml dose solution for injection multidose vials (AstraZeneca)&quot;&#xD;&#xA;            }&#xD;&#xA;        ]&#xD;&#xA;    },&#xD;&#xA;```&#xD;&#xA;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&#xD;&#xA;For EU/international purposes, a vaccination type code can be also be included. The SNOMED CT concept should be from [Vaccines (GPS) - IPS](http://hl7.org/fhir/uv/ips/ValueSet/vaccines-gps-uv-ips) and [EU SNOMED CT Vaccine List (COVID-19)](https://build.fhir.org/ig/hl7-eu/dgc/ValueSet-sct-vaccines-covid-19.html)&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;vaccineCode&quot;: {&#xD;&#xA;        &quot;coding&quot;:  [&#xD;&#xA;            {&#xD;&#xA;                &quot;system&quot;: &quot;http://snomed.info/sct&quot;,&#xD;&#xA;                &quot;code&quot;: &quot;39114911000001105&quot;,&#xD;&#xA;                &quot;display&quot;: &quot;COVID-19 Vaccine AstraZeneca (ChAdOx1 S [recombinant]) 5x10,000,000,000 viral particles/0.5ml dose solution for injection multidose vials (AstraZeneca)&quot;&#xD;&#xA;            },&#xD;&#xA;            {&#xD;&#xA;                &quot;system&quot;: &quot;http://snomed.info/sct&quot;,&#xD;&#xA;                &quot;code&quot;: &quot;1119305005&quot;,&#xD;&#xA;                &quot;display&quot;: &quot;SARS-CoV-2 antigen vaccine&quot;&#xD;&#xA;            }&#xD;&#xA;        ]&#xD;&#xA;    },&#xD;&#xA;```" />
     </element>
     <element id="Immunization.vaccineCode.coding">
       <path value="Immunization.vaccineCode.coding" />
@@ -80,7 +97,7 @@
     </element>
     <element id="Immunization.patient">
       <path value="Immunization.patient" />
-      <mustSupport value="true" />
+      <definition value="A traced NHS Number **SHOULD** be provided and when applicable a resource reference to the Patient resource.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;patient&quot;: {&#xD;&#xA;                    &quot;reference&quot;: &quot;urn:uuid:edea022a-2d81-11eb-adc1-0242ac120002&quot;,&#xD;&#xA;                    &quot;type&quot;: &quot;Patient&quot;,&#xD;&#xA;                    &quot;identifier&quot;: {&#xD;&#xA;                        &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/nhs-number&quot;,&#xD;&#xA;                        &quot;value&quot;: &quot;9912003888&quot;&#xD;&#xA;                    }&#xD;&#xA;                },&#xD;&#xA;```" />
       <constraint>
         <key value="patient-reference" />
         <severity value="warning" />
@@ -95,30 +112,64 @@
         <expression value="identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').exists().not() or (identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').exists()  and identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').value.matches('^([456789]{1}[0-9]{9})$'))" />
         <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Immunization" />
       </constraint>
+      <mustSupport value="true" />
     </element>
     <element id="Immunization.occurrence[x]">
       <path value="Immunization.occurrence[x]" />
+      <definition value="The date and time on which the vaccination intervention was carried out or was meant to be administered." />
       <type>
         <code value="dateTime" />
       </type>
       <mustSupport value="true" />
     </element>
+    <element id="Immunization.recorded">
+      <path value="Immunization.recorded" />
+      <definition value="The date that the vaccination administered (procedure) or not administered (situation) was recorded in the source system." />
+      <mustSupport value="true" />
+    </element>
     <element id="Immunization.primarySource">
       <path value="Immunization.primarySource" />
+      <definition value="Set as TRUE when the content of the record is based on information from the person performing the vaccine or who has clinical responsibility for the vaccination, and the system can be considered a primary source of the vaccination event.&#xD;&#xA;Set as FALSE when the information has NOT come directly from people performing the vaccine (e.g. a patient or patient’s carer), and the system should not be treated as a primary source for this record.&#xD;&#xA;This is used to help identify and eliminate duplicate records held centrally." />
       <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Immunization.reportOrigin">
+      <path value="Immunization.reportOrigin" />
+      <definition value="Where primarySource=`false`, &#xD;&#xA;- The ODS code should be set to the location of the primary source of the data where the report of the vaccination event is held&#xD;&#xA; &#xD;&#xA;Where primarySource=`false` and the vaccination event has been stored in local Primary Care System. &#xD;&#xA;- The ODS code should be set to the ODS code of the organisation where the event has been stored e.g. GP practice or PCN.   &#xD;&#xA;Note this field will be used to determine whether or not to send the vaccination event to the patient’s registered GP&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA;&quot;reportOrigin&quot;: {&#xD;&#xA;        &quot;text&quot;: &quot;RR8 - LEEDS TEACHING HOSPITALS NHS TRUST&quot;&#xD;&#xA;    },&#xD;&#xA;```" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Immunization.location">
+      <path value="Immunization.location" />
+      <definition value="Country where the vaccination took place. This should follow [Using ISO 3166 Country Codes with FHIR](https://hl7.org/fhir/iso3166.html) or a SNOMED Country Code.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA;&quot;location&quot;: {&#xD;&#xA;        &quot;identifier&quot;: {&#xD;&#xA;            &quot;system&quot;: &quot;urn:iso:std:iso:3166&quot;,&#xD;&#xA;            &quot;value&quot;: &quot;FR&quot;&#xD;&#xA;        },&#xD;&#xA;        &quot;display&quot;: &quot;France&quot;&#xD;&#xA;    },&#xD;&#xA;```" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Immunization.manufacturer">
+      <path value="Immunization.manufacturer" />
+      <definition value="Manufacturer of vaccine product. Only the `display` is expected to be populated.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA;&quot;manufacturer&quot;: {&#xD;&#xA;        &quot;display&quot;: &quot;DREAMLAND Pharmaceuticals Ltd&quot;&#xD;&#xA;    },&#xD;&#xA;```" />
       <mustSupport value="true" />
     </element>
     <element id="Immunization.manufacturer.display">
       <path value="Immunization.manufacturer.display" />
       <min value="1" />
     </element>
+    <element id="Immunization.lotNumber">
+      <path value="Immunization.lotNumber" />
+      <definition value="Where status=`completed` this is Mandatory.&#xD;&#xA;This should be captured at source ideally via use of automated scanning technology (GS1 GTIN / NTIN standard).&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA;   &quot;lotNumber&quot;: &quot;R04X&quot;,&#xD;&#xA;```" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Immunization.expirationDate">
+      <path value="Immunization.expirationDate" />
+      <definition value="Shorter date of either:&#xD;&#xA;&#xD;&#xA;- Manufacturer expiry date of the vaccine&#xD;&#xA;- Coronavirus point of care sites will only put in the defrost expiry date" />
+      <mustSupport value="true" />
+    </element>
     <element id="Immunization.site">
       <path value="Immunization.site" />
+      <definition value="Body site vaccine was administered into. A SNOMED Concept ID value from UK published reference set “Vaccine body site of administration simple reference set” (1127941000000100) should be used {{link:https://fhir.hl7.org.uk/ValueSet/UKCore-BodySite}}&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA;&quot;site&quot;: {&#xD;&#xA;        &quot;coding&quot;:  [&#xD;&#xA;            {&#xD;&#xA;                &quot;system&quot;: &quot;http://snomed.info/sct&quot;,&#xD;&#xA;                &quot;code&quot;: &quot;368208006&quot;,&#xD;&#xA;                &quot;display&quot;: &quot;Left upper arm structure (body structure)&quot;&#xD;&#xA;            }&#xD;&#xA;        ]&#xD;&#xA;    },&#xD;&#xA;```" />
+      <mustSupport value="true" />
       <binding>
         <strength value="extensible" />
         <valueSet value="https://fhir.hl7.org.uk/ValueSet/UKCore-BodySite" />
       </binding>
-      <mustSupport value="true" />
     </element>
     <element id="Immunization.site.coding">
       <path value="Immunization.site.coding" />
@@ -136,13 +187,27 @@
       <path value="Immunization.site.coding.display" />
       <min value="1" />
     </element>
+    <element id="Immunization.route">
+      <path value="Immunization.route" />
+      <definition value="A SNOMED concept ID value from either of the following should be used:&#xD;&#xA;UK “ePrescribing route of administration simple reference set (foundation metadata concept)” (999000051000001100) [UKCore-MedicationDosageRoute](https://simplifier.net/resolve?target=simplifier&amp;scope=uk.nhsdigital.r4&amp;canonical=https://fhir.hl7.org.uk/ValueSet/UKCore-MedicationDosageRoute}&#xD;&#xA;Or:&#xD;&#xA;UK published reference set “Vaccine route of administration simple reference set” (115231000001104)&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA; &quot;route&quot;: {&#xD;&#xA;        &quot;coding&quot;:  [&#xD;&#xA;            {&#xD;&#xA;                &quot;system&quot;: &quot;http://snomed.info/sct&quot;,&#xD;&#xA;                &quot;code&quot;: &quot;78421000&quot;,&#xD;&#xA;                &quot;display&quot;: &quot;Intramuscular route (qualifier value)&quot;&#xD;&#xA;            }&#xD;&#xA;        ]&#xD;&#xA;    },&#xD;&#xA;```" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Immunization.doseQuantity">
+      <path value="Immunization.doseQuantity" />
+      <definition value="A dm+d (SNOMED) Concept ID value representing the Unit of measure used.&#xD;&#xA;&#xD;&#xA;For COVID-19 a reference set has been published here: https://dd4c.digital.nhs.uk/dd4c/publishedmetadatas/intid/980?size=10&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA; &quot;doseQuantity&quot;: {&#xD;&#xA;        &quot;value&quot;: 1,&#xD;&#xA;        &quot;unit&quot;: &quot;pre-filled disposable injection&quot;,&#xD;&#xA;        &quot;system&quot;: &quot;http://snomed.info/sct&quot;,&#xD;&#xA;        &quot;code&quot;: &quot;3318611000001100&quot;&#xD;&#xA;    },&#xD;&#xA;```" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Immunization.performer">
+      <path value="Immunization.performer" />
+      <definition value="The organisation ODS code of the location where the vaccination event took place with corresponding system of `https://fhir.nhs.uk/Id/ods-organization-code`. For roving teams on home visits or care home visits use the site code of the responsible site e.g. GP practice or dedicated vaccination site. It is strongly recommend the name of the Organisation is present in the display field.&#xD;&#xA;&#xD;&#xA;Vaccination professional should be recorded using professional codes, see [NHSDigital-Practitioner](https://simplifier.net/guide/nhsdigital/NHSDigital-Practitioner) for details.&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA;&quot;performer&quot;:  [&#xD;&#xA;        {&#xD;&#xA;            &quot;actor&quot;: {&#xD;&#xA;                &quot;type&quot;: &quot;Practitioner&quot;,&#xD;&#xA;                &quot;identifier&quot;: {&#xD;&#xA;                    &quot;system&quot;: &quot;https://fhir.hl7.org.uk/Id/nmc-number&quot;,&#xD;&#xA;                    &quot;value&quot;: &quot;5566789&quot;&#xD;&#xA;                },&#xD;&#xA;                &quot;display&quot;: &quot;HOLDING, Rafferty&quot;&#xD;&#xA;            }&#xD;&#xA;        },&#xD;&#xA;        {&#xD;&#xA;            &quot;actor&quot;: {&#xD;&#xA;                &quot;type&quot;: &quot;Organization&quot;,&#xD;&#xA;                &quot;identifier&quot;: {&#xD;&#xA;                    &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/ods-organization-code&quot;,&#xD;&#xA;                    &quot;value&quot;: &quot;C4B2A&quot;&#xD;&#xA;                },&#xD;&#xA;                &quot;display&quot;: &quot;ELLAND ROAD STADIUM - COVID VACCINATION CENTRE&quot;&#xD;&#xA;            }&#xD;&#xA;        }&#xD;&#xA;    ],&#xD;&#xA;```" />
+      <mustSupport value="true" />
+    </element>
     <element id="Immunization.performer.actor">
       <path value="Immunization.performer.actor" />
-      <mustSupport value="true" />
       <constraint>
         <key value="usercode-reference" />
         <severity value="error" />
-        <human value="An identifier reference plus a display name or resource reference must be provided" />
+        <human value="An identifier reference or resource reference must be provided" />
         <expression value="(reference.exists() or identifier.exists())" />
         <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Immunization" />
       </constraint>
@@ -195,6 +260,7 @@
         <expression value="identifier.where(system='https://fhir.nhs.uk/Id/sds-role-profile-id').exists().not() or (identifier.where(system='https://fhir.nhs.uk/Id/sds-role-profile-id').exists()  and identifier.where(system='https://fhir.nhs.uk/Id/sds-role-profile-id').value.matches('^[0-9]{12}$'))" />
         <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole" />
       </constraint>
+      <mustSupport value="true" />
     </element>
     <element id="Immunization.performer.actor.type">
       <path value="Immunization.performer.actor.type" />
@@ -207,6 +273,11 @@
     <element id="Immunization.performer.actor.identifier.value">
       <path value="Immunization.performer.actor.identifier.value" />
       <min value="1" />
+    </element>
+    <element id="Immunization.reasonCode">
+      <path value="Immunization.reasonCode" />
+      <definition value="A SNOMED Concept Id. For COVID19 and Flu see https://digital.nhs.uk/developer/api-catalogue/vaccination" />
+      <mustSupport value="true" />
     </element>
     <element id="Immunization.reasonCode.coding">
       <path value="Immunization.reasonCode.coding" />
@@ -225,14 +296,18 @@
       <path value="Immunization.reasonCode.coding.display" />
       <min value="1" />
     </element>
+    <element id="Immunization.protocolApplied">
+      <path value="Immunization.protocolApplied" />
+      <mustSupport value="true" />
+    </element>
     <element id="Immunization.protocolApplied.targetDisease">
       <path value="Immunization.protocolApplied.targetDisease" />
+      <mustSupport value="true" />
       <binding>
         <strength value="required" />
         <description value="(Work in progress) The vaccine preventable disease the dose is being administered for." />
         <valueSet value="http://hl7.eu/fhir/ig/dgc/ValueSet/covid-19-diseases" />
       </binding>
-      <mustSupport value="true" />
     </element>
   </differential>
 </StructureDefinition>
