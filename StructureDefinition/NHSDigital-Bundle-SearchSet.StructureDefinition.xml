@@ -14,6 +14,7 @@
     <element id="Bundle.type">
       <path value="Bundle.type" />
       <fixedCode value="searchset" />
+        <mustSupport value="true" />
     </element>
   </differential>
 </StructureDefinition>
