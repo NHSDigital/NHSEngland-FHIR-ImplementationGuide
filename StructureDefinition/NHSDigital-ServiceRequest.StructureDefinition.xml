@@ -10,6 +10,10 @@
   <baseDefinition value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-ServiceRequest" />
   <derivation value="constraint" />
   <differential>
+    <element id="ServiceRequest.id">
+      <path value="ServiceRequest.id" />
+      <short value="Local Referral ID" />
+    </element>
     <element id="ServiceRequest.extension">
       <path value="ServiceRequest.extension" />
       <slicing>
@@ -31,15 +35,39 @@
       </type>
       <mustSupport value="true" />
     </element>
-    <element id="ServiceRequest.extension:ERSReferralState">
+    <element id="ServiceRequest.extension:ERSServiceRequestState">
       <path value="ServiceRequest.extension" />
-      <sliceName value="ERSReferralState" />
+      <sliceName value="ERSServiceRequestState" />
+      <short value="Request Status" />
+      <definition value="e-RS representation of the state of the referral" />
       <min value="0" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-eRS-ServiceRequest-State" />
       </type>
       <mustSupport value="true" />
+    </element>
+    <element id="ServiceRequest.extension:portalLink">
+      <path value="ServiceRequest.extension" />
+      <sliceName value="portalLink" />
+      <short value="Portal Link" />
+      <definition value="Deep Link into the specific landing page in MYR" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-Portal-Link" />
+      </type>
+    </element>
+    <element id="ServiceRequest.extension:serviceRequestPriority">
+      <path value="ServiceRequest.extension" />
+      <sliceName value="serviceRequestPriority" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-ServiceRequest-Priority" />
+      </type>
     </element>
     <element id="ServiceRequest.identifier">
       <path value="ServiceRequest.identifier" />
@@ -96,6 +124,10 @@
       <path value="ServiceRequest.basedOn.identifier.value" />
       <min value="1" />
     </element>
+    <element id="ServiceRequest.intent">
+      <path value="ServiceRequest.intent" />
+      <definition value="In **e-RS** default to `order`" />
+    </element>
     <element id="ServiceRequest.category">
       <path value="ServiceRequest.category" />
       <min value="1" />
@@ -118,10 +150,15 @@
       <path value="ServiceRequest.category.coding.code" />
       <min value="1" />
     </element>
+    <element id="ServiceRequest.priority">
+      <path value="ServiceRequest.priority" />
+      <definition value="Request Priority Code &#xD;&#xA;&#xD;&#xA;Code for the priority of the referral set by the Referring Clinician" />
+      <mustSupport value="true" />
+    </element>
     <element id="ServiceRequest.code">
       <path value="ServiceRequest.code" />
-      <mustSupport value="true" />
       <definition value="A code that identifies a particular service (i.e., procedure, diagnostic investigation, or panel of investigations) that have been requested.&#xD;&#xA;&#xD;&#xA;Ideally this should be a child code of the ServiceRequest.category" />
+      <mustSupport value="true" />
     </element>
     <element id="ServiceRequest.code.coding">
       <path value="ServiceRequest.code.coding" />
@@ -156,6 +193,18 @@
         <code value="Reference" />
         <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Patient" />
       </type>
+      <constraint>
+        <key value="patient-reference" />
+        <severity value="error" />
+        <human value="An identifier reference or resource reference must be provided" />
+        <expression value="(reference.exists() or identifier.exists())" />
+      </constraint>
+      <constraint>
+        <key value="patient-nhs" />
+        <severity value="error" />
+        <human value="NHS Number must be in the English and Welsh NHS Number range or length of the number is wrong." />
+        <expression value="identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').exists().not() or (identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').exists()  and identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').value.matches('^([456789]{1}[0-9]{9})$'))" />
+      </constraint>
       <mustSupport value="true" />
     </element>
     <element id="ServiceRequest.subject.identifier.system">
@@ -173,8 +222,15 @@
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-Encounter" />
       </type>
     </element>
+    <element id="ServiceRequest.authoredOn">
+      <path value="ServiceRequest.authoredOn" />
+      <short value="Referral Initiated Date" />
+      <definition value="Date the referral was initiated in e-RS" />
+      <mustSupport value="true" />
+    </element>
     <element id="ServiceRequest.requester">
       <path value="ServiceRequest.requester" />
+      <definition value="Who is created the Request or the Event. In NHSDigital API's this **SHOULD** always be a PractitionerRole role reference.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA; &quot;requester&quot;: {&#xD;&#xA;        &quot;reference&quot;: &quot;#requester&quot;&#xD;&#xA;    },&#xD;&#xA;```&#xD;&#xA;&#xD;&#xA;This will reference a `contained` PractitionerRole (note: this resource only contains limited user metadata such as ODS Code, professional code and SDS User Profile Id). This resource should not hold data which is held in SDS, only enough information to identify the SDS Entry,&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;{&#xD;&#xA;    &quot;resourceType&quot;: &quot;Task&quot;,&#xD;&#xA;    &quot;id&quot;: &quot;bd1ca5c4-ff49-4f2a-9db4-f5dda0112084&quot;,&#xD;&#xA;    &quot;meta&quot;: {&#xD;&#xA;        &quot;lastUpdated&quot;: &quot;2016-07-11T11:07:22+00:00&quot;&#xD;&#xA;    },&#xD;&#xA;    &quot;contained&quot;: [&#xD;&#xA;        {&#xD;&#xA;            &quot;resourceType&quot;: &quot;PractitionerRole&quot;,&#xD;&#xA;            &quot;id&quot;: &quot;requester&quot;,&#xD;&#xA;            &quot;practitioner&quot;: {&#xD;&#xA;                &quot;identifier&quot;: {&#xD;&#xA;                    &quot;system&quot;: &quot;https://fhir.hl7.org.uk/Id/gmp-number&quot;,&#xD;&#xA;                    &quot;value&quot;: &quot;G8123456&quot;&#xD;&#xA;                },&#xD;&#xA;                &quot;display&quot;: &quot;DR AA BHATIA&quot;&#xD;&#xA;            },&#xD;&#xA;            &quot;organization&quot;: {&#xD;&#xA;                &quot;identifier&quot;: {&#xD;&#xA;                    &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/ods-organization-code&quot;,&#xD;&#xA;                    &quot;value&quot;: &quot;C81007&quot;&#xD;&#xA;                },&#xD;&#xA;                &quot;display&quot;: &quot;VERNON STREET MEDICAL CTR&quot;&#xD;&#xA;            },&#xD;&#xA;        }&#xD;&#xA;    ],&#xD;&#xA;```&#xD;&#xA;&#xD;&#xA;**e-RS**&#xD;&#xA;&#xD;&#xA;The contained PractitionerRole must contain&#xD;&#xA;&#xD;&#xA;- SDS User ID of the Referrer in `practitioner`&#xD;&#xA;- ODS Code of the Referring Organisation in `organization`" />
       <min value="1" />
       <type>
         <code value="Reference" />
@@ -185,7 +241,8 @@
     </element>
     <element id="ServiceRequest.performerType">
       <path value="ServiceRequest.performerType" />
-      <definition value="At present examples use eRS clinic type codes" />
+      <short value="Requested Specialty Name" />
+      <definition value="**ERS**&#xD;&#xA;&#xD;&#xA;Specialty used to search for the shortlisted service(s) (if one was used)" />
       <mustSupport value="true" />
     </element>
     <element id="ServiceRequest.performerType.coding">
@@ -225,13 +282,13 @@
     </element>
     <element id="ServiceRequest.supportingInfo">
       <path value="ServiceRequest.supportingInfo" />
-      <mustSupport value="true" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Resource" />
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-DocumentReference" />
         <aggregation value="referenced" />
       </type>
+      <mustSupport value="true" />
     </element>
   </differential>
 </StructureDefinition>
