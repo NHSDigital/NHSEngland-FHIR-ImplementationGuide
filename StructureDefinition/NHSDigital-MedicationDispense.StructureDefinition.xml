@@ -241,6 +241,7 @@
       <type>
         <code value="Reference" />
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationRequest-Minimal" />
+         <aggregation value="contained" />
       </type>
       <mustSupport value="true" />
     </element>
