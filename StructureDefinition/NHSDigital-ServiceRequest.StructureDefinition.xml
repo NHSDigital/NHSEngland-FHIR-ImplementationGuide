@@ -58,6 +58,7 @@
         <code value="Extension" />
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-Portal-Link" />
       </type>
+      <mustSupport value="true" />
     </element>
     <element id="ServiceRequest.extension:serviceRequestPriority">
       <path value="ServiceRequest.extension" />
@@ -68,6 +69,7 @@
         <code value="Extension" />
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-ServiceRequest-Priority" />
       </type>
+      <mustSupport value="true" />
     </element>
     <element id="ServiceRequest.identifier">
       <path value="ServiceRequest.identifier" />
