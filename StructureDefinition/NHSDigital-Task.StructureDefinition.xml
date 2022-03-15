@@ -191,6 +191,11 @@
       <path value="Task.reasonCode.coding.system" />
       <fixedUri value="http://snomed.info/sct" />
     </element>
+    <element id="Task.note">
+      <path value="Task.note" />
+      <definition value="**EPS Only**&#xD;&#xA;&#xD;&#xA;This may contain cancellation reason." />
+      <mustSupport value="true" />
+    </element>
     <element id="Task.input">
       <path value="Task.input" />
       <mustSupport value="true" />
