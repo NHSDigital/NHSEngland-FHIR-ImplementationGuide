@@ -645,15 +645,20 @@
       </slicing>
       <min value="0" />
     </element>
-    <element id="MedicationRequest.dispenseRequest.performer.extension:practitionerRole">
+    <element id="MedicationRequest.dispenseRequest.performer.extension:dispensingPractitioner">
       <path value="MedicationRequest.dispenseRequest.performer.extension" />
-      <sliceName value="practitionerRole" />
+      <sliceName value="dispensingPractitioner" />
+      <short value="practitioner who released(/downloaded) the prescription" />
+      <definition value="Details of the dispenser who is actioning the MedicationRequest&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;       &quot;dispenseRequest&quot;: { &#xD;&#xA;                    &quot;performer&quot;: {&#xD;&#xA;                        &quot;extension&quot;:  [&#xD;&#xA;                            {&#xD;&#xA;                                &quot;url&quot;: &quot;https://fhir.nhs.uk/StructureDefinition/Extension-DM-DispensingPerformer&quot;,&#xD;&#xA;                                &quot;valueReference&quot;: {&#xD;&#xA;                                    &quot;reference&quot;: &quot;urn:uuid:25f3dd9f-5838-44a7-930e-c78ae3ecadd6&quot;,&#xD;&#xA;                                    &quot;display&quot;: &quot;LOTTIE POTTS&quot;&#xD;&#xA;                                }&#xD;&#xA;                            }&#xD;&#xA;                        ],&#xD;&#xA;                        &quot;identifier&quot;: {&#xD;&#xA;                            &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/ods-organization-code&quot;,&#xD;&#xA;                            &quot;value&quot;: &quot;VNE51&quot;&#xD;&#xA;                        },&#xD;&#xA;                        &quot;display&quot;: &quot;The Simple Pharmacy&quot;&#xD;&#xA;                    }&#xD;&#xA;                },&#xD;&#xA;```" />
+      <comment value="" />
+      <requirements value="" />
       <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-DM-DispensingPerformer" />
       </type>
+      <mustSupport value="true" />
     </element>
     <element id="MedicationRequest.dispenseRequest.performer.identifier">
       <path value="MedicationRequest.dispenseRequest.performer.identifier" />
