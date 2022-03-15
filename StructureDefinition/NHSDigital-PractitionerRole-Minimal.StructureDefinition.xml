@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="51533f7f-1fa3-4866-a200-01618d377455" />
   <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole-Minimal" />
-  <name value="NHSDigitalPractitionerRoleMininal" />
+  <name value="NHSDigitalPractitionerRoleMinimal" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
   <kind value="resource" />
