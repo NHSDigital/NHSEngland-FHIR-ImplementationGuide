@@ -63,7 +63,7 @@
     </element>
     <element id="MedicationDispense.status">
       <path value="MedicationDispense.status" />
-      <definition value="The status of the individual medication item, this will normally indicate whether the medication has been picked up or not. &#xD;&#xA;&#xD;&#xA;| Code | Display | Definition |&#xD;&#xA;|--|--|--|&#xD;&#xA;| completed | Completed | The dispensed product has been picked up. |&#xD;&#xA;| in-progress | In Progress | The dispensed product is ready for pickup. |" />
+      <definition value="The status of the individual medication item, this will normally indicate whether the medication has been picked up or not. &#xD;&#xA;&#xD;&#xA;| Code | Display | Definition |&#xD;&#xA;|--|--|--|&#xD;&#xA;| completed | Completed | The dispensed product has been picked up. |&#xD;&#xA;| in-progress | In Progress | The dispensed product is ready for pickup. |&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&lt;img src=&quot;https://raw.githubusercontent.com/NHSDigital/NHSDigital-FHIR-Medicines-ImplementationGuide/master/Diagrams/medication-dispense-status-flow.png&quot; width=&quot;100%&quot; hieght=&quot;auto&quot;/&gt;" />
       <mustSupport value="true" />
     </element>
     <element id="MedicationDispense.statusReason[x]">
@@ -201,6 +201,7 @@
         <severity value="error" />
         <human value="An identifier reference or resource reference must be provided" />
         <expression value="(reference.exists() or identifier.exists())" />
+        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationDispense" />
       </constraint>
     </element>
     <element id="MedicationDispense.performer.actor.reference">
