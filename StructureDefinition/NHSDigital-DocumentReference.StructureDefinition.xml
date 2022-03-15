@@ -79,9 +79,9 @@
       <definition value="A resource reference to a contained [NHSDigital-PractitionerRole](https://simplifier.net/resolve?target=simplifier&amp;scope=uk.nhsdigital.r4&amp;canonical=https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole)&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA;    &quot;author&quot;: [&#xD;&#xA;        {&#xD;&#xA;          &quot;reference&quot; : &quot;#author&quot;,&#xD;&#xA;        }&#xD;&#xA;    ]&#xD;&#xA;```&#xD;&#xA;&#xD;&#xA;The contained resource: &#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;{&#xD;&#xA;  &quot;resourceType&quot;: &quot;DocumentReference&quot;,&#xD;&#xA;  &quot;id&quot;: &quot;a9b9f0f4-cc37-4ea3-bd4b-16d15ddbe63b&quot;,&#xD;&#xA;  &quot;contained&quot;: [&#xD;&#xA;    {&#xD;&#xA;      &quot;resourceType&quot;: &quot;PractitionerRole&quot;,&#xD;&#xA;      &quot;id&quot;: &quot;author&quot;,&#xD;&#xA;      &quot;practitioner&quot;: {&#xD;&#xA;        &quot;identifier&quot;: {&#xD;&#xA;          &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/sds-user-id&quot;,&#xD;&#xA;          &quot;value&quot;: &quot;0987654321&quot;&#xD;&#xA;        }&#xD;&#xA;      },&#xD;&#xA;      &quot;organization&quot;: {&#xD;&#xA;        &quot;identifier&quot;: {&#xD;&#xA;          &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/ods-organization-code&quot;,&#xD;&#xA;          &quot;value&quot;: &quot;RR8&quot;&#xD;&#xA;        },&#xD;&#xA;        &quot;display&quot;: &quot;LEEDS TEACHING HOSPITALS NHS TRUST&quot;&#xD;&#xA;      }&#xD;&#xA;    }&#xD;&#xA;  ],&#xD;&#xA;```" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Organization" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole" />
       </type>
