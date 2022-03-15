@@ -7,7 +7,7 @@
   <kind value="resource" />
   <abstract value="false" />
   <type value="Task" />
-  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Task" />
+  <baseDefinition value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Task" />
   <derivation value="constraint" />
   <differential>
     <element id="Task">
