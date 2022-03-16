@@ -194,7 +194,7 @@
     </element>
     <element id="Task.note">
       <path value="Task.note" />
-      <definition value="**EPS Only**&#xD;&#xA;&#xD;&#xA;This may contain cancellation reason." />
+      <definition value="**EPS Only**&#xD;&#xA;&#xD;&#xA;This may contain cancellation reason.&#xD;&#xA;&#xD;&#xA;**e-RS**&#xD;&#xA;&#xD;&#xA;Used to add notes to the worklist items&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;note&quot;: [&#xD;&#xA;    {&#xD;&#xA;      &quot;text&quot;: &quot;Optional comments&quot;&#xD;&#xA;    }&#xD;&#xA;  ]&#xD;&#xA;```" />
       <mustSupport value="true" />
     </element>
     <element id="Task.restriction">
