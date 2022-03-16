@@ -98,6 +98,10 @@
     <element id="Immunization.patient">
       <path value="Immunization.patient" />
       <definition value="A traced NHS Number **SHOULD** be provided and when applicable a resource reference to the Patient resource.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;patient&quot;: {&#xD;&#xA;                    &quot;reference&quot;: &quot;urn:uuid:edea022a-2d81-11eb-adc1-0242ac120002&quot;,&#xD;&#xA;                    &quot;type&quot;: &quot;Patient&quot;,&#xD;&#xA;                    &quot;identifier&quot;: {&#xD;&#xA;                        &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/nhs-number&quot;,&#xD;&#xA;                        &quot;value&quot;: &quot;9912003888&quot;&#xD;&#xA;                    }&#xD;&#xA;                },&#xD;&#xA;```" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient-Minimal" />
+      </type>
       <constraint>
         <key value="patient-reference" />
         <severity value="warning" />
@@ -113,6 +117,19 @@
         <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Immunization" />
       </constraint>
       <mustSupport value="true" />
+    </element>
+    <element id="Immunization.patient.identifier">
+      <path value="Immunization.patient.identifier" />
+      <min value="1" />
+    </element>
+    <element id="Immunization.patient.identifier.system">
+      <path value="Immunization.patient.identifier.system" />
+      <min value="1" />
+      <fixedUri value="https://fhir.nhs.uk/Id/nhs-number" />
+    </element>
+    <element id="Immunization.patient.identifier.value">
+      <path value="Immunization.patient.identifier.value" />
+      <min value="1" />
     </element>
     <element id="Immunization.occurrence[x]">
       <path value="Immunization.occurrence[x]" />
