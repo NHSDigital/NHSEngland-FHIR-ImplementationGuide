@@ -68,7 +68,7 @@
           },
           "for": {
             "identifier": {
-              "system": "http://fhir.nhs.uk/Id/nhs-number",
+              "system": "https://fhir.nhs.uk/Id/nhs-number",
               "value": "9912003888"
             }
           },
