@@ -172,7 +172,6 @@
     <element id="Appointment.participant">
       <path value="Appointment.participant" />
       <definition value="List of participants involved in the appointment.&#xD;&#xA;&#xD;&#xA;This should include a Patient and a HealthcareService" />
-      <min value="2" />
       <mustSupport value="true" />
     </element>
     <element id="Appointment.participant.actor">
@@ -183,6 +182,8 @@
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-HealthcareService" />
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole-Minimal" />
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Location" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Practitioner" />
         <aggregation value="contained" />
         <aggregation value="referenced" />
       </type>
