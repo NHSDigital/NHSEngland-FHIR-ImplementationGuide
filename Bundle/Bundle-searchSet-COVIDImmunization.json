@@ -5,10 +5,10 @@
     "total": 2,
     "link": [
         {
-          "relation": "self",
-          "url": "http://example.org/FHIR/R4/Immunization?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9000000009"
+            "relation": "self",
+            "url": "http://example.org/FHIR/R4/Immunization?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9000000009"
         }
-      ],
+    ],
     "entry": [
         {
             "fullUrl": "Immunization/d11c69d8-7a50-4a54-a848-7648121e995f",
@@ -27,6 +27,13 @@
                                 }
                             ]
                         }
+                    }
+                ],
+                "contained" : [
+                    {
+                        "resourceType": "Patient",
+                        "id":"patient",
+                        "birthDate": "1965-02-28"
                     }
                 ],
                 "identifier": [
@@ -48,6 +55,7 @@
                 },
                 "patient": {
                     "type": "Patient",
+                    "reference": "#patient",
                     "identifier": {
                         "system": "https://fhir.nhs.uk/Id/nhs-number",
                         "value": "9000000009"
@@ -138,6 +146,13 @@
                         }
                     }
                 ],
+                "contained" : [
+                    {
+                        "resourceType": "Patient",
+                        "id":"patient",
+                        "birthDate": "1965-02-28"
+                    }
+                ],
                 "identifier": [
                     {
                         "use": "secondary",
@@ -157,6 +172,7 @@
                 },
                 "patient": {
                     "type": "Patient",
+                    "reference": "#patient",
                     "identifier": {
                         "system": "https://fhir.nhs.uk/Id/nhs-number",
                         "value": "9000000009"

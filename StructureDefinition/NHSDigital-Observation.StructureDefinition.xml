@@ -85,6 +85,13 @@
       <path value="Observation.subject" />
       <definition value="The NHS Number will be an identifier reference which can be used with PDS FHIR API to return Patient demographics. If a local Patient is available, a reference to this will be present (e.g. &quot;Patient/123&quot;)&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA;    &quot;subject&quot;: {&#xD;&#xA;        &quot;reference&quot;: &quot;Patient/123&quot;,&#xD;&#xA;        &quot;identifier&quot;:  [&#xD;&#xA;            {&#xD;&#xA;                &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/nhs-number&quot;,&#xD;&#xA;                &quot;value&quot;: &quot;987123456&quot;&#xD;&#xA;            }&#xD;&#xA;        ]&#xD;&#xA;    },&#xD;&#xA;```" />
       <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device" />
+        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Location" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient-Minimal" />
+      </type>
       <constraint>
         <key value="patient-reference" />
         <severity value="warning" />
@@ -101,9 +108,14 @@
       </constraint>
       <mustSupport value="true" />
     </element>
+    <element id="Observation.subject.identifier">
+      <path value="Observation.subject.identifier" />
+      <min value="1" />
+    </element>
     <element id="Observation.subject.identifier.system">
       <path value="Observation.subject.identifier.system" />
       <min value="1" />
+      <fixedUri value="https://fhir.nhs.uk/Id/nhs-number" />
     </element>
     <element id="Observation.subject.identifier.value">
       <path value="Observation.subject.identifier.value" />
@@ -133,6 +145,7 @@
         <severity value="error" />
         <human value="An identifier reference or resource reference must be provided" />
         <expression value="(reference.exists() or identifier.exists())" />
+        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Observation" />
       </constraint>
       <mustSupport value="true" />
     </element>

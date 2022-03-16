@@ -110,6 +110,7 @@
     <element id="Task.for.identifier.system">
       <path value="Task.for.identifier.system" />
       <min value="1" />
+      <fixedUri value="https://fhir.nhs.uk/Id/nhs-number" />
     </element>
     <element id="Task.for.identifier.value">
       <path value="Task.for.identifier.value" />
@@ -140,7 +141,7 @@
     <element id="Task.owner">
       <path value="Task.owner" />
       <short value="Responsible organisation" />
-      <definition value="Who is responsible for actioning the request Task (e.g. for a prescription-order this will be the pharmacy). &#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;owner&quot;: {&#xD;&#xA;        &quot;identifier&quot;: {&#xD;&#xA;            &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/ods-organization-code&quot;,&#xD;&#xA;            &quot;value&quot;: &quot;FB444&quot;&#xD;&#xA;        },&#xD;&#xA;        &quot;display&quot;: &quot;Freds Pharmacy&quot;&#xD;&#xA;    },&#xD;&#xA;```" />
+      <definition value="**EPS**&#xD;&#xA;&#xD;&#xA;Who is responsible for actioning the request Task (e.g. for a prescription-order this will be the pharmacy). &#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;owner&quot;: {&#xD;&#xA;        &quot;identifier&quot;: {&#xD;&#xA;            &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/ods-organization-code&quot;,&#xD;&#xA;            &quot;value&quot;: &quot;FB444&quot;&#xD;&#xA;        },&#xD;&#xA;        &quot;display&quot;: &quot;Freds Pharmacy&quot;&#xD;&#xA;    },&#xD;&#xA;```&#xD;&#xA;&#xD;&#xA;**e-RS**&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;owner&quot;: {&#xD;&#xA;        &quot;identifier&quot;: {&#xD;&#xA;            &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/ers-service&quot;,&#xD;&#xA;            &quot;value&quot;: &quot;12444&quot;&#xD;&#xA;        }&#xD;&#xA;    },&#xD;&#xA;```" />
       <type>
         <code value="Reference" />
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole" />
@@ -193,7 +194,17 @@
     </element>
     <element id="Task.note">
       <path value="Task.note" />
-      <definition value="**EPS Only**&#xD;&#xA;&#xD;&#xA;This may contain cancellation reason." />
+      <definition value="**EPS Only**&#xD;&#xA;&#xD;&#xA;This may contain cancellation reason.&#xD;&#xA;&#xD;&#xA;**e-RS**&#xD;&#xA;&#xD;&#xA;Used to add notes to the worklist items&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;note&quot;: [&#xD;&#xA;    {&#xD;&#xA;      &quot;text&quot;: &quot;Optional comments&quot;&#xD;&#xA;    }&#xD;&#xA;  ]&#xD;&#xA;```" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Task.restriction">
+      <path value="Task.restriction" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Task.restriction.period.end">
+      <path value="Task.restriction.period.end" />
+      <definition value="In **e-RS** this is also known as the review date due." />
+      <comment value="**e-RS**&#xD;&#xA;&#xD;&#xA;- If deferred to provider (because there were no appointments available for a directly bookable service) then this is the date by which the provide should resolve the appointment slot issue; or&#xD;&#xA;- If the referral was sent to a triage service then this is the date by which the provider should have reviewed the referral" />
       <mustSupport value="true" />
     </element>
     <element id="Task.input">
