@@ -74,8 +74,8 @@
     "performerType": {
         "coding": [
             {
-                "system": "https://fhir.nhs.uk/CodeSystem/NHSDigital-ClinicType",
-                "code": "HEART_FAILURE"
+                "system": "https://fhir.nhs.uk/CodeSystem/NHSDigital-Specialty",
+                "code": "GENERAL_MEDICINE"
             }
         ],
         "text": "SHOULD BE SAYING ADVICE AND GUIDANCE HERE??"

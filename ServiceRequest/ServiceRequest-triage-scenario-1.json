@@ -70,8 +70,8 @@
     "performerType": {
         "coding": [
             {
-                "system": "https://fhir.nhs.uk/CodeSystem/NHSDigital-ClinicType",
-                "code": "GENERAL_MEDICINE_1"
+                "system": "https://fhir.nhs.uk/CodeSystem/NHSDigital-Specialty",
+                "code": "GENERAL_MEDICINE"
             }
         ]
     },

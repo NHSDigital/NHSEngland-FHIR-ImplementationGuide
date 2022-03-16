@@ -13,6 +13,10 @@
                     "valueCode": "unbooked"
                 }
             ]
+        },
+        {
+            "url": "https://fhir.nhs.uk/StructureDefinition/Extension-Portal-Link",
+            "valueUrl": "https://virtual.nhs.uk/MyPatientRecords"
         }
     ],
     "contained": [
@@ -68,8 +72,8 @@
     "performerType": {
         "coding": [
             {
-                "system": "https://fhir.nhs.uk/CodeSystem/NHSDigital-ClinicType",
-                "code": "GENERAL_MEDICINE_1"
+                "system": "https://fhir.nhs.uk/CodeSystem/NHSDigital-Specialty",
+                "code": "SURGERY_CARDIAC"
             }
         ]
     },
