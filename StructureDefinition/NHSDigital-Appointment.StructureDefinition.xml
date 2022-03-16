@@ -33,6 +33,13 @@
     </element>
     <element id="Appointment.identifier">
       <path value="Appointment.identifier" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
       <mustSupport value="true" />
     </element>
     <element id="Appointment.identifier.system">
@@ -42,6 +49,23 @@
     <element id="Appointment.identifier.value">
       <path value="Appointment.identifier.value" />
       <min value="1" />
+    </element>
+    <element id="Appointment.identifier:providerSlotUSRN">
+      <path value="Appointment.identifier" />
+      <sliceName value="providerSlotUSRN" />
+      <short value="Provider Slot USRN" />
+      <definition value="PAS systems unique reference for the slot provided by the provider (only present when there is a current appointment booking to a Directly Bookable Service)" />
+      <comment value="0...1 (in context of IBS and DBS)&#xD;&#xA;&#xD;&#xA;1...1 (in context of DBS)" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Appointment.identifier:providerSlotUSRN.system">
+      <path value="Appointment.identifier.system" />
+      <fixedUri value="https://fhir.nhs.uk/Id/alternative-slot" />
+    </element>
+    <element id="Appointment.status">
+      <path value="Appointment.status" />
+      <definition value="The overall status of the Appointment. Each of the participants has their own participation status which indicates their involvement in the process, however this status indicates the shared status.&#xD;&#xA;&#xD;&#xA;**e-RS**&#xD;&#xA;&#xD;&#xA;Will default to `booked`" />
+      <mustSupport value="true" />
     </element>
     <element id="Appointment.serviceCategory">
       <path value="Appointment.serviceCategory" />
@@ -112,6 +136,19 @@
       <path value="Appointment.reasonCode" />
       <mustSupport value="true" />
     </element>
+    <element id="Appointment.start">
+      <path value="Appointment.start" />
+      <short value="Appointment Start Date Time" />
+      <definition value="Date time of the current appointment booking (if there is a current appointment booking to a Directly Bookable Service)" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Appointment.end">
+      <path value="Appointment.end" />
+      <short value="Appointment End Date Time" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
     <element id="Appointment.basedOn">
       <path value="Appointment.basedOn" />
       <type>
@@ -134,6 +171,27 @@
     </element>
     <element id="Appointment.participant">
       <path value="Appointment.participant" />
+      <definition value="List of participants involved in the appointment.&#xD;&#xA;&#xD;&#xA;This should include a Patient and a HealthcareService" />
+      <min value="2" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Appointment.participant.actor">
+      <path value="Appointment.participant.actor" />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-HealthcareService" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole-Minimal" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient" />
+        <aggregation value="contained" />
+        <aggregation value="referenced" />
+      </type>
+      <constraint>
+        <key value="participant" />
+        <severity value="error" />
+        <human value="An identifier reference or resource reference must be provided" />
+        <expression value="(reference.exists() or identifier.exists())" />
+      </constraint>
       <mustSupport value="true" />
     </element>
     <element id="Appointment.participant.actor.identifier.system">
