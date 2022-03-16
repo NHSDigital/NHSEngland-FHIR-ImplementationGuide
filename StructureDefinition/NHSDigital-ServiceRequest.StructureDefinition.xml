@@ -147,6 +147,7 @@
     <element id="ServiceRequest.category.coding.system">
       <path value="ServiceRequest.category.coding.system" />
       <min value="1" />
+      <fixedUri value="http://snomed.info/sct" />
     </element>
     <element id="ServiceRequest.category.coding.code">
       <path value="ServiceRequest.category.coding.code" />
@@ -184,6 +185,7 @@
     <element id="ServiceRequest.code.coding:SNOMEDProcedureCode.system">
       <path value="ServiceRequest.code.coding.system" />
       <min value="1" />
+      <fixedUri value="http://snomed.info/sct" />
     </element>
     <element id="ServiceRequest.code.coding:SNOMEDProcedureCode.code">
       <path value="ServiceRequest.code.coding.code" />
@@ -214,6 +216,7 @@
     <element id="ServiceRequest.subject.identifier.system">
       <path value="ServiceRequest.subject.identifier.system" />
       <min value="1" />
+      <fixedUri value="https://fhir.nhs.uk/Id/nhs-number" />
     </element>
     <element id="ServiceRequest.subject.identifier.value">
       <path value="ServiceRequest.subject.identifier.value" />
