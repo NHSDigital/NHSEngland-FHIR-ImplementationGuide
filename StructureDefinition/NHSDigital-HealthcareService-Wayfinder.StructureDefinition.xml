@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-HealthcareService-Wayfinder" />
+  <name value="NHSDigitalHealthcareServiceWayfinder" />
+  <status value="draft" />
+  <purpose value="Profile on NHSDigital-HealthcareService for NHS App/e-RS Wayfinder" />
+  <fhirVersion value="4.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="HealthcareService" />
+  <baseDefinition value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-HealthcareService" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="HealthcareService.identifier:ersServiceId">
+      <path value="HealthcareService.identifier" />
+      <sliceName value="ersServiceId" />
+      <min value="1" />
+    </element>
+    <element id="HealthcareService.specialty.coding:eRSSpecialty">
+      <path value="HealthcareService.specialty.coding" />
+      <sliceName value="eRSSpecialty" />
+      <min value="1" />
+    </element>
+    <element id="HealthcareService.specialty.coding:eRSSpecialty.display">
+      <path value="HealthcareService.specialty.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="HealthcareService.location">
+      <path value="HealthcareService.location" />
+      <min value="1" />
+    </element>
+    <element id="HealthcareService.location.identifier">
+      <path value="HealthcareService.location.identifier" />
+      <min value="1" />
+    </element>
+  </differential>
+</StructureDefinition>
