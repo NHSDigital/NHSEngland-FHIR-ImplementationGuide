@@ -1,0 +1,68 @@
+{
+    "resourceType": "ConceptMap",
+    "id": "3bbae32e-b0d2-4ec5-82e6-66d8207f7d78",
+    "url": "https://fhir.nhs.uk/ConceptMap/MedicationRequest-StatusToTaskStatus",
+    "version": "4.0.1",
+    "name": "medicationRequestStatusToTaskStatus",
+    "title": "MedicationRequest status to Task status Map",
+    "status": "draft",
+    "date": "2021-09-11",
+    "publisher": "NHS Digital",
+    "contact":  [
+        {
+            "name": "Interoperability Team",
+            "telecom":  [
+                {
+                    "system": "email",
+                    "value": "interoperabilityteam@nhs.net",
+                    "use": "work"
+                }
+            ]
+        }
+    ],
+    "description": "MedicationRequest status to Task status Map",
+    "purpose": "Medicine Management",
+    "sourceUri": "http://hl7.org/fhir/ValueSet/medicationrequest-status",
+    "targetUri": "http://hl7.org/fhir/ValueSet/task-status",
+    "group":  [
+        {
+            "source": "http://hl7.org/fhir/CodeSystem/medicationrequest-status",
+            "target": "http://hl7.org/fhir/task-status",
+            "element":  [
+                {
+                    "code": "active",
+                    "display": "Active",
+                    "target":  [
+                        {
+                            "code": "ready",
+                            "display": "Ready",
+                            "equivalence": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "cancelled",
+                    "display": "Cancelled",
+                    "target":  [
+                        {
+                            "code": "cancelled",
+                            "display": "Cancelled",
+                            "equivalence": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "completed",
+                    "display": "Completed",
+                    "target":  [
+                        {
+                            "code": "completed",
+                            "display": "Completed",
+                            "equivalence": "equivalent"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
