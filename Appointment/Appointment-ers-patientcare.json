@@ -1,0 +1,44 @@
+{
+    "resourceType": "Appointment",
+    "id": "2c539951-0819-4ffb-ab77-b7cbdc5d9c9a",
+    "meta": {
+        "versionId": "be8e73fc-6536-455e-bc7a-44517b3252eb",
+        "lastUpdated": "2022-03-15T09:20:33.000+00:00"
+    },
+    "status": "booked",
+    "basedOn": [
+        {
+            "reference": "https://server.fire.ly/ServiceRequest/6c2a1f9b-2517-419d-9099-591ba63f176c"
+        }
+    ],
+    "start": "2021-06-13T12:30:00+00:00",
+    "end": "2021-06-13T12:45:00+00:00",
+    "slot": [
+        {
+            "identifier": {
+                "system": "https://fhir.nhs.uk/Id/alternative-slot",
+                "value": "USRN-12000001"
+            }
+        }
+    ],
+    "participant": [
+        {
+            "actor": {
+                "identifier": {
+                    "system": "https://fhir.nhs.uk/Id/ers-service",
+                    "value": "11002"
+                }
+            },
+            "status": "accepted"
+        },
+        {
+            "actor": {
+                "identifier": {
+                    "system": "https://fhir.nhs.uk/Id/nhs-number",
+                    "value": "9912003888"
+                }
+            },
+            "status": "accepted"
+        }
+    ]
+}

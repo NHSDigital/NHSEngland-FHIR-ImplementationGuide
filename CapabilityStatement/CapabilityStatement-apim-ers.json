@@ -108,7 +108,7 @@
                         },
                         {
                             "code": "search-type",
-                            "documentation": "Mock for NHS App Wayfinder project",
+                            "documentation": "Mock for NHS App PatientCare project",
                             "extension": [
                                 {
                                     "url": "https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-CapabilityStatement-Examples",

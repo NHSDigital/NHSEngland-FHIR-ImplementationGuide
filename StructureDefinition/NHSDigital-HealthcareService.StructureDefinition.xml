@@ -20,7 +20,7 @@
         </discriminator>
         <rules value="open" />
       </slicing>
-      <definition value="**SHOULD** contain the service identifier e.g. the serviceId from &lt;a href=&quot;https://www.directoryofservices.nhs.uk/&quot;&gt;Directory of Service&lt;/a&gt; or &lt;a href=&quot;https://digital.nhs.uk/developer/api-catalogue/e-referral-service-fhir&quot;&gt;e-RS Directory Services&lt;/a&gt;&#xD;&#xA;&#xD;&#xA;**MAY** contain an ANANA/ODS code. &#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;identifier&quot;: [&#xD;&#xA;          {&#xD;&#xA;            &quot;use&quot;: &quot;official&quot;,&#xD;&#xA;            &quot;system&quot;: &quot;http://fhir.nhs.uk/Id/ers-service&quot;,&#xD;&#xA;            &quot;value&quot;: &quot;11021&quot;&#xD;&#xA;          }&#xD;&#xA;        ]&#xD;&#xA;```" />
+      <definition value="**SHOULD** contain the service identifier e.g. the serviceId from &lt;a href=&quot;https://www.directoryofservices.nhs.uk/&quot;&gt;Directory of Service&lt;/a&gt; or &lt;a href=&quot;https://digital.nhs.uk/developer/api-catalogue/e-referral-service-fhir&quot;&gt;e-RS Directory Services&lt;/a&gt;&#xD;&#xA;&#xD;&#xA;**MAY** contain an ANANA/ODS code. &#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;identifier&quot;: [&#xD;&#xA;          {&#xD;&#xA;            &quot;use&quot;: &quot;official&quot;,&#xD;&#xA;            &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/ers-service&quot;,&#xD;&#xA;            &quot;value&quot;: &quot;11021&quot;&#xD;&#xA;          }&#xD;&#xA;        ]&#xD;&#xA;```" />
       <comment value="MUST contain an ANANA/ODS code." />
       <min value="1" />
       <mustSupport value="true" />
@@ -34,7 +34,7 @@
     <element id="HealthcareService.identifier:ersServiceId.system">
       <path value="HealthcareService.identifier.system" />
       <min value="1" />
-      <fixedUri value="http://fhir.nhs.uk/Id/ers-service" />
+      <fixedUri value="https://fhir.nhs.uk/Id/ers-service" />
     </element>
     <element id="HealthcareService.identifier:ersServiceId.value">
       <path value="HealthcareService.identifier.value" />

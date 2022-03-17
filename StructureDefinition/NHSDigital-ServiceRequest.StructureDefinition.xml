@@ -270,14 +270,6 @@
         <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDataModelAndDictionary-treatment-function" />
       </binding>
     </element>
-    <element id="ServiceRequest.performerType.coding.system">
-      <path value="ServiceRequest.performerType.coding.system" />
-      <min value="1" />
-    </element>
-    <element id="ServiceRequest.performerType.coding.code">
-      <path value="ServiceRequest.performerType.coding.code" />
-      <min value="1" />
-    </element>
     <element id="ServiceRequest.performerType.coding:treatmentFunctionCodes">
       <path value="ServiceRequest.performerType.coding" />
       <sliceName value="treatmentFunctionCodes" />
@@ -305,7 +297,6 @@
     </element>
     <element id="ServiceRequest.performer">
       <path value="ServiceRequest.performer" />
-      <definition value="The desired performer for doing the requested service.  For example, the surgeon, dermatopathologist, endoscopist, etc." />
       <mustSupport value="true" />
     </element>
     <element id="ServiceRequest.performer.identifier">
