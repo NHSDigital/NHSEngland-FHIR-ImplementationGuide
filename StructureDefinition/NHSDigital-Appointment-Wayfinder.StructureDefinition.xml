@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Appointment-Wayfinder" />
+  <name value="NHSDigitalAppointmentWayfinder" />
+  <status value="draft" />
+  <fhirVersion value="4.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Appointment" />
+  <baseDefinition value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Appointment" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Appointment.basedOn">
+      <path value="Appointment.basedOn" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Appointment.participant">
+      <path value="Appointment.participant" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="actor.identifier.system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Appointment.participant:service">
+      <path value="Appointment.participant" />
+      <sliceName value="service" />
+      <short value="HealthcareService" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Appointment.participant:service.actor">
+      <path value="Appointment.participant.actor" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-HealthcareService" />
+      </type>
+    </element>
+    <element id="Appointment.participant:service.actor.identifier">
+      <path value="Appointment.participant.actor.identifier" />
+      <min value="1" />
+    </element>
+    <element id="Appointment.participant:service.actor.identifier.system">
+      <path value="Appointment.participant.actor.identifier.system" />
+      <fixedUri value="http://fhir.nhs.uk/Id/ers-service" />
+    </element>
+    <element id="Appointment.participant:patient">
+      <path value="Appointment.participant" />
+      <sliceName value="patient" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Appointment.participant:patient.actor">
+      <path value="Appointment.participant.actor" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient" />
+      </type>
+    </element>
+    <element id="Appointment.participant:patient.actor.identifier">
+      <path value="Appointment.participant.actor.identifier" />
+      <min value="1" />
+    </element>
+    <element id="Appointment.participant:patient.actor.identifier.system">
+      <path value="Appointment.participant.actor.identifier.system" />
+      <fixedUri value="https://fhir.nhs.uk/Id/nhs-number" />
+    </element>
+  </differential>
+</StructureDefinition>

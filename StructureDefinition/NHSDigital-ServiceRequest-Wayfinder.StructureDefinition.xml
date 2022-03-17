@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-ServiceRequest-Wayfinder" />
+  <name value="NHSDigitalServiceRequestWayfinder" />
+  <status value="draft" />
+  <fhirVersion value="4.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="ServiceRequest" />
+  <baseDefinition value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-ServiceRequest" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="ServiceRequest.extension">
+      <path value="ServiceRequest.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="ServiceRequest.extension:ERSServiceRequestState">
+      <path value="ServiceRequest.extension" />
+      <sliceName value="ERSServiceRequestState" />
+      <min value="0" />
+    </element>
+    <element id="ServiceRequest.extension:ERSServiceRequestState.extension">
+      <path value="ServiceRequest.extension.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="ServiceRequest.extension:ERSServiceRequestState.extension:state">
+      <path value="ServiceRequest.extension.extension" />
+      <sliceName value="state" />
+      <min value="1" />
+    </element>
+    <element id="ServiceRequest.extension:portalLink">
+      <path value="ServiceRequest.extension" />
+      <sliceName value="portalLink" />
+      <min value="0" />
+    </element>
+    <element id="ServiceRequest.extension:serviceRequestPriority">
+      <path value="ServiceRequest.extension" />
+      <sliceName value="serviceRequestPriority" />
+      <min value="0" />
+    </element>
+    <element id="ServiceRequest.identifier:UBRN">
+      <path value="ServiceRequest.identifier" />
+      <sliceName value="UBRN" />
+      <min value="1" />
+    </element>
+    <element id="ServiceRequest.priority">
+      <path value="ServiceRequest.priority" />
+      <min value="1" />
+    </element>
+    <element id="ServiceRequest.authoredOn">
+      <path value="ServiceRequest.authoredOn" />
+      <min value="1" />
+    </element>
+  </differential>
+</StructureDefinition>
