@@ -1,0 +1,55 @@
+<OperationDefinition xmlns="http://hl7.org/fhir">
+    <id value="MessageHeader-prepare-message" />
+    <url value="https://fhir.nhs.uk/OperationDefinition/MessageHeader-prepare-message" />
+    <version value="4.0.1" />
+    <name value="messageheaderpreparemessage" />
+    <status value="draft" />
+    <kind value="operation" />
+    <date value="2020-08-03T00:00:00+00:00" />
+    <publisher value="NHS Digital" />
+    <contact>
+        <telecom>
+            <system value="email" />
+            <value value="interoperabilityteam@nhs.net" />
+        </telecom>
+    </contact>
+    <description value="Convert a prescription in FHIR format into the canonicalised HL7 V3 signature fragments which should be signed by the prescriber." />
+    <code value="prepare" />
+    <comment value="This operation does not use the parameters resource for input parameters, it does for the response.  \n\n A server may return one of several status codes: \n\n * **200 OK**: Indicates that the message has been fully processed." />
+    <system value="true" />
+    <type value="false" />
+    <affectsState value="true" />
+    <instance value="false" />
+    <parameter>
+        <name value="content" />
+        <use value="in" />
+        <min value="1" />
+        <max value="1" />
+        <documentation value="The prescription order message to process (without Provence resource)" />
+        <type value="Bundle" />
+    </parameter>
+    <parameter>
+        <name value="digest" />
+        <use value="out" />
+        <min value="1" />
+        <max value="1" />
+        <documentation value="Message Digest response containing the signed signature in XML format" />
+        <type value="string" />
+    </parameter>
+    <parameter>
+        <name value="algorithm" />
+        <use value="out" />
+        <min value="1" />
+        <max value="1" />
+        <documentation value="Algorithm used" />
+        <type value="string" />
+    </parameter>
+     <parameter>
+        <name value="timestamp" />
+        <use value="out" />
+        <min value="1" />
+        <max value="1" />
+        <documentation value="dateTime when the digest was created" />
+        <type value="string" />
+    </parameter>
+</OperationDefinition>

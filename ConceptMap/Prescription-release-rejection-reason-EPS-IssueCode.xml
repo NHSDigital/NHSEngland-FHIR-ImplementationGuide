@@ -1,0 +1,129 @@
+<ConceptMap xmlns="http://hl7.org/fhir">
+    <id value="Prescription-release-rejection-reason-EPS-IssueCode" />
+    <url value="https://fhir.nhs.uk/ConceptMap/Prescription-release-rejection-reason-EPS-IssueCode" />
+    <version value="1.0.1" />
+    <name value="PrescriptionReleaseRejectionReasonEPSIssueCode" />
+    <title value="Prescription-release-rejection-reason to EPS-IssueCode Map" />
+    <status value="draft" />
+    <experimental value="true" />
+    <date value="2021-06-03" />
+    <publisher value="NHS Digital" />
+    <contact>
+        <name value="Interoperability Team" />
+        <telecom>
+            <system value="email" />
+            <value value="interoperabilityteam@nhs.net" />
+            <use value="work" />
+        </telecom>
+    </contact>
+    <description value="Prescription-release-rejection-reason to EPS-IssueCode Map" />
+    <purpose value="Medicine Management" />
+    <sourceUri value="https://fhir.nhs.uk/ValueSet/DM-prescription-release-rejection-reason" />
+    <group>
+        <source value="https://fhir.nhs.uk/CodeSystem/EPS-task-prescription-release-rejection-reason" />
+        <target value="https://fhir.nhs.uk/CodeSystem/EPS-IssueCode" />
+        <element>
+            <code value="0001"></code>
+            <display value="Prescription has been cancelled" />
+            <target>
+                <code value="PRESCRIPTION_CANCELLED" />
+                <display value="Prescription has been cancelled" />
+                <equivalence value="equivalent" />
+            </target>
+        </element>
+        <element>
+            <code value="0002"></code>
+            <display value="Prescription has expired" />
+            <target>
+                <code value="PRESCRIPTION_EXPIRED" />
+                <display value="Prescription has expired" />
+                <equivalence value="equivalent" />
+            </target>
+        </element>
+        <element>
+            <code value="0004"></code>
+            <display value="Prescription is with another dispenser" />
+            <target>
+                <code value="PRESCRIPTION_WITH_ANOTHER_DISPENSER" />
+                <display value="Prescription is with another dispenser" />
+                <equivalence value="equivalent" />
+            </target>
+        </element>
+        <element>
+            <code value="0005"></code>
+            <display value="Prescription has been dispensed" />
+            <target>
+                <code value="PRESCRIPTION_DISPENSED" />
+                <display value="Prescription has been dispensed" />
+                <equivalence value="equivalent" />
+            </target>
+        </element>
+        <element>
+            <code value="0006"></code>
+            <display value="No more nominated prescriptions available" />
+            <target>
+                <code value="NO_MORE_PRESCRIPTIONS" />
+                <display value="No more prescriptions available" />
+                <equivalence value="equivalent" />
+            </target>
+        </element>
+        <element>
+            <code value="0007"></code>
+            <display value="Nominated download functionality disabled in spine" />
+            <target>
+                <code value="SERVICE_DISABLED" />
+                <display value="functionality disabled in spine" />
+                <equivalence value="equivalent" />
+            </target>
+        </element>
+    <!-- AEA-1376   <element>
+            <code value="5888"></code>
+            <display value="Invalid message" />
+            <target>
+                <code value="INVALID_MESSAGE" />
+                <display value="Invalid message" />
+                <equivalence value="equivalent" />
+            </target>
+        </element> -->
+      <!-- AEA-1376    <element>
+            <code value="9006"></code>
+            <display value="Format of date passed is invalid" />
+            <target>
+                <code value="INVALID_DATE_FORMAT" />
+                <display value="Format of date passed is invalid" />
+                <equivalence value="equivalent" />
+            </target>
+        </element> -->
+    </group>
+    <group>
+        <source value="https://fhir.nhs.uk/CodeSystem/EPS-task-prescription-release-rejection-reason" />
+        <target value="https://fhir.nhs.uk/CodeSystem/Spine-ErrorOrWarningCode" />
+        <element>
+            <code value="0003"></code>
+            <display value="Prescription cannot be found – contact your GP/prescriber" />
+            <target>
+                <code value="RESOURCE_NOT_FOUND" />
+                <display value="Resource not found" />
+                <equivalence value="equivalent" />
+            </target>
+        </element>
+        <element>
+            <code value="5000"></code>
+            <display value="Unable to process message. [Additional Information (if any)]" />
+            <target>
+                <code value="FAILURE_TO_PROCESS_MESSAGE" />
+                <display value="Failure to process message" />
+                <equivalence value="equivalent" />
+            </target>
+        </element>
+    <!-- AEA-1376      <element>
+            <code value="0099"></code>
+            <display value="Incompatible version of Request. [Additional Information (if any)]" />
+            <target>
+                <code value="RESOURCE_VERSION_MISMATCH" />
+                <display value="Resource version mismatch" />
+                <equivalence value="equivalent" />
+            </target>
+        </element> -->
+    </group>
+</ConceptMap>

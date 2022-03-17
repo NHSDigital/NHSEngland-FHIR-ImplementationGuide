@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationRequest-Contained" />
+  <name value="NHSDigitalMedicationRequestContained" />
+  <status value="draft" />
+  <fhirVersion value="4.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="MedicationRequest" />
+  <baseDefinition value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationRequest" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="MedicationRequest.subject">
+      <path value="MedicationRequest.subject" />
+      <type>
+        <code value="Reference" />
+        <aggregation value="contained" />
+      </type>
+    </element>
+    <element id="MedicationRequest.requester">
+      <path value="MedicationRequest.requester" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole-EPSLegal" />
+        <aggregation value="contained" />
+      </type>
+    </element>
+    <element id="MedicationRequest.eventHistory">
+      <path value="MedicationRequest.eventHistory" />
+      <type>
+        <code value="Reference" />
+        <aggregation value="contained" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

@@ -1,0 +1,113 @@
+{
+    "resourceType": "ConceptMap",
+    "id": "f12ce712-3059-411b-85f2-1d4dc4eab2f2",
+    "url": "https://fhir.nhs.uk/ConceptMap/MedicationDispense-BusinessStatusToTaskStatus",
+    "version": "4.0.1",
+    "name": "medicationDispenseBusinessStatusToTaskStatus",
+    "title": "MedicationDispense business status to Task status Map",
+    "status": "draft",
+    "date": "2021-09-11",
+    "publisher": "NHS Digital",
+    "contact":  [
+        {
+            "name": "Interoperability Team",
+            "telecom":  [
+                {
+                    "system": "email",
+                    "value": "interoperabilityteam@nhs.net",
+                    "use": "work"
+                }
+            ]
+        }
+    ],
+    "description": "MedicationDispense business status to Task status Map",
+    "purpose": "Medicine Management",
+    "sourceUri": "https://fhir.nhs.uk/ValueSet/DM-task-business-status",
+    "targetUri": "http://hl7.org/fhir/ValueSet/task-status",
+    "group":  [
+        {
+            "source": "https://fhir.nhs.uk/CodeSystem/EPS-task-business-status",
+            "target": "http://hl7.org/fhir/task-status",
+            "element":  [
+                {
+                    "code": "0001",
+                    "display": "To be Dispensed",
+                    "target":  [
+                        {
+                            "code": "received",
+                            "display": "Received",
+                            "equivalence": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "0002",
+                    "display": "With Dispenser",
+                    "target":  [
+                        {
+                            "code": "accepted",
+                            "display": "Accepted",
+                            "equivalence": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "0003",
+                    "display": "With Dispenser - Active",
+                    "target":  [
+                        {
+                            "code": "in-progress",
+                            "display": "In Progress",
+                            "equivalence": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "0004",
+                    "display": "Expired",
+                    "target":  [
+                        {
+                            "code": "cancelled",
+                            "display": "Cancelled",
+                            "equivalence": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "0005",
+                    "display": "Cancelled",
+                    "target":  [
+                        {
+                            "code": "cancelled",
+                            "display": "Cancelled",
+                            "equivalence": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "0006",
+                    "display": "Dispensed",
+                    "target":  [
+                        {
+                            "code": "completed",
+                            "display": "Completed",
+                            "equivalence": "equivalent"
+                        }
+                    ]
+                },
+                {
+                    "code": "0007",
+                    "display": "Not Dispensed",
+                    "target":  [
+                        {
+                            "code": "ready",
+                            "display": "Ready",
+                            "equivalence": "equivalent"
+                        }
+                    ]
+                }
+
+            ]
+        }
+    ]
+}

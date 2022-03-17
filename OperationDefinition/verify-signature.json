@@ -1,0 +1,66 @@
+{
+    "resourceType": "OperationDefinition",
+    "id": "ee360b98-f807-4c5b-a16f-d72933aff9d1",
+    "url": "https://fhir.nhs.uk/OperationDefinition/verify-signature",
+    "version": "4.0.1",
+    "name": "VerifySignature",
+    "status": "draft",
+    "kind": "operation",
+    "date": "2022-02-17T09:29:23+11:00",
+    "publisher": "NHS Digital",
+    "contact": [
+        {
+            "telecom": [
+                {
+                    "system": "email",
+                    "value": "interoperabilityteam@nhs.net"
+                }
+            ]
+        }
+    ],
+    "description": "Use this endpoint to verify a prescription's signature to ensure that the signature is valid, and that it matches the prescription it is attached to. This endpoint is expected to be used immediately after downloading prescriptions. Send the response message from the release endpoint to this endpoint. The signatures on these prescriptions will be verified. \n The endpoint will return a set of (up to 25) verify responses associated with the bundle of prescriptions sent to the endpoint for verification.",
+    "code": "verify-signature",
+    "resource": [
+        "Task"
+    ],
+    "affectsState": true,
+    "system": true,
+    "type": false,
+    "instance": false,
+    "parameter": [
+        {
+            "name": "content",
+            "use": "in",
+            "min": 1,
+            "max": "1",
+            "documentation": "The search Bundle retrieved from the $release operation",
+            "type": "Bundle"
+        },
+        {
+            "name": "entryNumber",
+            "use": "out",
+            "min": 1,
+            "max": "1",
+            "documentation": "Index to the Bundle.entry in the supplied FHIR Bundle",
+            "type": "integer",
+            "part": [
+                {
+                    "name": "messageIdentifier",
+                    "use": "out",
+                    "min": 1,
+                    "max": "1",
+                    "documentation": "A reference to the Bundled prescription-order FHIR Bundle",
+                    "type": "Reference"
+                },
+                {
+                    "name": "result",
+                    "use": "out",
+                    "min": 1,
+                    "max": "1",
+                    "documentation": "The result of the individual prescription-order signature verification",
+                    "type": "OperationOutcome"
+                }
+            ]
+        }
+    ]
+}
