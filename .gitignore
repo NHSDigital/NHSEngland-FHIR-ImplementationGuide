@@ -6,3 +6,4 @@ StructureDefinition/UKCore*.json
 validation
 IOPS-validation
 validation-service-fhir-r4
+.idea/workspace.xml

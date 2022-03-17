@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="790504c4-6314-4c50-a3e8-909ee027e020" />
-  <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-DM-Task" />
-  <name value="NHSDigitalDMTask" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Task-EPS" />
+  <name value="NHSDigitalTaskEPS" />
   <status value="draft" />
   <purpose value="Constraint profile for Electronic Prescription System" />
   <fhirVersion value="4.0.1" />
@@ -42,6 +42,10 @@
         <code value="Extension" />
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-EPS-Prescription" />
       </type>
+    </element>
+    <element id="Task.identifier">
+      <path value="Task.identifier" />
+      <min value="1" />
     </element>
     <element id="Task.identifier.system">
       <path value="Task.identifier.system" />

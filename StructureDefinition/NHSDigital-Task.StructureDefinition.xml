@@ -40,7 +40,6 @@
     </element>
     <element id="Task.identifier">
       <path value="Task.identifier" />
-      <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Task.groupIdentifier">
