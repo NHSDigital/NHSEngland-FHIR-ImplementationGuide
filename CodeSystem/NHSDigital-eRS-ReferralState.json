@@ -8,5 +8,56 @@
     "publisher": "e-Referral Service",
     "description": "e-RS Referral State",
     "copyright": "Copyright © 2022 NHS Digital",
-    "content": "not-present"
+    "content": "fragment",
+    "concept": [
+        {
+            "code": "BOOKED",
+            "display": "booked"
+        },
+        {
+            "code": "NOT_BOOKED"
+        },
+        {
+            "code": "APPOINTMENT_CANCELLED_BY_PATIENT"
+        },
+        {
+            "code": "APPOINTMENT_CANCELLED_BY_PROVIDER"
+        },
+        {
+            "code": "CARL",
+            "display": "appointment cancelled by provider with intention to rebook the appointment booking"
+        },
+        {
+            "code": "REJECTED"
+        },
+        {
+            "code": "TRIAGE_RESPONSE"
+        },
+        {
+            "code": "AWAITING_TRIAGE"
+        },
+        {
+            "code": "DEFER_TO_PROVIDER"
+        },
+        {
+            "code": "ARBL",
+            "display":"triaged - provider to action"
+        },
+        {
+            "code": "CARBL_OR_ARL",
+            "display":"triaged - provider to action"
+        },
+        {
+            "code": "DID_NOT_ATTEND"
+        },
+        {
+            "code": "ASSESSMENT_RESULT"
+        },
+        {
+            "code": "CANCELLED_REFERRAL"
+        },
+        {
+            "code": "INCOMPLETE "
+        }
+    ]
 }

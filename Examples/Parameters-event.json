@@ -80,7 +80,7 @@
                             {
                                 "type": "HealthcareService",
                                 "identifier": {
-                                    "system": "http://fhir.nhs.uk/Id/ers-service",
+                                    "system": "https://fhir.nhs.uk/Id/ers-service",
                                     "value": "11021"
                                 }
                             }

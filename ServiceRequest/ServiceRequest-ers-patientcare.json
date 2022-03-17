@@ -1,0 +1,89 @@
+{
+    "resourceType": "ServiceRequest",
+    "id": "6c2a1f9b-2517-419d-9099-591ba63f176c",
+    "meta": {
+        "versionId": "62cc56f4-f787-45ab-8b02-95591e7f8cf5",
+        "lastUpdated": "2022-03-10T13:22:38.556+00:00"
+    },
+    "extension": [
+        {
+            "url": "https://fhir.nhs.uk/StructureDefinition/Extension-Portal-Link",
+            "valueUrl": "https:/examples.nhs.uk/nhslogin?ubrn=111111111111"
+        },
+        {
+            "url": "https://fhir.nhs.uk/StructureDefinition/Extension-eRS-ServiceRequest-State",
+            "extension": [
+                {
+                    "url": "state",
+                    "valueCoding": {
+                        "system": "https://fhir.nhs.uk/CodeSystem/eRS-ReferralState",
+                        "code": "BOOKED"
+                    }
+                }
+            ]
+        },
+        {
+            "url": "https://fhir.nhs.uk/StructureDefinition/Extension-ServiceRequest-Priority",
+            "valueCoding": {
+                "system": "https://fhir.nhs.uk/CodeSystem/eRS-Priority",
+                "code": "TWO_WEEK_WAIT",
+                "display": "2 Week Wait"
+            }
+        }
+    ],
+    "contained": [
+        {
+            "resourceType": "PractitionerRole",
+            "id": "PractitionerRole-R69-000000000101",
+            "practitioner": {
+                "identifier": {
+                    "system": "https://fhir.nhs.uk/Id/sds-user-id",
+                    "value": "000000000101"
+                }
+            },
+            "organization": {
+                "identifier": {
+                    "system": "https://fhir.nhs.uk/Id/ods-organization-code",
+                    "value": "R69"
+                }
+            }
+        }
+    ],
+    "identifier": [
+        {
+            "system": "https//fhir.nhs.uk/Id/UBRN",
+            "value": "111111111111"
+        }
+    ],
+    "status": "active",
+    "intent": "order",
+    "category": [
+        {
+            "coding": [
+                {
+                    "system": "http://snomed.info/sct",
+                    "code": "3457005",
+                    "display": "Patient referral"
+                }
+            ]
+        }
+    ],
+    "priority": "asap",
+    "subject": {
+        "identifier": {
+            "system": "https://fhir.nhs.uk/Id/nhs-number",
+            "value": "9912003888"
+        }
+    },
+    "authoredOn": "2022-01-11T16:40:00+00:00",
+    "requester": {
+        "reference": "#PractitionerRole-R69-000000000101"
+    },
+    "performerType": {
+        "coding": [
+            {
+                "display": "Dermatology"
+            }
+        ]
+    }
+}
