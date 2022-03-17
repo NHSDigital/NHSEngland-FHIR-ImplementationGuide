@@ -16,6 +16,10 @@
       <sliceName value="ersServiceId" />
       <min value="1" />
     </element>
+    <element id="HealthcareService.specialty">
+      <path value="HealthcareService.specialty" />
+      <min value="1" />
+    </element>
     <element id="HealthcareService.specialty.coding:eRSSpecialty">
       <path value="HealthcareService.specialty.coding" />
       <sliceName value="eRSSpecialty" />
