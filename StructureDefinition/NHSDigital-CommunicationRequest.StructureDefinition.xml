@@ -34,6 +34,7 @@
     </element>
     <element id="CommunicationRequest.subject">
       <path value="CommunicationRequest.subject" />
+      <definition value="The patient or group that is the focus of this communication request.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;subject&quot;: {&#xD;&#xA;        &quot;type&quot;: &quot;Patient&quot;,&#xD;&#xA;        &quot;identifier&quot;: {&#xD;&#xA;            &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/nhs-number&quot;,&#xD;&#xA;            &quot;value&quot;: &quot;9453740519&quot;&#xD;&#xA;        }&#xD;&#xA;    }&#xD;&#xA;```" />
       <type>
         <code value="Reference" />
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient" />
