@@ -347,7 +347,7 @@
       <definition value="A resource reference to a Patient with a traced NHS Number is required, an untraced NHS Number **MUST NOT** be used.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA; &quot;subject&quot;: {&#xD;&#xA;                    &quot;type&quot;: &quot;Patient&quot;,&#xD;&#xA;                    &quot;reference&quot;: &quot;urn:uuid:bde9eba6-079f-4210-8108-6ea8db58de8c&quot;,&#xD;&#xA;                    &quot;display&quot;: &quot;Miss Bernie Kanfeld&quot;&#xD;&#xA;                }&#xD;&#xA;```" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient-PDS" />
       </type>
       <constraint>
         <key value="patient-nhs" />
@@ -630,7 +630,7 @@
       <definition value="For non token based prescriptions the destination pharmacy **MUST** be recorded in the *dispenseRequest.performer.identifier* and a identifier reference (not a resource reference) with an ANANA/ODS Code **MUST** used. &#xD;&#xA;&#xD;&#xA;The extension https://fhir.nhs.uk/StructureDefinition/Extension-DM-PerformerSiteType **MUST** be present.&#xD;&#xA;&#xD;&#xA;Patients pharmacy preferences may be sourced from PDS.&#xD;&#xA;&#xD;&#xA;Patients pharmacy preferences may be overriden by an 'one-off pharmacy nomination' by populating the *dispenseRequest.performer.identifier* with the ODS/ANANA code of the destination pharmacy.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;dispenseRequest&quot;: {&#xD;&#xA;        &quot;extension&quot;:  [&#xD;&#xA;            {&#xD;&#xA;                &quot;url&quot;: &quot;https://fhir.nhs.uk/StructureDefinition/Extension-DM-PerformerSiteType&quot;,&#xD;&#xA;                &quot;valueCoding&quot;: {&#xD;&#xA;                    &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/dispensing-site-preference&quot;,&#xD;&#xA;                    &quot;code&quot;: &quot;0004&quot;&#xD;&#xA;                }&#xD;&#xA;            },&#xD;&#xA;        ],&#xD;&#xA;        &quot;performer&quot;: {&#xD;&#xA;            &quot;identifier&quot;: {&#xD;&#xA;                &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/ods-organization-code&quot;,&#xD;&#xA;                &quot;value&quot;: &quot;FX748&quot;&#xD;&#xA;            }&#xD;&#xA;        },&#xD;&#xA;```" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Organization" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Organization-ODS" />
       </type>
       <mustSupport value="true" />
     </element>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="19aa8f3d-46b0-486a-bab8-056a383e0f88" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Organization-ODS" />
+  <name value="NHSDigitalOrganizationODS" />
+  <status value="draft" />
+  <fhirVersion value="4.0.1" />
+  <purpose value="Constraint profile which represents the full NHS Digital requirement for Organization resources as defined in ODS." />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Organization" />
+  <baseDefinition value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Organization" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Organization.identifier">
+      <path value="Organization.identifier" />
+      <min value="1" />
+    </element>
+    <element id="Organization.identifier:odsOrganisationCode">
+      <path value="Organization.identifier" />
+      <sliceName value="odsOrganisationCode" />
+      <min value="1" />
+    </element>
+    <element id="Organization.type">
+      <path value="Organization.type" />
+      <min value="1" />
+    </element>
+    <element id="Organization.type.extension:organisationRole">
+      <path value="Organization.type.extension" />
+      <sliceName value="organisationRole" />
+      <min value="0" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-ODS-Organization-Role" />
+      </type>
+    </element>
+    <element id="Organization.type.coding.system">
+      <path value="Organization.type.coding.system" />
+      <min value="1" />
+      <fixedUri value="https://fhir.nhs.uk/CodeSystem/organisation-role" />
+    </element>
+    <element id="Organization.name">
+      <path value="Organization.name" />
+      <min value="1" />
+    </element>
+  </differential>
+</StructureDefinition>

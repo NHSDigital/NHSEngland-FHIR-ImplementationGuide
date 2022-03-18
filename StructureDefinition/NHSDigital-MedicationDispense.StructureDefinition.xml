@@ -146,7 +146,7 @@
       <min value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient-PDS" />
         <aggregation value="referenced" />
         <aggregation value="bundled" />
       </type>
