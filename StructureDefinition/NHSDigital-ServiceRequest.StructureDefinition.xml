@@ -82,6 +82,7 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <definition value="Identifiers assigned to this order instance by the orderer and/or the receiver and/or order fulfiller.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;identifier&quot;: [&#xD;&#xA;                    {&#xD;&#xA;                        &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/UBRN&quot;,&#xD;&#xA;                        &quot;value&quot;: &quot;111111111112&quot;&#xD;&#xA;                    }&#xD;&#xA;                ],&#xD;&#xA;```" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
@@ -253,7 +254,7 @@
     <element id="ServiceRequest.performerType">
       <path value="ServiceRequest.performerType" />
       <short value="Requested Specialty Name" />
-      <definition value="**ERS**&#xD;&#xA;&#xD;&#xA;Specialty used to search for the shortlisted service(s) (if one was used)&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;performerType&quot;: {&#xD;&#xA;        &quot;coding&quot;: [&#xD;&#xA;            {&#xD;&#xA;                &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/NHSDigital-Specialty&quot;,&#xD;&#xA;                &quot;code&quot;: &quot;GENERAL_MEDICINE&quot;&#xD;&#xA;            }&#xD;&#xA;        ]&#xD;&#xA;    },&#xD;&#xA;```" />
+      <definition value="**ERS**&#xD;&#xA;&#xD;&#xA;Specialty used to search for the shortlisted service(s) (if one was used)&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;performerType&quot;: {&#xD;&#xA;        &quot;coding&quot;: [&#xD;&#xA;            {&#xD;&#xA;                &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/NHSDigital-Specialty&quot;,&#xD;&#xA;                &quot;code&quot;: &quot;GENERAL_MEDICINE&quot;&#xD;&#xA;            }&#xD;&#xA;        ]&#xD;&#xA;    },&#xD;&#xA;```&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;performerType&quot;: {&#xD;&#xA;                    &quot;coding&quot;: [&#xD;&#xA;                        {&#xD;&#xA;                            &quot;display&quot;: &quot;Dermatology&quot;&#xD;&#xA;                        }&#xD;&#xA;                    ]&#xD;&#xA;                }&#xD;&#xA;```" />
       <mustSupport value="true" />
     </element>
     <element id="ServiceRequest.performerType.coding">

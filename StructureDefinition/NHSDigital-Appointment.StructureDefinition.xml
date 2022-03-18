@@ -40,6 +40,7 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <definition value="This records identifiers associated with this appointment concern that are defined by business processes and/or used to refer to it when a direct URL reference to the resource itself is not appropriate (e.g. in CDA documents, or in written / printed documentation)." />
       <mustSupport value="true" />
     </element>
     <element id="Appointment.identifier.system">
@@ -139,18 +140,41 @@
     <element id="Appointment.start">
       <path value="Appointment.start" />
       <short value="Appointment Start Date Time" />
-      <definition value="Date time of the current appointment booking (if there is a current appointment booking to a Directly Bookable Service)" />
+      <definition value="Date time of the current appointment booking (if there is a current appointment booking to a Directly Bookable Service)&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA; &quot;start&quot;: &quot;2021-06-13T12:30:00+00:00&quot;,&#xD;&#xA;```" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Appointment.end">
       <path value="Appointment.end" />
       <short value="Appointment End Date Time" />
+      <definition value="Date/Time that the appointment is to conclude.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;end&quot;: &quot;2021-06-13T12:45:00+00:00&quot;,&#xD;&#xA;```" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
+    <element id="Appointment.slot">
+      <path value="Appointment.slot" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="identifier.system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <mustSupport value="true" />
+    </element>
+    <element id="Appointment.slot:alternativeSlot">
+      <path value="Appointment.slot" />
+      <sliceName value="alternativeSlot" />
+      <definition value="``json&#xD;&#xA; &quot;slot&quot;: [&#xD;&#xA;                    {&#xD;&#xA;                        &quot;identifier&quot;: {&#xD;&#xA;                            &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/alternative-slot&quot;,&#xD;&#xA;                            &quot;value&quot;: &quot;USRN-12000001&quot;&#xD;&#xA;                        }&#xD;&#xA;                    }&#xD;&#xA;                ],&#xD;&#xA;```" />
+      <max value="1" />
+    </element>
+    <element id="Appointment.slot:alternativeSlot.identifier.system">
+      <path value="Appointment.slot.identifier.system" />
+      <fixedUri value="https://fhir.nhs.uk/Id/alternative-slot" />
+    </element>
     <element id="Appointment.basedOn">
       <path value="Appointment.basedOn" />
+      <definition value="The service request this appointment is allocated to assess (e.g. incoming referral or procedure request).&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;basedOn&quot;: [&#xD;&#xA;                    {&#xD;&#xA;                        &quot;reference&quot;: &quot;https://server.fire.ly/ServiceRequest/6c2a1f9b-2517-419d-9099-591ba63f176c&quot;&#xD;&#xA;                    }&#xD;&#xA;                ],&#xD;&#xA;```" />
       <type>
         <code value="Reference" />
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-ServiceRequest" />
@@ -171,7 +195,7 @@
     </element>
     <element id="Appointment.participant">
       <path value="Appointment.participant" />
-      <definition value="List of participants involved in the appointment.&#xD;&#xA;&#xD;&#xA;This should include a Patient and a HealthcareService" />
+      <definition value="List of participants involved in the appointment.&#xD;&#xA;&#xD;&#xA;This should include a Patient and a HealthcareService&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA; &quot;participant&quot;: [&#xD;&#xA;                    {&#xD;&#xA;                        &quot;actor&quot;: {&#xD;&#xA;                            &quot;identifier&quot;: {&#xD;&#xA;                                &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/ers-service&quot;,&#xD;&#xA;                                &quot;value&quot;: &quot;11002&quot;&#xD;&#xA;                            }&#xD;&#xA;                        },&#xD;&#xA;                        &quot;status&quot;: &quot;accepted&quot;&#xD;&#xA;                    },&#xD;&#xA;                    {&#xD;&#xA;                        &quot;actor&quot;: {&#xD;&#xA;                            &quot;identifier&quot;: {&#xD;&#xA;                                &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/nhs-number&quot;,&#xD;&#xA;                                &quot;value&quot;: &quot;9912003888&quot;&#xD;&#xA;                            }&#xD;&#xA;                        },&#xD;&#xA;                        &quot;status&quot;: &quot;accepted&quot;&#xD;&#xA;                    }&#xD;&#xA;                ]&#xD;&#xA;```" />
       <mustSupport value="true" />
     </element>
     <element id="Appointment.participant.actor">
@@ -192,6 +216,7 @@
         <severity value="error" />
         <human value="An identifier reference or resource reference must be provided" />
         <expression value="(reference.exists() or identifier.exists())" />
+        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Appointment" />
       </constraint>
       <mustSupport value="true" />
     </element>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="7c42ccf1-3e8f-446c-8f7f-d703281a07d5" />
+  <id value="d8f37a5d-2c06-41c6-bf36-46e987d8111e" />
   <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient-PDS" />
   <name value="NHSDigitalPatientPDS" />
   <status value="draft" />
