@@ -6,6 +6,7 @@
   <status value="draft" />
   <description value="This profile is designed around Patient Demographics Services and PDS may be used as the source of this data. &#xD;&#xA;Use of PDS is not mandatory for Patient resources, Patient Administration Systems (PAS) and Master Patient Index (MPI) may be used instead. Only traced NHS Number SHOULD be used with this resource unless explicitly stated. Within NHS Trusts the inclusion of MRN (Medical Record Numbers) identifiers is highly recommended." />
   <fhirVersion value="4.0.1" />
+  <purpose value="Constraint profile which represents the full NHS Digital requirement for Patient resources as defined in Personnel Demogrpahics Service (PDS)." />
   <kind value="resource" />
   <abstract value="false" />
   <type value="Patient" />
