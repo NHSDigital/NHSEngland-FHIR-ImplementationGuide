@@ -85,6 +85,9 @@
       <path value="Observation.category" />
       <sliceName value="COVID-TestPillar" />
       <max value="1" />
+      <binding>
+        <strength value="extensible" />
+      </binding>
     </element>
     <element id="Observation.category:COVID-TestPillar.coding">
       <path value="Observation.category.coding" />
