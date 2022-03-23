@@ -12,27 +12,6 @@
   <baseDefinition value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Task" />
   <derivation value="constraint" />
   <differential>
-    <element id="Task.extension">
-      <path value="Task.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="0" />
-    </element>
-    <element id="Task.extension:prescription">
-      <path value="Task.extension" />
-      <sliceName value="prescription" />
-      <min value="0" />
-      <max value="1" />
-      <type>
-        <code value="Extension" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-EPS-Prescription" />
-      </type>
-    </element>
     <element id="Task.identifier">
       <path value="Task.identifier" />
       <min value="1" />
@@ -169,10 +148,6 @@
         <code value="Reference" />
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole-MinimalPlusTelecom" />
       </type>
-    </element>
-    <element id="Task.requester.reference">
-      <path value="Task.requester.reference" />
-      <min value="1" />
     </element>
     <element id="Task.owner">
       <path value="Task.owner" />
