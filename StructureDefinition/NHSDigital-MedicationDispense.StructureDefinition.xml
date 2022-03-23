@@ -204,10 +204,6 @@
         <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationDispense" />
       </constraint>
     </element>
-    <element id="MedicationDispense.performer.actor.reference">
-      <path value="MedicationDispense.performer.actor.reference" />
-      <min value="1" />
-    </element>
     <element id="MedicationDispense.performer.actor.identifier.system">
       <path value="MedicationDispense.performer.actor.identifier.system" />
       <min value="1" />
