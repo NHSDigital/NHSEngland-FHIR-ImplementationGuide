@@ -54,11 +54,17 @@
     </element>
     <element id="Observation.category">
       <path value="Observation.category" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="coding.system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
       <definition value="This is an optional element. If used the category will always be `laboratory`&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA;    &quot;category&quot;:  [&#xD;&#xA;        {&#xD;&#xA;            &quot;coding&quot;:  [&#xD;&#xA;                {&#xD;&#xA;                    &quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/observation-category&quot;,&#xD;&#xA;                    &quot;code&quot;: &quot;laboratory&quot;,&#xD;&#xA;                    &quot;display&quot;: &quot;Laboratory&quot;&#xD;&#xA;                }&#xD;&#xA;            ],&#xD;&#xA;            &quot;text&quot;: &quot;Laboratory&quot;&#xD;&#xA;        }&#xD;&#xA;    ],&#xD;&#xA;```&#xD;&#xA;&#xD;&#xA;For COVID-19 Tests, the ValueSet **SHOULD** be used to indicate which test pillar the observation originated.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA;     &quot;category&quot;: [&#xD;&#xA;        {&#xD;&#xA;            &quot;coding&quot;: [&#xD;&#xA;                {&#xD;&#xA;                    &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/covid-test-pillar&quot;,&#xD;&#xA;                    &quot;code&quot;: &quot;pillar-1&quot;,&#xD;&#xA;                    &quot;display&quot;: &quot;pillar 1&quot;&#xD;&#xA;                }&#xD;&#xA;            ]&#xD;&#xA;        }&#xD;&#xA;    ],&#xD;&#xA;```" />
       <mustSupport value="true" />
       <binding>
         <strength value="extensible" />
-        <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDigital-COVIDTestPillar" />
       </binding>
     </element>
     <element id="Observation.category.coding">
@@ -68,13 +74,44 @@
     <element id="Observation.category.coding.system">
       <path value="Observation.category.coding.system" />
       <min value="1" />
-      <fixedUri value="https://fhir.nhs.uk/CodeSystem/covid-test-pillar" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.category.coding.code">
       <path value="Observation.category.coding.code" />
       <min value="1" />
       <mustSupport value="true" />
+    </element>
+    <element id="Observation.category:COVID-TestPillar">
+      <path value="Observation.category" />
+      <sliceName value="COVID-TestPillar" />
+      <max value="1" />
+    </element>
+    <element id="Observation.category:COVID-TestPillar.coding">
+      <path value="Observation.category.coding" />
+      <binding>
+        <strength value="extensible" />
+        <description value="Categories for COVID Test Pillar" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDigital-COVIDTestPillar" />
+      </binding>
+    </element>
+    <element id="Observation.category:COVID-TestPillar.coding.system">
+      <path value="Observation.category.coding.system" />
+      <fixedUri value="https://fhir.nhs.uk/CodeSystem/covid-test-pillar" />
+    </element>
+    <element id="Observation.category:UKCoreCategory">
+      <path value="Observation.category" />
+      <sliceName value="UKCoreCategory" />
+    </element>
+    <element id="Observation.category:UKCoreCategory.coding">
+      <path value="Observation.category.coding" />
+      <binding>
+        <strength value="preferred" />
+        <valueSet value="http://hl7.org/fhir/ValueSet/observation-category" />
+      </binding>
+    </element>
+    <element id="Observation.category:UKCoreCategory.coding.system">
+      <path value="Observation.category.coding.system" />
+      <fixedUri value="http://terminology.hl7.org/CodeSystem/observation-category" />
     </element>
     <element id="Observation.code">
       <path value="Observation.code" />
