@@ -6,35 +6,37 @@
         "value": "13403891320453338075"
     },
     "type": "message",
+    "timestamp":"2021-09-17T12:20:00.742000+00:00",
     "entry": [
         {
             "fullUrl": "urn:uuid:844ebe20-78f0-4d77-8890-44d588717ca9",
             "resource": {
                 "resourceType": "MessageHeader",
-                "id": "844ebe20-78f0-4d77-8890-44d588717ca9",
                 "eventCoding": {
                     "system": "https://fhir.nhs.uk/CodeSystem/message-event",
                     "code": "document"
                 },
                 "destination": [
                     {
-                        "name": "ROUTE",
-                        "target": {
-                            "display": "ROUTE"
-                        },
-                        "endpoint": "ROUTE"
+                        "endpoint": "urn:nhs-uk:addressing:mesh:Y90638OT002",
+                        "receiver": {
+                            "identifier": {
+                                "system": "https://fhir.nhs.uk/Id/ods-organization-code",
+                                "value": "Y9062"
+                            },
+                            "display" : "Elmet Healthcare1"
+                        }
                     }
                 ],
                 "sender": {
                     "identifier": {
                         "system": "https://fhir.nhs.uk/Id/ods-organization-code",
-                        "value": "RCB"
+                        "value": "Y9063"
                     },
-                    "display": "RCB"
+                    "display": "Elmet Healthcare2"
                 },
                 "source": {
-                    "name": "PAS",
-                    "endpoint": "PAS"
+                    "endpoint": "urn:nhs-uk:addressing:mesh:Y90638OT001"
                 },
                 "focus": [
                     {
@@ -46,7 +48,6 @@
         {
             "fullUrl": "urn:uuid:5da894e0-a57e-43e9-a1a1-e283a484003c",
             "resource": {
-                "id": "5da894e0-a57e-43e9-a1a1-e283a484003c",
                 "resourceType": "DocumentReference",
                 "identifier": [
                     {
@@ -56,9 +57,9 @@
                 "type": {
                     "coding": [
                         {
-                            "system": "https://fhir.nhs.uk/STU3/CodeSystem/eRS-AttachmentType-1",
-                            "code": "REFERRER",
-                            "display": "Referrer"
+                            "system": "http://snomed.info/sct",
+                            "code": "766841000000106",
+                            "display": "Consultation with patient"
                         }
                     ]
                 },
@@ -67,7 +68,6 @@
                     "reference": "urn:uuid:221c028d-e15b-4d60-8035-c460c8231fa3"
                 },
                 "date": "2021-09-17T12:20:00.742000+00:00",
-                "description": "upload.jpg",
                 "content": [
                     {
                         "attachment": {
@@ -82,7 +82,6 @@
             "fullUrl": "urn:uuid:221c028d-e15b-4d60-8035-c460c8231fa3",
             "resource": {
                 "resourceType": "Patient",
-                "id": "221c028d-e15b-4d60-8035-c460c8231fa3",
                 "identifier": [
                     {
                         "system": "https://fhir.nhs.uk/Id/nhs-number",
