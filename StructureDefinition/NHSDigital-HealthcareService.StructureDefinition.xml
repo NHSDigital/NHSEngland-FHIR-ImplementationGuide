@@ -189,7 +189,7 @@
     </element>
     <element id="HealthcareService.specialty.coding:eRSSpecialty.system">
       <path value="HealthcareService.specialty.coding.system" />
-      <fixedUri value="https://fhir.nhs.uk/CodeSystem/NHSDigital-Specialty" />
+      <fixedUri value="https://fhir.nhs.uk/CodeSystem/eRS-Specialty" />
     </element>
     <element id="HealthcareService.location">
       <path value="HealthcareService.location" />

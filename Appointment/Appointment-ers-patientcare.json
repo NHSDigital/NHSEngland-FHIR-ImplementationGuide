@@ -16,7 +16,7 @@
     "slot": [
         {
             "identifier": {
-                "system": "https://fhir.nhs.uk/Id/alternative-slot",
+                "system": "https://fhir.nhs.uk/CodeSystem/unique-slot-reference-number",
                 "value": "USRN-12000001"
             }
         }

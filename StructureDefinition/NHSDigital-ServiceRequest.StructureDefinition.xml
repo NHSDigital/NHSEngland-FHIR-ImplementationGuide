@@ -254,7 +254,7 @@
     <element id="ServiceRequest.performerType">
       <path value="ServiceRequest.performerType" />
       <short value="Requested Specialty Name" />
-      <definition value="**ERS**&#xD;&#xA;&#xD;&#xA;Specialty used to search for the shortlisted service(s) (if one was used)&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;performerType&quot;: {&#xD;&#xA;        &quot;coding&quot;: [&#xD;&#xA;            {&#xD;&#xA;                &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/NHSDigital-Specialty&quot;,&#xD;&#xA;                &quot;code&quot;: &quot;GENERAL_MEDICINE&quot;&#xD;&#xA;            }&#xD;&#xA;        ]&#xD;&#xA;    },&#xD;&#xA;```&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;performerType&quot;: {&#xD;&#xA;                    &quot;coding&quot;: [&#xD;&#xA;                        {&#xD;&#xA;                            &quot;display&quot;: &quot;Dermatology&quot;&#xD;&#xA;                        }&#xD;&#xA;                    ]&#xD;&#xA;                }&#xD;&#xA;```" />
+      <definition value="**ERS**&#xD;&#xA;&#xD;&#xA;Specialty used to search for the shortlisted service(s) (if one was used)&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;performerType&quot;: {&#xD;&#xA;        &quot;coding&quot;: [&#xD;&#xA;            {&#xD;&#xA;                &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/eRS-Specialty&quot;,&#xD;&#xA;                &quot;code&quot;: &quot;GENERAL_MEDICINE&quot;&#xD;&#xA;            }&#xD;&#xA;        ]&#xD;&#xA;    },&#xD;&#xA;```&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;performerType&quot;: {&#xD;&#xA;                    &quot;coding&quot;: [&#xD;&#xA;                        {&#xD;&#xA;                            &quot;display&quot;: &quot;Dermatology&quot;&#xD;&#xA;                        }&#xD;&#xA;                    ]&#xD;&#xA;                }&#xD;&#xA;```" />
       <mustSupport value="true" />
     </element>
     <element id="ServiceRequest.performerType.coding">
@@ -294,7 +294,7 @@
     </element>
     <element id="ServiceRequest.performerType.coding:eRSSpecialty.system">
       <path value="ServiceRequest.performerType.coding.system" />
-      <fixedUri value="https://fhir.nhs.uk/CodeSystem/NHSDigital-Specialty" />
+      <fixedUri value="https://fhir.nhs.uk/CodeSystem/eRS-Specialty" />
     </element>
     <element id="ServiceRequest.performer">
       <path value="ServiceRequest.performer" />

@@ -11,7 +11,7 @@
     "uniqueId":  [
         {
             "type": "uri",
-            "value": "https://fhir.nhs.uk/Id/alternative-slot",
+            "value": "https://fhir.nhs.uk/CodeSystem/unique-slot-reference-number",
             "preferred": true
         }
     ]
