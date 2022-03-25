@@ -231,6 +231,7 @@
                     "system": "urn:uuid",
                     "value": "e52506cf-10ec-49ed-a96f-f3ac1888dee7"
                 },
+                "questionnaire": "https://virtually.healthcare/Questionnaire/patient-consultation",
                 "status": "completed",
                 "subject": {
                     "reference": "urn:uuid:b4938675-8124-4eef-a7f4-7d53b2172073"
