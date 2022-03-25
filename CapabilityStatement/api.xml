@@ -32,7 +32,7 @@
         </resource>
         <resource>
             <type value="Encounter" />
-            <profile value="https://fhir.nhs.uk/StructureDefinition/England-Encounter" />
+            <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Encounter" />
             <interaction>
                 <code value="search-type" />
             </interaction>

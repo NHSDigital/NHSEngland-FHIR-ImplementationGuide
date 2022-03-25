@@ -376,7 +376,7 @@
       <definition value="Encounter is required for secondary care prescriptions." />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-Encounter" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Encounter" />
       </type>
     </element>
     <element id="MedicationRequest.authoredOn">

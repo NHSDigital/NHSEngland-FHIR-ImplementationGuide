@@ -148,10 +148,6 @@
       </constraint>
       <mustSupport value="true" />
     </element>
-    <element id="Observation.subject.identifier">
-      <path value="Observation.subject.identifier" />
-      <min value="1" />
-    </element>
     <element id="Observation.subject.identifier.system">
       <path value="Observation.subject.identifier.system" />
       <min value="1" />
@@ -178,7 +174,7 @@
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Organization" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/CareTeam" />
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole-Minimal" />
       </type>
       <constraint>
         <key value="performer" />
