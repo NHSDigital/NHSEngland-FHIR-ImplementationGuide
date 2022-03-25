@@ -1,30 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="641d2bce-32f0-415d-903b-c3905e4c2483" />
-  <url value="https://fhir.nhs.uk/StructureDefinition/England-Encounter" />
-  <name value="EnglandEncounter" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Encounter" />
+  <name value="NHSDigitalEncounter" />
   <status value="draft" />
-  <fhirVersion value="4.0.1" />
-  <mapping>
-    <identity value="workflow" />
-    <uri value="http://hl7.org/fhir/workflow" />
-    <name value="Workflow Pattern" />
-  </mapping>
-  <mapping>
-    <identity value="rim" />
-    <uri value="http://hl7.org/v3" />
-    <name value="RIM Mapping" />
-  </mapping>
-  <mapping>
-    <identity value="w5" />
-    <uri value="http://hl7.org/fhir/fivews" />
-    <name value="FiveWs Pattern Mapping" />
-  </mapping>
-  <mapping>
-    <identity value="v2" />
-    <uri value="http://hl7.org/v2" />
-    <name value="HL7 v2 Mapping" />
-  </mapping>
+  <fhirVersion value="4.0.1" /
   <kind value="resource" />
   <abstract value="false" />
   <type value="Encounter" />
@@ -69,14 +49,14 @@
         <severity value="warning" />
         <human value="subject - An identifier reference plus a display name or resource reference must be provided" />
         <expression value="(reference.exists() or (identifier.exists() and display.exists()))" />
-        <source value="https://fhir.nhs.uk/StructureDefinition/England-Encounter" />
+        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Encounter" />
       </constraint>
       <constraint>
         <key value="patient-nhs" />
         <severity value="error" />
         <human value="Supplied NHS Number is outside the English and Welsh NHS Number range or length of the number is wrong." />
         <expression value="identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').exists().not() or (identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').exists()  and identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').value.matches('^([456789]{1}[0-9]{9})$'))" />
-        <source value="https://fhir.nhs.uk/StructureDefinition/England-Encounter" />
+        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Encounter" />
       </constraint>
       <mustSupport value="true" />
     </element>
