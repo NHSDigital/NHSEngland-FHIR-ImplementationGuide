@@ -31,7 +31,7 @@
                 "sender": {
                     "identifier": {
                         "system": "https://fhir.nhs.uk/Id/ods-organization-code",
-                        "value": "Y9063"
+                        "value": "RR8"
                     },
                     "display": "Elmet Healthcare2"
                 },
@@ -49,6 +49,33 @@
             "fullUrl": "urn:uuid:5da894e0-a57e-43e9-a1a1-e283a484003c",
             "resource": {
                 "resourceType": "DocumentReference",
+                "contained": [
+                    {
+                      "resourceType": "PractitionerRole",
+                      "id": "author",
+                      "practitioner": {
+                        "identifier": {
+                          "system": "https://fhir.hl7.org.uk/Id/gmp-number",
+                          "value": "G7654321"
+                        },
+                        "display": "Dr Gregory Townley"
+                      },
+                      "organization": {
+                        "identifier": {
+                          "system": "https://fhir.nhs.uk/Id/ods-organization-code",
+                          "value": "RR8"
+                        },
+                        "display": "LEEDS TEACHING HOSPITALS NHS TRUST"
+                      },
+                      "healthcareService": {
+                        "identifier": {
+                          "system": "http://fhir.nhs.uk/Id/dos-service-id",
+                          "value": "1234567"
+                        },
+                        "display": "Online Consultations Service"
+                      }
+                    }
+                  ],
                 "identifier": [
                     {
                         "value": "5da894e0-a57e-43e9-a1a1-e283a484003c"
@@ -67,6 +94,11 @@
                 "subject": {
                     "reference": "urn:uuid:221c028d-e15b-4d60-8035-c460c8231fa3"
                 },
+                "author": [
+                    {
+                      "reference" : "#author"
+                    }
+                ],
                 "date": "2021-09-17T12:20:00.742000+00:00",
                 "content": [
                     {
