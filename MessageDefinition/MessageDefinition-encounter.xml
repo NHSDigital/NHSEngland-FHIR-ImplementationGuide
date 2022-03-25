@@ -34,4 +34,16 @@
         <min value="0" />
         <max value="*" />
     </focus>
+    <focus>
+        <code value="QuestionnaireResponse" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-QuestionnaireResponse" />
+        <min value="0" />
+        <max value="*" />
+    </focus>
+     <focus>
+        <code value="Condition" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Condition" />
+        <min value="0" />
+        <max value="*" />
+    </focus>
 </MessageDefinition>

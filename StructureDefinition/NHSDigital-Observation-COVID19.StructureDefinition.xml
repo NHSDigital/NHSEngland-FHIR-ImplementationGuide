@@ -21,5 +21,9 @@
       <min value="1" />
       <max value="1" />
     </element>
+     <element id="Observation.subject.identifier">
+      <path value="Observation.subject.identifier" />
+      <min value="1" />
+    </element>
   </differential>
 </StructureDefinition>

@@ -39,7 +39,10 @@
                 },
                 "focus": [
                     {
-                        "reference": "urn:uuid:5da894e0-a57e-43e9-a1a1-e283a484003c"
+                        "reference": "urn:uuid:506ab3bc-8efa-40bc-a7ad-1643d467eb4f"
+                    },
+                    {
+                        "reference": "urn:uuid:22de70e8-e356-4dd0-8bf7-211b6589975f"
                     }
                 ]
             }
@@ -66,15 +69,21 @@
                             },
                             "display": "LEEDS TEACHING HOSPITALS NHS TRUST"
                         },
-                        "healthcareService": {
-                            "identifier": {
-                                "system": "http://fhir.nhs.uk/Id/dos-service-id",
-                                "value": "1234567"
-                            },
-                            "display": "Online Consultations Service"
-                        }
+                        "healthcareService": [
+                            {
+                                "identifier": {
+                                    "system": "http://fhir.nhs.uk/Id/dos-service-id",
+                                    "value": "1234567"
+                                },
+                                "display": "Online Consultations Service"
+                            }
+                        ]
                     }
                 ],
+                "class": {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                    "code": "VR"
+                },
                 "identifier": [
                     {
                         "system": "https://tools.ietf.org/html/rfc4122",
@@ -176,7 +185,6 @@
                 ],
                 "generalPractitioner": [
                     {
-                        "reference": "urn:uuid:1272fa8e-4903-4e2a-aa1d-c64727ead3c0",
                         "identifier": {
                             "system": "https://fhir.nhs.uk/Id/ods-organization-code",
                             "value": "F83004"
@@ -208,13 +216,15 @@
                             },
                             "display": "LEEDS TEACHING HOSPITALS NHS TRUST"
                         },
-                        "healthcareService": {
-                            "identifier": {
-                                "system": "http://fhir.nhs.uk/Id/dos-service-id",
-                                "value": "1234567"
-                            },
-                            "display": "Online Consultations Service"
-                        }
+                        "healthcareService": [
+                            {
+                                "identifier": {
+                                    "system": "http://fhir.nhs.uk/Id/dos-service-id",
+                                    "value": "1234567"
+                                },
+                                "display": "Online Consultations Service"
+                            }
+                        ]
                     }
                 ],
                 "identifier": {
@@ -244,8 +254,8 @@
                                     {
                                         "valueCoding": {
                                             "system": "http://snomed.info/sct",
-                                            "code": "12802171000006100",
-                                            "display": "Exposure to 2019-nCoV (Wuhan) infection"
+                                            "code": "702547000",
+                                            "display": "Exposure to coronavirus infection"
                                         }
                                     }
                                 ]
@@ -271,8 +281,8 @@
                                     {
                                         "valueCoding": {
                                             "system": "http://snomed.info/sct",
-                                            "code": "12802181000006102",
-                                            "display": "Suspected 2019-nCoV (Wuhan) infection"
+                                            "code": "700217006",
+                                            "display": "Suspected coronavirus infection"
                                         }
                                     }
                                 ]
@@ -449,13 +459,15 @@
                             },
                             "display": "LEEDS TEACHING HOSPITALS NHS TRUST"
                         },
-                        "healthcareService": {
-                            "identifier": {
-                                "system": "http://fhir.nhs.uk/Id/dos-service-id",
-                                "value": "1234567"
-                            },
-                            "display": "Online Consultations Service"
-                        }
+                        "healthcareService": [
+                            {
+                                "identifier": {
+                                    "system": "http://fhir.nhs.uk/Id/dos-service-id",
+                                    "value": "1234567"
+                                },
+                                "display": "Online Consultations Service"
+                            }
+                        ]
                     }
                 ],
                 "identifier": [
@@ -470,7 +482,7 @@
                         {
                             "system": "http://snomed.info/sct",
                             "code": "927981000000106",
-                            "display": "Baseline oxygen saturation at periphery"
+                            "display": "Baseline SpO2 (oxygen saturation at periphery)"
                         }
                     ]
                 },
@@ -517,13 +529,15 @@
                             },
                             "display": "LEEDS TEACHING HOSPITALS NHS TRUST"
                         },
-                        "healthcareService": {
-                            "identifier": {
-                                "system": "http://fhir.nhs.uk/Id/dos-service-id",
-                                "value": "1234567"
-                            },
-                            "display": "Online Consultations Service"
-                        }
+                        "healthcareService": [
+                            {
+                                "identifier": {
+                                    "system": "http://fhir.nhs.uk/Id/dos-service-id",
+                                    "value": "1234567"
+                                },
+                                "display": "Online Consultations Service"
+                            }
+                        ]
                     }
                 ],
                 "identifier": [
@@ -596,13 +610,15 @@
                             },
                             "display": "LEEDS TEACHING HOSPITALS NHS TRUST"
                         },
-                        "healthcareService": {
-                            "identifier": {
-                                "system": "http://fhir.nhs.uk/Id/dos-service-id",
-                                "value": "1234567"
-                            },
-                            "display": "Online Consultations Service"
-                        }
+                        "healthcareService": [
+                            {
+                                "identifier": {
+                                    "system": "http://fhir.nhs.uk/Id/dos-service-id",
+                                    "value": "1234567"
+                                },
+                                "display": "Online Consultations Service"
+                            }
+                        ]
                     }
                 ],
                 "identifier": [
@@ -680,13 +696,15 @@
                             },
                             "display": "LEEDS TEACHING HOSPITALS NHS TRUST"
                         },
-                        "healthcareService": {
-                            "identifier": {
-                                "system": "http://fhir.nhs.uk/Id/dos-service-id",
-                                "value": "1234567"
-                            },
-                            "display": "Online Consultations Service"
-                        }
+                        "healthcareService": [
+                            {
+                                "identifier": {
+                                    "system": "http://fhir.nhs.uk/Id/dos-service-id",
+                                    "value": "1234567"
+                                },
+                                "display": "Online Consultations Service"
+                            }
+                        ]
                     }
                 ],
                 "identifier": [
@@ -747,7 +765,7 @@
                                 {
                                     "system": "http://snomed.info/sct",
                                     "code": "1091811000000102",
-                                    "display": "Diastolic blood pressure"
+                                    "display": "Diastolic arterial pressure"
                                 },
                                 {
                                     "system": "http://loinc.org",
@@ -788,13 +806,15 @@
                             },
                             "display": "LEEDS TEACHING HOSPITALS NHS TRUST"
                         },
-                        "healthcareService": {
-                            "identifier": {
-                                "system": "http://fhir.nhs.uk/Id/dos-service-id",
-                                "value": "1234567"
-                            },
-                            "display": "Online Consultations Service"
-                        }
+                        "healthcareService": [
+                            {
+                                "identifier": {
+                                    "system": "http://fhir.nhs.uk/Id/dos-service-id",
+                                    "value": "1234567"
+                                },
+                                "display": "Online Consultations Service"
+                            }
+                        ]
                     }
                 ],
                 "identifier": [
@@ -824,8 +844,8 @@
                     "coding": [
                         {
                             "system": "http://snomed.info/sct",
-                            "code": "12802181000006102",
-                            "display": "Suspected 2019-nCoV (Wuhan) infection"
+                            "code": "700217006",
+                            "display": "Suspected coronavirus infection"
                         }
                     ]
                 },

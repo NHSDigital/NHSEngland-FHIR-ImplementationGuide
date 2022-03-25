@@ -314,7 +314,7 @@
                 },
                 {
                     "type": "Encounter",
-                    "profile": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Encounter",
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-Encounter",
                     "interaction": [
                         {
                             "code": "read",
