@@ -35,7 +35,7 @@
     <element id="Slot.identifier:alternativeSlot.system">
       <path value="Slot.identifier.system" />
       <min value="1" />
-      <fixedUri value="https://fhir.nhs.uk/Id/alternative-slot" />
+      <fixedUri value="https://fhir.nhs.uk/CodeSystem/unique-slot-reference-number" />
     </element>
     <element id="Slot.identifier:alternativeSlot.value">
       <path value="Slot.identifier.value" />

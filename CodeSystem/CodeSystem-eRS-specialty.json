@@ -1,7 +1,7 @@
 {
     "resourceType": "CodeSystem",
     "id": "43e92758-ad4c-4c59-8ae2-de431a59168e",
-    "url": "https://fhir.nhs.uk/CodeSystem/NHSDigital-Specialty",
+    "url": "https://fhir.nhs.uk/CodeSystem/eRS-Specialty",
     "version": "1.0.0",
     "name": "NHSDigitalSpecialty",
     "status": "draft",
