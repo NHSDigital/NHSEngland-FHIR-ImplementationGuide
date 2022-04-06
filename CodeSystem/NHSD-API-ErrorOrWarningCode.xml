@@ -1,10 +1,10 @@
 <CodeSystem xmlns="http://hl7.org/fhir">
    <id value="NHSDigital-ErrorOrWarningCode" />
    <url value="https://fhir.nhs.uk/CodeSystem/NHSD-API-ErrorOrWarningCode" />
-   <version value="0.1.0" />
+   <version value="0.2.0" />
    <name value="nhsdapierrororwarningcode" />
-   <status value="active" />
-   <date value="2022-04-04T00:00:00+00:00" />
+   <status value="draft" />
+   <date value="2022-04-05T00:00:00+00:00" />
    <publisher value="NHS Digital" />
    <contact>
       <name value="Interoperability Team" />
@@ -14,70 +14,66 @@
          <use value="work" />
       </telecom>
    </contact>
-   <description value="A CodeSystem that identifies generic API error or warning codes in response to a request." />
+   <description value="A CodeSystem that identifies generic API error or warning codes in response to a request. The list is not exhaustive and many APIs will have an additional set of codes specific to their business logic and implementation.
+                For publishers of APIs, we recommend that you use the code and display values in your API to make it more readable." />
    <copyright value="Copyright © 2022 NHS Digital" />
-   <caseSensitive value="true" />
+   <caseSensitive value="false" />
    <content value="complete" />
    <!-- Security Outcomes -->
    <concept>
-      <code value="API_ACCESS_DENIED" />
+      <code value="ACCESS_DENIED" />
       <display value="Access has been denied to process this request" />
-      <definition value="Although authenticated - the system or user does not have permission for a particular request." />
+      <definition value="Although authenticated - the system or user does not have permission for a particular request. Recommend using [HTTP Status Code 403](https://simplifier.net/nhsdigitalspine/issuedtype-to-http-status-code)" />
    </concept>
   <concept>
-    <code value="API_ACCESS_DENIED_LEVEL" />
+    <code value="ACCESS_DENIED_LEVEL" />
     <display value="Access has been denied because you need higher level permissions" />
     <definition value="The request requires higher pemission levels than the authentication provided. For example NHS login has three main levels of P0, P5 and P9 - and the request held a P0 level, instead of P9" />
   </concept>
   <concept>
-    <code value="API_ACCESS_TOKEN_EXPIRED" />
+    <code value="ACCESS_TOKEN_EXPIRED" />
     <display value="Access token has expired" />
     <definition value="Obtain a new access token - the provided access token has expired and is no longer valid, access tokens only have a short life time" />
   </concept>
   <concept>
-    <code value="API_ACCESS_TOKEN_INVALID" />
+    <code value="ACCESS_TOKEN_INVALID" />
     <display value="Authorization header not formatted correctly" />
     <definition value="The bearer token could not be retrieved from the Authorization header, format should be 'Bearer INSERT-ACCESS-TOKEN'" />
   </concept>
   <concept>
-    <code value="API_ACCESS_TOKEN_MISSING" />
+    <code value="ACCESS_TOKEN_MISSING" />
     <display value="Authorization header not sent" />
     <definition value="The access token must be passed in the Authorization header. The format should be 'Bearer INSERT-ACCESS-TOKEN'" />
   </concept>
   <!-- Operational Outcomes -->
   <concept>
-    <code value="API_TIMEOUT" />
+    <code value="TIMEOUT" />
     <display value="Request has timed out" />
     <definition value="The request has not responded in the timeout period, retry the request" />
   </concept>
   <concept>
-    <code value="API_TOO_MANY_REQUESTS" />
+    <code value="TOO_MANY_REQUESTS" />
     <display value="Your connection has exceeded the rate limit" />
     <definition value="APIs have different rate limits - and your request has been rejected. Rate limits can be per application (connection) or per API. A detailed reason will be returned in the diagnoistics field. Wait a short period and re-try, ideally with an exponential back-off policy." />
   </concept>
   <concept>
-    <code value="API_SERVICE_UNAVAILABLE" />
+    <code value="SERVICE_UNAVAILABLE" />
     <display value="Service failure - could be temporary" />
     <definition value="There has been a processing failure in the request chain. This could be tranisent failure for a single request, a temporary service issue or maintenance window. Re-send the request after the time specified in the Retry-After header." />
   </concept>
   <concept>
-      <code value="UNABLE_TO_CALL_SERVICE" />
-      <display value="Unable to call service" />
-      <definition value="For a synchronous request, the downstream domain processing has not completed within the configured timeout period." />
-  </concept>
-  <concept>
-    <code value="API_METHOD_NOT_ALLOWED" />
+    <code value="METHOD_NOT_ALLOWED" />
     <display value="Method not allowed" />
     <definition value="The request method (verb) is not permitted on this endpoint." />
   </concept>
   <!-- More specific to how an API operates -->
   <concept>
-      <code value="API_RESOURCE_NOT_FOUND" />
+      <code value="RESOURCE_NOT_FOUND" />
       <display value="Resource not found" />
       <definition value="The URL did not point to an existing resource. This could be a simple incorrect url path, or for some REST APIs this can equate to a person or prescription not existing in that API." />
    </concept>
    <concept>
-      <code value="API_NHS_NUMBER_INVALID" />
+      <code value="NHS_NUMBER_INVALID" />
       <display value="NHS Number pass does not exist" />
       <definition value="NHS Number is intrinsic to many APIs, returning this means that the passed in NHS number is invalid or does not exist" />
    </concept>
@@ -87,19 +83,18 @@
       <definition value="The search parameters are invalid. A description of what exactly is at fault will be added to the display." />
    </concept>
    <concept>
-      <code value="API_MISSING_HEADER" />
+      <code value="MISSING_HEADER" />
       <display value="A required header is missing" />
       <definition value="Inform the caller which required header is missing in the request. Some APIs will return a list of missing headers, others will return the first one. If a list is returned, there will be one issue per error. " />
    </concept>
    <concept>
-      <code value="API_VALIDATION_ERROR" />
+      <code value="VALIDATION_ERROR" />
       <display value="A paremeter or value has resulted in a validation error" />
       <definition value="Returns which parameter or value was incorrect, and why. Some APIs will return a list of errors, others will return the first one. If a list is returned, there will be one issue per error." />
    </concept>
    <concept>
-      <code value="API_MISSING_VALUE" />
+      <code value="MISSING_VALUE" />
       <display value="A required value is missing" />
       <definition value="Inform the caller which value is missing value in the request." />
    </concept>
-
 </CodeSystem>
