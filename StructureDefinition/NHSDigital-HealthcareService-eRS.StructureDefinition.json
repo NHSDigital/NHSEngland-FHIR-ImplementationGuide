@@ -96,18 +96,6 @@
         ]
       },
       {
-        "id": "HealthcareService.providedBy",
-        "path": "HealthcareService.providedBy",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Organization"
-            ]
-          }
-        ]
-      },
-      {
         "id": "HealthcareService.type",
         "path": "HealthcareService.type",
         "max": "1",
