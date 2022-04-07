@@ -1,249 +1,235 @@
 {
-    "resourceType": "StructureDefinition",
-    "id": "eRS-HealthcareService",
-    "url": "https://fhir.nhs.uk/StructureDefinition/eRS-HealthcareService",
-    "version": "1.0.0",
-    "name": "eRSHealthcareService",
-    "title": "eRS Healthcare Service",
-    "status": "active",
-    "date": "2022-03-14",
-    "publisher": "NHS Digital",
-    "contact":  [
+  "resourceType": "StructureDefinition",
+  "id": "eRS-HealthcareService",
+  "url": "https://fhir.nhs.uk/StructureDefinition/eRS-HealthcareService",
+  "version": "1.0.0",
+  "name": "ERSHealthcareService",
+  "title": "eRS Healthcare Service",
+  "status": "active",
+  "date": "2022-03-14",
+  "publisher": "NHS Digital",
+  "contact": [
+    {
+      "name": "Interoperability Team",
+      "telecom": [
         {
-            "name": "Interoperability Team",
-            "telecom":  [
-                {
-                    "system": "email",
-                    "value": "interoperabilityteam@nhs.net",
-                    "use": "work"
-                }
-            ]
+          "system": "email",
+          "value": "interoperabilityteam@nhs.net",
+          "use": "work"
         }
-    ],
-    "description": "This profile defines additional constraints applied to the UK Core HealthcareService profile to support the Electronic Referral Service conformance rules.",
-    "purpose": "This profile is used to describe a single healthcare service or category of services that are provided by an organization at a location, including a virtual location.",
-    "copyright": "Copyright © 2022 NHS Digital",
-    "fhirVersion": "4.0.1",
-    "kind": "resource",
-    "abstract": false,
-    "type": "HealthcareService",
-    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/HealthcareService",
-    "derivation": "constraint",
-    "differential": {
-        "element":  [
-            {
-                "id": "HealthcareService.extension",
-                "path": "HealthcareService.extension",
-                "slicing": {
-                    "discriminator":  [
-                        {
-                            "type": "value",
-                            "path": "url"
-                        }
-                    ],
-                    "rules": "open"
-                },
-                "min": 0
-            },
-            {
-                "id": "HealthcareService.extension:ersHealthcareServiceContact",
-                "path": "HealthcareService.extension",
-                "sliceName": "ersHealthcareServiceContact",
-                "short": "Carries contact details for an eRS HealthcareService",
-                "definition": "Carries contact details for an eRS HealthcareService.",
-                "min": 0,
-                "type":  [
-                    {
-                        "code": "Extension",
-                        "profile":  [
-                            "https://fhir.nhs.uk/StructureDefinition/Extension-eRS-HealthcareServiceContact"
-                        ]
-                    }
-                ]
-            },
-            {
-                "id": "HealthcareService.extension:ersHoursOfOperation",
-                "path": "HealthcareService.extension",
-                "sliceName": "ersHoursOfOperation",
-                "short": "Carries the hours of operation of an eRS health care service",
-                "definition": "Carries the hours of operation of an eRS health care service.",
-                "min": 0,
-                "max": "1",
-                "type":  [
-                    {
-                        "code": "Extension",
-                        "profile":  [
-                            "https://fhir.nhs.uk/StructureDefinition/Extension-eRS-HoursOfOperation"
-                        ]
-                    }
-                ]
-            },
-            {
-                "id": "HealthcareService.extension:ersServiceInstructions",
-                "path": "HealthcareService.extension",
-                "sliceName": "ersServiceInstructions",
-                "short": "Carries the service instructions for an eRS health care service",
-                "definition": "Carries the service instructions for an eRS health care service.",
-                "min": 0,
-                "max": "1",
-                "type":  [
-                    {
-                        "code": "Extension",
-                        "profile":  [
-                            "https://fhir.nhs.uk/StructureDefinition/Extension-eRS-ServiceInstructions"
-                        ]
-                    }
-                ]
-            },
-            {
-                "id": "HealthcareService.identifier.assigner",
-                "path": "HealthcareService.identifier.assigner",
-                "type":  [
-                    {
-                        "code": "Reference",
-                        "targetProfile":  [
-                            "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Organization"
-                        ]
-                    }
-                ]
-            },
-            {
-                "id": "HealthcareService.providedBy",
-                "path": "HealthcareService.providedBy",
-                "type":  [
-                    {
-                        "code": "Reference",
-                        "targetProfile":  [
-                            "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Organization"
-                        ]
-                    }
-                ]
-            },
-            {
-                "id": "HealthcareService.providedBy.identifier.assigner",
-                "path": "HealthcareService.providedBy.identifier.assigner",
-                "type":  [
-                    {
-                        "code": "Reference",
-                        "targetProfile":  [
-                            "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Organization"
-                        ]
-                    }
-                ]
-            },
-            {
-                "id": "HealthcareService.type",
-                "path": "HealthcareService.type",
-                "max": "1",
-                "binding": {
-                    "strength": "extensible",
-                    "valueSet": "https://fhir.nhs.uk/ValueSet/eRS-AppointmentType"
-                }
-            },
-            {
-                "id": "HealthcareService.location",
-                "path": "HealthcareService.location",
-                "min": 1,
-                "type":  [
-                    {
-                        "code": "Reference",
-                        "targetProfile":  [
-                            "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Location"
-                        ]
-                    }
-                ]
-            },
-            {
-                "id": "HealthcareService.location.identifier",
-                "path": "HealthcareService.location.identifier",
-                "slicing": {
-                    "discriminator":  [
-                        {
-                            "type": "value",
-                            "path": "system"
-                        }
-                    ],
-                    "rules": "open"
-                }
-            },
-            {
-                "id": "HealthcareService.location.identifier.assigner",
-                "path": "HealthcareService.location.identifier.assigner",
-                "type":  [
-                    {
-                        "code": "Reference",
-                        "targetProfile":  [
-                            "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Organization"
-                        ]
-                    }
-                ]
-            },
-            {
-                "id": "HealthcareService.location.identifier:serviceLocation",
-                "path": "HealthcareService.location.identifier",
-                "sliceName": "serviceLocation",
-                "min": 1
-            },
-            {
-                "id": "HealthcareService.location.identifier:serviceLocation.system",
-                "path": "HealthcareService.location.identifier.system",
-                "min": 1,
-                "fixedUri": "https://fhir.nhs.uk/Id/ods-site-code"
-            },
-            {
-                "id": "HealthcareService.location.identifier:serviceLocation.value",
-                "path": "HealthcareService.location.identifier.value",
-                "min": 1
-            },
-            {
-                "id": "HealthcareService.name",
-                "path": "HealthcareService.name",
-                "min": 1
-            },
-            {
-                "id": "HealthcareService.coverageArea",
-                "path": "HealthcareService.coverageArea",
-                "type":  [
-                    {
-                        "code": "Reference",
-                        "targetProfile":  [
-                            "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Location"
-                        ]
-                    }
-                ]
-            },
-            {
-                "id": "HealthcareService.coverageArea.identifier.assigner",
-                "path": "HealthcareService.coverageArea.identifier.assigner",
-                "type":  [
-                    {
-                        "code": "Reference",
-                        "targetProfile":  [
-                            "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Organization"
-                        ]
-                    }
-                ]
-            },
-            {
-                "id": "HealthcareService.characteristic",
-                "path": "HealthcareService.characteristic",
-                "binding": {
-                    "strength": "extensible",
-                    "valueSet": "https://fhir.nhs.uk/ValueSet/eRS-RequestFlowType"
-                }
-            },
-            {
-                "id": "HealthcareService.endpoint.identifier.assigner",
-                "path": "HealthcareService.endpoint.identifier.assigner",
-                "type":  [
-                    {
-                        "code": "Reference",
-                        "targetProfile":  [
-                            "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Organization"
-                        ]
-                    }
-                ]
-            }
-        ]
+      ]
     }
+  ],
+  "description": "This profile defines additional constraints applied to the UK Core HealthcareService profile to support the Electronic Referral Service conformance rules.",
+  "purpose": "This profile is used to describe a single healthcare service or category of services that are provided by an organization at a location, including a virtual location.",
+  "copyright": "Copyright © 2022 NHS Digital",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "HealthcareService",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/HealthcareService",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "HealthcareService.extension",
+        "path": "HealthcareService.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 0
+      },
+      {
+        "id": "HealthcareService.extension:ersHealthcareServiceContact",
+        "path": "HealthcareService.extension",
+        "sliceName": "ersHealthcareServiceContact",
+        "short": "Carries contact details for an eRS HealthcareService",
+        "definition": "Carries contact details for an eRS HealthcareService.",
+        "min": 0,
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://fhir.nhs.uk/StructureDefinition/Extension-eRS-HealthcareServiceContact"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "HealthcareService.extension:ersHoursOfOperation",
+        "path": "HealthcareService.extension",
+        "sliceName": "ersHoursOfOperation",
+        "short": "Carries the hours of operation of an eRS health care service",
+        "definition": "Carries the hours of operation of an eRS health care service.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://fhir.nhs.uk/StructureDefinition/Extension-eRS-HoursOfOperation"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "HealthcareService.extension:ersServiceInstructions",
+        "path": "HealthcareService.extension",
+        "sliceName": "ersServiceInstructions",
+        "short": "Carries the service instructions for an eRS health care service",
+        "definition": "Carries the service instructions for an eRS health care service.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://fhir.nhs.uk/StructureDefinition/Extension-eRS-ServiceInstructions"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "HealthcareService.identifier.assigner",
+        "path": "HealthcareService.identifier.assigner",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Organization"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "HealthcareService.providedBy",
+        "path": "HealthcareService.providedBy",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Organization"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "HealthcareService.providedBy.identifier.assigner",
+        "path": "HealthcareService.providedBy.identifier.assigner",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Organization"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "HealthcareService.type",
+        "path": "HealthcareService.type",
+        "max": "1",
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "https://fhir.nhs.uk/ValueSet/eRS-AppointmentType"
+        }
+      },
+      {
+        "id": "HealthcareService.location",
+        "path": "HealthcareService.location",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Location"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "HealthcareService.location.identifier",
+        "path": "HealthcareService.location.identifier",
+        "min": 1
+      },
+      {
+        "id": "HealthcareService.location.identifier.system",
+        "path": "HealthcareService.location.identifier.system",
+        "min": 1,
+        "fixedUri": "https://fhir.nhs.uk/Id/ods-site-code"
+      },
+      {
+        "id": "HealthcareService.location.identifier.value",
+        "path": "HealthcareService.location.identifier.value",
+        "min": 1
+      },
+      {
+        "id": "HealthcareService.location.identifier.assigner",
+        "path": "HealthcareService.location.identifier.assigner",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Organization"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "HealthcareService.name",
+        "path": "HealthcareService.name",
+        "min": 1
+      },
+      {
+        "id": "HealthcareService.coverageArea",
+        "path": "HealthcareService.coverageArea",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Location"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "HealthcareService.coverageArea.identifier.assigner",
+        "path": "HealthcareService.coverageArea.identifier.assigner",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Organization"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "HealthcareService.characteristic",
+        "path": "HealthcareService.characteristic",
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "https://fhir.nhs.uk/ValueSet/eRS-RequestFlowType"
+        }
+      },
+      {
+        "id": "HealthcareService.endpoint.identifier.assigner",
+        "path": "HealthcareService.endpoint.identifier.assigner",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Organization"
+            ]
+          }
+        ]
+      }
+    ]
+  }
 }
