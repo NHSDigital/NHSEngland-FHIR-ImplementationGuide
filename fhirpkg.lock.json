@@ -1,8 +1,8 @@
 {
-  "updated": "2022-03-10T06:54:52.3887464+00:00",
+  "updated": "2022-04-07T11:32:13.202332+01:00",
   "dependencies": {
     "hl7.fhir.r4.core": "4.0.1",
-    "UKCore.Release1.test": "1.2.2-prerelease"
+    "fhir.r4.ukcore.stu1": "0.5.0"
   },
   "missing": {}
 }
