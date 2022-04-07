@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
   "id": "eRS-HealthcareService",
-  "url": "https://fhir.nhs.uk/StructureDefinition/eRS-HealthcareService",
+  "url": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-HealthcareService-eRS",
   "version": "1.0.0",
   "name": "ERSHealthcareService",
   "title": "eRS Healthcare Service",
@@ -27,7 +27,7 @@
   "kind": "resource",
   "abstract": false,
   "type": "HealthcareService",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/HealthcareService",
+  "baseDefinition": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-HealthcareService",
   "derivation": "constraint",
   "differential": {
     "element": [
@@ -96,32 +96,8 @@
         ]
       },
       {
-        "id": "HealthcareService.identifier.assigner",
-        "path": "HealthcareService.identifier.assigner",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Organization"
-            ]
-          }
-        ]
-      },
-      {
         "id": "HealthcareService.providedBy",
         "path": "HealthcareService.providedBy",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Organization"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "HealthcareService.providedBy.identifier.assigner",
-        "path": "HealthcareService.providedBy.identifier.assigner",
         "type": [
           {
             "code": "Reference",
@@ -159,76 +135,12 @@
         "min": 1
       },
       {
-        "id": "HealthcareService.location.identifier.system",
-        "path": "HealthcareService.location.identifier.system",
-        "min": 1,
-        "fixedUri": "https://fhir.nhs.uk/Id/ods-site-code"
-      },
-      {
-        "id": "HealthcareService.location.identifier.value",
-        "path": "HealthcareService.location.identifier.value",
-        "min": 1
-      },
-      {
-        "id": "HealthcareService.location.identifier.assigner",
-        "path": "HealthcareService.location.identifier.assigner",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Organization"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "HealthcareService.name",
-        "path": "HealthcareService.name",
-        "min": 1
-      },
-      {
-        "id": "HealthcareService.coverageArea",
-        "path": "HealthcareService.coverageArea",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Location"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "HealthcareService.coverageArea.identifier.assigner",
-        "path": "HealthcareService.coverageArea.identifier.assigner",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Organization"
-            ]
-          }
-        ]
-      },
-      {
         "id": "HealthcareService.characteristic",
         "path": "HealthcareService.characteristic",
         "binding": {
           "strength": "extensible",
           "valueSet": "https://fhir.nhs.uk/ValueSet/eRS-RequestFlowType"
         }
-      },
-      {
-        "id": "HealthcareService.endpoint.identifier.assigner",
-        "path": "HealthcareService.endpoint.identifier.assigner",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Organization"
-            ]
-          }
-        ]
       }
     ]
   }
