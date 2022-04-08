@@ -22,13 +22,6 @@
         <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationRequest" />
       </constraint>
       <constraint>
-        <key value="eps-cd1" />
-        <severity value="error" />
-        <human value="Extension(controlledDrug) - For schedule 2 or 3 Controlled Drugs, the quantity must be expressed in words" />
-        <expression value="((extension('https://fhir.nhs.uk/StructureDefinition/Extension-DM-ControlledDrug').extension('schedule').value.code='CD2' and  extension('https://fhir.nhs.uk/StructureDefinition/Extension-DM-ControlledDrug').extension('quantityWords').exists()) or (extension('https://fhir.nhs.uk/StructureDefinition/Extension-DM-ControlledDrug').extension('schedule').value.code='CD3' and  extension('https://fhir.nhs.uk/StructureDefinition/Extension-DM-ControlledDrug').extension('quantityWords').exists()) or (extension('https://fhir.nhs.uk/StructureDefinition/Extension-DM-ControlledDrug').extension('schedule').value.code != 'CD2' and extension('https://fhir.nhs.uk/StructureDefinition/Extension-DM-ControlledDrug').extension('schedule').value.code != 'CD3') and extension('https://fhir.nhs.uk/StructureDefinition/Extension-DM-ControlledDrug').exists()) or (extension('https://fhir.nhs.uk/StructureDefinition/Extension-DM-ControlledDrug').exists().not())" />
-        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationRequest" />
-      </constraint>
-      <constraint>
         <key value="eps-5" />
         <severity value="error" />
         <human value="Extension(responsiblePractitioner) - An identifier or resource reference must be provided" />
