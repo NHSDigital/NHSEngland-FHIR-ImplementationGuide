@@ -29,10 +29,12 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <min value="0" />
     </element>
     <element id="Extension.extension:quantityWords">
       <path value="Extension.extension" />
       <sliceName value="quantityWords" />
+      <min value="0" />
       <max value="1" />
     </element>
     <element id="Extension.extension:quantityWords.url">
@@ -49,7 +51,7 @@
     <element id="Extension.extension:schedule">
       <path value="Extension.extension" />
       <sliceName value="schedule" />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
       <binding>
         <strength value="required" />
