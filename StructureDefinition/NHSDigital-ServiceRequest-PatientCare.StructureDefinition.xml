@@ -20,12 +20,12 @@
         </discriminator>
         <rules value="open" />
       </slicing>
-      <min value="0" />
+      <min value="1" />
     </element>
     <element id="ServiceRequest.extension:ERSServiceRequestState">
       <path value="ServiceRequest.extension" />
       <sliceName value="ERSServiceRequestState" />
-      <min value="0" />
+      <min value="1" />
     </element>
     <element id="ServiceRequest.extension:ERSServiceRequestState.extension">
       <path value="ServiceRequest.extension.extension" />
@@ -48,11 +48,6 @@
       <sliceName value="portalLink" />
       <min value="0" />
     </element>
-    <element id="ServiceRequest.extension:serviceRequestPriority">
-      <path value="ServiceRequest.extension" />
-      <sliceName value="serviceRequestPriority" />
-      <min value="0" />
-    </element>
     <element id="ServiceRequest.identifier:UBRN">
       <path value="ServiceRequest.identifier" />
       <sliceName value="UBRN" />
@@ -62,8 +57,16 @@
       <path value="ServiceRequest.priority" />
       <min value="1" />
     </element>
+    <element id="ServiceRequest.subject.identifier">
+      <path value="ServiceRequest.subject.identifier" />
+      <min value="1" />
+    </element>
     <element id="ServiceRequest.authoredOn">
       <path value="ServiceRequest.authoredOn" />
+      <min value="1" />
+    </element>
+    <element id="ServiceRequest.requester.reference">
+      <path value="ServiceRequest.requester.reference" />
       <min value="1" />
     </element>
   </differential>
