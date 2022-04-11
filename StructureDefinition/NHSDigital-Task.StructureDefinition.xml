@@ -115,7 +115,6 @@
     <element id="Task.for">
       <path value="Task.for" />
       <definition value="A reference to the patient the Task is for. This will always be an identifier reference using the Patients NHSNumber.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;for&quot;: {&#xD;&#xA;        &quot;identifier&quot;: {&#xD;&#xA;            &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/nhs-number&quot;,&#xD;&#xA;            &quot;value&quot;: &quot;9446368138&quot;&#xD;&#xA;        }&#xD;&#xA;    },&#xD;&#xA;```" />
-      <comment value="" />
       <min value="1" />
       <constraint>
         <key value="patient-reference" />
