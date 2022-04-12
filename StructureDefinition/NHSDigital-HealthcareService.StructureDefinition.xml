@@ -226,7 +226,6 @@
     <element id="HealthcareService.telecom">
       <path value="HealthcareService.telecom" />
       <definition value="Contact details for the clinic or service. &#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;   &quot;telecom&quot;: [&#xD;&#xA;    {&#xD;&#xA;      &quot;system&quot;: &quot;phone&quot;,&#xD;&#xA;      &quot;value&quot;: &quot;0113 922 4984&quot;,&#xD;&#xA;      &quot;use&quot;: &quot;work&quot;&#xD;&#xA;    },&#xD;&#xA;    {&#xD;&#xA;      &quot;system&quot;: &quot;email&quot;,&#xD;&#xA;      &quot;value&quot;: &quot;directaddress@example.com&quot;,&#xD;&#xA;      &quot;use&quot;: &quot;work&quot;&#xD;&#xA;    }&#xD;&#xA;  ],&#xD;&#xA;```" />
-      <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="HealthcareService.telecom.value">
