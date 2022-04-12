@@ -62,13 +62,6 @@
         <code value="Reference" />
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Organization" />
       </type>
-      <constraint>
-        <key value="nhsd-7" />
-        <severity value="warning" />
-        <human value="providedBy - a display name should be provided" />
-        <expression value="(display.exists())" />
-        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-HealthcareService" />
-      </constraint>
       <mustSupport value="true" />
     </element>
     <element id="HealthcareService.providedBy.identifier">
@@ -202,8 +195,8 @@
       <constraint>
         <key value="nhsd-8" />
         <severity value="error" />
-        <human value="location - An identifier reference plus a display name or resource reference must be provided" />
-        <expression value="(reference.exists() or (identifier.exists() and display.exists()))" />
+        <human value="location - An identifier reference or resource reference must be provided" />
+        <expression value="(reference.exists() or identifier.exists())" />
         <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-HealthcareService" />
       </constraint>
       <mustSupport value="true" />
@@ -226,7 +219,6 @@
     <element id="HealthcareService.telecom">
       <path value="HealthcareService.telecom" />
       <definition value="Contact details for the clinic or service. &#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;   &quot;telecom&quot;: [&#xD;&#xA;    {&#xD;&#xA;      &quot;system&quot;: &quot;phone&quot;,&#xD;&#xA;      &quot;value&quot;: &quot;0113 922 4984&quot;,&#xD;&#xA;      &quot;use&quot;: &quot;work&quot;&#xD;&#xA;    },&#xD;&#xA;    {&#xD;&#xA;      &quot;system&quot;: &quot;email&quot;,&#xD;&#xA;      &quot;value&quot;: &quot;directaddress@example.com&quot;,&#xD;&#xA;      &quot;use&quot;: &quot;work&quot;&#xD;&#xA;    }&#xD;&#xA;  ],&#xD;&#xA;```" />
-      <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="HealthcareService.telecom.value">
