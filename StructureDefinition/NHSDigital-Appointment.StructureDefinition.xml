@@ -33,14 +33,6 @@
     </element>
     <element id="Appointment.identifier">
       <path value="Appointment.identifier" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="system" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <definition value="This records identifiers associated with this appointment concern that are defined by business processes and/or used to refer to it when a direct URL reference to the resource itself is not appropriate (e.g. in CDA documents, or in written / printed documentation)." />
       <mustSupport value="true" />
     </element>
     <element id="Appointment.identifier.system">
@@ -50,18 +42,6 @@
     <element id="Appointment.identifier.value">
       <path value="Appointment.identifier.value" />
       <min value="1" />
-    </element>
-    <element id="Appointment.identifier:providerSlotUSRN">
-      <path value="Appointment.identifier" />
-      <sliceName value="providerSlotUSRN" />
-      <short value="Provider Slot USRN" />
-      <definition value="PAS systems unique reference for the slot provided by the provider (only present when there is a current appointment booking to a Directly Bookable Service)" />
-      <comment value="0...1 (in context of IBS and DBS)&#xD;&#xA;&#xD;&#xA;1...1 (in context of DBS)" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Appointment.identifier:providerSlotUSRN.system">
-      <path value="Appointment.identifier.system" />
-      <fixedUri value="https://fhir.nhs.uk/CodeSystem/unique-slot-reference-number" />
     </element>
     <element id="Appointment.status">
       <path value="Appointment.status" />
