@@ -3,6 +3,7 @@
   <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Task-PatientCare" />
   <name value="NHSDigitalTaskPatientCare" />
   <status value="draft" />
+  <purpose value="Profile on NHSDigital-Task for NHS App/e-RS PatientCare" />
   <fhirVersion value="4.0.1" />
   <kind value="resource" />
   <abstract value="false" />
@@ -29,10 +30,6 @@
     <element id="Task.owner.identifier.system">
       <path value="Task.owner.identifier.system" />
       <fixedUri value="https://fhir.nhs.uk/Id/ers-service" />
-    </element>
-    <element id="Task.restriction">
-      <path value="Task.restriction" />
-      <min value="1" />
     </element>
     <element id="Task.restriction.period">
       <path value="Task.restriction.period" />
