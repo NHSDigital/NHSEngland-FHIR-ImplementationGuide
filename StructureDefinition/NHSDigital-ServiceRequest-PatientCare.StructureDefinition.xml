@@ -11,6 +11,10 @@
   <baseDefinition value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-ServiceRequest" />
   <derivation value="constraint" />
   <differential>
+    <element id="ServiceRequest">
+      <path value="ServiceRequest" />
+      <definition value="A constaint profile for use in NHS Patient Wayfinder" />
+    </element>
     <element id="ServiceRequest.extension">
       <path value="ServiceRequest.extension" />
       <slicing>
@@ -20,7 +24,7 @@
         </discriminator>
         <rules value="open" />
       </slicing>
-      <min value="2" />
+      <min value="3" />
     </element>
     <element id="ServiceRequest.extension:ERSServiceRequestState">
       <path value="ServiceRequest.extension" />
@@ -46,6 +50,11 @@
     <element id="ServiceRequest.extension:portalLink">
       <path value="ServiceRequest.extension" />
       <sliceName value="portalLink" />
+      <min value="1" />
+    </element>
+    <element id="ServiceRequest.extension:serviceRequestPriority">
+      <path value="ServiceRequest.extension" />
+      <sliceName value="serviceRequestPriority" />
       <min value="1" />
     </element>
     <element id="ServiceRequest.identifier:UBRN">

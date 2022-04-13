@@ -11,9 +11,17 @@
   <baseDefinition value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-HealthcareService" />
   <derivation value="constraint" />
   <differential>
+    <element id="HealthcareService">
+      <path value="HealthcareService" />
+      <short value="Constraint profile for use in NHS Patient Wayfinder" />
+    </element>
     <element id="HealthcareService.identifier:ersServiceId">
       <path value="HealthcareService.identifier" />
       <sliceName value="ersServiceId" />
+      <min value="1" />
+    </element>
+    <element id="HealthcareService.providedBy">
+      <path value="HealthcareService.providedBy" />
       <min value="1" />
     </element>
     <element id="HealthcareService.specialty">
