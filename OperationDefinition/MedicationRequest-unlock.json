@@ -26,7 +26,7 @@
     ],
     "affectsState": true,
     "system": false,
-    "type": true,
+    "type": false,
     "instance": true,
     "inputProfile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-Task",
     "outputProfile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-OperationOutcome",
