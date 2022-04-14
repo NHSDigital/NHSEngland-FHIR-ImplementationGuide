@@ -24,6 +24,10 @@
       <type>
         <code value="Coding" />
       </type>
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/eRS-Priority" />
+      </binding>
     </element>
     <element id="Extension.value[x].system">
       <path value="Extension.value[x].system" />
