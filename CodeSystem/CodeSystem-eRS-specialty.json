@@ -3,7 +3,7 @@
     "id": "43e92758-ad4c-4c59-8ae2-de431a59168e",
     "url": "https://fhir.nhs.uk/CodeSystem/eRS-Specialty",
     "version": "1.0.0",
-    "name": "NHSDigitalSpecialty",
+    "name": "NHSDigitaleRSSpecialty",
     "status": "draft",
     "publisher": "NHS Digital",
     "contact": [
@@ -21,7 +21,7 @@
     "description": "eRS Specialty type",
     "copyright": "Copyright © 2017 NHS Digital",
     "caseSensitive": true,
-    "content": "complete",
+    "content": "fragment",
     "concept": [
       {
         "code": "SURGERY_NOT_OTHERWISE_SPECIFIED",
