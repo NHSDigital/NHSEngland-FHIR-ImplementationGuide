@@ -19,7 +19,7 @@
         }
     ],
     "description": "Use this endpoint to lock a MedicationRequest so that it can be fulfilled.",
-    "code": "unlock",
+    "code": "lock",
     "comment": "Only one MedicationRequest can be locked at one time.",
     "resource":  [
         "MedicationRequest"
