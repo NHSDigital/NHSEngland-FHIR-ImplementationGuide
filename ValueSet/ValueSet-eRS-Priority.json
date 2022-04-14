@@ -1,0 +1,31 @@
+{
+    "resourceType": "ValueSet",
+    "id": "31a5995a-449f-4066-8226-09e9cdf6a7bc",
+    "url": "https://fhir.nhs.uk/ValueSet/eRS-Priority",
+    "version": "1.1.0",
+    "name": "eRS Priority",
+    "status": "active",
+    "date": "2021-09-27",
+    "publisher": "NHS Digital",
+    "contact": [
+      {
+        "name": "Interoperability Team",
+        "telecom": [
+          {
+            "system": "email",
+            "value": "interoperabilityteam@nhs.net",
+            "use": "work"
+          }
+        ]
+      }
+    ],
+    "description": "A ValueSet to identify an eRS Priority.",
+    "copyright": "Copyright © 2021 NHS Digital",
+    "compose": {
+      "include": [
+        {
+          "system": "https://fhir.nhs.uk/CodeSystem/eRS-Priority"
+        }
+      ]
+    }
+  }
