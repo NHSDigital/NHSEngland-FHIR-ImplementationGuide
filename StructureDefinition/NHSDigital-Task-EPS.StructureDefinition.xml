@@ -125,10 +125,6 @@
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Bundle-FHIRMessage" />
       </type>
     </element>
-    <element id="Task.focus.identifier">
-      <path value="Task.focus.identifier" />
-      <min value="1" />
-    </element>
     <element id="Task.focus.identifier.system">
       <path value="Task.focus.identifier.system" />
       <min value="1" />

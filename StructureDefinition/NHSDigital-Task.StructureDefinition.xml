@@ -110,6 +110,12 @@
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Bundle-FHIRMessage" />
         <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-MedicationRequest" />
       </type>
+      <constraint>
+        <key value="nhsd-taskfocus" />
+        <severity value="error" />
+        <human value="focus - An identifier reference or resource reference must be provided" />
+        <expression value="(reference.exists() or identifier.exists())" />
+      </constraint>
       <mustSupport value="true" />
     </element>
     <element id="Task.for">
