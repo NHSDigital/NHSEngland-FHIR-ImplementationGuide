@@ -2,7 +2,7 @@
   "resourceType": "ValueSet",
   "id": "a6876ad9-6ac5-431a-980d-b093a07e84d6",
   "url": "https://fhir.nhs.uk/ValueSet/England-task-code",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "name": "EnglandTaskCode",
   "title": "EnglandTaskCode",
   "status": "draft",
@@ -45,6 +45,10 @@
           {
             "code": "182836005",
             "display": "Review of medication"
+          },
+          {
+            "code": "324861000000109",
+            "display": "Review of patient laboratory test report"
           }
         ]
       },
