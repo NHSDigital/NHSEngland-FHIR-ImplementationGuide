@@ -39,7 +39,7 @@
         ]
     },
     "focus": {
-        "reference" : "https://fhir.uhs.nhs.uk/FHIR/ServiceRequest/af155342-c16b-483c-a98d-12a271417152"
+        "reference" : "https://fhir.uhs.nhs.uk/FHIR/DiagnosticReport/af155342-c16b-483c-a98d-12a271417152"
     },
     "for": {
         "identifier": {
