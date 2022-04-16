@@ -1,0 +1,54 @@
+{
+    "resourceType": "Task",
+    "id" : "31aa8607-1262-4c73-a34b-08dafb845aa7",
+    "contained": [
+        {
+          "resourceType": "PractitionerRole",
+          "id": "requester",
+          "practitioner": {
+            "identifier": {
+              "system": "https://fhir.hl7.org.uk/Id/gmc-number",
+              "value": "C9999998"
+            },
+            "display": "Dr A N OTHER"
+          },
+          "organization": {
+            "identifier": {
+              "system": "https://fhir.nhs.uk/Id/ods-organization-code",
+              "value": "RHM"
+            },
+            "display": "UNIVERSITY HOSPITAL SOUTHAMPTON NHS FOUNDATION TRUST"
+          }
+        }
+      ],
+    "status": "requested",
+    "intent": "order",
+    "identifier": [
+        {
+            "system": "https://tools.ietf.org/html/rfc4122",
+            "value": "31aa8607-1262-4c73-a34b-08dafb845aa7"
+        }
+    ],
+    "code": {
+        "coding": [
+            {
+                "system": "http://snomed.info/sct",
+                "code": "324861000000109",
+                "display": "Review of patient laboratory test report"
+            }
+        ]
+    },
+    "focus": {
+        "reference" : "https://fhir.uhs.nhs.uk/FHIR/ServiceRequest/af155342-c16b-483c-a98d-12a271417152",
+    },
+    "for": {
+        "identifier": {
+            "system": "https://fhir.nhs.uk/Id/nhs-number",
+            "value": "9446368138"
+        }
+    },
+    "requester": {
+        "reference": "#requester"
+    },
+    "authoredOn": "2022-04-16T12:00:00+00:00"
+}
