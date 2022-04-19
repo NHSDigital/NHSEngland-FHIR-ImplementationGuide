@@ -1,0 +1,253 @@
+{
+    "resourceType": "CodeSystem",
+    "id": "NHSDigital-http-error-codes",
+    "url": "https://fhir.nhs.uk/CodeSystem/http-error-codes",
+    "version": "1.0.0",
+    "name": "httperrorcodes",
+    "status": "active",
+    "date": "2022-01-25T00:00:00+00:00",
+    "publisher": "NHS Digital",
+    "contact":  [
+        {
+            "name": "Interoperability Team",
+            "telecom":  [
+                {
+                    "system": "email",
+                    "value": "interoperabilityteam@nhs.net",
+                    "use": "work"
+                }
+            ]
+        }
+    ],
+    "description": "A CodeSystem that identifies the HTTP Error Codes in response to a request.",
+    "copyright": "Copyright © 2022 NHS Digital",
+    "caseSensitive": true,
+    "content": "complete",
+    "concept":  [
+        {
+            "code": "SEND_BAD_REQUEST",
+            "display": "400: The API was unable to process the request.",
+            "definition": "The API has given a 400 response to the Senders request."
+        },
+        {
+            "code": "REC_BAD_REQUEST",
+            "display": "400: The Receiver was unable to process the request.",
+            "definition": "The Receiver has given a 400 response to the Senders request."
+        },
+        {
+            "code": "PROXY_BAD_REQUEST",
+            "display": "400: The Proxy was unable to process the request.",
+            "definition": "The Proxy has given a 400 response internally to the Senders request."
+        },
+        {
+            "code": "BAD_REQUEST",
+            "display": "400: The Server was unable to process the request.",
+            "definition": "The Server has given a 400 response to the Senders request."
+        },
+        {
+            "code": "SEND_UNAUTHORIZED",
+            "display": "401: The API deemed you unauthorized to make this request.",
+            "definition": "The API has given a 401 response to the Senders request."
+        },
+        {
+            "code": "REC_UNAUTHORIZED",
+            "display": "401: The Receiver deemed you unauthorized to make this request.",
+            "definition": "The Receiver has given a 401 response to the Senders request."
+        },
+        {
+            "code": "PROXY_UNAUTHORIZED",
+            "display": "401: The Proxy deemed you unauthorized to make this request.",
+            "definition": "The Proxy has given a 401 response internally to the Senders request."
+        },
+        {
+            "code": "UNAUTHORIZED",
+            "display": "401: The Server deemed you unauthorized to make this request.",
+            "definition": "The Server has given a 401 response to the Senders request."
+        },
+        {
+            "code": "SEND_FORBIDDEN",
+            "display": "403: Failed to authenticate with the API.",
+            "definition": "The API has given a 403 response to the Senders request."
+        },
+        {
+            "code": "REC_FORBIDDEN",
+            "display": "403: Failed to authenticate with the Receiver.",
+            "definition": "The Receiver has given a 403 response to the Senders request."
+        },
+        {
+            "code": "PROXY_FORBIDDEN",
+            "display": "403: Failed to authenticate with the Receiver.",
+            "definition": "The Proxy has given a 403 response to the Senders request."
+        },
+        {
+            "code": "FORBIDDEN",
+            "display": "403: Failed to Authenticate with the Server.",
+            "definition": "The Server has given a 403 response to the Senders request."
+        },
+        {
+            "code": "PROXY_NOT_FOUND",
+            "display": "404: The Proxy was unable to find the specified resource.",
+            "definition": "The Proxy has given a 404 response to the Senders request."
+        },
+        {
+            "code": "REC_NOT_FOUND",
+            "display": "404: The Receiver was unable to find the specified resource.",
+            "definition": "The Receiver has given a 404 response to the Senders request."
+        },
+        {
+            "code": "NOT_FOUND",
+            "display": "404: The Server was unable to find the specified resource.",
+            "definition": "The Server has given a 404 response to the Senders request."
+        },
+        {
+            "code": "SEND_METHOD_NOT_ALLOWED",
+            "display": "405: This API doesnt allow this method.",
+            "definition": "The API has given a 405 response to the Senders request."
+        },
+        {
+            "code": "REC_METHOD_NOT_ALLOWED",
+            "display": "405: The Receiver doesnt allow this method.",
+            "definition": "The Receiver has given a 405 response to the Senders request."
+        },
+        {
+            "code": "PROXY_METHOD_NOT_ALLOWED",
+            "display": "405: The Proxy doesnt allow this method.",
+            "definition": "The Proxy has given a 405 response to the Senders request."
+        },
+        {
+            "code": "METHOD_NOT_ALLOWED",
+            "display": "405: This method is not allowed.",
+            "definition": "The Server has given a 405 response to the Senders request."
+        },
+        {
+            "code": "SEND_NOT_ACCEPTABLE",
+            "display": "406: Senders message had an incorrect content type defined for a response.",
+            "definition": "The API has given a 406 response to the Senders request."
+        },
+        {
+            "code": "NOT_ACCEPTABLE",
+            "display": "406: Senders message had an incorrect content type defined for a response.",
+            "definition": "The Server has given a 406 response to the Senders request."
+        },
+        {
+            "code": "REC_TIMEOUT",
+            "display": "408: The request timed out to the receiver.",
+            "definition": "The Receiver has given a 408 resonse to the Senders request"
+        },
+        {
+            "code": "PROXY_TIMEOUT",
+            "display": "408: The request timed out internally.",
+            "definition": "The Proxy has given a 408 response internally to the Senders request."
+        },
+        {
+            "code": "TIMEOUT",
+            "display": "408: The request timed out.",
+            "definition": "The Server has given a 408 response to the Senders request."
+        },
+        {
+            "code": "SEND_CONFLICT",
+            "display": "409: The API identified a conflict.",
+            "definition": "The API has given a 409 response to the Senders request."
+        },
+        {
+            "code": "REC_CONFLICT",
+            "display": "409: The Receiver identified a conflict.",
+            "definition": "The Receiver has given a 409 response to the Senders request."
+        },
+        {
+            "code": "PROXY_CONFLICT",
+            "display": "409: The Proxy identified a conflict.",
+            "definition": "The Proxy has given a 409 response to the Senders request."
+        },
+        {
+            "code": "CONFLICT",
+            "display": "409: The Server identified a conflict.",
+            "definition": "The Server has given a 409 response to the Senders request."
+        },
+        {
+            "code": "SEND_UNPROCESSABLE_ENTITY",
+            "display": "422: Message was not malformed but deemed unprocessable by the API.",
+            "definition": "The API has given a 422 response to the Senders request."
+        },
+        {
+            "code": "REC_UNPROCESSABLE_ENTITY",
+            "display": "422: Message was not malformed but deemed unprocessable by the Receiver.",
+            "definition": "The Receiver has given a 422 response to the Senders request."
+        },
+        {
+            "code": "PROXY_UNPROCESSABLE_ENTITY",
+            "display": "422: Message was not malformed but deemed unprocessable by the Proxy.",
+            "definition": "The Proxy has given a 422 response to the Senders request."
+        },
+        {
+            "code": "UNPROCESSABLE_ENTITY",
+            "display": "422: Message was not malformed but deemed unprocessable by the server.",
+            "definition": "The Server has given a 422 response to the Senders request."
+        },
+        {
+            "code": "PROXY_TOO_MANY_REQUESTS",
+            "display": "429: Too many requests have been made by this source to the Proxy in a given amount of time.",
+            "definition": "The Proxy has given a 429 response internally to the Senders request."
+        },
+        {
+            "code": "SEND_TOO_MANY_REQUESTS",
+            "display": "429: Too many requests have been made by this source to the API in a given amount of time.",
+            "definition": "The API has given a 429 response to the Senders request."
+        },
+        {
+            "code": "TOO_MANY_REQUESTS",
+            "display": "429: Too many requests have been made by this source in a given amount of time.",
+            "definition": "The Server has given a 429 response to the Senders request."
+        },
+        {
+            "code": "REC_SERVER_ERROR",
+            "display": "500: The Receiver has encountered an error processing the request.",
+            "definition": "The Receiver has given a 500 response to the Senders request."
+        },
+        {
+            "code": "PROXY_SERVER_ERROR",
+            "display": "500: The Proxy has encountered an error processing the request.",
+            "definition": "The Proxy has given a 500 response to the Senders request."
+        },
+        {
+            "code": "SERVER_ERROR",
+            "display": "500: The Server has encountered an error processing the request.",
+            "definition": "The Server has given a 500 response to the Senders request."
+        },
+        {
+            "code": "SEND_NOT_IMPLEMENTED",
+            "display": "501:The Request was not recognized by the API.",
+            "definition": "The API has given a 501 response to the Senders request."
+        },
+        {
+            "code": "REC_NOT_IMPLEMENTED",
+            "display": "501: The Request was not recognized by the Receiver.",
+            "definition": "The Receiver has given a 501 response to the Senders request."
+        },
+        {
+            "code": "PROXY_NOT_IMPLEMENTED",
+            "display": "501: The Request was not recognized by the Proxy.",
+            "definition": "The Proxy has given a 501 response to the Senders request."
+        },
+        {
+            "code": "NOT_IMPLEMENTED",
+            "display": "501: The Request was not recognized by the server.",
+            "definition": "The Server has given a 501 response to the Senders request."
+        },
+        {
+            "code": "PROXY_UNAVAILABLE",
+            "display": "503: An internal component is unavailable",
+            "definition": "The Proxy has given a 503 response internally to the Senders request."
+        },
+        {
+            "code": "REC_UNAVAILABLE",
+            "display": "503: The Receiver is currently unavailable.",
+            "definition": "The Receiver has given a 503 response to the Senders request."
+        },
+        {
+            "code": "UNAVAILABLE",
+            "display": "503: The Server is currently unavailable.",
+            "definition": "The Receiver has given a 503 response to the Senders request."
+        }
+    ]
+}
