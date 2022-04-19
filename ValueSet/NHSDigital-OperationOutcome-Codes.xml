@@ -19,5 +19,9 @@
             <system value="https://fhir.nhs.uk/CodeSystem/NHSD-API-ErrorOrWarningCode"/>
             <version value="0.1.0"/>
         </include>
+        <include>
+            <system value="https://fhir.nhs.uk/CodeSystem/http-error-codes"/>
+            <version value="1.0.0"/>
+        </include>
     </compose>
 </ValueSet>
