@@ -151,6 +151,10 @@
       </type>
       <mustSupport value="true" />
     </element>
+    <element id="Claim.provider.reference">
+      <path value="Claim.provider.reference" />
+      <min value="1" />
+    </element>
     <element id="Claim.provider.identifier.system">
       <path value="Claim.provider.identifier.system" />
       <min value="1" />

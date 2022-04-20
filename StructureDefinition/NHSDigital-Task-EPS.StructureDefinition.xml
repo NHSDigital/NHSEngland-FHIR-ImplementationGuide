@@ -97,10 +97,6 @@
       <path value="Task.businessStatus.coding.display" />
       <min value="1" />
     </element>
-    <element id="Task.code">
-      <path value="Task.code" />
-      <min value="1" />
-    </element>
     <element id="Task.code.coding">
       <path value="Task.code.coding" />
       <min value="1" />
@@ -144,6 +140,10 @@
         <code value="Reference" />
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole-MinimalPlusTelecom" />
       </type>
+    </element>
+    <element id="Task.requester.reference">
+      <path value="Task.requester.reference" />
+      <min value="1" />
     </element>
     <element id="Task.owner">
       <path value="Task.owner" />
