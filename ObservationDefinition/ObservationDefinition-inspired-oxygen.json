@@ -1,17 +1,12 @@
 {
   "resourceType": "ObservationDefinition",
-  "id": "snomed-871552002",
+  "id": "snomed-371825009",
   "code": {
     "coding": [
       {
         "system": "http://snomed.info/sct",
-        "code": "50373000",
-        "display": "Body height measure"
-      },
-      {
-        "system": "http://loinc.org",
-        "code": "8302-2",
-        "display": "Body height"
+        "code": "371825009",
+        "display": "Patient on oxygen"
       }
     ]
   },
@@ -20,8 +15,8 @@
       "coding": [
         {
           "system": "http://unitsofmeasure.org",
-          "code": "cm",
-          "display": "centimeter"
+          "code": "L/min",
+          "display": "liter per minute"
         }
       ]
     }
