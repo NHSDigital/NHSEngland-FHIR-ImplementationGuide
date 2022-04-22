@@ -94,7 +94,7 @@
       <definition value="Inform the caller which value is missing value in the request. Recommend using HTTP Status Code 400" />
    </concept>
    <concept>
-      <code value="NOT_ACCEPTABLE " />
+      <code value="NOT_ACCEPTABLE" />
       <display value="Compatible content was not available" />
       <definition value="The request content string did not result in a matching content type that could be returned. If an API version was requested and it is invalid the message should make that clear. Recommend using HTTP Status Code 406" />
    </concept>
