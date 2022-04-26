@@ -1,0 +1,14 @@
+{
+	"resourceType": "SearchParameter",
+	"url": "https://fhir.nhs.uk/SearchParameter/ObservationDefinition-code",
+	"id": "381e4145-ba5a-4918-87e2-a871c9d54a7e",
+	"name": "observationDefinitionCode",
+	"description": "How to search by code in FHIR ObservationDefinition",
+	"base": [ "ObservationDefinition" ],
+	"status": "active",
+	"code": "code",
+	"type": "token",
+	"expression": "ObservationDefinition.code",
+	"xpathUsage": "normal",
+	"xpath" : "f:ObservationDefinition/f:code"
+}
