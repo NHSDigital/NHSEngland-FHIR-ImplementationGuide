@@ -64,6 +64,9 @@
             "display": "Mark the focal resource as no longer active"
           }
         ]
+      },
+      {
+        "system": "https://fhir.nhs.uk/CodeSystem/Workflow-Code"
       }
     ]
   }
