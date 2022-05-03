@@ -1,0 +1,67 @@
+{
+    "resourceType": "Task",
+    "id": "148e61e9-c0ab-4860-9165-893608222ee5",
+    "extension": [
+        {
+            "url" : "https://fhir.nhs.uk/StructureDefinition/Extension-Provenance-agent",
+            "valueReference" : {
+                "identifier": {
+                    "system": "https://fhir.nhs.uk/Id/sds-role-profile-id",
+                    "value": "100102238986"
+                }
+            }
+        }
+    ],
+    "contained": [
+        {
+          "resourceType": "PractitionerRole",
+          "id": "requester",
+          "practitioner": {
+            "identifier": {
+              "system": "https://fhir.nhs.uk/Id/sds-user-id",
+              "value": "0987654321"
+            }
+          },
+          "organization": {
+            "identifier": {
+              "system": "https://fhir.nhs.uk/Id/ods-organization-code",
+              "value": "RR8"
+            },
+            "display": "LEEDS TEACHING HOSPITALS NHS TRUST"
+          }
+        }
+      ],
+    "identifier": [
+        {
+            "system": "https://tools.ietf.org/html/rfc4122",
+            "value": "148e61e9-c0ab-4860-9165-893608222ee5"
+        }
+    ],
+    "status": "completed",
+    "intent": "order",
+    "code": {
+        "coding": [
+            {
+                "system": "http://snomed.info/sct",
+                "code": "15081005",
+                "display": "Pulmonary rehabilitation"
+            }
+        ]
+    },
+    "for": {
+        "identifier": {
+            "system": "https://fhir.nhs.uk/Id/nhs-number",
+            "value": "9446368138"
+        }
+    },
+    "owner": {
+        "identifier": {
+            "system": "https://fhir.nhs.uk/Id/ods-organization-code",
+            "value": "RR8"
+        }
+    },
+    "requester": {
+        "reference" : "#requester"
+    },
+    "authoredOn": "2021-10-09T12:00:00+00:00"
+}
