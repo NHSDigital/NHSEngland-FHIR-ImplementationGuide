@@ -32,38 +32,53 @@
                     }
                 ],
                 "status": "final",
-                "type": {
-                    "coding": [
-                        {
-                            "system": "http://snomed.info/sct",
-                            "code": "715311000000107",
-                            "display": "Notification administration"
-                        }
-                    ]
-                },
+                "type": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://snomed.info/sct",
+                                "code": "715311000000107",
+                                "display": "Notification administration"
+                            }
+                        ]
+                    }
+                ],
                 "date": "2021-10-09T12:00:00+00:00",
                 "subject": {
-                    "reference" : "urn:uuid:52a3f575-11d1-4349-aae9-1d2c7f42ef60",
+                    "reference": "urn:uuid:52a3f575-11d1-4349-aae9-1d2c7f42ef60",
                     "identifier": {
                         "system": "https://fhir.nhs.uk/Id/nhs-number",
                         "value": "9000000009"
                     }
                 },
-                "author" :"#author",
-                "title" : "Patient Registration Notification",
-                "section" : [
+                "author": [
                     {
-                        "text" : "Some html for the patient",
-                        "entry" : {
-                            "reference": "urn:uuid:52a3f575-11d1-4349-aae9-1d2c7f42ef60"
-                        }
+                        "reference": "#author"
+                    }
+                ],
+                "title": "Patient Registration Notification",
+                "section": [
+                    {
+                        "text": {
+                            "status": "generated",
+                            "div": "Some html for the patient"
+                        },
+                        "entry": [
+                            {
+                                "reference": "urn:uuid:52a3f575-11d1-4349-aae9-1d2c7f42ef60"
+                            }
+                        ]
                     },
                     {
-                        "text" : "Some html for the task. Please register the patient but I'm a record event not a request",
-                        "entry" : {
-                            
-                            "reference": "urn:uuid:ea7221b8-3cc0-4b11-bc95-585b056b5428"
-                        }
+                        "text": {
+                            "status": "generated",
+                            "div": "Some html for the task. Please register the patient but I'm a record event not a request"
+                        },
+                        "entry": [
+                            {
+                                "reference": "urn:uuid:ea7221b8-3cc0-4b11-bc95-585b056b5428"
+                            }
+                        ]
                     }
                 ]
             }
@@ -89,7 +104,14 @@
                                 "value": "X2601"
                             },
                             "display": "NHS Digital"
-                        }
+                        },
+                        "telecom": [
+                            {
+                                "system": "phone",
+                                "use": "work",
+                                "value": "01234567890"
+                            }
+                        ]
                     }
                 ],
                 "identifier": [
