@@ -37,8 +37,10 @@
             }
         ]
     },
+    "focus" : {
+      "reference" : "https://api.england.nhs.uk//personnel-demographics/FHIR/R4/9000000009"
+    },
     "for": {
-        "reference" : "https://api.england.nhs.uk//personnel-demographics/FHIR/R4/9000000009",
         "identifier": {
             "system": "https://fhir.nhs.uk/Id/nhs-number",
             "value": "9000000009"
