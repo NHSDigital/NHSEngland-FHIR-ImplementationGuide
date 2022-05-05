@@ -1,0 +1,90 @@
+{
+    "resourceType": "OperationDefinition",
+    "id": "03869d7a-48f7-4ecb-b285-cfa8296a6fca",
+    "meta": {
+        "lastUpdated": "2022-05-05T09:29:23+11:00"
+    },
+    "url": "https://fhir.nhs.uk/OperationDefinition/patient-registration",
+    "version": "4.0.1",
+    "name": "patientRegistration",
+    "status": "draft",
+    "kind": "operation",
+    "date": "2022-05-05T09:29:23+11:00",
+    "publisher": "NHS Digital",
+    "contact":  [
+        {
+            "telecom":  [
+                {
+                    "system": "email",
+                    "value": "interoperabilityteam@nhs.net"
+                }
+            ]
+        }
+    ],
+    "description": "This is for demonstration purposes only and MUST not be used operationally.",
+    "code": "release",
+    "comment": "Patient Registration options example of a custom operation",
+    "affectsState": true,
+    "system": true,
+    "type": false,
+    "instance": false,
+    "outputProfile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-OperationOutcome",
+    "parameter":  [
+        {
+            "name": "for",
+            "use": "in",
+            "min": 1,
+            "max": "1",
+            "documentation": "The NHS Number of the patient being registered.",
+            "type": "Identifier"
+        },
+        {
+            "name": "owner",
+            "use": "in",
+            "min": 1,
+            "max": "1",
+            "documentation": "The ODS code of the GP Surgery being asked to register the patient",
+            "type": "Identifier"
+        },
+        {
+            "name": "status",
+            "use": "in",
+            "min": 0,
+            "max": "1",
+            "documentation": "Fixed value of `requested`. Status from ValueSet http://hl7.org/fhir/valueset-task-status.html",
+            "type": "code"
+        },
+        {
+            "name": "authoredOn",
+            "use": "in",
+            "min": 1,
+            "max": "1",
+            "documentation": "date time the request was authored",
+            "type": "dateTime"
+        },
+        {
+            "name": "requester",
+            "use": "in",
+            "min": 1,
+            "max": "1",
+            "documentation": "The professional and ODS code of the requester (ODS code may be sufficient)",
+            "type": "PractitionerRole"
+        },
+        {
+            "name": "patient",
+            "use": "in",
+            "min": 1,
+            "max": "1",
+            "documentation": "The updated Patient resource to be used to register the Patient. GP Suppliers MUST update PDS with these details",
+            "type": "Patient"
+        },
+        {
+            "name": "return",
+            "use": "out",
+            "min": 1,
+            "max": "1",
+            "documentation": "The outcome of the operation",
+            "type": "OperationOutcome"
+        }
+    ]
+}

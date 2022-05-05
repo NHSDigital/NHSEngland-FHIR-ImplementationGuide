@@ -14,7 +14,7 @@
         <code value="document" />
         <display value="Document" />
     </eventCoding>
-    <description value="Used to exchange a clinical document. One of FHIR Binary or FHIR Bundle (type=document) is required."/>
+    <description value="Used to exchange a clinical document. One of FHIR Binary or FHIR Bundle (type=document) is required. If a Binary is supplied a DocumentReference MUST also be supplied."/>
     <category value="consequence" />
     <focus>
         <code value="DocumentReference" />

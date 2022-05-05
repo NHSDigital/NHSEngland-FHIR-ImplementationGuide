@@ -9,7 +9,7 @@
     <compose>
         <include>
             <system value="https://fhir.nhs.uk/CodeSystem/message-event" />
-            <version value="1.0.17" />
+            <version value="1.0.18" />
         </include>
         <include>
             <system value="https://fhir.nhs.uk/CodeSystem/message-event-servicerequest" />
@@ -21,11 +21,7 @@
         <timestamp value="2022-01-01T09:37:24+00:00"/>
         <parameter>
             <name value="version"/>
-            <valueUri value="https://fhir.nhs.uk/CodeSystem/message-event|1.0.17"/>
-        </parameter>
-        <parameter>
-            <name value="count"/>
-            <valueInteger value="2147483647"/>
+            <valueUri value="https://fhir.nhs.uk/CodeSystem/message-event|1.0.18"/>
         </parameter>
         <parameter>
             <name value="offset"/>
@@ -120,6 +116,11 @@
             <system value="https://fhir.nhs.uk/CodeSystem/message-event-servicerequest"/>
             <code value="booking-response" />
             <display value="Booking Request - Response" />
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/message-event-servicerequest"/>
+            <code value="unsolicited-action" />
+            <display value="Unsolicited actions" />
         </contains>
     </expansion>
 </ValueSet>
