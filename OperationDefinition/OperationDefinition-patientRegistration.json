@@ -22,7 +22,7 @@
         }
     ],
     "description": "This is for demonstration purposes only and MUST not be used operationally.",
-    "code": "release",
+    "code": "patient-registration",
     "comment": "Patient Registration options example of a custom operation",
     "affectsState": true,
     "system": true,
@@ -51,7 +51,7 @@
             "use": "in",
             "min": 0,
             "max": "1",
-            "documentation": "Fixed value of `requested`. Status from ValueSet http://hl7.org/fhir/valueset-task-status.html",
+            "documentation": "`requested` for the initial request. Status from ValueSet http://hl7.org/fhir/valueset-task-status.html",
             "type": "code"
         },
         {
