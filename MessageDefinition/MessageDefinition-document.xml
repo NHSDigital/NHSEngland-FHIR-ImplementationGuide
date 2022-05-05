@@ -19,7 +19,7 @@
     <focus>
         <code value="DocumentReference" />
         <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-DocumentReference" />
-        <min value="0" />
+        <min value="1" />
         <max value="*" />
     </focus>
     <focus>

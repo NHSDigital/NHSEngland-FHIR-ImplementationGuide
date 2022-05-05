@@ -1,9 +1,9 @@
 {
     "resourceType": "Bundle",
-    "id": "b4396f94-578b-42cd-b044-2c417839f969",
+    "id": "b0654f81-754a-4d3d-a15e-62ad7a2a21f1",
     "identifier": {
         "system": "https://tools.ietf.org/html/rfc4122",
-        "value": "b4396f94-578b-42cd-b044-2c417839f969"
+        "value": "b0654f81-754a-4d3d-a15e-62ad7a2a21f1"
     },
     "type": "document",
     "timestamp": "2021-01-07T15:13:00+00:00",
@@ -61,7 +61,7 @@
                     {
                         "text": {
                             "status": "generated",
-                            "div": "Some html for the patient"
+                            "div": "This is a copy of the patient demographics entered by the patient. This should be an unstructured html view of the Patient resource which is referenced in the html section below."
                         },
                         "entry": [
                             {
@@ -72,7 +72,7 @@
                     {
                         "text": {
                             "status": "generated",
-                            "div": "Some html for the task. Please register the patient but I'm a record event not a request"
+                            "div": "This should be an unstructured html rendering of the FHIR Task resrouce which is referenced via the entry below. Register the patient but I'm a record event not a request"
                         },
                         "entry": [
                             {
