@@ -1,5 +1,8 @@
 {
     "resourceType": "Bundle",
+    "meta": {
+        "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-Bundle-FHIRDocument"
+    },
     "id": "b0654f81-754a-4d3d-a15e-62ad7a2a21f1",
     "identifier": {
         "system": "https://tools.ietf.org/html/rfc4122",
@@ -12,6 +15,9 @@
             "fullUrl": "urn:uuid:844ebe20-78f0-4d77-8890-44d588717ca9",
             "resource": {
                 "resourceType": "Composition",
+                "meta": {
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-Composition"
+                },
                 "contained": [
                     {
                         "resourceType": "PractitionerRole",
@@ -156,6 +162,7 @@
             "fullUrl": "urn:uuid:52a3f575-11d1-4349-aae9-1d2c7f42ef60",
             "resource": {
                 "resourceType": "Patient",
+                
                 "id": "52a3f575-11d1-4349-aae9-1d2c7f42ef60",
                 "meta": {
                     "versionId": "2",
@@ -165,7 +172,8 @@
                             "code": "U",
                             "display": "unrestricted"
                         }
-                    ]
+                    ],
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-Composition"
                 },
                 "extension": [
                     {
