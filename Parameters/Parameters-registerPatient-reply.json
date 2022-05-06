@@ -1,0 +1,55 @@
+{
+    "resourceType": "Parameters",
+    "id": "39b6ee37-8d23-4c3b-9ee1-fbfdcb025304",
+    "parameter": [
+        {
+            "name": "identifier",
+            "valueIdentifier": {
+                "system": "https://tools.ietf.org/html/rfc4122",
+                "value": "61673d7e-fc49-4ad0-a427-19089094621d"
+            }
+        },
+        {
+            "name": "for",
+            "valueIdentifier": {
+                "system": "https://fhir.nhs.uk/Id/nhs-number",
+                "value": "9000000009"
+            }
+        },
+        {
+            "name": "owner",
+            "valueIdentifier": {
+                "system": "https://fhir.nhs.uk/Id/ods-organization-code",
+                "value": "B12345"
+            }
+        },
+        {
+            "name": "status",
+            "valueCode": "accepted"
+        },
+        {
+            "name": "authoredOn",
+            "valueDateTime": "2021-11-16T12:00:00+00:00"
+        },
+        {
+            "name": "requester",
+            "resource": {
+                "resourceType": "PractitionerRole",
+                "id": "requester",
+                "practitioner": {
+                    "identifier": {
+                        "system": "https://fhir.nhs.uk/Id/sds-user-id",
+                        "value": "6543210987"
+                    },
+                    "display": "Mr Practice Admin"
+                },
+                "organization": {
+                    "identifier": {
+                        "system": "https://fhir.nhs.uk/Id/ods-organization-code",
+                        "value": "B12345"
+                    }
+                }
+            }
+        }
+    ]
+}
