@@ -1,0 +1,59 @@
+{
+  "resourceType": "Task",
+  "id": "61673d7e-fc49-4ad0-a427-19089094621d",
+  "contained": [
+    {
+      "resourceType": "PractitionerRole",
+      "id": "requester",
+      "practitioner": {
+        "identifier": {
+          "system": "https://fhir.nhs.uk/Id/sds-user-id",
+          "value": "0987654321"
+        }
+      },
+      "organization": {
+        "identifier": {
+          "system": "https://fhir.nhs.uk/Id/ods-organization-code",
+          "value": "X2601"
+        },
+        "display": "NHS Digital"
+      }
+    }
+  ],
+  "identifier": [
+    {
+      "system": "https://tools.ietf.org/html/rfc4122",
+      "value": "61673d7e-fc49-4ad0-a427-19089094621d"
+    }
+  ],
+  "status": "accepted",
+  "intent": "order",
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "184047000",
+        "display": "Patient registration"
+      }
+    ]
+  },
+  "focus": {
+    "reference": "https://api.england.nhs.uk//personnel-demographics/FHIR/R4/9000000009"
+  },
+  "for": {
+    "identifier": {
+      "system": "https://fhir.nhs.uk/Id/nhs-number",
+      "value": "9000000009"
+    }
+  },
+  "owner": {
+    "identifier": {
+      "system": "https://fhir.nhs.uk/Id/ods-organization-code",
+      "value": "B12345"
+    }
+  },
+  "requester": {
+    "reference": "#requester"
+  },
+  "authoredOn": "2021-10-09T12:00:00+00:00"
+}
