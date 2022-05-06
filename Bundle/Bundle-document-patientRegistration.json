@@ -1,8 +1,5 @@
 {
     "resourceType": "Bundle",
-    "meta": {
-        "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-Bundle-FHIRDocument"
-    },
     "id": "b0654f81-754a-4d3d-a15e-62ad7a2a21f1",
     "identifier": {
         "system": "https://tools.ietf.org/html/rfc4122",
