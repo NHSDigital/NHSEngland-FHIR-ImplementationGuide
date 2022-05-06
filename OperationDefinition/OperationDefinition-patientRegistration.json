@@ -11,9 +11,9 @@
     "kind": "operation",
     "date": "2022-05-05T09:29:23+11:00",
     "publisher": "NHS Digital",
-    "contact":  [
+    "contact": [
         {
-            "telecom":  [
+            "telecom": [
                 {
                     "system": "email",
                     "value": "interoperabilityteam@nhs.net"
@@ -25,11 +25,14 @@
     "code": "patient-registration",
     "comment": "Patient Registration options example of a custom operation",
     "affectsState": true,
-    "system": true,
-    "type": false,
+    "resource": [
+        "Patient"
+    ],
+    "system": false,
+    "type": true,
     "instance": false,
     "outputProfile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-OperationOutcome",
-    "parameter":  [
+    "parameter": [
         {
             "name": "for",
             "use": "in",
