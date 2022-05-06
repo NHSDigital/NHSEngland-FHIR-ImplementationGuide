@@ -1,6 +1,6 @@
 <MessageDefinition xmlns="http://hl7.org/fhir">
     <id value="df720288-723e-480e-92de-83f9376ce32b" />
-    <url value="https://fhir.nhs.uk/MessageDefinition/unsolicited-actions" />
+    <url value="https://fhir.nhs.uk/MessageDefinition/unsolicited-action" />
     <identifier>
         <system value="https://tools.ietf.org/html/rfc4122" />
         <value value="df720288-723e-480e-92de-83f9376ce32b" />
