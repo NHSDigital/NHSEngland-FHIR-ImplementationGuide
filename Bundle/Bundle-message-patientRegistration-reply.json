@@ -53,7 +53,8 @@
                     "endpoint": "urn:nhs-uk:addressing:mesh:Y90638OT002"
                 },
                 "response": {
-                    "identifier": "b4396f94-578b-42cd-b044-2c417839f969"
+                    "identifier": "b4396f94-578b-42cd-b044-2c417839f969",
+                    "code":"ok"
                 },
                 "focus": [
                     {
