@@ -15,7 +15,7 @@
                 "contained": [
                     {
                         "resourceType": "PractitionerRole",
-                        "id": "requester",
+                        "id": "sender",
                         "practitioner": {
                             "identifier": {
                                 "system": "https://fhir.nhs.uk/Id/sds-user-id",
@@ -28,8 +28,7 @@
                                 "system": "https://fhir.nhs.uk/Id/ods-organization-code",
                                 "value": "B12345"
                             }
-                        },
-                        "display": "Mr Practice Administrator"
+                        }
                     }
                 ],
                 "eventCoding": {
@@ -48,17 +47,13 @@
                     }
                 ],
                 "sender": {
-                    "identifier": {
-                        "system": "https://fhir.nhs.uk/Id/ods-organization-code",
-                        "value": "B12345"
-                    }
+                    "reference": "#sender"
                 },
                 "source": {
                     "endpoint": "urn:nhs-uk:addressing:mesh:Y90638OT002"
                 },
-                "response" :{
-                    "system": "https://tools.ietf.org/html/rfc4122",
-                    "value": "b4396f94-578b-42cd-b044-2c417839f969"
+                "response": {
+                    "identifier": "b4396f94-578b-42cd-b044-2c417839f969"
                 },
                 "focus": [
                     {
