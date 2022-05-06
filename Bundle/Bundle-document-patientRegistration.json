@@ -12,9 +12,6 @@
             "fullUrl": "urn:uuid:844ebe20-78f0-4d77-8890-44d588717ca9",
             "resource": {
                 "resourceType": "Composition",
-                "meta": {
-                    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-Composition"
-                },
                 "contained": [
                     {
                         "resourceType": "PractitionerRole",
