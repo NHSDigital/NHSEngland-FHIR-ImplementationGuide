@@ -6,7 +6,7 @@
         <system value="https://fhir.nhs.uk/identifier/CodeSystem"/>
         <value value="message-events"/>
     </identifier>
-    <version value="1.0.18"/>
+    <version value="1.0.19"/>
     <name value="NHSDigitalMessageEvent"/>
     <title value="Message Events"/>
     <status value="draft"/>
@@ -103,5 +103,10 @@
         <code value="unsolicited-action"/>
         <display value="Unsolicited actions"/>
         <definition value="Unsolicited actions using FHIR Task"/>
+    </concept>
+    <concept>
+        <code value="patient"/>
+        <display value="Patient Updated/Created"/>
+        <definition value="Patient Updated/Created"/>
     </concept>
 </CodeSystem>

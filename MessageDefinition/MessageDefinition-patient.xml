@@ -1,0 +1,25 @@
+<MessageDefinition xmlns="http://hl7.org/fhir">
+    <id value="cf9e9d20-2fba-4119-991f-26eb0885880c" />
+    <url value="https://fhir.nhs.uk/MessageDefinition/referral" />
+    <identifier>
+        <system value="https://tools.ietf.org/html/rfc4122" />
+        <value value="cf9e9d20-2fba-4119-991f-26eb0885880c" />
+    </identifier>
+    <version value="1.0.0" />
+    <title value="Patient" />
+    <status value="active" />
+    <date value="2022-03-25" />
+    <eventCoding>
+        <system value="https://fhir.nhs.uk/CodeSystem/message-event" />
+        <code value="patient" />
+        <display value="Patient" />
+    </eventCoding>
+    <description value="Patient Updated/Created"/>
+    <category value="consequence" />
+    <focus>
+        <code value="Patient" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient" />
+        <min value="1" />
+        <max value="1" />
+    </focus>
+</MessageDefinition>
