@@ -1,0 +1,51 @@
+{
+    "resourceType": "Parameters",
+    "id": "c698a681-89f8-4bf8-a6ce-a8ad675a5242",
+    "parameter": [
+        {
+            "name": "operation",
+            "part": [
+                {
+                    "name" : "type",
+                    "valueCode" : "replace"
+                },
+                {
+                    "name" : "path",
+                    "valueString" : "Task"
+                },
+                {
+                    "name" : "name",
+                    "valueString" : "status"
+                },
+                {
+                    "name" : "value",
+                    "valueCode" : "accepted"
+                }
+            ]
+        },
+        {
+            "name": "operation",
+            "part": [
+                {
+                    "name" : "type",
+                    "valueCode" : "replace"
+                },
+                {
+                    "name" : "path",
+                    "valueString" : "Task"
+                },
+                {
+                    "name" : "name",
+                    "valueString" : "owner"
+                },
+                {
+                    "name" : "value",
+                    "valueIdentifier" : {
+                        "system": "https://fhir.nhs.uk/Id/ods-organization-code",
+                        "value": "Z54321"
+                    }
+                }
+            ]
+        }
+    ]
+}

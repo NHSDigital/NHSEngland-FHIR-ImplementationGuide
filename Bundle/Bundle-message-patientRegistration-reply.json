@@ -26,7 +26,7 @@
                         "organization": {
                             "identifier": {
                                 "system": "https://fhir.nhs.uk/Id/ods-organization-code",
-                                "value": "B12345"
+                                "value": "Z54321"
                             }
                         }
                     }
@@ -116,7 +116,7 @@
                 "owner": {
                     "identifier": {
                         "system": "https://fhir.nhs.uk/Id/ods-organization-code",
-                        "value": "B12345"
+                        "value": "Z54321"
                     }
                 },
                 "requester": {

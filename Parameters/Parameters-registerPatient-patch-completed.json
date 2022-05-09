@@ -1,6 +1,6 @@
 {
     "resourceType": "Parameters",
-    "id": "c698a681-89f8-4bf8-a6ce-a8ad675a5242",
+    "id": "6228bc87-06f6-44a4-b361-6aaf270f07b4",
     "parameter": [
         {
             "name": "operation",
@@ -19,7 +19,7 @@
                 },
                 {
                     "name" : "value",
-                    "valueCode" : "accepted"
+                    "valueCode" : "completed"
                 }
             ]
         }
