@@ -26,7 +26,7 @@
       "value": "61673d7e-fc49-4ad0-a427-19089094621d"
     }
   ],
-  "status": "completed",
+  "status": "requested",
   "intent": "order",
   "code": {
     "coding": [
