@@ -1,0 +1,27 @@
+{
+    "resourceType": "Parameters",
+    "id": "6228bc87-06f6-44a4-b361-6aaf270f07b4",
+    "parameter": [
+        {
+            "name": "operation",
+            "part": [
+                {
+                    "name" : "type",
+                    "valueCode" : "replace"
+                },
+                {
+                    "name" : "path",
+                    "valueString" : "Task"
+                },
+                {
+                    "name" : "name",
+                    "valueString" : "status"
+                },
+                {
+                    "name" : "value",
+                    "valueCode" : "completed"
+                }
+            ]
+        }
+    ]
+}

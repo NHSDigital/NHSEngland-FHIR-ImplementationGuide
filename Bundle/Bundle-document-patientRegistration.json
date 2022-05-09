@@ -165,7 +165,8 @@
                             "code": "U",
                             "display": "unrestricted"
                         }
-                    ]
+                    ],
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-Composition"
                 },
                 "extension": [
                     {
