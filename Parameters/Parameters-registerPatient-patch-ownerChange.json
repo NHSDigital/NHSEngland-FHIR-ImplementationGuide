@@ -15,11 +15,14 @@
                 },
                 {
                     "name" : "name",
-                    "valueString" : "status"
+                    "valueString" : "owner"
                 },
                 {
                     "name" : "value",
-                    "valueCode" : "completed"
+                    "valueIdentifier" : {
+                        "system": "https://fhir.nhs.uk/Id/ods-organization-code",
+                        "value": "Z54321"
+                    }
                 }
             ]
         }
