@@ -41,7 +41,7 @@
                 "source": {
                     "endpoint": "urn:nhs-uk:addressing:mesh:Y90638OT001"
                 },
-                "reasonCode" : {
+                "reason" : {
                     "coding": [
                         {
                             "system": "http://snomed.info/sct",
