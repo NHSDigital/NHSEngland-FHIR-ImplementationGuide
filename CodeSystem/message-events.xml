@@ -100,6 +100,11 @@
         <definition value="Can be used for an admission/discharge report or consulations"/>
     </concept>
     <concept>
+        <code value="patient"/>
+        <display value="Patient Demographics"/>
+        <definition value="Patient demographic change events"/>
+    </concept>
+    <concept>
         <code value="unsolicited-action"/>
         <display value="Unsolicited actions"/>
         <definition value="Unsolicited actions using FHIR Task"/>

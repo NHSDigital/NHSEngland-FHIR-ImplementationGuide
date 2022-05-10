@@ -98,6 +98,11 @@
             <display value="Event Notification" />
         </contains>
         <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/message-event"/>
+            <code value="patient"/>
+            <display value="Patient Demographics"/>
+        </contains>
+        <contains>
             <system value="https://fhir.nhs.uk/CodeSystem/message-event-servicerequest"/>
             <code value="servicerequest-request" />
             <display value="Service Request - Request" />
