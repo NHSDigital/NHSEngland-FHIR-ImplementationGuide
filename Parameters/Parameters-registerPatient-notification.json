@@ -27,7 +27,7 @@
                     "name": "focus",
                     "valueReference": {
                         "type": "Patient",
-                        "reference": "https://api.england.nhs.uk//personnel-demographics/FHIR/R4/9000000009"
+                        "reference": "https://api.england.nhs.uk/personnel-demographics/FHIR/R4/9000000009"
                     }
                 },
                 {
