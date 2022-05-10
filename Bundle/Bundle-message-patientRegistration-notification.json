@@ -91,6 +91,12 @@
                         ]
                     },
                     {
+                        "name" : "subscription",
+                        "valueReference" : {
+                            "reference": "https://spine.nhs.uk/Subscription/5c4c8f04-1c36-4b8d-94e1-4e4b08e873d8"
+                        }
+                    },
+                    {
                         "name": "topic",
                         "valueCanonical" : "https://fhir.nhs.uk/SubscriptionTopic/patient-registered"
                     }

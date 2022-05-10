@@ -103,7 +103,7 @@
      <element id="Parameters.parameter:notificationEvent.part:additionalContext">
       <path value="Parameters.parameter.part" />
       <sliceName value="additionalContext" />
-      <min value="1" />
+      <min value="0" />
       <max value="*" />
     </element>
     <element id="Parameters.parameter:notificationEvent.part:additionalContext.name">
