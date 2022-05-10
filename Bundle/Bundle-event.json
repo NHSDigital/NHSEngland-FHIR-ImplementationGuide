@@ -17,7 +17,7 @@
                 },
                 "eventCoding": {
                     "system": "https://fhir.nhs.uk/CodeSystem/message-event",
-                    "code": "subscription-notification",
+                    "code": "notification",
                     "display": "Subscription Event Notification"
                 },
                 "sender": {
