@@ -94,13 +94,8 @@
         </contains>
         <contains>
             <system value="https://fhir.nhs.uk/CodeSystem/message-event"/>
-            <code value="subscription-notification" />
-            <display value="Subscription Event Notification" />
-        </contains>
-        <contains>
-            <system value="https://fhir.nhs.uk/CodeSystem/message-event"/>
-            <code value="patient"/>
-            <display value="Patient Updated/Created"/>
+            <code value="notification" />
+            <display value="Event Notification" />
         </contains>
         <contains>
             <system value="https://fhir.nhs.uk/CodeSystem/message-event-servicerequest"/>

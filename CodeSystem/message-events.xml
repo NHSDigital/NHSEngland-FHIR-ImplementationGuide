@@ -90,8 +90,8 @@
         <definition value="Patient referral/handover"/>
     </concept>
     <concept>
-        <code value="subscription-notification" />
-        <display value="Subscription Event Notification" />
+        <code value="notification" />
+        <display value="Event Notification" />
         <definition value="Event Notification"/>
     </concept>
      <concept>
@@ -103,10 +103,5 @@
         <code value="unsolicited-action"/>
         <display value="Unsolicited actions"/>
         <definition value="Unsolicited actions using FHIR Task"/>
-    </concept>
-    <concept>
-        <code value="patient"/>
-        <display value="Patient Updated/Created"/>
-        <definition value="Patient Updated/Created"/>
     </concept>
 </CodeSystem>

@@ -100,6 +100,24 @@
         <code value="Reference" />
       </type>
     </element>
+     <element id="Parameters.parameter:notificationEvent.part:additionalContext">
+      <path value="Parameters.parameter.part" />
+      <sliceName value="additionalContext" />
+      <min value="1" />
+      <max value="*" />
+    </element>
+    <element id="Parameters.parameter:notificationEvent.part:additionalContext.name">
+      <path value="Parameters.parameter.part.name" />
+      <short value="The additionalContext of this event" />
+      <fixedString value="additionalContext" />
+    </element>
+    <element id="Parameters.parameter:notificationEvent.part:additionalContext.value[x]">
+      <path value="Parameters.parameter.part.value[x]" />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+      </type>
+    </element>
     <element id="Parameters.parameter:notificationEvent.part:eventNumber">
       <path value="Parameters.parameter.part" />
       <sliceName value="eventNumber" />

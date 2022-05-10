@@ -1,0 +1,46 @@
+{
+    "resourceType": "Parameters",
+    "id": "e86539aa-2635-4948-b266-8e309e746af8",
+    "parameter": [
+        {
+            "name": "identifier",
+            "valueIdentifier": {
+                "value": "e86539aa-2635-4948-b266-8e309e746af8"
+            }
+        },
+        {
+            "name": "type",
+            "valueCode": "event-notification"
+        },
+        {
+            "name": "notificationEvent",
+            "part": [
+                {
+                    "name": "timestamp",
+                    "valueInstant": "2021-01-08T15:13:00+00:00"
+                },
+                {
+                    "name": "focus",
+                    "valueReference": {
+                        "type": "Patient",
+                        "reference": "urn:uuid:52a3f575-11d1-4349-aae9-1d2c7f42ef60"
+                    }
+                },
+                {
+                    "name": "additionalContext",
+                    "valueReference": {
+                        "type": "Patient",
+                        "identifier": {
+                            "system": "https://fhir.nhs.uk/Id/nhs-number",
+                            "value": "9000000009"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "topic",
+            "valueCanonical" : "https://fhir.nhs.uk/SubscriptionTopic/patient-registered"
+        }
+    ]
+}
