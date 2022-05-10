@@ -75,6 +75,14 @@
                     "max": "1",
                     "documentation": "The event resource. Mandatory for subscription event submission",
                     "type": "Resource"
+                },
+                {
+                    "name": "additionalContext",
+                    "use": "in",
+                    "min": 1,
+                    "max": "*",
+                    "documentation": "Additional context e.g. NHS Number",
+                    "type": "Reference"
                 }
             ] 
         },

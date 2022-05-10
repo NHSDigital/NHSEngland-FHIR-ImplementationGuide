@@ -33,7 +33,7 @@
                   ],
                 "eventCoding": {
                     "system": "https://fhir.nhs.uk/CodeSystem/message-event",
-                    "code": "patient"
+                    "code": "notification"
                 },
                 "sender": {
                     "reference": "#sender"
@@ -41,18 +41,68 @@
                 "source": {
                     "endpoint": "urn:nhs-uk:addressing:mesh:Y90638OT001"
                 },
-                "reason" : {
-                    "coding": [
-                        {
-                            "system": "http://snomed.info/sct",
-                            "code": "184047000",
-                            "display": "Patient registration"
-                        }
-                    ]
-                },
                 "focus": [
                     {
-                        "reference": "urn:uuid:52a3f575-11d1-4349-aae9-1d2c7f42ef60"
+                        "reference": "urn:uuid:e86539aa-2635-4948-b266-8e309e746af8"
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:e86539aa-2635-4948-b266-8e309e746af8",
+            "resource": {
+                "resourceType": "Parameters",
+                "id": "e86539aa-2635-4948-b266-8e309e746af8",
+                "parameter": [
+                    {
+                        "name": "identifier",
+                        "valueIdentifier": {
+                            "value": "e86539aa-2635-4948-b266-8e309e746af8"
+                        }
+                    },
+                    {
+                        "name": "type",
+                        "valueCode": "event-notification"
+                    },
+                    {
+                        "name": "notificationEvent",
+                        "part": [
+                            {
+                                "name": "timestamp",
+                                "valueInstant": "2021-01-08T15:13:00+00:00"
+                            },
+                            {
+                                "name": "eventNumber",
+                                "valueInteger": "1"
+                            },
+                            {
+                                "name": "focus",
+                                "valueReference": {
+                                    "type": "Patient",
+                                    "reference": "urn:uuid:52a3f575-11d1-4349-aae9-1d2c7f42ef60"
+                                }
+                            },
+                            {
+                                "name": "additionalContext",
+                                "valueReference": {
+                                    "type": "Patient",
+                                    "identifier": {
+                                        "system": "https://fhir.nhs.uk/Id/nhs-number",
+                                        "value": "9000000009"
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "name" : "subscription",
+                        "valueReference" : {
+                            "reference": "https://spine.nhs.uk/Subscription/5c4c8f04-1c36-4b8d-94e1-4e4b08e873d8"
+                        }
+                    },
+                    {
+                        "name": "topic",
+                        "valueCanonical" : "https://fhir.nhs.uk/SubscriptionTopic/patient-registered"
                     }
                 ]
             }
