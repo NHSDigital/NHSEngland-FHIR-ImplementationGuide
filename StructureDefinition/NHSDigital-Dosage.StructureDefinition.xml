@@ -38,6 +38,19 @@
       <definition value="Adding constraints, bounds or limits to a dosage instruction." />
       <mustSupport value="true" />
     </element>
+    <element id="Dosage.timing.repeat.bounds[x]">
+      <path value="Dosage.timing.repeat.bounds[x]" />
+      <type>
+        <code value="Duration" />
+      </type>
+      <type>
+        <code value="Range" />
+        <profile value="https://fhir.nhs.uk.uk/StructureDefinition/NHSDigital-Range" />
+      </type>
+      <type>
+        <code value="Period" />
+      </type>
+    </element>
     <element id="Dosage.asNeeded[x]">
       <path value="Dosage.asNeeded[x]" />
       <definition value="The `asNeeded` structure can be used to define a simple “as required” (or “pro re nata” expressed as “PRN” for those who still prefer to use Latin abbreviations) instructions. &#xD;&#xA;&#xD;&#xA;In this case use the `asNeededBoolean` option. The absence of `asNeededBoolean` is equivalent to where `asNeededBoolean` has a value of `false`.&#xD;&#xA;&#xD;&#xA;The `asNeededCodeableConcept` option is used to bound the dosage instruction to a coded term. Any number of coded terms can be used from the SNOMED-CT hierarchy as a descendant of [404684003 Clinical Finding (finding)](https://termbrowser.nhs.uk/?perspective=full&amp;conceptId1=404684003&amp;edition=uk-edition). An extensive medication-as-needed-reason value-set is defined within FHIR which is a subset of the SNOMED-CT clinical findings hierarchy." />
