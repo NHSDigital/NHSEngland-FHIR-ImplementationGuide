@@ -1,6 +1,6 @@
 <MessageDefinition xmlns="http://hl7.org/fhir">
     <id value="8b6bebca-6049-45a2-bcbf-613d7e4ae033" />
-    <url value="https://fhir.nhs.uk/MessageDefinition/subscription-notification" />
+    <url value="https://fhir.nhs.uk/MessageDefinition/notification" />
     <identifier>
         <system value="https://tools.ietf.org/html/rfc4122" />
         <value value="8b6bebca-6049-45a2-bcbf-613d7e4ae033" />

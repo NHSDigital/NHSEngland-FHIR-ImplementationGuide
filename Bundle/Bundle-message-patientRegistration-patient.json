@@ -41,6 +41,15 @@
                 "source": {
                     "endpoint": "urn:nhs-uk:addressing:mesh:Y90638OT001"
                 },
+                "reason" : {
+                    "coding": [
+                        {
+                            "system": "http://snomed.info/sct",
+                            "code": "184047000",
+                            "display": "Patient registration"
+                        }
+                    ]
+                },
                 "focus": [
                     {
                         "reference": "urn:uuid:52a3f575-11d1-4349-aae9-1d2c7f42ef60"
