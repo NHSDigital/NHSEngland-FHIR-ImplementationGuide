@@ -17,6 +17,7 @@
         <severity value="error" />
         <human value="If both low and high present, both should use the same units or both should have units absent" />
         <expression value="low.empty() or high.empty() or (low.unit = high.unit) or (low.unit.empty() and high.unit.empty())" />
+        <source value="https://fhir.nhs.uk.uk/StructureDefinition/NHSDigital-Range" />
       </constraint>
     </element>
     <element id="Range.low.value">
