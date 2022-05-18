@@ -10,33 +10,12 @@
   "resourceType": "Questionnaire",
   "item": [
     {
-      "linkId": "performerType",
+      "linkId": "performerSiteType",
       "type": "choice",
       "required": true,
+      "repeats": false,
       "text": "Type of Prescription Nomination",
-      "answerOption": [
-        {
-          "valueCoding": {
-            "system": "https://fhir.nhs.uk/CodeSystem/dispensing-site-preference",
-            "code": "P1",
-            "display": "Other (e.g. Community Pharmacy)"
-          }
-        },
-        {
-          "valueCoding": {
-            "system": "https://fhir.nhs.uk/CodeSystem/dispensing-site-preference",
-            "code": "P2",
-            "display": "Appliance Contractor"
-          }
-        },
-        {
-          "valueCoding": {
-            "system": "https://fhir.nhs.uk/CodeSystem/dispensing-site-preference",
-            "code": "P3",
-            "display": "Dispensing Doctor"
-          }
-        }
-      ]
+      "answerValueSet": "https://fhir.nhs.uk/ValueSet/prescribing-performer-site-type"
     },
     {
       "linkId": "dispensingOrganisation",

@@ -19,7 +19,7 @@
     },
     "item": [
         {
-            "linkId": "performerType",
+            "linkId": "performerSiteType",
             "answer": [
                 {
                     "valueCoding": {
