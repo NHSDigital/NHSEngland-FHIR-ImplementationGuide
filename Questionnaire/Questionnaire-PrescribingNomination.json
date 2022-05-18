@@ -1,0 +1,34 @@
+{
+  "id": "ba6bb300-016b-428d-ab2e-20109bdaaccc",
+  "version": "0.0.1",
+  "subjectType": [
+    "Patient"
+  ],
+  "status": "draft",
+  "url": "https://fhir.nhs.uk/Questionnaire/Prescribing-Nomination",
+  "title": "Prescribing-Nomination",
+  "resourceType": "Questionnaire",
+  "item": [
+    {
+      "linkId": "performerSiteType",
+      "type": "choice",
+      "required": true,
+      "repeats": false,
+      "text": "Type of Prescription Nomination",
+      "answerValueSet": "https://fhir.nhs.uk/ValueSet/prescribing-performer-site-type"
+    },
+    {
+      "extension": [
+        { 
+          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+          "valueString": "Organization"
+        }
+      ],
+      "linkId": "dispensingOrganisation",
+      "type": "reference",
+      "required": true,
+      "repeats": false,
+      "text": "Dispensing Organisation ODS Code"
+    }
+  ]
+}
