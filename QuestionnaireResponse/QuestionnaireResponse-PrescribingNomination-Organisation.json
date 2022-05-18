@@ -11,10 +11,10 @@
     },
     "authored": "2022-05-18T05:59:00+00:00",
     "source": {
-        "type": "Patient",
+        "type": "Organization",
         "identifier": {
-            "system": "https://fhir.nhs.uk/Id/nhs-number",
-            "value": "9912003888"
+            "system": "https://fhir.nhs.uk/Id/ods-organization-code",
+            "value": "FX748"
         }
     },
     "item": [
