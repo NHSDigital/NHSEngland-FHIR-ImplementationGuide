@@ -22,14 +22,7 @@
       "type": "reference",
       "required": true,
       "repeats": false,
-      "text": "Dispensing Organisation ODS Code",
-      "answerOption": [
-        {
-          "valueReference": {
-            "type": "Organization"
-          }
-        }
-      ]
+      "text": "Dispensing Organisation ODS Code"
     }
   ]
 }
