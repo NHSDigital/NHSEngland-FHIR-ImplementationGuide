@@ -18,6 +18,12 @@
       "answerValueSet": "https://fhir.nhs.uk/ValueSet/prescribing-performer-site-type"
     },
     {
+      "extension": [
+        { 
+          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+          "valueString": "Organization"
+        }
+      ],
       "linkId": "dispensingOrganisation",
       "type": "reference",
       "required": true,
