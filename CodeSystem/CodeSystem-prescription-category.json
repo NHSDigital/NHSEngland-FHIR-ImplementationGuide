@@ -1,0 +1,48 @@
+{
+    "resourceType": "CodeSystem",
+    "id": "959a0a2f-73e3-4c6e-8e99-babb6b3a4296",
+    "url": "https://fhir.nhs.uk/CodeSystem/prescription-category",
+    "version": "0.0.1-prerelease",
+    "name": "Prescription Category",
+    "status": "draft",
+    "date": "2022-05-19T00:00:00+00:00",
+    "publisher": "NHS Digital",
+    "description": "Prescription Category. This corresponds the different FP10 prescription types",
+    "copyright": "Copyright © 2022 NHS Digital",
+    "caseSensitive": true,
+    "content": "complete",
+    "concept": [
+        {
+            "code": "general-prescription",
+            "display": "General prescriptions",
+            "definition" : "FP10SS, FP10NC and FP10HNC - Green"
+
+        },
+        {
+            "code": "dental",
+            "display": "Dental",
+            "definition" : "FP10D - Yellow"
+
+        },
+        {
+            "code": "community-controlled-drug",
+            "display": "Misuse of Drugs Act prescribed in the community pharmacy sector",
+            "definition" : "FP10PCDSS and FP10PCDNC - Pink"
+        },
+        {
+            "code": "controlled-drug",
+            "display": "Controlled Drug",
+            "definition" : "FP10-MDA-SS, FP10MDA-S, FP10MDA-SP and FP10HMDA - Blue"
+        },
+        {
+            "code": "controlled-drug-requisition",
+            "display": "Controlled Drug requisition",
+            "definition" : "FP10CDF - White"
+        },
+        {
+            "code": "nurse-prescribing",
+            "display": "Nurse Prescribing",
+            "definition" : "FP10PN, FP10SP and FP10P-REC - Blue"
+        }
+    ]
+}
