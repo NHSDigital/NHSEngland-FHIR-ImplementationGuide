@@ -173,7 +173,7 @@
     </element>
     <element id="PractitionerRole.code">
       <path value="PractitionerRole.code" />
-      <definition value="Only supply if this is known (e.g. sourced from smartcard or SDS API).&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;code&quot;:  [&#xD;&#xA;        {&#xD;&#xA;            &quot;coding&quot;:  [&#xD;&#xA;                {&#xD;&#xA;                    &quot;system&quot;: &quot;https://fhir.hl7.org.uk/CodeSystem/UKCore-SDSJobRoleName&quot;,&#xD;&#xA;                    &quot;code&quot;: &quot;R0260&quot;,&#xD;&#xA;                    &quot;display&quot;: &quot;General Medical Practitioner&quot;&#xD;&#xA;                }&#xD;&#xA;            ]&#xD;&#xA;        }&#xD;&#xA;    ],&#xD;&#xA;```" />
+      <definition value="Only supply if this is known.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;code&quot;:  [&#xD;&#xA;        {&#xD;&#xA;            &quot;coding&quot;:  [&#xD;&#xA;                {&#xD;&#xA;                    &quot;system&quot;: &quot;http://snomed.info/sct&quot;,&#xD;&#xA;                    &quot;code&quot;: &quot;106289002&quot;,&#xD;&#xA;                    &quot;display&quot;: &quot;Dentist&quot;&#xD;&#xA;                }&#xD;&#xA;            ]&#xD;&#xA;        }&#xD;&#xA;    ],&#xD;&#xA;```" />
       <mustSupport value="true" />
     </element>
     <element id="PractitionerRole.code.coding">
@@ -198,7 +198,7 @@
     <element id="PractitionerRole.code.coding:sdsJobRoleName">
       <path value="PractitionerRole.code.coding" />
       <sliceName value="sdsJobRoleName" />
-      <max value="1" />
+      <max value="0" />
       <mustSupport value="true" />
     </element>
     <element id="PractitionerRole.code.coding:sdsJobRoleName.system">
