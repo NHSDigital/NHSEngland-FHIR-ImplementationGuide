@@ -584,6 +584,7 @@
     <element id="Claim.item.detail.programCode:dispensingEndorsement">
       <path value="Claim.item.detail.programCode" />
       <sliceName value="dispensingEndorsement" />
+      <min value="1" />
       <mustSupport value="true" />
       <binding>
         <strength value="required" />
