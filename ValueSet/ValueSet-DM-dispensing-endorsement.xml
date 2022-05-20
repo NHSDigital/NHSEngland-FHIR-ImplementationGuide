@@ -35,6 +35,7 @@
                 <display value="No Dispenser Endorsement Code" />
             </concept>
             <concept>
+                <code value="XP" />
                 <display value="Out of Pocket Expenses" />
             </concept>
             <concept>
@@ -55,5 +56,4 @@
             </concept>
         </include>
     </compose>
-
 </ValueSet>
