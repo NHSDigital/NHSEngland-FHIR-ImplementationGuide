@@ -385,7 +385,6 @@
       <type>
         <code value="Reference" />
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole-EPSLegal" />
-        <aggregation value="bundled" />
       </type>
       <constraint>
         <key value="eps-3" />
