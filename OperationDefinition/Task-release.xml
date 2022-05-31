@@ -58,6 +58,14 @@
         <type value="PractitionerRole"></type>
     </parameter>
     <parameter>
+        <name value="organization"></name>
+        <use value="in"></use>
+        <min value="1"></min>
+        <max value="1"></max>
+        <documentation value="The organisation submitting the release request"></documentation>
+        <type value="Organization"></type>
+    </parameter>
+    <parameter>
         <name value="return"></name>
         <use value="out"></use>
         <min value="1"></min>
