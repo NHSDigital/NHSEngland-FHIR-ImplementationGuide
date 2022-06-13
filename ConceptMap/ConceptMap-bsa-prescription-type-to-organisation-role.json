@@ -8,10 +8,10 @@
     "status": "draft",
     "date": "2022-06-13",
     "publisher": "NHS Digital",
-    "contact":  [
+    "contact": [
         {
             "name": "Interoperability Team",
-            "telecom":  [
+            "telecom": [
                 {
                     "system": "email",
                     "value": "interoperabilityteam@nhs.net",
@@ -24,15 +24,15 @@
     "purpose": "Medicine Management",
     "sourceUri": "https://fhir.nhs.uk/ValueSet/DM-prescription-type",
     "targetUri": "https://fhir.nhs.uk/ValueSet/organisation-role",
-    "group":  [
+    "group": [
         {
             "source": "https://fhir.nhs.uk/CodeSystem/prescription-type",
             "target": "https://fhir.nhs.uk/CodeSystem/organisation-role",
-            "element":  [
+            "element": [
                 {
                     "code": "0101",
                     "display": "Primary Care Prescriber – Medical Prescriber",
-                    "target":  [
+                    "target": [
                         {
                             "code": "76",
                             "display": "GP PRACTICE",
@@ -43,7 +43,7 @@
                 {
                     "code": "0104",
                     "display": "Primary Care Prescriber - Nurse Independent/Supplementary prescriber",
-                    "target":  [
+                    "target": [
                         {
                             "code": "76",
                             "display": "GP PRACTICE",
@@ -54,7 +54,7 @@
                 {
                     "code": "0105",
                     "display": "Primary Care Prescriber - Community Practitioner Nurse prescriber",
-                    "target":  [
+                    "target": [
                         {
                             "code": "76",
                             "display": "GP PRACTICE",
@@ -65,7 +65,7 @@
                 {
                     "code": "0108",
                     "display": "Primary Care Prescriber - Pharmacist Independent/Supplementary prescriber",
-                    "target":  [
+                    "target": [
                         {
                             "code": "76",
                             "display": "GP PRACTICE",
@@ -76,7 +76,7 @@
                 {
                     "code": "0113",
                     "display": "Primary Care Prescriber – Optometrist Independent/Supplementary prescriber",
-                    "target":  [
+                    "target": [
                         {
                             "code": "76",
                             "display": "GP PRACTICE",
@@ -86,9 +86,8 @@
                 },
                 {
                     "code": "0114",
-                    "display": "Primary Care Prescriber – Podiatrist/Chiropodist Independent/Supplementary prescriber"
-                    ,
-                    "target":  [
+                    "display": "Primary Care Prescriber – Podiatrist/Chiropodist Independent/Supplementary prescriber",
+                    "target": [
                         {
                             "code": "76",
                             "display": "GP PRACTICE",
@@ -99,7 +98,7 @@
                 {
                     "code": "0116",
                     "display": "Primary Care Prescriber – Radiographer Independent/Supplementary prescriber",
-                    "target":  [
+                    "target": [
                         {
                             "code": "76",
                             "display": "GP PRACTICE",
@@ -110,7 +109,7 @@
                 {
                     "code": "0117",
                     "display": "Primary Care Prescriber - Physiotherapist Independent/Supplementary prescriber",
-                    "target":  [
+                    "target": [
                         {
                             "code": "76",
                             "display": "GP PRACTICE",
@@ -120,9 +119,8 @@
                 },
                 {
                     "code": "0124",
-                    "display": "Primary Care Prescriber – Dietician Supplementary prescriber"
-                    ,
-                    "target":  [
+                    "display": "Primary Care Prescriber – Dietician Supplementary prescriber",
+                    "target": [
                         {
                             "code": "76",
                             "display": "GP PRACTICE",
@@ -133,7 +131,7 @@
                 {
                     "code": "0125",
                     "display": "Primary Care Prescriber – Paramedic Independent/Supplementary prescriber",
-                    "target":  [
+                    "target": [
                         {
                             "code": "76",
                             "display": "GP PRACTICE",
@@ -144,16 +142,18 @@
                 {
                     "code": "0607",
                     "display": "Dental Prescribing – Dentist",
-                    "target":  [
+                    "target": [
                         {
                             "code": "65",
                             "display": "PRIVATE DENTAL PRACTICE",
-                            "equivalence": "narrower"
+                            "equivalence": "narrower",
+                            "comment": "If private"
                         },
                         {
                             "code": "110",
                             "display": "GENERAL DENTAL PRACTICE",
-                            "equivalence": "narrower"
+                            "equivalence": "narrower",
+                            "comment": "If NHS?"
                         }
                     ]
                 },
@@ -172,7 +172,7 @@
                 {
                     "code": "0901",
                     "display": "Private prescribing - GP",
-                    "target":  [
+                    "target": [
                         {
                             "code": "76",
                             "display": "GP PRACTICE",
@@ -250,39 +250,104 @@
                 },
                 {
                     "code": "1104",
-                    "display": "Outpatient Hospital Pharmacy Prescriber - Nurse Independent Supplementary prescriber"
+                    "display": "Outpatient Hospital Pharmacy Prescriber - Nurse Independent Supplementary prescriber",
+                    "target": [
+                        {
+                            "code": "197",
+                            "display": "NHS TRUST",
+                            "equivalence": "equivalent"
+                        }
+                    ]
                 },
                 {
                     "code": "1105",
-                    "display": "Outpatient Hospital Pharmacy Prescriber - Community Practitioner Nurse prescriber"
-                },
+                    "display": "Outpatient Hospital Pharmacy Prescriber - Community Practitioner Nurse prescriber",
+                    "target": [
+                        {
+                            "code": "197",
+                            "display": "NHS TRUST",
+                            "equivalence": "equivalent"
+                        }
+                    ]                },
                 {
                     "code": "1108",
-                    "display": "Outpatient Hospital Pharmacy Prescriber - Pharmacist Independent Supplementary prescriber"
+                    "display": "Outpatient Hospital Pharmacy Prescriber - Pharmacist Independent Supplementary prescriber",
+                    "target": [
+                        {
+                            "code": "197",
+                            "display": "NHS TRUST",
+                            "equivalence": "equivalent"
+                        }
+                    ]
+
                 },
                 {
                     "code": "1113",
-                    "display": "Outpatient Hospital Pharmacy Prescriber – Optometrist Independent Supplementary prescriber"
+                    "display": "Outpatient Hospital Pharmacy Prescriber – Optometrist Independent Supplementary prescriber",
+                    "target": [
+                        {
+                            "code": "197",
+                            "display": "NHS TRUST",
+                            "equivalence": "equivalent"
+                        }
+                    ]
                 },
                 {
                     "code": "1114",
-                    "display": "Outpatient Hospital Pharmacy Prescriber – Podiatrist Chiropodist Independent Supplementary prescriber"
+                    "display": "Outpatient Hospital Pharmacy Prescriber – Podiatrist Chiropodist Independent Supplementary prescriber",
+                    "target": [
+                        {
+                            "code": "197",
+                            "display": "NHS TRUST",
+                            "equivalence": "equivalent"
+                        }
+                    ]
+
                 },
                 {
                     "code": "1116",
                     "display": "Outpatient Hospital Pharmacy Prescriber – Radiographer Independent Supplementary prescriber"
+                    ,
+                    "target": [
+                        {
+                            "code": "197",
+                            "display": "NHS TRUST",
+                            "equivalence": "equivalent"
+                        }
+                    ]
                 },
                 {
                     "code": "1117",
-                    "display": "Outpatient Hospital Pharmacy Prescriber - Physiotherapist Independent Supplementary prescriber"
+                    "display": "Outpatient Hospital Pharmacy Prescriber - Physiotherapist Independent Supplementary prescriber",
+                    "target": [
+                        {
+                            "code": "197",
+                            "display": "NHS TRUST",
+                            "equivalence": "equivalent"
+                        }
+                    ]
                 },
                 {
                     "code": "1124",
-                    "display": "Outpatient Hospital Pharmacy Prescriber – Dietician Supplementary prescriber"
+                    "display": "Outpatient Hospital Pharmacy Prescriber – Dietician Supplementary prescriber",
+                    "target": [
+                        {
+                            "code": "197",
+                            "display": "NHS TRUST",
+                            "equivalence": "equivalent"
+                        }
+                    ]
                 },
                 {
                     "code": "1125",
-                    "display": "Outpatient Hospital Pharmacy Prescriber – Paramedic Independent Supplementary prescriber"
+                    "display": "Outpatient Hospital Pharmacy Prescriber – Paramedic Independent Supplementary prescriber",
+                    "target": [
+                        {
+                            "code": "197",
+                            "display": "NHS TRUST",
+                            "equivalence": "equivalent"
+                        }
+                    ]
                 },
                 {
                     "code": "1204",
@@ -299,7 +364,6 @@
                 {
                     "code": "1213",
                     "display": "Outpatient Homecare Prescriber – Optometrist Independent Supplementary prescriber"
-                   
                 },
                 {
                     "code": "1214",

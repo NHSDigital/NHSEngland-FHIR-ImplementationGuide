@@ -167,8 +167,8 @@
                     "display": "Private prescribing - GP",
                     "target": [
                         {
-                            "code": "76",
-                            "display": "GP PRACTICE",
+                            "code": "001",
+                            "display": "General Medical Practice",
                             "equivalence": "equivalent"
                         }
                     ]
@@ -243,39 +243,102 @@
                 },
                 {
                     "code": "1104",
-                    "display": "Outpatient Hospital Pharmacy Prescriber - Nurse Independent Supplementary prescriber"
+                    "display": "Outpatient Hospital Pharmacy Prescriber - Nurse Independent Supplementary prescriber",
+                    "target": [
+                        {
+                            "code": "008",
+                            "display": "Acute Trust",
+                            "equivalence": "equivalent"
+                        }
+                    ]
                 },
                 {
                     "code": "1105",
-                    "display": "Outpatient Hospital Pharmacy Prescriber - Community Practitioner Nurse prescriber"
+                    "display": "Outpatient Hospital Pharmacy Prescriber - Community Practitioner Nurse prescriber",
+                    "target": [
+                        {
+                            "code": "008",
+                            "display": "Acute Trust",
+                            "equivalence": "equivalent"
+                        }
+                    ]
                 },
                 {
                     "code": "1108",
-                    "display": "Outpatient Hospital Pharmacy Prescriber - Pharmacist Independent Supplementary prescriber"
+                    "display": "Outpatient Hospital Pharmacy Prescriber - Pharmacist Independent Supplementary prescriber",
+                    "target": [
+                        {
+                            "code": "008",
+                            "display": "Acute Trust",
+                            "equivalence": "equivalent"
+                        }
+                    ]
                 },
                 {
                     "code": "1113",
-                    "display": "Outpatient Hospital Pharmacy Prescriber – Optometrist Independent Supplementary prescriber"
+                    "display": "Outpatient Hospital Pharmacy Prescriber – Optometrist Independent Supplementary prescriber",
+                    "target": [
+                        {
+                            "code": "008",
+                            "display": "Acute Trust",
+                            "equivalence": "equivalent"
+                        }
+                    ]
                 },
                 {
                     "code": "1114",
-                    "display": "Outpatient Hospital Pharmacy Prescriber – Podiatrist Chiropodist Independent Supplementary prescriber"
+                    "display": "Outpatient Hospital Pharmacy Prescriber – Podiatrist Chiropodist Independent Supplementary prescriber",
+                    "target": [
+                        {
+                            "code": "008",
+                            "display": "Acute Trust",
+                            "equivalence": "equivalent"
+                        }
+                    ]
                 },
                 {
                     "code": "1116",
-                    "display": "Outpatient Hospital Pharmacy Prescriber – Radiographer Independent Supplementary prescriber"
+                    "display": "Outpatient Hospital Pharmacy Prescriber – Radiographer Independent Supplementary prescriber",
+                    "target": [
+                        {
+                            "code": "008",
+                            "display": "Acute Trust",
+                            "equivalence": "equivalent"
+                        }
+                    ]
                 },
                 {
                     "code": "1117",
-                    "display": "Outpatient Hospital Pharmacy Prescriber - Physiotherapist Independent Supplementary prescriber"
+                    "display": "Outpatient Hospital Pharmacy Prescriber - Physiotherapist Independent Supplementary prescriber",
+                    "target": [
+                        {
+                            "code": "008",
+                            "display": "Acute Trust",
+                            "equivalence": "equivalent"
+                        }
+                    ]
                 },
                 {
                     "code": "1124",
-                    "display": "Outpatient Hospital Pharmacy Prescriber – Dietician Supplementary prescriber"
+                    "display": "Outpatient Hospital Pharmacy Prescriber – Dietician Supplementary prescriber",
+                    "target": [
+                        {
+                            "code": "008",
+                            "display": "Acute Trust",
+                            "equivalence": "equivalent"
+                        }
+                    ]
                 },
                 {
                     "code": "1125",
-                    "display": "Outpatient Hospital Pharmacy Prescriber – Paramedic Independent Supplementary prescriber"
+                    "display": "Outpatient Hospital Pharmacy Prescriber – Paramedic Independent Supplementary prescriber",
+                    "target": [
+                        {
+                            "code": "008",
+                            "display": "Acute Trust",
+                            "equivalence": "equivalent"
+                        }
+                    ]
                 },
                 {
                     "code": "1204",
