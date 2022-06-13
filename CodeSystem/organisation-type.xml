@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <CodeSystem xmlns="http://hl7.org/fhir">
-   <id value="organisation-type"/>
-   <url value="https://fhir.nhs.uk/CodeSystem/organisation-type"/>
+   <id value="mim-organisation-type"/>
+   <url value="https://fhir.nhs.uk/CodeSystem/mim-organisation-type"/>
    <version value="1.0.0"/>
-   <name value="organisationtype"/>
+   <name value="mimorganisationtype"/>
    <status value="active"/>
    <date value="2018-05-18T00:00:00+00:00"/>
    <publisher value="HL7 UK"/>
-   <description value="A CodeSystem to identify the type of organisation"/>
+   <description value="A CodeSystem to identify the type of organisation used in HL7v3 MIM"/>
    <copyright value="Copyright © 2004 HSCIC"/>
    <caseSensitive value="true"/>
    <content value="complete"/>
