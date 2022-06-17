@@ -33,10 +33,6 @@
         <human value="PractitionerRole.organization - An identifier reference plus a display name or resource reference must be provided" />
       </constraint>
     </element>
-    <element id="PractitionerRole.organization.identifier">
-      <path value="PractitionerRole.organization.identifier" />
-      <min value="1" />
-    </element>
     <element id="PractitionerRole.organization.identifier.system">
       <path value="PractitionerRole.organization.identifier.system" />
       <fixedUri value="https://fhir.nhs.uk/Id/ods-organization-code" />

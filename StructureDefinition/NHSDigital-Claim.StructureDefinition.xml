@@ -288,10 +288,13 @@
         <code value="Reference" />
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Organization" />
       </type>
-    </element>
-    <element id="Claim.payee.party.identifier">
-      <path value="Claim.payee.party.identifier" />
-      <min value="1" />
+      <constraint>
+        <key value="nhsd-claim-party" />
+        <severity value="error" />
+        <human value="party - An identifier reference plus a display name or resource reference must be provided" />
+        <expression value="(reference.exists() or (identifier.exists() and display.exists()))" />
+        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Claim" />
+      </constraint>
     </element>
     <element id="Claim.payee.party.identifier.system">
       <path value="Claim.payee.party.identifier.system" />

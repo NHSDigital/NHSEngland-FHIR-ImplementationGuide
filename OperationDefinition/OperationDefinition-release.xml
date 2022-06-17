@@ -38,8 +38,8 @@
         <use value="in"></use>
         <min value="1"></min>
         <max value="1"></max>
-        <documentation value="The ODS code of the pharmacy. Used for releasing Nominated Pharmacy prescriptions"></documentation>
-        <type value="Identifier"></type>
+        <documentation value="The organization (pharmacy) downloading the prescriptions. Used for releasing Nominated Pharmacy prescriptions"></documentation>
+        <type value="Organization"></type>
     </parameter>
     <parameter>
         <name value="status"></name>

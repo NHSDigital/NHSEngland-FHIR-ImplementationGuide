@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ValueSet xmlns="http://hl7.org/fhir">
     <id value="UKCore-England-organisation-type"/>
-    <url value="https://fhir.nhs.uk/ValueSet/UKCore-England-organisation-type"/>
-    <version value="1.0.0"/>
-    <name value="NHSODSOrganisationType"/>
+    <url value="https://fhir.nhs.uk/ValueSet/mim-organisation-type"/>
+    <version value="1.0.1"/>
+    <name value="NHSMIMOrganisationType"/>
     <status value="draft"/>
     <description value="Subset on NHS ODS Organisation Type"/>
     <compose>
         <include>
-            <system value="https://fhir.nhs.uk/CodeSystem/organisation-type"/>
+            <system value="https://fhir.nhs.uk/CodeSystem/mim-organisation-type"/>
             <version value="1.0.0"/>
         </include>
     </compose>
@@ -18,123 +18,119 @@
         <offset value="0"/>
         <parameter>
             <name value="version"/>
-            <valueUri value="https://fhir.nhs.uk/CodeSystem/organisation-type|1.0.0"/>
-        </parameter>
-        <parameter>
-            <name value="count"/>
-            <valueInteger value="2147483647"/>
+            <valueUri value="https://fhir.nhs.uk/CodeSystem/mim-organisation-type|1.0.1"/>
         </parameter>
         <parameter>
             <name value="offset"/>
             <valueInteger value="0"/>
         </parameter>
         <contains>
-            <system value="https://fhir.nhs.uk/CodeSystem/organisation-type"/>
+            <system value="https://fhir.nhs.uk/CodeSystem/mim-organisation-type"/>
             <code value="020"/>
             <display value="GMP Deputising Service"/>
         </contains>
         <contains>
-            <system value="https://fhir.nhs.uk/CodeSystem/organisation-type"/>
+            <system value="https://fhir.nhs.uk/CodeSystem/mim-organisation-type"/>
             <code value="021"/>
             <display value="Nursing Agency"/>
         </contains>
         <contains>
-            <system value="https://fhir.nhs.uk/CodeSystem/organisation-type"/>
+            <system value="https://fhir.nhs.uk/CodeSystem/mim-organisation-type"/>
             <code value="010"/>
             <display value="Community Trust"/>
         </contains>
         <contains>
-            <system value="https://fhir.nhs.uk/CodeSystem/organisation-type"/>
+            <system value="https://fhir.nhs.uk/CodeSystem/mim-organisation-type"/>
             <code value="011"/>
             <display value="Diagnostic and Investigation Centre"/>
         </contains>
         <contains>
-            <system value="https://fhir.nhs.uk/CodeSystem/organisation-type"/>
+            <system value="https://fhir.nhs.uk/CodeSystem/mim-organisation-type"/>
             <code value="012"/>
             <display value="Walk-in Centre"/>
         </contains>
         <contains>
-            <system value="https://fhir.nhs.uk/CodeSystem/organisation-type"/>
+            <system value="https://fhir.nhs.uk/CodeSystem/mim-organisation-type"/>
             <code value="001"/>
             <display value="General Medical Practice"/>
         </contains>
         <contains>
-            <system value="https://fhir.nhs.uk/CodeSystem/organisation-type"/>
+            <system value="https://fhir.nhs.uk/CodeSystem/mim-organisation-type"/>
             <code value="017"/>
             <display value="Hospice"/>
         </contains>
         <contains>
-            <system value="https://fhir.nhs.uk/CodeSystem/organisation-type"/>
+            <system value="https://fhir.nhs.uk/CodeSystem/mim-organisation-type"/>
             <code value="006"/>
             <display value="Strategic Health Authority"/>
         </contains>
         <contains>
-            <system value="https://fhir.nhs.uk/CodeSystem/organisation-type"/>
+            <system value="https://fhir.nhs.uk/CodeSystem/mim-organisation-type"/>
             <code value="018"/>
             <display value="Ambulance Trust"/>
         </contains>
         <contains>
-            <system value="https://fhir.nhs.uk/CodeSystem/organisation-type"/>
+            <system value="https://fhir.nhs.uk/CodeSystem/mim-organisation-type"/>
             <code value="007"/>
             <display value="Special Health Authority"/>
         </contains>
         <contains>
-            <system value="https://fhir.nhs.uk/CodeSystem/organisation-type"/>
+            <system value="https://fhir.nhs.uk/CodeSystem/mim-organisation-type"/>
             <code value="019"/>
             <display value="Private Hospital"/>
         </contains>
         <contains>
-            <system value="https://fhir.nhs.uk/CodeSystem/organisation-type"/>
+            <system value="https://fhir.nhs.uk/CodeSystem/mim-organisation-type"/>
             <code value="008"/>
             <display value="Acute Trust"/>
         </contains>
         <contains>
-            <system value="https://fhir.nhs.uk/CodeSystem/organisation-type"/>
+            <system value="https://fhir.nhs.uk/CodeSystem/mim-organisation-type"/>
             <code value="999"/>
             <display value="Not specified"/>
         </contains>
         <contains>
-            <system value="https://fhir.nhs.uk/CodeSystem/organisation-type"/>
+            <system value="https://fhir.nhs.uk/CodeSystem/mim-organisation-type"/>
             <code value="009"/>
             <display value="Care Trust"/>
         </contains>
         <contains>
-            <system value="https://fhir.nhs.uk/CodeSystem/organisation-type"/>
+            <system value="https://fhir.nhs.uk/CodeSystem/mim-organisation-type"/>
             <code value="013"/>
             <display value="NHS Direct"/>
         </contains>
         <contains>
-            <system value="https://fhir.nhs.uk/CodeSystem/organisation-type"/>
+            <system value="https://fhir.nhs.uk/CodeSystem/mim-organisation-type"/>
             <code value="002"/>
             <display value="General  Dental Practice"/>
         </contains>
         <contains>
-            <system value="https://fhir.nhs.uk/CodeSystem/organisation-type"/>
+            <system value="https://fhir.nhs.uk/CodeSystem/mim-organisation-type"/>
             <code value="014"/>
             <display value="Local Authority Social Services Department"/>
         </contains>
         <contains>
-            <system value="https://fhir.nhs.uk/CodeSystem/organisation-type"/>
+            <system value="https://fhir.nhs.uk/CodeSystem/mim-organisation-type"/>
             <code value="003"/>
             <display value="Community Pharmacy"/>
         </contains>
         <contains>
-            <system value="https://fhir.nhs.uk/CodeSystem/organisation-type"/>
+            <system value="https://fhir.nhs.uk/CodeSystem/mim-organisation-type"/>
             <code value="015"/>
             <display value="Nursing Home"/>
         </contains>
         <contains>
-            <system value="https://fhir.nhs.uk/CodeSystem/organisation-type"/>
+            <system value="https://fhir.nhs.uk/CodeSystem/mim-organisation-type"/>
             <code value="004"/>
             <display value="Community Opticians"/>
         </contains>
         <contains>
-            <system value="https://fhir.nhs.uk/CodeSystem/organisation-type"/>
+            <system value="https://fhir.nhs.uk/CodeSystem/mim-organisation-type"/>
             <code value="016"/>
             <display value="Residential Home"/>
         </contains>
         <contains>
-            <system value="https://fhir.nhs.uk/CodeSystem/organisation-type"/>
+            <system value="https://fhir.nhs.uk/CodeSystem/mim-organisation-type"/>
             <code value="005"/>
             <display value="Primary Care Trust"/>
         </contains>
