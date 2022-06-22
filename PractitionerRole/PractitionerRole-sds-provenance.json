@@ -4,7 +4,7 @@
     "identifier": [
         {
             "system": "https://fhir.nhs.uk/Id/sds-role-profile-id",
-            "value": "100102238986"
+            "value": "454567759542"
         }
     ],
     "practitioner": {
@@ -26,19 +26,8 @@
             "coding": [
                 {
                     "system": "https://fhir.hl7.org.uk/CodeSystem/UKCore-SDSJobRoleName",
-                    "code": "R8000",
+                    "code": "S0030:G0100:R0620",
                     "display": "Clinical Practitioner Access Role"
-                }
-            ]
-        }
-    ],
-    "specialty": [
-        {
-            "coding": [
-                {
-                    "system": "https://fhir.nhs.uk/CodeSystem/NHSDataModelAndDictionary-clinical-specialty",
-                    "code": "310",
-                    "display": "Audio Vestibular Medicine"
                 }
             ]
         }

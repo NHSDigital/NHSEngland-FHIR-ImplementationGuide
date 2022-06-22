@@ -1,0 +1,33 @@
+{
+    "resourceType": "PractitionerRole",
+    "id": "b370080b-32f6-4834-ab74-8746a4f45e50",
+    "identifier": [
+        {
+            "system": "https://fhir.nhs.uk/Id/sds-role-profile-id",
+            "value": "454567759542"
+        }
+    ],
+    "practitioner": {
+        "identifier": {
+            "system": "https://fhir.nhs.uk/Id/sds-user-id",
+            "value": "008570091549"
+          }
+    },
+    "organization": {
+        "identifier": {
+            "system": "https://fhir.nhs.uk/Id/ods-organization-code",
+            "value": "RP5"
+          }
+    },
+    "code": [
+        {
+            "coding": [
+                {
+                    "system": "https://fhir.hl7.org.uk/CodeSystem/UKCore-SDSJobRoleName",
+                    "code": "S0030:G0100:R0620",
+                    "display": "Clinical Practitioner Access Role"
+                }
+            ]
+        }
+    ]
+}
