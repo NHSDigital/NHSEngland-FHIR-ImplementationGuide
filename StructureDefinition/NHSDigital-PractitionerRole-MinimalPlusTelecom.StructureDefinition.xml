@@ -48,6 +48,11 @@
       <sliceName value="sdsJobRoleName" />
       <min value="1" />
     </element>
+    <element id="PractitionerRole.code.coding:UKCoreSDSJobRoleName-Retired">
+      <path value="PractitionerRole.code.coding" />
+      <sliceName value="UKCoreSDSJobRoleName-Retired" />
+      <max value="0" />
+    </element>
     <element id="PractitionerRole.telecom">
       <path value="PractitionerRole.telecom" />
       <min value="1" />
