@@ -33,9 +33,6 @@
       <path value="Extension.value[x]" />
       <min value="1" />
       <type>
-        <code value="Identifier" />
-      </type>
-      <type>
         <code value="Reference" />
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole" />
         <aggregation value="referenced" />
