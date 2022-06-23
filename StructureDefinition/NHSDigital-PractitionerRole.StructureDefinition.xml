@@ -198,7 +198,7 @@
     <element id="PractitionerRole.code.coding:sdsJobRoleName">
       <path value="PractitionerRole.code.coding" />
       <sliceName value="sdsJobRoleName" />
-      <max value="0" />
+      <max value="1" />
       <mustSupport value="true" />
     </element>
     <element id="PractitionerRole.code.coding:sdsJobRoleName.system">

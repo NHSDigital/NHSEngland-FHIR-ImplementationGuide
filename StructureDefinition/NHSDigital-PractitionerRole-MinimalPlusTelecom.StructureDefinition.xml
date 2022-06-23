@@ -11,12 +11,41 @@
   <baseDefinition value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole-Minimal" />
   <derivation value="constraint" />
   <differential>
+    <element id="PractitionerRole.identifier">
+      <path value="PractitionerRole.identifier" />
+      <min value="1" />
+    </element>
+    <element id="PractitionerRole.identifier:sdsRoleProfileID">
+      <path value="PractitionerRole.identifier" />
+      <sliceName value="sdsRoleProfileID" />
+      <min value="1" />
+    </element>
     <element id="PractitionerRole.practitioner.identifier">
       <path value="PractitionerRole.practitioner.identifier" />
       <min value="1" />
     </element>
     <element id="PractitionerRole.practitioner.display">
       <path value="PractitionerRole.practitioner.display" />
+      <min value="1" />
+    </element>
+    <element id="PractitionerRole.organization">
+      <path value="PractitionerRole.organization" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Organization-SDS" />
+      </type>
+    </element>
+    <element id="PractitionerRole.organization.reference">
+      <path value="PractitionerRole.organization.reference" />
+      <min value="1" />
+    </element>
+    <element id="PractitionerRole.code">
+      <path value="PractitionerRole.code" />
+      <min value="1" />
+    </element>
+    <element id="PractitionerRole.code.coding:sdsJobRoleName">
+      <path value="PractitionerRole.code.coding" />
+      <sliceName value="sdsJobRoleName" />
       <min value="1" />
     </element>
     <element id="PractitionerRole.telecom">
