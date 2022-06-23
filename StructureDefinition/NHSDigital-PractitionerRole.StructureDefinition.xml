@@ -203,7 +203,7 @@
     </element>
     <element id="PractitionerRole.code.coding:sdsJobRoleName.system">
       <path value="PractitionerRole.code.coding.system" />
-      <fixedUri value="https://fhir.hl7org.uk/CodeSystem/UKCore-SDSJobRoleName" />
+      <fixedUri value="https://fhir.nhs.uk/CodeSystem/NHSDigital-SDS-JobRoleCode" />
     </element>
     <element id="PractitionerRole.specialty">
       <path value="PractitionerRole.specialty" />
