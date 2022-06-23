@@ -39,20 +39,6 @@
       <path value="PractitionerRole.organization.reference" />
       <min value="1" />
     </element>
-    <element id="PractitionerRole.code">
-      <path value="PractitionerRole.code" />
-      <min value="1" />
-    </element>
-    <element id="PractitionerRole.code.coding:sdsJobRoleName">
-      <path value="PractitionerRole.code.coding" />
-      <sliceName value="sdsJobRoleName" />
-      <min value="1" />
-    </element>
-    <element id="PractitionerRole.code.coding:UKCoreSDSJobRoleName-Retired">
-      <path value="PractitionerRole.code.coding" />
-      <sliceName value="UKCoreSDSJobRoleName-Retired" />
-      <max value="0" />
-    </element>
     <element id="PractitionerRole.telecom">
       <path value="PractitionerRole.telecom" />
       <min value="1" />

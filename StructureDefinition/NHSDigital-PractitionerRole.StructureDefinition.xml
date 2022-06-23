@@ -178,13 +178,6 @@
     </element>
     <element id="PractitionerRole.code.coding">
       <path value="PractitionerRole.code.coding" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="system" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
       <min value="1" />
     </element>
     <element id="PractitionerRole.code.coding.system">
@@ -194,24 +187,6 @@
     <element id="PractitionerRole.code.coding.code">
       <path value="PractitionerRole.code.coding.code" />
       <min value="1" />
-    </element>
-    <element id="PractitionerRole.code.coding:sdsJobRoleName">
-      <path value="PractitionerRole.code.coding" />
-      <sliceName value="sdsJobRoleName" />
-      <max value="1" />
-      <mustSupport value="true" />
-    </element>
-    <element id="PractitionerRole.code.coding:sdsJobRoleName.system">
-      <path value="PractitionerRole.code.coding.system" />
-      <fixedUri value="https://fhir.nhs.uk/CodeSystem/NHSDigital-SDS-JobRoleCode" />
-    </element>
-    <element id="PractitionerRole.code.coding:UKCoreSDSJobRoleName-Retired">
-      <path value="PractitionerRole.code.coding" />
-      <sliceName value="UKCoreSDSJobRoleName-Retired" />
-      <max value="1" />
-      <fixedCoding>
-        <system value="https://fhir.hl7.org.uk/CodeSystem/UKCore-SDSJobRoleName" />
-      </fixedCoding>
     </element>
     <element id="PractitionerRole.specialty">
       <path value="PractitionerRole.specialty" />
