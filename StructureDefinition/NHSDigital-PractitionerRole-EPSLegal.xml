@@ -42,11 +42,6 @@
         <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole-EPSLegal" />
       </constraint>
     </element>
-    <element id="PractitionerRole.code.coding:UKCoreSDSJobRoleName-Retired">
-      <path value="PractitionerRole.code.coding" />
-      <sliceName value="UKCoreSDSJobRoleName-Retired" />
-      <min value="1" />
-    </element>
     <element id="PractitionerRole.location">
       <path value="PractitionerRole.location" />
       <type>
