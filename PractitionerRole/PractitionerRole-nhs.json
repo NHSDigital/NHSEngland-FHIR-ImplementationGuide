@@ -24,8 +24,7 @@
             "coding": [
                 {
                     "system": "https://fhir.nhs.uk/CodeSystem/NHSDigital-SDS-JobRoleCode",
-                    "code": "S0030:G0100:R0620",
-                    "display": "Clinical Practitioner Access Role"
+                    "code": "S0030:G0100:R0620"
                 }
             ]
         }
