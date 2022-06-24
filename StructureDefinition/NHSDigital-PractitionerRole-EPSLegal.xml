@@ -42,6 +42,15 @@
         <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole-EPSLegal" />
       </constraint>
     </element>
+    <element id="PractitionerRole.code">
+      <path value="PractitionerRole.code" />
+      <min value="1" />
+    </element>
+    <element id="PractitionerRole.code.coding:sdsJobRoleName">
+      <path value="PractitionerRole.code.coding" />
+      <sliceName value="sdsJobRoleName" />
+      <min value="1" />
+    </element>
     <element id="PractitionerRole.location">
       <path value="PractitionerRole.location" />
       <type>
