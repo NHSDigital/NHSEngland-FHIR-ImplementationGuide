@@ -195,10 +195,11 @@
       <path value="PractitionerRole.code.coding.code" />
       <min value="1" />
     </element>
-
     <element id="PractitionerRole.code.coding:sdsJobRoleName">
       <path value="PractitionerRole.code.coding" />
       <sliceName value="sdsJobRoleName" />
+      <short value="Retired version of SDS Job Role Name" />
+      <definition value="Please use the NHS digital variant of this CodeSystem (see sdsJobRoleCode) which has a system of https://fhir.nhs.uk/CodeSystem/NHSDigital-SDS-JobRoleCode. &#xD;&#xA;&#xD;&#xA;This slice is provided for backwards compatabilty reasons and will be removed in a future version." />
       <max value="1" />
       <mustSupport value="true" />
     </element>
@@ -206,10 +207,11 @@
       <path value="PractitionerRole.code.coding.system" />
       <fixedUri value="https://fhir.hl7org.uk/CodeSystem/UKCore-SDSJobRoleName" />
     </element>
-
     <element id="PractitionerRole.code.coding:sdsJobRoleCode">
       <path value="PractitionerRole.code.coding" />
       <sliceName value="sdsJobRoleCode" />
+      <short value="SDS Job Role Code" />
+      <definition value="This value should be sourced from either APIM OAuth2 userinfo endpoint, SDS LDAP or CIS2/SmartCard details. &#xD;&#xA;&#xD;&#xA;The CodeSystem is variable and is not present in this Implementation Guide." />
       <max value="1" />
       <mustSupport value="true" />
     </element>
@@ -217,7 +219,6 @@
       <path value="PractitionerRole.code.coding.system" />
       <fixedUri value="https://fhir.nhs.uk/CodeSystem/NHSDigital-SDS-JobRoleCode" />
     </element>
-
     <element id="PractitionerRole.specialty">
       <path value="PractitionerRole.specialty" />
       <definition value="This is should be the specialty linked to the role and is not necessarily the practitioners main specialty. &#xD;&#xA;&#xD;&#xA;This can be supplemented by SNOMED CT codes from {{link:http://hl7.org/fhir/ValueSet/c80-practice-codes}}, no ConceptMap currently exists for mapping between the two.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA; &quot;specialty&quot;: [&#xD;&#xA;        {&#xD;&#xA;            &quot;coding&quot;: [&#xD;&#xA;                {&#xD;&#xA;                    &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/NHSDataModelAndDictionary-clinical-specialty&quot;,&#xD;&#xA;                    &quot;code&quot;: &quot;100&quot;,&#xD;&#xA;                    &quot;display&quot;: &quot;GENERAL SURGERY&quot;&#xD;&#xA;                }&#xD;&#xA;            ]&#xD;&#xA;        }&#xD;&#xA;    ],&#xD;&#xA;```" />
