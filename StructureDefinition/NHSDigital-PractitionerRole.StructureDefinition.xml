@@ -173,7 +173,7 @@
     </element>
     <element id="PractitionerRole.code">
       <path value="PractitionerRole.code" />
-      <definition value="Only supply if this is known.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;code&quot;:  [&#xD;&#xA;        {&#xD;&#xA;            &quot;coding&quot;:  [&#xD;&#xA;                {&#xD;&#xA;                    &quot;system&quot;: &quot;http://snomed.info/sct&quot;,&#xD;&#xA;                    &quot;code&quot;: &quot;106289002&quot;,&#xD;&#xA;                    &quot;display&quot;: &quot;Dentist&quot;&#xD;&#xA;                }&#xD;&#xA;            ]&#xD;&#xA;        }&#xD;&#xA;    ],&#xD;&#xA;```" />
+      <definition value="Only supply if this is known from SmartCard/CIS2 data.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;code&quot;:  [&#xD;&#xA;        {&#xD;&#xA;            &quot;coding&quot;:  [&#xD;&#xA;                {&#xD;&#xA;                    &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/NHSDigital-SDS-JobRoleCode&quot;,&#xD;&#xA;                    &quot;code&quot;: &quot;S0030:G0100:R0620&quot;&#xD;&#xA;                  }&#xD;&#xA;            ]&#xD;&#xA;        }&#xD;&#xA;    ],&#xD;&#xA;```" />
       <mustSupport value="true" />
     </element>
     <element id="PractitionerRole.code.coding">
