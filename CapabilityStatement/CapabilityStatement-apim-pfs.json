@@ -95,7 +95,7 @@
                 },
                 {
                     "type": "Patient",
-                    "profile": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Patient",
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient",
                     "interaction": [
                         {
                             "code": "read",
@@ -221,7 +221,7 @@
                 },
                 {
                     "type": "Organization",
-                    "profile": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Organizationt",
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-Organization",
                     "interaction": [
                         {
                             "code": "read",
@@ -252,7 +252,7 @@
                 },
                 {
                     "type": "Practitioner",
-                    "profile": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Practitioner",
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-Practitioner",
                     "interaction": [
                         {
                             "code": "read",
@@ -283,7 +283,7 @@
                 },
                 {
                     "type": "PractitionerRole",
-                    "profile": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-PractitionerRole",
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole",
                     "interaction": [
                         {
                             "code": "read",
