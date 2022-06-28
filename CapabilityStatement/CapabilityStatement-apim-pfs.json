@@ -220,6 +220,10 @@
                     ]
                 },
                 {
+                    "type": "OperationOutcome",
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-OperationOutcome"
+                },
+                {
                     "type": "Organization",
                     "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-Organization",
                     "interaction": [
