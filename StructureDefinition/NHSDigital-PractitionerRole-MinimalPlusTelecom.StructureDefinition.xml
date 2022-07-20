@@ -3,7 +3,7 @@
   <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole-MinimalPlusTelecom" />
   <name value="NHSDigitalPractitionerRoleMinimalPlusTelecom" />
   <status value="draft" />
-  <purpose value="Constraint profile for Electronic Prescription System which enforces practitioner, organization and telecom elements in contained resources," />
+  <purpose value="Constraint profile for Electronic Prescription System which enforces practitioner, organization, sds role code, sds user profile id and telecom elements in contained resources," />
   <fhirVersion value="4.0.1" />
   <kind value="resource" />
   <abstract value="false" />
@@ -37,6 +37,15 @@
     </element>
     <element id="PractitionerRole.organization.reference">
       <path value="PractitionerRole.organization.reference" />
+      <min value="1" />
+    </element>
+    <element id="PractitionerRole.code">
+      <path value="PractitionerRole.code" />
+      <min value="1" />
+    </element>
+    <element id="PractitionerRole.code.coding:sdsJobRoleCode">
+      <path value="PractitionerRole.code.coding" />
+      <sliceName value="sdsJobRoleCode" />
       <min value="1" />
     </element>
     <element id="PractitionerRole.telecom">

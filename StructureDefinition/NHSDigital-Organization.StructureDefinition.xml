@@ -4,6 +4,7 @@
   <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Organization" />
   <name value="NHSDigitalOrganization" />
   <status value="draft" />
+  <purpose value="NHS Digital generic definintion of the data requirements for Organization." />
   <fhirVersion value="4.0.1" />
   <kind value="resource" />
   <abstract value="false" />
