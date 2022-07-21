@@ -193,7 +193,7 @@
       <path value="MedicationDispense.performer.actor" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole-MinimalPlusTelecom" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole-SDS" />
         <aggregation value="contained" />
       </type>
       <constraint>
@@ -271,7 +271,8 @@
     </element>
     <element id="MedicationDispense.quantity">
       <path value="MedicationDispense.quantity" />
-      <definition value="The amount of medication that has been dispensed. Includes unit of measure.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;quantity&quot;: {&#xD;&#xA;    &quot;value&quot;: 28,&#xD;&#xA;    &quot;unit&quot;: &quot;capsule&quot;,&#xD;&#xA;    &quot;system&quot;: &quot;http://snomed.info/sct&quot;,&#xD;&#xA;    &quot;code&quot;: &quot;3316911000001105&quot;&#xD;&#xA;}&#xD;&#xA;```" />
+      <definition value="The amount of medication that has been dispensed. Includes unit of measure.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;quantity&quot;: {&#xD;&#xA;    &quot;value&quot;: 28,&#xD;&#xA;    &quot;unit&quot;: &quot;capsule&quot;,&#xD;&#xA;    &quot;system&quot;: &quot;http://snomed.info/sct&quot;,&#xD;&#xA;    &quot;code&quot;: &quot;3316911000001105&quot;&#xD;&#xA;}&#xD;&#xA;```&#xD;&#xA;&#xD;&#xA;If no actual quantity has been dispensed then use a value of zero." />
+      <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="MedicationDispense.quantity.extension">
