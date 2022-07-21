@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole-MinimalPlusTelecom" />
-  <name value="NHSDigitalPractitionerRoleMinimalPlusTelecom" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole-SDS" />
+  <name value="NHSDigitalPractitionerRoleSDS" />
   <status value="draft" />
+  <description value="This profile is designed to support backwards compatibility with NHS Digital Spine HL7 v3 API's. It should not be used for new API's. &#xD;&#xA;&#xD;&#xA;The use of SDS identifiers here is not widely supported and ODS identifiers (professional codes) are preferred instead." />
   <purpose value="Constraint profile for Electronic Prescription System which enforces practitioner, organization, sds role code, sds user profile id and telecom elements in contained resources," />
   <fhirVersion value="4.0.1" />
   <kind value="resource" />
@@ -23,6 +24,10 @@
     <element id="PractitionerRole.practitioner.identifier">
       <path value="PractitionerRole.practitioner.identifier" />
       <min value="1" />
+    </element>
+    <element id="PractitionerRole.practitioner.identifier.system">
+      <path value="PractitionerRole.practitioner.identifier.system" />
+      <fixedUri value="https://fhir.nhs.uk/Id/sds-user-id" />
     </element>
     <element id="PractitionerRole.practitioner.display">
       <path value="PractitionerRole.practitioner.display" />
