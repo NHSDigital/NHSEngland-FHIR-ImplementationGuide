@@ -77,6 +77,13 @@
         <expression value="identifier.count() != 1 or (identifier.count() = 1 and identifier.where(system='https://fhir.nhs.uk/Id/sds-user-id').exists().not())" />
         <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Practitioner" />
       </constraint>
+       <constraint>
+        <key value="prac-sds-user-numeric" />
+        <severity value="error" />
+        <human value="sds-user-id must be numeric" />
+        <expression value="identifier.where(system='https://fhir.nhs.uk/Id/sds-user-id').exists().not() or (identifier.where(system='https://fhir.nhs.uk/Id/sds-user-id').exists()  and identifier.where(system='https://fhir.nhs.uk/Id/sds-user-id').value.matches('^[0-9]+$'))" />
+        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Practitioner" />
+      </constraint>
     </element>
     <element id="Practitioner.identifier">
       <path value="Practitioner.identifier" />

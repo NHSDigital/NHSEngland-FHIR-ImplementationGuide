@@ -22,7 +22,7 @@
       </constraint>
       <constraint>
         <key value="role-sds-role-profile" />
-        <severity value="warning" />
+        <severity value="error" />
         <human value="SDS Role Profile Id must be 12 digits" />
         <expression value="identifier.where(system='https://fhir.nhs.uk/Id/sds-role-profile-id').exists().not() or (identifier.where(system='https://fhir.nhs.uk/Id/sds-role-profile-id').exists()  and identifier.where(system='https://fhir.nhs.uk/Id/sds-role-profile-id').value.matches('^[0-9]{12}$'))" />
         <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole" />
@@ -144,6 +144,13 @@
         <human value="Professional code (GMC, GMP, NMC, etc) is preferred." />
         <expression value="identifier.exists().not() or identifier.where(system='https://fhir.nhs.uk/Id/sds-user-id').exists().not()" />
         <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole" />
+      </constraint>
+      <constraint>
+        <key value="prac-sds-user-numeric" />
+        <severity value="error" />
+        <human value="sds-user-id must be numeric" />
+        <expression value="identifier.where(system='https://fhir.nhs.uk/Id/sds-user-id').exists().not() or (identifier.where(system='https://fhir.nhs.uk/Id/sds-user-id').exists()  and identifier.where(system='https://fhir.nhs.uk/Id/sds-user-id').value.matches('^[0-9]+$'))" />
+        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Practitioner" />
       </constraint>
       <mustSupport value="true" />
     </element>

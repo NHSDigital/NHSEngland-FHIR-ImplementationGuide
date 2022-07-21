@@ -53,10 +53,10 @@
     <element id="OperationOutcome.issue">
       <path value="OperationOutcome.issue" />
       <constraint>
-        <key value="nhds-errrorcode" />
+        <key value="nhsd-errrorcode" />
         <severity value="error" />
         <human value="An NHS Digital error or warning code is required" />
-        <expression value="(issue.severity = 'information') or ((issue.severity != 'information') and issue.details.empty().not())" />
+        <expression value="(severity = 'information') or ((severity != 'information') and details.empty().not())" />
         <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-OperationOutcome" />
       </constraint>
       <mustSupport value="true" />
