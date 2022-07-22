@@ -9,7 +9,7 @@
   <kind value="resource" />
   <abstract value="false" />
   <type value="PractitionerRole" />
-  <baseDefinition value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole-Minimal" />
+  <baseDefinition value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole" />
   <derivation value="constraint" />
   <differential>
     <element id="PractitionerRole.identifier">
@@ -21,13 +21,22 @@
       <sliceName value="sdsRoleProfileID" />
       <min value="1" />
     </element>
+    <element id="PractitionerRole.practitioner">
+      <path value="PractitionerRole.practitioner" />
+      <min value="1" />
+    </element>
     <element id="PractitionerRole.practitioner.identifier">
       <path value="PractitionerRole.practitioner.identifier" />
       <min value="1" />
     </element>
     <element id="PractitionerRole.practitioner.identifier.system">
       <path value="PractitionerRole.practitioner.identifier.system" />
+      <min value="1" />
       <fixedUri value="https://fhir.nhs.uk/Id/sds-user-id" />
+    </element>
+    <element id="PractitionerRole.practitioner.identifier.value">
+      <path value="PractitionerRole.practitioner.identifier.value" />
+      <min value="1" />
     </element>
     <element id="PractitionerRole.practitioner.display">
       <path value="PractitionerRole.practitioner.display" />
@@ -35,6 +44,7 @@
     </element>
     <element id="PractitionerRole.organization">
       <path value="PractitionerRole.organization" />
+      <min value="1" />
       <type>
         <code value="Reference" />
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Organization-SDS" />
@@ -43,6 +53,10 @@
     <element id="PractitionerRole.organization.reference">
       <path value="PractitionerRole.organization.reference" />
       <min value="1" />
+    </element>
+    <element id="PractitionerRole.organization.identifier.system">
+      <path value="PractitionerRole.organization.identifier.system" />
+      <fixedUri value="https://fhir.nhs.uk/Id/ods-organization-code" />
     </element>
     <element id="PractitionerRole.code">
       <path value="PractitionerRole.code" />
