@@ -1,6 +1,6 @@
 {
     "resourceType": "Encounter",
-    "id": "d183a526-a507-458b-ac79-5c09b62e5c76",
+
     "identifier": [
         {
             "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
@@ -32,7 +32,6 @@
         }
     ],
     "subject": {
-        "reference": "https://myeps.mynhstrust.nhs.uk/758da98d-81b8-42a7-9e7c-187ce09a138b",
         "identifier": {
             "system": "https://fhir.nhs.uk/Id/nhs-number",
             "value": "9333333333"
