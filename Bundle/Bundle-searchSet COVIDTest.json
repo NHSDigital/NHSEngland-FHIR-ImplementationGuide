@@ -40,7 +40,7 @@
             {
               "system": "http://snomed.info/sct",
               "code": "871562009",
-              "display": "Detection of Severe acute respiratory syndrome coronavirus 2 (observable entity)"
+              "display": "Detection of SARS-CoV-2 (severe acute respiratory syndrome coronavirus 2)"
             }
           ]
         },
@@ -69,7 +69,7 @@
             {
               "system": "http://snomed.info/sct",
               "code": "1240471000000102",
-              "display": "Measurement of Severe acute respiratory syndrome coronavirus 2 antigen (observable entity)"
+              "display": "Measurement of SARS-CoV-2 (severe acute respiratory syndrome coronavirus 2) antigen"
             }
           ]
         },
@@ -150,7 +150,7 @@
             {
               "system": "http://snomed.info/sct",
               "code": "871562009",
-              "display": "Detection of Severe acute respiratory syndrome coronavirus 2 (observable entity)"
+              "display": "Detection of SARS-CoV-2 (severe acute respiratory syndrome coronavirus 2)"
             }
           ]
         },
