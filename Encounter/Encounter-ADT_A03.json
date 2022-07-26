@@ -35,7 +35,8 @@
         "identifier": {
             "system": "https://fhir.nhs.uk/Id/nhs-number",
             "value": "9333333333"
-        }
+        },
+        "display" : "Mrs Fredrica Smith"
     },
     "participant": [
         {
