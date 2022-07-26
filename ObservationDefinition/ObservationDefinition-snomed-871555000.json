@@ -6,7 +6,7 @@
       {
         "system": "http://snomed.info/sct",
         "code": "871555000",
-        "display": "Detection of ribonucleic acid of Severe acute respiratory syndrome coronavirus 2"
+        "display": "Detection of ribonucleic acid of SARS-CoV-2"
       }
     ]
   },
