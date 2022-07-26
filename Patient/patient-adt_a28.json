@@ -3,6 +3,14 @@
     "id": "221c028d-e15b-4d60-8035-c460c8231fa3",
     "identifier": [
         {
+            "system": "https://fhir.yorkhospitals.nhs.uk/Id/MRN",
+            "value": "E3843677"
+        },
+        {
+            "system": "https://fhir.yorkhospitals.nhs.uk/Id/MR",
+            "value": "900070078"
+        },
+        {
             "system": "https://fhir.nhs.uk/Id/nhs-number",
             "value": "9333333333"
         }
@@ -61,13 +69,13 @@
                 "value": "G5612908"
             },
             "display": "Dr Gregory Townley"
-        }
-    ],
-    "managingOrganization": {
-        "identifier": {
-            "system": "https://fhir.nhs.uk/Id/ods-organization-code",
-            "value": "Y06601"
         },
-        "display": "MALTON GP PRACTICE"
-    }
+        {
+            "identifier": {
+                "system": "https://fhir.nhs.uk/Id/ods-organization-code",
+                "value": "Y06601"
+            },
+            "display": "MALTON GP PRACTICE"
+        }
+    ]
 }
