@@ -1,6 +1,6 @@
 {
     "resourceType": "Encounter",
-    "id": "13a71516-a6d4-494b-b320-057e03f492e6",
+    "id": "6852936",
     "meta": {
         "versionId": "1",
         "lastUpdated": "2022-07-26T06:38:54.907+00:00",
@@ -22,7 +22,7 @@
         {
             "coding": [
                 {
-                    "system": "https://fhir.hl7.org.uk/CodeSystem/UKCore-AdmissionMethod",
+                    "system": "https://fhir.hl7.org.uk/CodeSystem/NHSDataModelAndDictionary-AdmissionMethod",
                     "code": "82"
                 }
             ]
@@ -118,7 +118,7 @@
         "admitSource": {
             "coding": [
                 {
-                    "system": "https://fhir.hl7.org.uk/CodeSystem/UKCore-SourceOfAdmission",
+                    "system": "https://fhir.hl7.org.uk/CodeSystem/UKCore-SourceOfAdmissionEngland",
                     "code": "79"
                 }
             ]
@@ -126,7 +126,7 @@
         "dischargeDisposition": {
             "coding": [
                 {
-                    "system": "https://fhir.hl7.org.uk/CodeSystem/UKCore-DischargeMethod",
+                    "system": "https://fhir.hl7.org.uk/CodeSystem/NHSDataModelAndDictionary-DischargeDestination",
                     "code": "19"
                 }
             ]
