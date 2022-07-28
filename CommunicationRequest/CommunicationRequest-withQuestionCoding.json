@@ -1,0 +1,78 @@
+{
+    "resourceType": "CommunicationRequest",
+    "contained": [
+        {
+            "resourceType": "Questionnaire",
+            "id": "answeroptions",
+            "status": "active",
+            "item": [
+                {
+                    "linkId": "1",
+                    "text": "Do you smoke?",
+                    "type": "choice",
+                    "answerOption": [
+                        {
+                            "valueCoding": {
+                                "display": "Yes"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "display": "No"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "display": "Don't know"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "extension": [
+        {
+            "url": "https://fhir.nhs.uk/NHSApp/answers",
+            "valueReference": {
+                "reference": "#answeroptions"
+            }
+        }
+    ],
+    "status": "active",
+    "identifier": [
+        {
+            "system": "https://fhir.nhs.uk/NHSApp/campaign-id",
+            "value": "Optional Campaign ID"
+        },
+        {
+            "system": "https://fhir.nhs.uk/NHSApp/request-id",
+            "value": "Optional Request Reference"
+        }
+    ],
+    "payload": [
+        {
+            "contentString": "You have a new appointment, please confirm you can attend. Open the Onboarded Third Party appointment [here](https://www.nhsapp.service.nhs.uk/appointments/hospital-appointments)"
+        }
+    ],
+    "sender": {
+        "display": "Onboarded Third Party"
+    },
+    "recipient": [
+        {
+            "type": "Patient",
+            "identifier": {
+                "system": "https://fhir.nhs.uk/Id/nhs-number",
+                "value": "9692113841"
+            }
+        }
+    ],
+    "requester": {
+        "type": "Organization",
+        "identifier": {
+            "system": "https://fhir.nhs.uk/Id/ods-organization-code",
+            "value": "B82041"
+        },
+        "display": "Beech Tree Medical Centre"
+    }
+}

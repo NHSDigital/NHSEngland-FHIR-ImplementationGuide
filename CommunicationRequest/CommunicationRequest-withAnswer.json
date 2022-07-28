@@ -1,0 +1,67 @@
+{
+    "resourceType": "CommunicationRequest",
+    "contained": [
+        {
+            "resourceType": "QuestionnaireResponse",
+            "id": "answers",
+            "status": "completed",
+            "item": [
+                {
+                    "linkId": "1",
+                    "answer": [
+                        {
+                            "valueCoding": {
+                                "display": "Yes"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "status": "active",
+    "basedOn": [ {
+        "identifier":{
+            "system": "https://fhir.nhs.uk/NHSApp/request-id",
+            "value": "Optional Request Reference"
+        }
+    }
+    ],
+    "identifier": [
+        {
+            "system": "https://fhir.nhs.uk/NHSApp/request-id",
+            "value": "Optional Request Reference"
+        }
+    ],
+    "payload": [
+        {
+            "contentString": "Yes"
+        },
+        {
+            "contentReference": {
+                "reference" : "#answers"
+            }
+        }
+    ],
+    "sender": {
+        "display": "NHS App"
+    },
+    "recipient": [
+        {
+            "type": "Organization",
+        "identifier": {
+            "system": "https://fhir.nhs.uk/Id/ods-organization-code",
+            "value": "B82041"
+        },
+        "display": "Beech Tree Medical Centre"
+         
+        }
+    ],
+    "requester": {
+        "type": "Patient",
+        "identifier": {
+            "system": "https://fhir.nhs.uk/Id/nhs-number",
+            "value": "9692113841"
+        }
+    }
+}
