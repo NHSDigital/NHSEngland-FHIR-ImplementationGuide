@@ -6,6 +6,19 @@
         "lastUpdated": "2022-07-26T06:38:54.907+00:00",
         "source": "#zinyvQkLDsiddCuu"
     },
+    "extension": [
+        {
+            "url":"https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-AdmissionMethod",
+            "valueCodeableConcept":  {
+                "coding": [
+                    {
+                        "system": "https://fhir.hl7.org.uk/CodeSystem/NHSDataModelAndDictionary-AdmissionMethod",
+                        "code": "82"
+                    }
+                ]
+            }
+        }
+    ],
     "identifier": [
         {
             "system": "https://fhir.yorkhospitals.nhs.uk/Id/visitId",
@@ -18,15 +31,7 @@
         "code": "SS",
         "display": "short stay"
     },
-    "type": [
-        {
-            "coding": [
-                {
-                    "system": "https://fhir.hl7.org.uk/CodeSystem/NHSDataModelAndDictionary-AdmissionMethod",
-                    "code": "82"
-                }
-            ]
-        },
+    "serviceType": [
         {
             "coding": [
                 {

@@ -14,9 +14,4 @@
         <value value="https://fhir.hl7.org.uk/Id/nhsbsa-spurious-code"/>
         <preferred value="true"/>
     </uniqueId>
-    <uniqueId>
-        <type value="oid"/>
-        <value value="1.2.826.0.1285.0.2.1.54"/>
-        <preferred value="false"/>
-    </uniqueId>
 </NamingSystem>
