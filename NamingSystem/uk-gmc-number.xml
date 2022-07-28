@@ -7,8 +7,8 @@
     <date value="2019-12-03"/>
     <publisher value="HL7 UK"/>
     <responsible value="General Medical Council"/>
-    <description value="General Medical Council Reference Number. See [NHS Data Dictionary](https://www.datadictionary.nhs.uk/data_dictionary/attributes/g/general_medical_practitioner_ppd_code_de.asp)"/>
-    <usage value="A unique reference number, used to identify consultants"/>
+    <description value="General Medical Council Consultant Code. See [NHS Data Dictionary](https://www.datadictionary.nhs.uk/data_dictionary/attributes/g/general_medical_practitioner_ppd_code_de.asp)"/>
+    <usage value="A unique consultant code, used to identify consultants"/>
     <uniqueId>
         <type value="uri"/>
         <value value="https://fhir.hl7.org.uk/Id/gmc-number"/>
