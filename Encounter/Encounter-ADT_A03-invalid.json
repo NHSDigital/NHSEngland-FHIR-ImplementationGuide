@@ -8,11 +8,11 @@
     },
     "extension": [
         {
-            "url": "https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-AdmissionMethod",
+            "url": "https://fhir.nhs.uk/StructureDefinition/Extension-UKCore-AdmissionMethod",
             "valueCodeableConcept": {
                 "coding": [
                     {
-                        "system": "https://fhir.hl7.org.uk/CodeSystem/NHSDataModelAndDictionary-AdmissionMethod",
+                        "system": "https://fhir.nhs.uk/CodeSystem/UKCore-AdmissionMethod",
                         "code": "82"
                     }
                 ]
@@ -36,6 +36,11 @@
             {
                 "system": "https://fhir.nhs.uk/CodeSystem/NHSDataModelAndDictionary-treatment-function",
                 "code": "500"
+            },
+		 	{
+                "system": "http://snomed.info/sct",
+                "code": "5892711000000104",
+				"display": "Gynaecological oncology service"
             }
         ]
     },

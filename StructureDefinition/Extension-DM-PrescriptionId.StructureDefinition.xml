@@ -16,6 +16,10 @@
     <type value="element" />
     <expression value="MedicationRequest.groupIdentifier" />
   </context>
+  <context>
+    <type value="element" />
+    <expression value="MedicationRequest.basedOn" />
+  </context>
   <type value="Extension" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
   <derivation value="constraint" />
