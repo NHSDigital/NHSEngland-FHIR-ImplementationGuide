@@ -175,7 +175,7 @@
     </element>
     <element id="Practitioner.identifier:professionalNumber.system">
       <path value="Practitioner.identifier.system" />
-      <fixedUri value="https://fhir.hl7.org.uk/Id/professional-number" />
+      <fixedUri value="https://fhir.hl7.org.uk/Id/professional-code" />
     </element>
     <element id="Practitioner.identifier:gmcReferenceNumber">
       <path value="Practitioner.identifier" />
