@@ -447,6 +447,18 @@
       </type>
       <mustSupport value="true" />
     </element>
+    <element id="MedicationRequest.basedOn.extension:orignalPrescriptionId">
+      <path value="MedicationRequest.basedOn.extension" />
+      <sliceName value="orignalPrescriptionId" />
+      <definition value="The original prescription id, used in repeats. This is taken from the same extension in the original MedicationRequest.groupIdentifier.&#xD;&#xA;```json&#xD;&#xA;  &quot;extension&quot;:  [&#xD;&#xA;        {&#xD;&#xA;            &quot;url&quot;: &quot;https://fhir.nhs.uk/StructureDefinition/Extension-DM-PrescriptionId&quot;,&#xD;&#xA;            &quot;valueIdentifier&quot;: {&#xD;&#xA;                &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/prescription&quot;,&#xD;&#xA;                &quot;value&quot;: &quot;ad945a29-85f8-439a-b590-6789719adc16&quot;&#xD;&#xA;            }&#xD;&#xA;        }&#xD;&#xA;    ],&#xD;&#xA;```" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-DM-PrescriptionId" />
+      </type>
+      <isModifier value="false" />
+    </element>
     <element id="MedicationRequest.groupIdentifier">
       <path value="MedicationRequest.groupIdentifier" />
       <short value="groupIdentifier (Short Form Prescription ID)" />
