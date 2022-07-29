@@ -1,11 +1,24 @@
 {
     "resourceType": "Encounter",
-    "id": "13a71516-a6d4-494b-b320-057e03f492e6",
+    "id": "adt-ao3-converted",
     "meta": {
         "versionId": "1",
         "lastUpdated": "2022-07-26T06:38:54.907+00:00",
         "source": "#zinyvQkLDsiddCuu"
     },
+    "extension": [
+        {
+            "url": "https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-AdmissionMethod",
+            "valueCodeableConcept": {
+                "coding": [
+                    {
+                        "system": "https://fhir.hl7.org.uk/CodeSystem/NHSDataModelAndDictionary-AdmissionMethod",
+                        "code": "82"
+                    }
+                ]
+            }
+        }
+    ],
     "identifier": [
         {
             "system": "https://fhir.yorkhospitals.nhs.uk/Id/visitId",
@@ -18,24 +31,14 @@
         "code": "SS",
         "display": "short stay"
     },
-    "type": [
-        {
-            "coding": [
-                {
-                    "system": "https://fhir.hl7.org.uk/CodeSystem/UKCore-AdmissionMethod",
-                    "code": "82"
-                }
-            ]
-        },
-        {
-            "coding": [
-                {
-                    "system": "https://fhir.nhs.uk/CodeSystem/NHSDataModelAndDictionary-clinical-specialty",
-                    "code": "500"
-                }
-            ]
-        }
-    ],
+    "serviceType": {
+        "coding": [
+            {
+                "system": "https://fhir.nhs.uk/CodeSystem/NHSDataModelAndDictionary-treatment-function",
+                "code": "500"
+            }
+        ]
+    },
     "subject": {
         "reference": "Patient/6853093",
         "identifier": {
@@ -118,7 +121,7 @@
         "admitSource": {
             "coding": [
                 {
-                    "system": "https://fhir.hl7.org.uk/CodeSystem/UKCore-SourceOfAdmission",
+                    "system": "https://fhir.hl7.org.uk/CodeSystem/UKCore-SourceOfAdmissionEngland",
                     "code": "79"
                 }
             ]
@@ -126,7 +129,7 @@
         "dischargeDisposition": {
             "coding": [
                 {
-                    "system": "https://fhir.hl7.org.uk/CodeSystem/UKCore-DischargeMethod",
+                    "system": "https://fhir.hl7.org.uk/CodeSystem/NHSDataModelAndDictionary-DischargeDestination",
                     "code": "19"
                 }
             ]
