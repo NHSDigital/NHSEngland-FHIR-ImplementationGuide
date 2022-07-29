@@ -59,7 +59,7 @@
                         "practitioner": {
                             "identifier": {
                                 "system": "https://fhir.hl7.org.uk/Id/gmp-number",
-                                "value": "G7654321"
+                                "value": "G5654321"
                             },
                             "display": "Dr Gregory Townley"
                         },
