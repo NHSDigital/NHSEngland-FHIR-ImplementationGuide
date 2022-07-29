@@ -105,14 +105,14 @@
       </constraint>
       <constraint>
         <key value="role-gmp" />
-        <severity value="warning" />
+        <severity value="error" />
         <human value="GMP must be of the format GNNNNNNN and not be a spurious code (starts with G6 or G7)" />
         <expression value="identifier.exists().not() or identifier.where(system='https://fhir.hl7.org.uk/Id/gmp-number').exists().not() or (identifier.where(system='https://fhir.hl7.org.uk/Id/gmp-number').exists()  and identifier.where(system='https://fhir.hl7.org.uk/Id/gmp-number').value.matches('^[G]{1}[01234589]{1}[0-9]{6}$'))" />
         <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole" />
       </constraint>
       <constraint>
         <key value="role-gmc" />
-        <severity value="warning" />
+        <severity value="error" />
         <human value="GMC must be of the format CNNNNNNN" />
         <expression value="identifier.exists().not() or identifier.where(system='https://fhir.hl7.org.uk/Id/gmc-number').exists().not() or (identifier.where(system='https://fhir.hl7.org.uk/Id/gmc-number').exists()  and identifier.where(system='https://fhir.hl7.org.uk/Id/gmc-number').value.matches('^[C]{1}[0-9]{7}$'))" />
         <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole" />
@@ -146,10 +146,17 @@
         <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole" />
       </constraint>
       <constraint>
-        <key value="prac-sds-user-numeric" />
+        <key value="role-sds-user-numeric" />
         <severity value="error" />
         <human value="sds-user-id must be numeric" />
         <expression value="identifier.where(system='https://fhir.nhs.uk/Id/sds-user-id').exists().not() or (identifier.where(system='https://fhir.nhs.uk/Id/sds-user-id').exists()  and identifier.where(system='https://fhir.nhs.uk/Id/sds-user-id').value.matches('^[0-9]+$'))" />
+        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Practitioner" />
+      </constraint>
+      <constraint>
+        <key value="role-gmcreferencenumber" />
+        <severity value="error" />
+        <human value="GMC Reference Number must be of the format NNNNNNN" />
+        <expression value="identifier.where(system='https://fhir.hl7.org.uk/Id/gmc-reference-number').exists().not() or (identifier.where(system='https://fhir.hl7.org.uk/Id/gphc-number').exists()  and identifier.where(system='https://fhir.hl7.org.uk/Id/gmc-reference-number').value.matches('^[0-9]{7}$'))" />
         <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Practitioner" />
       </constraint>
       <mustSupport value="true" />
