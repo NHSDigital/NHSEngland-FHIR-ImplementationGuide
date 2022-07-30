@@ -1,0 +1,64 @@
+<StructureDefinition xmlns="http://hl7.org/fhir">
+    <id value="CDSSExtension" />
+    <url value="https://fhir.nhs.uk/StructureDefinition/CDSSExtension" />
+    <version value="1.0.1" />
+    <name value="CDSSExtension" />
+    <title value="CDSS Extension" />
+    <status value="active" />
+    <date value="2022-03-08" />
+    <fhirVersion value="4.0.1" />
+    <kind value="complex-type" />
+    <abstract value="false" />
+    <context>
+        <type value="element" />
+        <expression value="MessageHeader" />
+    </context>
+    <type value="Extension" />
+    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+    <derivation value="constraint" />
+    <differential>
+        <element id="Extension.extension">
+            <path value="Extension.extension" />
+            <slicing>
+                <discriminator>
+                    <type value="value" />
+                    <path value="url" />
+                </discriminator>
+                <rules value="open" />
+            </slicing>
+            <min value="0" />
+        </element>
+        <element id="Extension.extension:RequesterCDSSsoftware">
+            <path value="Extension.extension" />
+            <sliceName value="RequesterCDSSsoftware" />
+            <min value="0" />
+        </element>
+        <element id="Extension.extension:RequesterCDSSsoftware.url">
+            <path value="Extension.extension.url" />
+            <fixedUri value="RequesterCDSSsoftware" />
+        </element>
+        <element id="Extension.extension:RequesterCDSSversion">
+            <path value="Extension.extension" />
+            <sliceName value="RequesterCDSSversion" />
+            <min value="0" />
+        </element>
+        <element id="Extension.extension:RequesterCDSSversion.url">
+            <path value="Extension.extension.url" />
+            <fixedUri value="RequesterCDSSversion" />
+        </element>
+        <element id="Extension.extension:RequesterCDSSversion.value[x]">
+            <path value="Extension.extension.value[x]" />
+            <type>
+                <code value="string" />
+            </type>
+        </element>
+        <element id="Extension.url">
+            <path value="Extension.url" />
+            <fixedUri value="https://fhir.nhs.uk/StructureDefinition/CDSSExtension" />
+        </element>
+        <element id="Extension.value[x]">
+            <path value="Extension.value[x]" />
+            <max value="0" />
+        </element>
+    </differential>
+</StructureDefinition>

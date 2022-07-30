@@ -74,7 +74,6 @@
     </element>
     <element id="MessageHeader.destination.receiver">
       <path value="MessageHeader.destination.receiver" />
-      <definition value="Allows data conveyed by a message to be addressed to a particular person or department when routing to a specific application isn't sufficient." />
       <min value="1" />
       <type>
         <code value="Reference" />
