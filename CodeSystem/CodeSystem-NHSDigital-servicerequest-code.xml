@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSystem xmlns="http://hl7.org/fhir">
+    <url value="https://fhir.nhs.uk/CodeSystem/NHSDigital-servicerequest-code"/>
+    <identifier>
+        <system value="https://fhir.nhs.uk/identifier/CodeSystem"/>
+        <value value="NHSDigital-servicerequest-code"/>
+    </identifier>
+    <version value="1.0.0"/>
+    <name value="NHSDigitalservicerequestcode"/>
+    <title value="Service Request Codes"/>
+    <status value="active"/>
+    <date value="2022-07-28"/>
+    <publisher value="NHS Digital"/>
+    <contact>
+        <name value="NHS Digital" />
+        <telecom>
+            <system value="email" />
+            <value value="interoperabilityteam@nhs.net" />
+            <use value="work" />
+        </telecom>
+    </contact>
+    <description value="Common codes for Service Requests."/>
+    <copyright value="Copyright &#169; 2021 NHS Digital" />
+    <caseSensitive value="true"/>
+    <content value="complete"/>
+    <concept>
+        <code value="advice-and-guidance" />
+        <display value="Advice and Guidance" />
+        <definition value="A Service Request for Advice and Guidance"/>
+    </concept>
+</CodeSystem>
