@@ -49,7 +49,7 @@
     <concept>
         <code value="0005"></code>
         <display value="Prescription has been dispensed" />
-        <definition value="Inform the dispenser to advise the patient that this prescription has already been dispensed. " />
+        <definition value="Inform the dispenser to advise the patient that this prescription has already been dispensed." />
     </concept>
     <concept>
         <code value="0006"></code>

@@ -3,7 +3,7 @@
     "id": "482f9e0a-6f01-4037-b8fe-bfc88d88702c",
     "url": "https://fhir.nhs.uk/CodeSystem/eRS-Priority",
     "version": "1.1.0",
-    "name": "eRS Priority",
+    "name": "ERSPriority",
     "status": "active",
     "date": "2021-09-28T00:00:00+00:00",
     "publisher": "NHS Digital",

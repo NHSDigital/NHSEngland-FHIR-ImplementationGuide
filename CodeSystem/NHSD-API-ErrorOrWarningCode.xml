@@ -2,7 +2,7 @@
    <id value="NHSDigital-ErrorOrWarningCode" />
    <url value="https://fhir.nhs.uk/CodeSystem/NHSD-API-ErrorOrWarningCode" />
    <version value="0.3.0" />
-   <name value="nhsdapierrororwarningcode" />
+   <name value="NHSDAPIErrororWarningCode" />
    <status value="draft" />
    <date value="2022-04-06T00:00:00+00:00" />
    <publisher value="NHS Digital" />

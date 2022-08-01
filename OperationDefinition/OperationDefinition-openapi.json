@@ -6,7 +6,7 @@
     },
     "url": "https://fhir.nhs.uk/OperationDefinition/openapi",
     "version": "4.0.1",
-    "name": "openapi",
+    "name": "OpenApi",
     "status": "draft",
     "kind": "operation",
     "date": "2022-01-07T14:00:00+00:00",

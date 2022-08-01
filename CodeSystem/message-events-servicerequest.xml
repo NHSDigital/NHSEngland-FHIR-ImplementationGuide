@@ -7,7 +7,7 @@
         <value value="message-events-servicerequest"/>
     </identifier>
     <version value="1.0.0"/>
-    <name value="messageeventsservicerequest"/>
+    <name value="MessageEventsServiceRequest"/>
     <title value="Message Events Service Request"/>
     <status value="active"/>
     <date value="2021-12-11"/>

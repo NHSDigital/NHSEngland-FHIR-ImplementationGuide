@@ -3,7 +3,7 @@
     "id": "f4ec40c8-b885-4662-9511-13344ccb5b25",
     "url": "https://fhir.nhs.uk/ConceptMap/bsa-prescription-type-to-mim-organisation-type",
     "version": "4.0.1",
-    "name": "bsaPrescriptionTypeToOrganisationRole",
+    "name": "BSAPrescriptionTypeToOrganisationRole",
     "title": "NHS BSA Prescription Type To MIM Organisation Type",
     "status": "draft",
     "date": "2022-06-13",

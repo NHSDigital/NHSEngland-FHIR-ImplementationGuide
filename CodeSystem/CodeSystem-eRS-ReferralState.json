@@ -2,7 +2,7 @@
     "resourceType": "CodeSystem",
     "id": "11dedb46-cfec-47fb-ab03-fab844b2a8d6",
     "url": "https://fhir.nhs.uk/CodeSystem/eRS-ReferralState",
-    "name": "e-RS Referral State",
+    "name": "ERSReferralState",
     "status": "active",
     "date": "2021-05-26T13:47:15.123000+00:00",
     "publisher": "e-Referral Service",

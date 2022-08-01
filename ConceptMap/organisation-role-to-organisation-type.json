@@ -3,7 +3,7 @@
     "id": "organisation-role-to-organisation-type",
     "url": "https://fhir.nhs.uk/ConceptMap/organisation-role-to-organisation-type",
     "version": "1.0.1",
-    "name": "organisationroletoorganisationtype",
+    "name": "OrganisationRoletOorganisationType",
     "title": "organisation-role-to-mim-organisation-type",
     "status": "draft",
     "experimental": true,

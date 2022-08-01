@@ -6,7 +6,8 @@
   ],
   "status": "draft",
   "url": "https://fhir.nhs.uk/Questionnaire/ERS-ShortList",
-  "title": "ERSShortList",
+  "name": "ERSShortList",
+  "title": "ERS Short List",
   "resourceType": "Questionnaire",
   "item": [
     {

@@ -6,6 +6,7 @@
     <url value="https://fhir.nhs.uk/MessageDefinition/bars-message-servicerequest-response" />
     <description value="BARS Message Definition ServiceRequest - Response CaseTransfer" />
     <title value="BARS Message Definition ServiceRequest - Response CaseTransfer" />
+    <name value="BARSMessageDefinitionServiceRequestResponseCaseTransfer" />
     <status value="active" />
     <date value="2021-12-08" />
     <useContext>

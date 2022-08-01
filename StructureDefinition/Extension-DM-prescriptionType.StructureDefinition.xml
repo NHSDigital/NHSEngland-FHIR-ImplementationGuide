@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="8e2143ee-5d67-4731-9b23-6dc3aa72f9ae"/>
   <url value="https://fhir.nhs.uk/StructureDefinition/Extension-DM-PrescriptionType" />
-  <name value="Extension NHS BSA prescriptionType" />
+  <name value="ExtensionNHSBSAprescriptionType" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
   <mapping>

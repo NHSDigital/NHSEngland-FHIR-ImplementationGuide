@@ -27,11 +27,6 @@
     <element id="PractitionerRole.organization">
       <path value="PractitionerRole.organization" />
       <min value="1" />
-      <constraint>
-        <key value="nhsd-1" />
-        <severity value="error" />
-        <human value="PractitionerRole.organization - An identifier reference or resource reference must be provided" />
-      </constraint>
     </element>
     <element id="PractitionerRole.organization.identifier.system">
       <path value="PractitionerRole.organization.identifier.system" />

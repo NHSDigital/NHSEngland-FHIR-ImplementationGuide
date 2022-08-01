@@ -6,7 +6,7 @@
     },
     "url": "https://fhir.nhs.uk/ValueSet/NHSDigital-eRS-ClinicType",
     "version": "1.0.0",
-    "name": "eRSClinicType",
+    "name": "ERSClinicType",
     "status": "draft",
     "publisher": "NHS Digital",
     "contact": [

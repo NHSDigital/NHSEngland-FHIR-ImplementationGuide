@@ -3,7 +3,7 @@
     "id": "3bbae32e-b0d2-4ec5-82e6-66d8207f7d78",
     "url": "https://fhir.nhs.uk/ConceptMap/MedicationRequest-StatusToTaskStatus",
     "version": "4.0.1",
-    "name": "medicationRequestStatusToTaskStatus",
+    "name": "MedicationRequestStatusToTaskStatus",
     "title": "MedicationRequest status to Task status Map",
     "status": "draft",
     "date": "2021-09-11",

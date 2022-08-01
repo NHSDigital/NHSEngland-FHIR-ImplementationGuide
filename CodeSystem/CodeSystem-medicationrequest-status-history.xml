@@ -26,7 +26,7 @@
     <concept>
         <code value="R-0001"></code>
         <display value="Prescription/item was cancelled successfully" />
-        <definition value="The cancellation request was successful, and the user is notified accordingly. If the entire prescription has been cancelled, the wording “prescription cancelled successfully” should be included within the user notification. Where one or more medication items have been cancelled, the wording “prescription item(s) cancelled successfully” should be included within the user notification. If the system cannot determine whether an individual item or the entire prescription has been cancelled, the wording “prescription/prescription item cancelled successfully” should be included within the user notification. " />
+        <definition value="The cancellation request was successful, and the user is notified accordingly. If the entire prescription has been cancelled, the wording “prescription cancelled successfully” should be included within the user notification. Where one or more medication items have been cancelled, the wording “prescription item(s) cancelled successfully” should be included within the user notification. If the system cannot determine whether an individual item or the entire prescription has been cancelled, the wording “prescription/prescription item cancelled successfully” should be included within the user notification." />
     </concept>
     <concept>
         <code value="R-0002"></code>

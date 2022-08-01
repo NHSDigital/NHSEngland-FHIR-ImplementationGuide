@@ -5,7 +5,7 @@
     </meta>
     <url value="https://fhir.nhs.uk/OperationDefinition/Task-release-message"></url>
     <version value="4.0.1"></version>
-    <name value="releaseTask"></name>
+    <name value="ReleaseTask"></name>
     <status value="draft"></status>
     <kind value="operation"></kind>
     <date value="2020-11-13T09:29:23+11:00"></date>
