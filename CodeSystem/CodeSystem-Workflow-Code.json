@@ -3,7 +3,7 @@
     "id": "c535a372-bec0-4f8a-ae80-4e2bed546464",
     "url": "https://fhir.nhs.uk/CodeSystem/Workflow-Code",
     "version": "1.0.0",
-    "name": "workflowCodes",
+    "name": "WorkflowCodes",
     "title": "Workflow Codes",
     "status": "active",
     "date": "2022-04-28",

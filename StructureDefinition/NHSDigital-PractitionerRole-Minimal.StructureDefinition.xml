@@ -30,7 +30,7 @@
       <constraint>
         <key value="nhsd-1" />
         <severity value="error" />
-        <human value="PractitionerRole.organization - An identifier reference plus a display name or resource reference must be provided" />
+        <human value="PractitionerRole.organization - An identifier reference or resource reference must be provided" />
       </constraint>
     </element>
     <element id="PractitionerRole.organization.identifier.system">

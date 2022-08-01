@@ -3,7 +3,7 @@
   "id": "MessageHeader-process-message",
   "url": "https://fhir.nhs.uk/OperationDefinition/MessageHeader-process-message",
   "version": "4.0.1",
-  "name": "Process Message",
+  "name": "ProcessMessage",
   "status": "draft",
   "kind": "operation",
   "date": "2022-01-07T14:00:00+00:00",

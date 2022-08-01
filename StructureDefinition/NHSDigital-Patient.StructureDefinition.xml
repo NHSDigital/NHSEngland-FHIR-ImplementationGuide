@@ -190,13 +190,6 @@
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole" />
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Organization" />
       </type>
-      <constraint>
-        <key value="nhsd-5" />
-        <severity value="warning" />
-        <human value="generalPractitioner - a display name should be provided" />
-        <expression value="(display.exists())" />
-        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient" />
-      </constraint>
       <mustSupport value="true" />
     </element>
     <element id="Patient.generalPractitioner.identifier">

@@ -6,7 +6,7 @@
   ],
   "status": "draft",
   "url": "https://fhir.nhs.uk/Questionnaire/Prescribing-Nomination",
-  "title": "Prescribing-Nomination",
+  "title": "PrescribingNomination",
   "resourceType": "Questionnaire",
   "item": [
     {

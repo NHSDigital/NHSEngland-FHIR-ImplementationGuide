@@ -2,7 +2,7 @@
   "resourceType": "ValueSet",
   "id": "a6876ad9-6ac5-431a-980d-b093a07e84d6",
   "url": "https://fhir.nhs.uk/ValueSet/England-task-code",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "name": "EnglandTaskCode",
   "title": "EnglandTaskCode",
   "status": "draft",
@@ -66,7 +66,17 @@
         ]
       },
       {
-        "system": "https://fhir.nhs.uk/CodeSystem/Workflow-Code"
+        "system": "https://fhir.nhs.uk/CodeSystem/Workflow-Code",
+        "concept": [
+          {
+            "code": "APPOINTMENT_DEFERRAL",
+            "display": "Appointment Deferral"
+          },
+          {
+            "code": "TRIAGE_DEFERRAL",
+            "display": "Triage Deferral"
+          }
+        ]
       }
     ]
   }

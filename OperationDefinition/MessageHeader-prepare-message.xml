@@ -2,7 +2,7 @@
     <id value="MessageHeader-prepare-message" />
     <url value="https://fhir.nhs.uk/OperationDefinition/MessageHeader-prepare-message" />
     <version value="4.0.1" />
-    <name value="messageheaderpreparemessage" />
+    <name value="Messageheaderpreparemessage" />
     <status value="draft" />
     <kind value="operation" />
     <date value="2020-08-03T00:00:00+00:00" />

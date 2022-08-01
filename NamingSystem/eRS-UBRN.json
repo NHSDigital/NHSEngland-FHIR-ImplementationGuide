@@ -1,7 +1,7 @@
 {
     "resourceType": "NamingSystem",
     "id": "ers-ubrn",
-    "name": "eRSUBRN",
+    "name": "ERSUBRN",
     "status": "draft",
     "kind": "identifier",
     "date": "2022-03-02",
