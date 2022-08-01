@@ -37,7 +37,7 @@
         {
             "coding": [
                 {
-                    "system": "https://fhir.nhs.uk/CodeSystem/UKCore-AdditionalRelatedPersonRole",
+                    "system": "https://fhir.hl7.org.uk/CodeSystem/UKCore-AdditionalPersonRelationshipRole",
                     "code": "Guardian",
                     "display": "Guardian of patient"
                 }

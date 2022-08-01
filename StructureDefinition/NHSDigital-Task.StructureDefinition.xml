@@ -97,7 +97,7 @@
       <mustSupport value="true" />
       <binding>
         <strength value="extensible" />
-        <valueSet value="https://fhir.nhs.uk/ValueSet/England-task-code" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDigital-task-code" />
       </binding>
     </element>
     <element id="Task.focus">

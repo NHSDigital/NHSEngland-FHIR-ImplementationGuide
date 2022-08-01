@@ -61,7 +61,7 @@
     <concept>
         <code value="R-0008"></code>
         <display value="This prescription cannot be located and therefore cannot be cancelled. Please retry and if this error persists contact your system supplier. Try checking the prescription tracker to locate this prescription" />
-        <definition value=" The prescription/item cannot be cancelled because the prescription to be cancelled has not been recorded by the Spine. This situation can occur when; • The cancel request arrives in the ETP component of the Spine before the prescription that is being cancelled. See below for guidance on this scenario. • A cancel request is made for a prescription where there is an error in the prescription UUID defined in the prescription message. • The processing of the prescription has been completed by the ETP component and the Spine has been updated accordingly. In all cases the user must be notified accordingly." />
+        <definition value="The prescription/item cannot be cancelled because the prescription to be cancelled has not been recorded by the Spine. This situation can occur when; • The cancel request arrives in the ETP component of the Spine before the prescription that is being cancelled. See below for guidance on this scenario. • A cancel request is made for a prescription where there is an error in the prescription UUID defined in the prescription message. • The processing of the prescription has been completed by the ETP component and the Spine has been updated accordingly. In all cases the user must be notified accordingly." />
     </concept>
     <concept>
         <code value="R-0009"></code>
