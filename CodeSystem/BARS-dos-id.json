@@ -1,0 +1,39 @@
+{
+    "resourceType": "CodeSystem",
+    "id": "dos-is-bars",
+    "url": "https://fhir.nhs.uk/CodeSystem/dos-id",
+    "identifier":  [
+        {
+            "system": "https://fhir.nhs.uk/identifier/CodeSystem",
+            "value": "dos-id-bars"
+        }
+    ],
+    "version": "1.0.0",
+    "name": "DOSidBARS",
+    "title": "DOS Id BARS",
+    "status": "active",
+    "date": "2022-03-11",
+    "publisher": "NHS Digital",
+    "contact":  [
+        {
+            "name": "NHS Digital",
+            "telecom":  [
+                {
+                    "system": "email",
+                    "value": "interoperabilityteam@nhs.net",
+                    "use": "work"
+                }
+            ]
+        }
+    ],
+    "description": "DoS Id BARS",
+    "copyright": "Copyright © 2022 NHS Digital",
+    "caseSensitive": true,
+    "content": "complete",
+    "concept":  [
+        {
+            "code": "dos-id",
+            "display": "DoS Id"
+        }
+    ]
+}

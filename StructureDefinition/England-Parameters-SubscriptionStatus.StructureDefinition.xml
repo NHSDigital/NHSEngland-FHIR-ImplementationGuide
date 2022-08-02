@@ -40,10 +40,10 @@
       <type>
         <code value="code" />
       </type>
-      <binding>
-        <strength value="required" />
-        <valueSet value="http://hl7.org/fhir/ValueSet/subscription-state" />
-      </binding>
+    </element>
+    <element id="Parameters.parameter:status.part">
+      <path value="Parameters.parameter.part" />
+      <contentReference value="http://hl7.org/fhir/StructureDefinition/Parameters#Parameters.parameter" />
     </element>
     <element id="Parameters.parameter:notificationEvent">
       <path value="Parameters.parameter" />
@@ -64,12 +64,14 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <contentReference value="http://hl7.org/fhir/StructureDefinition/Parameters#Parameters.parameter" />
     </element>
     <element id="Parameters.parameter:notificationEvent.part:timestamp">
       <path value="Parameters.parameter.part" />
       <sliceName value="timestamp" />
       <short value="The instant this event occurred" />
       <max value="1" />
+      <contentReference value="http://hl7.org/fhir/StructureDefinition/Parameters#Parameters.parameter" />
     </element>
     <element id="Parameters.parameter:notificationEvent.part:timestamp.name">
       <path value="Parameters.parameter.part.name" />
@@ -82,11 +84,16 @@
         <code value="instant" />
       </type>
     </element>
+    <element id="Parameters.parameter:notificationEvent.part:timestamp.part">
+      <path value="Parameters.parameter.part.part" />
+      <contentReference value="http://hl7.org/fhir/StructureDefinition/Parameters#Parameters.parameter" />
+    </element>
     <element id="Parameters.parameter:notificationEvent.part:focus">
       <path value="Parameters.parameter.part" />
       <sliceName value="focus" />
       <min value="1" />
       <max value="1" />
+      <contentReference value="http://hl7.org/fhir/StructureDefinition/Parameters#Parameters.parameter" />
     </element>
     <element id="Parameters.parameter:notificationEvent.part:focus.name">
       <path value="Parameters.parameter.part.name" />
@@ -100,11 +107,14 @@
         <code value="Reference" />
       </type>
     </element>
-     <element id="Parameters.parameter:notificationEvent.part:additionalContext">
+    <element id="Parameters.parameter:notificationEvent.part:focus.part">
+      <path value="Parameters.parameter.part.part" />
+      <contentReference value="http://hl7.org/fhir/StructureDefinition/Parameters#Parameters.parameter" />
+    </element>
+    <element id="Parameters.parameter:notificationEvent.part:additionalContext">
       <path value="Parameters.parameter.part" />
       <sliceName value="additionalContext" />
-      <min value="0" />
-      <max value="*" />
+      <contentReference value="http://hl7.org/fhir/StructureDefinition/Parameters#Parameters.parameter" />
     </element>
     <element id="Parameters.parameter:notificationEvent.part:additionalContext.name">
       <path value="Parameters.parameter.part.name" />
@@ -118,12 +128,17 @@
         <code value="Reference" />
       </type>
     </element>
+    <element id="Parameters.parameter:notificationEvent.part:additionalContext.part">
+      <path value="Parameters.parameter.part.part" />
+      <contentReference value="http://hl7.org/fhir/StructureDefinition/Parameters#Parameters.parameter" />
+    </element>
     <element id="Parameters.parameter:notificationEvent.part:eventNumber">
       <path value="Parameters.parameter.part" />
       <sliceName value="eventNumber" />
       <short value="Event number" />
       <min value="1" />
       <max value="1" />
+      <contentReference value="http://hl7.org/fhir/StructureDefinition/Parameters#Parameters.parameter" />
     </element>
     <element id="Parameters.parameter:notificationEvent.part:eventNumber.name">
       <path value="Parameters.parameter.part.name" />
@@ -135,6 +150,10 @@
       <type>
         <code value="integer" />
       </type>
+    </element>
+    <element id="Parameters.parameter:notificationEvent.part:eventNumber.part">
+      <path value="Parameters.parameter.part.part" />
+      <contentReference value="http://hl7.org/fhir/StructureDefinition/Parameters#Parameters.parameter" />
     </element>
     <element id="Parameters.parameter:subscription">
       <path value="Parameters.parameter" />
@@ -157,6 +176,7 @@
     <element id="Parameters.parameter:subscription.part">
       <path value="Parameters.parameter.part" />
       <max value="0" />
+      <contentReference value="http://hl7.org/fhir/StructureDefinition/Parameters#Parameters.parameter" />
     </element>
     <element id="Parameters.parameter:topic">
       <path value="Parameters.parameter" />
@@ -174,6 +194,10 @@
       <type>
         <code value="canonical" />
       </type>
+    </element>
+    <element id="Parameters.parameter:topic.part">
+      <path value="Parameters.parameter.part" />
+      <contentReference value="http://hl7.org/fhir/StructureDefinition/Parameters#Parameters.parameter" />
     </element>
     <element id="Parameters.parameter:error">
       <path value="Parameters.parameter" />
@@ -197,6 +221,7 @@
     <element id="Parameters.parameter:error.part">
       <path value="Parameters.parameter.part" />
       <max value="0" />
+      <contentReference value="http://hl7.org/fhir/StructureDefinition/Parameters#Parameters.parameter" />
     </element>
   </differential>
 </StructureDefinition>

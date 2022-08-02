@@ -1,37 +1,37 @@
 <CodeSystem xmlns="http://hl7.org/fhir">
-    <id value="message-status"/> 
-    <url value="https://fhir.hl7.org.uk/CodeSystem/message-status"/> 
-
-    <version value="1.0.2"/> 
-    <name value="MessageStatus"/> 
-    <title value="Message Status Code"/> 
-    <status value="draft"/> 
-    <date value="2020-11-05"/>
-    <publisher value="NHS Digital"/>
-    <contact>
-        <name value="NHS Digital" />
-        <telecom>
-            <system value="email" />
-            <value value="interoperabilityteam@nhs.net" />
-            <use value="work" />
-        </telecom>
-    </contact>
-    <description value="Message Status codes."/>
-    <copyright value="Copyright &#169; 2020 NHS Digital" />
-    <content value="complete"/> 
-    <concept> 
-      <code value="completed"/> 
-      <display value="Completed"/> 
-      <definition value="The activity described by the request has been fully performed.  No further activity will occur."/> 
-    </concept>
-    <concept> 
-      <code value="active"/> 
-      <display value="Active"/> 
-      <definition value="The request is in force and ready to be acted upon."/> 
-    </concept> 
-    <concept> 
-      <code value="queued"/> 
-      <display value="Queued"/> 
-      <definition value="The request has been temporarily paused but is expected to be deliverd in the future."/> 
-    </concept> 
-  </CodeSystem> 
+  <id value="message-status" />
+  <url value="https://fhir.hl7.org.uk/CodeSystem/message-status" />
+  <version value="1.0.2" />
+  <name value="MessageStatus" />
+  <title value="Message Status Code" />
+  <status value="draft" />
+  <date value="2020-11-05" />
+  <publisher value="NHS Digital" />
+  <contact>
+    <name value="NHS Digital" />
+    <telecom>
+      <system value="email" />
+      <value value="interoperabilityteam@nhs.net" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="Message Status codes." />
+  <copyright value="Copyright &#169; 2020 NHS Digital" />
+  <caseSensitive value="true"/>
+  <content value="complete" />
+  <concept>
+    <code value="completed" />
+    <display value="Completed" />
+    <definition value="The activity described by the request has been fully performed.  No further activity will occur." />
+  </concept>
+  <concept>
+    <code value="active" />
+    <display value="Active" />
+    <definition value="The request is in force and ready to be acted upon." />
+  </concept>
+  <concept>
+    <code value="queued" />
+    <display value="Queued" />
+    <definition value="The request has been temporarily paused but is expected to be deliverd in the future." />
+  </concept>
+</CodeSystem> 
