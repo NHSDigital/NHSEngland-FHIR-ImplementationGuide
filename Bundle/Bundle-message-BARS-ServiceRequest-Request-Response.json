@@ -1,0 +1,843 @@
+{
+    "resourceType": "Bundle",
+    "id": "bc040878-cf51-4acf-9ede-7448fbb5be7c",
+    "meta": {
+        "versionId": "1.0.0-alpha",
+        "lastUpdated": "2021-10-11T15:23:30+00:00",
+        "profile":  [
+            "https://fhir.nhs.uk/StructureDefinition/BARSBundleMessage"
+        ]
+    },
+    "type": "message",
+    "timestamp": "2021-10-11T12:15:10+00:00",
+    "entry":  [
+        {
+            "fullUrl": "urn:uuid:1cbdfb97-5859-48a4-8301-d54eab818d68",
+            "resource": {
+                "resourceType": "MessageHeader",
+                "id": "1cbdfb97-5859-48a4-8301-d54eab818d68",
+                "meta": {
+                    "lastUpdated": "2021-10-11T15:23:30+00:00",
+                    "profile":  [
+                        "https://fhir.nhs.uk/StructureDefinition/BARSMessageHeader-servicerequest-response"
+                    ]
+                },
+                "eventCoding": {
+                    "system": "https://fhir.nhs.uk/CodeSystem/message-events-bars",
+                    "code": "servicerequest-response"
+                },
+                "destination":  [
+                    {
+                        "endpoint": "http://fhir.nhs.uk/Id/dos-service-id|2222222222",
+                        "receiver": {
+                            "reference": "urn:uuid:07939a0c-2854-46ff-9282-ad906bc93679"
+                        }
+                    }
+                ],
+                "sender": {
+                    "reference": "urn:uuid:d5ffd0cd-ec7e-48a1-84f1-91f4c0eb8fc5"
+                },
+                "source": {
+                    "extension":  [
+                        {
+                            "url": "https://fhir.nhs.uk/StructureDefinition/CDSSExtension",
+                            "extension":  [
+                                {
+                                    "url": "RequesterCDSSsoftware",
+                                    "valueString": "Pathways"
+                                },
+                                {
+                                    "url": "RequesterCDSSversion",
+                                    "valueString": "30.2.0"
+                                }
+                            ]
+                        }
+                    ],
+                    "name": "Emergency Department",
+                    "software": "Hospital PAS",
+                    "version": "3.1.0.5",
+                    "contact": {
+                        "system": "phone",
+                        "value": "+44 (0208) 123 9874"
+                    },
+                    "endpoint": "http://fhir.nhs.uk/Id/dos-service-id|111111111"
+                },
+                "reason": {
+                    "coding":  [
+                        {
+                            "system": "https://fhir.nhs.uk/CodeSystem/message-reason-bars",
+                            "code": "new"
+                        }
+                    ]
+                },
+                "response": {
+                    "identifier": "79120f41-a431-4f08-bcc5-1e67006fcae0",
+                    "code": "ok"
+                },
+                "focus":  [
+                    {
+                        "reference": "urn:uuid:236bb75d-90ef-461f-b71e-fde7f899802c"
+                    }
+                ],
+                "definition": "https://fhir.nhs.uk/MessageDefinition/bars-message-servicerequest-response-referral"
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:236bb75d-90ef-461f-b71e-fde7f899802c",
+            "resource": {
+                "resourceType": "ServiceRequest",
+                "id": "236bb75d-90ef-461f-b71e-fde7f899802c",
+                "meta": {
+                    "lastUpdated": "2021-10-11T15:23:30+00:00",
+                    "profile":  [
+                        "https://fhir.nhs.uk/StructureDefinition/BARSServiceRequest-request-referral"
+                    ]
+                },
+                "status": "revoked",
+                "intent": "plan",
+                "category":  [
+                    {
+                        "coding":  [
+                            {
+                                "system": "https://fhir.nhs.uk/CodeSystem/message-category-servicerequest",
+                                "code": "referral",
+                                "display": "Transfer of Care"
+                            }
+                        ]
+                    }
+                ],
+                "subject": {
+                    "reference": "urn:uuid:9589fb37-87a2-48d8-968f-b371429208a8"
+                },
+                "encounter": {
+                    "reference": "urn:uuid:8c63d621-4d86-4f57-8699-e8e22d49935d"
+                },
+                "occurrencePeriod": {
+                    "start": "2021-10-13T16:20:27+07:00"
+                },
+                "authoredOn": "2021-10-11T15:23:30+00:00",
+                "requester": {
+                    "reference": "urn:uuid:7d948662-bade-450e-b6c5-9bb6ee39cb56"
+                },
+                "performer":  [
+                    {
+                        "reference": "urn:uuid:d5ffd0cd-ec7e-48a1-84f1-91f4c0eb8fc5"
+                    }
+                ],
+                "patientInstruction": "ADVICE GIVEN: If there are any new symptoms, or if the condition gets worse, changes or you have any other concerns, call us back."
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:8c63d621-4d86-4f57-8699-e8e22d49935d",
+            "resource": {
+                "resourceType": "Encounter",
+                "id": "96dcf7cb-dc8f-44fc-a37c-0e296660ff85",
+                "meta": {
+                    "lastUpdated": "2021-10-11T15:23:30+00:00",
+                    "profile":  [
+                        "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Encounter"
+                    ]
+                },
+                "identifier":  [
+                    {
+                        "system": "https://sender.url/Id/case-number",
+                        "value": "sender1234"
+                    }
+                ],
+                "status": "triaged",
+                "class": {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                    "code": "EMER",
+                    "display": "emergency"
+                },
+                "subject": {
+                    "reference": "urn:uuid:9589fb37-87a2-48d8-968f-b371429208a8"
+                },
+                "episodeOfCare":  [
+                    {
+                        "reference": "urn:uuid:d877b820-e72b-44d1-a627-195f54bfc606"
+                    }
+                ],
+                "period": {
+                    "start": "2021-02-19T07:15:00+10:00"
+                },
+                "reasonReference":  [
+                    {
+                        "reference": "urn:uuid:0a6689a2-ebb4-48a2-825f-9c88c5959684",
+                        "display": "Social Context - Household Composition"
+                    },
+                    {
+                        "reference": "urn:uuid:fa7a9782-e111-49a5-9660-826b29c51d56",
+                        "display": "Clinical narrative"
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:38e9c018-adbb-4579-9cd8-45f4f890b93b",
+            "resource": {
+                "resourceType": "CarePlan",
+                "id": "91607239-b002-470a-8709-6b25bd50fdd1",
+                "meta": {
+                    "lastUpdated": "2021-11-26T15:15:15+00:00",
+                    "profile":  [
+                        "https://fhir.hl7.org.uk/StructureDefinition/UKCore-CarePlan"
+                    ]
+                },
+                "status": "completed",
+                "intent": "plan",
+                "subject": {
+                    "reference": "urn:uuid:9589fb37-87a2-48d8-968f-b371429208a8"
+                },
+                "encounter": {
+                    "reference": "urn:uuid:8c63d621-4d86-4f57-8699-e8e22d49935d"
+                },
+                "supportingInfo":  [
+                    {
+                        "reference": "urn:uuid:e53b2595-7875-4687-80e9-23a0c8cb8ea0",
+                        "display": "Person expectations and wishes"
+                    },
+                    {
+                        "reference": "urn:uuid:ea37a499-245c-40e9-b0fa-df4383c4d413",
+                        "display": "Safeguarding Concerns Flag"
+                    }
+                ],
+                "activity":  [
+                    {
+                        "outcomeCodeableConcept":  [
+                            {
+                                "coding":  [
+                                    {
+                                        "system": "https://fhir.nhs.uk/Id/pathways-sd-code",
+                                        "code": "4389",
+                                        "display": "ED post tonsillectomy bleeding"
+                                    }
+                                ],
+                                "text": "Pathways Assessment SD Code"
+                            },
+                            {
+                                "coding":  [
+                                    {
+                                        "system": "https://fhir.nhs.uk/Id/pathways-dx-code",
+                                        "code": "DX02",
+                                        "display": "The individual needs to attend an emergency treatment centre within 1 hour."
+                                    }
+                                ],
+                                "text": "Pathways Assessment DX Code"
+                            },
+                            {
+                                "coding":  [
+                                    {
+                                        "system": "https://fhir.nhs.uk/Id/pathways-template",
+                                        "code": "PA21",
+                                        "display": "Chest and Upper Back Pain"
+                                    }
+                                ],
+                                "text": "Presenting Complaint - selected Pathway or Template"
+                            },
+                            {
+                                "coding":  [
+                                    {
+                                        "system": "https://fhir.nhs.uk/Id/pathways-sg-code",
+                                        "code": "1010",
+                                        "display": "Allergic Reaction"
+                                    }
+                                ],
+                                "text": "Pathways Assessment SG Code - Chief Complaint"
+                            },
+                            {
+                                "coding":  [
+                                    {
+                                        "system": "https://fhir.nhs.uk/Id/ValueSetTBC",
+                                        "code": "PlanRequest",
+                                        "display": "Plan or Requested Action"
+                                    }
+                                ],
+                                "text": "Physical examination of reported chest pain"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:ec47b0b9-d5a9-4f8e-90d1-e955bd951d8d",
+            "resource": {
+                "resourceType": "Appointment",
+                "id": "3713c8fc-dbcf-4f90-bacf-89d99e434e9b",
+                "meta": {
+                    "lastUpdated": "2021-10-11T15:23:30+00:00",
+                    "profile":  [
+                        "http://hl7.org/fhir/StructureDefinition/Appointment",
+                        "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Appointment"
+                    ]
+                },
+                "status": "noshow",
+                "description": "Reason for calling",
+                "start": "2021-10-12T12:30:00+00:00",
+                "end": "2021-10-12T12:40:00+00:00",
+                "created": "2021-10-11T15:01:30+00:00",
+                "participant":  [
+                    {
+                        "actor": {
+                            "reference": "urn:uuid:9589fb37-87a2-48d8-968f-b371429208a8"
+                        },
+                        "status": "accepted"
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:9589fb37-87a2-48d8-968f-b371429208a8",
+            "resource": {
+                "resourceType": "Patient",
+                "id": "e8cf748b-583d-4b0f-955b-9f8aefeb12b7",
+                "meta": {
+                    "lastUpdated": "2021-11-26T15:00:00+00:00",
+                    "profile":  [
+                        "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Patient"
+                    ]
+                },
+                "extension":  [
+                    {
+                        "url": "https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-BirthSex",
+                        "valueCode": "F"
+                    },
+                    {
+                        "url": "https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-EthnicCategory",
+                        "valueCodeableConcept": {
+                            "coding":  [
+                                {
+                                    "system": "https://fhir.hl7.org.uk/CodeSystem/UKCore-EthnicCategory",
+                                    "code": "A",
+                                    "display": "British, Mixed British"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "url": "https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-ContactPreference",
+                        "extension":  [
+                            {
+                                "url": "PreferredContactMethod",
+                                "valueCodeableConcept": {
+                                    "coding":  [
+                                        {
+                                            "system": "https://fhir.hl7.org.uk/CodeSystem/UKCore-PreferredContactMethod",
+                                            "code": "3",
+                                            "display": "Telephone"
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "url": "http://hl7.org/fhir/StructureDefinition/patient-religion",
+                        "valueCodeableConcept": {
+                            "coding":  [
+                                {
+                                    "system": "http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation",
+                                    "code": "1041",
+                                    "display": "Roman Catholic Church"
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "identifier":  [
+                    {
+                        "extension":  [
+                            {
+                                "url": "https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-NHSNumberVerificationStatus",
+                                "valueCodeableConcept": {
+                                    "coding":  [
+                                        {
+                                            "system": "https://fhir.hl7.org.uk/CodeSystem/UKCore-NHSNumberVerificationStatus",
+                                            "code": "number-present-and-verified",
+                                            "display": "Number present and verified"
+                                        }
+                                    ]
+                                }
+                            }
+                        ],
+                        "system": "https://fhir.nhs.uk/Id/nhs-number",
+                        "value": "3478526985"
+                    }
+                ],
+                "name":  [
+                    {
+                        "use": "official",
+                        "text": "Mrs Julie Jones",
+                        "family": "Jones",
+                        "given":  [
+                            "Julie"
+                        ],
+                        "prefix":  [
+                            "Mrs"
+                        ]
+                    }
+                ],
+                "gender": "female",
+                "birthDate": "1959-05-04",
+                "address":  [
+                    {
+                        "use": "home",
+                        "type": "both",
+                        "text": "22 Brightside Crescent, Overtown, West Yorkshire, LS10 4YU",
+                        "line":  [
+                            "22 Brightside Crescent"
+                        ],
+                        "city": "Overtown",
+                        "district": "West Yorkshire",
+                        "postalCode": "LS10 4YU"
+                    }
+                ],
+                "contact":  [
+                    {
+                        "extension":  [
+                            {
+                                "url": "https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-ContactRank",
+                                "valuePositiveInt": 1
+                            }
+                        ],
+                        "telecom":  [
+                            {
+                                "system": "phone",
+                                "value": "01138698975",
+                                "use": "home",
+                                "rank": 2
+                            },
+                            {
+                                "system": "phone",
+                                "value": "07736312544",
+                                "use": "mobile",
+                                "rank": 1
+                            },
+                            {
+                                "system": "email",
+                                "value": "jjones@hotmail.co.uk",
+                                "use": "home",
+                                "rank": 1
+                            }
+                        ]
+                    },
+                    {
+                        "relationship":  [
+                            {
+                                "coding":  [
+                                    {
+                                        "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                                        "code": "EP"
+                                    }
+                                ]
+                            }
+                        ],
+                        "name": {
+                            "family": "Grayson",
+                            "given":  [
+                                "Jack"
+                            ]
+                        },
+                        "telecom":  [
+                            {
+                                "system": "phone",
+                                "value": "0789 1234567",
+                                "rank": 3
+                            }
+                        ],
+                        "gender": "male"
+                    }
+                ],
+                "communication":  [
+                    {
+                        "language": {
+                            "coding":  [
+                                {
+                                    "system": "https://fhir.hl7.org.uk/CodeSystem/UKCore-HumanLanguage",
+                                    "code": "en",
+                                    "display": "English"
+                                }
+                            ]
+                        },
+                        "preferred": true
+                    }
+                ],
+                "generalPractitioner":  [
+                    {
+                        "reference": "urn:uuid:07dec093-be12-42f4-ade5-0d582d255ef1"
+                    }
+                ],
+                "managingOrganization": {
+                    "reference": "urn:uuid:c8c21609-cb27-4958-8eb2-37c76f3def85"
+                }
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:c8c21609-cb27-4958-8eb2-37c76f3def85",
+            "resource": {
+                "resourceType": "Organization",
+                "id": "cddb466e-6ba1-463a-a898-fdab9aeab589",
+                "meta": {
+                    "lastUpdated": "2021-10-11T15:23:30+00:00",
+                    "profile":  [
+                        "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Organization"
+                    ]
+                },
+                "identifier":  [
+                    {
+                        "system": "https://fhir.nhs.uk/id/ods-organization-code",
+                        "value": "G82080"
+                    }
+                ],
+                "name": "Patient's Surgery"
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:07dec093-be12-42f4-ade5-0d582d255ef1",
+            "resource": {
+                "resourceType": "Practitioner",
+                "id": "45a6da92-1250-4ce8-91c7-281eb93de12d",
+                "meta": {
+                    "lastUpdated": "2021-10-11T15:23:30+00:00",
+                    "profile":  [
+                        "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Practitioner"
+                    ]
+                },
+                "identifier":  [
+                    {
+                        "system": "https://fhir.nhs.uk/Id/sds-role-profile-id",
+                        "value": "G823658"
+                    }
+                ],
+                "name":  [
+                    {
+                        "family": "Smith",
+                        "given":  [
+                            "John"
+                        ]
+                    }
+                ],
+                "telecom":  [
+                    {
+                        "system": "phone",
+                        "value": "0205663859",
+                        "use": "work"
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:d5ffd0cd-ec7e-48a1-84f1-91f4c0eb8fc5",
+            "resource": {
+                "resourceType": "Organization",
+                "id": "ce4fc804-f6ed-4f85-8804-df5235576c8e",
+                "meta": {
+                    "lastUpdated": "2021-10-11T15:23:30+00:00",
+                    "profile":  [
+                        "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Organization"
+                    ]
+                },
+                "identifier":  [
+                    {
+                        "system": "https://fhir.nhs.uk/id/ods-organization-code",
+                        "value": "RYE"
+                    }
+                ],
+                "name": "Receiving/performing Organization"
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:07939a0c-2854-46ff-9282-ad906bc93679",
+            "resource": {
+                "resourceType": "Organization",
+                "id": "c5ea962f-bdf9-4c70-816b-9045c047005c",
+                "meta": {
+                    "lastUpdated": "2021-10-11T15:23:30+00:00",
+                    "profile":  [
+                        "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Organization"
+                    ]
+                },
+                "identifier":  [
+                    {
+                        "system": "https://fhir.nhs.uk/id/ods-organization-code",
+                        "value": "RND"
+                    }
+                ],
+                "name": "Sender Organization"
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:7d948662-bade-450e-b6c5-9bb6ee39cb56",
+            "resource": {
+                "resourceType": "Practitioner",
+                "id": "ce0ce501-4af8-432f-92f4-f391dc78f526",
+                "meta": {
+                    "profile":  [
+                        "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Practitioner"
+                    ]
+                },
+                "identifier":  [
+                    {
+                        "system": "https://fhir.nhs.uk/Id/sds-role-profile-id",
+                        "value": "PT2489"
+                    }
+                ],
+                "name":  [
+                    {
+                        "family": "BLAKE",
+                        "given":  [
+                            "Marcy"
+                        ]
+                    }
+                ],
+                "telecom":  [
+                    {
+                        "system": "phone",
+                        "value": "0205568263",
+                        "use": "work"
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:b923aa53-2376-4015-a07d-afe8bf2310eb",
+            "resource": {
+                "resourceType": "PractitionerRole",
+                "id": "74079d15-69fb-4e80-91eb-958aac3870e0",
+                "meta": {
+                    "profile":  [
+                        "https://fhir.hl7.org.uk/StructureDefinition/UKCore-PractitionerRole"
+                    ]
+                },
+                "practitioner": {
+                    "reference": "urn:uuid:7d948662-bade-450e-b6c5-9bb6ee39cb56"
+                },
+                "organization": {
+                    "reference": "urn:uuid:b5e27389-3ca5-4cbc-9173-73f0c74915d9"
+                },
+                "code":  [
+                    {
+                        "coding":  [
+                            {
+                                "system": "http://snomed.info/sct",
+                                "code": "224608005",
+                                "display": "Administrative healthcare staff"
+                            }
+                        ]
+                    }
+                ],
+                "specialty":  [
+                    {
+                        "coding":  [
+                            {
+                                "system": "http://snomed.info/sct",
+                                "code": "408443003",
+                                "display": "General medical practice"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:b5e27389-3ca5-4cbc-9173-73f0c74915d9",
+            "resource": {
+                "resourceType": "Organization",
+                "id": "b5e27389-3ca5-4cbc-9173-73f0c74915d9",
+                "meta": {
+                    "lastUpdated": "2021-11-26T15:17:00+00:00",
+                    "profile":  [
+                        "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Organization"
+                    ]
+                },
+                "name": "Practitioner Org"
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:ea37a499-245c-40e9-b0fa-df4383c4d413",
+            "resource": {
+                "resourceType": "Flag",
+                "id": "3d436a56-1957-44a2-b7ed-b83efc60b94a",
+                "status": "active",
+                "category":  [
+                    {
+                        "coding":  [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/flag-category/newvalueset",
+                                "code": "SG",
+                                "display": "Safeguarding Concern"
+                            }
+                        ],
+                        "text": "Safeguarding Concern"
+                    }
+                ],
+                "code": {
+                    "coding":  [
+                        {
+                            "system": "http://snomed.info/sct",
+                            "code": "160877008",
+                            "display": "Child at risk"
+                        }
+                    ],
+                    "text": "Child at risk"
+                },
+                "subject": {
+                    "reference": "urn:uuid:9589fb37-87a2-48d8-968f-b371429208a8"
+                },
+                "period": {
+                    "start": "2020-11-10T19:57:26.961Z",
+                    "end": "2021-11-20T19:57:26.961Z"
+                }
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:3fe61915-32d2-4d41-953a-1d4ff56030e0",
+            "resource": {
+                "resourceType": "Flag",
+                "id": "39ef3f6d-8e02-48fa-92eb-c82b77b08363",
+                "status": "active",
+                "category":  [
+                    {
+                        "coding":  [
+                            {
+                                "system": "https://fhir.nhs.uk/STU3/ValueSet/ValueSet-RARecord-AdjustmentCategories-1",
+                                "code": "personalisation",
+                                "display": "Personalisation of support"
+                            }
+                        ],
+                        "text": "Reasonable Adjustment - Personalisation of support"
+                    }
+                ],
+                "code": {
+                    "coding":  [
+                        {
+                            "system": "http://system.system",
+                            "code": "adjustforneedlephobia",
+                            "display": "Adjust for needle phobia"
+                        }
+                    ],
+                    "text": "Adjust for needle phobia"
+                },
+                "subject": {
+                    "reference": "urn:uuid:9589fb37-87a2-48d8-968f-b371429208a8"
+                },
+                "period": {
+                    "start": "2018-11-10T19:57:26.961Z"
+                }
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:fa7a9782-e111-49a5-9660-826b29c51d56",
+            "resource": {
+                "resourceType": "Observation",
+                "id": "ce3d3dd4-653a-4594-bffa-7946125c50bb",
+                "meta": {
+                    "profile":  [
+                        "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Observation"
+                    ]
+                },
+                "identifier":  [
+                    {
+                        "system": "https://tools.ietf.org/html/rfc4122",
+                        "value": "2af46949-4938-4c57-bad4-c4363e1965d5"
+                    }
+                ],
+                "status": "final",
+                "code": {
+                    "coding":  [
+                        {
+                            "system": "http://snomed.info/sct",
+                            "code": "1077901000000108",
+                            "display": "Clinical narrative"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "urn:uuid:9589fb37-87a2-48d8-968f-b371429208a8"
+                },
+                "performer":  [
+                    {
+                        "reference": "urn:uuid:7d948662-bade-450e-b6c5-9bb6ee39cb56"
+                    }
+                ],
+                "note":  [
+                    {
+                        "authorString": "BLAKE, Marcy",
+                        "text": "The patient has symptoms concerning the chest which need physical examination"
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:d482d092-6efc-4eef-b4a0-730718b1fbfd",
+            "resource": {
+                "resourceType": "HealthcareService",
+                "id": "d482d092-6efc-4eef-b4a0-730718b1fbfd",
+                "meta": {
+                    "lastUpdated": "2021-11-26T15:17:00+00:00",
+                    "profile":  [
+                        "http://hl7.org/fhir/StructureDefinition/HealthcareService",
+                        "https://fhir.hl7.org.uk/StructureDefinition/UKCore-HealthcareService"
+                    ]
+                },
+                "identifier":  [
+                    {
+                        "system": "http://fhir.nhs.uk/Id/dos-service-id",
+                        "value": "111111111"
+                    }
+                ],
+                "active": true,
+                "providedBy": {
+                    "reference": "urn:uuid:d5ffd0cd-ec7e-48a1-84f1-91f4c0eb8fc5"
+                },
+                "name": "Emergency Department - Adult"
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:1e91008e-96d0-438b-873c-c6d2c007fc29",
+            "resource": {
+                "resourceType": "Consent",
+                "id": "1e91008e-96d0-438b-873c-c6d2c007fc29",
+                "meta": {
+                    "lastUpdated": "2021-11-26T15:00:00+00:00",
+                    "profile":  [
+                        "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Consent"
+                    ]
+                },
+                "status": "active",
+                "scope": {
+                    "coding":  [
+                        {
+                            "system": "http://terminology.hl7.org/CodeSystem/consentscope",
+                            "code": "patient-privacy"
+                        }
+                    ]
+                },
+                "category":  [
+                    {
+                        "coding":  [
+                            {
+                                "system": "https://fhir.nhs.uk/CodeSystem/consent-categories-bars",
+                                "code": "DRC",
+                                "display": "Direct Care"
+                            }
+                        ]
+                    }
+                ],
+                "patient": {
+                    "reference": "urn:uuid:9589fb37-87a2-48d8-968f-b371429208a8"
+                },
+                "dateTime": "2021-11-26",
+                "policyRule": {
+                    "coding":  [
+                        {
+                            "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                            "code": "IMPLIED"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

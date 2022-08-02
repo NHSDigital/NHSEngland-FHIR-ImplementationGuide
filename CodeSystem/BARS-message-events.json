@@ -1,0 +1,55 @@
+{
+    "resourceType": "CodeSystem",
+    "id": "message-events-bars",
+    "url": "https://fhir.nhs.uk/CodeSystem/message-events-bars",
+    "identifier":  [
+        {
+            "system": "https://fhir.nhs.uk/identifier/CodeSystem",
+            "value": "message-events-bars"
+        }
+    ],
+    "version": "1.0.0",
+    "name": "MessageEventsBARS",
+    "title": "Message Events BARS",
+    "status": "active",
+    "date": "2022-02-11",
+    "publisher": "NHS Digital",
+    "contact":  [
+        {
+            "name": "NHS Digital",
+            "telecom":  [
+                {
+                    "system": "email",
+                    "value": "interoperabilityteam@nhs.net",
+                    "use": "work"
+                }
+            ]
+        }
+    ],
+    "description": "Common messaging events for BARS Service Requests.",
+    "copyright": "Copyright © 2021 NHS Digital",
+    "caseSensitive": true,
+    "content": "complete",
+    "concept":  [
+        {
+            "code": "servicerequest-request",
+            "display": "Service Request - Request",
+            "definition": "A Service Request - request for service"
+        },
+        {
+            "code": "servicerequest-response",
+            "display": "Service Request - Response",
+            "definition": "A Service Request - response to the service"
+        },
+        {
+            "code": "booking-request",
+            "display": "Booking Request - Request",
+            "definition": "A Booking Request - request for service"
+        },
+        {
+            "code": "booking-response",
+            "display": "Booking Request - Response",
+            "definition": "A Booking Request - response to the service"
+        }
+    ]
+}

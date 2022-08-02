@@ -1,0 +1,49 @@
+{
+    "resourceType": "CodeSystem",
+    "id": "message-reason-bars",
+    "url": "https://fhir.nhs.uk/CodeSystem/message-reason-bars",
+    "identifier":  [
+        {
+            "system": "https://fhir.nhs.uk/identifier/message-reason-code",
+            "value": "message-reason-bars"
+        }
+    ],
+    "version": "1.1.0",
+    "name": "messagereasonbars",
+    "title": "Message Reason BARS",
+    "status": "active",
+    "date": "2022-03-02",
+    "publisher": "NHS Digital",
+    "contact":  [
+        {
+            "name": "NHS Digital",
+            "telecom":  [
+                {
+                    "system": "email",
+                    "value": "interoperabilityteam@nhs.net",
+                    "use": "work"
+                }
+            ]
+        }
+    ],
+    "description": "Message Reason codes.",
+    "copyright": "Copyright © 2021 NHS Digital",
+    "content": "complete",
+    "concept":  [
+        {
+            "code": "new",
+            "display": "New",
+            "definition": "New message."
+        },
+        {
+            "code": "update",
+            "display": "Update",
+            "definition": "Update to a message."
+        },
+        {
+            "code": "delete",
+            "display": "Delete",
+            "definition": "Delete a message."
+        }
+    ]
+}
