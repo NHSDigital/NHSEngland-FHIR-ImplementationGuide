@@ -1,0 +1,83 @@
+{
+    "resourceType": "CodeSystem",
+    "id": "dos-rejected-reasons-bars",
+    "url": "https://fhir.nhs.uk/CodeSystem/dos-rejected-reasons-bars",
+    "identifier":  [
+        {
+            "system": "https://fhir.nhs.uk/identifier/CodeSystem",
+            "value": "dos-rejected-reasons-bars"
+        }
+    ],
+    "version": "1.0.0",
+    "name": "DOSRejectedReasonsBARS",
+    "title": "DOS Rejected Reasons BARS",
+    "status": "active",
+    "date": "2022-03-11",
+    "publisher": "NHS Digital",
+    "contact":  [
+        {
+            "name": "NHS Digital",
+            "telecom":  [
+                {
+                    "system": "email",
+                    "value": "interoperabilityteam@nhs.net",
+                    "use": "work"
+                }
+            ]
+        }
+    ],
+    "description": "DoS Rejected Service Reasons BARS",
+    "copyright": "Copyright © 2022 NHS Digital",
+    "caseSensitive": true,
+    "content": "complete",
+    "concept":  [
+        {
+            "code": "21",
+            "display": "Unsuitable due to transport"
+        },
+        {
+            "code": "22",
+            "display": "Rejected for capacity reasons"
+        },
+        {
+            "code": "23",
+            "display": "Service not clinically appropriate"
+        },
+        {
+            "code": "24",
+            "display": "Service declined referral"
+        },
+        {
+            "code": "26",
+            "display": "Rejected for patient choice"
+        },
+        {
+            "code": "27",
+            "display": "Service could not be contacted"
+        },
+        {
+            "code": "31",
+            "display": "No appointments available"
+        },
+        {
+            "code": "32",
+            "display": "Appointments not suitable"
+        },
+        {
+            "code": "40",
+            "display": "Patient not eligible for service"
+        },
+        {
+            "code": "41",
+            "display": "Patient requested home visit"
+        },
+        {
+            "code": "42",
+            "display": "Unsuitable due to distance"
+        },
+        {
+            "code": "99",
+            "display": "Other reason"
+        }
+    ]
+}

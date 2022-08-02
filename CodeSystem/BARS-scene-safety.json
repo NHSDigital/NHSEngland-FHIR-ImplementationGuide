@@ -1,0 +1,55 @@
+{
+    "resourceType": "CodeSystem",
+    "id": "scene-safety-codes-bars",
+    "url": "https://fhir.nhs.uk/CodeSystem/scene-safety-codes-bars",
+    "identifier":  [
+        {
+            "system": "https://fhir.nhs.uk/identifier/CodeSystem",
+            "value": "scene-safety-codes-bars"
+        }
+    ],
+    "version": "1.0.0",
+    "name": "scenesafetycodesbars",
+    "title": "Scene Safety Codes BARS",
+    "status": "active",
+    "date": "2022-03-22",
+    "publisher": "NHS Digital",
+    "contact":  [
+        {
+            "name": "NHS Digital",
+            "telecom":  [
+                {
+                    "system": "email",
+                    "value": "interoperabilityteam@nhs.net",
+                    "use": "work"
+                }
+            ]
+        }
+    ],
+    "description": "Scene Safety Codes",
+    "copyright": "Copyright © 2021 NHS Digital",
+    "caseSensitive": true,
+    "content": "complete",
+    "concept":  [
+        {
+            "code": "S",
+            "display": "The Scene is safe"
+        },
+        {
+            "code": "U",
+            "display": "The Scene is unsafe"
+        },
+        {
+            "code": "UT",
+            "display": "The Scene is unsafe and the individual is trapped"
+        },
+        {
+            "code": "ST",
+            "display": "The Scene is safe but the individual is trapped"
+        },
+        {
+            "code": "UNK",
+            "display": "Unknown"
+        }
+    ]
+}
