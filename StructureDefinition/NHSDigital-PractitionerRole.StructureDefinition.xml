@@ -139,13 +139,6 @@
         <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole" />
       </constraint>
       <constraint>
-        <key value="role-sds-user" />
-        <severity value="warning" />
-        <human value="Professional code (GMC, GMP, NMC, etc) is preferred." />
-        <expression value="identifier.exists().not() or identifier.where(system='https://fhir.nhs.uk/Id/sds-user-id').exists().not()" />
-        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole" />
-      </constraint>
-      <constraint>
         <key value="role-sds-user-numeric" />
         <severity value="error" />
         <human value="sds-user-id must be numeric" />
@@ -189,6 +182,10 @@
       <path value="PractitionerRole.code" />
       <definition value="Only supply if this is known from SmartCard/CIS2 data.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;code&quot;:  [&#xD;&#xA;        {&#xD;&#xA;            &quot;coding&quot;:  [&#xD;&#xA;                {&#xD;&#xA;                    &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/NHSDigital-SDS-JobRoleCode&quot;,&#xD;&#xA;                    &quot;code&quot;: &quot;S0030:G0100:R0620&quot;&#xD;&#xA;                  }&#xD;&#xA;            ]&#xD;&#xA;        }&#xD;&#xA;    ],&#xD;&#xA;```&#xD;&#xA;&#xD;&#xA;The previous system for this entry was `https://fhir.hl7org.uk/CodeSystem/UKCore-SDSJobRoleName`, this has been retired and `https://fhir.nhs.uk/CodeSystem/NHSDigital-SDS-JobRoleCode` should be used instead." />
       <mustSupport value="true" />
+      <binding>
+        <strength value="extensible" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDigital-PractitionerRoleCode" />
+      </binding>
     </element>
     <element id="PractitionerRole.code.coding">
       <path value="PractitionerRole.code.coding" />

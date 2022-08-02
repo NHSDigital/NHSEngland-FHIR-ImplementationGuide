@@ -57,6 +57,10 @@
           {
             "code":"15081005",
             "display": "Pulmonary rehabilitation"
+          },
+          {
+            "code" : "16076005",
+            "display":"Prescription"
           }
         ]
       },
