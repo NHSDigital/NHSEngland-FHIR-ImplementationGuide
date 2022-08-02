@@ -7,6 +7,7 @@
     </identifier>
     <version value="1.0.0" />
     <title value="Patient Demographic Events" />
+     <name value="PatientDemographicEvents" />
     <status value="active" />
     <date value="2022-05-10" />
     <eventCoding>

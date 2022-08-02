@@ -3,7 +3,7 @@
     "id": "959a0a2f-73e3-4c6e-8e99-babb6b3a4296",
     "url": "https://fhir.nhs.uk/CodeSystem/prescriber-role",
     "version": "0.0.1-prerelease",
-    "name": "Prescriber Role",
+    "name": "PrescriberRole",
     "status": "draft",
     "date": "2022-05-19T00:00:00+00:00",
     "publisher": "NHS Digital",

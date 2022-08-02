@@ -1,10 +1,10 @@
 {
   "resourceType": "ValueSet",
   "id": "a6876ad9-6ac5-431a-980d-b093a07e84d6",
-  "url": "https://fhir.nhs.uk/ValueSet/England-task-code",
-  "version": "0.0.3",
-  "name": "EnglandTaskCode",
-  "title": "EnglandTaskCode",
+  "url": "https://fhir.nhs.uk/ValueSet/NHSDigital-task-code",
+  "version": "0.0.4",
+  "name": "NHSDigitalTaskCode",
+  "title": "NHSDigital Task Code",
   "status": "draft",
   "date": "2022-03-01T06:00:00+00:00",
   "publisher": "NHS Digital",
@@ -49,6 +49,14 @@
           {
             "code": "324861000000109",
             "display": "Review of patient laboratory test report"
+          },
+          {
+            "code" : "184047000",
+            "display" : "Patient registration"
+          },
+          {
+            "code":"15081005",
+            "display": "Pulmonary rehabilitation"
           }
         ]
       },
@@ -64,9 +72,6 @@
             "display": "Mark the focal resource as no longer active"
           }
         ]
-      },
-      {
-        "system": "https://fhir.nhs.uk/CodeSystem/Workflow-Code"
       }
     ]
   }

@@ -3,7 +3,7 @@
     "id": "MedicationRequest-unlock",
     "url": "https://fhir.nhs.uk/OperationDefinition/MedicationRequest-unlock",
     "version": "4.0.1",
-    "name": "medicationRequestUnlock",
+    "name": "MedicationRequestUnlock",
     "status": "draft",
     "kind": "operation",
     "date": "2022-04-14T09:29:23+11:00",

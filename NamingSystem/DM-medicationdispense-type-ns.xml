@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <NamingSystem xmlns="http://hl7.org/fhir">
     <id value="DM-medicationdispense-type-ns"/>
-    <name value="medicationdispensetype"/>
+    <name value="Medicationdispensetype"/>
     <status value="draft"/>
     <kind value="codesystem"/>
     <date value="2020-10-06"/>

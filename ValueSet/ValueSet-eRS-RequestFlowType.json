@@ -3,7 +3,7 @@
     "id": "eRS-RequestFlowType",
     "url": "https://fhir.nhs.uk/ValueSet/eRS-RequestFlowType",
     "version": "1.0.0",
-    "name": "eRSRequestFlowType",
+    "name": "ERSRequestFlowType",
     "title": "eRS Request Flow Type",
     "status": "active",
     "date": "2022-03-14",

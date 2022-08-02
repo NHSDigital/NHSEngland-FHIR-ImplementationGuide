@@ -7,6 +7,7 @@
     </identifier>
     <version value="1.0.0" />
     <title value="Patient Appointment" />
+    <name value="PatientAppointment" />
     <status value="active" />
     <date value="2021-06-08" />
     <eventCoding>

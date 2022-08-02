@@ -41,6 +41,6 @@
      <concept>
         <code value="SLS"/>
         <display value="Selected List Scheme"/>
-        <definition value="Drugs and appliances to be prescribed in certain circumstances under the NHS Pharmaceutical Services. The prescriber must endorse the prescription with the reference 'SLS'. "/>
+        <definition value="Drugs and appliances to be prescribed in certain circumstances under the NHS Pharmaceutical Services. The prescriber must endorse the prescription with the reference 'SLS'."/>
      </concept>
  </CodeSystem>

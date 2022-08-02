@@ -89,25 +89,16 @@
         "performer": [
           {
             "identifier": {
-              "type": {
-                "text": "Processing Lab"
-              },
               "value": "MK"
             }
           },
           {
             "identifier": {
-              "type": {
-                "text": "Testing Centre"
-              },
               "value": "WKE03"
             }
           },
           {
             "identifier": {
-              "type": {
-                "text": "createSource"
-              },
               "value": "electiveCare"
             }
           }
@@ -199,25 +190,16 @@
         "performer": [
           {
             "identifier": {
-              "type": {
-                "text": "Processing Lab"
-              },
               "value": "LFD004"
             }
           },
           {
             "identifier": {
-              "type": {
-                "text": "Testing Centre"
-              },
               "value": "WKE03"
             }
           },
           {
             "identifier": {
-              "type": {
-                "text": "createSource"
-              },
               "value": "electiveCare"
             }
           }

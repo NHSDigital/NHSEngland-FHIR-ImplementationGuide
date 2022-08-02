@@ -3,7 +3,7 @@
     "id": "eRS-AppointmentType",
     "url": "https://fhir.nhs.uk/CodeSystem/eRS-AppointmentType",
     "version": "1.0.0",
-    "name": "eRSAppointmentType",
+    "name": "ERSAppointmentType",
     "title": "eRS Appointment Type",
     "status": "active",
     "date": "2022-03-14",

@@ -2,7 +2,7 @@
     <id value="issueType-to-http-status-code" />
     <url value="https://fhir.nhs.uk/ConceptMap/issueType-to-http-status-code" />
     <version value="1.0.0" />
-    <name value="issueTypetohttpstatuscode" />
+    <name value="IssueTypetohttpstatuscode" />
     <title value="issueType-to-http-status-code" />
     <status value="draft" />
     <experimental value="true" />

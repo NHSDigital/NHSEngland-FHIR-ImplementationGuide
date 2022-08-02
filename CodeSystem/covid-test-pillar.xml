@@ -3,7 +3,7 @@
     <id value="8119135b-533f-4a84-a584-8dc9f64136a7" />
     <url value="https://fhir.nhs.uk/CodeSystem/covid-test-pillar" />
     <version value="1.0.0" />
-    <name value="covidtestpillar" />
+    <name value="CovidTestPillar" />
     <status value="active" />
     <date value="2021-07-27T00:00:00+00:00" />
     <publisher value="NHS Digital" />

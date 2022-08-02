@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <NamingSystem xmlns="http://hl7.org/fhir">
     <id value="npfit-professional-code"/>
-    <name value="npfitprofessionalcode"/>
+    <name value="NPfITprofessionalcode"/>
     <status value="retired"/>
     <kind value="identifier"/>
     <date value="2022-07-28"/>

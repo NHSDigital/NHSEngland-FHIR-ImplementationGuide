@@ -19,6 +19,10 @@
             <type>
                 <code value="Coding" />
             </type>
+            <binding>
+                <strength value="required" />
+                <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDigital-message-events" />
+            </binding>
         </element>
         <element id="MessageHeader.event[x].system">
             <path value="MessageHeader.event[x].system" />

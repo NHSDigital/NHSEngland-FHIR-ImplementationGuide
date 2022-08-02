@@ -3,7 +3,7 @@
     "id": "NHSDigital-http-error-codes",
     "url": "https://fhir.nhs.uk/CodeSystem/http-error-codes",
     "version": "1.0.0",
-    "name": "httperrorcodes",
+    "name": "HttpErrorCodes",
     "status": "active",
     "date": "2022-01-25T00:00:00+00:00",
     "publisher": "NHS Digital",

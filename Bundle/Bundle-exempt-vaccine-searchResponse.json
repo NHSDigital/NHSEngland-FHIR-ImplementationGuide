@@ -3,6 +3,12 @@
     "id": "a60bfaec-8bc1-4906-9962-40eba5b48ea3",
     "type": "searchset",
     "total": 1,
+    "link": [
+        {
+            "relation": "self",
+            "url": "http://example.org/FHIR/R4/QuestionnaireResponse?patient:identifier=https://fhir.nhs.uk/Id/nhs-number|9912003888"
+        }
+    ],
     "entry": [
         {
             "fullUrl": "QuestionnaireResponse/a60bfaec-8bc1-4906-9962-40eba5b48ea",

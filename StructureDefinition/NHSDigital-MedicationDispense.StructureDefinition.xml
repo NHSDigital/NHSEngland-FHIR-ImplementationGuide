@@ -153,8 +153,8 @@
       <constraint>
         <key value="eps-2" />
         <severity value="warning" />
-        <human value="subject - An identifier reference plus a display name or resource reference must be provided" />
-        <expression value="(reference.exists() or (identifier.exists() and display.exists()))" />
+        <human value="subject - An identifier reference or resource reference must be provided" />
+        <expression value="(reference.exists() or (identifier.exists()))" />
         <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationDispense" />
       </constraint>
       <constraint>

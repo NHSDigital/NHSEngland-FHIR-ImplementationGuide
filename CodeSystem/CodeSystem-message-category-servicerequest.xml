@@ -7,7 +7,7 @@
         <value value="message-category-servicerequest"/>
     </identifier>
     <version value="1.0.1"/>
-    <name value="messagecategoryservicerequest"/>
+    <name value="MessageCategoryServiceRequest"/>
     <title value="Message Category Service Request"/>
     <status value="active"/>
     <date value="2022-01-20"/>
