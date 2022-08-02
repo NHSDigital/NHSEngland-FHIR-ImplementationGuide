@@ -73,7 +73,7 @@
         },
         {
             "code": "Consent",
-            "profile": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Consent",
+            "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-Consent",
             "min": 0,
             "max": "*"
         },

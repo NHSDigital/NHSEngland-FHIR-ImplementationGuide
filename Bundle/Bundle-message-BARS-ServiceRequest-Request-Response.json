@@ -77,6 +77,8 @@
                 "focus":  [
                     {
                         "reference": "urn:uuid:236bb75d-90ef-461f-b71e-fde7f899802c"
+                    },{
+                        "reference" : "urn:uuid:1e91008e-96d0-438b-873c-c6d2c007fc29"
                     }
                 ],
                 "definition": "https://fhir.nhs.uk/MessageDefinition/bars-message-servicerequest-response-referral"
@@ -117,7 +119,7 @@
                 },
                 "authoredOn": "2021-10-11T15:23:30+00:00",
                 "requester": {
-                    "reference": "urn:uuid:7d948662-bade-450e-b6c5-9bb6ee39cb56"
+                    "reference": "urn:uuid:b923aa53-2376-4015-a07d-afe8bf2310eb"
                 },
                 "performer":  [
                     {
@@ -153,136 +155,13 @@
                 "subject": {
                     "reference": "urn:uuid:9589fb37-87a2-48d8-968f-b371429208a8"
                 },
-                "episodeOfCare":  [
-                    {
-                        "reference": "urn:uuid:d877b820-e72b-44d1-a627-195f54bfc606"
-                    }
-                ],
                 "period": {
                     "start": "2021-02-19T07:15:00+10:00"
                 },
                 "reasonReference":  [
                     {
-                        "reference": "urn:uuid:0a6689a2-ebb4-48a2-825f-9c88c5959684",
-                        "display": "Social Context - Household Composition"
-                    },
-                    {
                         "reference": "urn:uuid:fa7a9782-e111-49a5-9660-826b29c51d56",
                         "display": "Clinical narrative"
-                    }
-                ]
-            }
-        },
-        {
-            "fullUrl": "urn:uuid:38e9c018-adbb-4579-9cd8-45f4f890b93b",
-            "resource": {
-                "resourceType": "CarePlan",
-                "id": "91607239-b002-470a-8709-6b25bd50fdd1",
-                "meta": {
-                    "lastUpdated": "2021-11-26T15:15:15+00:00",
-                    "profile":  [
-                        "https://fhir.hl7.org.uk/StructureDefinition/UKCore-CarePlan"
-                    ]
-                },
-                "status": "completed",
-                "intent": "plan",
-                "subject": {
-                    "reference": "urn:uuid:9589fb37-87a2-48d8-968f-b371429208a8"
-                },
-                "encounter": {
-                    "reference": "urn:uuid:8c63d621-4d86-4f57-8699-e8e22d49935d"
-                },
-                "supportingInfo":  [
-                    {
-                        "reference": "urn:uuid:e53b2595-7875-4687-80e9-23a0c8cb8ea0",
-                        "display": "Person expectations and wishes"
-                    },
-                    {
-                        "reference": "urn:uuid:ea37a499-245c-40e9-b0fa-df4383c4d413",
-                        "display": "Safeguarding Concerns Flag"
-                    }
-                ],
-                "activity":  [
-                    {
-                        "outcomeCodeableConcept":  [
-                            {
-                                "coding":  [
-                                    {
-                                        "system": "https://fhir.nhs.uk/Id/pathways-sd-code",
-                                        "code": "4389",
-                                        "display": "ED post tonsillectomy bleeding"
-                                    }
-                                ],
-                                "text": "Pathways Assessment SD Code"
-                            },
-                            {
-                                "coding":  [
-                                    {
-                                        "system": "https://fhir.nhs.uk/Id/pathways-dx-code",
-                                        "code": "DX02",
-                                        "display": "The individual needs to attend an emergency treatment centre within 1 hour."
-                                    }
-                                ],
-                                "text": "Pathways Assessment DX Code"
-                            },
-                            {
-                                "coding":  [
-                                    {
-                                        "system": "https://fhir.nhs.uk/Id/pathways-template",
-                                        "code": "PA21",
-                                        "display": "Chest and Upper Back Pain"
-                                    }
-                                ],
-                                "text": "Presenting Complaint - selected Pathway or Template"
-                            },
-                            {
-                                "coding":  [
-                                    {
-                                        "system": "https://fhir.nhs.uk/Id/pathways-sg-code",
-                                        "code": "1010",
-                                        "display": "Allergic Reaction"
-                                    }
-                                ],
-                                "text": "Pathways Assessment SG Code - Chief Complaint"
-                            },
-                            {
-                                "coding":  [
-                                    {
-                                        "system": "https://fhir.nhs.uk/Id/ValueSetTBC",
-                                        "code": "PlanRequest",
-                                        "display": "Plan or Requested Action"
-                                    }
-                                ],
-                                "text": "Physical examination of reported chest pain"
-                            }
-                        ]
-                    }
-                ]
-            }
-        },
-        {
-            "fullUrl": "urn:uuid:ec47b0b9-d5a9-4f8e-90d1-e955bd951d8d",
-            "resource": {
-                "resourceType": "Appointment",
-                "id": "3713c8fc-dbcf-4f90-bacf-89d99e434e9b",
-                "meta": {
-                    "lastUpdated": "2021-10-11T15:23:30+00:00",
-                    "profile":  [
-                        "http://hl7.org/fhir/StructureDefinition/Appointment",
-                        "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Appointment"
-                    ]
-                },
-                "status": "noshow",
-                "description": "Reason for calling",
-                "start": "2021-10-12T12:30:00+00:00",
-                "end": "2021-10-12T12:40:00+00:00",
-                "created": "2021-10-11T15:01:30+00:00",
-                "participant":  [
-                    {
-                        "actor": {
-                            "reference": "urn:uuid:9589fb37-87a2-48d8-968f-b371429208a8"
-                        },
-                        "status": "accepted"
                     }
                 ]
             }
@@ -627,6 +506,11 @@
                         ]
                     }
                 ],
+                "healthcareService" : [
+                    {
+                        "reference" :"urn:uuid:d482d092-6efc-4eef-b4a0-730718b1fbfd"
+                    }
+                ],
                 "specialty":  [
                     {
                         "coding":  [
@@ -655,79 +539,6 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:ea37a499-245c-40e9-b0fa-df4383c4d413",
-            "resource": {
-                "resourceType": "Flag",
-                "id": "3d436a56-1957-44a2-b7ed-b83efc60b94a",
-                "status": "active",
-                "category":  [
-                    {
-                        "coding":  [
-                            {
-                                "system": "http://terminology.hl7.org/CodeSystem/flag-category/newvalueset",
-                                "code": "SG",
-                                "display": "Safeguarding Concern"
-                            }
-                        ],
-                        "text": "Safeguarding Concern"
-                    }
-                ],
-                "code": {
-                    "coding":  [
-                        {
-                            "system": "http://snomed.info/sct",
-                            "code": "160877008",
-                            "display": "Child at risk"
-                        }
-                    ],
-                    "text": "Child at risk"
-                },
-                "subject": {
-                    "reference": "urn:uuid:9589fb37-87a2-48d8-968f-b371429208a8"
-                },
-                "period": {
-                    "start": "2020-11-10T19:57:26.961Z",
-                    "end": "2021-11-20T19:57:26.961Z"
-                }
-            }
-        },
-        {
-            "fullUrl": "urn:uuid:3fe61915-32d2-4d41-953a-1d4ff56030e0",
-            "resource": {
-                "resourceType": "Flag",
-                "id": "39ef3f6d-8e02-48fa-92eb-c82b77b08363",
-                "status": "active",
-                "category":  [
-                    {
-                        "coding":  [
-                            {
-                                "system": "https://fhir.nhs.uk/STU3/ValueSet/ValueSet-RARecord-AdjustmentCategories-1",
-                                "code": "personalisation",
-                                "display": "Personalisation of support"
-                            }
-                        ],
-                        "text": "Reasonable Adjustment - Personalisation of support"
-                    }
-                ],
-                "code": {
-                    "coding":  [
-                        {
-                            "system": "http://system.system",
-                            "code": "adjustforneedlephobia",
-                            "display": "Adjust for needle phobia"
-                        }
-                    ],
-                    "text": "Adjust for needle phobia"
-                },
-                "subject": {
-                    "reference": "urn:uuid:9589fb37-87a2-48d8-968f-b371429208a8"
-                },
-                "period": {
-                    "start": "2018-11-10T19:57:26.961Z"
-                }
-            }
-        },
-        {
             "fullUrl": "urn:uuid:fa7a9782-e111-49a5-9660-826b29c51d56",
             "resource": {
                 "resourceType": "Observation",
@@ -748,8 +559,8 @@
                     "coding":  [
                         {
                             "system": "http://snomed.info/sct",
-                            "code": "1077901000000108",
-                            "display": "Clinical narrative"
+                            "code": "409770001",
+                            "display": "Narrative comments on pathology specimen"
                         }
                     ]
                 },
@@ -758,7 +569,7 @@
                 },
                 "performer":  [
                     {
-                        "reference": "urn:uuid:7d948662-bade-450e-b6c5-9bb6ee39cb56"
+                        "reference": "urn:uuid:b923aa53-2376-4015-a07d-afe8bf2310eb"
                     }
                 ],
                 "note":  [
@@ -802,7 +613,7 @@
                 "meta": {
                     "lastUpdated": "2021-11-26T15:00:00+00:00",
                     "profile":  [
-                        "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Consent"
+                        "https://fhir.nhs.uk/StructureDefinition/NHSDigital-Consent"
                     ]
                 },
                 "status": "active",
@@ -832,8 +643,8 @@
                 "policyRule": {
                     "coding":  [
                         {
-                            "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
-                            "code": "IMPLIED"
+                            "system": "http://terminology.hl7.org/CodeSystem/consentpolicycodes",
+                            "code": "cric"
                         }
                     ]
                 }
