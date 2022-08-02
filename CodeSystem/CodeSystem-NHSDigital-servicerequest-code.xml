@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeSystem xmlns="http://hl7.org/fhir">
     <url value="https://fhir.nhs.uk/CodeSystem/NHSDigital-servicerequest-code"/>
+    <id value="2bd0445d-f072-40dd-ab42-ec13b55f8dcb"/>
     <identifier>
         <system value="https://fhir.nhs.uk/identifier/CodeSystem"/>
         <value value="NHSDigital-servicerequest-code"/>

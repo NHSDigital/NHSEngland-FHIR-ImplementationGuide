@@ -1,0 +1,121 @@
+<StructureDefinition xmlns="http://hl7.org/fhir">
+    <id value="LocationExtension" />
+    <url value="https://fhir.nhs.uk/StructureDefinition/LocationExtension" />
+    <version value="1.0.3" />
+    <name value="LocationExtension" />
+    <title value="Location Extension" />
+    <status value="active" />
+    <date value="2022-05-16" />
+    <description value="Location Extension" />
+    <fhirVersion value="4.0.1" />
+    <kind value="complex-type" />
+    <abstract value="false" />
+    <context>
+        <type value="element" />
+        <expression value="Location" />
+    </context>
+    <type value="Extension" />
+    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+    <derivation value="constraint" />
+    <differential>
+        <element id="Extension.extension">
+            <path value="Extension.extension" />
+            <slicing>
+                <discriminator>
+                    <type value="value" />
+                    <path value="url" />
+                </discriminator>
+                <rules value="open" />
+            </slicing>
+            <min value="0" />
+        </element>
+        <element id="Extension.extension:UPRN">
+            <path value="Extension.extension" />
+            <sliceName value="UPRN" />
+            <min value="0" />
+            <max value="1" />
+        </element>
+        <element id="Extension.extension:UPRN.url">
+            <path value="Extension.extension.url" />
+            <fixedUri value="UPRN" />
+        </element>
+        <element id="Extension.extension:UPRN.value[x]">
+            <path value="Extension.extension.value[x]" />
+            <type>
+                <code value="string" />
+            </type>
+        </element>
+        <element id="Extension.extension:PAF">
+            <path value="Extension.extension" />
+            <sliceName value="PAF" />
+            <min value="0" />
+            <max value="1" />
+        </element>
+        <element id="Extension.extension:PAF.url">
+            <path value="Extension.extension.url" />
+            <fixedUri value="PAF" />
+        </element>
+        <element id="Extension.extension:PAF.value[x]">
+            <path value="Extension.extension.value[x]" />
+            <type>
+                <code value="string" />
+            </type>
+        </element>
+        <element id="Extension.extension:eastings">
+            <path value="Extension.extension" />
+            <sliceName value="eastings" />
+            <min value="0" />
+            <max value="1" />
+        </element>
+        <element id="Extension.extension:eastings.url">
+            <path value="Extension.extension.url" />
+            <fixedUri value="eastings" />
+        </element>
+        <element id="Extension.extension:eastings.value[x]">
+            <path value="Extension.extension.value[x]" />
+            <type>
+                <code value="string" />
+            </type>
+        </element>
+        <element id="Extension.extension:northings">
+            <path value="Extension.extension" />
+            <sliceName value="northings" />
+            <min value="0" />
+            <max value="1" />
+        </element>
+        <element id="Extension.extension:northings.url">
+            <path value="Extension.extension.url" />
+            <fixedUri value="northings" />
+        </element>
+        <element id="Extension.extension:northings.value[x]">
+            <path value="Extension.extension.value[x]" />
+            <type>
+                <code value="string" />
+            </type>
+        </element>
+        <element id="Extension.extension:what3words">
+            <path value="Extension.extension" />
+            <sliceName value="what3words" />
+            <min value="0" />
+            <max value="1" />
+        </element>
+        <element id="Extension.extension:what3words.url">
+            <path value="Extension.extension.url" />
+            <fixedUri value="what3words" />
+        </element>
+        <element id="Extension.extension:what3words.value[x]">
+            <path value="Extension.extension.value[x]" />
+            <type>
+                <code value="string" />
+            </type>
+        </element>
+        <element id="Extension.url">
+            <path value="Extension.url" />
+            <fixedUri value="https://fhir.nhs.uk/StructureDefinition/LocationExtension" />
+        </element>
+        <element id="Extension.value[x]">
+            <path value="Extension.value[x]" />
+            <max value="0" />
+        </element>
+    </differential>
+</StructureDefinition>
