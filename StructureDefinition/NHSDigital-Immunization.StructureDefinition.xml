@@ -294,6 +294,10 @@
     <element id="Immunization.reasonCode">
       <path value="Immunization.reasonCode" />
       <definition value="A SNOMED Concept Id. For COVID19 and Flu see https://digital.nhs.uk/developer/api-catalogue/vaccination" />
+      <binding>
+                <strength value="extensible" />
+                <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDigital-ImmunizationExplanationReason" />
+      </binding>
       <mustSupport value="true" />
     </element>
     <element id="Immunization.reasonCode.coding">

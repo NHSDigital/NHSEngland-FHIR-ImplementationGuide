@@ -1,0 +1,173 @@
+<CapabilityStatement xmlns="http://hl7.org/fhir">
+    <id value="apim-medicines-api-example" />
+    <url value="https://fhir.nhs.uk/CapabilityStatement/apim-medicines-api-example" />
+    <version value="3.0.0" />
+    <name value="APIMEPS" />
+    <status value="active" />
+    <date value="2021-04-28T00:00:00+00:00" />
+    <publisher value="digital.nhs.uk" />
+    <description value="Example API Statement for NHS Digital Medicines APIs" />
+    <kind value="instance" />
+    <fhirVersion value="4.0.1" />
+    <software>
+        <name value="EPS NextGen" />
+        <version value="1.2.4-alpha" />
+        <releaseDate value="2021-07-21T00:00:00+00:00" />
+    </software>
+    <implementation>
+        <description value="This is an example EPS API Capability Statement"/>
+    </implementation>
+    <implementationGuide value="https://simplifier.net/guide/digitalmedicines"/>
+    <implementationGuide value="https://simplifier.net/guide/nhsdigital"/>
+    <format value="application/fhir+json" />
+    <format value="application/fhir+xml" />
+    <rest>
+        <mode value="server" />
+        <security>
+            <service>
+                <coding>
+                    <system value="http://terminology.hl7.org/CodeSystem/restful-security-service" />
+                    <code value="OAuth" />
+                    <display value="OAuth2 Token" />
+                </coding>
+            </service>
+        </security>
+        <resource>
+            <type value="List" />
+            <profile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-List" />
+        </resource>
+        <resource>
+            <type value="Claim" />
+            <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Claim" />
+        </resource>
+        <resource>
+            <type value="CommunicationRequest" />
+            <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-CommunicationRequest" />
+        </resource>
+        <resource>
+            <type value="Immunization" />
+            <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Immunization" />
+            <interaction>
+                <code value="search-type" />
+            </interaction>
+            <searchParam>
+                <name value="patient:identifier" />
+                <type value="token" />
+                <documentation value="The patient identifier (e.g. NHS Number) that the immunisation is about" />
+            </searchParam>
+            <searchParam>
+                <name value="patient" />
+                <type value="reference" />
+                <documentation value="The patient that the immunisation is about" />
+            </searchParam>
+            <searchParam>
+                <name value="procedure:below" />
+                <type value="token" />
+                <definition value="https://fhir.nhs.uk/SearchParameter/procedure-code"/>
+                <documentation value="Parent snomed procedure code for vaccinations" />
+            </searchParam>
+        </resource>
+        <resource>
+            <type value="MedicationRequest" />
+            <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationRequest" />
+            <interaction>
+                <code value="search-type" />
+            </interaction>
+            <searchParam>
+                <name value="patient:identifier" />
+                <type value="token" />
+                <documentation value="Returns prescriptions for a specific patientt identifier (NHS Number)" />
+            </searchParam>
+            <searchParam>
+                <name value="patient" />
+                <type value="reference" />
+                <documentation value="Returns prescriptions for a specific patient" />
+            </searchParam>
+            <searchParam>
+                <name value="medication" />
+                <type value="reference" />
+                <documentation value="Return prescriptions for this medication reference" />
+            </searchParam>
+            <searchParam>
+                <name value="status" />
+                <type value="token" />
+                <documentation value="Status of the prescription" />
+            </searchParam>
+            <searchParam>
+                <name value="authoredon" />
+                <type value="date" />
+                <documentation value="Return prescriptions written on this date" />
+            </searchParam>
+        </resource>
+        <resource>
+            <type value="MedicationDispense" />
+            <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationDispense" />
+            <interaction>
+                <code value="search-type" />
+            </interaction>
+            <searchParam>
+                <name value="patient:identifier" />
+                <type value="token" />
+                <documentation value="TThe identity (NHS Number) of a patient to list dispenses for" />
+            </searchParam>
+            <searchParam>
+                <name value="patient" />
+                <type value="reference" />
+                <documentation value="The identity of a patient to list dispenses for" />
+            </searchParam>
+        </resource>
+        <resource>
+            <type value="Medication" />
+            <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Medication" />
+        </resource>
+        <resource>
+            <type value="Task" />
+            <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Task-EPS" />
+            <interaction>
+                <code value="create"/>
+            </interaction>
+            <operation>
+                <name value="release" />
+                <definition value="https://fhir.nhs.uk/OperationDefinition/Task-release-message" />
+            </operation>
+        </resource>
+        <operation>
+            <name value="process-message" />
+            <definition value="https://fhir.nhs.uk/OperationDefinition/MessageHeader-process-message" />
+        </operation>
+        <operation>
+            <name value="prepare" />
+            <definition value="https://fhir.nhs.uk/OperationDefinition/MessageHeader-prepare-message" />
+        </operation>
+        <operation>
+            <name value="validate"/>
+            <definition value="http://hl7.org/fhir/OperationDefinition/Resource-validate"/>
+        </operation>
+    </rest>
+    <messaging>
+        <supportedMessage>
+            <mode value="receiver" />
+            <definition value="https://fhir.nhs.uk/MessageDefinition/prescription-order" />
+        </supportedMessage>
+        <supportedMessage>
+            <mode value="receiver" />
+            <definition value="https://fhir.nhs.uk/MessageDefinition/prescription-order-update" />
+        </supportedMessage>
+        <supportedMessage>
+            <mode value="receiver" />
+            <definition value="https://fhir.nhs.uk/MessageDefinition/dispense-notification" />
+        </supportedMessage>
+        <supportedMessage>
+            <mode value="receiver" />
+            <definition value="https://fhir.nhs.uk/MessageDefinition/dispense-notification-update" />
+        </supportedMessage>
+        <supportedMessage>
+            <mode value="receiver" />
+            <definition value="https://fhir.nhs.uk/MessageDefinition/dispense-claim" />
+        </supportedMessage>
+        <supportedMessage>
+            <mode value="receiver" />
+            <definition value="https://fhir.nhs.uk/MessageDefinition/dispense-claim-update" />
+        </supportedMessage>
+    </messaging>
+</CapabilityStatement>

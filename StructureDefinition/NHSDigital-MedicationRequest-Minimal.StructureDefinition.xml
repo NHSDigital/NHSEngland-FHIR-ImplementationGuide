@@ -36,8 +36,6 @@
   <baseDefinition value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-MedicationRequest" />
   <derivation value="constraint" />
   <differential>
-    
-    
     <element id="MedicationRequest.identifier">
       <path value="MedicationRequest.identifier" />
       <slicing>
@@ -80,6 +78,10 @@
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationRequest-Medication" />
         <aggregation value="bundled" />
       </type>
+       <binding>
+        <strength value="extensible" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDigital-MedicationCode" />
+      </binding>
       <mustSupport value="true" />
     </element>
     <element id="MedicationRequest.groupIdentifier">

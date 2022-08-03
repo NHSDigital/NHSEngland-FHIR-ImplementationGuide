@@ -333,6 +333,10 @@
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationRequest-Medication" />
         <aggregation value="bundled" />
       </type>
+      <binding>
+        <strength value="extensible" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDigital-MedicationCode" />
+      </binding>
       <mustSupport value="true" />
     </element>
     <element id="MedicationRequest.subject">
