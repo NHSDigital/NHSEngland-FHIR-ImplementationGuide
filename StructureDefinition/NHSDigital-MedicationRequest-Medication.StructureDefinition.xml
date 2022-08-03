@@ -8,7 +8,7 @@
   <kind value="resource" />
   <abstract value="false" />
   <type value="Medication" />
-  <baseDefinition value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Medication" />
+  <baseDefinition value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Medication" />
   <derivation value="constraint" />
   <differential>
     <element id="Medication.code">

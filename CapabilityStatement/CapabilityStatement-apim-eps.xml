@@ -118,7 +118,7 @@
         </resource>
         <resource>
             <type value="Medication" />
-            <profile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Medication" />
+            <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Medication" />
         </resource>
         <resource>
             <type value="Task" />
