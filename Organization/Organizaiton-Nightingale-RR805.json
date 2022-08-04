@@ -65,6 +65,7 @@
         "identifier": {
             "system": "https://fhir.nhs.uk/Id/ods-organization-code",
             "value": "RR8"
-        }
+        },
+        "display" : "Leeds Teaching NHS Trusts"
     }
 }

@@ -36,11 +36,6 @@
             {
                 "system": "https://fhir.nhs.uk/CodeSystem/NHSDataModelAndDictionary-treatment-function",
                 "code": "500"
-            },
-		 	{
-                "system": "http://snomed.info/sct",
-                "code": "5892711000000104",
-				"display": "Gynaecological oncology service"
             }
         ]
     },

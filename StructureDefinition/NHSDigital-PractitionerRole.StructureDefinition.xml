@@ -152,6 +152,13 @@
         <expression value="identifier.where(system='https://fhir.hl7.org.uk/Id/gmc-reference-number').exists().not() or (identifier.where(system='https://fhir.hl7.org.uk/Id/gphc-number').exists()  and identifier.where(system='https://fhir.hl7.org.uk/Id/gmc-reference-number').value.matches('^[0-9]{7}$'))" />
         <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Practitioner" />
       </constraint>
+      <constraint>
+        <key value="nacs-code-retired" />
+        <severity value="warning" />
+        <human value="NACS (/ODS) Practitioner Identifier is retired in NHS FHIR and should not be used. Please use the actual naming system instead (e,g, https://fhir.hl7.org.uk/Id/gmc-number, https://fhir.hl7.org.uk/Id/gmp-number, etc)." />
+        <expression value="identifier.where(system='https://fhir.hl7.org.uk/Id/professional-code').exists().not()" />
+        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Practitioner" />
+      </constraint>
       <mustSupport value="true" />
     </element>
     <element id="PractitionerRole.organization">

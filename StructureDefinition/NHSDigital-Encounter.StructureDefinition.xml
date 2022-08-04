@@ -39,7 +39,7 @@
       <binding>
         <strength value="extensible" />
         <description value="NHS Data Dictionary Treatment Function Code" />
-        <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDataModelAndDictionary-treatment-function" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDigital-CareSettingType" />
       </binding>
     </element>
     <element id="Encounter.subject">
