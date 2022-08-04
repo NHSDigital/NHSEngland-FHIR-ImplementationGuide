@@ -107,9 +107,9 @@
                 "vaccineCode": {
                     "coding": [
                         {
+                            "system": "http://snomed.info/sct",
                             "code": "39114911000001105",
-                            "display": "COVID-19 Vaccine AstraZeneca (ChAdOx1 S [recombinant]) 5x10,000,000,000 viral particles/0.5ml dose solution for injection multidose vials (AstraZeneca UK Ltd) (product)",
-                            "system": "http://snomed.info/sct"
+                            "display": "COVID-19 Vaccine Vaxzevria (ChAdOx1 S [recombinant]) not less than 2.5x100,000,000 infectious units/0.5ml dose suspension for injection multidose vials (AstraZeneca UK Ltd)"
                         }
                     ]
                 }
@@ -135,10 +135,10 @@
                         "valueCodeableConcept": {
                             "coding": [
                                 {
+                                    "system": "http://snomed.info/sct",
                                     "code": "1324691000000104",
-                                    "display": "Administration of first dose of severe acute respiratory syndrome coronavirus 2 vaccine (procedure)",
-                                    "system": "http://snomed.info/sct"
-                                }
+                                    "display": "COVID-19 Vaccine Vaxzevria (ChAdOx1 S [recombinant]) not less than 2.5x100,000,000 infectious units/0.5ml dose suspension for injection multidose vials (AstraZeneca UK Ltd)"
+                                  }
                             ]
                         }
                     }
