@@ -1,6 +1,19 @@
 {
     "resourceType": "Encounter",
     "id": "adt-a03-initial",
+    "extension": [
+        {
+            "url": "https://fhir.nhs.uk/StructureDefinition/Extension-UKCore-AdmissionMethod",
+            "valueCodeableConcept": {
+                "coding": [
+                    {
+                        "system": "https://fhir.nhs.uk/CodeSystem/UKCore-AdmissionMethod",
+                        "code": "82"
+                    }
+                ]
+            }
+        }
+    ],
     "identifier": [
         {
             "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
@@ -13,24 +26,14 @@
         "code": "SS",
         "display": "short stay"
     },
-    "type": [
-        {
-            "coding": [
-                {
-                    "system": "https://fhir.hl7.org.uk/CodeSystem/UKCore-AdmissionMethod",
-                    "code": "82"
-                }
-            ]
-        },
-        {
-            "coding": [
-                {
-                    "system": "https://fhir.nhs.uk/CodeSystem/NHSDataModelAndDictionary-clinical-specialty",
-                    "code": "500"
-                }
-            ]
-        }
-    ],
+    "serviceType": {
+        "coding": [
+            {
+                "system": "https://fhir.nhs.uk/CodeSystem/NHSDataModelAndDictionary-treatment-function",
+                "code": "500"
+            }
+        ]
+    },
     "subject": {
         "reference": "Patient/6853093",
         "identifier": {

@@ -268,7 +268,7 @@
       </slicing>
       <binding>
         <strength value="example" />
-        <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDataModelAndDictionary-treatment-function" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDigital-CareSettingType" />
       </binding>
     </element>
     <element id="ServiceRequest.performerType.coding:treatmentFunctionCodes">

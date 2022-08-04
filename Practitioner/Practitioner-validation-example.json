@@ -8,11 +8,11 @@
     },
     {
       "system": "https://fhir.hl7.org.uk/Id/gmc-number",
-      "value": "G4428981"
+      "value": "C4428981"
     },
     {
       "system": "https://fhir.hl7.org.uk/Id/gmp-number",
-      "value": "G7234567"
+      "value": "G4234567"
     },
     {
       "system": "https://fhir.hl7.org.uk/Id/gmc-reference-number",
@@ -20,10 +20,6 @@
     },
     {
       "system": "https://fhir.hl7.org.uk/Id/gphc-number",
-      "value": "4428981"
-    },
-    {
-      "system": "https://fhir.hl7.org.uk/Id/professional-code",
       "value": "4428981"
     }
   ],
