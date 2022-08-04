@@ -25,44 +25,13 @@
     "include": [
       {
         "system": "http://snomed.info/sct",
-        "concept": [
+        "filter":  [
           {
-            "code": "413292001",
-            "display": "Assessment for referral"
-          },
-          {
-            "code": "386053000",
-            "display": "Evaluation procedure"
-          },
-          {
-            "code": "103742009",
-            "display": "Renewal of prescription"
-          },
-          {
-            "code": "299441000000105",
-            "display": "Checking prescription"
-          },
-          {
-            "code": "182836005",
-            "display": "Review of medication"
-          },
-          {
-            "code": "324861000000109",
-            "display": "Review of patient laboratory test report"
-          },
-          {
-            "code" : "184047000",
-            "display" : "Patient registration"
-          },
-          {
-            "code":"15081005",
-            "display": "Pulmonary rehabilitation"
-          },
-          {
-            "code" : "16076005",
-            "display":"Prescription"
+              "property": "constraint",
+              "op": "=",
+              "value": "descendantOrSelfOf 71388002"
           }
-        ]
+      ]
       },
       {
         "system": "http://hl7.org/fhir/CodeSystem/task-code",
