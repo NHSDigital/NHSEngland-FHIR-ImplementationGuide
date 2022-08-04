@@ -137,7 +137,7 @@
                                 {
                                     "system": "http://snomed.info/sct",
                                     "code": "1324691000000104",
-                                    "display": "COVID-19 Vaccine Vaxzevria (ChAdOx1 S [recombinant]) not less than 2.5x100,000,000 infectious units/0.5ml dose suspension for injection multidose vials (AstraZeneca UK Ltd)"
+                                    "display": "Administration of second dose of SARS-CoV-2 (severe acute respiratory syndrome coronavirus 2) vaccine"
                                   }
                             ]
                         }
