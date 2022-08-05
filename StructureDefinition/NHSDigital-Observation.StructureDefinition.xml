@@ -87,6 +87,7 @@
       <max value="1" />
       <binding>
         <strength value="extensible" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDigital-Observation-category" />
       </binding>
     </element>
     <element id="Observation.category:COVID-TestPillar.coding">
