@@ -1,15 +1,6 @@
 {
     "id": "5da894e0-a57e-43e9-a1a1-e283a484003c",
     "resourceType": "DocumentReference",
-    "type": {
-        "coding": [
-            {
-                "system": "https://fhir.nhs.uk/STU3/CodeSystem/eRS-AttachmentType-1",
-                "code": "REFERRER",
-                "display": "Referrer"
-            }
-        ]
-    },
     "status": "current",
     "date": "2021-09-17T12:20:00.742000+00:00",
     "description": "upload.png",
