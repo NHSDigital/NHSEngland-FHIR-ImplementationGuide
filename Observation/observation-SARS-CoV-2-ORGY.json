@@ -109,15 +109,6 @@
         {
             "type": "Organization",
             "identifier": {
-                "type": {
-                    "coding": [
-                        {
-                            "system": "https://fhir.nhs.uk/Id/OrgType",
-                            "code": "TestCentreId",
-                            "display": "Testing Centre"
-                        }
-                    ]
-                },
                 "value": "WKE03"
             },
             "display": "Add if possible"

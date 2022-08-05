@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Reference" />
+  <name value="NHSDigitalReference" />
+  <status value="draft" />
+  <fhirVersion value="4.0.1" />
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <type value="Reference" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Reference" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Reference.identifier">
+      <path value="Reference.identifier" />
+      <type>
+        <code value="Identifier" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Identifier" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

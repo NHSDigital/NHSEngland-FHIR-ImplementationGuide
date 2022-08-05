@@ -87,9 +87,6 @@
       <sliceName value="COVID-TestPillar" />
       <max value="1" />
     </element>
-    <element id="Observation.category:COVID-TestPillar.coding">
-      <path value="Observation.category.coding" />
-    </element>
     <element id="Observation.category:COVID-TestPillar.coding.system">
       <path value="Observation.category.coding.system" />
       <fixedUri value="https://fhir.nhs.uk/CodeSystem/covid-test-pillar" />
@@ -97,12 +94,6 @@
     <element id="Observation.category:UKCoreCategory">
       <path value="Observation.category" />
       <sliceName value="UKCoreCategory" />
-    </element>
-    <element id="Observation.category:UKCoreCategory.coding">
-      <path value="Observation.category.coding" />
-      <binding>
-        <strength value="preferred" />
-      </binding>
     </element>
     <element id="Observation.category:UKCoreCategory.coding.system">
       <path value="Observation.category.coding.system" />
@@ -163,6 +154,7 @@
       <definition value="Who was responsible for asserting the observed value as &quot;true&quot;. &#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA;&quot;performer&quot;: [&#xD;&#xA;  {&#xD;&#xA;    &quot;type&quot;: &quot;Organization&quot;,&#xD;&#xA;    &quot;identifier&quot;: {&#xD;&#xA;      &quot;type&quot;: {&#xD;&#xA;        &quot;coding&quot;: [&#xD;&#xA;          {&#xD;&#xA;            &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/organisation-role&quot;,&#xD;&#xA;            &quot;code&quot;: &quot;173&quot;,&#xD;&#xA;            &quot;display&quot;: &quot;PATHOLOGY LAB&quot;&#xD;&#xA;          }&#xD;&#xA;        ]&#xD;&#xA;      },&#xD;&#xA;      &quot;value&quot;: &quot;LFD004&quot;&#xD;&#xA;    }&#xD;&#xA;  },&#xD;&#xA;  {&#xD;&#xA;    &quot;type&quot;: &quot;Organization&quot;,&#xD;&#xA;    &quot;identifier&quot;: {&#xD;&#xA;      &quot;type&quot;: {&#xD;&#xA;        &quot;coding&quot;: [&#xD;&#xA;          {&#xD;&#xA;            &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/OrgType&quot;,&#xD;&#xA;            &quot;code&quot;: &quot;TestCentreId&quot;,&#xD;&#xA;            &quot;display&quot;: &quot;Testing Centre&quot;&#xD;&#xA;          }&#xD;&#xA;        ]&#xD;&#xA;      },&#xD;&#xA;      &quot;value&quot;: &quot;WKE03&quot;&#xD;&#xA;    }&#xD;&#xA;  }&#xD;&#xA;]&#xD;&#xA;&#xD;&#xA;```" />
       <type>
         <code value="Reference" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Reference" />
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Organization" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/CareTeam" />
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient" />

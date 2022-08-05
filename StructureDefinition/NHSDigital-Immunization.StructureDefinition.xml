@@ -58,13 +58,13 @@
       <definition value="For a vaccination that has been administered, the status will be `completed`. This status **does not** indicate a vaccination course has been completed.&#xD;&#xA;When the vaccination has not been administered, the status will be `not-done` and a statusReason should be supplied." />
       <mustSupport value="true" />
     </element>
-     <element id="Immunization.statusReason">
-            <path value="Immunization.statusReason" />
-            <binding>
-                <strength value="required" />
-                <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDigital-ReasonImmunizationNotAdministered" />
-            </binding>
-        </element>
+    <element id="Immunization.statusReason">
+      <path value="Immunization.statusReason" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDigital-ReasonImmunizationNotAdministered" />
+      </binding>
+    </element>
     <element id="Immunization.statusReason.coding">
       <path value="Immunization.statusReason.coding" />
       <min value="1" />
@@ -228,6 +228,10 @@
     </element>
     <element id="Immunization.performer.actor">
       <path value="Immunization.performer.actor" />
+      <type>
+        <code value="Reference" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Reference" />
+      </type>
       <constraint>
         <key value="usercode-reference" />
         <severity value="error" />
@@ -301,11 +305,11 @@
     <element id="Immunization.reasonCode">
       <path value="Immunization.reasonCode" />
       <definition value="A SNOMED Concept Id. For COVID19 and Flu see https://digital.nhs.uk/developer/api-catalogue/vaccination" />
-      <binding>
-                <strength value="extensible" />
-                <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDigital-ImmunizationExplanationReason" />
-      </binding>
       <mustSupport value="true" />
+      <binding>
+        <strength value="extensible" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDigital-ImmunizationExplanationReason" />
+      </binding>
     </element>
     <element id="Immunization.reasonCode.coding">
       <path value="Immunization.reasonCode.coding" />
