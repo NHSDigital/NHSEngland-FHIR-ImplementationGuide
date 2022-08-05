@@ -58,6 +58,13 @@
       <definition value="For a vaccination that has been administered, the status will be `completed`. This status **does not** indicate a vaccination course has been completed.&#xD;&#xA;When the vaccination has not been administered, the status will be `not-done` and a statusReason should be supplied." />
       <mustSupport value="true" />
     </element>
+     <element id="Immunization.statusReason">
+            <path value="Immunization.statusReason" />
+            <binding>
+                <strength value="required" />
+                <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDigital-ReasonImmunizationNotAdministered" />
+            </binding>
+        </element>
     <element id="Immunization.statusReason.coding">
       <path value="Immunization.statusReason.coding" />
       <min value="1" />

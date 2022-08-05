@@ -1,7 +1,7 @@
 {
     "entry": [
         {
-            "fullUrl": "urn:uuid:c0c588f4-703a-4d31-b2ee-ada7d00fa1aa",
+            "fullUrl": "Immunization/c0c588f4-703a-4d31-b2ee-ada7d00fa1aa",
             "resource": {
                 "id":"c0c588f4-703a-4d31-b2ee-ada7d00fa1aa",
                 "doseQuantity": {
@@ -48,7 +48,7 @@
                         "system": "https://fhir.nhs.uk/Id/nhs-number",
                         "value": "9912003888"
                     },
-                    "reference": "urn:uuid:f752150f-199f-4dcb-9dde-bd79dfc66311",
+                    "reference": "Patient/f752150f-199f-4dcb-9dde-bd79dfc66311",
                     "type": "Patient"
                 },
                 "performer": [
@@ -119,7 +119,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:42b63815-acda-4cf9-8d32-9173066c625b",
+            "fullUrl": "Immunization/42b63815-acda-4cf9-8d32-9173066c625b",
             "resource": {
                 "id":"42b63815-acda-4cf9-8d32-9173066c625b",
                 "doseQuantity": {
@@ -166,7 +166,7 @@
                         "system": "https://fhir.nhs.uk/Id/nhs-number",
                         "value": "9912003888"
                     },
-                    "reference": "urn:uuid:f752150f-199f-4dcb-9dde-bd79dfc66311",
+                    "reference": "Patient/f752150f-199f-4dcb-9dde-bd79dfc66311",
                     "type": "Patient"
                 },
                 "performer": [
@@ -234,7 +234,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:f752150f-199f-4dcb-9dde-bd79dfc66311",
+            "fullUrl": "Patient/f752150f-199f-4dcb-9dde-bd79dfc66311",
             "resource": {
                 "id": "f752150f-199f-4dcb-9dde-bd79dfc66311",
                 "birthDate": "1965-02-28",
