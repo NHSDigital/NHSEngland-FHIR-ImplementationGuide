@@ -259,5 +259,5 @@
             "relation": "self",
             "url": "http://example.org/FHIR/R4/Immunization?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9912003888"
         }
-    ],
+    ]
 }
