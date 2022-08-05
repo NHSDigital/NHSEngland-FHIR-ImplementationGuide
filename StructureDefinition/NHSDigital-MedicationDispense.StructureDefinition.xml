@@ -138,11 +138,11 @@
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationDispense-Medication" />
         <aggregation value="bundled" />
       </type>
-      <binding>
-                <strength value="extensible" />
-                <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDigital-MedicationCode" />
-            </binding>
       <mustSupport value="true" />
+      <binding>
+        <strength value="extensible" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDigital-MedicationCode" />
+      </binding>
     </element>
     <element id="MedicationDispense.subject">
       <path value="MedicationDispense.subject" />
@@ -197,6 +197,7 @@
       <path value="MedicationDispense.performer.actor" />
       <type>
         <code value="Reference" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Reference" />
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole-SDS" />
         <aggregation value="contained" />
       </type>

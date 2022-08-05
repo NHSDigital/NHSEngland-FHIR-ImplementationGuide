@@ -231,6 +231,9 @@
       <type>
         <code value="Reference" />
         <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Reference" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Organization" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Practitioner" />
       </type>
       <constraint>
         <key value="usercode-reference" />
