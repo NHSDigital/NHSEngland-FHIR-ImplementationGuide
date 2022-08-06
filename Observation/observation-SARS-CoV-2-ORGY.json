@@ -49,12 +49,12 @@
     },
     "subject": {
         "reference": "urn:uuid:edea022a-2d81-11eb-adc1-0242ac120002",
-        "identifier": [
+        "identifier": 
             {
                 "system": "https://fhir.nhs.uk/Id/nhs-number",
                 "value": "9912003888"
             }
-        ]
+        
     },
     "effectiveDateTime": "2020-09-23T13:00:08.476+00:00",
     "valueCodeableConcept": {

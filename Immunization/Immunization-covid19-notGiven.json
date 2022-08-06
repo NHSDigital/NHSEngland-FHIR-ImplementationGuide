@@ -37,9 +37,9 @@
     "vaccineCode": {
         "coding": [
             {
-                "system": "http://snomed.info/sct",
-                "code": "39330711000001103",
-                "display": "COVID-19 vaccine"
+                "system": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+                "code": "NA",
+                "display": "not applicable"
             }
         ]
     },
