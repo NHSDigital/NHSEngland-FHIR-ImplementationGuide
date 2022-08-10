@@ -43,7 +43,6 @@
     <element id="Organization.identifier:odsOrganisationCode">
       <path value="Organization.identifier" />
       <sliceName value="odsOrganisationCode" />
-      <min value="1" />
     </element>
     <element id="Organization.identifier:odsSiteCode">
       <path value="Organization.identifier" />
