@@ -145,7 +145,7 @@
     <element id="Appointment.slot:alternativeSlot">
       <path value="Appointment.slot" />
       <sliceName value="alternativeSlot" />
-      <definition value="``json&#xD;&#xA; &quot;slot&quot;: [&#xD;&#xA;                    {&#xD;&#xA;                        &quot;identifier&quot;: {&#xD;&#xA;                            &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/unique-slot-reference-number&quot;,&#xD;&#xA;                            &quot;value&quot;: &quot;USRN-12000001&quot;&#xD;&#xA;                        }&#xD;&#xA;                    }&#xD;&#xA;                ],&#xD;&#xA;```" />
+      <definition value="```json&#xD;&#xA; &quot;slot&quot;: [&#xD;&#xA;                    {&#xD;&#xA;                        &quot;identifier&quot;: {&#xD;&#xA;                            &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/unique-slot-reference-number&quot;,&#xD;&#xA;                            &quot;value&quot;: &quot;USRN-12000001&quot;&#xD;&#xA;                        }&#xD;&#xA;                    }&#xD;&#xA;                ],&#xD;&#xA;```" />
       <max value="1" />
     </element>
     <element id="Appointment.slot:alternativeSlot.identifier.system">
