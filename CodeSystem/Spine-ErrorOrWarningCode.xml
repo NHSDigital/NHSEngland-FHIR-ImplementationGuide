@@ -2,7 +2,7 @@
    <id value="NHSDigital-ErrorOrWarningCode" />
    <url value="https://fhir.nhs.uk/CodeSystem/Spine-ErrorOrWarningCode" />
    <version value="2.1.0" />
-   <name value="SpineRrrororWarningCode" />
+   <name value="SpineErrorOrWarningCode" />
    <status value="active" />
    <date value="2020-08-27T00:00:00+00:00" />
    <publisher value="NHS Digital" />
