@@ -1,0 +1,32 @@
+{
+    "resourceType": "ValueSet",
+    "id": "eRS-Purpose",
+    "url": "https://fhir.nhs.uk/ValueSet/eRS-Purpose",
+    "version": "1.0.1",
+    "name": "eRSPurpose",
+    "title": "eRS Purpose",
+    "status": "active",
+    "date": "2022-04-25",
+    "publisher": "NHS Digital",
+    "contact":  [
+        {
+            "name": "Interoperability Team",
+            "telecom":  [
+                {
+                    "system": "email",
+                    "value": "interoperabilityteam@nhs.net",
+                    "use": "work"
+                }
+            ]
+        }
+    ],
+    "description": "A ValueSet to describe the eRS request purpose.",
+    "copyright": "Copyright © 2022 NHS Digital",
+    "compose": {
+        "include":  [
+            {
+                "system": "https://fhir.nhs.uk/CodeSystem/eRS-Purpose"
+            }
+        ]
+    }
+}
