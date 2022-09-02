@@ -3,7 +3,7 @@
     "id": "eRS-HealthcareService",
     "url": "https://fhir.nhs.uk/StructureDefinition/eRS-HealthcareService",
     "version": "1.0.1",
-    "name": "eRSHealthcareService",
+    "name": "ERSHealthcareService",
     "title": "eRS Healthcare Service",
     "status": "active",
     "date": "2022-03-14",

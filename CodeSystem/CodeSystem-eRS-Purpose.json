@@ -3,7 +3,7 @@
     "id": "eRS-Purpose",
     "url": "https://fhir.nhs.uk/CodeSystem/eRS-Purpose",
     "version": "1.0.1",
-    "name": "eRSPurpose",
+    "name": "ERSPurpose",
     "title": "eRS Purpose",
     "status": "active",
     "date": "2022-04-25",

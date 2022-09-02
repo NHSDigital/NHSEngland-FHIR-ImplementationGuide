@@ -63,14 +63,6 @@
                 "sliceName": "purpose",
                 "min": 1,
                 "max": "1",
-                "constraint":  [
-                    {
-                        "key": "ext-1",
-                        "severity": "error",
-                        "human": "Must have either extensions or value[x], not both",
-                        "source": "http://hl7.org/fhir/StructureDefinition/Element"
-                    }
-                ],
                 "binding": {
                     "strength": "extensible",
                     "valueSet": "https://fhir.nhs.uk/ValueSet/eRS-Purpose"
