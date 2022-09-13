@@ -19,7 +19,6 @@
         <severity value="error" />
         <human value="Supplied NHS Number is outside the English and Welsh NHS Number range or length of the number is wrong." />
         <expression value="identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').exists().not() or (identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').exists()  and identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').value.matches('^([456789]{1}[0-9]{9})$'))" />
-        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient" />
       </constraint>
     </element>
     <element id="Patient.extension">
@@ -36,7 +35,7 @@
     <element id="Patient.extension:medicalApplianceSupplier">
       <path value="Patient.extension" />
       <sliceName value="medicalApplianceSupplier" />
-      <definition value="```json&#xD;&#xA;{&#xD;&#xA;            &quot;url&quot;: &quot;https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-PreferredDispenserOrganization&quot;,&#xD;&#xA;            &quot;valueReference&quot;: {&#xD;&#xA;                &quot;identifier&quot;: {&#xD;&#xA;                    &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/ods-organization-code&quot;,&#xD;&#xA;                    &quot;value&quot;: &quot;Y23456&quot;&#xD;&#xA;                }&#xD;&#xA;            }&#xD;&#xA;        }&#xD;&#xA;```" />
+      <definition value="```json&#xD;&#xA;{&#xD;&#xA;            &quot;url&quot;: &quot;https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-MedicalApplianceSupplier&quot;,&#xD;&#xA;            &quot;valueReference&quot;: {&#xD;&#xA;                &quot;identifier&quot;: {&#xD;&#xA;                    &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/ods-organization-code&quot;,&#xD;&#xA;                    &quot;value&quot;: &quot;Y34567&quot;&#xD;&#xA;                }&#xD;&#xA;            }&#xD;&#xA;        }&#xD;&#xA;```" />
       <min value="0" />
       <max value="1" />
       <type>
@@ -59,7 +58,7 @@
     <element id="Patient.extension:preferredDispenserOrganization">
       <path value="Patient.extension" />
       <sliceName value="preferredDispenserOrganization" />
-      <definition value="```json&#xD;&#xA;{&#xD;&#xA;            &quot;url&quot;: &quot;https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-MedicalApplianceSupplier&quot;,&#xD;&#xA;            &quot;valueReference&quot;: {&#xD;&#xA;                &quot;identifier&quot;: {&#xD;&#xA;                    &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/ods-organization-code&quot;,&#xD;&#xA;                    &quot;value&quot;: &quot;Y34567&quot;&#xD;&#xA;                }&#xD;&#xA;            }&#xD;&#xA;        }&#xD;&#xA;```" />
+      <definition value="A patient's preferred dispensing organisation.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;{&#xD;&#xA;            &quot;url&quot;: &quot;https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-PreferredDispenserOrganization&quot;,&#xD;&#xA;            &quot;valueReference&quot;: {&#xD;&#xA;                &quot;identifier&quot;: {&#xD;&#xA;                    &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/ods-organization-code&quot;,&#xD;&#xA;                    &quot;value&quot;: &quot;Y23456&quot;&#xD;&#xA;                }&#xD;&#xA;            }&#xD;&#xA;        }&#xD;&#xA;```" />
       <min value="0" />
       <max value="1" />
       <type>
