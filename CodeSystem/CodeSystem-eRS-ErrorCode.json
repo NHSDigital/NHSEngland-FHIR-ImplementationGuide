@@ -1,0 +1,34 @@
+{
+    "resourceType": "CodeSystem",
+    "id": "afcc1d2a-edb0-4652-ad39-b6c2bc92eb7f",
+    "url": "https://fhir.nhs.uk/CodeSystem/eRS-ErrorCodes",
+    "version": "1.0.1",
+    "name": "eRS-ErrorCodes",
+    "title": "eRS-ErrorCodes",
+    "status": "active",
+    "date": "2022-09-30",
+    "publisher": "NHS Digital",
+    "contact":  [
+        {
+            "name": "Interoperability Team",
+            "telecom":  [
+                {
+                    "system": "email",
+                    "value": "interoperabilityteam@nhs.net",
+                    "use": "work"
+                }
+            ]
+        }
+    ],
+    "description": "A Code System for eRS specific error codes",
+    "copyright": "Copyright © 2022 NHS Digital",
+    "caseSensitive": true,
+    "content": "complete",
+    "concept":  [
+        {
+            "code": "NO_RELATIONSHIP",
+            "display": "No Relationship",
+            "definition": "The current caller does not have a valid relationship to interact with the target resource."
+        }
+    ]
+}
