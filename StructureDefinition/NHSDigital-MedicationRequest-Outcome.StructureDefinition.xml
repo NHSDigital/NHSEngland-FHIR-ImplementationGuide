@@ -127,10 +127,6 @@
       <path value="MedicationRequest.groupIdentifier.value" />
       <min value="1" />
     </element>
-    <element id="MedicationRequest.dispenseRequest">
-      <path value="MedicationRequest.dispenseRequest" />
-      <min value="1" />
-    </element>
     <element id="MedicationRequest.dispenseRequest.performer">
       <path value="MedicationRequest.dispenseRequest.performer" />
       <definition value="Indicates the intended dispensing Pharmacy specified by the patient. Can be sourced from nominatedPharmacy in the Patient Demographics Service (PDS)" />
