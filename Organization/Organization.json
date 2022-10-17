@@ -3,7 +3,7 @@
   "id": "17c4270d-6966-4788-8cbc-1d1d63536b25",
   "extension": [
     {
-      "url": "https://fhir.nhs.uk/StructureDefinition/Extension-ODS-OrganisationRealtionships",
+      "url": "https://fhir.nhs.uk/StructureDefinition/Extension-ODS-OrganisationRelationships",
       "extension": [
         {
           "url": "commissionedBy",
