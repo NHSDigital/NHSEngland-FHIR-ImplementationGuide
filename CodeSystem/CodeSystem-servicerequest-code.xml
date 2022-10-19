@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeSystem xmlns="http://hl7.org/fhir">
-    <url value="https://fhir.nhs.uk/CodeSystem/NHSDigital-servicerequest-code"/>
+    <url value="https://fhir.nhs.uk/CodeSystem/ServiceRequest-Code"/>
     <id value="2bd0445d-f072-40dd-ab42-ec13b55f8dcb"/>
     <identifier>
         <system value="https://fhir.nhs.uk/identifier/CodeSystem"/>
-        <value value="NHSDigital-servicerequest-code"/>
+        <value value="ServiceRequest-Code"/>
     </identifier>
     <version value="1.0.0"/>
-    <name value="NHSDigitalservicerequestcode"/>
+    <name value="ServiceRequestCode"/>
     <title value="Service Request Codes"/>
     <status value="active"/>
     <date value="2022-07-28"/>
