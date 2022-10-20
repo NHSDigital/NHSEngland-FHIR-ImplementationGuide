@@ -30,8 +30,8 @@
       <constraint>
         <key value="eps-6" />
         <severity value="error" />
-        <human value="Extension repeatInformation is required for continuous, continuous-repeat-dispensing and instalment-dispensing MedicationRequests. It is not required for actue MedicationRequests" />
-        <expression value="(courseOfTherapyType.coding.code.startsWith('acute') and extension('https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-MedicationRepeatInformation').exists().not()) or  ((courseOfTherapyType.coding.code.startsWith('continuous') or courseOfTherapyType.coding.code.startsWith('instalment')) and extension('https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-MedicationRepeatInformation').exists())" />
+        <human value="Extension repeatInformation is required for continuous and continuous-repeat-dispensing MedicationRequests. It is not required for actue MedicationRequests" />
+        <expression value="(courseOfTherapyType.coding.code.startsWith('acute') and extension('https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-MedicationRepeatInformation').exists().not()) or  ((courseOfTherapyType.coding.code.startsWith('continuous')) and extension('https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-MedicationRepeatInformation').exists())" />
         <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationRequest" />
       </constraint>
       <constraint>
@@ -44,15 +44,15 @@
       <constraint>
         <key value="eps-8" />
         <severity value="error" />
-        <human value="For instalment-dispensing intent must be instance-order or original-order" />
-        <expression value="(courseOfTherapyType.coding.code != 'instalment-dispensing') or ((courseOfTherapyType.coding.code = 'instalment-dispensing') and ((intent ='original-order') or (intent ='instance-order')))" />
+        <human value="For continuous intent must be instance-order or original-order" />
+        <expression value="(courseOfTherapyType.coding.code != 'continuous') or ((courseOfTherapyType.coding.code = 'continuous') and ((intent ='original-order') or (intent ='instance-order')))" />
         <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationRequest" />
       </constraint>
       <constraint>
         <key value="eps-9" />
         <severity value="warning" />
-        <human value="dispenseRequest.numberOfRepeatsAllowed should be populated for continuous, continuous-repeat-dispensing and instalment-dispensing MedicationRequests." />
-        <expression value="(courseOfTherapyType.coding.code.startsWith('acute')) or  ((courseOfTherapyType.coding.code.startsWith('continuous') or courseOfTherapyType.coding.code.startsWith('instalment')) and dispenseRequest.exists() and dispenseRequest.numberOfRepeatsAllowed.exists())" />
+        <human value="dispenseRequest.numberOfRepeatsAllowed should be populated for continuous and continuous-repeat-dispensing MedicationRequests." />
+        <expression value="(courseOfTherapyType.coding.code.startsWith('acute')) or  (courseOfTherapyType.coding.code.startsWith('continuous') and dispenseRequest.exists() and dispenseRequest.numberOfRepeatsAllowed.exists())" />
         <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationRequest" />
       </constraint>
       <constraint>
@@ -264,7 +264,7 @@
     </element>
     <element id="MedicationRequest.intent">
       <path value="MedicationRequest.intent" />
-      <comment value="Indicates the type of order. A code specifying the current state of the order. Generally, this will be active or completed state. &#xD;&#xA;&#xD;&#xA;| code | display | courseOfTherapyType | Definition |&#xD;&#xA;|---|---|&#xD;&#xA;| order | Order | acute | The request represents a request/demand and authorization for action |&#xD;&#xA;| original-order | Original Order | continuous-repeat-dispensing instalment-dispensing | The request represents the original authorization for the medication request. |&#xD;&#xA;| reflex-order |Reflex Order | continuous-repeat-dispensing | The request represents an automatically generated supplemental authorization (by EPS) for action based on a parent authorization together with initial results of the action taken against that parent authorization. |&#xD;&#xA;| instance-order | Instance Order | instalment-dispensing | The request represents an instance for the particular order. |" />
+      <comment value="Indicates the type of order. A code specifying the current state of the order. Generally, this will be active or completed state. &#xD;&#xA;&#xD;&#xA;| code | display | courseOfTherapyType | Definition |&#xD;&#xA;|---|---|&#xD;&#xA;| order | Order | acute | The request represents a request/demand and authorization for action |&#xD;&#xA;| original-order | Original Order | continuous-repeat-dispensing continuous | The request represents the original authorization for the medication request. |&#xD;&#xA;| reflex-order |Reflex Order | continuous-repeat-dispensing | The request represents an automatically generated supplemental authorization (by EPS) for action based on a parent authorization together with initial results of the action taken against that parent authorization. |&#xD;&#xA;| instance-order | Instance Order | continuous | The request represents an instance for the particular order. |" />
     </element>
     <element id="MedicationRequest.category">
       <path value="MedicationRequest.category" />
