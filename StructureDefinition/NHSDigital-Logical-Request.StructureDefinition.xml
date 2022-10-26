@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="745e2135-9b3c-4c0c-a3f7-5f22961db23a" />
   <url value="https://fhir.nhs.uk/fhir/StructureDefinition/NHSDigital-Logical-Request" />
   <name value="NHSDigitalLogicalRequest" />
   <status value="draft" />
@@ -57,6 +58,25 @@
       <type>
         <code value="CodeableConcept" />
         <profile value="http://hl7.org/fhir/StructureDefinition/CodeableConcept" />
+      </type>
+    </element>
+    <element id="UKCore-Request.status">
+      <path value="UKCore-Request.status" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="code" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/code" />
+      </type>
+    </element>
+    <element id="UKCore-Request.encounter">
+      <path value="UKCore-Request.encounter" />
+      <short value="Encounter created as part of (recommended)" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Encounter" />
       </type>
     </element>
   </differential>
