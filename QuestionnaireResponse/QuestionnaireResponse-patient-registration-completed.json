@@ -5,7 +5,12 @@
     "status": "completed",
     "authored": "2022-01-11T16:40:00+00:00",
     "source": {
-        "reference": "Person/0b32e84d-7e59-4f96-bb18-046243ebd522"
+        "identifier":  [
+            {
+                "system": "https://fhir.nhs.uk/Id/nhs-number",
+                "value": "9876543210"
+            }
+        ]
     },
     "item": [
         {
