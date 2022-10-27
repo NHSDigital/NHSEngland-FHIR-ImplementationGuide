@@ -5,7 +5,7 @@
     "status": "completed",
     "authored": "2022-01-11T16:40:00+00:00",
     "source": {
-        "reference" : "Person/0b32e84d-7e59-4f96-bb18-046243ebd522"  
+        "reference": "Person/0b32e84d-7e59-4f96-bb18-046243ebd522"
     },
     "item": [
         {
@@ -68,7 +68,27 @@
             "linkId": "contact_group",
             "answer": [
                 {
-                    "valueString": "NG10 1NP"
+                    "item": [
+                        {
+                            "linkId": "contact_type",
+                            "answer": [
+                                {
+                                    "valueCoding": {
+                                        "system": "http://hl7.org/fhir/contact-point-system",
+                                        "code": "phone"
+                                      }
+                                }
+                            ]
+                        },
+                        {
+                            "linkId": "contact_value",
+                            "answer": [
+                                {
+                                    "valueString": "01632960587"
+                                }
+                            ]
+                        }
+                    ]
                 }
             ]
         }
