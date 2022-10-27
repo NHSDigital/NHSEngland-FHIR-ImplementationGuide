@@ -2,7 +2,7 @@
   "resourceType": "Questionnaire",
   "id": "0300f7e6-3a1c-4931-b7b7-e5099a883248",
   "title": "Patient Registration",
-  "url": "https://ex.nhs.uk/Questionnaire/Patient-Registration",
+  "url": "https://example.nhs.uk/Questionnaire/Patient-Registration",
   "subjectType": [
     "Patient"
   ],

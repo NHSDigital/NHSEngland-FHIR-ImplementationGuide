@@ -6,7 +6,7 @@
   ],
   "status": "draft",
   "name":"SimpleBloodPressure",
-  "url": "https://fhir.nhs.uk/Questionnaire/Simple-Blood-Pressure",
+  "url": "https://example.fhir.nhs.uk/Questionnaire/Simple-Blood-Pressure",
   "title": "Simple Blood Pressure",
   "item": [
     {

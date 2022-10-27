@@ -1,7 +1,7 @@
 {
     "resourceType": "QuestionnaireResponse",
     "id": "9a3ea8c7-d1a4-4383-969b-5b3617245553",
-    "questionnaire": "https://fhir.nhs.uk/Questionnaire/Simple-Blood-Pressure",
+    "questionnaire": "https://example.fhir.nhs.uk/Questionnaire/Simple-Blood-Pressure",
     "status": "completed",
     "authored": "2022-01-11T16:40:00+00:00",
     "source": {
