@@ -34,6 +34,7 @@
             "answer": [
                 {
                     "valueCoding": {
+                        "system": "https://example.nhs.uk/CodeSystem/place-type",
                         "code": "home"
                     }
                 }
