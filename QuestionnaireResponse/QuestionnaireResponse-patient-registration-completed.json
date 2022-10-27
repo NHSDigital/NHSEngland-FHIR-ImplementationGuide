@@ -5,7 +5,7 @@
     "status": "completed",
     "authored": "2022-01-11T16:40:00+00:00",
     "source": {
-        "identifier":  [
+        "identifier": [
             {
                 "system": "https://fhir.nhs.uk/Id/nhs-number",
                 "value": "9876543210"
@@ -71,27 +71,23 @@
         },
         {
             "linkId": "contact_group",
-            "answer": [
+            "item": [
                 {
-                    "item": [
+                    "linkId": "contact_type",
+                    "answer": [
                         {
-                            "linkId": "contact_type",
-                            "answer": [
-                                {
-                                    "valueCoding": {
-                                        "system": "http://hl7.org/fhir/contact-point-system",
-                                        "code": "phone"
-                                      }
-                                }
-                            ]
-                        },
+                            "valueCoding": {
+                                "system": "http://hl7.org/fhir/contact-point-system",
+                                "code": "phone"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "contact_value",
+                    "answer": [
                         {
-                            "linkId": "contact_value",
-                            "answer": [
-                                {
-                                    "valueString": "01632960587"
-                                }
-                            ]
+                            "valueString": "01632960587"
                         }
                     ]
                 }

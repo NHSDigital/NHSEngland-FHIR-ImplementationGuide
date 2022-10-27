@@ -1,0 +1,43 @@
+{
+    "resourceType": "QuestionnaireResponse",
+    "id": "9a3ea8c7-d1a4-4383-969b-5b3617245553",
+    "questionnaire": "https://fhir.nhs.uk/Questionnaire/Simple-Blood-Pressure",
+    "status": "completed",
+    "authored": "2022-01-11T16:40:00+00:00",
+    "source": {
+        "identifier": [
+            {
+                "system": "https://fhir.nhs.uk/Id/nhs-number",
+                "value": "9876543210"
+            }
+        ]
+    },
+    "item": [
+        {
+            "linkId": "systolic",
+            "answer": [
+                {
+                    "valueInteger": 137
+                }
+            ]
+        },
+        {
+            "linkId": "diastolic",
+            "answer": [
+                {
+                    "valueInteger": 85
+                }
+            ]
+        },
+        {
+            "linkId": "who_by",
+            "answer": [
+                {
+                    "valueCoding": {
+                        "code": "home"
+                    }
+                }
+            ]
+        }
+    ]
+}
