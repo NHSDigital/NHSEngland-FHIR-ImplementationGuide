@@ -46,7 +46,7 @@
             ]
         },
         {
-            "linkId": "previous_surname",
+            "linkId": "date_of_birth",
             "answer": [
                 {
                     "valueDate": "1998-03-16"
