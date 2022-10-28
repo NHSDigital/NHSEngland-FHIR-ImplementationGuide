@@ -1,6 +1,10 @@
 {
     "resourceType": "QuestionnaireResponse",
     "id": "f9d62062-43b3-47a2-b65b-71f078c22d7f",
+    "identifier": {
+        "system": "https://tools.ietf.org/html/rfc4122",
+        "value": "f9d62062-43b3-47a2-b65b-71f078c22d7f"
+    },
     "questionnaire": "https://example.nhs.uk/Questionnaire/Patient-Registration",
     "status": "completed",
     "authored": "2022-01-11T16:40:00+00:00",
