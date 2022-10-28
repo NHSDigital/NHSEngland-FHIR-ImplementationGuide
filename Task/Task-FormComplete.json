@@ -1,39 +1,10 @@
 {
     "resourceType": "Task",
     "id": "06570d9e-1dd7-49b6-8276-c903eef74b73",
-    "contained": [
-        {
-            "resourceType": "PractitionerRole",
-            "id": "requester",
-            "practitioner": {
-                "identifier": {
-                    "system": "https://fhir.nhs.uk/Id/sds-user-id",
-                    "value": "0987654321"
-                }
-            },
-            "organization": {
-                "identifier": {
-                    "system": "https://fhir.nhs.uk/Id/ods-organization-code",
-                    "value": "RR8"
-                },
-                "display": "LEEDS TEACHING HOSPITALS NHS TRUST"
-            }
-        }
-    ],
     "identifier": [
         {
             "system": "https://tools.ietf.org/html/rfc4122",
             "value": "06570d9e-1dd7-49b6-8276-c903eef74b73"
-        }
-    ],
-    "basedOn": [
-        {
-            "type": "ServiceRequest",
-            "reference": "https://fhir.lth.nhs.uk/ServiceRequest/06570d9e-1dd7-49b6-8276-c903eef74b73",
-            "identifier": {
-                "system": "https://fhir.nhs.uk/Id/UBRN",
-                "value": "06570d9e-1dd7-49b6-8276-c903eef74b73"
-            }
         }
     ],
     "status": "requested",
@@ -48,10 +19,7 @@
         ]
     },
     "focus": {
-        "identifier": {
-            "system": "https://fhir.lth.nhs.uk/Questionnaire",
-            "value": "LTHPreAdmission"
-        }
+        "reference": "https://example.fhir.nhs.uk/Questionnaire/Simple-Blood-Pressure"
     },
     "for": {
         "identifier": {
@@ -66,20 +34,24 @@
         }
     },
     "requester": {
-        "reference": "#requester"
+        "identifier": {
+            "system": "https://fhir.nhs.uk/Id/ods-organization-code",
+            "value": "RR8"
+        },
+        "display": "LEEDS TEACHING HOSPITALS NHS TRUST"
     },
     "authoredOn": "2021-10-09T12:00:00+00:00",
     "note": [
         {
-            "text": "Please complete this referral form / pre admission form. This is needed before your referral can be processed."
+            "text": "Please perfrom this health check on this patient."
         }
     ],
     "reasonCode": {
         "coding": [
             {
                 "system": "http://snomed.info/sct",
-                "code": "273510007",
-                "display": "Health assessment questionnaire"
+                "code": "275944005",
+                "display": "Hypertension monitoring"
             }
         ],
         "text": "Code is for demonstration purposes and is probably not correct"
