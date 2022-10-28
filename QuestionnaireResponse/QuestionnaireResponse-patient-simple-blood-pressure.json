@@ -4,6 +4,14 @@
     "questionnaire": "https://example.fhir.nhs.uk/Questionnaire/Simple-Blood-Pressure",
     "status": "completed",
     "authored": "2022-01-11T16:40:00+00:00",
+    "subject": {
+        "identifier": [
+            {
+                "system": "https://fhir.nhs.uk/Id/nhs-number",
+                "value": "9692113841"
+            }
+        ]
+    },
     "source": {
         "identifier": [
             {
