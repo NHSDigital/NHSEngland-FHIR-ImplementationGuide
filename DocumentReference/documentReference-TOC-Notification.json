@@ -1,0 +1,59 @@
+{
+  "resourceType": "DocumentReference",
+  "id":"019a67a3-50ea-460e-ba54-f27946a5bc64",
+  "identifier": [{
+    "value": "fa2a75a7-4257-422d-92a4-cf537f078e13"
+  }],
+  "meta": {
+    "lastUpdated": "2016-03-08T15:26:01+01:00"
+  },
+  "status": "current",
+  "type": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "373942005",
+        "display": "Discharge summary"
+      }
+    ]
+  },
+  "subject": {
+    "identifier": {
+      "system": "https://fhir.nhs.uk/Id/nhs-number",
+      "value": "1352465790"
+    },
+    "display": "Richard Smith"
+  },
+  "author":  [
+    {
+      "type": "Organization",
+      "identifier": {
+        "system": "https://fhir.nhs.uk/Id/ods-organization-code",
+        "value": "RR8"
+      }
+    },
+    {
+      "type": "Practitioner",
+      "identifier": {
+        "system": "https://fhir.hl7.org.uk/Id/gmc-number",
+        "value": "C6122477"
+      },
+      "display": "Dr Paul Rastall"
+    }
+  ],
+  "custodian": {
+    "identifier": {
+      "system": "https://fhir.nhs.uk/Id/ods-organization-code",
+      "value": "RR8"
+    }
+  },
+  "content":  [
+    {
+      "attachment": {
+        "contentType": "application/fhir+xml; fhirVersion=3.0",
+        "url": "https://p1.nhs.uk/caf5f17d-e73d-4aaa-a406-dab1717da0c4.xml",
+        "creation": "2016-03-08T15:26:00+01:00"
+      }
+    }
+  ]
+}
