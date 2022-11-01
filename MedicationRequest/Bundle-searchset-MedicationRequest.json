@@ -5,7 +5,7 @@
       "lastUpdated": "2022-11-01T11:06:18.371+00:00"
     },
     "type": "searchset",
-    "total": 4,
+    "total": 3,
     "link": [
       {
         "relation": "self",
@@ -13,123 +13,6 @@
       }
     ],
     "entry": [
-      {
-        "fullUrl": "https://cnuc9zdola.execute-api.eu-west-2.amazonaws.com/dev/MedicationRequest/b0c9abc7-d02a-41bc-801b-375ad8b52952",
-        "resource": {
-          "resourceType": "MedicationRequest",
-          "id": "b0c9abc7-d02a-41bc-801b-375ad8b52952",
-          "meta": {
-            "versionId": "5",
-            "lastUpdated": "2022-10-15T09:51:03.584Z"
-          },
-          "extension": [
-            {
-              "url": "https://fhir.nhs.uk/StructureDefinition/Extension-DM-PrescriptionType",
-              "valueCoding": {
-                "system": "https://fhir.nhs.uk/CodeSystem/prescription-type",
-                "code": "0101",
-                "display": "Primary Care Prescriber – Medical Prescriber"
-              }
-            }
-          ],
-          "identifier": [
-            {
-              "system": "https://fhir.nhs.uk/Id/prescription-order-item-number",
-              "value": "9a9e4e11-5596-47bc-9376-21bf9d451905"
-            }
-          ],
-          "status": "active",
-          "intent": "instance-order",
-          "category": [
-            {
-              "coding": [
-                {
-                  "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
-                  "code": "inpatient",
-                  "display": "Inpatient"
-                }
-              ],
-              "text": "Inpatient"
-            }
-          ],
-          "medicationReference": {
-            "reference": "urn:uuid:e0094014-9659-4705-a481-0412eefd9dbc"
-          },
-          "subject": {
-            "reference": "Patient/1a8f9a47-1aaa-46f0-b63a-2a49a1fc5aa0"
-          },
-          "encounter": {
-            "reference": "urn:uuid:46588c8c-c606-420b-b3cc-88fb74f5d41b"
-          },
-          "authoredOn": "2020-07-09T12:02:49+02:00",
-          "requester": {
-            "reference": "PractitionerRole/4c3e610f-40fe-4598-a22c-8750789808df",
-            "display": "Dr Smith"
-          },
-          "groupIdentifier": {
-            "extension": [
-              {
-                "url": "https://fhir.nhs.uk/StructureDefinition/Extension-DM-PrescriptionId",
-                "valueIdentifier": {
-                  "system": "https://fhir.nhs.uk/Id/prescription",
-                  "value": "c26f0fe5-c084-4320-9c39-3ccdbc0b2e6a"
-                }
-              }
-            ],
-            "system": "https://fhir.nhs.uk/Id/prescription-order-number",
-            "value": "248193-923856-00123C"
-          },
-          "courseOfTherapyType": {
-            "coding": [
-              {
-                "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy",
-                "code": "acute",
-                "display": "Short course (acute) therapy"
-              }
-            ]
-          },
-          "dosageInstruction": [
-            {
-              "text": "test C Oral Use",
-              "additionalInstruction": [
-                {
-                  "text": "test c"
-                }
-              ],
-              "route": {
-                "coding": [
-                  {
-                    "system": "http://snomed.info/sct",
-                    "code": "26643006",
-                    "display": "Oral"
-                  }
-                ],
-                "text": "Oral"
-              }
-            }
-          ],
-          "dispenseRequest": {
-            "extension": [
-              {
-                "url": "https://fhir.nhs.uk/StructureDefinition/Extension-DM-PerformerSiteType",
-                "valueCoding": {
-                  "system": "https://fhir.nhs.uk/CodeSystem/dispensing-site-preference",
-                  "code": "0004"
-                }
-              }
-            ],
-            "quantity": {
-              "value": 300,
-              "unit": "mg",
-              "system": "http://unitsofmeasure.org",
-              "code": "mg"
-            }
-          },
-          "substitution": {
-            "allowedBoolean": false
-          }
-        }
-      },
       {
         "fullUrl": "https://cnuc9zdola.execute-api.eu-west-2.amazonaws.com/dev/MedicationRequest/5d7d51e3-f784-4a18-8296-fb879b8cd1a6",
         "resource": {
