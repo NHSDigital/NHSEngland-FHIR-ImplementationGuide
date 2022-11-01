@@ -1,0 +1,148 @@
+{
+    "resourceType": "MedicationRequest",
+    "id": "3186ef31-f829-4aa9-81c2-05ac7d3cf4ec",
+    "meta": {
+      "versionId": "11",
+      "lastUpdated": "2022-10-16T09:17:00.415Z"
+    },
+    "extension": [
+      {
+        "url": "https://fhir.nhs.uk/StructureDefinition/Extension-DM-PrescriptionType",
+        "valueCoding": {
+          "system": "https://fhir.nhs.uk/CodeSystem/prescription-type",
+          "code": "0101",
+          "display": "Primary Care Prescriber – Medical Prescriber"
+        }
+      }
+    ],
+    "identifier": [
+      {
+        "system": "https://fhir.nhs.uk/Id/prescription-order-item-number",
+        "value": "299c610b-f4f1-4eac-a7d7-4fb6b0556e11"
+      }
+    ],
+    "status": "active",
+    "intent": "order",
+    "category": [
+      {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+            "code": "community",
+            "display": "Community"
+          }
+        ]
+      }
+    ],
+    "medicationCodeableConcept": {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "39720311000001101",
+          "display": "Paracetamol 500mg soluble tablets"
+        }
+      ]
+    },
+    "subject": {
+      "reference": "Patient/073eef49-81ee-4c2e-893b-bc2e4efd2630",
+      "identifier": {
+        "system": "https://fhir.nhs.uk/Id/nhs-number",
+        "value": "9876543210"
+      }
+    },
+    "authoredOn": "2020-12-21T18:15:29+00:00",
+    "requester": {
+      "reference": "PractitionerRole/070c652c-7506-40c7-a4f8-1fddb85a7a3a",
+      "identifier": {
+        "system": "https://fhir.nhs.uk/Id/sds-role-profile-id",
+        "value": "200102238987"
+      }
+    },
+    "groupIdentifier": {
+      "extension": [
+        {
+          "url": "https://fhir.nhs.uk/StructureDefinition/Extension-DM-PrescriptionId",
+          "valueIdentifier": {
+            "system": "https://fhir.nhs.uk/Id/prescription",
+            "value": "b2fc79f0-2793-4736-9b2d-0976c21e73a5"
+          }
+        }
+      ],
+      "system": "https://fhir.nhs.uk/Id/prescription-order-number",
+      "value": "82D996-C81010-11DB12"
+    },
+    "courseOfTherapyType": {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy",
+          "code": "acute",
+          "display": "Short course (acute) therapy"
+        }
+      ]
+    },
+    "dosageInstruction": [
+      {
+        "text": "one tablet - four times a day - oral",
+        "timing": {
+          "repeat": {
+            "frequency": 4,
+            "period": 1,
+            "periodUnit": "d"
+          }
+        },
+        "route": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "26643006",
+              "display": "Oral"
+            }
+          ]
+        },
+        "doseAndRate": [
+          {
+            "doseQuantity": {
+              "value": 1,
+              "unit": "tablet"
+            }
+          }
+        ]
+      }
+    ],
+    "dispenseRequest": {
+      "extension": [
+        {
+          "url": "https://fhir.nhs.uk/StructureDefinition/Extension-DM-PerformerSiteType",
+          "valueCoding": {
+            "system": "https://fhir.nhs.uk/CodeSystem/dispensing-site-preference",
+            "code": "P1"
+          }
+        }
+      ],
+      "validityPeriod": {
+        "start": "2020-06-10",
+        "end": "2020-12-07"
+      },
+      "quantity": {
+        "value": 100,
+        "unit": "tablet",
+        "system": "http://snomed.info/sct",
+        "code": "732936001"
+      },
+      "expectedSupplyDuration": {
+        "value": 40,
+        "unit": "day",
+        "system": "http://unitsofmeasure.org",
+        "code": "d"
+      },
+      "performer": {
+        "identifier": {
+          "system": "https://fhir.nhs.uk/Id/ods-organization-code",
+          "value": "VNE51"
+        }
+      }
+    },
+    "substitution": {
+      "allowedBoolean": false
+    }
+  }
