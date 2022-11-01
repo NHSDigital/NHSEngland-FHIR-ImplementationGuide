@@ -1,9 +1,9 @@
 {
     "resourceType": "MedicationRequest",
-    "id": "3186ef31-f829-4aa9-81c2-05ac7d3cf4ec",
+    "id": "182e3a8c-b684-462e-92b2-acb3c09ecf1e",
     "meta": {
       "versionId": "11",
-      "lastUpdated": "2022-10-16T09:17:00.415Z"
+      "lastUpdated": "2022-10-16T09:17:00.834Z"
     },
     "extension": [
       {
@@ -18,7 +18,7 @@
     "identifier": [
       {
         "system": "https://fhir.nhs.uk/Id/prescription-order-item-number",
-        "value": "299c610b-f4f1-4eac-a7d7-4fb6b0556e11"
+        "value": "5cb17f5a-11ac-4e18-825f-6470467238b3"
       }
     ],
     "status": "active",
@@ -38,8 +38,8 @@
       "coding": [
         {
           "system": "http://snomed.info/sct",
-          "code": "39720311000001101",
-          "display": "Paracetamol 500mg soluble tablets"
+          "code": "35936511000001108",
+          "display": "Salbutamol 100micrograms/dose inhaler"
         }
       ]
     },
@@ -82,10 +82,10 @@
     },
     "dosageInstruction": [
       {
-        "text": "one tablet - four times a day - oral",
+        "text": "One dose to be taken five times a day",
         "timing": {
           "repeat": {
-            "frequency": 4,
+            "frequency": 5,
             "period": 1,
             "periodUnit": "d"
           }
@@ -94,19 +94,11 @@
           "coding": [
             {
               "system": "http://snomed.info/sct",
-              "code": "26643006",
-              "display": "Oral"
+              "code": "18679011000001101",
+              "display": "Inhalation"
             }
           ]
-        },
-        "doseAndRate": [
-          {
-            "doseQuantity": {
-              "value": 1,
-              "unit": "tablet"
-            }
-          }
-        ]
+        }
       }
     ],
     "dispenseRequest": {
@@ -124,10 +116,10 @@
         "end": "2020-12-07"
       },
       "quantity": {
-        "value": 100,
-        "unit": "tablet",
+        "value": 200,
+        "unit": "dose",
         "system": "http://snomed.info/sct",
-        "code": "732936001"
+        "code": "3317411000001100"
       },
       "expectedSupplyDuration": {
         "value": 40,
