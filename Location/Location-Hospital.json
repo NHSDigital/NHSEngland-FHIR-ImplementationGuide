@@ -1,0 +1,13 @@
+{
+    "resourceType": "Location",
+    "id": "location",
+    "name": "Elmet NHS Hospital",
+    "address": {
+        "line": [
+            "Main Street",
+            "Barwick in Elment"
+        ],
+        "city": "Leeds",
+        "postalCode": "LS15 4JF"
+    }
+}
