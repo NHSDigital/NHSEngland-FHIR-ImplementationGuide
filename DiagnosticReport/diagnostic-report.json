@@ -13,7 +13,7 @@
     ],
     "basedOn": [
       {
-        "reference": "urn:uuid:d9df1431-22ac-462a-946a-f195f6c639af"
+        "reference": "ServiceRequest/d9df1431-22ac-462a-946a-f195f6c639af"
       }
     ],
     "status": "final",
@@ -47,7 +47,7 @@
     ],
     "specimen": [
       {
-        "reference": "urn:uuid:756a8361-79ce-4561-afcb-a91fe19df123"
+        "reference": "Specimen/756a8361-79ce-4561-afcb-a91fe19df123"
       }
     ],
     "result": [
