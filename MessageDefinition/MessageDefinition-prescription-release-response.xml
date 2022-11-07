@@ -1,0 +1,32 @@
+<MessageDefinition xmlns="http://hl7.org/fhir">
+    <id value="release-response" />
+    <url value="https://fhir.nhs.uk/MessageDefinition/prescription-release-response" />
+    <identifier>
+        <system value="https://tools.ietf.org/html/rfc4122" />
+        <value value="c81b88dc-760e-4b1e-9cdb-c5f853630664" />
+    </identifier>
+    <version value="1.0.1" />
+    <name value="NHSDigitalPrescriptionReleaseResponse" />
+    <title value="Pharmacy/Treatment Prescription Release Response" />
+    <status value="active" />
+    <date value="2022-10-13" />
+    <description value="Response to a prescription-release message. Should contain 1 Bundle for each prescription (MedicationRequest, Patient, PractitionerRole etc.) successfully passing signature verification and 1 OperationOutcome for each prescription not passing signature verification"/>
+    <eventCoding>
+        <system value="https://fhir.nhs.uk/CodeSystem/message-event" />
+        <code value="prescription-release-response" />
+        <display value="Prescription Release Response" />
+    </eventCoding>
+    <category value="consequence" />
+    <focus>
+        <code value="Bundle" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Bundle-Message" />
+        <min value="0" />
+        <max value="*" />
+    </focus>
+    <focus>
+        <code value="OperationOutcome" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-OperationOutcome-ReleaseResponse" />
+        <min value="0" />
+        <max value="*" />
+    </focus>
+</MessageDefinition>
