@@ -28,7 +28,7 @@
                     "extension": [
                         {
                             "url": "documentation",
-                            "valueUri": "https://digital.nhs.uk/developer/api-catalogue/personal-demographics-service-fhir"
+                            "valueUrl": "https://digital.nhs.uk/developer/api-catalogue/personal-demographics-service-fhir"
                         },
                         {
                             "url": "description",
