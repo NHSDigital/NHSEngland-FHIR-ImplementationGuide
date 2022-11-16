@@ -1,0 +1,26 @@
+{
+    "resourceType": "AppointmentResponse",
+    "id": "b186f840-acf2-449d-8620-f30f3bbd545d",
+    "identifier": [
+      {
+        "system": "http://example.fhir.org/sampleappointmentresponse-identifier",
+        "value": "b186f840-acf2-449d-8620-f30f3bbd545d"
+      }
+    ],
+    "appointment": {
+      "reference": "Appointment/366a7b5b-650a-4ddf-bc25-468d59f67ea8",
+      "display": "Julie Jones Respiratory Consultation"
+    },
+    "start": "2022-01-13T09:00:00Z",
+    "end": "2022-01-13T09:30:00Z",
+    "actor": {
+      "type" : "Patient",
+      "identifier": {
+          "system": "https://fhir.nhs.uk/Id/nhs-number",
+          "value": "9478526985"
+      },
+      "display":"Julie Jones"
+  },
+    "participantStatus": "declined",
+    "comment": "I am unable to attend this consultation"
+  }
