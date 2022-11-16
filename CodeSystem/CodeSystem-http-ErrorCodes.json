@@ -125,6 +125,11 @@
             "definition": "The API has given a 406 response to the Senders request."
         },
         {
+            "code": "REC_NOT_ACCEPTABLE",
+            "display": "406: Message had an incorrect content type defined for a response.",
+            "definition": "The Server has given a 406 response to the Senders request."
+        },		
+        {
             "code": "NOT_ACCEPTABLE",
             "display": "406: Senders message had an incorrect content type defined for a response.",
             "definition": "The Server has given a 406 response to the Senders request."
@@ -164,6 +169,16 @@
             "display": "409: The Server identified a conflict.",
             "definition": "The Server has given a 409 response to the Senders request."
         },
+        {
+            "code": "REC_UNSUPPORTED_MEDIA_TYPE",
+            "display": "415: The request is in an unsupported format.",
+            "definition": "The Receiver has given a 415 response to the Senders request."
+        },
+        {
+            "code": "UNSUPPORTED_MEDIA_TYPE",
+            "display": "415: The request is in an unsupported format.",
+            "definition": "The Receiver has given a 415 response to the Senders request."
+        },		
         {
             "code": "SEND_UNPROCESSABLE_ENTITY",
             "display": "422: Message was not malformed but deemed unprocessable by the API.",
@@ -248,6 +263,6 @@
             "code": "UNAVAILABLE",
             "display": "503: The Server is currently unavailable.",
             "definition": "The Receiver has given a 503 response to the Senders request."
-        }
+        }		
     ]
 }

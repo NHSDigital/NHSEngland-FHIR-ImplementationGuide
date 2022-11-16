@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="d1235b27-88f5-4c85-b9a2-e36c4a9bd0e6"/>
-  <url value="https://fhir.nhs.uk/StructureDefinition/Extension-ODS-OrganisationRealtionships" />
-  <name value="ExtensionODSOrganisationRealtionships" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/Extension-ODS-OrganisationRelationships" />
+  <name value="ExtensionODSOrganisationRelationships" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
   <kind value="complex-type" />
@@ -94,6 +94,29 @@
       <path value="Extension.extension.value[x].value" />
       <min value="1" />
     </element>
+    <element id="Extension.extension:reimbursementAuthority">
+      <path value="Extension.extension" />
+      <sliceName value="reimbursementAuthority" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:reimbursementAuthority.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="reimbursementAuthority" />
+    </element>
+    <element id="Extension.extension:reimbursementAuthority.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <type>
+        <code value="Identifier" />
+      </type>
+    </element>
+    <element id="Extension.extension:reimbursementAuthority.value[x].system">
+      <path value="Extension.extension.value[x].system" />
+      <min value="1" />
+    </element>
+    <element id="Extension.extension:reimbursementAuthority.value[x].value">
+      <path value="Extension.extension.value[x].value" />
+      <min value="1" />
+    </element>
     <element id="Extension.extension:primaryCareNetwork">
       <path value="Extension.extension" />
       <sliceName value="primaryCareNetwork" />
@@ -119,7 +142,7 @@
     </element>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="https://fhir.nhs.uk/StructureDefinition/Extension-ODS-OrganisationRealtionships" />
+      <fixedUri value="https://fhir.nhs.uk/StructureDefinition/Extension-ODS-OrganisationRelationships" />
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />

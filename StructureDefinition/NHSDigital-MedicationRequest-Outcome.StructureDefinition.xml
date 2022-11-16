@@ -127,7 +127,7 @@
       <path value="MedicationRequest.groupIdentifier.value" />
       <min value="1" />
     </element>
-	<element id="MedicationRequest.courseOfTherapyType">
+	  <element id="MedicationRequest.courseOfTherapyType">
       <path value="MedicationRequest.courseOfTherapyType" />
       <definition value="```json&#xD;&#xA;&quot;courseOfTherapyType&quot;: {&#xD;&#xA;  &quot;coding&quot;:  [&#xD;&#xA;      {&#xD;&#xA;          &quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy&quot;,&#xD;&#xA;          &quot;code&quot;: &quot;acute&quot;,&#xD;&#xA;          &quot;display&quot;: &quot;Short course (acute) therapy&quot;&#xD;&#xA;      }&#xD;&#xA;  ]&#xD;&#xA;},&#xD;&#xA;```" />
       <comment value="The type of prescription e.g. acute, continuous, etc. Was extension in STU3 https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-PrescriptionType-1 and Digital Medicine uses international codes, so continuous in place of repeat." />

@@ -1,0 +1,131 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "0300f7e6-3a1c-4931-b7b7-e5099a883248",
+  "title": "Patient Registration",
+  "url": "https://example.nhs.uk/Questionnaire/Patient-Registration",
+  "subjectType": [
+    "Patient"
+  ],
+  "name": "PatientRegistration",
+  "status": "draft",
+  "item": [
+    {
+      "text": "Title",
+      "type": "string",
+      "linkId": "prefix",
+      "required": true
+    },
+    {
+      "text": "First Name",
+      "linkId": "forename",
+      "type": "string",
+      "required": true
+    },
+    {
+      "text": "Middle Name(s)",
+      "linkId": "middlenames",
+      "type": "string",
+      "required": false
+    },
+    {
+      "text": "Last name",
+      "linkId": "surname",
+      "type": "string",
+      "required": true
+    },
+    {
+      "text": "Previous last name",
+      "linkId": "previous_surname",
+      "type": "string"
+    },
+    {
+      "text": "Date of Birth",
+      "linkId": "date_of_birth",
+      "type": "date",
+      "required": true
+    },
+    {
+      "text": "NHS Number (if known)",
+      "linkId": "nhs_number",
+      "type": "string",
+      "maxLength": 10
+    },
+    {
+      "text": "Your postcode used when you last registered with a UK GP",
+      "linkId": "previous_postcode",
+      "type": "string"
+    },
+    {
+      "text": "Your current address",
+      "linkId": "current_address",
+      "type": "string"
+    },
+    {
+      "text": "Contact Preference",
+      "linkId": "contact_group",
+      "type": "group",
+      "repeats" : true,
+      "item": [
+        {
+          "text": "Contact Type",
+          "linkId": "contact_type",
+          "type": "choice",
+          "required": false,
+          "answerValueSet" : "http://hl7.org/fhir/ValueSet/contact-point-system"
+        },
+        {
+          "text": "Contact Number or email",
+          "linkId": "contact_value",
+          "type": "string"
+        }      ]
+    },
+    {
+      "text": "Gender assigned at Birth",
+      "linkId": "gender_birth",
+      "type": "choice",
+      "answerOption": [
+        {
+          "valueCoding": {
+            "system": "http://hl7.org/fhir/administrative-gender",
+            "code": "female",
+            "display": "Female"
+          }
+        },
+        {
+          "valueCoding": {
+            "system": "http://hl7.org/fhir/administrative-gender",
+            "code": "male",
+            "display": "Male"
+          }
+        },
+        {
+          "valueCoding": {
+            "system": "http://hl7.org/fhir/administrative-gender",
+            "code": "other",
+            "display": "Non Binary"
+          }
+        },
+        {
+          "valueCoding": {
+            "system": "http://hl7.org/fhir/administrative-gender",
+            "code": "unknown",
+            "display": "Prefer to self describe"
+          }
+        }
+      ]
+    },
+    {
+      "text": "Ethnic Category",
+      "linkId": "ethnic",
+      "type": "choice",
+      "required": false,
+      "answerValueSet" : "https://fhir.hl7.org.uk/ValueSet/UKCore-DeathNotificationStatus"
+    },
+    {
+      "text": "Have you ever been a member of the UK Armed Forces or are a family member registered with the Defence Medical Services?",
+      "linkId": "armed_forces",
+      "type": "boolean"
+    }
+  ],
+  "description": "A form to be used in conjunction with patient registration workflows"
+}

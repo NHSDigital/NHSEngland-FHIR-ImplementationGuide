@@ -27,7 +27,7 @@
                     "extension": [
                         {
                             "url": "documentation",
-                            "valueUri": "https://digital.nhs.uk/developer/api-catalogue/booking-and-referral-fhir"
+                            "valueUrl": "https://digital.nhs.uk/developer/api-catalogue/booking-and-referral-fhir"
                         },
                         {
                             "url": "description",
