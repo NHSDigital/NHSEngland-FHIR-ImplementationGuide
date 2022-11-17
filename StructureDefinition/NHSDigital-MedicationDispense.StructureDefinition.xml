@@ -35,6 +35,19 @@
       </type>
       <mustSupport value="true" />
     </element>
+	<element id="MedicationDispense.extension:prescriptionNonDispensingReason">
+      <path value="MedicationDispense.extension" />
+      <sliceName value="prescriptionNonDispensingReason" />
+      <short value="This is the non dispensing reason for the overall prescription" />
+      <definition value="This is the reason a complete prescription was not dispensed, it is not the status of the individual line items, which is contained in MedicationDispense.statusReason.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;extension&quot;: [&#xD;&#xA;    {&#xD;&#xA;        &quot;url&quot;: &quot;https://fhir.nhs.uk/StructureDefinition/Extension-DM-PrescriptionNonDispensingReason&quot;,&#xD;&#xA;        &quot;valueCoding&quot;: {&#xD;&#xA;            &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/medicationdispense-status-reason&quot;,&#xD;&#xA;            &quot;code&quot;: &quot;0002&quot;,&#xD;&#xA;            &quot;display&quot;: &quot;Clinically unsuitable&quot;&#xD;&#xA;        }&#xD;&#xA;    }&#xD;&#xA;]&#xD;&#xA;```" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-DM-PrescriptionNonDispensingReason" />
+      </type>
+      <mustSupport value="true" />
+    </element>
     <element id="MedicationDispense.extension:repeatInformation">
       <path value="MedicationDispense.extension" />
       <sliceName value="repeatInformation" />
