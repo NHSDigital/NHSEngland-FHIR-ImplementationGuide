@@ -63,6 +63,19 @@
       </type>
       <mustSupport value="true" />
     </element>
+	<element id="Claim.extension:supplyHeaderIdentifier">
+      <path value="Claim.extension" />
+      <sliceName value="supplyHeaderIdentifier" />
+      <short value="Identifier for the SupplyHeader" />
+      <definition value="Identifier of the SupplyHeader (v3) object. The prescription in the context of a Dispense Notification or Claim. Mandatory for EPS interactions." />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-EPS-SupplyHeaderIdentifier" />
+      </type>
+      <mustSupport value="true" />
+    </element>
     <element id="Claim.identifier">
       <path value="Claim.identifier" />
       <definition value="**MUST** be unique for each Claim. In EPS this must be a UUID with a system of `https://fhir.nhs.uk/Id/prescription-dispense-item-number`&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA;      &quot;identifier&quot;:  [&#xD;&#xA;          {&#xD;&#xA;              &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/prescription-dispense-item-number&quot;,&#xD;&#xA;              &quot;value&quot;: &quot;4509B70D-D8B8-EA03-1105-64557CB54A29&quot;&#xD;&#xA;          }&#xD;&#xA;      ],&#xD;&#xA;&#xD;&#xA;```" />
