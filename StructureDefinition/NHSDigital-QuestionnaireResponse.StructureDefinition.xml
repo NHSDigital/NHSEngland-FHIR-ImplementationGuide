@@ -28,7 +28,6 @@
     <element id="QuestionnaireResponse.subject">
       <path value="QuestionnaireResponse.subject" />
       <definition value="The subject of the questionnaire response.  This could be a patient, organization, practitioner, device, etc.  This is who/what the answers apply to, but is not necessarily the source of information.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;subject&quot;: {&#xD;&#xA;        &quot;identifier&quot;: [&#xD;&#xA;            {&#xD;&#xA;                &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/nhs-number&quot;,&#xD;&#xA;                &quot;value&quot;: &quot;9912003888&quot;&#xD;&#xA;            }&#xD;&#xA;        ],&#xD;&#xA;        &quot;display&quot;: &quot;Ivor Fritagelse&quot;&#xD;&#xA;    },&#xD;&#xA;```" />
-      <min value="1" />
       <type>
         <code value="Reference" />
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient" />

@@ -30,7 +30,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-ODS-OrganisationRealtionships" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-ODS-OrganisationRelationships" />
       </type>
     </element>
     <element id="Organization.identifier">

@@ -182,9 +182,6 @@
       <path value="ServiceRequest.code.coding" />
       <sliceName value="SNOMEDProcedureCode" />
       <min value="1" />
-      <fixedCoding>
-        <system value="http://snomed.info/sct" />
-      </fixedCoding>
     </element>
     <element id="ServiceRequest.code.coding:SNOMEDProcedureCode.system">
       <path value="ServiceRequest.code.coding.system" />
