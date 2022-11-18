@@ -1,6 +1,21 @@
 {
     "resourceType": "Appointment",
     "id": "366a7b5b-650a-4ddf-bc25-468d59f67ea8",
+    "contained" : [
+        {
+            "resourceType": "Location",
+            "id": "location",
+            "name": "Elmet NHS Hospital",
+            "address": {
+                "line": [
+                    "Main Street",
+                    "Barwick in Elment"
+                ],
+                "city": "Leeds",
+                "postalCode": "LS15 4JF"
+            }
+        }
+    ],
     "status": "booked",
     "serviceCategory": [
         {
@@ -82,7 +97,7 @@
         {
             "actor": {
                 "type" : "Location",
-                "reference": "Location/1123",
+                "reference": "#location",
                 "display": "A Ward, West Wing, Elmet NHS Hospital"
             },
             "required": "required",

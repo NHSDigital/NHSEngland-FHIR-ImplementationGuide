@@ -33,7 +33,7 @@
   <kind value="resource" />
   <abstract value="false" />
   <type value="Provenance" />
-  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Provenance" />
+  <baseDefinition value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Provenance" />
   <derivation value="constraint" />
   <differential>
     <element id="Provenance.target">

@@ -5,12 +5,12 @@
         <system value="https://fhir.nhs.uk/identifier/CodeSystem" />
         <value value="prescription-charge-exemption" />
     </identifier>
-    <version value="1.0.1" />
+    <version value="1.0.2" />
     <name value="PrescriptionChargeExemption" />
     <title value="Prescription Charge Exemption" />
     <status value="draft" />
     <experimental value="true" />
-    <date value="2020-10-08" />
+    <date value="2022-11-09" />
     <publisher value="NHS Digital" />
     <contact>
         <name value="Interoperability Team" />
@@ -42,6 +42,10 @@
     <concept>
         <code value="0004"></code>
         <display value="is 60 years of age or over" />
+		<property>
+            <code value="deprecated"/>
+            <valueBoolean value="true"/>
+        </property>
     </concept>
     <concept>
         <code value="0005"></code>
@@ -102,5 +106,9 @@
     <concept>
         <code value="0019"></code>
         <display value="Was prescribed free-of-charge TB medication" />
+    </concept>
+	<concept>
+        <code value="0020"></code>
+        <display value="HRT only Prescription prepayment certificate" />
     </concept>
 </CodeSystem>

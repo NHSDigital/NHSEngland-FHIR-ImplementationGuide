@@ -1,0 +1,72 @@
+{
+    "resourceType": "OperationDefinition",
+    "id": "771aeccf-beb0-4b43-b7b5-fdd95406b164",
+    "url": "https://fhir.nhs.uk/OperationDefinition/eRS-GenerateUploadUri",
+    "version": "1.0.0",
+    "name": "ERSGenerateUploadUri",
+    "status": "draft",
+    "kind": "operation",
+    "date": "2022-10-14T14:00:00+00:00",
+    "publisher": "NHS Digital",
+    "contact": [
+        {
+            "telecom": [
+                {
+                    "system": "email",
+                    "value": "interoperabilityteam@nhs.net"
+                }
+            ]
+        }
+    ],
+    "description": "Request a pre-signed URL to upload a file to a document store.",
+    "code": "ers.generateUploadURI",
+    "system": false,
+    "type": false,
+    "affectsState" : true,
+    "resource": [
+        "Binary"
+    ],
+    "instance": false,
+    "parameter": [
+        {
+            "name": "fileName",
+            "use": "in",
+            "min": 1,
+            "max": "1",
+            "documentation": "The name of the file which will be uploaded, including extension. Format: ^.+\\.(.+) \n\n Example: filename.txt",
+            "type": "string"
+        },
+        {
+            "name": "fileSize",
+            "use": "in",
+            "min": 1,
+            "max": "1",
+            "documentation": "The size of the file in bytes. \n\n Example: 10485760 (which is 10MB)",
+            "type": "unsignedInt"
+        },
+        {
+            "name": "fileType",
+            "use": "in",
+            "min": 1,
+            "max": "1",
+            "documentation": "The mimetype describing the nature of the document. \n\n Example: text/plain \n\n Binding (required): [MimeType](https://www.hl7.org/fhir/r4/valueset-mimetypes.html)",
+            "type" : "code"
+        },
+        {
+            "name": "uploadUri",
+            "use": "out",
+            "min": 1,
+            "max": "1",
+            "documentation": "The pre-signed URL that can be used to upload the file.",
+            "type": "uri"
+        },
+        {
+            "name": "reference",
+            "use": "out",
+            "min": 1,
+            "max": "1",
+            "documentation": "The binary reference which can be used later to download the uploaded file.",
+            "type": "uri"
+        }
+    ]
+}
