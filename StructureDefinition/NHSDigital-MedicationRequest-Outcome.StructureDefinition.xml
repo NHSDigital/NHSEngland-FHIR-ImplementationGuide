@@ -127,6 +127,23 @@
       <path value="MedicationRequest.groupIdentifier.value" />
       <min value="1" />
     </element>
+	  <element id="MedicationRequest.courseOfTherapyType">
+      <path value="MedicationRequest.courseOfTherapyType" />
+      <definition value="```json&#xD;&#xA;&quot;courseOfTherapyType&quot;: {&#xD;&#xA;  &quot;coding&quot;:  [&#xD;&#xA;      {&#xD;&#xA;          &quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy&quot;,&#xD;&#xA;          &quot;code&quot;: &quot;acute&quot;,&#xD;&#xA;          &quot;display&quot;: &quot;Short course (acute) therapy&quot;&#xD;&#xA;      }&#xD;&#xA;  ]&#xD;&#xA;},&#xD;&#xA;```" />
+      <comment value="The type of prescription e.g. acute, continuous, etc. Was extension in STU3 https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-PrescriptionType-1 and Digital Medicine uses international codes, so continuous in place of repeat." />
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/DM-medicationrequest-course-of-therapy" />
+      </binding>
+    </element>
+    <element id="MedicationRequest.courseOfTherapyType.coding">
+      <path value="MedicationRequest.courseOfTherapyType.coding" />
+      <max value="1" />
+    </element>									
+    <element id="MedicationRequest.dispenseRequest">
+      <path value="MedicationRequest.dispenseRequest" />
+      <min value="1" />
+    </element>
     <element id="MedicationRequest.dispenseRequest.performer">
       <path value="MedicationRequest.dispenseRequest.performer" />
       <definition value="Indicates the intended dispensing Pharmacy specified by the patient. Can be sourced from nominatedPharmacy in the Patient Demographics Service (PDS)" />

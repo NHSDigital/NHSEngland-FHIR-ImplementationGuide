@@ -30,7 +30,7 @@
   </code>
   <specialty>
     <coding>
-      <system value="https://fhir.nhs.uk/CodeSystem/NHSDataModelAndDictionary-clinical-specialty" />
+      <system value="https://fhir.hl7.org.uk/CodeSystem/UKCore-PracticeSettingCode" />
       <code value="100" />
       <display value="GENERAL SURGERY" />
     </coding>
