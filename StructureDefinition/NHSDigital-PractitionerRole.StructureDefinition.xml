@@ -227,7 +227,7 @@
     </element>
     <element id="PractitionerRole.specialty">
       <path value="PractitionerRole.specialty" />
-      <definition value="This is should be the specialty linked to the role and is not necessarily the practitioners main specialty. &#xD;&#xA;&#xD;&#xA;This can be supplemented by SNOMED CT codes from {{link:http://hl7.org/fhir/ValueSet/c80-practice-codes}}, no ConceptMap currently exists for mapping between the two.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA; &quot;specialty&quot;: [&#xD;&#xA;        {&#xD;&#xA;            &quot;coding&quot;: [&#xD;&#xA;                {&#xD;&#xA;                    &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/NHSDataModelAndDictionary-clinical-specialty&quot;,&#xD;&#xA;                    &quot;code&quot;: &quot;100&quot;,&#xD;&#xA;                    &quot;display&quot;: &quot;GENERAL SURGERY&quot;&#xD;&#xA;                }&#xD;&#xA;            ]&#xD;&#xA;        }&#xD;&#xA;    ],&#xD;&#xA;```" />
+      <definition value="This is should be the specialty linked to the role and is not necessarily the practitioners main specialty. &#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA; &quot;specialty&quot;: [&#xD;&#xA;        {&#xD;&#xA;            &quot;coding&quot;: [&#xD;&#xA;                {&#xD;&#xA;                    &quot;system&quot;: &quot;http://snomed.info/sct&quot;,&#xD;&#xA;                    &quot;code&quot;: &quot;394814009&quot;,&#xD;&#xA;                    &quot;display&quot;: &quot;General practice (specialty)&quot;&#xD;&#xA;                }&#xD;&#xA;            ]&#xD;&#xA;        }&#xD;&#xA;    ],&#xD;&#xA;```" />
       <mustSupport value="true" />
     </element>
     <element id="PractitionerRole.specialty.coding">
@@ -252,20 +252,6 @@
     <element id="PractitionerRole.specialty.coding.display">
       <path value="PractitionerRole.specialty.coding.display" />
       <min value="1" />
-    </element>
-    <element id="PractitionerRole.specialty.coding:NHSDataDictionarySpecialty">
-      <path value="PractitionerRole.specialty.coding" />
-      <sliceName value="NHSDataDictionarySpecialty" />
-      <mustSupport value="true" />
-      <binding>
-        <strength value="required" />
-        <description value="NHS Data Dictionary Specialty" />
-        <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDataModelAndDictionary-clinical-specialty" />
-      </binding>
-    </element>
-    <element id="PractitionerRole.specialty.coding:NHSDataDictionarySpecialty.system">
-      <path value="PractitionerRole.specialty.coding.system" />
-      <fixedUri value="https://fhir.nhs.uk/CodeSystem/NHSDataModelAndDictionary-clinical-specialty" />
     </element>
     <element id="PractitionerRole.specialty.coding:SNOMEDSpecialty">
       <path value="PractitionerRole.specialty.coding" />
