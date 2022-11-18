@@ -472,17 +472,6 @@
                     {
                         "reference" :"urn:uuid:d482d092-6efc-4eef-b4a0-730718b1fbfd"
                     }
-                ],
-                "specialty":  [
-                    {
-                        "coding":  [
-                            {
-                                "system": "http://snomed.info/sct",
-                                "code": "408443003",
-                                "display": "General medical practice"
-                            }
-                        ]
-                    }
                 ]
             }
         },
