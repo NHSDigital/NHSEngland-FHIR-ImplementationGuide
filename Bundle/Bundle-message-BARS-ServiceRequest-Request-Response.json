@@ -183,18 +183,6 @@
                         "valueCode": "F"
                     },
                     {
-                        "url": "https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-EthnicCategory",
-                        "valueCodeableConcept": {
-                            "coding":  [
-                                {
-                                    "system": "https://fhir.hl7.org.uk/CodeSystem/UKCore-EthnicCategory",
-                                    "code": "A",
-                                    "display": "British, Mixed British"
-                                }
-                            ]
-                        }
-                    },
-                    {
                         "url": "https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-ContactPreference",
                         "extension":  [
                             {
