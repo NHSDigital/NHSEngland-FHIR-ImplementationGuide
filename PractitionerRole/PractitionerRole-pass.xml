@@ -30,9 +30,9 @@
   </code>
   <specialty>
     <coding>
-      <system value="http://snomed.info/sct" />
-      <code value="394814009" />
-      <display value="General practice (specialty)" />
+      <system value="https://fhir.hl7.org.uk/CodeSystem/UKCore-PracticeSettingCode" />
+      <code value="100" />
+      <display value="GENERAL SURGERY" />
     </coding>
   </specialty>
   <telecom>
