@@ -90,7 +90,7 @@ jobs:
       - name: Run FHIR Validator
         run: 
           nohup java -jar validation-service-fhir-r4/target/fhir-validator.jar --terminology.url=https://ontology.nhs.uk/production1/fhir --terminology.authorization.tokenUrl=https://ontology.nhs.uk/authorisation/auth/realms/nhs-digital-terminology/protocol/openid-connect/token --terminology.authorization.clientId=${{ secrets.ONTO_CLIENT_ID }} --terminology.authorization.clientSecret=${{ secrets.ONTO_CLIENT_SECRET }} &
-          sleep 120
+          sleep 150
         
       - name: Run Test
         run: make -C validation test
