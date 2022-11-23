@@ -1,6 +1,6 @@
 <MessageDefinition xmlns="http://hl7.org/fhir">
     <id value="8f02bed0-5634-4ff6-93d5-f21f55bd79af" />
-    <url value="https://fhir.nhs.uk/MessageDefinition/referral" />
+    <url value="https://fhir.nhs.uk/MessageDefinition/encounter" />
     <identifier>
         <system value="https://tools.ietf.org/html/rfc4122" />
         <value value="8f02bed0-5634-4ff6-93d5-f21f55bd79af" />

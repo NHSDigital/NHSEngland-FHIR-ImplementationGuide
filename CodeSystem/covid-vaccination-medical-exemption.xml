@@ -27,4 +27,12 @@
         <code value="4" />
         <display value="Rejected: Exemption from COVID vaccination and testing" />
     </concept>
+    <concept>
+        <code value="5" />
+        <display value="Added in error" />
+    </concept>
+    <concept>
+        <code value="6" />
+        <display value="No longer required" />
+    </concept>
 </CodeSystem>

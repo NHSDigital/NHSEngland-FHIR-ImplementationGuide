@@ -161,12 +161,14 @@
                     "answerOption": [
                         {
                             "valueCoding": {
+                                "system": "https://fhir.nhs.uk/CodeSystem/covid-vaccination-medical-exemption",
                                 "code": "5",
                                 "display": "Added in error"
                             }
                         },
                         {
                             "valueCoding": {
+                                "system": "https://fhir.nhs.uk/CodeSystem/covid-vaccination-medical-exemption",
                                 "code": "6",
                                 "display": "No longer required"
                             }
