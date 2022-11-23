@@ -165,8 +165,7 @@
                             "code": "U",
                             "display": "unrestricted"
                         }
-                    ],
-                    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-Composition"
+                    ]
                 },
                 "extension": [
                     {
@@ -290,7 +289,6 @@
                 ],
                 "name": [
                     {
-                        "id": "123",
                         "use": "usual",
                         "family": "Smith",
                         "given": [
@@ -301,11 +299,7 @@
                         ],
                         "suffix": [
                             "MBE"
-                        ],
-                        "period": {
-                            "start": "2020-01-01",
-                            "end": "2021-12-31"
-                        }
+                        ]
                     }
                 ],
                 "telecom": [
