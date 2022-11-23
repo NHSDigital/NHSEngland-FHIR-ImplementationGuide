@@ -91,6 +91,10 @@
         {
             "code": "SSP",
             "display": "Serious Shortage Protocol"
+        },
+        {
+            "code": "PD",
+            "display": "Packaged Doses"
         }
     ]
 }
