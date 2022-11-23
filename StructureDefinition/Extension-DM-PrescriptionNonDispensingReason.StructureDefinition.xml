@@ -28,23 +28,19 @@
       <path value="Extension.value[x]" />
       <min value="1" />
       <type>
-        <code value="CodeableConcept" />
+        <code value="Coding" />
       </type>
       <binding>
         <strength value="required" />
         <valueSet value="https://fhir.nhs.uk/ValueSet/DM-medicationdispense-status-reason" />
       </binding>
     </element>
-    <element id="Extension.value[x].coding">
-      <path value="Extension.value[x].coding" />
+    <element id="Extension.value[x].system">
+      <path value="Extension.value[x].system" />
       <min value="1" />
     </element>
-    <element id="Extension.value[x].coding.system">
-      <path value="Extension.value[x].coding.system" />
-      <min value="1" />
-    </element>
-    <element id="Extension.value[x].coding.code">
-      <path value="Extension.value[x].coding.code" />
+    <element id="Extension.value[x].code">
+      <path value="Extension.value[x].code" />
       <min value="1" />
     </element>
   </differential>
