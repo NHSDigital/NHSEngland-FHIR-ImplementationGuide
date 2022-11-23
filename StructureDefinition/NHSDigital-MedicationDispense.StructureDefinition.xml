@@ -61,6 +61,19 @@
       </type>
       <mustSupport value="true" />
     </element>
+	<element id="MedicationDispense.extension:supplyHeaderIdentifier">
+      <path value="MedicationDispense.extension" />
+      <sliceName value="supplyHeaderIdentifier" />
+      <short value="Identifier for the SupplyHeader" />
+      <definition value="Identifier of the SupplyHeader (v3) object. The prescription in the context of a Dispense Notification or Claim. Mandatory for EPS interactions." />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-EPS-SupplyHeaderIdentifier" />
+      </type>
+      <mustSupport value="true" />
+    </element>
     <element id="MedicationDispense.identifier">
       <path value="MedicationDispense.identifier" />
       <definition value="Each MedicationDispense **MUST** be identified by an Universal Unique Identifiers (UUIDs) with a system of `https://fhir.nhs.uk/Id/prescription-dispense-item-number`&#xD;&#xA;&#xD;&#xA;UUID example (for illustration purposes only);&#xD;&#xA;&#xD;&#xA;**4509B70D-D8B8-EA03-1105-64557CB54A29**&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA; &quot;identifier&quot;:  [&#xD;&#xA;    {&#xD;&#xA;        &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/prescription-dispense-item-number&quot;,&#xD;&#xA;        &quot;value&quot;: &quot;4509B70D-D8B8-EA03-1105-64557CB54A29&quot;&#xD;&#xA;    }&#xD;&#xA;]&#xD;&#xA;```" />
