@@ -122,7 +122,7 @@
         </resource>
         <resource>
             <type value="Task" />
-            <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Task-EPS" />
+            <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Task" />
             <interaction>
                 <code value="create"/>
             </interaction>

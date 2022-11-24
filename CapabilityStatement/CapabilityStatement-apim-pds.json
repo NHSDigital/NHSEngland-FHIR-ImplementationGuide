@@ -70,7 +70,7 @@
             "resource": [
                 {
                     "type": "Patient",
-                    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient-PDS",
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient",
                     "documentation" : "Person demographics Service",
                     "interaction": [
                         {
