@@ -1,0 +1,177 @@
+{
+    "resourceType": "CapabilityStatement",
+    "id": "nhsdigital-requirements",
+    "url": "https://fhir.nhs.uk/CapabilityStatement/nhsdigital-requirements",
+    "version": "1.0.0",
+    "name": "NHSDigitalRequirements",
+    "status": "active",
+    "date": "2021-04-28T00:00:00+00:00",
+    "publisher": "digital.nhs.uk",
+    "description": "Conformance requirements for NHS Digital Implementation Guide",
+    "kind": "requirements",
+    "fhirVersion": "4.0.1",
+    "format": [
+        "application/fhir+json",
+        "application/fhir+xml"
+    ],
+    "rest": [
+        {
+            "mode": "server",
+            "security": {
+                "service": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/restful-security-service",
+                                "code": "OAuth",
+                                "display": "OAuth2 Token"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "resource": [
+                {
+                    "type": "AllergyIntolerance",
+                    "profile": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-AllergyIntolerance"
+                },
+                {
+                    "type": "Appointment",
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-Appointment"
+                },
+                {
+                    "type": "Binary",
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-Binary"
+                },
+                {
+                    "type": "CapabilityStatement",
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-CapabilityStatement"
+                },
+                {
+                    "type": "Condition",
+                    "profile": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Condition"
+                },
+                {
+                    "type": "Claim",
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-Claim"
+                },
+                {
+                    "type": "CommunicationRequest",
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-CommunicationRequest"
+                },
+                {
+                    "type": "Encounter",
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-Encounter"
+                },
+                {
+                    "type": "DocumentReference",
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-DocumentReference"
+                },
+                {
+                    "type": "Flag",
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-Flag"
+                },
+                {
+                    "type": "HealthcareService",
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-HealthcareService"
+                },
+                {
+                    "type": "Immunization",
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-Immunization"
+                },
+                {
+                    "type": "Location",
+                    "profile": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Location"
+                },
+                {
+                    "type": "List",
+                    "profile": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-List"
+                },
+                {
+                    "type": "MedicationAdministration",
+                    "profile": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-MedicationAdministration"
+                },
+                {
+                    "type": "MedicationRequest",
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationRequest"
+                },
+                {
+                    "type": "MedicationDispense",
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationDispense"
+                },
+                {
+                    "type": "Medication",
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-Medication"
+                },
+                {
+                    "type": "MedicationStatement",
+                    "profile": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-MedicationStatement"
+                },
+                {
+                    "type": "MessageDefinition",
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-MessageDefinition"
+                },
+                {
+                    "type": "Observation",
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-Observation"
+                },
+                {
+                    "type": "Organization",
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-Organization"
+                },
+                {
+                    "type": "OperationDefinition",
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-OperationDefinition"
+                },
+                {
+                    "type": "OperationOutcome",
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-OperationOutcome"
+                },
+                {
+                    "type": "Patient",
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient"
+                },
+                {
+                    "type": "Practitioner",
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-Practitioner"
+                },
+                {
+                    "type": "PractitionerRole",
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole"
+                },
+                {
+                    "type": "Questionnaire",
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-Questionnaire"
+                },
+                {
+                    "type": "QuestionnaireResponse",
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-QuestionnaireResponse"
+                },
+                {
+                    "type": "RelatedPerson",
+                    "profile": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-RelatedPerson"
+                },
+                {
+                    "type": "ServiceRequest",
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-ServiceRequest"
+                },
+                {
+                    "type": "Slot",
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/England-Slot"
+                },
+                {
+                    "type": "Task",
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-Task"
+                },
+                {
+                    "type": "Device",
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/SDS-Device"
+                },
+                {
+                    "type": "Endpoint",
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/SDS-Endpoint"
+                }
+            ]
+        }
+    ]
+}
