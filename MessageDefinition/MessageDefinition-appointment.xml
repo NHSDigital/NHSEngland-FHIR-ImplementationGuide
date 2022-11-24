@@ -1,10 +1,10 @@
 <MessageDefinition xmlns="http://hl7.org/fhir">
     <id value="20286153-8c5e-449a-aa60-34d9856fcaac" />
     <url value="https://fhir.nhs.uk/MessageDefinition/appointment" />
-    <identifier>
+    <identifier2>
         <system value="https://tools.ietf.org/html/rfc4122" />
         <value value="64011859-32d9-4fd2-abc2-00e31a15b5fc" />
-    </identifier>
+    </identifier2>
     <version value="1.0.0" />
     <title value="Patient Appointment" />
     <name value="PatientAppointment" />
