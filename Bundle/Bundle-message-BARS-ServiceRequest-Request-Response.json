@@ -3,10 +3,7 @@
     "id": "bc040878-cf51-4acf-9ede-7448fbb5be7c",
     "meta": {
         "versionId": "1.0.0-alpha",
-        "lastUpdated": "2021-10-11T15:23:30+00:00",
-        "profile":  [
-            "https://fhir.nhs.uk/StructureDefinition/BARSBundleMessage"
-        ]
+        "lastUpdated": "2021-10-11T15:23:30+00:00"
     },
     "type": "message",
     "timestamp": "2021-10-11T12:15:10+00:00",
@@ -17,10 +14,7 @@
                 "resourceType": "MessageHeader",
                 "id": "1cbdfb97-5859-48a4-8301-d54eab818d68",
                 "meta": {
-                    "lastUpdated": "2021-10-11T15:23:30+00:00",
-                    "profile":  [
-                        "https://fhir.nhs.uk/StructureDefinition/BARSMessageHeader-servicerequest-response"
-                    ]
+                    "lastUpdated": "2021-10-11T15:23:30+00:00"
                 },
                 "eventCoding": {
                     "system": "https://fhir.nhs.uk/CodeSystem/message-events-bars",
@@ -90,10 +84,7 @@
                 "resourceType": "ServiceRequest",
                 "id": "236bb75d-90ef-461f-b71e-fde7f899802c",
                 "meta": {
-                    "lastUpdated": "2021-10-11T15:23:30+00:00",
-                    "profile":  [
-                        "https://fhir.nhs.uk/StructureDefinition/BARSServiceRequest-request-referral"
-                    ]
+                    "lastUpdated": "2021-10-11T15:23:30+00:00"
                 },
                 "status": "revoked",
                 "intent": "plan",
@@ -135,10 +126,7 @@
                 "resourceType": "Encounter",
                 "id": "96dcf7cb-dc8f-44fc-a37c-0e296660ff85",
                 "meta": {
-                    "lastUpdated": "2021-10-11T15:23:30+00:00",
-                    "profile":  [
-                        "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Encounter"
-                    ]
+                    "lastUpdated": "2021-10-11T15:23:30+00:00"
                 },
                 "identifier":  [
                     {
@@ -172,10 +160,7 @@
                 "resourceType": "Patient",
                 "id": "e8cf748b-583d-4b0f-955b-9f8aefeb12b7",
                 "meta": {
-                    "lastUpdated": "2021-11-26T15:00:00+00:00",
-                    "profile":  [
-                        "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Patient"
-                    ]
+                    "lastUpdated": "2021-11-26T15:00:00+00:00"
                 },
                 "extension":  [
                     {
@@ -320,10 +305,7 @@
                 "resourceType": "Organization",
                 "id": "cddb466e-6ba1-463a-a898-fdab9aeab589",
                 "meta": {
-                    "lastUpdated": "2021-10-11T15:23:30+00:00",
-                    "profile":  [
-                        "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Organization"
-                    ]
+                    "lastUpdated": "2021-10-11T15:23:30+00:00"
                 },
                 "identifier":  [
                     {
@@ -389,10 +371,7 @@
                 "resourceType": "Organization",
                 "id": "c5ea962f-bdf9-4c70-816b-9045c047005c",
                 "meta": {
-                    "lastUpdated": "2021-10-11T15:23:30+00:00",
-                    "profile":  [
-                        "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Organization"
-                    ]
+                    "lastUpdated": "2021-10-11T15:23:30+00:00"
                 },
                 "identifier":  [
                     {
@@ -516,11 +495,7 @@
                 "resourceType": "HealthcareService",
                 "id": "d482d092-6efc-4eef-b4a0-730718b1fbfd",
                 "meta": {
-                    "lastUpdated": "2021-11-26T15:17:00+00:00",
-                    "profile":  [
-                        "http://hl7.org/fhir/StructureDefinition/HealthcareService",
-                        "https://fhir.hl7.org.uk/StructureDefinition/UKCore-HealthcareService"
-                    ]
+                    "lastUpdated": "2021-11-26T15:17:00+00:00"
                 },
                 "identifier":  [
                     {
