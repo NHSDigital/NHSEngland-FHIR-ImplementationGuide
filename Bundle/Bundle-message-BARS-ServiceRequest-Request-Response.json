@@ -340,10 +340,7 @@
                 "resourceType": "Practitioner",
                 "id": "45a6da92-1250-4ce8-91c7-281eb93de12d",
                 "meta": {
-                    "lastUpdated": "2021-10-11T15:23:30+00:00",
-                    "profile":  [
-                        "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Practitioner"
-                    ]
+                    "lastUpdated": "2021-10-11T15:23:30+00:00"
                 },
                 "identifier":  [
                     {
@@ -374,10 +371,8 @@
                 "resourceType": "Organization",
                 "id": "ce4fc804-f6ed-4f85-8804-df5235576c8e",
                 "meta": {
-                    "lastUpdated": "2021-10-11T15:23:30+00:00",
-                    "profile":  [
-                        "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Organization"
-                    ]
+                    "lastUpdated": "2021-10-11T15:23:30+00:00"
+                   
                 },
                 "identifier":  [
                     {
@@ -413,11 +408,6 @@
             "resource": {
                 "resourceType": "Practitioner",
                 "id": "ce0ce501-4af8-432f-92f4-f391dc78f526",
-                "meta": {
-                    "profile":  [
-                        "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Practitioner"
-                    ]
-                },
                 "identifier":  [
                     {
                         "system": "https://fhir.nhs.uk/Id/sds-role-profile-id",
@@ -446,11 +436,6 @@
             "resource": {
                 "resourceType": "PractitionerRole",
                 "id": "74079d15-69fb-4e80-91eb-958aac3870e0",
-                "meta": {
-                    "profile":  [
-                        "https://fhir.hl7.org.uk/StructureDefinition/UKCore-PractitionerRole"
-                    ]
-                },
                 "practitioner": {
                     "reference": "urn:uuid:7d948662-bade-450e-b6c5-9bb6ee39cb56"
                 },
@@ -481,10 +466,7 @@
                 "resourceType": "Organization",
                 "id": "b5e27389-3ca5-4cbc-9173-73f0c74915d9",
                 "meta": {
-                    "lastUpdated": "2021-11-26T15:17:00+00:00",
-                    "profile":  [
-                        "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Organization"
-                    ]
+                    "lastUpdated": "2021-11-26T15:17:00+00:00"
                 },
                 "name": "Practitioner Org"
             }
@@ -495,9 +477,6 @@
                 "resourceType": "Observation",
                 "id": "ce3d3dd4-653a-4594-bffa-7946125c50bb",
                 "meta": {
-                    "profile":  [
-                        "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Observation"
-                    ]
                 },
                 "identifier":  [
                     {
@@ -562,10 +541,7 @@
                 "resourceType": "Consent",
                 "id": "1e91008e-96d0-438b-873c-c6d2c007fc29",
                 "meta": {
-                    "lastUpdated": "2021-11-26T15:00:00+00:00",
-                    "profile":  [
-                        "https://fhir.nhs.uk/StructureDefinition/NHSDigital-Consent"
-                    ]
+                    "lastUpdated": "2021-11-26T15:00:00+00:00"
                 },
                 "status": "active",
                 "scope": {
