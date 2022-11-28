@@ -14,7 +14,7 @@ on:
 jobs:
   # This workflow contains a single job called "call-workflow" which references the FHIR validator repo
   call-workflow:
-    uses: NHSDigital/FHIR-ImplementationGuide-Validation/.github/workflows/masterfhirvalidation.yml@main
+    uses: NHSDigital/IOPS-FHIR-Test-Scripts/.github/workflows/masterfhirvalidation.yml@main
     secrets:
       ONTO_CLIENT_ID: ${{ secrets.ONTO_CLIENT_ID }}
       ONTO_CLIENT_SECRET: ${{ secrets.ONTO_CLIENT_SECRET }}
