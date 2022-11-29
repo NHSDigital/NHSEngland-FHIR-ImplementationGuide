@@ -1,11 +1,6 @@
 {
     "resourceType": "Task",
     "id": "dea023fc-b6ef-4419-b98f-9f209fd25ed4",
-    "meta" : {
-        "profile" : [
-            "https://fhir.nhs.uk/StructureDefinition/NHSDigital-Task"
-        ]
-    },
     "contained": [
         {
           "resourceType": "PractitionerRole",

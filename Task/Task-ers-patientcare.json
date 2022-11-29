@@ -1,5 +1,6 @@
 {
     "resourceType": "Task",
+    "id": "9f7d3feb-5442-4df7-83ef-7afd2e99f0e5",
     "status": "requested",
     "intent": "order",
     "code": {
@@ -31,7 +32,6 @@
             "end": "2022-01-25T16:40:00+00:00"
         }
     },
-    "id": "9f7d3feb-5442-4df7-83ef-7afd2e99f0e5",
     "meta": {
         "versionId": "3c1f41e5-6454-48bc-bc01-2059d2e29413",
         "lastUpdated": "2022-03-10T13:33:21.603+00:00"
