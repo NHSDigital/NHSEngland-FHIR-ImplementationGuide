@@ -63,6 +63,19 @@
       </type>
       <mustSupport value="true" />
     </element>
+	<element id="Claim.extension:supplyHeaderIdentifier">
+      <path value="Claim.extension" />
+      <sliceName value="supplyHeaderIdentifier" />
+      <short value="Identifier for the SupplyHeader" />
+      <definition value="Identifier of the SupplyHeader (v3) object. The prescription in the context of a Dispense Notification or Claim. Mandatory for EPS interactions." />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-EPS-SupplyHeaderIdentifier" />
+      </type>
+      <mustSupport value="true" />
+    </element>
     <element id="Claim.identifier">
       <path value="Claim.identifier" />
       <definition value="**MUST** be unique for each Claim. In EPS this must be a UUID with a system of `https://fhir.nhs.uk/Id/prescription-dispense-item-number`&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA;      &quot;identifier&quot;:  [&#xD;&#xA;          {&#xD;&#xA;              &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/prescription-dispense-item-number&quot;,&#xD;&#xA;              &quot;value&quot;: &quot;4509B70D-D8B8-EA03-1105-64557CB54A29&quot;&#xD;&#xA;          }&#xD;&#xA;      ],&#xD;&#xA;&#xD;&#xA;```" />
@@ -553,7 +566,7 @@
         <rules value="open" />
       </slicing>
       <short value="Dispensing Endorsement and Charge Payment" />
-      <definition value="Dispensing Endorsement  - Details of the endorsement(s) to support the claim for this medication item. &#xD;&#xA;&#xD;&#xA;Charge Payment - Details on whether a prescription charge was paid for the medication treatment.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA;&quot;programCode&quot;:  [&#xD;&#xA;    {&#xD;&#xA;        &quot;coding&quot;:  [&#xD;&#xA;            {&#xD;&#xA;                &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/DM-prescription-charge&quot;,&#xD;&#xA;                &quot;code&quot;: &quot;paid-once&quot;,&#xD;&#xA;                &quot;display&quot;: &quot;Paid Once&quot;&#xD;&#xA;            }&#xD;&#xA;        ]&#xD;&#xA;    },&#xD;&#xA;    {&#xD;&#xA;        &quot;coding&quot;:  [&#xD;&#xA;            {&#xD;&#xA;                &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/medicationdispense-endorsement&quot;,&#xD;&#xA;                &quot;code&quot;: &quot;IP&quot;,&#xD;&#xA;                &quot;display&quot;: &quot;Invoice Price&quot;&#xD;&#xA;            }&#xD;&#xA;        ]&#xD;&#xA;    }&#xD;&#xA;],&#xD;&#xA;&#xD;&#xA;```" />
+      <definition value="Dispensing Endorsement  - Details of the endorsement(s) to support the claim for this medication item. &#xD;&#xA;&#xD;&#xA;Charge Payment - Details on whether a prescription charge was paid for the medication treatment.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA;&quot;programCode&quot;:  [&#xD;&#xA;    {&#xD;&#xA;        &quot;coding&quot;:  [&#xD;&#xA;            {&#xD;&#xA;                &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/DM-prescription-charge&quot;,&#xD;&#xA;                &quot;code&quot;: &quot;paid-once&quot;,&#xD;&#xA;                &quot;display&quot;: &quot;Paid Once&quot;&#xD;&#xA;            }&#xD;&#xA;        ]&#xD;&#xA;    },&#xD;&#xA;    {&#xD;&#xA;        &quot;coding&quot;:  [&#xD;&#xA;            {&#xD;&#xA;                &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/medicationdispense-endorsement&quot;,&#xD;&#xA;                &quot;code&quot;: &quot;IP&quot;,&#xD;&#xA;                &quot;display&quot;: &quot;Invoice Price&quot;&#xD;&#xA;            }&#xD;&#xA;        ]&#xD;&#xA;    }&#xD;&#xA;],&#xD;&#xA;&#xD;&#xA;``` &#xD;&#xA;If an endorsement code of PD is used, the number of packaged doses dispensed minus the number of dispenses must be entered in the coding.text field e.g. PD4 for five doses packaged separately and dispensed on one occasion" />
       <mustSupport value="true" />
     </element>
     <element id="Claim.item.detail.programCode.coding">
@@ -601,7 +614,7 @@
     <element id="Claim.item.detail.programCode:dispensingEndorsement.text">
       <path value="Claim.item.detail.programCode.text" />
       <short value="Additional Information for Dispensing Endorsements" />
-      <definition value="Additional Information for Dispensing Endorsements should be entered in this field. Details on the format of this text field can be found in `Requirements and Electronic Prescription Service Guidance for Endorsement (EPS)`&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;       {&#xD;&#xA;                &quot;coding&quot;: [&#xD;&#xA;                    {&#xD;&#xA;                       &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/medicationdispense-endorsement&quot;,&#xD;&#xA;                       &quot;code&quot;: &quot;IP&quot;,&#xD;&#xA;                       &quot;display&quot;: &quot;Invoice Price for less common products or special items&quot;&#xD;&#xA;                      }&#xD;&#xA;                   ],&#xD;&#xA;                  &quot;text&quot; : &quot;15gram,£12.34,EFGH Ltd&quot;&#xD;&#xA;          }&#xD;&#xA;```" />
+      <definition value="Additional Information for Dispensing Endorsements should be entered in this field. Details on the format of this text field can be found in `Requirements and Electronic Prescription Service Guidance for Endorsement (EPS)`&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;       {&#xD;&#xA;                &quot;coding&quot;: [&#xD;&#xA;                    {&#xD;&#xA;                       &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/medicationdispense-endorsement&quot;,&#xD;&#xA;                       &quot;code&quot;: &quot;IP&quot;,&#xD;&#xA;                       &quot;display&quot;: &quot;Invoice Price for less common products or special items&quot;&#xD;&#xA;                      }&#xD;&#xA;                   ],&#xD;&#xA;                  &quot;text&quot; : &quot;PD4,15gram,£12.34,EFGH Ltd&quot;&#xD;&#xA;          }&#xD;&#xA;```" />
     </element>
     <element id="Claim.item.detail.quantity">
       <path value="Claim.item.detail.quantity" />
