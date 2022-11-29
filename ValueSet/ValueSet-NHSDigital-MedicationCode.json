@@ -26,7 +26,54 @@
     "compose": {
         "include":  [
             {
-                "system": "https://dmd.nhs.uk"
+                "system": "https://dmd.nhs.uk",
+                "filter":  [
+                    {
+                        "property": "parent",
+                        "op": "=",
+                        "value": "VTM"
+                    }
+                ]
+            },
+            {
+                "system": "https://dmd.nhs.uk",
+                "filter":  [
+                    {
+                        "property": "parent",
+                        "op": "=",
+                        "value": "VMP"
+                    }
+                ]
+            },
+            {
+                "system": "https://dmd.nhs.uk",
+                "filter":  [
+                    {
+                        "property": "parent",
+                        "op": "=",
+                        "value": "AMP"
+                    }
+                ]
+            },
+            {
+                "system": "https://dmd.nhs.uk",
+                "filter":  [
+                    {
+                        "property": "parent",
+                        "op": "=",
+                        "value": "VMPP"
+                    }
+                ]
+            },
+            {
+                "system": "https://dmd.nhs.uk",
+                "filter":  [
+                    {
+                        "property": "parent",
+                        "op": "=",
+                        "value": "AMPP"
+                    }
+                ]
             },
             {
                 "system": "http://snomed.info/sct"
