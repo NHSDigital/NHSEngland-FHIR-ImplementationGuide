@@ -1,5 +1,6 @@
 {
     "resourceType": "Task",
+    "id": "9d60c92d-8546-4df7-92a0-03b929b52b2a",
     "extension": [
         {
             "url" : "https://fhir.nhs.uk/StructureDefinition/Extension-Provenance-agent",
@@ -33,7 +34,7 @@
     "identifier": [
         {
             "system": "https://tools.ietf.org/html/rfc4122",
-            "value": "4e2f8449-b87b-4425-901d-747b94499276"
+            "value": "9d60c92d-8546-4df7-92a0-03b929b52b2a"
         }
     ],
     "status": "requested",
