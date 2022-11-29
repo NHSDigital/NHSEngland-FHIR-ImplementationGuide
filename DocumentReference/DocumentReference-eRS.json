@@ -4,6 +4,12 @@
     "status": "current",
     "date": "2021-09-17T12:20:00.742000+00:00",
     "description": "upload.png",
+    "custodian": {
+        "identifier": {
+          "system": "https://fhir.nhs.uk/Id/ods-organization-code",
+          "value": "RGD"
+        }
+      },
     "content": [
         {
             "attachment": {

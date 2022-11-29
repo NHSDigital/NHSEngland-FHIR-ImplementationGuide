@@ -5,6 +5,12 @@
     "status": "current",
     "date": "2022-01-31T14:41:00.742000+00:00",
     "description": "review details.pdf",
+    "custodian": {
+        "identifier": {
+          "system": "https://fhir.nhs.uk/Id/ods-organization-code",
+          "value": "RGD"
+        }
+      },
     "content": [
         {
             "attachment": {

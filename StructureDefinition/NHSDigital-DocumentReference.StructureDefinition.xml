@@ -22,8 +22,12 @@
     <element id="DocumentReference.type">
       <path value="DocumentReference.type" />
       <definition value="Specifies the particular kind of document referenced  (e.g. History and Physical, Discharge Summary, Progress Note). This usually equates to the purpose of making the document referenced.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;type&quot;: {&#xD;&#xA;        &quot;coding&quot;:  [&#xD;&#xA;            {&#xD;&#xA;                &quot;system&quot;: &quot;http://snomed.info/sct&quot;,&#xD;&#xA;                &quot;code&quot;: &quot;736253002&quot;,&#xD;&#xA;                &quot;display&quot;: &quot;Mental health crisis plan&quot;&#xD;&#xA;            }&#xD;&#xA;        ]&#xD;&#xA;    }&#xD;&#xA;```" />
+      <min value="1" />
       <mustSupport value="true" />
       <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="DocumentC80Type" />
+        </extension>
         <strength value="extensible" />
         <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDigital-DocumentType" />
       </binding>
@@ -52,11 +56,9 @@
     <element id="DocumentReference.subject">
       <path value="DocumentReference.subject" />
       <definition value="A reference to a [NHSDigital-Patient](https://simplifier.net/resolve?target=simplifier&amp;scope=uk.nhsdigital.r4&amp;canonical=https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient) and/or an identifier reference using NHSNumber. Only traced NHS Numbers may be used. &#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA;    &quot;subject&quot;: {&#xD;&#xA;        &quot;reference&quot;: &quot;urn:uuid:edea022a-2d81-11eb-adc1-0242ac120002&quot;,&#xD;&#xA;        &quot;identifier&quot;: [&#xD;&#xA;            {&#xD;&#xA;                &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/nhs-number&quot;,&#xD;&#xA;                &quot;value&quot;: &quot;9912003888&quot;&#xD;&#xA;            }&#xD;&#xA;        ]&#xD;&#xA;    },&#xD;&#xA;&#xD;&#xA;```&#xD;&#xA;&#xD;&#xA;Preference is for a reference to a Patient resource, however current document flows may only support limited metadata." />
+      <min value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device" />
-        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Practitioner" />
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient" />
       </type>
       <constraint>
@@ -64,14 +66,12 @@
         <severity value="warning" />
         <human value="subject - An identifier reference or resource reference must be provided" />
         <expression value="(reference.exists() or (identifier.exists()))" />
-        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-DocumentReference" />
       </constraint>
       <constraint>
         <key value="patient-nhs" />
         <severity value="error" />
         <human value="Supplied NHS Number is outside the English and Welsh NHS Number range or length of the number is wrong." />
         <expression value="identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').exists().not() or (identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').exists()  and identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').value.matches('^([456789]{1}[0-9]{9})$'))" />
-        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-DocumentReference" />
       </constraint>
       <mustSupport value="true" />
     </element>
@@ -103,6 +103,7 @@
     <element id="DocumentReference.custodian">
       <path value="DocumentReference.custodian" />
       <definition value="An identifier reference to an ODS Organisation. &#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA;        &quot;custodian&quot;: {&#xD;&#xA;                &quot;identifier&quot;: {&#xD;&#xA;                    &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/ods-organization-code&quot;,&#xD;&#xA;                    &quot;value&quot;: &quot;VNE51&quot;&#xD;&#xA;                },&#xD;&#xA;                &quot;display&quot;: &quot;The Pharmacy System&quot;&#xD;&#xA;        }&#xD;&#xA;```" />
+      <min value="1" />
       <type>
         <code value="Reference" />
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Organization" />
@@ -142,6 +143,9 @@
       <definition value="It is recommended a care setting code should be provided" />
       <mustSupport value="true" />
       <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="DocumentC80PracticeSetting" />
+        </extension>
         <strength value="extensible" />
         <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDigital-CareSettingType" />
       </binding>
