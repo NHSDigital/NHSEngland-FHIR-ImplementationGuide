@@ -101,6 +101,13 @@
                         "reference": "#author"
                     }
                 ],
+                "custodian" :{
+                    "identifier": {
+                        "system": "https://fhir.nhs.uk/Id/ods-organization-code",
+                        "value": "RR8"
+                    },
+                    "display": "LEEDS TEACHING HOSPITALS NHS TRUST"
+                },
                 "date": "2021-09-17T12:20:00.742000+00:00",
                 "content": [
                     {

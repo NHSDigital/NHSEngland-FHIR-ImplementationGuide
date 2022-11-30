@@ -3,8 +3,7 @@
     "id": "9f7d3feb-5442-4df7-83ef-7afd2e99f0e5",
     "meta": {
         "versionId": "17111f10-d73b-476c-b7dc-9556f1920293",
-        "lastUpdated": "2022-03-23T12:07:48.215+00:00",
-        "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-Task-PatientCare"
+        "lastUpdated": "2022-03-23T12:07:48.215+00:00"
     },
     "status": "requested",
     "intent": "order",

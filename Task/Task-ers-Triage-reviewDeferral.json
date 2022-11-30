@@ -31,7 +31,7 @@
     "resourceType": "Task",
     "focus": {
         "type": "ServiceRequest",
-        "reference": "ServiceRequest/be735573-9f24-42e1-ae98-af89d632e4bf"
+        "reference": "https://api.ers-service.nhs.uk/FHIR/R4/ServiceRequest/be735573-9f24-42e1-ae98-af89d632e4bf"
     },
     "status": "completed",
     "intent": "proposal",

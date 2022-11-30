@@ -105,7 +105,7 @@
                 },
                 {
                     "type": "MedicationStatement",
-                    "profile": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-MedicationStatement"
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationStatement"
                 },
                 {
                     "type": "MessageDefinition",

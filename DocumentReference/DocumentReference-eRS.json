@@ -4,6 +4,18 @@
     "status": "current",
     "date": "2021-09-17T12:20:00.742000+00:00",
     "description": "upload.png",
+    "subject": {
+        "identifier": {
+            "system": "https://fhir.nhs.uk/Id/nhs-number",
+            "value": "9912003888"
+        }
+    },
+    "custodian": {
+        "identifier": {
+            "system": "https://fhir.nhs.uk/Id/ods-organization-code",
+            "value": "RGD"
+        }
+    },
     "content": [
         {
             "attachment": {
@@ -27,7 +39,7 @@
         }
     ],
     "context": {
-        "related" : [
+        "related": [
             {
                 "type": "ServiceRequest",
                 "reference": "ServiceRequest/be735573-9f24-42e1-ae98-af89d632e4bf"

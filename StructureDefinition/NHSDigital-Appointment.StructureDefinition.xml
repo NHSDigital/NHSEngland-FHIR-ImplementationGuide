@@ -188,8 +188,6 @@
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient" />
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Location" />
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Practitioner" />
-        <aggregation value="contained" />
-        <aggregation value="referenced" />
       </type>
       <constraint>
         <key value="participant" />

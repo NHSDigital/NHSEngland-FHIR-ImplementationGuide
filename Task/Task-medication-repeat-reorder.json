@@ -23,7 +23,7 @@
         ]
     },
     "focus": {
-        "reference": "MedicationRequest/ee86a018-779c-4809-999f-a9d89cdfd30f"
+        "reference": "https://api.service.nhs.uk/electronic-prescriptions/MedicationRequest/ee86a018-779c-4809-999f-a9d89cdfd30f"
     },
     "for": {
         "identifier": {

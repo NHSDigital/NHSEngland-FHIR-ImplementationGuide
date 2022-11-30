@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Flag" />
+  <name value="NHSDigitalFlag" />
+  <status value="draft" />
+  <fhirVersion value="4.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Flag" />
+  <baseDefinition value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Flag" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Flag.subject">
+      <path value="Flag.subject" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient" />
+        <aggregation value="referenced" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>
