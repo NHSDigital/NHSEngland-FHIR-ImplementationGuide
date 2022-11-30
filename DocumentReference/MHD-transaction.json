@@ -79,9 +79,6 @@
                 "code": "82242000"
               }
             ]
-          },
-          "sourcePatientInfo": {
-            "reference": "urn:uuid:70af3411-70c8-476d-a6dd-b0b3e06ca991"
           }
         }
       },
