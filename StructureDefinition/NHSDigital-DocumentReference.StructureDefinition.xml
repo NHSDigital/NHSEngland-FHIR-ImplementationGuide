@@ -52,6 +52,7 @@
       <type>
         <code value="Reference" />
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient" />
+        <aggregation value="referenced" />
       </type>
       <constraint>
         <key value="patient-reference" />
@@ -95,7 +96,6 @@
     <element id="DocumentReference.custodian">
       <path value="DocumentReference.custodian" />
       <definition value="An identifier reference to an ODS Organisation. &#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA;        &quot;custodian&quot;: {&#xD;&#xA;                &quot;identifier&quot;: {&#xD;&#xA;                    &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/ods-organization-code&quot;,&#xD;&#xA;                    &quot;value&quot;: &quot;VNE51&quot;&#xD;&#xA;                },&#xD;&#xA;                &quot;display&quot;: &quot;The Pharmacy System&quot;&#xD;&#xA;        }&#xD;&#xA;```" />
-      <min value="1" />
       <type>
         <code value="Reference" />
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Organization" />

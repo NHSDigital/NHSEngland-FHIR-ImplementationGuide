@@ -198,6 +198,7 @@
       <type>
         <code value="Reference" />
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient" />
+        <aggregation value="referenced" />
       </type>
       <constraint>
         <key value="patient-reference" />
