@@ -230,6 +230,7 @@
       <type>
         <code value="Reference" />
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Encounter" />
+        <aggregation value="referenced" />
       </type>
     </element>
     <element id="ServiceRequest.authoredOn">
@@ -246,6 +247,7 @@
         <code value="Reference" />
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole-Minimal" />
         <aggregation value="contained" />
+        <aggregation value="referenced" />
       </type>
       <mustSupport value="true" />
     </element>
