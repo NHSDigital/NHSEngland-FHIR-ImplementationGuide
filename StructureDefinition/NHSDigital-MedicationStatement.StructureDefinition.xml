@@ -24,10 +24,11 @@
       <path value="MedicationStatement.medication[x]" />
       <type>
         <code value="CodeableConcept" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationRequest-CodeableConcept" />
       </type>
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/ValueSet/NHSDigital-MedicationCode" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationRequest-Medication" />
         <aggregation value="referenced" />
       </type>
     </element>

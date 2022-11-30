@@ -18,91 +18,78 @@
         <severity value="error" />
         <human value="medication[x] - Only one of medicationReference or medicationCodeableConcept should be provided" />
         <expression value="(medicationReference.exists() and medicationCodeableConcept.exists().not()) or (medicationReference.exists().not() and medicationCodeableConcept.exists())" />
-        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationRequest" />
       </constraint>
       <constraint>
         <key value="eps-5" />
         <severity value="error" />
         <human value="Extension(responsiblePractitioner) - An identifier or resource reference must be provided" />
         <expression value="extension('https://fhir.nhs.uk/StructureDefinition/Extension-DM-ResponsiblePractitioner').exists().not() or (extension('https://fhir.nhs.uk/StructureDefinition/Extension-DM-ResponsiblePractitioner').value.reference.exists() or extension('https://fhir.nhs.uk/StructureDefinition/Extension-DM-ResponsiblePractitioner').value.system.exists())" />
-        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationRequest" />
       </constraint>
       <constraint>
         <key value="eps-6" />
         <severity value="error" />
         <human value="Extension repeatInformation is required for continuous and continuous-repeat-dispensing MedicationRequests. It is not required for actue MedicationRequests" />
         <expression value="(courseOfTherapyType.coding.code.startsWith('acute') and extension('https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-MedicationRepeatInformation').exists().not()) or  ((courseOfTherapyType.coding.code.startsWith('continuous')) and extension('https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-MedicationRepeatInformation').exists())" />
-        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationRequest" />
       </constraint>
       <constraint>
         <key value="eps-7" />
         <severity value="warning" />
         <human value="For continuous-repeat-dispensing intent must be reflex-order or original-order" />
         <expression value="(courseOfTherapyType.coding.code != 'continuous-repeat-dispensing') or ((courseOfTherapyType.coding.code = 'continuous-repeat-dispensing') and ((intent ='original-order') or (intent ='reflex-order')))" />
-        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationRequest" />
       </constraint>
       <constraint>
         <key value="eps-8" />
         <severity value="error" />
         <human value="For continuous intent must be instance-order or original-order" />
         <expression value="(courseOfTherapyType.coding.code != 'continuous') or ((courseOfTherapyType.coding.code = 'continuous') and ((intent ='original-order') or (intent ='instance-order')))" />
-        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationRequest" />
       </constraint>
       <constraint>
         <key value="eps-9" />
         <severity value="warning" />
         <human value="dispenseRequest.numberOfRepeatsAllowed should be populated for continuous and continuous-repeat-dispensing MedicationRequests." />
         <expression value="(courseOfTherapyType.coding.code.startsWith('acute')) or  (courseOfTherapyType.coding.code.startsWith('continuous') and dispenseRequest.exists() and dispenseRequest.numberOfRepeatsAllowed.exists())" />
-        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationRequest" />
       </constraint>
       <constraint>
         <key value="eps-10" />
         <severity value="error" />
         <human value="For continuous-repeat-dispensing (intent=reflex-order) basedOn must be populated" />
         <expression value="(courseOfTherapyType.coding.code = 'acute') or (courseOfTherapyType.coding.code = 'continuous') or (courseOfTherapyType.coding.code = 'continuous-repeat-dispensing' and intent !='reflex-order') or (courseOfTherapyType.coding.code = 'continuous-repeat-dispensing' and intent ='reflex-order' and dispenseRequest.exists() and basedOn.exists())" />
-        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationRequest" />
       </constraint>
       <constraint>
         <key value="eps-11" />
         <severity value="error" />
         <human value="For continuous-repeat-dispensing (intent=reflex-order) or continous orders, numberOfRepeatsAllowed must be empty or equal to 0" />
         <expression value="(courseOfTherapyType.coding.code = 'acute') or (courseOfTherapyType.coding.code = 'continuous-repeat-dispensing' and intent !='reflex-order') or ((courseOfTherapyType.coding.code = 'continuous' or (courseOfTherapyType.coding.code = 'continuous-repeat-dispensing' and intent ='reflex-order')) and (dispenseRequest.numberOfRepeatsAllowed.exists().not() or (dispenseRequest.numberOfRepeatsAllowed.exists() and dispenseRequest.numberOfRepeatsAllowed = 0)))" />
-        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationRequest" />
       </constraint>
       <constraint>
         <key value="eps-12" />
         <severity value="warning" />
         <human value="For continuous issues basedOn should be populated" />
         <expression value="(courseOfTherapyType.coding.code = 'acute') or (courseOfTherapyType.coding.code = 'continuous-repeat-dispensing') or (courseOfTherapyType.coding.code = 'continuous' and dispenseRequest.exists() and basedOn.exists())" />
-        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationRequest" />
       </constraint>
       <constraint>
         <key value="eps-13" />
         <severity value="error" />
         <human value="Extension repeatInformation.numberOfPrescriptionsIssued should not be present for continuous-repeat-dispensing that are not intent=reflex-order" />
         <expression value="(courseOfTherapyType.coding.code != 'continuous-repeat-dispensing') or (courseOfTherapyType.coding.code = 'continuous-repeat-dispensing' and intent='reflex-order') or (courseOfTherapyType.coding.code = 'continuous-repeat-dispensing' and intent!='reflex-order' and extension('https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-MedicationRepeatInformation').exists() and extension('https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-MedicationRepeatInformation').extension('numberOfPrescriptionsIssued').exists().not())" />
-        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationRequest" />
       </constraint>
       <constraint>
         <key value="eps-14" />
         <severity value="error" />
         <human value="Extension repeatInformation.numberOfPrescriptionsIssued should be present for continuous-repeat-dispensing that have intent=reflex-order" />
         <expression value="(courseOfTherapyType.coding.code != 'continuous-repeat-dispensing') or (courseOfTherapyType.coding.code = 'continuous-repeat-dispensing' and intent != 'reflex-order') or (courseOfTherapyType.coding.code = 'continuous-repeat-dispensing' and intent='reflex-order' and extension('https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-MedicationRepeatInformation').exists() and extension('https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-MedicationRepeatInformation').extension('numberOfPrescriptionsIssued').exists())" />
-        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationRequest" />
       </constraint>
       <constraint>
         <key value="eps-15" />
         <severity value="warning" />
         <human value="Extension repeatInformation.numberOfPrescriptionsIssued is recommend to be present for continuous issues" />
         <expression value="(courseOfTherapyType.coding.code != 'continuous') or (courseOfTherapyType.coding.code = 'continuous' and extension('https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-MedicationRepeatInformation').exists() and extension('https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-MedicationRepeatInformation').extension('numberOfPrescriptionsIssued').exists())" />
-        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationRequest" />
       </constraint>
       <constraint>
         <key value="eps-16" />
         <severity value="error" />
         <human value="Extension repeatInformation.numberOfPrescriptionsIssued should not be present for acute issues" />
         <expression value="(courseOfTherapyType.coding.code != 'acute') or (courseOfTherapyType.coding.code = 'acute' and extension('https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-MedicationRepeatInformation').exists().not())" />
-        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationRequest" />
       </constraint>
     </element>
     <element id="MedicationRequest.extension">
@@ -241,6 +228,9 @@
       <definition value="This is generally only used for exception statuses such as `suspended` or `cancelled`. It is the clinical status reason for the cancellation.&#xD;&#xA;&#xD;&#xA;This is mandatory for 'prescription-order-update' messages.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;statusReason&quot;: {&#xD;&#xA;    &quot;coding&quot;: [&#xD;&#xA;        {&#xD;&#xA;            &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/medicationrequest-status-reason&quot;,&#xD;&#xA;            &quot;code&quot;: &quot;0001&quot;,&#xD;&#xA;            &quot;display&quot;: &quot;Prescribing Error&quot;&#xD;&#xA;        }&#xD;&#xA;    ]&#xD;&#xA;},&#xD;&#xA;```" />
       <mustSupport value="true" />
       <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="MedicationRequestStatusReason" />
+        </extension>
         <strength value="required" />
         <valueSet value="https://fhir.nhs.uk/ValueSet/DM-medicationrequest-status-reason" />
       </binding>
@@ -335,6 +325,9 @@
       </type>
       <mustSupport value="true" />
       <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="MedicationCode" />
+        </extension>
         <strength value="extensible" />
         <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDigital-MedicationCode" />
       </binding>
@@ -395,7 +388,6 @@
         <severity value="error" />
         <human value="requester - An identifier reference or resource reference must be provided" />
         <expression value="(reference.exists() or (identifier.exists()))" />
-        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationRequest" />
       </constraint>
       <mustSupport value="true" />
     </element>
@@ -421,7 +413,6 @@
         <severity value="error" />
         <human value="recorder - An identifier reference or resource reference must be provided" />
         <expression value="(reference.exists() or (identifier.exists()))" />
-        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationRequest" />
       </constraint>
     </element>
     <element id="MedicationRequest.basedOn">
@@ -523,6 +514,9 @@
       <min value="1" />
       <mustSupport value="true" />
       <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="MedicationRequestCourseOfTherapy" />
+        </extension>
         <strength value="required" />
         <valueSet value="https://fhir.nhs.uk/ValueSet/DM-medicationrequest-course-of-therapy" />
       </binding>
@@ -697,6 +691,9 @@
       <type>
         <code value="boolean" />
       </type>
+      <binding>
+        <strength value="example" />
+      </binding>
     </element>
     <element id="MedicationRequest.eventHistory">
       <path value="MedicationRequest.eventHistory" />
