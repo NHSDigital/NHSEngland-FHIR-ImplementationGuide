@@ -14,10 +14,6 @@
   <baseDefinition value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-OperationOutcome" />
   <derivation value="constraint" />
   <differential>
-    <element id="OperationOutcome">
-      <path value="OperationOutcome" />
-      <definition value="A collection of error, warning, or information messages that result from a system action.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;{&#xD;&#xA;    &quot;resourceType&quot;: &quot;OperationOutcome&quot;,&#xD;&#xA;    &quot;id&quot;: &quot;1a388581-dbbe-43e3-9054-f5976c0245e5&quot;,&#xD;&#xA;    &quot;issue&quot;:  [&#xD;&#xA;        {&#xD;&#xA;            &quot;severity&quot;: &quot;information&quot;,&#xD;&#xA;            &quot;code&quot;: &quot;processing&quot;,&#xD;&#xA;            &quot;diagnostics&quot;: &quot;This element does not match any known slice defined in the profile https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient&quot;,&#xD;&#xA;            &quot;location&quot;:  [&#xD;&#xA;                &quot;Patient.identifier[1]&quot;,&#xD;&#xA;                &quot;Line 1, Col 651&quot;&#xD;&#xA;            ]&#xD;&#xA;        },&#xD;&#xA;        {&#xD;&#xA;            &quot;severity&quot;: &quot;error&quot;,&#xD;&#xA;            &quot;code&quot;: &quot;processing&quot;,&#xD;&#xA;            &quot;diagnostics&quot;: &quot;Patient.gender: minimum required = 1, but only found 0 (from https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient)&quot;,&#xD;&#xA;            &quot;location&quot;:  [&#xD;&#xA;                &quot;Patient&quot;,&#xD;&#xA;                &quot;Line 1, Col 37&quot;&#xD;&#xA;            ]&#xD;&#xA;        }&#xD;&#xA;    ]&#xD;&#xA;}&#xD;&#xA;```" />
-    </element>
     <element id="OperationOutcome.id">
       <path value="OperationOutcome.id" />
       <short value="uniqueRequestID" />
@@ -25,6 +21,7 @@
     </element>
     <element id="OperationOutcome.meta">
       <path value="OperationOutcome.meta" />
+      <definition value="The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA; &quot;meta&quot; : {&#xD;&#xA;        &quot;lastUpdated&quot; : &quot;2021-04-21T16:58:00+00:00&quot;&#xD;&#xA;    }&#xD;&#xA;```" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
@@ -56,25 +53,32 @@
     <element id="OperationOutcome.issue">
       <path value="OperationOutcome.issue" />
       <constraint>
-        <key value="nhds-errrorcode" />
+        <key value="nhsd-errrorcode" />
         <severity value="error" />
         <human value="An NHS Digital error or warning code is required" />
-        <expression value="(issue.severity = 'information') or ((issue.severity != 'information') and issue.details.empty().not())" />
+        <expression value="(severity = 'information') or ((severity != 'information') and details.empty().not())" />
         <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-OperationOutcome" />
       </constraint>
       <mustSupport value="true" />
     </element>
     <element id="OperationOutcome.issue.severity">
       <path value="OperationOutcome.issue.severity" />
+      <definition value="Indicates whether the issue indicates a variation from successful processing.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA; &quot;severity&quot;: &quot;error&quot;,&#xD;&#xA;```" />
       <mustSupport value="true" />
     </element>
     <element id="OperationOutcome.issue.code">
       <path value="OperationOutcome.issue.code" />
+      <definition value="Describes the type of the issue. The system that creates an OperationOutcome SHALL choose the most applicable code from the IssueType value set, and may additional provide its own code for the error in the details element.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA; &quot;code&quot;: &quot;processing&quot;,&#xD;&#xA;```" />
       <mustSupport value="true" />
     </element>
     <element id="OperationOutcome.issue.details">
       <path value="OperationOutcome.issue.details" />
+      <definition value="Additional details about the error. This may be a text description of the error or a system code that identifies the error.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;details&quot;: {&#xD;&#xA;                &quot;coding&quot;: [&#xD;&#xA;                    {&#xD;&#xA;                        &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/Spine-ErrorOrWarningCode&quot;,&#xD;&#xA;                        &quot;code&quot;: &quot;INVALID_VALUE&quot;,&#xD;&#xA;                        &quot;display&quot;: &quot;Invalid value&quot;&#xD;&#xA;                    }&#xD;&#xA;                ]&#xD;&#xA;            }&#xD;&#xA;```" />
       <mustSupport value="true" />
+      <binding>
+        <strength value="preferred" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDigital-OperationOutcome-Codes" />
+      </binding>
     </element>
     <element id="OperationOutcome.issue.details.coding">
       <path value="OperationOutcome.issue.details.coding" />
@@ -83,7 +87,7 @@
       <mustSupport value="true" />
       <binding>
         <strength value="extensible" />
-        <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDigital-OperationOutcome-Codes|1.0.0" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDigital-OperationOutcome-Codes" />
       </binding>
     </element>
     <element id="OperationOutcome.issue.details.coding.system">
@@ -101,7 +105,7 @@
     </element>
     <element id="OperationOutcome.issue.location">
       <path value="OperationOutcome.issue.location" />
-      <definition value="Use the JSON Pointer standard to describe the source of the error - e.g. parameter, or payload value." />
+      <definition value="Use the JSON Pointer standard to describe the source of the error - e.g. parameter, or payload value.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;location&quot;: [&#xD;&#xA;                &quot;Patient&quot;,&#xD;&#xA;                &quot;Line 1, Col 37&quot;&#xD;&#xA;            ]```" />
       <mustSupport value="true" />
     </element>
     <element id="OperationOutcome.issue.expression">

@@ -4,27 +4,8 @@
   <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Organization" />
   <name value="NHSDigitalOrganization" />
   <status value="draft" />
+  <purpose value="NHS Digital generic definintion of the data requirements for Organization." />
   <fhirVersion value="4.0.1" />
-  <mapping>
-    <identity value="v2" />
-    <uri value="http://hl7.org/v2" />
-    <name value="HL7 v2 Mapping" />
-  </mapping>
-  <mapping>
-    <identity value="rim" />
-    <uri value="http://hl7.org/v3" />
-    <name value="RIM Mapping" />
-  </mapping>
-  <mapping>
-    <identity value="servd" />
-    <uri value="http://www.omg.org/spec/ServD/1.0/" />
-    <name value="ServD" />
-  </mapping>
-  <mapping>
-    <identity value="w5" />
-    <uri value="http://hl7.org/fhir/fivews" />
-    <name value="FiveWs Pattern Mapping" />
-  </mapping>
   <kind value="resource" />
   <abstract value="false" />
   <type value="Organization" />
@@ -49,7 +30,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-ODS-OrganisationRealtionships" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-ODS-OrganisationRelationships" />
       </type>
     </element>
     <element id="Organization.identifier">
@@ -62,7 +43,6 @@
     <element id="Organization.identifier:odsOrganisationCode">
       <path value="Organization.identifier" />
       <sliceName value="odsOrganisationCode" />
-      <min value="1" />
     </element>
     <element id="Organization.identifier:odsSiteCode">
       <path value="Organization.identifier" />
@@ -72,7 +52,6 @@
     <element id="Organization.type">
       <path value="Organization.type" />
       <definition value="The Organisation types **MUST** be present and comes from the valueSet.&#xD;&#xA;`type` will also include details on when these roles applied, the current status and a boolean to indicate the Organisations primary role. These extensions are for API's produced by NHS Digital one, the are not expected to be present in resources created by NHS providers or suppliers.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA; &quot;type&quot;:  [&#xD;&#xA;        {&#xD;&#xA;            &quot;extension&quot;:  [&#xD;&#xA;                {&#xD;&#xA;                    &quot;url&quot;: &quot;https://fhir.nhs.uk/StructureDefinition/Extension-ODS-Organization-Role&quot;,&#xD;&#xA;                    &quot;extension&quot;:  [&#xD;&#xA;                        {&#xD;&#xA;                            &quot;url&quot;: &quot;primaryRole&quot;,&#xD;&#xA;                            &quot;valueBoolean&quot;: true&#xD;&#xA;                        },&#xD;&#xA;                        {&#xD;&#xA;                            &quot;url&quot;: &quot;status&quot;,&#xD;&#xA;                            &quot;valueString&quot;: &quot;Active&quot;&#xD;&#xA;                        }&#xD;&#xA;                    ]&#xD;&#xA;                },&#xD;&#xA;                {&#xD;&#xA;                    &quot;url&quot;: &quot;https://fhir.nhs.uk/StructureDefinition/Extension-ODS-Organization-Role-ActivePeriod&quot;,&#xD;&#xA;                    &quot;extension&quot;:  [&#xD;&#xA;                        {&#xD;&#xA;                            &quot;url&quot;: &quot;activePeriod&quot;,&#xD;&#xA;                            &quot;valuePeriod&quot;: {&#xD;&#xA;                                &quot;start&quot;: &quot;2020-04-01&quot;&#xD;&#xA;                            }&#xD;&#xA;                        },&#xD;&#xA;                        {&#xD;&#xA;                            &quot;url&quot;: &quot;dateType&quot;,&#xD;&#xA;                            &quot;valueString&quot;: &quot;Operational&quot;&#xD;&#xA;                        }&#xD;&#xA;                    ]&#xD;&#xA;                }&#xD;&#xA;            ],&#xD;&#xA;            &quot;coding&quot;:  [&#xD;&#xA;                {&#xD;&#xA;                    &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/organisation-role&quot;,&#xD;&#xA;                    &quot;code&quot;: &quot;198&quot;,&#xD;&#xA;                    &quot;display&quot;: &quot;NHS TRUST SITE&quot;&#xD;&#xA;                }&#xD;&#xA;            ]&#xD;&#xA;        }&#xD;&#xA;    ],&#xD;&#xA;```" />
-      <min value="1" />
       <binding>
         <strength value="required" />
         <valueSet value="https://fhir.nhs.uk/ValueSet/organisation-role" />
@@ -115,21 +94,33 @@
     <element id="Organization.name">
       <path value="Organization.name" />
       <definition value="The ODS/SDS name of the Organisation&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA;    &quot;name&quot;: &quot;NHS NIGHTINGALE HOSPITAL YORKSHIRE AND THE HUMBER&quot;&#xD;&#xA;```" />
-      <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Organization.telecom">
       <path value="Organization.telecom" />
-      <definition value="Contact phone numbers and address of the organisation.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA;    &quot;telecom&quot;:  [&#xD;&#xA;        {&#xD;&#xA;            &quot;system&quot;: &quot;fax&quot;,&#xD;&#xA;            &quot;value&quot;: &quot;0113 242 6496&quot;,&#xD;&#xA;            &quot;use&quot;: &quot;work&quot;&#xD;&#xA;        },&#xD;&#xA;        {&#xD;&#xA;            &quot;system&quot;: &quot;phone&quot;,&#xD;&#xA;            &quot;value&quot;: &quot;0113 243 3144&quot;,&#xD;&#xA;            &quot;use&quot;: &quot;work&quot;&#xD;&#xA;        }&#xD;&#xA;    ],&#xD;&#xA;    &quot;address&quot;:  [&#xD;&#xA;        {&#xD;&#xA;            &quot;line&quot;:  [&#xD;&#xA;                &quot;KINGS ROAD&quot;&#xD;&#xA;            ],&#xD;&#xA;            &quot;city&quot;: &quot;HARROGATE&quot;,&#xD;&#xA;            &quot;postalCode&quot;: &quot;HG1 5LA&quot;,&#xD;&#xA;            &quot;country&quot;: &quot;ENGLAND&quot;&#xD;&#xA;        }&#xD;&#xA;    ],&#xD;&#xA;    &quot;partOf&quot;: {&#xD;&#xA;        &quot;reference&quot;: &quot;https://directory.spineservices.nhs.uk/R4/Organization/RR805&quot;,&#xD;&#xA;        &quot;identifier&quot;: {&#xD;&#xA;            &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/ods-organization-code&quot;,&#xD;&#xA;            &quot;value&quot;: &quot;RR8&quot;&#xD;&#xA;        }&#xD;&#xA;    }&#xD;&#xA;```." />
+      <definition value="Contact phone numbers and address of the organisation.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA;    &quot;telecom&quot;:  [&#xD;&#xA;        {&#xD;&#xA;            &quot;system&quot;: &quot;fax&quot;,&#xD;&#xA;            &quot;value&quot;: &quot;0113 242 6496&quot;,&#xD;&#xA;            &quot;use&quot;: &quot;work&quot;&#xD;&#xA;        },&#xD;&#xA;        {&#xD;&#xA;            &quot;system&quot;: &quot;phone&quot;,&#xD;&#xA;            &quot;value&quot;: &quot;0113 243 3144&quot;,&#xD;&#xA;            &quot;use&quot;: &quot;work&quot;&#xD;&#xA;        }&#xD;&#xA;    ],&#xD;&#xA;    &quot;address&quot;:  [&#xD;&#xA;        {&#xD;&#xA;            &quot;line&quot;:  [&#xD;&#xA;                &quot;KINGS ROAD&quot;&#xD;&#xA;            ],&#xD;&#xA;            &quot;city&quot;: &quot;HARROGATE&quot;,&#xD;&#xA;            &quot;postalCode&quot;: &quot;HG1 5LA&quot;,&#xD;&#xA;            &quot;country&quot;: &quot;ENGLAND&quot;&#xD;&#xA;        }&#xD;&#xA;    ],&#xD;&#xA;    &quot;partOf&quot;: {&#xD;&#xA;        &quot;reference&quot;: &quot;https://directory.spineservices.nhs.uk/R4/Organization/RR805&quot;,&#xD;&#xA;        &quot;identifier&quot;: {&#xD;&#xA;            &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/ods-organization-code&quot;,&#xD;&#xA;            &quot;value&quot;: &quot;RR8&quot;&#xD;&#xA;        }&#xD;&#xA;    }&#xD;&#xA;```" />
       <mustSupport value="true" />
     </element>
     <element id="Organization.telecom.value">
       <path value="Organization.telecom.value" />
       <min value="1" />
     </element>
+     <element id="Organization.address">
+      <path value="Organization.address" />
+      <definition value="Contact phone numbers and address of the organisation.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA;    &quot;telecom&quot;:  [&#xD;&#xA;        {&#xD;&#xA;            &quot;system&quot;: &quot;fax&quot;,&#xD;&#xA;            &quot;value&quot;: &quot;0113 242 6496&quot;,&#xD;&#xA;            &quot;use&quot;: &quot;work&quot;&#xD;&#xA;        },&#xD;&#xA;        {&#xD;&#xA;            &quot;system&quot;: &quot;phone&quot;,&#xD;&#xA;            &quot;value&quot;: &quot;0113 243 3144&quot;,&#xD;&#xA;            &quot;use&quot;: &quot;work&quot;&#xD;&#xA;        }&#xD;&#xA;    ],&#xD;&#xA;    &quot;address&quot;:  [&#xD;&#xA;        {&#xD;&#xA;            &quot;line&quot;:  [&#xD;&#xA;                &quot;KINGS ROAD&quot;&#xD;&#xA;            ],&#xD;&#xA;            &quot;city&quot;: &quot;HARROGATE&quot;,&#xD;&#xA;            &quot;postalCode&quot;: &quot;HG1 5LA&quot;,&#xD;&#xA;            &quot;country&quot;: &quot;ENGLAND&quot;&#xD;&#xA;        }&#xD;&#xA;    ],&#xD;&#xA;    &quot;partOf&quot;: {&#xD;&#xA;        &quot;reference&quot;: &quot;https://directory.spineservices.nhs.uk/R4/Organization/RR805&quot;,&#xD;&#xA;        &quot;identifier&quot;: {&#xD;&#xA;            &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/ods-organization-code&quot;,&#xD;&#xA;            &quot;value&quot;: &quot;RR8&quot;&#xD;&#xA;        }&#xD;&#xA;    }&#xD;&#xA;```" />
+      <mustSupport value="true" />
+    </element>
     <element id="Organization.partOf">
       <path value="Organization.partOf" />
-      <definition value="Recommended mandatory for primary care organisations." />
+      <definition value="Recommended mandatory for primary care organisations.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA;    &quot;telecom&quot;:  [&#xD;&#xA;        {&#xD;&#xA;            &quot;system&quot;: &quot;fax&quot;,&#xD;&#xA;            &quot;value&quot;: &quot;0113 242 6496&quot;,&#xD;&#xA;            &quot;use&quot;: &quot;work&quot;&#xD;&#xA;        },&#xD;&#xA;        {&#xD;&#xA;            &quot;system&quot;: &quot;phone&quot;,&#xD;&#xA;            &quot;value&quot;: &quot;0113 243 3144&quot;,&#xD;&#xA;            &quot;use&quot;: &quot;work&quot;&#xD;&#xA;        }&#xD;&#xA;    ],&#xD;&#xA;    &quot;address&quot;:  [&#xD;&#xA;        {&#xD;&#xA;            &quot;line&quot;:  [&#xD;&#xA;                &quot;KINGS ROAD&quot;&#xD;&#xA;            ],&#xD;&#xA;            &quot;city&quot;: &quot;HARROGATE&quot;,&#xD;&#xA;            &quot;postalCode&quot;: &quot;HG1 5LA&quot;,&#xD;&#xA;            &quot;country&quot;: &quot;ENGLAND&quot;&#xD;&#xA;        }&#xD;&#xA;    ],&#xD;&#xA;    &quot;partOf&quot;: {&#xD;&#xA;        &quot;reference&quot;: &quot;https://directory.spineservices.nhs.uk/R4/Organization/RR805&quot;,&#xD;&#xA;        &quot;identifier&quot;: {&#xD;&#xA;            &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/ods-organization-code&quot;,&#xD;&#xA;            &quot;value&quot;: &quot;RR8&quot;&#xD;&#xA;        }&#xD;&#xA;    }&#xD;&#xA;```" />    
+      <mustSupport value="true" />
+       <constraint>
+        <key value="nhsd-6" />
+        <severity value="warning" />
+        <human value="partOf.display - a display name should be provided" />
+        <expression value="display.exists()" />
+        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Organization" />
+      </constraint>
     </element>
     <element id="Organization.partOf.identifier">
       <path value="Organization.partOf.identifier" />
@@ -145,13 +136,7 @@
     </element>
     <element id="Organization.partOf.display">
       <path value="Organization.partOf.display" />
-      <constraint>
-        <key value="nhsd-6" />
-        <severity value="warning" />
-        <human value="partOf.display - a display name should be provided" />
-        <expression value="(display.exists())" />
-        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Organization" />
-      </constraint>
+     
     </element>
   </differential>
 </StructureDefinition>

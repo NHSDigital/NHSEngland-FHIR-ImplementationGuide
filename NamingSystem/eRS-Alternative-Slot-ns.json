@@ -1,7 +1,7 @@
 {
     "resourceType": "NamingSystem",
     "id": "ers-alternative-slot",
-    "name": "eRSAlternativeSlot",
+    "name": "ERSAlternativeSlot",
     "status": "draft",
     "kind": "identifier",
     "date": "2022-03-02",
@@ -11,7 +11,7 @@
     "uniqueId":  [
         {
             "type": "uri",
-            "value": "https://fhir.nhs.uk/Id/alternative-slot",
+            "value": "https://fhir.nhs.uk/CodeSystem/unique-slot-reference-number",
             "preferred": true
         }
     ]

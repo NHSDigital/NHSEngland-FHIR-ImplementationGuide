@@ -1,0 +1,83 @@
+{
+    "resourceType": "ValueSet",
+    "id": "NHSDigital-MedicationCode",
+    "url": "https://fhir.nhs.uk/ValueSet/NHSDigital-MedicationCode",
+    "version": "2.1.0",
+    "name": "NHSDigitalMedicationCode",
+    "title": "NHS Digital Medication Code",
+    "status": "active",
+    "date": "2022-08-03",
+    "publisher": "NHS Digital",
+    "contact":  [
+        {
+            "name": "NHS Digital",
+            "telecom":  [
+                {
+                    "system": "email",
+                    "value": "interoperabilityteam@nhs.net",
+                    "use": "work",
+                    "rank": 1
+                }
+            ]
+        }
+    ],
+    "description": "Override of UKCore-MedicationCode to support existing implementations using UK/dm+d SNOMED CT. A set of codes from the following dm+d (dictionary of medicines and devices) concept classes that define a medication: \n - VTM – Virtual Therapeutic Moiety;\n - VMP – Virtual Medicinal Product;\n - AMP – Actual Medicinal Product;\n - VMPP – Virtual Medicinal Product Pack;\n - AMPP – Actual Medicinal Product Pack",
+    "copyright": "Copyright © 2021+ NHS Digital Licensed under the Apache License, Version 2.0 (the \"License\"); you may not use this file except in compliance with the License. You may obtain a copy of the License at  http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. HL7® FHIR® standard Copyright © 2011+ HL7 The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at  https://www.hl7.org/fhir/license.html.",
+    "compose": {
+        "include":  [
+            {
+                "system": "https://dmd.nhs.uk",
+                "filter":  [
+                    {
+                        "property": "parent",
+                        "op": "=",
+                        "value": "VTM"
+                    }
+                ]
+            },
+            {
+                "system": "https://dmd.nhs.uk",
+                "filter":  [
+                    {
+                        "property": "parent",
+                        "op": "=",
+                        "value": "VMP"
+                    }
+                ]
+            },
+            {
+                "system": "https://dmd.nhs.uk",
+                "filter":  [
+                    {
+                        "property": "parent",
+                        "op": "=",
+                        "value": "AMP"
+                    }
+                ]
+            },
+            {
+                "system": "https://dmd.nhs.uk",
+                "filter":  [
+                    {
+                        "property": "parent",
+                        "op": "=",
+                        "value": "VMPP"
+                    }
+                ]
+            },
+            {
+                "system": "https://dmd.nhs.uk",
+                "filter":  [
+                    {
+                        "property": "parent",
+                        "op": "=",
+                        "value": "AMPP"
+                    }
+                ]
+            },
+            {
+                "system": "http://snomed.info/sct"
+            }
+        ]
+    }
+}

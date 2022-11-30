@@ -1,0 +1,45 @@
+{
+  "resourceType": "Appointment",
+  "id": "2c539951-0819-4ffb-ab77-b7cbdc5d9c9a",
+  "meta": {
+    "versionId": "f3cb9ac5-0628-4e57-821d-ad8e6835fc73",
+    "lastUpdated": "2022-03-28T07:26:41.055+00:00",
+    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-Appointment-PatientCare"
+  },
+  "status": "booked",
+  "basedOn": [
+    {
+      "reference": "https://server.fire.ly/ServiceRequest/6c2a1f9b-2517-419d-9099-591ba63f176c"
+    }
+  ],
+  "start": "2021-06-13T12:30:00+00:00",
+  "end": "2021-06-13T12:45:00+00:00",
+  "slot": [
+    {
+      "identifier": {
+        "system": "https://fhir.nhs.uk/Id/unique-slot-reference-number",
+        "value": "USRN-12000001"
+      }
+    }
+  ],
+  "participant": [
+    {
+      "actor": {
+        "identifier": {
+          "system": "https://fhir.nhs.uk/Id/ers-service",
+          "value": "11002"
+        }
+      },
+      "status": "accepted"
+    },
+    {
+      "actor": {
+        "identifier": {
+          "system": "https://fhir.nhs.uk/Id/nhs-number",
+          "value": "9912003888"
+        }
+      },
+      "status": "accepted"
+    }
+  ]
+}

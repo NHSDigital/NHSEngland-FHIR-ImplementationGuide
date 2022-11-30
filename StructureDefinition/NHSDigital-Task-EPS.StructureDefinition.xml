@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="790504c4-6314-4c50-a3e8-909ee027e020" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Task-EPS" />
+  <name value="NHSDigitalTaskEPS" />
+  <status value="draft" />
+  <purpose value="Constraint profile for Electronic Prescription System" />
+  <fhirVersion value="4.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Task" />
+  <baseDefinition value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Task" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Task.identifier">
+      <path value="Task.identifier" />
+      <min value="1" />
+    </element>
+    <element id="Task.identifier.system">
+      <path value="Task.identifier.system" />
+      <min value="1" />
+    </element>
+    <element id="Task.identifier.value">
+      <path value="Task.identifier.value" />
+      <min value="1" />
+    </element>
+    <element id="Task.groupIdentifier.system">
+      <path value="Task.groupIdentifier.system" />
+      <min value="1" />
+    </element>
+    <element id="Task.groupIdentifier.value">
+      <path value="Task.groupIdentifier.value" />
+      <min value="1" />
+    </element>
+    <element id="Task.statusReason">
+      <path value="Task.statusReason" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Task.statusReason.coding">
+      <path value="Task.statusReason.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="Task.statusReason.coding:withdrawReason">
+      <path value="Task.statusReason.coding" />
+      <sliceName value="withdrawReason" />
+      <max value="1" />
+    </element>
+    <element id="Task.statusReason.coding:withdrawReason.system">
+      <path value="Task.statusReason.coding.system" />
+      <fixedUri value="https://fhir.nhs.uk/CodeSystem/EPS-task-dispense-withdraw-reason" />
+    </element>
+    <element id="Task.statusReason.coding:dispenseReturn">
+      <path value="Task.statusReason.coding" />
+      <sliceName value="dispenseReturn" />
+      <max value="1" />
+    </element>
+    <element id="Task.statusReason.coding:dispenseReturn.system">
+      <path value="Task.statusReason.coding.system" />
+      <fixedUri value="https://fhir.nhs.uk/CodeSystem/EPS-task-dispense-return-status-reason" />
+    </element>
+    <element id="Task.statusReason.coding:medicationRequestStatusReason">
+      <path value="Task.statusReason.coding" />
+      <sliceName value="medicationRequestStatusReason" />
+      <max value="1" />
+    </element>
+    <element id="Task.statusReason.coding:medicationRequestStatusReason.system">
+      <path value="Task.statusReason.coding.system" />
+      <fixedUri value="https://fhir.nhs.uk/CodeSystem/medicationrequest-status-reason" />
+    </element>
+    <element id="Task.businessStatus">
+      <path value="Task.businessStatus" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/DM-task-business-status" />
+      </binding>
+    </element>
+    <element id="Task.businessStatus.coding">
+      <path value="Task.businessStatus.coding" />
+      <min value="1" />
+    </element>
+    <element id="Task.businessStatus.coding.system">
+      <path value="Task.businessStatus.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="Task.businessStatus.coding.code">
+      <path value="Task.businessStatus.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Task.businessStatus.coding.display">
+      <path value="Task.businessStatus.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="Task.code.coding">
+      <path value="Task.code.coding" />
+      <min value="1" />
+    </element>
+    <element id="Task.code.coding.system">
+      <path value="Task.code.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="Task.code.coding.code">
+      <path value="Task.code.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Task.code.coding.display">
+      <path value="Task.code.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="Task.focus">
+      <path value="Task.focus" />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Bundle-FHIRMessage" />
+      </type>
+    </element>
+    <element id="Task.focus.identifier.system">
+      <path value="Task.focus.identifier.system" />
+      <min value="1" />
+    </element>
+    <element id="Task.focus.identifier.value">
+      <path value="Task.focus.identifier.value" />
+      <min value="1" />
+    </element>
+    <element id="Task.authoredOn">
+      <path value="Task.authoredOn" />
+      <min value="1" />
+    </element>
+    <element id="Task.requester">
+      <path value="Task.requester" />
+      <definition value="Who is created the Request or the Event. In NHSDigital API's this **SHOULD** always be a PractitionerRole role reference.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA; &quot;requester&quot;: {&#xD;&#xA;        &quot;reference&quot;: &quot;#requester&quot;&#xD;&#xA;    },&#xD;&#xA;```&#xD;&#xA;&#xD;&#xA;This will reference a `contained` PractitionerRole (note: this resource only contains limited user metadata such as ODS Code, professional code and SDS User Profile Id). This resource should not hold data which is held in SDS, only enough information to identify the SDS Entry,&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;{&#xD;&#xA;    &quot;resourceType&quot;: &quot;Task&quot;,&#xD;&#xA;    &quot;id&quot;: &quot;bd1ca5c4-ff49-4f2a-9db4-f5dda0112084&quot;,&#xD;&#xA;    &quot;meta&quot;: {&#xD;&#xA;        &quot;lastUpdated&quot;: &quot;2016-07-11T11:07:22+00:00&quot;&#xD;&#xA;    },&#xD;&#xA;    &quot;contained&quot;: [&#xD;&#xA;       {&#xD;&#xA;            &quot;resourceType&quot;: &quot;PractitionerRole&quot;,&#xD;&#xA;            &quot;id&quot;: &quot;requester&quot;,&#xD;&#xA;            &quot;identifier&quot;: [&#xD;&#xA;                {&#xD;&#xA;                    &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/sds-role-profile-id&quot;,&#xD;&#xA;                    &quot;value&quot;: &quot;641555508106&quot;&#xD;&#xA;                }&#xD;&#xA;            ],&#xD;&#xA;            &quot;code&quot;: [&#xD;&#xA;                {&#xD;&#xA;                    &quot;coding&quot;: [&#xD;&#xA;                        {&#xD;&#xA;                            &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/NHSDigital-SDS-JobRoleCode&quot;,&#xD;&#xA;                            &quot;code&quot;: &quot;S0030:G0100:R0620&quot;&#xD;&#xA;                        }&#xD;&#xA;                    ]&#xD;&#xA;                }&#xD;&#xA;            ],&#xD;&#xA;            &quot;practitioner&quot;: {&#xD;&#xA;                   &quot;identifier&quot;: {&#xD;&#xA;                      &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/sds-user-id&quot;,&#xD;&#xA;                       &quot;value&quot;: &quot;7654321&quot;&#xD;&#xA;                    },&#xD;&#xA;                   &quot;display&quot;: &quot;Mr Peter Potion&quot;&#xD;&#xA;            },&#xD;&#xA;            &quot;organization&quot;: {&#xD;&#xA;                &quot;identifier&quot;: {&#xD;&#xA;                    &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/ods-organization-code&quot;,&#xD;&#xA;                    &quot;value&quot;: &quot;VNE51&quot;&#xD;&#xA;                },&#xD;&#xA;                &quot;display&quot;: &quot;SIMPLE PHARMACY&quot;&#xD;&#xA;            },&#xD;&#xA;            &quot;telecom&quot;: [&#xD;&#xA;                {&#xD;&#xA;                    &quot;system&quot;: &quot;phone&quot;,&#xD;&#xA;                    &quot;use&quot;: &quot;work&quot;,&#xD;&#xA;                    &quot;value&quot;: &quot;01234567890&quot;&#xD;&#xA;                }&#xD;&#xA;            ]&#xD;&#xA;        }&#xD;&#xA;    ],&#xD;&#xA;```" />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole-SDS" />
+      </type>
+    </element>
+    <element id="Task.requester.reference">
+      <path value="Task.requester.reference" />
+      <min value="1" />
+    </element>
+    <element id="Task.owner">
+      <path value="Task.owner" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Organization" />
+      </type>
+    </element>
+    <element id="Task.owner.identifier">
+      <path value="Task.owner.identifier" />
+      <min value="1" />
+    </element>
+    <element id="Task.input.extension">
+      <path value="Task.input.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="Task.input.extension:dispensingInformation">
+      <path value="Task.input.extension" />
+      <sliceName value="dispensingInformation" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-EPS-DispensingInformation" />
+      </type>
+    </element>
+    <element id="Task.output">
+      <path value="Task.output" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Task.output.extension">
+      <path value="Task.output.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="Task.output.extension:dispensingReleaseInformation">
+      <path value="Task.output.extension" />
+      <sliceName value="dispensingReleaseInformation" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-EPS-DispensingReleaseInformation" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

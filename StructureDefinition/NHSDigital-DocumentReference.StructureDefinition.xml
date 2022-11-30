@@ -21,6 +21,7 @@
     </element>
     <element id="DocumentReference.type">
       <path value="DocumentReference.type" />
+      <definition value="Specifies the particular kind of document referenced  (e.g. History and Physical, Discharge Summary, Progress Note). This usually equates to the purpose of making the document referenced.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;type&quot;: {&#xD;&#xA;        &quot;coding&quot;:  [&#xD;&#xA;            {&#xD;&#xA;                &quot;system&quot;: &quot;http://snomed.info/sct&quot;,&#xD;&#xA;                &quot;code&quot;: &quot;736253002&quot;,&#xD;&#xA;                &quot;display&quot;: &quot;Mental health crisis plan&quot;&#xD;&#xA;            }&#xD;&#xA;        ]&#xD;&#xA;    }&#xD;&#xA;```" />
       <mustSupport value="true" />
       <binding>
         <strength value="extensible" />
@@ -45,16 +46,24 @@
     </element>
     <element id="DocumentReference.category">
       <path value="DocumentReference.category" />
+      <definition value="A categorization for the type of document referenced - helps for indexing and searching. This may be implied by or derived from the code specified in the DocumentReference.type.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;category&quot;:  [&#xD;&#xA;        {&#xD;&#xA;            &quot;coding&quot;:  [&#xD;&#xA;                {&#xD;&#xA;                    &quot;system&quot;: &quot;http://snomed.info/sct&quot;,&#xD;&#xA;                    &quot;code&quot;: &quot;734163000&quot;,&#xD;&#xA;                    &quot;display&quot;: &quot;Care plan&quot;&#xD;&#xA;                }&#xD;&#xA;            ]&#xD;&#xA;        }&#xD;&#xA;    ]&#xD;&#xA;```" />
       <mustSupport value="true" />
     </element>
     <element id="DocumentReference.subject">
       <path value="DocumentReference.subject" />
       <definition value="A reference to a [NHSDigital-Patient](https://simplifier.net/resolve?target=simplifier&amp;scope=uk.nhsdigital.r4&amp;canonical=https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient) and/or an identifier reference using NHSNumber. Only traced NHS Numbers may be used. &#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA;    &quot;subject&quot;: {&#xD;&#xA;        &quot;reference&quot;: &quot;urn:uuid:edea022a-2d81-11eb-adc1-0242ac120002&quot;,&#xD;&#xA;        &quot;identifier&quot;: [&#xD;&#xA;            {&#xD;&#xA;                &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/nhs-number&quot;,&#xD;&#xA;                &quot;value&quot;: &quot;9912003888&quot;&#xD;&#xA;            }&#xD;&#xA;        ]&#xD;&#xA;    },&#xD;&#xA;&#xD;&#xA;```&#xD;&#xA;&#xD;&#xA;Preference is for a reference to a Patient resource, however current document flows may only support limited metadata." />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device" />
+        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Practitioner" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient" />
+      </type>
       <constraint>
         <key value="patient-reference" />
         <severity value="warning" />
-        <human value="subject - An identifier reference plus a display name or resource reference must be provided" />
-        <expression value="(reference.exists() or (identifier.exists() and display.exists()))" />
+        <human value="subject - An identifier reference or resource reference must be provided" />
+        <expression value="(reference.exists() or (identifier.exists()))" />
         <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-DocumentReference" />
       </constraint>
       <constraint>
@@ -73,6 +82,10 @@
     <element id="DocumentReference.subject.identifier.value">
       <path value="DocumentReference.subject.identifier.value" />
       <min value="1" />
+    </element>
+    <element id="DocumentReference.date">
+      <path value="DocumentReference.date" />
+      <mustSupport value="true" />
     </element>
     <element id="DocumentReference.author">
       <path value="DocumentReference.author" />
@@ -98,6 +111,7 @@
     </element>
     <element id="DocumentReference.content">
       <path value="DocumentReference.content" />
+      <definition value="The document and format referenced. There may be multiple content element repetitions, each with a different format.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;content&quot;: [&#xD;&#xA;        {&#xD;&#xA;            &quot;attachment&quot;: {&#xD;&#xA;                &quot;extension&quot;: [&#xD;&#xA;                    {&#xD;&#xA;                        &quot;url&quot;: &quot;https://fhir.nhs.uk/STU3/StructureDefinition/Extension-eRS-AttachedBy&quot;,&#xD;&#xA;                        &quot;valueReference&quot;: {&#xD;&#xA;                            &quot;identifier&quot;: {&#xD;&#xA;                                &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/sds-user-id&quot;,&#xD;&#xA;                                &quot;value&quot;: &quot;987654321&quot;&#xD;&#xA;                            }&#xD;&#xA;                        }&#xD;&#xA;                    }&#xD;&#xA;                ],&#xD;&#xA;                &quot;contentType&quot;: &quot;application/pdf&quot;,&#xD;&#xA;                &quot;url&quot;: &quot;Binary/att-70001-70002&quot;,&#xD;&#xA;                &quot;size&quot;: 18592,&#xD;&#xA;                &quot;title&quot;: &quot;upload.png&quot;,&#xD;&#xA;                &quot;creation&quot;: &quot;2022-01-31&quot;&#xD;&#xA;            }&#xD;&#xA;        }&#xD;&#xA;    ]&#xD;&#xA;```" />
       <mustSupport value="true" />
     </element>
     <element id="DocumentReference.content.attachment">
@@ -120,6 +134,7 @@
     </element>
     <element id="DocumentReference.context">
       <path value="DocumentReference.context" />
+      <definition value="The clinical context in which the document was prepared.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;context&quot;: {&#xD;&#xA;        &quot;related&quot; : [&#xD;&#xA;            {&#xD;&#xA;                &quot;type&quot;: &quot;ServiceRequest&quot;,&#xD;&#xA;                &quot;reference&quot;: &quot;ServiceRequest/be735573-9f24-42e1-ae98-af89d632e4bf&quot;&#xD;&#xA;            },&#xD;&#xA;            {&#xD;&#xA;                &quot;type&quot;: &quot;Task&quot;,&#xD;&#xA;                &quot;reference&quot;: &quot;Task/f66e4cd7-207c-4b7d-9ac9-80630c451125&quot;&#xD;&#xA;            }&#xD;&#xA;        ]&#xD;&#xA;    }&#xD;&#xA;```" />
       <mustSupport value="true" />
     </element>
     <element id="DocumentReference.context.practiceSetting">
@@ -139,6 +154,7 @@
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-ServiceRequest" />
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Task" />
       </type>
+      <mustSupport value="true" />
     </element>
   </differential>
 </StructureDefinition>

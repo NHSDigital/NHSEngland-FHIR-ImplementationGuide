@@ -1,0 +1,29 @@
+{
+  "resourceType": "ObservationDefinition",
+  "id": "snomed-50373000",
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "50373000",
+        "display": "Body height measure"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "8302-2",
+        "display": "Body height"
+      }
+    ]
+  },
+  "quantitativeDetails": {
+    "customaryUnit": {
+      "coding": [
+        {
+          "system": "http://unitsofmeasure.org",
+          "code": "cm",
+          "display": "centimeter"
+        }
+      ]
+    }
+  }
+}

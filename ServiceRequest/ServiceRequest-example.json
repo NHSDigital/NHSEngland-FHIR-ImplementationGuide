@@ -73,58 +73,6 @@
             "reference": "urn:uuid:2ec99e82-a0af-4b70-bd53-1869d84b2ad1"
         }
     ],
-    "reasonCode": [
-        {
-            "coding": [
-                {
-                    "system": "https://fhir.nhs.uk/Id/pathways-sd-code",
-                    "code": "4389",
-                    "display": "ED post tonsillectomy bleeding"
-                }
-            ],
-            "text": "Pathways Assessment SD Code"
-        },
-        {
-            "coding": [
-                {
-                    "system": "https://fhir.nhs.uk/Id/pathways-dx-code",
-                    "code": "DX02",
-                    "display": "The individual needs to attend an emergency treatment centre within 1 hour."
-                }
-            ],
-            "text": "Pathways Assessment DX Code"
-        },
-        {
-            "coding": [
-                {
-                    "system": "https://fhir.nhs.uk/Id/pathways-template",
-                    "code": "PA21",
-                    "display": "Chest and Upper Back Pain"
-                }
-            ],
-            "text": "Presenting Complaint - selected Pathway or Template"
-        },
-        {
-            "coding": [
-                {
-                    "system": "https://fhir.nhs.uk/Id/pathways-sg-code",
-                    "code": "1010",
-                    "display": "Allergic Reaction"
-                }
-            ],
-            "text": "Pathways Assessment SG Code - Chief Complaint"
-        },
-        {
-            "coding": [
-                {
-                    "system": "https://fhir.nhs.uk/Id/ValueSetTBC",
-                    "code": "PlanRequest",
-                    "display": "Plan or Requested Action"
-                }
-            ],
-            "text": "Physical examination of reported chest pain"
-        }
-    ],
     "reasonReference": [
         {
             "reference": "urn:uuid:f2d2a6f8-1ef5-40a6-a697-849bb1264a91",

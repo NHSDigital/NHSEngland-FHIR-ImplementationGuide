@@ -1,0 +1,50 @@
+<MessageDefinition xmlns="http://hl7.org/fhir">
+    <id value="8f02bed0-5634-4ff6-93d5-f21f55bd79af" />
+    <url value="https://fhir.nhs.uk/MessageDefinition/encounter" />
+    <identifier>
+        <system value="https://tools.ietf.org/html/rfc4122" />
+        <value value="8f02bed0-5634-4ff6-93d5-f21f55bd79af" />
+    </identifier>
+    <version value="1.0.0" />
+    <title value="Patient Encounter" />
+     <name value="PatientEncounter" />
+    <status value="active" />
+    <date value="2022-03-25" />
+    <eventCoding>
+        <system value="https://fhir.nhs.uk/CodeSystem/message-event" />
+        <code value="encounter" />
+        <display value="Patient Encounter" />
+    </eventCoding>
+    <description value="Patient Encounter"/>
+    <category value="consequence" />
+    <focus>
+        <code value="Encounter" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Encounter" />
+        <min value="1" />
+        <max value="1" />
+    </focus>
+    <focus>
+        <code value="Patient" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient" />
+        <min value="1" />
+        <max value="1" />
+    </focus>
+    <focus>
+        <code value="Observation" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Observation" />
+        <min value="0" />
+        <max value="*" />
+    </focus>
+    <focus>
+        <code value="QuestionnaireResponse" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-QuestionnaireResponse" />
+        <min value="0" />
+        <max value="*" />
+    </focus>
+     <focus>
+        <code value="Condition" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Condition" />
+        <min value="0" />
+        <max value="*" />
+    </focus>
+</MessageDefinition>

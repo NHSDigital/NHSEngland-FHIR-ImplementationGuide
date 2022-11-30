@@ -20,6 +20,15 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
   <derivation value="constraint" />
   <differential>
+    <element id="Extension">
+      <path value="Extension" />
+      <constraint>
+        <key value="eps-cd1" />
+        <severity value="error" />
+        <human value="Extension(controlledDrug) - For schedule 2 or 3 Controlled Drugs, the quantity must be expressed in words" />
+        <expression value="(((extension('schedule').value.code='CD2' and extension('quantityWords').exists()) or (extension('schedule').value.code='CD3' and extension('quantityWords').exists()) or (extension('schedule').value.code != 'CD2' and extension('schedule').value.code != 'CD3')) and extension('scheduled').exists()) or (extension('scheduled').exists().not())" />
+      </constraint>
+    </element>
     <element id="Extension.extension">
       <path value="Extension.extension" />
       <slicing>
@@ -29,10 +38,12 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <min value="0" />
     </element>
     <element id="Extension.extension:quantityWords">
       <path value="Extension.extension" />
       <sliceName value="quantityWords" />
+      <min value="0" />
       <max value="1" />
     </element>
     <element id="Extension.extension:quantityWords.url">
@@ -49,7 +60,7 @@
     <element id="Extension.extension:schedule">
       <path value="Extension.extension" />
       <sliceName value="schedule" />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
       <binding>
         <strength value="required" />

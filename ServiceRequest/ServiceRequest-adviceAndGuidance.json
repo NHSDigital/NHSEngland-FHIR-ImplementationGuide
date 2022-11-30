@@ -74,7 +74,7 @@
     "performerType": {
         "coding": [
             {
-                "system": "https://fhir.nhs.uk/CodeSystem/NHSDigital-Specialty",
+                "system": "https://fhir.nhs.uk/CodeSystem/eRS-Specialty",
                 "code": "GENERAL_MEDICINE"
             }
         ],

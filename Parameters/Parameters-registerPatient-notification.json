@@ -1,0 +1,56 @@
+{
+    "resourceType": "Parameters",
+    "id": "e86539aa-2635-4948-b266-8e309e746af8",
+    "parameter": [
+        {
+            "name": "identifier",
+            "valueIdentifier": {
+                "value": "e86539aa-2635-4948-b266-8e309e746af8"
+            }
+        },
+        {
+            "name": "type",
+            "valueCode": "event-notification"
+        },
+        {
+            "name": "notificationEvent",
+            "part": [
+                {
+                    "name": "timestamp",
+                    "valueInstant": "2021-01-08T15:13:00+00:00"
+                },
+                {
+                    "name": "eventNumber",
+                    "valueInteger": "1"
+                },
+                {
+                    "name": "focus",
+                    "valueReference": {
+                        "type": "Patient",
+                        "reference": "https://api.england.nhs.uk/personnel-demographics/FHIR/R4/9000000009"
+                    }
+                },
+                {
+                    "name": "additionalContext",
+                    "valueReference": {
+                        "type": "Patient",
+                        "identifier": {
+                            "system": "https://fhir.nhs.uk/Id/nhs-number",
+                            "value": "9000000009"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name" : "subscription",
+            "valueReference" : {
+                "reference": "https://spine.nhs.uk/Subscription/5c4c8f04-1c36-4b8d-94e1-4e4b08e873d8"
+            }
+        },
+        {
+            "name": "topic",
+            "valueCanonical" : "https://fhir.nhs.uk/SubscriptionTopic/patient-registered"
+        }
+    ]
+}

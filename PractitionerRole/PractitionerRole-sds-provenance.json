@@ -1,0 +1,41 @@
+{
+    "resourceType": "PractitionerRole",
+    "id": "56166769-c1c4-4d07-afa8-132b5dfca645",
+    "identifier": [
+        {
+            "system": "https://fhir.nhs.uk/Id/sds-role-profile-id",
+            "value": "454567759542"
+        }
+    ],
+    "practitioner": {
+        "identifier": {
+            "system": "https://fhir.hl7.org.uk/Id/gmc-number",
+            "value": "C9876543"
+          },
+          "display": "Dr Smith"
+    },
+    "organization": {
+        "identifier": {
+            "system": "https://fhir.nhs.uk/Id/ods-organization-code",
+            "value": "RBA"
+          },
+        "display": "TAUNTON AND SOMERSET NHS FOUNDATION TRUST"
+    },
+    "code": [
+        {
+            "coding": [
+                {
+                    "system": "https://fhir.nhs.uk/CodeSystem/NHSDigital-SDS-JobRoleCode",
+                    "code": "S0030:G0100:R0620"
+                }
+            ]
+        }
+    ],
+    "telecom": [
+        {
+            "system": "phone",
+            "value": "01234567890",
+            "use": "work"
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+{
+    "resourceType": "ValueSet",
+    "id": "28eff1b7-803a-4a9d-83ae-a0e67a8000c6",
+    "url": "https://fhir.nhs.uk/ValueSet/eRS-AppointmentType",
+    "version": "1.0.0",
+    "name": "ERSAppointmentType",
+    "title": "eRS Appointment Type",
+    "status": "active",
+    "date": "2022-03-14",
+    "publisher": "NHS Digital",
+    "contact":  [
+        {
+            "name": "Interoperability Team",
+            "telecom":  [
+                {
+                    "system": "email",
+                    "value": "interoperabilityteam@nhs.net",
+                    "use": "work"
+                }
+            ]
+        }
+    ],
+    "description": "A ValueSet to describe the type of appointment",
+    "copyright": "Copyright © 2022 NHS Digital",
+    "compose": {
+        "include":  [
+            {
+                "system": "https://fhir.nhs.uk/CodeSystem/eRS-AppointmentType"
+            }
+        ]
+    }
+}

@@ -11,6 +11,10 @@
   <baseDefinition value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-ServiceRequest" />
   <derivation value="constraint" />
   <differential>
+    <element id="ServiceRequest">
+      <path value="ServiceRequest" />
+      <definition value="A constaint profile for use in NHS Patient Wayfinder" />
+    </element>
     <element id="ServiceRequest.extension">
       <path value="ServiceRequest.extension" />
       <slicing>
@@ -20,12 +24,12 @@
         </discriminator>
         <rules value="open" />
       </slicing>
-      <min value="0" />
+      <min value="3" />
     </element>
     <element id="ServiceRequest.extension:ERSServiceRequestState">
       <path value="ServiceRequest.extension" />
       <sliceName value="ERSServiceRequestState" />
-      <min value="0" />
+      <min value="1" />
     </element>
     <element id="ServiceRequest.extension:ERSServiceRequestState.extension">
       <path value="ServiceRequest.extension.extension" />
@@ -46,12 +50,12 @@
     <element id="ServiceRequest.extension:portalLink">
       <path value="ServiceRequest.extension" />
       <sliceName value="portalLink" />
-      <min value="0" />
+      <min value="1" />
     </element>
     <element id="ServiceRequest.extension:serviceRequestPriority">
       <path value="ServiceRequest.extension" />
       <sliceName value="serviceRequestPriority" />
-      <min value="0" />
+      <min value="1" />
     </element>
     <element id="ServiceRequest.identifier:UBRN">
       <path value="ServiceRequest.identifier" />
@@ -62,8 +66,16 @@
       <path value="ServiceRequest.priority" />
       <min value="1" />
     </element>
+    <element id="ServiceRequest.subject.identifier">
+      <path value="ServiceRequest.subject.identifier" />
+      <min value="1" />
+    </element>
     <element id="ServiceRequest.authoredOn">
       <path value="ServiceRequest.authoredOn" />
+      <min value="1" />
+    </element>
+    <element id="ServiceRequest.requester.reference">
+      <path value="ServiceRequest.requester.reference" />
       <min value="1" />
     </element>
   </differential>

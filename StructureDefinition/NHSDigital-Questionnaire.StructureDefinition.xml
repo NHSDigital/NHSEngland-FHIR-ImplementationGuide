@@ -13,15 +13,37 @@
   <differential>
     <element id="Questionnaire.url">
       <path value="Questionnaire.url" />
-      <min value="1" />
+      <definition value="An absolute URI that is used to identify this questionnaire when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which at which an authoritative instance of this questionnaire is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the questionnaire is stored on different servers.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;   &quot;url&quot;: &quot;https://fhir.nhs.uk/Questionnaire/COVIDVaccinationMedicalExemption&quot;,&#xD;&#xA;```" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Questionnaire.title">
+      <path value="Questionnaire.title" />
+      <definition value="A short, descriptive, user-friendly title for the questionnaire.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA; &quot;title&quot;: &quot;COVID Vaccinnation Medical Exemption&quot;,&#xD;&#xA;```" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Questionnaire.status">
+      <path value="Questionnaire.status" />
+      <mustSupport value="true" />
     </element>
     <element id="Questionnaire.subjectType">
       <path value="Questionnaire.subjectType" />
+      <definition value="The types of subjects that can be the subject of responses created for the questionnaire.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA; &quot;subjectType&quot;: [&#xD;&#xA;        &quot;Patient&quot;&#xD;&#xA;    ],&#xD;&#xA;```" />
       <min value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="Questionnaire.item">
       <path value="Questionnaire.item" />
+      <comment value="The content of the questionnaire is constructed from an ordered, hierarchical collection of items.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;item&quot;: [&#xD;&#xA;        {&#xD;&#xA;            &quot;type&quot;: &quot;choice&quot;,&#xD;&#xA;            &quot;required&quot;: true,&#xD;&#xA;            &quot;linkId&quot;: &quot;exemptionStatus&quot;,&#xD;&#xA;            &quot;text&quot;: &quot;Exemption status&quot;,&#xD;&#xA;            &quot;answerOption&quot;: [&#xD;&#xA;                {&#xD;&#xA;                    &quot;valueCoding&quot;: {&#xD;&#xA;                        &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/covid-vaccination-medical-exemption&quot;,&#xD;&#xA;                        &quot;code&quot;: &quot;1&quot;,&#xD;&#xA;                        &quot;display&quot;: &quot;Approved: Exemption from COVID vaccination&quot;&#xD;&#xA;                    }&#xD;&#xA;                },&#xD;&#xA;                {&#xD;&#xA;                    &quot;valueCoding&quot;: {&#xD;&#xA;                        &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/covid-vaccination-medical-exemption&quot;,&#xD;&#xA;                        &quot;code&quot;: &quot;2&quot;,&#xD;&#xA;                        &quot;display&quot;: &quot;Approved: Exemption from COVID vaccination and testing&quot;&#xD;&#xA;                    }&#xD;&#xA;                },&#xD;&#xA;                {&#xD;&#xA;                    &quot;valueCoding&quot;: {&#xD;&#xA;                        &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/covid-vaccination-medical-exemption&quot;,&#xD;&#xA;                        &quot;code&quot;: &quot;3&quot;,&#xD;&#xA;                        &quot;display&quot;: &quot;Rejected: Exemption from COVID vaccination&quot;&#xD;&#xA;                    }&#xD;&#xA;                },&#xD;&#xA;                {&#xD;&#xA;                    &quot;valueCoding&quot;: {&#xD;&#xA;                        &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/covid-vaccination-medical-exemption&quot;,&#xD;&#xA;                        &quot;code&quot;: &quot;4&quot;,&#xD;&#xA;                        &quot;display&quot;: &quot;Rejected: Exemption from COVID vaccination and testing&quot;&#xD;&#xA;                    }&#xD;&#xA;                }&#xD;&#xA;            ]```" />
       <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Questionnaire.item.linkId">
+      <path value="Questionnaire.item.linkId" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Questionnaire.item.type">
+      <path value="Questionnaire.item.type" />
+      <mustSupport value="true" />
     </element>
   </differential>
 </StructureDefinition>

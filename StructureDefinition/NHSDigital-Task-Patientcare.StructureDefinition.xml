@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Task-PatientCare" />
+  <name value="NHSDigitalTaskPatientCare" />
+  <status value="draft" />
+  <purpose value="Profile on NHSDigital-Task for NHS App/e-RS PatientCare" />
+  <fhirVersion value="4.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Task" />
+  <baseDefinition value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Task" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Task.code">
+      <path value="Task.code" />
+      <min value="1" />
+    </element>
+    <element id="Task.focus">
+      <path value="Task.focus" />
+      <min value="1" />
+    </element>
+    <element id="Task.owner">
+      <path value="Task.owner" />
+      <min value="1" />
+    </element>
+    <element id="Task.owner.identifier">
+      <path value="Task.owner.identifier" />
+      <min value="1" />
+    </element>
+    <element id="Task.owner.identifier.system">
+      <path value="Task.owner.identifier.system" />
+      <fixedUri value="https://fhir.nhs.uk/Id/ers-service" />
+    </element>
+    <element id="Task.restriction.period">
+      <path value="Task.restriction.period" />
+      <min value="1" />
+    </element>
+    <element id="Task.restriction.period.end">
+      <path value="Task.restriction.period.end" />
+      <min value="1" />
+    </element>
+  </differential>
+</StructureDefinition>

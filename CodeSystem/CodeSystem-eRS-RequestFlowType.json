@@ -1,0 +1,41 @@
+{
+    "resourceType": "CodeSystem",
+    "id": "eRS-RequestFlowType",
+    "url": "https://fhir.nhs.uk/CodeSystem/eRS-RequestFlowType",
+    "version": "1.0.0",
+    "name": "ERSRequestFlowType",
+    "title": "eRS Request Flow Type",
+    "status": "active",
+    "date": "2022-03-14",
+    "publisher": "NHS Digital",
+    "contact":  [
+        {
+            "name": "Interoperability Team",
+            "telecom":  [
+                {
+                    "system": "email",
+                    "value": "interoperabilityteam@nhs.net",
+                    "use": "work"
+                }
+            ]
+        }
+    ],
+    "description": "A Code System for eRS Request Flow Type",
+    "copyright": "Copyright © 2022 NHS Digital",
+    "caseSensitive": true,
+    "content": "complete",
+    "concept":  [
+        {
+            "code": "REVIEW",
+            "display": "A service that reviews referrals, without the support or need for any appointment with the patient to be made"
+        },
+        {
+            "code": "BOOKABLE",
+            "display": "A service which supports a patient appointment"
+        },
+        {
+            "code": "ADVICE_AND_GUIDANCE",
+            "display": "A service which can discuss the patient and receive guidance rather than a patient attending an appointment"
+        }
+    ]
+}

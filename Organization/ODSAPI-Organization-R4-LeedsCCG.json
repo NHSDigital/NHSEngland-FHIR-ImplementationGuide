@@ -1,0 +1,95 @@
+{
+    "resourceType": "Organization",
+    "id": "15F",
+    "extension": [
+        {
+            "url": "https://fhir.nhs.uk/StructureDefinition/Extension-ODS-OrganisationRelationships",
+            "extension": [
+                {
+                    "url": "nationalGrouping",
+                    "valueIdentifier": {
+                        "system": "https://fhir.nhs.uk/Id/ods-organization-code",
+                        "value": "Q72"
+                    }
+                }
+            ]
+        }
+    ],
+    "identifier": [
+        {
+            "system": "https://fhir.nhs.uk/Id/ods-organization-code",
+            "value": "15F"
+        }
+    ],
+    "active": true,
+    "type": [
+        {
+            "extension": [
+                {
+                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-ODS-Organization-Role",
+                    "extension": [
+                        {
+                            "url": "primaryRole",
+                            "valueBoolean": true
+                        },
+                        {
+                            "url": "status",
+                            "valueString": "Active"
+                        }
+                    ]
+                },
+                {
+                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-ODS-Organization-Role-ActivePeriod",
+                    "extension": [
+                        {
+                            "url": "activePeriod",
+                            "valuePeriod": {
+                                "start": "2017-12-12"
+                            }
+                        },
+                        {
+                            "url": "dateType",
+                            "valueString": "Operational"
+                        }
+                    ]
+                },
+                {
+                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-ODS-Organization-Role-ActivePeriod",
+                    "extension": [
+                        {
+                            "url": "activePeriod",
+                            "valuePeriod": {
+                                "start": "2018-04-01"
+                            }
+                        },
+                        {
+                            "url": "dateType",
+                            "valueString": "Legal"
+                        }
+                    ]
+                }
+            ],
+            "coding": [
+                {
+                    "system": "https://fhir.nhs.uk/CodeSystem/organisation-role",
+                    "code": "98",
+                    "display": "CLINICAL COMMISSIONING GROUP"
+                }
+            ]
+        }
+    ],
+    "name": "NHS LEEDS CCG",
+    "address": [
+        {
+            "line": [
+                "SUITES 2 - 4 WIRA HOUSE",
+                "RING ROAD",
+                "WEST PARK"
+            ],
+            "city": "LEEDS",
+            "district": "WEST YORKSHIRE",
+            "postalCode": "LS16 6EB",
+            "country": "ENGLAND"
+        }
+    ]
+}

@@ -1,0 +1,43 @@
+{
+    "resourceType": "Communication",
+    "id":"6337df17-a260-44fd-be4c-92a6aa49d059",    
+    "status": "completed",
+    "identifier": [
+        {
+            "system": "https://tools.ietf.org/html/rfc4122",
+            "value": "6337df17-a260-44fd-be4c-92a6aa49d059"
+        }
+    ],
+    "instantiatesCanonical" : [
+        "https://example.fhir.nhs.uk/Questionnaire/Simple-Blood-Pressure"
+    ],
+    "payload": [
+        {
+            "contentString": "You are due a 50 year old check up. Please contact the surgery for an appointment or complete the attached form."
+        },
+        {
+            "contentReference": {
+                "reference" : "https://example.fhir.nhs.uk/Questionnaire/Simple-Blood-Pressure"
+            }
+        }
+    ],
+    "sent": "2022-01-11T16:40:00+00:00",
+    "received": "2022-01-11T16:41:00+00:00",
+    "sender": {
+        "type": "Organization",
+        "identifier": {
+            "system": "https://fhir.nhs.uk/Id/ods-organization-code",
+            "value": "B82041"
+        },
+        "display": "Beech Tree Medical Centre"
+    },
+    "recipient": [
+        {
+            "type": "Patient",
+            "identifier": {
+                "system": "https://fhir.nhs.uk/Id/nhs-number",
+                "value": "9692113841"
+            }
+        }
+    ]
+}

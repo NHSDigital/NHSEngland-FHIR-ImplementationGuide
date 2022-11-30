@@ -1,6 +1,5 @@
 {
   "name": "uk.nhsdigital.r4",
-  "version": "2.1.48-discovery",
   "description": "NHS Digital FHIR Implementation Guide",
   "author": "nhsdigital",
   "fhirVersions": [
@@ -8,7 +7,7 @@
   ],
   "dependencies": {
     "hl7.fhir.r4.core": "4.0.1",
-    "fhir.r4.ukcore.stu1": "0.5.0"
+    "fhir.r4.ukcore.stu1": "1.0.0-pre-release"
   },
   "jurisdiction" : "urn:iso:std:iso:3166:-2:GB-ENG"
 }

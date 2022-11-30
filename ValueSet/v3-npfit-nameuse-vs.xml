@@ -3,7 +3,7 @@
     <id value="v3-npfit-nameuse-vs" />
     <url value="https://fhir.nhs.uk/ValueSet/v3-npfit-nameuse-vs" />
     <version value="1.0.0" />
-    <name value="HL7v3 NPfIT Name Use" />
+    <name value="HL7v3NPfITNameUse" />
     <status value="active" />
     <description value="HL7v3 NPfIT Name Use" />
     <compose>

@@ -1,0 +1,25 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+    <url value="https://fhir.nhs.uk/ValueSet/NHSDigital-servicerequest-code" />
+    <version value="1.0.0" />
+    <name value="ServiceRequestCode" />
+	<title value="ServiceRequestCode" />
+    <status value="active" />
+	<date value="2022-10-19T10:16:00+00:00" />
+	<publisher value="NHS Digital" />
+    <contact>
+        <name value="NHS Digital" />
+        <telecom>
+            <system value="email" />
+            <value value="interoperabilityteam@nhs.net" />
+            <use value="work" />
+            <rank value="1" />
+        </telecom>
+    </contact>
+    <description value="A ValueSet to identify the detailed type of ServiceRequest" />
+    <compose>
+        <include>
+            <system value="https://fhir.nhs.uk/CodeSystem/ServiceRequest-Code" />
+            <version value="1.0.0" />
+        </include>
+    </compose>
+</ValueSet>

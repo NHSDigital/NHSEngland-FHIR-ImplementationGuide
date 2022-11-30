@@ -1,7 +1,7 @@
 {
     "resourceType": "NamingSystem",
     "id": "ers-service",
-    "name": "eRSservice",
+    "name": "ERSservice",
     "status": "draft",
     "kind": "identifier",
     "date": "2022-03-02",

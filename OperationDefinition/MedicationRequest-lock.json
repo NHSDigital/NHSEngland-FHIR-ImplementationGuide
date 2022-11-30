@@ -1,0 +1,51 @@
+{
+    "resourceType": "OperationDefinition",
+    "id": "MedicationRequest-lock",
+    "url": "https://fhir.nhs.uk/OperationDefinition/MedicationRequest-lock",
+    "version": "4.0.1",
+    "name": "MedicationRequestLock",
+    "status": "draft",
+    "kind": "operation",
+    "date": "2022-04-14T09:29:23+11:00",
+    "publisher": "NHS Digital",
+    "contact":  [
+        {
+            "telecom":  [
+                {
+                    "system": "email",
+                    "value": "interoperabilityteam@nhs.net"
+                }
+            ]
+        }
+    ],
+    "description": "Use this endpoint to lock a MedicationRequest so that it can be fulfilled.",
+    "code": "lock",
+    "comment": "Only one MedicationRequest can be locked at one time.",
+    "resource":  [
+        "MedicationRequest"
+    ],
+    "affectsState": true,
+    "system": false,
+    "type": false,
+    "instance": true,
+    "inputProfile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-Task",
+    "outputProfile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-OperationOutcome",
+    "parameter":  [
+        {
+            "name": "content",
+            "use": "in",
+            "min": 1,
+            "max": "1",
+            "documentation": "The profile needs to be updated and at present is just a place holder. The Task.status has a mandatory fixed value of `accepted`",
+            "type": "Task"
+        },
+        {
+            "name": "return",
+            "use": "out",
+            "min": 0,
+            "max": "1",
+            "documentation": "A response",
+            "type": "OperationOutcome"
+          }
+    ]
+}

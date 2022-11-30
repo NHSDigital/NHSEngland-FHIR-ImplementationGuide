@@ -1,0 +1,123 @@
+{
+    "resourceType": "MessageDefinition",
+    "id": "11882ae2-211f-49ee-acbe-e319304d80cd",
+    "url": "https://fhir.nhs.uk/MessageDefinition/bars-message-servicerequest-request-referral",
+    "name": "BARSMessageDefinitionServiceRequestRequestReferral",
+    "title": "BARS Message Definition ServiceRequest - Request Referral",
+    "description": "BARS Message Definition ServiceRequest - Request Referral",
+    "status": "active",
+    "date": "2022-02-11",
+    "version": "1.0.0-alpha",
+    "eventCoding": {
+        "system": "https://fhir.nhs.uk/CodeSystem/message-events-bars",
+        "code": "servicerequest-request"
+    },
+    "useContext":  [
+        {
+            "code": {
+                "system": "https://fhir.nhs.uk/CodeSystem/dos-id",
+                "code": "dos-id"
+            },
+            "valueCodeableConcept": {
+                "coding":  [
+                    {
+                        "system": "http://terminology.hl7.org/CodeSystem/variant-state",
+                        "code": "positive"
+                    }
+                ]
+            }
+        }
+    ],
+    "focus":  [
+        {
+            "code": "ServiceRequest",
+            "profile": "https://fhir.nhs.uk/StructureDefinition/BARSServiceRequest-request-referral",
+            "min": 1,
+            "max": "1"
+        },
+        {
+            "code": "Patient",
+            "profile": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Patient",
+            "min": 1,
+            "max": "1"
+        },
+        {
+            "code": "Encounter",
+            "profile": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Encounter",
+            "min": 1,
+            "max": "1"
+        },
+        {
+            "code": "CarePlan",
+            "profile": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-CarePlan",
+            "min": 1,
+            "max": "1"
+        },
+        {
+            "code": "Location",
+            "profile": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Location",
+            "min": 0,
+            "max": "1"
+        },
+        {
+            "code": "Organization",
+            "profile": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Organization",
+            "min": 2,
+            "max": "*"
+        },
+        {
+            "code": "Practitioner",
+            "profile": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Practitioner",
+            "min": 1,
+            "max": "*"
+        },
+        {
+            "code": "PractitionerRole",
+            "profile": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-PractitionerRole",
+            "min": 1,
+            "max": "*"
+        },
+        {
+            "code": "Observation",
+            "profile": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Observation",
+            "min": 0,
+            "max": "*"
+        },
+        {
+            "code": "Flag",
+            "profile": "http://hl7.org/fhir/StructureDefinition/Flag",
+            "min": 0,
+            "max": "*"
+        },
+        {
+            "code": "MedicationStatement",
+            "profile": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-MedicationStatement",
+            "min": 0,
+            "max": "*"
+        },
+        {
+            "code": "AllergyIntolerance",
+            "profile": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-AllergyIntolerance",
+            "min": 0,
+            "max": "*"
+        },
+        {
+            "code": "QuestionnaireResponse",
+            "profile": "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse",
+            "min": 0,
+            "max": "*"
+        },
+        {
+            "code": "Consent",
+            "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-Consent",
+            "min": 1,
+            "max": "*"
+        },
+        {
+            "code": "HealthcareService",
+            "profile": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-HealthcareService",
+            "min": 1,
+            "max": "1"
+        }
+    ]
+}

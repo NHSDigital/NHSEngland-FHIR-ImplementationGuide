@@ -22,7 +22,7 @@
       </constraint>
       <constraint>
         <key value="role-sds-role-profile" />
-        <severity value="warning" />
+        <severity value="error" />
         <human value="SDS Role Profile Id must be 12 digits" />
         <expression value="identifier.where(system='https://fhir.nhs.uk/Id/sds-role-profile-id').exists().not() or (identifier.where(system='https://fhir.nhs.uk/Id/sds-role-profile-id').exists()  and identifier.where(system='https://fhir.nhs.uk/Id/sds-role-profile-id').value.matches('^[0-9]{12}$'))" />
         <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole" />
@@ -105,14 +105,14 @@
       </constraint>
       <constraint>
         <key value="role-gmp" />
-        <severity value="warning" />
+        <severity value="error" />
         <human value="GMP must be of the format GNNNNNNN and not be a spurious code (starts with G6 or G7)" />
         <expression value="identifier.exists().not() or identifier.where(system='https://fhir.hl7.org.uk/Id/gmp-number').exists().not() or (identifier.where(system='https://fhir.hl7.org.uk/Id/gmp-number').exists()  and identifier.where(system='https://fhir.hl7.org.uk/Id/gmp-number').value.matches('^[G]{1}[01234589]{1}[0-9]{6}$'))" />
         <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole" />
       </constraint>
       <constraint>
         <key value="role-gmc" />
-        <severity value="warning" />
+        <severity value="error" />
         <human value="GMC must be of the format CNNNNNNN" />
         <expression value="identifier.exists().not() or identifier.where(system='https://fhir.hl7.org.uk/Id/gmc-number').exists().not() or (identifier.where(system='https://fhir.hl7.org.uk/Id/gmc-number').exists()  and identifier.where(system='https://fhir.hl7.org.uk/Id/gmc-number').value.matches('^[C]{1}[0-9]{7}$'))" />
         <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole" />
@@ -139,11 +139,25 @@
         <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole" />
       </constraint>
       <constraint>
-        <key value="role-sds-user" />
+        <key value="role-sds-user-numeric" />
+        <severity value="error" />
+        <human value="sds-user-id must be numeric" />
+        <expression value="identifier.where(system='https://fhir.nhs.uk/Id/sds-user-id').exists().not() or (identifier.where(system='https://fhir.nhs.uk/Id/sds-user-id').exists()  and identifier.where(system='https://fhir.nhs.uk/Id/sds-user-id').value.matches('^[0-9]+$'))" />
+        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Practitioner" />
+      </constraint>
+      <constraint>
+        <key value="role-gmcreferencenumber" />
+        <severity value="error" />
+        <human value="GMC Reference Number must be of the format NNNNNNN" />
+        <expression value="identifier.where(system='https://fhir.hl7.org.uk/Id/gmc-reference-number').exists().not() or (identifier.where(system='https://fhir.hl7.org.uk/Id/gphc-number').exists()  and identifier.where(system='https://fhir.hl7.org.uk/Id/gmc-reference-number').value.matches('^[0-9]{7}$'))" />
+        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Practitioner" />
+      </constraint>
+      <constraint>
+        <key value="nacs-code-retired" />
         <severity value="warning" />
-        <human value="Professional code (GMC, GMP, NMC, etc) is preferred." />
-        <expression value="identifier.exists().not() or identifier.where(system='https://fhir.nhs.uk/Id/sds-user-id').exists().not()" />
-        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole" />
+        <human value="NACS (/ODS) Practitioner Identifier is retired in NHS FHIR and should not be used. Please use the actual naming system instead (e,g, https://fhir.hl7.org.uk/Id/gmc-number, https://fhir.hl7.org.uk/Id/gmp-number, etc)." />
+        <expression value="identifier.where(system='https://fhir.hl7.org.uk/Id/professional-code').exists().not()" />
+        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Practitioner" />
       </constraint>
       <mustSupport value="true" />
     </element>
@@ -173,8 +187,12 @@
     </element>
     <element id="PractitionerRole.code">
       <path value="PractitionerRole.code" />
-      <definition value="Only supply if this is known (e.g. sourced from smartcard or SDS API).&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;code&quot;:  [&#xD;&#xA;        {&#xD;&#xA;            &quot;coding&quot;:  [&#xD;&#xA;                {&#xD;&#xA;                    &quot;system&quot;: &quot;https://fhir.hl7.org.uk/CodeSystem/UKCore-SDSJobRoleName&quot;,&#xD;&#xA;                    &quot;code&quot;: &quot;R0260&quot;,&#xD;&#xA;                    &quot;display&quot;: &quot;General Medical Practitioner&quot;&#xD;&#xA;                }&#xD;&#xA;            ]&#xD;&#xA;        }&#xD;&#xA;    ],&#xD;&#xA;```" />
+      <definition value="Only supply if this is known from SmartCard/CIS2 data.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;code&quot;:  [&#xD;&#xA;        {&#xD;&#xA;            &quot;coding&quot;:  [&#xD;&#xA;                {&#xD;&#xA;                    &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/NHSDigital-SDS-JobRoleCode&quot;,&#xD;&#xA;                    &quot;code&quot;: &quot;S0030:G0100:R0620&quot;&#xD;&#xA;                  }&#xD;&#xA;            ]&#xD;&#xA;        }&#xD;&#xA;    ],&#xD;&#xA;```&#xD;&#xA;&#xD;&#xA;The previous system for this entry was `https://fhir.hl7org.uk/CodeSystem/UKCore-SDSJobRoleName`, this has been retired and `https://fhir.nhs.uk/CodeSystem/NHSDigital-SDS-JobRoleCode` should be used instead. Note: `https://fhir.hl7org.uk/CodeSystem/UKCore-SDSJobRoleName` is currently used by EPS but will be retired in a future release. Pending further guidance, both CodeSystems should be used for EPS interations" />
       <mustSupport value="true" />
+      <binding>
+        <strength value="extensible" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDigital-PractitionerRoleCode" />
+      </binding>
     </element>
     <element id="PractitionerRole.code.coding">
       <path value="PractitionerRole.code.coding" />
@@ -195,19 +213,21 @@
       <path value="PractitionerRole.code.coding.code" />
       <min value="1" />
     </element>
-    <element id="PractitionerRole.code.coding:sdsJobRoleName">
+    <element id="PractitionerRole.code.coding:sdsJobRoleCode">
       <path value="PractitionerRole.code.coding" />
-      <sliceName value="sdsJobRoleName" />
+      <sliceName value="sdsJobRoleCode" />
+      <short value="SDS Job Role Code" />
+      <definition value="This value should be sourced from either APIM OAuth2 userinfo endpoint, SDS LDAP or CIS2/SmartCard details. &#xD;&#xA;&#xD;&#xA;The CodeSystem is variable and is not present in this Implementation Guide." />
       <max value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="PractitionerRole.code.coding:sdsJobRoleName.system">
+    <element id="PractitionerRole.code.coding:sdsJobRoleCode.system">
       <path value="PractitionerRole.code.coding.system" />
-      <fixedUri value="https://fhir.hl7org.uk/CodeSystem/UKCore-SDSJobRoleName" />
+      <fixedUri value="https://fhir.nhs.uk/CodeSystem/NHSDigital-SDS-JobRoleCode" />
     </element>
     <element id="PractitionerRole.specialty">
       <path value="PractitionerRole.specialty" />
-      <definition value="This is should be the specialty linked to the role and is not necessarily the practitioners main specialty. &#xD;&#xA;&#xD;&#xA;This can be supplemented by SNOMED CT codes from {{link:http://hl7.org/fhir/ValueSet/c80-practice-codes}}, no ConceptMap currently exists for mapping between the two.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA; &quot;specialty&quot;: [&#xD;&#xA;        {&#xD;&#xA;            &quot;coding&quot;: [&#xD;&#xA;                {&#xD;&#xA;                    &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/NHSDataModelAndDictionary-clinical-specialty&quot;,&#xD;&#xA;                    &quot;code&quot;: &quot;100&quot;,&#xD;&#xA;                    &quot;display&quot;: &quot;GENERAL SURGERY&quot;&#xD;&#xA;                }&#xD;&#xA;            ]&#xD;&#xA;        }&#xD;&#xA;    ],&#xD;&#xA;```" />
+      <definition value="This is should be the specialty linked to the role and is not necessarily the practitioners main specialty. &#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA; &quot;specialty&quot;: [&#xD;&#xA;        {&#xD;&#xA;            &quot;coding&quot;: [&#xD;&#xA;                {&#xD;&#xA;                    &quot;system&quot;: &quot;http://snomed.info/sct&quot;,&#xD;&#xA;                    &quot;code&quot;: &quot;394814009&quot;,&#xD;&#xA;                    &quot;display&quot;: &quot;General practice (specialty)&quot;&#xD;&#xA;                }&#xD;&#xA;            ]&#xD;&#xA;        }&#xD;&#xA;    ],&#xD;&#xA;```" />
       <mustSupport value="true" />
     </element>
     <element id="PractitionerRole.specialty.coding">
@@ -232,20 +252,6 @@
     <element id="PractitionerRole.specialty.coding.display">
       <path value="PractitionerRole.specialty.coding.display" />
       <min value="1" />
-    </element>
-    <element id="PractitionerRole.specialty.coding:NHSDataDictionarySpecialty">
-      <path value="PractitionerRole.specialty.coding" />
-      <sliceName value="NHSDataDictionarySpecialty" />
-      <mustSupport value="true" />
-      <binding>
-        <strength value="required" />
-        <description value="NHS Data Dictionary Specialty" />
-        <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDataModelAndDictionary-clinical-specialty" />
-      </binding>
-    </element>
-    <element id="PractitionerRole.specialty.coding:NHSDataDictionarySpecialty.system">
-      <path value="PractitionerRole.specialty.coding.system" />
-      <fixedUri value="https://fhir.nhs.uk/CodeSystem/NHSDataModelAndDictionary-clinical-specialty" />
     </element>
     <element id="PractitionerRole.specialty.coding:SNOMEDSpecialty">
       <path value="PractitionerRole.specialty.coding" />
@@ -296,8 +302,8 @@
       <constraint>
         <key value="nhsd-4" />
         <severity value="error" />
-        <human value="PractitionerRole.healthcareService - An identifier reference plus a display name or resource reference must be provided" />
-        <expression value="(reference.exists() or (identifier.exists() and display.exists()))" />
+        <human value="PractitionerRole.healthcareService - An identifier reference or resource reference must be provided" />
+        <expression value="(reference.exists() or (identifier.exists()))" />
         <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole" />
       </constraint>
       <mustSupport value="true" />

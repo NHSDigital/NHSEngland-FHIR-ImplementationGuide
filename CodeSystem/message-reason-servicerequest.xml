@@ -6,7 +6,7 @@
         <value value="message-reason-service-request" />
     </identifier>
     <version value="1.0.0" />
-    <name value="messagereasonservicerequest" />
+    <name value="MessageReasonServiceRequest" />
     <title value="Message Reason Service Request" />
     <status value="active" />
     <date value="2021-11-25" />

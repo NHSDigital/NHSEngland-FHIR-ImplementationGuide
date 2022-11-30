@@ -69,6 +69,7 @@
     <element id="MessageHeader.destination">
       <path value="MessageHeader.destination" />
       <definition value="Lists all the destinations where message is be delivered to. &#xD;&#xA;&#xD;&#xA;The recipient of a message takes the responsibility of delivering to all the `destination.endpoint`s. Similarly the sender **MUST NOT** include destination's the recipient can not deliver to, these destinations **MUST** be removed from the message. Additional rules for endpoint can be found in the source section below." />
+      <requirements value="Indicates where message is to be sent for routing purposes.  Allows verification of &quot;am I the intended recipient&quot;.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;destination&quot;: [&#xD;&#xA;                    {&#xD;&#xA;                        &quot;endpoint&quot;: &quot;urn:nhs-uk:addressing:mesh:Y90638OT002&quot;,&#xD;&#xA;                        &quot;receiver&quot;: {&#xD;&#xA;                            &quot;identifier&quot;: {&#xD;&#xA;                                &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/ods-organization-code&quot;,&#xD;&#xA;                                &quot;value&quot;: &quot;Y9063&quot;&#xD;&#xA;                            }&#xD;&#xA;                        }&#xD;&#xA;                    }&#xD;&#xA;                ]&#xD;&#xA;```" />
       <mustSupport value="true" />
     </element>
     <element id="MessageHeader.destination.receiver">
@@ -116,7 +117,7 @@
     </element>
     <element id="MessageHeader.sender">
       <path value="MessageHeader.sender" />
-      <definition value="The current requirement in NHS Digital API's is to rely on the [Access Tokens and Audit (JWT)](https://developer.nhs.uk/apis/spine-core/security_jwt.html) for sender details.&#xD;&#xA;&#xD;&#xA;For use outside of NHS Digital it is recommended this is populated with either the Organisation ODS code or the Practitioner's professional code.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;sender&quot;: {&#xD;&#xA;    &quot;identifier&quot;: {&#xD;&#xA;        &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/ods-organization-code&quot;,&#xD;&#xA;        &quot;value&quot;: &quot;VNE51&quot;&#xD;&#xA;   },&#xD;&#xA;    &quot;display&quot;: &quot;The Simple Pharmacy&quot;&#xD;&#xA;}&#xD;&#xA;```" />
+      <definition value="The current requirement in NHS Digital API's is to rely on the [Access Tokens and Audit (JWT)](https://developer.nhs.uk/apis/spine-core/security_jwt.html) for sender details.&#xD;&#xA;&#xD;&#xA;For use outside of NHS Digital it is recommended this is populated with either the Organisation ODS code or the Practitioner's professional code.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;sender&quot;: {&#xD;&#xA;    &quot;identifier&quot;: {&#xD;&#xA;        &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/ods-organization-code&quot;,&#xD;&#xA;        &quot;value&quot;: &quot;VNE51&quot;&#xD;&#xA;   }&#xD;&#xA;}&#xD;&#xA;```" />
       <type>
         <code value="Reference" />
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole" />
@@ -149,6 +150,7 @@
     <element id="MessageHeader.sender.identifier">
       <path value="MessageHeader.sender.identifier" />
       <min value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="MessageHeader.sender.identifier.system">
       <path value="MessageHeader.sender.identifier.system" />
@@ -189,8 +191,28 @@
     </element>
     <element id="MessageHeader.source">
       <path value="MessageHeader.source" />
-      <definition value="`source.endpoint` is required and **MUST** indicate the address where replies are to be sent.&#xD;&#xA;&#xD;&#xA;For responses to be received via http this will be the address of the `$process-message` endpoint. E.g.&#xD;&#xA;&#xD;&#xA;```&#xD;&#xA;https://fhir.hospitaltrust.nhs.uk/$process-message&#xD;&#xA;```&#xD;&#xA;&#xD;&#xA;For MESH this will follow [ITK2.2 MESH Transport Requirements](https://data.developer.nhs.uk/architecture/itk/Docs/ITK%20MESH%20Transport%20%20Requirements.pdf) for ITK Routing. E.g. the MESH Endpoint for Organisation B80310 &#xD;&#xA;&#xD;&#xA;```&#xD;&#xA;urn:nhs-uk:addressing:ods:B80310&#xD;&#xA;```" />
+      <definition value="`source.endpoint` is required and **MUST** indicate the address where replies are to be sent.&#xD;&#xA;&#xD;&#xA;For responses to be received via http this will be the address of the `$process-message` endpoint. E.g.&#xD;&#xA;&#xD;&#xA;```&#xD;&#xA;https://fhir.hospitaltrust.nhs.uk/$process-message&#xD;&#xA;```&#xD;&#xA;&#xD;&#xA;For MESH this will follow [ITK2.2 MESH Transport Requirements](https://data.developer.nhs.uk/architecture/itk/Docs/ITK%20MESH%20Transport%20%20Requirements.pdf) for ITK Routing. E.g. the MESH Endpoint for Organisation B80310 &#xD;&#xA;&#xD;&#xA;```&#xD;&#xA; &quot;source&quot;: {&#xD;&#xA;                    &quot;endpoint&quot;: &quot;urn:nhs-uk:addressing:mesh:Y90638OT001&quot;&#xD;&#xA;                }&#xD;&#xA;```" />
       <mustSupport value="true" />
+    </element>
+    <element id="MessageHeader.source.extension">
+      <path value="MessageHeader.source.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="MessageHeader.source.extension:CDSSExtension">
+      <path value="MessageHeader.source.extension" />
+      <sliceName value="CDSSExtension" />
+      <min value="0" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/CDSSExtension" />
+      </type>
     </element>
     <element id="MessageHeader.responsible">
       <path value="MessageHeader.responsible" />

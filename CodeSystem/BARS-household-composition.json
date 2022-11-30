@@ -1,0 +1,67 @@
+{
+    "resourceType": "CodeSystem",
+    "id": "household-composition-bars",
+    "url": "https://fhir.nhs.uk/CodeSystem/household-composition-bars",
+    "identifier":  [
+        {
+            "system": "https://fhir.nhs.uk/identifier/CodeSystem",
+            "value": "household-composition-bars"
+        }
+    ],
+    "version": "1.0.0",
+    "name": "HouseholdCompositionBARS",
+    "title": "Household Composition BARS",
+    "status": "active",
+    "date": "2022-03-11",
+    "publisher": "NHS Digital",
+    "contact":  [
+        {
+            "name": "NHS Digital",
+            "telecom":  [
+                {
+                    "system": "email",
+                    "value": "interoperabilityteam@nhs.net",
+                    "use": "work"
+                }
+            ]
+        }
+    ],
+    "description": "Household Compostion Codes BARS",
+    "copyright": "Copyright © 2022 NHS Digital",
+    "caseSensitive": true,
+    "content": "complete",
+    "concept":  [
+        {
+            "code": "AllHouseholdsWithoutDependentChildren",
+            "display": "All households without dependent children"
+        },
+        {
+            "code": "OnePersonHouseholds",
+            "display": "One person households"
+        },
+        {
+            "code": "OneFamilyHouseholds",
+            "display": "One family households"
+        },
+        {
+            "code": "NoChildren",
+            "display": "No children"
+        },
+        {
+            "code": "NonDependentChildren",
+            "display": "Non dependent children"
+        },
+        {
+            "code": "AllHouseholdsWithDependentChildren",
+            "display": "All households with dependent children"
+        },
+        {
+            "code": "OtherHouseholds",
+            "display": "Other households"
+        },
+        {
+            "code": "LivesAlone",
+            "display": "Lives Alone"
+        }
+    ]
+}

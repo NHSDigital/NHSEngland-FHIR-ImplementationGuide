@@ -1,0 +1,29 @@
+{
+  "resourceType": "ObservationDefinition",
+  "id": "snomed-27113001",
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "27113001",
+        "display": "Body weight"
+      },
+      {
+          "system": "http://loinc.org",
+          "code": "29463-7",
+          "display": "Body Weight"
+      }
+    ]
+  },
+  "quantitativeDetails": {
+    "customaryUnit": {
+      "coding": [
+        {
+          "system": "http://unitsofmeasure.org",
+          "code": "kg",
+          "display": "kilogram"
+        }
+      ]
+    }
+  }
+}

@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient-Minimal" />
-  <name value="UKCorePatientMinimal" />
+  <name value="NHSDigitalPatientMinimal" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
+  <purpose value="Constraint profile for which enforces elements in contained Patient resources." />
   <kind value="resource" />
   <abstract value="false" />
   <type value="Patient" />
-  <baseDefinition value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Patient" />
+  <baseDefinition value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient" />
   <derivation value="constraint" />
   <differential>
     <element id="Patient.birthDate">

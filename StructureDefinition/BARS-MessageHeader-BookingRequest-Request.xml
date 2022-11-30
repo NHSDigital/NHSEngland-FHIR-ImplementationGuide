@@ -1,0 +1,101 @@
+<StructureDefinition xmlns="http://hl7.org/fhir">
+    <id value="BARSMessageHeaderBookingRequest" />
+    <url value="https://fhir.nhs.uk/StructureDefinition/BARSMessageHeader-booking-request" />
+    <version value="1.0.1" />
+    <name value="BARSMessageHeaderBookingRequest" />
+    <title value="BARS MessageHeader - Booking-Request" />
+    <status value="active" />
+    <date value="2022-04-20" />
+    <description value="BARSMessageHeader Booking Request profile" />
+    <fhirVersion value="4.0.1" />
+    <kind value="resource" />
+    <abstract value="false" />
+    <type value="MessageHeader" />
+    <baseDefinition value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-MessageHeader" />
+    <derivation value="constraint" />
+    <differential>
+        <element id="MessageHeader.event[x]">
+            <path value="MessageHeader.event[x]" />
+            <type>
+                <code value="Coding" />
+            </type>
+            <binding>
+                <strength value="required" />
+                <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDigital-message-events" />
+            </binding>
+        </element>
+        <element id="MessageHeader.event[x].system">
+            <path value="MessageHeader.event[x].system" />
+            <fixedUri value="https://fhir.nhs.uk/CodeSystem/message-events-bars" />
+        </element>
+        <element id="MessageHeader.event[x].code">
+            <path value="MessageHeader.event[x].code" />
+            <comment value="This will be a set of fixed values that are used to trigger use case specific processing when the bundle is received (refer to guidance for definitions etc..)" />
+            <min value="1" />
+            <fixedCode value="booking-request" />
+        </element>
+        <element id="MessageHeader.destination">
+            <path value="MessageHeader.destination" />
+            <min value="1" />
+        </element>
+        <element id="MessageHeader.destination.receiver.reference">
+            <path value="MessageHeader.destination.receiver.reference" />
+            <min value="1" />
+        </element>
+        <element id="MessageHeader.sender.reference">
+            <path value="MessageHeader.sender.reference" />
+            <min value="1" />
+        </element>
+        <element id="MessageHeader.sender.identifier.assigner.reference">
+            <path value="MessageHeader.sender.identifier.assigner.reference" />
+            <comment value="Reference to the Requester Organisation" />
+            <min value="1" />
+        </element>
+        <element id="MessageHeader.source.extension">
+            <path value="MessageHeader.source.extension" />
+            <slicing>
+                <discriminator>
+                    <type value="value" />
+                    <path value="url" />
+                </discriminator>
+                <rules value="open" />
+            </slicing>
+            <min value="0" />
+        </element>
+        <element id="MessageHeader.source.extension:myExtension">
+            <path value="MessageHeader.source.extension" />
+            <sliceName value="myExtension" />
+            <min value="0" />
+            <type>
+                <code value="Extension" />
+                <profile value="https://fhir.nhs.uk/StructureDefinition/CDSSExtension" />
+            </type>
+        </element>
+        <element id="MessageHeader.source.name">
+            <path value="MessageHeader.source.name" />
+            <comment value="EMS Supplier company/ product name" />
+        </element>
+        <element id="MessageHeader.source.version">
+            <path value="MessageHeader.source.version" />
+            <comment value="EMS software version" />
+        </element>
+        <element id="MessageHeader.source.endpoint">
+            <path value="MessageHeader.source.endpoint" />
+            <comment value="The uri of the Requester’s endpoint" />
+        </element>
+        <element id="MessageHeader.reason">
+            <path value="MessageHeader.reason" />
+            <min value="1" />
+        </element>
+        <element id="MessageHeader.reason.coding.system">
+            <path value="MessageHeader.reason.coding.system" />
+            <comment value="BARS Event lifecycle &quot;new&quot;, &quot;update&quot;" />
+            <fixedUri value="https://fhir.nhs.uk/CodeSystem/message-reason-bars" />
+        </element>
+        <element id="MessageHeader.focus.reference">
+            <path value="MessageHeader.focus.reference" />
+            <comment value="This MUST reference the UKCore-ServiceRequest resource." />
+            <min value="1" />
+        </element>
+    </differential>
+</StructureDefinition>

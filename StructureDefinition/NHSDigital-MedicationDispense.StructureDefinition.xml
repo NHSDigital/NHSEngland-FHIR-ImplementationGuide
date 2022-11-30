@@ -35,6 +35,19 @@
       </type>
       <mustSupport value="true" />
     </element>
+	<element id="MedicationDispense.extension:prescriptionNonDispensingReason">
+      <path value="MedicationDispense.extension" />
+      <sliceName value="prescriptionNonDispensingReason" />
+      <short value="This is the non dispensing reason for the overall prescription" />
+      <definition value="This is the reason a complete prescription was not dispensed, it is not the status of the individual line items, which is contained in MedicationDispense.statusReason.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;extension&quot;: [&#xD;&#xA;    {&#xD;&#xA;        &quot;url&quot;: &quot;https://fhir.nhs.uk/StructureDefinition/Extension-DM-PrescriptionNonDispensingReason&quot;,&#xD;&#xA;        &quot;valueCoding&quot;: {&#xD;&#xA;            &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/medicationdispense-status-reason&quot;,&#xD;&#xA;            &quot;code&quot;: &quot;0002&quot;,&#xD;&#xA;            &quot;display&quot;: &quot;Clinically unsuitable&quot;&#xD;&#xA;        }&#xD;&#xA;    }&#xD;&#xA;]&#xD;&#xA;```" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-DM-PrescriptionNonDispensingReason" />
+      </type>
+      <mustSupport value="true" />
+    </element>
     <element id="MedicationDispense.extension:repeatInformation">
       <path value="MedicationDispense.extension" />
       <sliceName value="repeatInformation" />
@@ -45,6 +58,19 @@
       <type>
         <code value="Extension" />
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-EPS-RepeatInformation" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+	<element id="MedicationDispense.extension:supplyHeaderIdentifier">
+      <path value="MedicationDispense.extension" />
+      <sliceName value="supplyHeaderIdentifier" />
+      <short value="Identifier for the SupplyHeader" />
+      <definition value="Identifier of the SupplyHeader (v3) object. The prescription in the context of a Dispense Notification or Claim. Mandatory for EPS interactions." />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-EPS-SupplyHeaderIdentifier" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -139,6 +165,10 @@
         <aggregation value="bundled" />
       </type>
       <mustSupport value="true" />
+      <binding>
+        <strength value="extensible" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDigital-MedicationCode" />
+      </binding>
     </element>
     <element id="MedicationDispense.subject">
       <path value="MedicationDispense.subject" />
@@ -146,15 +176,15 @@
       <min value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient-PDS" />
         <aggregation value="referenced" />
         <aggregation value="bundled" />
       </type>
       <constraint>
         <key value="eps-2" />
         <severity value="warning" />
-        <human value="subject - An identifier reference plus a display name or resource reference must be provided" />
-        <expression value="(reference.exists() or (identifier.exists() and display.exists()))" />
+        <human value="subject - An identifier reference or resource reference must be provided" />
+        <expression value="(reference.exists() or (identifier.exists()))" />
         <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationDispense" />
       </constraint>
       <constraint>
@@ -180,12 +210,12 @@
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/EpisodeOfCare" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-Encounter" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Encounter" />
       </type>
     </element>
     <element id="MedicationDispense.performer">
       <path value="MedicationDispense.performer" />
-      <definition value="The pharmacist and pharmacy MUST be present and MUST use `identifier references`. This means FHIR Practitioner, Organization and PractitionerRole resource are not included in the FHIR Message. Professional codes and ODS codes should be used instead. `sds-user-role-id` is permitted to identify a Practitioner(&amp; Role) but professional codes are preferred to support wider NHS interoperability.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA; &quot;performer&quot;: [&#xD;&#xA;    {&#xD;&#xA;        &quot;actor&quot;: {&#xD;&#xA;            &quot;reference&quot; : &quot;#performer&quot;&#xD;&#xA;        }&#xD;&#xA;    }&#xD;&#xA;],&#xD;&#xA;```&#xD;&#xA;&#xD;&#xA;The contained PractitionerRole:&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;{&#xD;&#xA;    &quot;resourceType&quot;: &quot;MedicationDispense&quot;,&#xD;&#xA;    &quot;id&quot;: &quot;06167339-9337-d030-0366-514a6a46da17&quot;,&#xD;&#xA;    &quot;contained&quot;: [&#xD;&#xA;        {&#xD;&#xA;            &quot;resourceType&quot;: &quot;PractitionerRole&quot;,&#xD;&#xA;            &quot;id&quot;: &quot;performer&quot;,&#xD;&#xA;            &quot;practitioner&quot;: {&#xD;&#xA;                &quot;identifier&quot;: {&#xD;&#xA;                    &quot;system&quot;: &quot;https://fhir.hl7.org.uk/Id/gphc-number&quot;,&#xD;&#xA;                    &quot;value&quot;: &quot;7654321&quot;&#xD;&#xA;                },&#xD;&#xA;                &quot;display&quot;: &quot;Mr Peter Potion&quot;&#xD;&#xA;            },&#xD;&#xA;            &quot;organization&quot;: {&#xD;&#xA;                &quot;identifier&quot;: {&#xD;&#xA;                    &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/ods-organization-code&quot;,&#xD;&#xA;                    &quot;value&quot;: &quot;VNE51&quot;&#xD;&#xA;                },&#xD;&#xA;                &quot;display&quot;: &quot;The Simple Pharmacy&quot;&#xD;&#xA;            },&#xD;&#xA;            &quot;telecom&quot;: [&#xD;&#xA;                {&#xD;&#xA;                    &quot;system&quot;: &quot;phone&quot;,&#xD;&#xA;                    &quot;use&quot;: &quot;work&quot;,&#xD;&#xA;                    &quot;value&quot;: &quot;01234567890&quot;&#xD;&#xA;                }&#xD;&#xA;            ]&#xD;&#xA;        }&#xD;&#xA;    ],&#xD;&#xA;```" />
+      <definition value="The pharmacist and pharmacy MUST be present and MUST use `identifier references`. This means FHIR Practitioner, Organization and PractitionerRole resource are not included in the FHIR Message. Professional codes and ODS codes should be used instead. `sds-user-role-id` is permitted to identify a Practitioner(&amp; Role) but professional codes are preferred to support wider NHS interoperability.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA; &quot;performer&quot;: [&#xD;&#xA;    {&#xD;&#xA;        &quot;actor&quot;: {&#xD;&#xA;            &quot;reference&quot; : &quot;#performer&quot;&#xD;&#xA;        }&#xD;&#xA;    }&#xD;&#xA;],&#xD;&#xA;```&#xD;&#xA;&#xD;&#xA;The contained PractitionerRole:&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;{&#xD;&#xA;    &quot;resourceType&quot;: &quot;MedicationDispense&quot;,&#xD;&#xA;    &quot;id&quot;: &quot;06167339-9337-d030-0366-514a6a46da17&quot;,&#xD;&#xA;    &quot;contained&quot;: [&#xD;&#xA;        {&#xD;&#xA;                        &quot;resourceType&quot;: &quot;PractitionerRole&quot;,&#xD;&#xA;                        &quot;id&quot;: &quot;performer&quot;,&#xD;&#xA;                        &quot;identifier&quot;: [&#xD;&#xA;                            {&#xD;&#xA;                                &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/sds-role-profile-id&quot;,&#xD;&#xA;                                &quot;value&quot;: &quot;741555508105&quot;&#xD;&#xA;                            }&#xD;&#xA;                        ],&#xD;&#xA;                        &quot;code&quot;: [&#xD;&#xA;                            {&#xD;&#xA;                                &quot;coding&quot;: [&#xD;&#xA;                                    {&#xD;&#xA;                                        &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/NHSDigital-SDS-JobRoleCode&quot;,&#xD;&#xA;                                        &quot;code&quot;: &quot;S0030:G0100:R0620&quot;&#xD;&#xA;                                    }&#xD;&#xA;                                ]&#xD;&#xA;                            }&#xD;&#xA;                        ],&#xD;&#xA;                        &quot;practitioner&quot;: {&#xD;&#xA;                            &quot;identifier&quot;: {&#xD;&#xA;                                &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/sds-user-id&quot;,&#xD;&#xA;                                &quot;value&quot;: &quot;7654321&quot;&#xD;&#xA;                            },&#xD;&#xA;                            &quot;display&quot;: &quot;Mr Peter Potion&quot;&#xD;&#xA;                        },&#xD;&#xA;                        &quot;organization&quot;: {&#xD;&#xA;                            &quot;reference&quot;: &quot;urn:uuid:2bf9f37c-d88b-4f86-ad5f-373c1416e04b&quot;&#xD;&#xA;                        },&#xD;&#xA;                        &quot;telecom&quot;: [&#xD;&#xA;                            {&#xD;&#xA;                                &quot;system&quot;: &quot;phone&quot;,&#xD;&#xA;                                &quot;use&quot;: &quot;work&quot;,&#xD;&#xA;                                &quot;value&quot;: &quot;0532567890&quot;&#xD;&#xA;                            }&#xD;&#xA;                        ]&#xD;&#xA;                   }&#xD;&#xA;    ],&#xD;&#xA;```" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
@@ -193,7 +223,8 @@
       <path value="MedicationDispense.performer.actor" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole-MinimalPlusTelecom" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Reference" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole-SDS" />
         <aggregation value="contained" />
       </type>
       <constraint>
@@ -271,7 +302,8 @@
     </element>
     <element id="MedicationDispense.quantity">
       <path value="MedicationDispense.quantity" />
-      <definition value="The amount of medication that has been dispensed. Includes unit of measure.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;quantity&quot;: {&#xD;&#xA;    &quot;value&quot;: 28,&#xD;&#xA;    &quot;unit&quot;: &quot;capsule&quot;,&#xD;&#xA;    &quot;system&quot;: &quot;http://snomed.info/sct&quot;,&#xD;&#xA;    &quot;code&quot;: &quot;3316911000001105&quot;&#xD;&#xA;}&#xD;&#xA;```" />
+      <definition value="The amount of medication that has been dispensed. Includes unit of measure.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;quantity&quot;: {&#xD;&#xA;    &quot;value&quot;: 28,&#xD;&#xA;    &quot;unit&quot;: &quot;capsule&quot;,&#xD;&#xA;    &quot;system&quot;: &quot;http://snomed.info/sct&quot;,&#xD;&#xA;    &quot;code&quot;: &quot;3316911000001105&quot;&#xD;&#xA;}&#xD;&#xA;```&#xD;&#xA;&#xD;&#xA;If no actual quantity has been dispensed then use a value of zero." />
+      <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="MedicationDispense.quantity.extension">

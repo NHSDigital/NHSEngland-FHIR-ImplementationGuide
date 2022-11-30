@@ -1,0 +1,39 @@
+{
+    "resourceType": "CodeSystem",
+    "id": "482f9e0a-6f01-4037-b8fe-bfc88d88702c",
+    "url": "https://fhir.nhs.uk/CodeSystem/eRS-Priority",
+    "version": "1.1.0",
+    "name": "ERSPriority",
+    "status": "active",
+    "date": "2021-09-28T00:00:00+00:00",
+    "publisher": "NHS Digital",
+    "contact": [
+        {
+            "name": "Interoperability Team",
+            "telecom": [
+                {
+                    "system": "email",
+                    "value": "interoperabilityteam@nhs.net",
+                    "use": "work"
+                }
+            ]
+        }
+    ],
+    "description": "A CodeSystem to identify priority.",
+    "copyright": "Copyright © 2021 NHS Digital",
+    "content": "complete",
+    "concept": [
+        {
+            "code": "ROUTINE",
+            "display": "Routine"
+        },
+        {
+            "code": "URGENT",
+            "display": "Urgent"
+        },
+        {
+            "code": "TWO_WEEK_WAIT",
+            "display": "2 Week Wait"
+        }
+    ]
+}

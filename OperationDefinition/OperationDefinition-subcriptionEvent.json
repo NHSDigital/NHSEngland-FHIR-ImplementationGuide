@@ -6,7 +6,7 @@
     },
     "url": "https://fhir.nhs.uk/OperationDefinition/subscription-event",
     "version": "4.0.1",
-    "name": "subscriptionEvent",
+    "name": "SubscriptionEvent",
     "status": "draft",
     "kind": "operation",
     "date": "2022-01-07T14:00:00+00:00",
@@ -75,6 +75,14 @@
                     "max": "1",
                     "documentation": "The event resource. Mandatory for subscription event submission",
                     "type": "Resource"
+                },
+                {
+                    "name": "additionalContext",
+                    "use": "in",
+                    "min": 1,
+                    "max": "*",
+                    "documentation": "Additional context e.g. NHS Number",
+                    "type": "Reference"
                 }
             ] 
         },
@@ -83,7 +91,7 @@
             "use": "in",
             "min": 0,
             "max": "1",
-            "documentation": "Reference to the SubscriptionTopic this notification relates to (topics are related to event triggers in other HL7 standards) ",
+            "documentation": "Reference to the SubscriptionTopic this notification relates to (topics are related to event triggers in other HL7 standards)",
             "type": "canonical"
         },
         {

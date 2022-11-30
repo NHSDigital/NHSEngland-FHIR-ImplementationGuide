@@ -1,0 +1,39 @@
+{
+    "resourceType": "CodeSystem",
+    "id": "safeguarding-codes-bars",
+    "url": "https://fhir.nhs.uk/CodeSystem/safeguarding-codes-bars",
+    "identifier":  [
+        {
+            "system": "https://fhir.nhs.uk/identifier/CodeSystem",
+            "value": "safeguarding-codes-bars"
+        }
+    ],
+    "version": "1.0.0",
+    "name": "SafeguardingCodesBARS",
+    "title": "Safeguarding Codes BARS",
+    "status": "active",
+    "date": "2022-03-11",
+    "publisher": "NHS Digital",
+    "contact":  [
+        {
+            "name": "NHS Digital",
+            "telecom":  [
+                {
+                    "system": "email",
+                    "value": "interoperabilityteam@nhs.net",
+                    "use": "work"
+                }
+            ]
+        }
+    ],
+    "description": "Safeguarding Flag Reason Codes",
+    "copyright": "Copyright © 2021 NHS Digital",
+    "caseSensitive": true,
+    "content": "complete",
+    "concept":  [
+        {
+            "code": "836881000000105",
+            "display": "Child is cause for safeguarding concern (finding)"
+        }
+    ]
+}

@@ -1,6 +1,6 @@
 <NamingSystem xmlns="http://hl7.org/fhir">
     <id value="sds-job-role-id"></id>
-    <name value="sdsjobroleid"></name>
+    <name value="SDSjobroleid"></name>
     <status value="draft"></status>
     <kind value="codesystem"></kind>
     <date value="2019-05-01"></date>
@@ -14,11 +14,16 @@
         </telecom>
     </contact>
     <responsible value="NHS Digital"></responsible>
-    <description value="The user's role id on the NHS Spine Directory Service. https://fhir.hl7org.uk/CodeSystem/UKCore-SDSJobRoleName"></description>
+    <description value="The user's role id on the NHS Spine Directory Service (SmartCard/CIS2). The UKCore version has been retired, the NHS Digital version should now be used instead."></description>
     <usage value="To uniquely identify a users role in NHS Spine Directory Service."></usage>
     <uniqueId>
         <type value="uri"></type>
-        <value value="https://fhir.hl7org.uk/CodeSystem/UKCore-SDSJobRoleName"></value>
+        <value value="https://fhir.hl7.org.uk/CodeSystem/UKCore-SDSJobRoleName"></value>
+        <preferred value="false"></preferred>
+    </uniqueId>
+    <uniqueId>
+        <type value="uri"></type>
+        <value value="https://fhir.nhs.uk/CodeSystem/NHSDigital-SDS-JobRoleCode"></value>
         <preferred value="true"></preferred>
     </uniqueId>
     <uniqueId>

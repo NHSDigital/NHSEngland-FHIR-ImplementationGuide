@@ -70,6 +70,24 @@
       <path value="MedicationRequest.identifier.value" />
       <min value="1" />
     </element>
+      <element id="MedicationRequest.medication[x]">
+      <path value="MedicationRequest.medication[x]" />
+      <definition value="Only Virtual Medical Products (VMP) and Actual Medical Products (AMP) can be used." />
+      <comment value="Any code from the SnomedCT UK DMD subset for VMP, AMP and VTM concepts&#xD;&#xA;&#xD;&#xA;&lt;table&gt;&#xD;&#xA;&lt;thead&gt;&#xD;&#xA;&lt;th data-no-sort width=&quot;25%&quot;&gt;&#xD;&#xA;dm+d Category&#xD;&#xA;&lt;/th&gt;&#xD;&#xA;&lt;th data-no-sort width=&quot;50%&quot;&gt;&#xD;&#xA;dm+d Description&#xD;&#xA;&lt;/th&gt;&#xD;&#xA;&lt;th data-no-sort width=&quot;25%&quot;&gt;&#xD;&#xA;UK SNOMED Members Of&#xD;&#xA;&lt;/th&gt;&#xD;&#xA;&#xD;&#xA;&lt;/thead&gt;&#xD;&#xA;&lt;tr&gt;&#xD;&#xA;&lt;td&gt;&#xD;&#xA;VMP&#xD;&#xA;&lt;/td&gt;&#xD;&#xA;&lt;td&gt;&#xD;&#xA;Virtual Medical Product&#xD;&#xA;&lt;/td&gt;&#xD;&#xA;&lt;td&gt;&#xD;&#xA;&lt;a href=&quot;https://termbrowser.nhs.uk/?perspective=full&amp;conceptId1=999000561000001109&quot; target=&quot;_blank&quot;&gt;999000561000001109&lt;/a&gt;&#xD;&#xA;&lt;/td&gt;&#xD;&#xA;&lt;/tr&gt;&#xD;&#xA;&lt;tr&gt;&#xD;&#xA;&lt;td&gt;&#xD;&#xA;AMP&#xD;&#xA;&lt;/td&gt;&#xD;&#xA;&lt;td&gt;&#xD;&#xA;Actual Medical Product&#xD;&#xA;&lt;/td&gt;&#xD;&#xA;&lt;td&gt;&#xD;&#xA;&lt;a href=&quot;https://termbrowser.nhs.uk/?perspective=full&amp;conceptId1=999000541000001108&quot; target=&quot;_blank&quot;&gt;999000541000001108&lt;/a&gt;&#xD;&#xA;&lt;/td&gt;&#xD;&#xA;&lt;/tr&gt;&#xD;&#xA;&lt;/table&gt;" />
+      <type>
+        <code value="CodeableConcept" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationRequest-CodeableConcept" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationRequest-Medication" />
+        <aggregation value="bundled" />
+      </type>
+      <binding>
+        <strength value="extensible" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDigital-MedicationCode" />
+      </binding>
+    </element>
     <element id="MedicationRequest.subject">
       <path value="MedicationRequest.subject" />
       <type>
@@ -109,6 +127,19 @@
       <path value="MedicationRequest.groupIdentifier.value" />
       <min value="1" />
     </element>
+	  <element id="MedicationRequest.courseOfTherapyType">
+      <path value="MedicationRequest.courseOfTherapyType" />
+      <definition value="```json&#xD;&#xA;&quot;courseOfTherapyType&quot;: {&#xD;&#xA;  &quot;coding&quot;:  [&#xD;&#xA;      {&#xD;&#xA;          &quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy&quot;,&#xD;&#xA;          &quot;code&quot;: &quot;acute&quot;,&#xD;&#xA;          &quot;display&quot;: &quot;Short course (acute) therapy&quot;&#xD;&#xA;      }&#xD;&#xA;  ]&#xD;&#xA;},&#xD;&#xA;```" />
+      <comment value="The type of prescription e.g. acute, continuous, etc. Was extension in STU3 https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-PrescriptionType-1 and Digital Medicine uses international codes, so continuous in place of repeat." />
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/DM-medicationrequest-course-of-therapy" />
+      </binding>
+    </element>
+    <element id="MedicationRequest.courseOfTherapyType.coding">
+      <path value="MedicationRequest.courseOfTherapyType.coding" />
+      <max value="1" />
+    </element>									
     <element id="MedicationRequest.dispenseRequest">
       <path value="MedicationRequest.dispenseRequest" />
       <min value="1" />

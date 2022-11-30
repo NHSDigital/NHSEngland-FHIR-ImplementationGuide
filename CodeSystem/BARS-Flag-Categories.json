@@ -1,0 +1,59 @@
+{
+    "resourceType": "CodeSystem",
+    "id": "flag-categories-bars",
+    "url": "https://fhir.nhs.uk/CodeSystem/flag-categories-bars",
+    "identifier":  [
+        {
+            "system": "https://fhir.nhs.uk/identifier/CodeSystem",
+            "value": "flag-categories-bars"
+        }
+    ],
+    "version": "1.0.0",
+    "name": "FlagCategoriesBARS",
+    "title": "Flag Categories BARS",
+    "status": "active",
+    "date": "2022-03-11",
+    "publisher": "NHS Digital",
+    "contact":  [
+        {
+            "name": "NHS Digital",
+            "telecom":  [
+                {
+                    "system": "email",
+                    "value": "interoperabilityteam@nhs.net",
+                    "use": "work"
+                }
+            ]
+        }
+    ],
+    "description": "Flag Categories in BaRS",
+    "copyright": "Copyright © 2022 NHS Digital",
+    "caseSensitive": true,
+    "content": "complete",
+    "concept":  [
+        {
+            "code": "SG",
+            "display": "Safeguarding Concern"
+        },
+        {
+            "code": "SS",
+            "display": "Scene Safety"
+        },
+        {
+            "code": "RS",
+            "display": "Rejected Services"
+        },
+        {
+            "code": "RA",
+            "display": "Reasonable Adjustment"
+        },
+        {
+            "code": "IR",
+            "display": "Infection Risk"
+        },
+        {
+            "code": "RC",
+            "display": "Repeat Caller"
+        }
+    ]
+}

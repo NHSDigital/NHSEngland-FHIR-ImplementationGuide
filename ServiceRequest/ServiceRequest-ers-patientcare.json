@@ -51,7 +51,7 @@
     ],
     "identifier": [
         {
-            "system": "https//fhir.nhs.uk/Id/UBRN",
+            "system": "https://fhir.nhs.uk/Id/UBRN",
             "value": "111111111111"
         }
     ],

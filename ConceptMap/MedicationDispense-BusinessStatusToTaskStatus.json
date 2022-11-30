@@ -3,7 +3,7 @@
     "id": "f12ce712-3059-411b-85f2-1d4dc4eab2f2",
     "url": "https://fhir.nhs.uk/ConceptMap/MedicationDispense-BusinessStatusToTaskStatus",
     "version": "4.0.1",
-    "name": "medicationDispenseBusinessStatusToTaskStatus",
+    "name": "MedicationDispenseBusinessStatusToTaskStatus",
     "title": "MedicationDispense business status to Task status Map",
     "status": "draft",
     "date": "2021-09-11",

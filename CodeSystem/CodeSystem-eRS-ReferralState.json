@@ -1,0 +1,71 @@
+{
+    "resourceType": "CodeSystem",
+    "id": "11dedb46-cfec-47fb-ab03-fab844b2a8d6",
+    "url": "https://fhir.nhs.uk/CodeSystem/eRS-ReferralState",
+    "name": "ERSReferralState",
+    "status": "active",
+    "date": "2021-05-26T13:47:15.123000+00:00",
+    "publisher": "e-Referral Service",
+    "description": "e-RS Referral State",
+    "copyright": "Copyright © 2022 NHS Digital",
+    "content": "fragment",
+    "concept": [
+        {
+            "code": "BOOKED",
+            "display": "The referral has a current state of booked"
+        },
+        {
+            "code": "NOT_BOOKED",
+            "display":"The referral is currently not booked, there is currently no planned patient encounter"
+        },
+        {
+            "code": "APPOINTMENT_CANCELLED_BY_PATIENT",
+            "display":"The referrals most recent appointment was cancelled at the request of, or directly by, a patient"
+        },
+        {
+            "code": "APPOINTMENT_CANCELLED_BY_PROVIDER",
+            "display":"The referrals most recent appointment was cancelled by the service provider"
+        },
+        {
+            "code": "CARL",
+            "display": "The referrals most recent appointment was cancelled by the service provider with instructions for their admin team to progress, the referral is awaiting rebooking"
+        },
+        {
+            "code": "REJECTED",
+            "display": "The referral was rejected by a provider at their service"
+        },
+        {
+            "code": "TRIAGE_RESPONSE",
+            "display":"A service has passed the referral back to the referrer, with advice"
+        },
+        {
+            "code": "AWAITING_TRIAGE",
+            "display":"The triage referral is currently pending review with a service provider"
+        },
+        {
+            "code": "DEFER_TO_PROVIDER",
+            "display":"The service provider will arrange the patient’s appointment"
+        },
+        {
+            "code": "ARBL",
+            "display":"The service provider has reviewed the referral and has requested their admin team to  either book an appointment or redirect the referral into an appropriate service"
+        },
+        {
+            "code": "CARBL_OR_ARL",
+            "display":"The service provider has reviewed the referral, cancelled the appointment and requested their admin team to either rebook an appointment or to redirect the referral into an appropriate service"
+        },
+        {
+            "code": "DID_NOT_ATTEND",
+            "display":"The patient did not attend."
+        },
+        {
+            "code": "ASSESSMENT_RESULT"
+        },
+        {
+            "code": "CANCELLED_REFERRAL"
+        },
+        {
+            "code": "INCOMPLETE"
+        }
+    ]
+}

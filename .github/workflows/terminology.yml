@@ -1,97 +1,20 @@
-name: IOPS-FHIR-Validation-Terminology
+name: IOPS-FHIR-Validation-call
 
 # Controls when the workflow will run
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
   # Allows you to run this workflow manually from the Actions tab
- 
+  
   push:
-   
+  
   workflow_dispatch:
-     
-
+  
+  
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
-    runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
-        with:
-          submodules: true
-      
-      - name: Check out IOPS-Validation
-        uses: actions/checkout@master
-        with:
-          repository: NHSDigital/IOPS-Validation
-          path: validation
-
-      - name: Check out validation-service-fhir-r4
-        uses: actions/checkout@master
-        with:
-          repository: NHSDigital/validation-service-fhir-r4
-          ref: main2
-          path: validation-service-fhir-r4
-        
-      - name: Install Python 3.8
-        uses: actions/setup-python@v1
-        with:
-          python-version: 3.8
-
-      - name: Upgrade python packaging tools
-        run: python -m pip install --upgrade pip setuptools wheel
-
-      - name: Install poetry and requests
-        run: pip install poetry requests
-
-      - name: Install dependencies
-        run: poetry install
-
-      - name: Set SPEC_VERSION env var
-        run: echo ::set-env name=SPEC_VERSION::$(poetry run python scripts/calculate_version.py)
-        env:
-          ACTIONS_ALLOW_UNSECURE_COMMANDS: true
-
-      - name: Set up JDK 11
-        uses: actions/setup-java@v2
-        with:
-          java-version: '11'
-          distribution: 'adopt'
-
-      - name: Install node
-        run: |
-          wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-          curl -sL https://deb.nodesource.com/setup_13.x | sudo -E bash -
-          sudo apt-get install -y nodejs
-          
-      - name: Cache node modules
-        uses: actions/cache@v1
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-build-cache-npm-packages-${{ hashFiles('**/package-lock.json') }}
-          
-      - name: Install npm
-        run: make -C validation install
-        
-      - name: Configure FHIR Validator
-        run: make -C validation configure-validation
-        env:
-          CI: true
-          ONTO_CLIENT_ID: ${{ secrets.ONTO_CLIENT_ID }}
-          ONTO_CLIENT_SECRET: ${{ secrets.ONTO_CLIENT_SECRET }}
-      
-      - name: Build FHIR Validator
-        run: cd validation-service-fhir-r4 && mvn clean package
-
-      - name: Run FHIR Validator
-        run: 
-          nohup java -jar validation-service-fhir-r4/target/fhir-validator.jar --terminology.url=https://ontology.nhs.uk/production1/fhir --terminology.authorization.tokenUrl=https://ontology.nhs.uk/authorisation/auth/realms/nhs-digital-terminology/protocol/openid-connect/token --terminology.authorization.clientId=${{ secrets.ONTO_CLIENT_ID }} --terminology.authorization.clientSecret=${{ secrets.ONTO_CLIENT_SECRET }} &
-          sleep 120
-        
-      - name: Run Test
-        run: make -C validation test
-  
+  # This workflow contains a single job called "call-workflow" which references the FHIR validator repo
+  call-workflow:
+    uses: NHSDigital/IOPS-FHIR-Test-Scripts/.github/workflows/masterfhirvalidation.yml@main
+    secrets:
+      ONTO_CLIENT_ID: ${{ secrets.ONTO_CLIENT_ID }}
+      ONTO_CLIENT_SECRET: ${{ secrets.ONTO_CLIENT_SECRET }}

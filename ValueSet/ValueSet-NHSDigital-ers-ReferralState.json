@@ -1,30 +1,65 @@
 {
-    "resourceType": "ValueSet",
-    "id": "d2a51dd0-9e86-4cea-9064-077637cb79b7",
-    "url": "https://fhir.nhs.uk/ValueSet/NHSDigital-eRS-ReferralState",
-    "version": "1.0.0",
-    "name": "ERSReferralState",
-    "status": "draft",
-    "publisher": "NHS Digital",
-    "contact": [
-      {
-        "name": "Interoperability Team",
-        "telecom": [
-          {
-            "system": "email",
-            "value": "interoperabilityteam@nhs.net",
-            "use": "work"
-          }
-        ]
-      }
-    ],
-    "description": "A valueset to describe the clinic type",
-    "copyright": "Copyright © 2022 NHS Digital",
-    "compose": {
-      "include": [
+  "resourceType": "ValueSet",
+  "id": "d2a51dd0-9e86-4cea-9064-077637cb79b7",
+  "url": "https://fhir.nhs.uk/ValueSet/NHSDigital-eRS-ReferralState",
+  "version": "1.0.0",
+  "name": "ERSReferralState",
+  "status": "draft",
+  "publisher": "NHS Digital",
+  "contact": [
+    {
+      "name": "Interoperability Team",
+      "telecom": [
         {
-          "system": "https://fhir.nhs.uk/CodeSystem/NHSDigital-ReferralState"
+          "system": "email",
+          "value": "interoperabilityteam@nhs.net",
+          "use": "work"
         }
       ]
     }
+  ],
+  "description": "A valueset to describe the clinic type",
+  "copyright": "Copyright © 2022 NHS Digital",
+  "compose": {
+    "include": [
+      {
+        "system": "https://fhir.nhs.uk/CodeSystem/eRS-ReferralState",
+        "concept": [
+          {
+            "code": "REJECTED"
+          },
+          {
+            "code": "TRIAGE_RESPONSE"
+          },
+          {
+            "code": "AWAITING_TRIAGE"
+          },
+          {
+            "code": "NOT_BOOKED"
+          },
+          {
+            "code": "DEFER_TO_PROVIDER"
+          },
+          {
+            "code": "BOOKED"
+          },
+          {
+            "code": "APPOINTMENT_CANCELLED_BY_PATIENT"
+          },
+          {
+            "code": "APPOINTMENT_ CANCELLED_BY_PROVIDER"
+          },
+          {
+            "code": "CARL"
+          },
+          {
+            "code": "ARBL"
+          },
+          {
+            "code": "CARBL_OR_ARL"
+          }
+        ]
+      }
+    ]
   }
+}

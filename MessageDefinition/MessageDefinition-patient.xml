@@ -1,0 +1,26 @@
+<MessageDefinition xmlns="http://hl7.org/fhir">
+    <id value="df0e6570-526f-4c63-bb46-7d2a07e84826" />
+    <url value="https://fhir.nhs.uk/MessageDefinition/patient" />
+    <identifier>
+        <system value="https://tools.ietf.org/html/rfc4122" />
+        <value value="df0e6570-526f-4c63-bb46-7d2a07e84826" />
+    </identifier>
+    <version value="1.0.0" />
+    <title value="Patient Demographic Events" />
+     <name value="PatientDemographicEvents" />
+    <status value="active" />
+    <date value="2022-05-10" />
+    <eventCoding>
+        <system value="https://fhir.nhs.uk/CodeSystem/message-event" />
+        <code value="patient" />
+        <display value="Patient Demographics" />
+    </eventCoding>
+     <description value="Patient Demographics"/>
+    <category value="consequence" />
+    <focus>
+        <code value="Patient" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient" />
+        <min value="1" />
+        <max value="1" />
+    </focus>
+</MessageDefinition>

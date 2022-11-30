@@ -1,0 +1,101 @@
+<CodeSystem xmlns="http://hl7.org/fhir">
+   <id value="NHSDigital-ErrorOrWarningCode" />
+   <url value="https://fhir.nhs.uk/CodeSystem/NHSD-API-ErrorOrWarningCode" />
+   <version value="0.3.0" />
+   <name value="NHSDAPIErrororWarningCode" />
+   <status value="draft" />
+   <date value="2022-04-06T00:00:00+00:00" />
+   <publisher value="NHS Digital" />
+   <contact>
+      <name value="Interoperability Team" />
+      <telecom>
+         <system value="email" />
+         <value value="interoperabilityteam@nhs.net" />
+         <use value="work" />
+      </telecom>
+   </contact>
+   <description value="A CodeSystem that identifies generic API error or warning codes in response to a request. The list is not exhaustive and many APIs will have an additional set of codes specific to their business logic and implementation.
+                For publishers of APIs, we recommend that you use the code and display values in your API to make it more readable." />
+   <copyright value="Copyright © 2022 NHS Digital" />
+   <caseSensitive value="false" />
+   <content value="complete" />
+   <!-- Security Outcomes -->
+   <concept>
+      <code value="ACCESS_DENIED" />
+      <display value="Access has been denied to process this request" />
+      <definition value="Although authenticated - the system or user does not have permission for a particular request. Recommend using HTTP Status Code 403" />
+   </concept>
+  <concept>
+    <code value="ACCESS_DENIED_LEVEL" />
+    <display value="Access has been denied because you need higher level permissions" />
+    <definition value="The request requires higher pemission levels than the authentication provided. For example NHS login has three main levels of P0, P5 and P9 - and the request held a P0 level, instead of P9. Recommend using HTTP Status Code 403" />
+  </concept>
+  <concept>
+    <code value="ACCESS_TOKEN_EXPIRED" />
+    <display value="Access token has expired" />
+    <definition value="Obtain a new access token - the provided access token has expired and is no longer valid, access tokens only have a short life time. Recommend using HTTP Status Code 401" />
+  </concept>
+  <concept>
+    <code value="ACCESS_TOKEN_INVALID" />
+    <display value="Authorization header not formatted correctly" />
+    <definition value="The bearer token could not be retrieved from the Authorization header, format should be 'Bearer INSERT-ACCESS-TOKEN'. Recommend using HTTP Status Code 401" />
+  </concept>
+  <concept>
+    <code value="ACCESS_TOKEN_MISSING" />
+    <display value="Authorization header not sent" />
+    <definition value="The access token must be passed in the Authorization header. The format should be 'Bearer INSERT-ACCESS-TOKEN'. Recommend using HTTP Status Code 400" />
+  </concept>
+  <!-- Operational Outcomes -->
+  <concept>
+    <code value="TIMEOUT" />
+    <display value="Request has timed out" />
+    <definition value="The request has not responded in the timeout period, retry the request. Recommend using HTTP Status Code 408" />
+  </concept>
+  <concept>
+    <code value="TOO_MANY_REQUESTS" />
+    <display value="Your connection has exceeded the rate limit" />
+    <definition value="APIs have different rate limits - and your request has been rejected. Rate limits can be per application (connection) or per API. A detailed reason will be returned in the diagnoistics field. Wait a short period and re-try, ideally with an exponential back-off policy. Recommend using HTTP Status Code 429" />
+  </concept>
+  <concept>
+    <code value="METHOD_NOT_ALLOWED" />
+    <display value="Method not allowed" />
+    <definition value="The request method (verb) is not permitted on this endpoint. Recommend using HTTP Status Code 405" />
+  </concept>
+  <!-- Serverside Outcomes-->
+  <concept>
+    <code value="SERVICE_UNAVAILABLE" />
+    <display value="Service unavailable - could be temporary" />
+    <definition value="There has been a processing failure in the request chain. This could be tranisent failure for a single request, a temporary service issue or maintenance window. Re-send the request after the time specified in the Retry-After header. Normally maps to HTTP Status Code 503" />
+  </concept>
+  <concept>
+  <code value="SERVICE_ERROR" />
+    <display value="Service failure or unexpected error" />
+    <definition value="There has been server or service problem and it could be limited to this one request. Re-send the request after a short period of time. Normally maps to HTTP Status Code 500" />
+  </concept>
+  <!-- More specific to how an API operates -->
+  <concept>
+      <code value="RESOURCE_NOT_FOUND" />
+      <display value="Resource not found" />
+      <definition value="The URL did not point to an existing resource. This could be a simple incorrect url path, or for some REST APIs this can equate to a person or prescription not existing in that API. Recommend using HTTP Status Code 404" />
+   </concept>
+   <concept>
+      <code value="MISSING_HEADER" />
+      <display value="A required header is missing" />
+      <definition value="Inform the caller which required header is missing in the request. Some APIs will return a list of missing headers, others will return the first one. If a list is returned, there will be one issue per error. Recommend using HTTP Status Code 400" />
+   </concept>
+   <concept>
+      <code value="VALIDATION_ERROR" />
+      <display value="A paremeter or value has resulted in a validation error" />
+      <definition value="Returns which parameter or value was incorrect, and why. Some APIs will return a list of errors, others will return the first one. If a list is returned, there will be one issue per error. Recommend using HTTP Status Code 400" />
+   </concept>
+   <concept>
+      <code value="MISSING_VALUE" />
+      <display value="A required value is missing" />
+      <definition value="Inform the caller which value is missing value in the request. Recommend using HTTP Status Code 400" />
+   </concept>
+   <concept>
+      <code value="NOT_ACCEPTABLE" />
+      <display value="Compatible content was not available" />
+      <definition value="The request content string did not result in a matching content type that could be returned. If an API version was requested and it is invalid the message should make that clear. Recommend using HTTP Status Code 406" />
+   </concept>
+</CodeSystem>

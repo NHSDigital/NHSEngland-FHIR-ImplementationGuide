@@ -1,0 +1,27 @@
+<MessageDefinition xmlns="http://hl7.org/fhir">
+    <id value="df720288-723e-480e-92de-83f9376ce32b" />
+    <url value="https://fhir.nhs.uk/MessageDefinition/unsolicited-action" />
+    <identifier>
+        <system value="https://tools.ietf.org/html/rfc4122" />
+        <value value="df720288-723e-480e-92de-83f9376ce32b" />
+    </identifier>
+    <version value="1.0.0" />
+    <name value="NHSDigitalUnsolicitedAction" />
+    <title value="Unsolicitied Task Message" />
+    <status value="active" />
+    <date value="2021-07-07" />
+    <eventCoding>
+        <system value="https://fhir.nhs.uk/CodeSystem/message-event" />
+        <code value="unsolicited-action" />
+        <display value="Unsolicited Action" />
+    </eventCoding>
+    <description value="Unsolicited transmission of a task message"/>
+    <category value="notification" />
+    <focus>
+        <code value="Task" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Task" />
+        <min value="1" />
+        <max value="1" />
+    </focus>
+    <responseRequired value="on-error"></responseRequired>
+</MessageDefinition>

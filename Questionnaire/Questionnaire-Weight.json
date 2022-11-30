@@ -1,0 +1,40 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "dc8f7d5f-cc3f-4626-8f6c-167f20c7ff87",
+  "subjectType": [
+    "Patient"
+  ],
+  "status": "draft",
+  "name":"WeightDefinition",
+  "url": "https://fhir.nhs.uk/Questionnaire/Patient-Codes",
+  "title": "codes",
+  "item": [
+    {
+      "linkId": "weightDefinition",
+      "code": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "27113001",
+          "display": "Body weight"
+        },
+        {
+          "system": "http://loinc.org",
+          "code": "29463-7",
+          "display": "Body Weight"
+        }
+      ],
+      "type": "quantity",
+      "answerOption": [
+        {
+          "valueCoding": [
+            {
+              "system": "http://unitsofmeasure.org",
+              "code": "kg",
+              "display": "kilogram"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

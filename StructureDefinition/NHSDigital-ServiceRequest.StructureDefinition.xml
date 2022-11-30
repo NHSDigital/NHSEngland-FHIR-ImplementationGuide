@@ -82,6 +82,7 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <definition value="Identifiers assigned to this order instance by the orderer and/or the receiver and/or order fulfiller.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;identifier&quot;: [&#xD;&#xA;                    {&#xD;&#xA;                        &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/UBRN&quot;,&#xD;&#xA;                        &quot;value&quot;: &quot;111111111112&quot;&#xD;&#xA;                    }&#xD;&#xA;                ],&#xD;&#xA;```" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
@@ -111,7 +112,7 @@
       <type>
         <code value="Reference" />
         <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-CarePlan" />
-        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-MedicationRequest" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationRequest" />
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-ServiceRequest" />
       </type>
       <mustSupport value="true" />
@@ -181,9 +182,6 @@
       <path value="ServiceRequest.code.coding" />
       <sliceName value="SNOMEDProcedureCode" />
       <min value="1" />
-      <fixedCoding>
-        <system value="http://snomed.info/sct" />
-      </fixedCoding>
     </element>
     <element id="ServiceRequest.code.coding:SNOMEDProcedureCode.system">
       <path value="ServiceRequest.code.coding.system" />
@@ -199,7 +197,7 @@
       <definition value="On whom or what the service is to be performed. This is usually a human patient, but can also be requested on animals, groups of humans or animals, devices such as dialysis machines, or even locations (typically for environmental scans).&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;subject&quot;: {&#xD;&#xA;        &quot;identifier&quot;: {&#xD;&#xA;            &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/nhs-number&quot;,&#xD;&#xA;            &quot;value&quot;: &quot;9999998887&quot;&#xD;&#xA;        }&#xD;&#xA;    },&#xD;&#xA;```" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Patient" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient" />
       </type>
       <constraint>
         <key value="patient-reference" />
@@ -230,7 +228,7 @@
       <path value="ServiceRequest.encounter" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-Encounter" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Encounter" />
       </type>
     </element>
     <element id="ServiceRequest.authoredOn">
@@ -253,7 +251,7 @@
     <element id="ServiceRequest.performerType">
       <path value="ServiceRequest.performerType" />
       <short value="Requested Specialty Name" />
-      <definition value="**ERS**&#xD;&#xA;&#xD;&#xA;Specialty used to search for the shortlisted service(s) (if one was used)&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;performerType&quot;: {&#xD;&#xA;        &quot;coding&quot;: [&#xD;&#xA;            {&#xD;&#xA;                &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/NHSDigital-Specialty&quot;,&#xD;&#xA;                &quot;code&quot;: &quot;GENERAL_MEDICINE&quot;&#xD;&#xA;            }&#xD;&#xA;        ]&#xD;&#xA;    },&#xD;&#xA;```" />
+      <definition value="**ERS**&#xD;&#xA;&#xD;&#xA;Specialty used to search for the shortlisted service(s) (if one was used)&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;performerType&quot;: {&#xD;&#xA;        &quot;coding&quot;: [&#xD;&#xA;            {&#xD;&#xA;                &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/eRS-Specialty&quot;,&#xD;&#xA;                &quot;code&quot;: &quot;GENERAL_MEDICINE&quot;&#xD;&#xA;            }&#xD;&#xA;        ]&#xD;&#xA;    },&#xD;&#xA;```&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;performerType&quot;: {&#xD;&#xA;                    &quot;coding&quot;: [&#xD;&#xA;                        {&#xD;&#xA;                            &quot;display&quot;: &quot;Dermatology&quot;&#xD;&#xA;                        }&#xD;&#xA;                    ]&#xD;&#xA;                }&#xD;&#xA;```" />
       <mustSupport value="true" />
     </element>
     <element id="ServiceRequest.performerType.coding">
@@ -267,16 +265,8 @@
       </slicing>
       <binding>
         <strength value="example" />
-        <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDataModelAndDictionary-treatment-function" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDigital-CareSettingType" />
       </binding>
-    </element>
-    <element id="ServiceRequest.performerType.coding.system">
-      <path value="ServiceRequest.performerType.coding.system" />
-      <min value="1" />
-    </element>
-    <element id="ServiceRequest.performerType.coding.code">
-      <path value="ServiceRequest.performerType.coding.code" />
-      <min value="1" />
     </element>
     <element id="ServiceRequest.performerType.coding:treatmentFunctionCodes">
       <path value="ServiceRequest.performerType.coding" />
@@ -301,11 +291,10 @@
     </element>
     <element id="ServiceRequest.performerType.coding:eRSSpecialty.system">
       <path value="ServiceRequest.performerType.coding.system" />
-      <fixedUri value="https://fhir.nhs.uk/CodeSystem/NHSDigital-Specialty" />
+      <fixedUri value="https://fhir.nhs.uk/CodeSystem/eRS-Specialty" />
     </element>
     <element id="ServiceRequest.performer">
       <path value="ServiceRequest.performer" />
-      <definition value="The desired performer for doing the requested service.  For example, the surgeon, dermatopathologist, endoscopist, etc." />
       <mustSupport value="true" />
     </element>
     <element id="ServiceRequest.performer.identifier">
