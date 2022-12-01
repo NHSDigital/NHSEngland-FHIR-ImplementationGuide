@@ -1,0 +1,32 @@
+{
+    "resourceType": "CodeSystem",
+    "id": "triage-outcome-pathways-sg-codes",
+    "url": "https://fhir.nhs.uk/CodeSystem/pathways-sg-codes",
+    "identifier":  [
+        {
+            "system": "https://fhir.nhs.uk/identifier/pathways-sg-codes",
+            "value": "pathways-sg-codes"
+        }
+    ],
+    "version": "1.0.1",
+    "name": "PathwaysSGCodes",
+    "title": "Triage Outcome Pathways SG Codes",
+    "status": "active",
+    "date": "2022-03-08",
+    "publisher": "NHS Digital",
+    "contact":  [
+        {
+            "name": "NHS Digital",
+            "telecom":  [
+                {
+                    "system": "email",
+                    "value": "interoperabilityteam@nhs.net",
+                    "use": "work"
+                }
+            ]
+        }
+    ],
+    "description": "Pathways SG Codes from the triage outcome.",
+    "copyright": "Copyright © 2022 NHS Digital",
+    "content": "complete"
+}
