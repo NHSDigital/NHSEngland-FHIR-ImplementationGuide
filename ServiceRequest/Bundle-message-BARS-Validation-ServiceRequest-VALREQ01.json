@@ -73,6 +73,18 @@
                 "focus": [
                     {
                         "reference": "urn:uuid:236bb75d-90ef-461f-b71e-fde7f899802c"
+                    },
+                    {
+                        "reference": "urn:uuid:8c63d621-4d86-4f57-8699-e8e22d49935d"
+                    },
+                    {
+                        "reference": "urn:uuid:5b94d980-b9b6-42ce-8ca3-56676af6c0a7"
+                    },
+                    {
+                        "reference": "urn:uuid:1e91008e-96d0-438b-873c-c6d2c007fc29"
+                    },
+                    {
+                        "reference":"urn:uuid:c584542a-a1c6-4b77-a3e8-4a5b0b9cea09"
                     }
                 ],
                 "definition": "https://fhir.nhs.uk/MessageDefinition/bars-message-servicerequest-request-validation"
@@ -281,7 +293,7 @@
                         "valueCodeableConcept": {
                             "coding": [
                                 {
-                                    "system": "https://fhir.hl7.org.uk/CodeSystem/UKCore-EthnicCategory",
+                                    "system": "https://fhir.hl7.org.uk/CodeSystem/UKCore-EthnicCategoryEngland",
                                     "code": "A",
                                     "display": "British, Mixed British"
                                 }
@@ -424,31 +436,6 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:1e744e34-6bbb-4aa9-8b20-fa3bb91f9d8f",
-            "resource": {
-                "resourceType": "PractitionerRole",
-                "meta": {
-                    "lastUpdated": "2021-10-11T15:23:30+00:00"
-                },
-                "practitioner": {
-                    "identifier": [
-                        {
-                            "system": "https://fhir.nhs.uk/Id/sds-role-profile-id",
-                            "value": "G823658"
-                        }
-                    ],
-                    "display": "Alex Smith"
-                },
-                "organization": {
-                    "identifier": {
-                        "system": "https://fhir.nhs.uk/id/ods-organization-code",
-                        "value": "G82080"
-                    },
-                    "display": "Patient's Surgery"
-                }
-            }
-        },
-        {
             "fullUrl": "urn:uuid:2ec99e82-a0af-4b70-bd53-1869d84b2ad1",
             "resource": {
                 "resourceType": "Location",
@@ -497,10 +484,7 @@
             "resource": {
                 "resourceType": "Observation",
                 "meta": {
-                    "lastUpdated": "2021-11-26T15:00:00+00:00",
-                    "profile": [
-                        "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Observation"
-                    ]
+                    "lastUpdated": "2021-11-26T15:00:00+00:00"
                 },
                 "status": "final",
                 "code": {
@@ -563,10 +547,7 @@
             "resource": {
                 "resourceType": "Consent",
                 "meta": {
-                    "lastUpdated": "2021-11-26T15:00:00+00:00",
-                    "profile": [
-                        "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Consent"
-                    ]
+                    "lastUpdated": "2021-11-26T15:00:00+00:00"
                 },
                 "status": "active",
                 "scope": {
@@ -581,9 +562,8 @@
                     {
                         "coding": [
                             {
-                                "system": "https://fhir.nhs.uk/CodeSystem/consent-categories-bars",
-                                "code": "DRC",
-                                "display": "Direct Care"
+                                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                                "code": "IMPLIED"
                             }
                         ]
                     }
@@ -595,8 +575,9 @@
                 "policyRule": {
                     "coding": [
                         {
-                            "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
-                            "code": "IMPLIED"
+                            "system": "https://fhir.nhs.uk/CodeSystem/consent-categories-bars",
+                            "code": "DRC",
+                            "display": "Direct Care"
                         }
                     ]
                 }
