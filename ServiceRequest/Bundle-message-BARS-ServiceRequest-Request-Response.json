@@ -519,6 +519,16 @@
                     "lastUpdated": "2021-11-26T15:00:00+00:00"
                 },
                 "status": "active",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                                "code": "IMPLIEDD"
+                            }
+                        ]
+                    }
+                ],
                 "scope": {
                     "coding":  [
                         {
@@ -527,26 +537,17 @@
                         }
                     ]
                 },
-                "category":  [
-                    {
-                        "coding":  [
-                            {
-                                "system": "https://fhir.nhs.uk/CodeSystem/consent-categories-bars",
-                                "code": "DRC",
-                                "display": "Direct Care"
-                            }
-                        ]
-                    }
-                ],
                 "patient": {
                     "reference": "urn:uuid:9589fb37-87a2-48d8-968f-b371429208a8"
                 },
                 "dateTime": "2021-11-26",
-                "policyRule": {
+                "policyRule": 
+                {
                     "coding":  [
                         {
-                            "system": "http://terminology.hl7.org/CodeSystem/consentpolicycodes",
-                            "code": "cric"
+                            "system": "https://fhir.nhs.uk/CodeSystem/consent-categories-bars",
+                            "code": "DRC",
+                            "display": "Direct Care"
                         }
                     ]
                 }
