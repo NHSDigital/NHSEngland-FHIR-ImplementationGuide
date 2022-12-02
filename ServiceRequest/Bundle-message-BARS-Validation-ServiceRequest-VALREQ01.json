@@ -151,7 +151,13 @@
                 ],
                 "active": true,
                 "providedBy": {
-                    "reference": "urn:uuid:d5ffd0cd-ec7e-48a1-84f1-91f4c0eb8fc5"
+                    "identifier": 
+                        {
+                            "system": "https://fhir.nhs.uk/id/ods-organization-code",
+                            "value": "RYE"
+                        }
+                    ,
+                    "display": "Receiving/performing Organization"
                 },
                 "name": "Consulting psychologists and/or psychology services"
             }
@@ -183,7 +189,7 @@
                 },
                 "episodeOfCare": [
                     {
-                        "reference": "d877b820-e72b-44d1-a627-195f54bfc606"
+                        "reference": "https://sender.url/EpisodeOfCare/d877b820-e72b-44d1-a627-195f54bfc606"
                     }
                 ],
                 "period": {
@@ -443,38 +449,6 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:b5e27389-3ca5-4cbc-9173-73f0c74915d9",
-            "resource": {
-                "resourceType": "Organization",
-                "meta": {
-                    "lastUpdated": "2021-11-26T15:00:00+00:00",
-                    "profile": [
-                        "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Organization"
-                    ]
-                },
-                "name": "Practitioner Org"
-            }
-        },
-        {
-            "fullUrl": "urn:uuid:d5ffd0cd-ec7e-48a1-84f1-91f4c0eb8fc5",
-            "resource": {
-                "resourceType": "Organization",
-                "meta": {
-                    "lastUpdated": "2021-11-26T15:00:00+00:00",
-                    "profile": [
-                        "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Organization"
-                    ]
-                },
-                "identifier": [
-                    {
-                        "system": "https://fhir.nhs.uk/id/ods-organization-code",
-                        "value": "RYE"
-                    }
-                ],
-                "name": "Receiving/performing Organization"
-            }
-        },
-        {
             "fullUrl": "urn:uuid:2ec99e82-a0af-4b70-bd53-1869d84b2ad1",
             "resource": {
                 "resourceType": "Location",
@@ -534,7 +508,7 @@
                         {
                             "system": "http://snomed.info/sct",
                             "code": "271594007",
-                            "display": "Syncope (disorder)"
+                            "display": "Syncope (finding)"
                         }
                     ]
                 },
