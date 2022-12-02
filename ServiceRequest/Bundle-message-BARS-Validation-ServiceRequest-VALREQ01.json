@@ -23,7 +23,10 @@
                     {
                         "endpoint": "http://fhir.nhs.uk/Id/dos-service-id|111111111",
                         "receiver": {
-                            "reference": "urn:uuid:10397afd-479c-42ea-9d5d-e4024481e0f8"
+                            "identifier": {
+                                "system": "https://fhir.nhs.uk/id/ods-organization-code",
+                                "value": "CAS-001"
+                            }
                         }
                     }
                 ],
@@ -264,10 +267,7 @@
             "resource": {
                 "resourceType": "Patient",
                 "meta": {
-                    "lastUpdated": "2021-11-26T15:00:00+00:00",
-                    "profile": [
-                        "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Patient"
-                    ]
+                    "lastUpdated": "2021-11-26T15:00:00+00:00"
                 },
                 "extension": [
                     {
@@ -281,36 +281,10 @@
                                 }
                             ]
                         }
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/patient-religion",
-                        "valueCodeableConcept": {
-                            "coding": [
-                                {
-                                    "system": "http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation",
-                                    "code": "1041",
-                                    "display": "Roman Catholic Church"
-                                }
-                            ]
-                        }
                     }
                 ],
                 "identifier": [
                     {
-                        "extension": [
-                            {
-                                "url": "https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-NHSNumberVerificationStatus",
-                                "valueCodeableConcept": {
-                                    "coding": [
-                                        {
-                                            "system": "https://fhir.hl7.org.uk/CodeSystem/UKCore-NHSNumberVerificationStatus",
-                                            "code": "number-present-and-verified",
-                                            "display": "Number present and verified"
-                                        }
-                                    ]
-                                }
-                            }
-                        ],
                         "system": "https://fhir.nhs.uk/Id/nhs-number",
                         "value": "3478526985"
                     }
@@ -355,7 +329,7 @@
                             {
                                 "coding": [
                                     {
-                                        "system": "https://fhir.hl7.org.uk/ValueSet/UKCore-PersonRelationshipType",
+                                        "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
                                         "code": "ONESELF",
                                         "display": "self"
                                     }
@@ -394,7 +368,7 @@
                             {
                                 "coding": [
                                     {
-                                        "system": "https://fhir.hl7.org.uk/ValueSet/UKCore-PersonRelationshipType",
+                                        "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
                                         "code": "EP",
                                         "display": "Emergency contact person"
                                     }
@@ -501,19 +475,6 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:10397afd-479c-42ea-9d5d-e4024481e0f8",
-            "resource": {
-                "resourceType": "Organization",
-                "meta": {
-                    "lastUpdated": "2021-11-26T15:00:00+00:00",
-                    "profile": [
-                        "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Organization"
-                    ]
-                },
-                "name": "Receiver Organization"
-            }
-        },
-        {
             "fullUrl": "urn:uuid:2ec99e82-a0af-4b70-bd53-1869d84b2ad1",
             "resource": {
                 "resourceType": "Location",
@@ -555,50 +516,6 @@
                     "longitude": 53.79957987629337,
                     "latitude": -1.5417544014466307
                 }
-            }
-        },
-        {
-            "fullUrl": "urn:uuid:b923aa53-2376-4015-a07d-afe8bf2310eb",
-            "resource": {
-                "resourceType": "PractitionerRole",
-                "meta": {
-                    "lastUpdated": "2021-11-26T15:00:00+00:00",
-                    "profile": [
-                        "https://fhir.hl7.org.uk/StructureDefinition/UKCore-PractitionerRole"
-                    ]
-                },
-                "practitioner": {
-                    "identifier": {
-                        "system": "https://fhir.nhs.uk/Id/sds-role-profile-id",
-                        "value": "PT2489"
-                    },
-                    "display": "Marcy Blake"
-                },
-                "organization": {
-                    "reference": "urn:uuid:b5e27389-3ca5-4cbc-9173-73f0c74915d9"
-                },
-                "code": [
-                    {
-                        "coding": [
-                            {
-                                "system": "http://snomed.info/sct",
-                                "code": "224608005",
-                                "display": "Administrative healthcare staff"
-                            }
-                        ]
-                    }
-                ],
-                "specialty": [
-                    {
-                        "coding": [
-                            {
-                                "system": "http://snomed.info/sct",
-                                "code": "408443003",
-                                "display": "General medical practice"
-                            }
-                        ]
-                    }
-                ]
             }
         },
         {
