@@ -149,11 +149,7 @@
             "resource": {
                 "resourceType": "HealthcareService",
                 "meta": {
-                    "lastUpdated": "2021-11-26T15:00:00+00:00",
-                    "profile": [
-                        "http://hl7.org/fhir/StructureDefinition/HealthcareService",
-                        "https://fhir.hl7.org.uk/StructureDefinition/UKCore-HealthcareService"
-                    ]
+                    "lastUpdated": "2021-11-26T15:00:00+00:00"
                 },
                 "identifier": [
                     {
@@ -179,10 +175,7 @@
             "resource": {
                 "resourceType": "Encounter",
                 "meta": {
-                    "lastUpdated": "2021-11-26T15:00:00+00:00",
-                    "profile": [
-                        "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Encounter"
-                    ]
+                    "lastUpdated": "2021-11-26T15:00:00+00:00"
                 },
                 "identifier": [
                     {
@@ -214,10 +207,7 @@
             "resource": {
                 "resourceType": "CarePlan",
                 "meta": {
-                    "lastUpdated": "2021-11-26T15:00:00+00:00",
-                    "profile": [
-                        "https://fhir.hl7.org.uk/StructureDefinition/UKCore-CarePlan"
-                    ]
+                    "lastUpdated": "2021-11-26T15:00:00+00:00"
                 },
                 "status": "active",
                 "intent": "plan",
@@ -440,10 +430,7 @@
             "resource": {
                 "resourceType": "Location",
                 "meta": {
-                    "lastUpdated": "2021-11-26T15:00:00+00:00",
-                    "profile": [
-                        "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Location"
-                    ]
+                    "lastUpdated": "2021-11-26T15:00:00+00:00"
                 },
                 "extension": [
                     {
@@ -507,11 +494,7 @@
             "resource": {
                 "resourceType": "Flag",
                 "meta": {
-                    "lastUpdated": "2021-11-26T15:00:00+00:00",
-                    "profile": [
-                        "http://hl7.org/fhir/StructureDefinition/Flag",
-                        "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Flag"
-                    ]
+                    "lastUpdated": "2021-11-26T15:00:00+00:00"
                 },
                 "status": "active",
                 "category": [
