@@ -478,6 +478,15 @@
                     "coding": [
                         {
                             "system": "http://snomed.info/sct",
+                            "code": "248217000",
+                            "display": "State of consciousness and awareness"
+                        }
+                    ]
+                },
+                "valueCodeableConcept": {
+                    "coding": [
+                        {
+                            "system": "http://snomed.info/sct",
                             "code": "271594007",
                             "display": "Syncope (finding)"
                         }
