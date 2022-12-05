@@ -25,13 +25,13 @@
     "include": [
       {
         "system": "http://snomed.info/sct",
-        "filter":  [
+        "filter": [
           {
-              "property": "constraint",
-              "op": "=",
-              "value": "descendantOrSelfOf 71388002"
+            "property": "constraint",
+            "op": "=",
+            "value": "descendantOrSelfOf 71388002"
           }
-      ]
+        ]
       },
       {
         "system": "http://hl7.org/fhir/CodeSystem/task-code",
@@ -47,7 +47,17 @@
         ]
       },
       {
-        "system": "https://fhir.nhs.uk/CodeSystem/Workflow-Code"
+        "system": "https://fhir.nhs.uk/CodeSystem/Workflow-Code",
+        "concept": [
+          {
+            "code": "APPOINTMENT_DEFERRAL",
+            "display": "Appointment Deferral"
+          },
+          {
+            "code": "TRIAGE_DEFERRAL",
+            "display": "Triage Deferral"
+          }
+        ]
       }
     ]
   }

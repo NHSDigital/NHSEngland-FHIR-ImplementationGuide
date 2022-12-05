@@ -3,10 +3,7 @@
   "id": "6c2a1f9b-2517-419d-9099-591ba63f176c",
   "meta": {
     "versionId": "3834a43e-8696-4e77-aea4-b4fa0b6ef29e",
-    "lastUpdated": "2022-04-07T11:59:29.238+00:00",
-    "profile": [
-      "https://fhir.nhs.uk/StructureDefinition/NHSDigital-ServiceRequest-PatientCare"
-    ]
+    "lastUpdated": "2022-04-07T11:59:29.238+00:00"
   },
   "extension": [
     {
