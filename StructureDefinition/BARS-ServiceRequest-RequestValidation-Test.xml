@@ -1,0 +1,102 @@
+<StructureDefinition xmlns="http://hl7.org/fhir">
+    <id value="BARSServiceRequest-request-validation" />
+    <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-BARS-ServiceRequestTest
+    " />
+    <version value="1.0.2" />
+    <name value="BARSServiceRequestRequestValidation" />
+    <title value="BARS ServiceRequest-Request Validation" />
+    <status value="active" />
+    <date value="2022-04-20" />
+    <description value="BARS ServiceRequest-request Validation profile" />
+    <fhirVersion value="4.0.1" />
+    <kind value="resource" />
+    <abstract value="false" />
+    <type value="ServiceRequest" />
+    <baseDefinition value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-ServiceRequest" />
+    <derivation value="constraint" />
+    <differential>
+        <element id="ServiceRequest.intent">
+            <path value="ServiceRequest.intent" />
+            <fixedCode value="plan" />
+        </element>
+        <element id="ServiceRequest.category">
+            <path value="ServiceRequest.category" />
+            <min value="1" />
+            <max value="1" />
+        </element>
+        <element id="ServiceRequest.category.coding.system">
+            <path value="ServiceRequest.category.coding.system" />
+            <fixedUri value="https://fhir.nhs.uk/CodeSystem/message-category-servicerequest" />
+        </element>
+        <element id="ServiceRequest.category.coding.code">
+            <path value="ServiceRequest.category.coding.code" />
+            <fixedCode value="validation" />
+        </element>
+        <element id="ServiceRequest.subject">
+            <path value="ServiceRequest.subject" />
+            <type>
+                <code value="Reference" />
+                <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Patient" />
+            </type>
+        </element>
+        <element id="ServiceRequest.encounter">
+            <path value="ServiceRequest.encounter" />
+            <comment value="Encounter context" />
+        </element>
+        <element id="ServiceRequest.occurrence[x]">
+            <path value="ServiceRequest.occurrence[x]" />
+            <comment value="Validation Breach Time/Call back breach time" />
+            <type>
+                <code value="Period" />
+            </type>
+        </element>
+        <element id="ServiceRequest.occurrence[x].start">
+            <path value="ServiceRequest.occurrence[x].start" />
+            <min value="1" />
+        </element>
+        <element id="ServiceRequest.occurrence[x].end">
+            <path value="ServiceRequest.occurrence[x].end" />
+            <min value="1" />
+        </element>
+        <element id="ServiceRequest.authoredOn">
+            <path value="ServiceRequest.authoredOn" />
+            <comment value="ReferralDateTime" />
+        </element>
+        <element id="ServiceRequest.requester">
+            <path value="ServiceRequest.requester" />
+            <comment value="Participant" />
+        </element>
+        <element id="ServiceRequest.requester.reference">
+            <path value="ServiceRequest.requester.reference" />
+            <comment value="Organisation" />
+        </element>
+        <element id="ServiceRequest.requester.type">
+            <path value="ServiceRequest.requester.type" />
+            <comment value="Service" />
+        </element>
+        <element id="ServiceRequest.performer">
+            <path value="ServiceRequest.performer" />
+            <comment value="Referral To" />
+        </element>
+        <element id="ServiceRequest.locationReference">
+            <path value="ServiceRequest.locationReference" />
+            <comment value="Incident location" />
+        </element>
+        <element id="ServiceRequest.reasonCode">
+            <path value="ServiceRequest.reasonCode" />
+            <comment value="Reason for referral/Next activity/Clinical Urgency of Referral" />
+        </element>
+        <element id="ServiceRequest.reasonCode.coding">
+            <path value="ServiceRequest.reasonCode.coding" />
+            <comment value="Proprietary Triage Outcome code system" />
+        </element>
+        <element id="ServiceRequest.reasonReference">
+            <path value="ServiceRequest.reasonReference" />
+            <comment value="Chief concern" />
+        </element>
+        <element id="ServiceRequest.supportingInfo">
+            <path value="ServiceRequest.supportingInfo" />
+            <comment value="Rejected Services/patient choice (QuestionnaireResponse), Secondary concern (Condition)" />
+        </element>
+    </differential>
+</StructureDefinition>
