@@ -62,6 +62,11 @@
       <sliceName value="UBRN" />
       <min value="1" />
     </element>
+    <element id="ServiceRequest.category.coding:snomedCategory">
+      <path value="ServiceRequest.category.coding" />
+      <sliceName value="snomedCategory" />
+      <min value="1" />
+    </element>
     <element id="ServiceRequest.priority">
       <path value="ServiceRequest.priority" />
       <min value="1" />

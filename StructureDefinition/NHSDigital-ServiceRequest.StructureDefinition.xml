@@ -142,6 +142,13 @@
     </element>
     <element id="ServiceRequest.category.coding">
       <path value="ServiceRequest.category.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
       <min value="1" />
       <binding>
         <strength value="required" />
@@ -151,11 +158,28 @@
     <element id="ServiceRequest.category.coding.system">
       <path value="ServiceRequest.category.coding.system" />
       <min value="1" />
-      <fixedUri value="http://snomed.info/sct" />
     </element>
     <element id="ServiceRequest.category.coding.code">
       <path value="ServiceRequest.category.coding.code" />
       <min value="1" />
+    </element>
+    <element id="ServiceRequest.category.coding:snomedCategory">
+      <path value="ServiceRequest.category.coding" />
+      <sliceName value="snomedCategory" />
+      <fixedCoding>
+        <system value="http://snomed.info/sct" />
+      </fixedCoding>
+    </element>
+    <element id="ServiceRequest.category.coding:snomedCategory.system">
+      <path value="ServiceRequest.category.coding.system" />
+      <fixedUri value="http://snomed.info/sct" />
+    </element>
+    <element id="ServiceRequest.category.coding:barsCategory">
+      <path value="ServiceRequest.category.coding" />
+      <sliceName value="barsCategory" />
+      <fixedCoding>
+        <system value="https://fhir.nhs.uk/CodeSystem/message-category-servicerequest" />
+      </fixedCoding>
     </element>
     <element id="ServiceRequest.priority">
       <path value="ServiceRequest.priority" />
@@ -205,14 +229,12 @@
         <severity value="error" />
         <human value="An identifier reference or resource reference must be provided" />
         <expression value="(reference.exists() or identifier.exists())" />
-        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-ServiceRequest" />
       </constraint>
       <constraint>
         <key value="patient-nhs" />
         <severity value="error" />
         <human value="NHS Number must be in the English and Welsh NHS Number range or length of the number is wrong." />
         <expression value="identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').exists().not() or (identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').exists()  and identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').value.matches('^([456789]{1}[0-9]{9})$'))" />
-        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-ServiceRequest" />
       </constraint>
       <mustSupport value="true" />
     </element>
