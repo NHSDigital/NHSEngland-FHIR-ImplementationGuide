@@ -125,15 +125,6 @@
       {
         "id": "HealthcareService.location",
         "path": "HealthcareService.location",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "identifier.system"
-            }
-          ],
-          "rules": "open"
-        },
         "min": 1,
         "type": [
           {
