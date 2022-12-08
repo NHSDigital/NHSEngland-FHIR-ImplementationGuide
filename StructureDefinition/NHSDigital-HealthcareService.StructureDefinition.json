@@ -26,7 +26,6 @@
         },
         "definition": "**SHOULD** contain the service identifier e.g. the serviceId from <a href=\"https://www.directoryofservices.nhs.uk/\">Directory of Service</a> or <a href=\"https://digital.nhs.uk/developer/api-catalogue/e-referral-service-fhir\">e-RS Directory Services</a>\r\n\r\n**MAY** contain an ANANA/ODS code. \r\n\r\n```json\r\n\"identifier\": [\r\n          {\r\n            \"use\": \"official\",\r\n            \"system\": \"https://fhir.nhs.uk/Id/ers-service\",\r\n            \"value\": \"11021\"\r\n          }\r\n        ]\r\n```",
         "comment": "MUST contain an ANANA/ODS code.",
-        "min": 1,
         "mustSupport": true
       },
       {
