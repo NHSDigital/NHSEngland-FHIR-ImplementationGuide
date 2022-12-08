@@ -56,7 +56,7 @@
           {
             "code": "Extension",
             "profile": [
-              "https://fhir.nhs.uk/StructureDefinition/Extension-eRS-HealthcareServiceContact"
+              "https://fhir.nhs.uk/StructureDefinition/Extension-eRS-HealthcareService-Contact"
             ]
           }
         ]
