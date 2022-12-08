@@ -79,6 +79,10 @@
       <path value="ServiceRequest.authoredOn" />
       <min value="1" />
     </element>
+    <element id="ServiceRequest.requester">
+      <path value="ServiceRequest.requester" />
+      <min value="1" />
+    </element>
     <element id="ServiceRequest.requester.reference">
       <path value="ServiceRequest.requester.reference" />
       <min value="1" />
