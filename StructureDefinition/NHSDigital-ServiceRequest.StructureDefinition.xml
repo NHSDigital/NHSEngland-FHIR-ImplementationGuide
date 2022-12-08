@@ -150,10 +150,6 @@
         <rules value="open" />
       </slicing>
       <min value="1" />
-      <binding>
-        <strength value="required" />
-        <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDigital-ServiceRequest-category" />
-      </binding>
     </element>
     <element id="ServiceRequest.category.coding.system">
       <path value="ServiceRequest.category.coding.system" />
@@ -162,6 +158,33 @@
     <element id="ServiceRequest.category.coding.code">
       <path value="ServiceRequest.category.coding.code" />
       <min value="1" />
+    </element>
+    <element id="ServiceRequest.category.coding:BARSCategory">
+      <path value="ServiceRequest.category.coding" />
+      <sliceName value="BARSCategory" />
+      <fixedCoding>
+        <system value="https://fhir.nhs.uk/CodeSystem/message-category-servicerequest" />
+      </fixedCoding>
+      <binding>
+        <strength value="preferred" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDigital-BARS-message-category" />
+      </binding>
+    </element>
+    <element id="ServiceRequest.category.coding:BARSCategory.system">
+      <path value="ServiceRequest.category.coding.system" />
+      <fixedUri value="https://fhir.nhs.uk/CodeSystem/message-category-servicerequest" />
+    </element>
+    <element id="ServiceRequest.category.coding:NHSDigitalServiceRequestCategory">
+      <path value="ServiceRequest.category.coding" />
+      <sliceName value="NHSDigitalServiceRequestCategory" />
+      <binding>
+        <strength value="preferred" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDigital-ServiceRequest-category" />
+      </binding>
+    </element>
+    <element id="ServiceRequest.category.coding:NHSDigitalServiceRequestCategory.system">
+      <path value="ServiceRequest.category.coding.system" />
+      <fixedUri value="http://snomed.info/sct" />
     </element>
     <element id="ServiceRequest.priority">
       <path value="ServiceRequest.priority" />

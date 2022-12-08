@@ -145,11 +145,6 @@
         ]
       },
       {
-        "id": "HealthcareService.location:serviceLocation",
-        "path": "HealthcareService.location",
-        "sliceName": "serviceLocation"
-      },
-      {
         "id": "HealthcareService.characteristic",
         "path": "HealthcareService.characteristic",
         "binding": {
