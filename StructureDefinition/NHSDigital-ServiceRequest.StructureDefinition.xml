@@ -181,6 +181,10 @@
         <system value="https://fhir.nhs.uk/CodeSystem/message-category-servicerequest" />
       </fixedCoding>
     </element>
+    <element id="ServiceRequest.category.coding:barsCategory.system">
+      <path value="ServiceRequest.category.coding.system" />
+      <fixedUri value="https://fhir.nhs.uk/CodeSystem/message-category-servicerequest" />
+    </element>
     <element id="ServiceRequest.priority">
       <path value="ServiceRequest.priority" />
       <definition value="Request Priority Code &#xD;&#xA;&#xD;&#xA;Code for the priority of the referral set by the Referring Clinician&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA; &quot;priority&quot;: &quot;routine&quot;,&#xD;&#xA;```" />
