@@ -162,9 +162,6 @@
     <element id="ServiceRequest.category.coding:BARSCategory">
       <path value="ServiceRequest.category.coding" />
       <sliceName value="BARSCategory" />
-      <fixedCoding>
-        <system value="https://fhir.nhs.uk/CodeSystem/message-category-servicerequest" />
-      </fixedCoding>
       <binding>
         <strength value="preferred" />
         <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDigital-BARS-message-category" />
@@ -181,10 +178,6 @@
         <strength value="preferred" />
         <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDigital-ServiceRequest-category" />
       </binding>
-    </element>
-    <element id="ServiceRequest.category.coding:NHSDigitalServiceRequestCategory.system">
-      <path value="ServiceRequest.category.coding.system" />
-      <fixedUri value="http://snomed.info/sct" />
     </element>
     <element id="ServiceRequest.priority">
       <path value="ServiceRequest.priority" />
