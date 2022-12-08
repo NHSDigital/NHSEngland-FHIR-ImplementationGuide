@@ -179,6 +179,10 @@
         <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDigital-ServiceRequest-category" />
       </binding>
     </element>
+    <element id="ServiceRequest.category.coding:NHSDigitalServiceRequestCategory.system">
+      <path value="ServiceRequest.category.coding.system" />
+      <fixedUri value="http://snomed.info/sct" />
+    </element>
     <element id="ServiceRequest.priority">
       <path value="ServiceRequest.priority" />
       <definition value="Request Priority Code &#xD;&#xA;&#xD;&#xA;Code for the priority of the referral set by the Referring Clinician&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA; &quot;priority&quot;: &quot;routine&quot;,&#xD;&#xA;```" />
