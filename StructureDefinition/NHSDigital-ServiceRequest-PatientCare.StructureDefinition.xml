@@ -67,6 +67,10 @@
       <sliceName value="snomedCategory" />
       <min value="1" />
     </element>
+    <element id="ServiceRequest.category.coding:snomedCategory.system">
+      <path value="ServiceRequest.category.coding.system" />
+      <fixedUri value="http://snomed.info/sct" />
+    </element>
     <element id="ServiceRequest.priority">
       <path value="ServiceRequest.priority" />
       <min value="1" />
