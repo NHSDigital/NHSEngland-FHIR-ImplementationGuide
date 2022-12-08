@@ -155,8 +155,8 @@
         }
       },
       {
-        "id": "Task.reasonCode.coding:SNOMED.system",
-        "path": "Task.reasonCode.coding.system",
+        "id": "Task.code.coding:SNOMED.system",
+        "path": "Task.code.coding.system",
         "fixedUri": "http://snomed.info/sct"
       },
       {
@@ -169,8 +169,8 @@
         }
       },
       {
-        "id": "Task.reasonCode.coding:Fulfilment.system",
-        "path": "Task.reasonCode.coding.system",
+        "id": "Task.code.coding:Fulfilment.system",
+        "path": "Task.code.coding.system",
         "fixedUri": "http://hl7.org/fhir/CodeSystem/task-code"
       },
 
@@ -184,8 +184,8 @@
         }
       },
       {
-        "id": "Task.reasonCode.coding:Worflow.system",
-        "path": "Task.reasonCode.coding.system",
+        "id": "Task.code.coding:Worflow.system",
+        "path": "Task.code.coding.system",
         "fixedUri": "https://fhir.nhs.uk/CodeSystem/Workflow-Code"
       },
       
