@@ -24,6 +24,9 @@
   "compose": {
     "include": [
       {
+        "system": "https://fhir.nhs.uk/CodeSystem/message-category-servicerequest"
+      },
+      {
         "system": "http://snomed.info/sct",
         "concept": [
           {

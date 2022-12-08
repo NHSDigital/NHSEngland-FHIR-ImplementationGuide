@@ -163,28 +163,6 @@
       <path value="ServiceRequest.category.coding.code" />
       <min value="1" />
     </element>
-    <element id="ServiceRequest.category.coding:snomedCategory">
-      <path value="ServiceRequest.category.coding" />
-      <sliceName value="snomedCategory" />
-      <fixedCoding>
-        <system value="http://snomed.info/sct" />
-      </fixedCoding>
-    </element>
-    <element id="ServiceRequest.category.coding:snomedCategory.system">
-      <path value="ServiceRequest.category.coding.system" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="ServiceRequest.category.coding:barsCategory">
-      <path value="ServiceRequest.category.coding" />
-      <sliceName value="barsCategory" />
-      <fixedCoding>
-        <system value="https://fhir.nhs.uk/CodeSystem/message-category-servicerequest" />
-      </fixedCoding>
-    </element>
-    <element id="ServiceRequest.category.coding:barsCategory.system">
-      <path value="ServiceRequest.category.coding.system" />
-      <fixedUri value="https://fhir.nhs.uk/CodeSystem/message-category-servicerequest" />
-    </element>
     <element id="ServiceRequest.priority">
       <path value="ServiceRequest.priority" />
       <definition value="Request Priority Code &#xD;&#xA;&#xD;&#xA;Code for the priority of the referral set by the Referring Clinician&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA; &quot;priority&quot;: &quot;routine&quot;,&#xD;&#xA;```" />
