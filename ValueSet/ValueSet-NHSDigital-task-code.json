@@ -20,7 +20,7 @@
       ]
     }
   ],
-  "description": "Task.code definition",
+  "description": "Codes indicating the type of action that is expected to be performed on the focus resource.",
   "compose": {
     "include": [
       {
