@@ -26,6 +26,9 @@
         "include":  [
             {
                 "system": "https://fhir.nhs.uk/CodeSystem/eRS-Purpose"
+            },
+            {
+                "system": "http://terminology.hl7.org/CodeSystem/contactentity-type"
             }
         ]
     }

@@ -1,0 +1,38 @@
+{
+  "resourceType": "ValueSet",
+  "id": "effdbf4d-a7e3-47dd-9f94-ebe84ed970df",
+  "url": "https://fhir.nhs.uk/ValueSet/NHSDigital-action-code",
+  "version": "0.0.4",
+  "name": "NHSDigitalActionCode",
+  "title": "NHSDigital Action Code",
+  "status": "draft",
+  "date": "2022-03-01T06:00:00+00:00",
+  "publisher": "NHS Digital",
+  "contact": [
+    {
+      "name": "Interoperability Team",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "interoperabilityteam@nhs.net",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "description": "UK SNOMED CT codes indicating the type of action that is expected to be performed",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "constraint",
+            "op": "=",
+            "value": "descendantOrSelfOf 71388002"
+          }
+        ]
+      }
+    ]
+  }
+}

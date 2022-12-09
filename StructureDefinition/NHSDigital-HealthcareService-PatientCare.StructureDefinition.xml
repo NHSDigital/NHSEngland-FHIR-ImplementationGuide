@@ -15,6 +15,10 @@
       <path value="HealthcareService" />
       <short value="Constraint profile for use in NHS Patient Wayfinder" />
     </element>
+    <element id="HealthcareService.identifier">
+      <path value="HealthcareService.identifier" />
+      <min value="1" />
+    </element>
     <element id="HealthcareService.identifier:ersServiceId">
       <path value="HealthcareService.identifier" />
       <sliceName value="ersServiceId" />

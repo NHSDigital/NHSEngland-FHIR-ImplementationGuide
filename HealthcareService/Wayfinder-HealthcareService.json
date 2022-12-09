@@ -2,8 +2,7 @@
   "resourceType": "HealthcareService",
   "id": "123",
   "meta": {
-    "versionId": "5",
-    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-HealthcareService-PatientCare"
+    "versionId": "5"
   },
   "identifier": [
     {

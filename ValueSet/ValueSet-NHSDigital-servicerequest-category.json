@@ -2,7 +2,7 @@
   "resourceType": "ValueSet",
   "id": "a6876ad9-6ac5-431a-980d-b093a07e84d6",
   "url": "https://fhir.nhs.uk/ValueSet/NHSDigital-ServiceRequest-category",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "name": "ServiceRequestCategory",
   "title": "ServiceRequestCategory",
   "status": "draft",
@@ -20,16 +20,32 @@
       ]
     }
   ],
-  "description": "ServiceRequestCategory - top level UK SNOMED CT Referral Codes",
+  "description": "Value set of SNOMED CT concepts that can classify a requested service",
   "compose": {
     "include": [
       {
         "system": "http://snomed.info/sct",
         "concept": [
           {
+            "code": "108252007",
+            "display": "Laboratory procedure"
+        },
+        {
+            "code": "363679005",
+            "display": "Imaging"
+        },
+        {
             "code": "409063005",
             "display": "Counselling"
-          },
+        },
+        {
+            "code": "409073007",
+            "display": "Education"
+        },
+        {
+            "code": "387713003",
+            "display": "Surgical procedure"
+        },
           {
             "code": "3457005",
             "display": "Patient referral"

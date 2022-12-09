@@ -3,8 +3,7 @@
   "id": "2c539951-0819-4ffb-ab77-b7cbdc5d9c9a",
   "meta": {
     "versionId": "f3cb9ac5-0628-4e57-821d-ad8e6835fc73",
-    "lastUpdated": "2022-03-28T07:26:41.055+00:00",
-    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-Appointment-PatientCare"
+    "lastUpdated": "2022-03-28T07:26:41.055+00:00"
   },
   "status": "booked",
   "basedOn": [

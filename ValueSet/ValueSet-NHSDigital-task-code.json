@@ -20,19 +20,9 @@
       ]
     }
   ],
-  "description": "Task.code definition",
+  "description": "Codes indicating the type of action that is expected to be performed on the focus resource.",
   "compose": {
     "include": [
-      {
-        "system": "http://snomed.info/sct",
-        "filter":  [
-          {
-              "property": "constraint",
-              "op": "=",
-              "value": "descendantOrSelfOf 71388002"
-          }
-      ]
-      },
       {
         "system": "http://hl7.org/fhir/CodeSystem/task-code",
         "concept": [
@@ -45,9 +35,6 @@
             "display": "Mark the focal resource as no longer active"
           }
         ]
-      },
-      {
-        "system": "https://fhir.nhs.uk/CodeSystem/Workflow-Code"
       }
     ]
   }

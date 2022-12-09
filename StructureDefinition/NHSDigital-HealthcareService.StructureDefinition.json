@@ -1,0 +1,380 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "23dc287d-ffe2-4524-8498-9d57cf115240",
+  "url": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-HealthcareService",
+  "name": "NHSDigitalHealthcareService",
+  "status": "draft",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "HealthcareService",
+  "baseDefinition": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-HealthcareService",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "HealthcareService.identifier",
+        "path": "HealthcareService.identifier",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "system"
+            }
+          ],
+          "rules": "open"
+        },
+        "definition": "**SHOULD** contain the service identifier e.g. the serviceId from <a href=\"https://www.directoryofservices.nhs.uk/\">Directory of Service</a> or <a href=\"https://digital.nhs.uk/developer/api-catalogue/e-referral-service-fhir\">e-RS Directory Services</a>\r\n\r\n**MAY** contain an ANANA/ODS code. \r\n\r\n```json\r\n\"identifier\": [\r\n          {\r\n            \"use\": \"official\",\r\n            \"system\": \"https://fhir.nhs.uk/Id/ers-service\",\r\n            \"value\": \"11021\"\r\n          }\r\n        ]\r\n```",
+        "comment": "MUST contain an ANANA/ODS code.",
+        "mustSupport": true
+      },
+      {
+        "id": "HealthcareService.identifier:ersServiceId",
+        "path": "HealthcareService.identifier",
+        "sliceName": "ersServiceId",
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "HealthcareService.identifier:ersServiceId.system",
+        "path": "HealthcareService.identifier.system",
+        "min": 1,
+        "fixedUri": "https://fhir.nhs.uk/Id/ers-service"
+      },
+      {
+        "id": "HealthcareService.identifier:ersServiceId.value",
+        "path": "HealthcareService.identifier.value",
+        "min": 1
+      },
+      {
+        "id": "HealthcareService.identifier:dosServiceId",
+        "path": "HealthcareService.identifier",
+        "sliceName": "dosServiceId",
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "HealthcareService.identifier:dosServiceId.system",
+        "path": "HealthcareService.identifier.system",
+        "min": 1,
+        "fixedUri": "http://fhir.nhs.uk/Id/dos-service-id"
+      },
+      {
+        "id": "HealthcareService.identifier:dosServiceId.value",
+        "path": "HealthcareService.identifier.value",
+        "min": 1
+      },
+      {
+        "id": "HealthcareService.providedBy",
+        "path": "HealthcareService.providedBy",
+        "definition": "It is recommended an *identifier reference* using ODS code is used. \r\n\r\n```json\r\n\"providedBy\": {\r\n        \"identifier\": {\r\n            \"system\": \"https://fhir.nhs.uk/Id/ods-organization-code\",\r\n            \"value\": \"RBA\"\r\n          },\r\n        \"display\": \"TAUNTON AND SOMERSET NHS FOUNDATION TRUST\"\r\n    }\r\n```",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.nhs.uk/StructureDefinition/NHSDigital-Organization"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "HealthcareService.providedBy.identifier",
+        "path": "HealthcareService.providedBy.identifier",
+        "min": 1
+      },
+      {
+        "id": "HealthcareService.providedBy.identifier.system",
+        "path": "HealthcareService.providedBy.identifier.system",
+        "min": 1,
+        "fixedUri": "https://fhir.nhs.uk/Id/ods-organization-code"
+      },
+      {
+        "id": "HealthcareService.providedBy.identifier.value",
+        "path": "HealthcareService.providedBy.identifier.value",
+        "min": 1
+      },
+      {
+        "id": "HealthcareService.type",
+        "path": "HealthcareService.type",
+        "definition": "Type **SHOULD** be populated. \r\n\r\n```json\r\n\"type\":  [\r\n        {\r\n            \"coding\":  [\r\n                {\r\n                    \"system\": \"https://fhir.nhs.uk/CodeSystem/DoS-ClinicType\",\r\n                    \"code\": \"PHARMACY\",\r\n                    \"display\": \"Pharmacy\"\r\n                }\r\n            ]\r\n        }\r\n    ],\r\n```\r\n\r\nor \r\n\r\n```json\r\n\"type\": [\r\n        {\r\n            \"coding\": [\r\n                {\r\n                    \"system\": \"https://fhir.nhs.uk/CodeSystem/eRS-AppointmentType\",\r\n                    \"code\": \"DAY_CASE\",\r\n                }\r\n            ]\r\n        }\r\n    ],\r\n```",
+        "mustSupport": true,
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "service-type"
+            }
+          ],
+          "strength": "preferred"
+        }
+      },
+      {
+        "id": "HealthcareService.type.coding",
+        "path": "HealthcareService.type.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "system"
+            }
+          ],
+          "rules": "open"
+        }
+      },
+      {
+        "id": "HealthcareService.type.coding:UKCoreCareSettingType",
+        "path": "HealthcareService.type.coding",
+        "sliceName": "UKCoreCareSettingType",
+        "mustSupport": true,
+        "binding": {
+          "strength": "preferred",
+          "valueSet": "https://fhir.hl7.org.uk/ValueSet/UKCore-CareSettingType"
+        }
+      },
+      {
+        "id": "HealthcareService.type.coding:UKCoreCareSettingType.system",
+        "path": "HealthcareService.type.coding.system",
+        "fixedUri": "http://snomed.info/sct"
+      },
+      {
+        "id": "HealthcareService.type.coding:eRSAppointmentType",
+        "path": "HealthcareService.type.coding",
+        "sliceName": "eRSAppointmentType",
+        "short": "e-RS Appointment Type",
+        "definition": "Appointment type e.g. telephone/video (only applicable and mandatory if Service Type is Appointment Request, not applicable to Service Type of Triage Request)",
+        "mustSupport": true
+      },
+      {
+        "id": "HealthcareService.type.coding:eRSAppointmentType.system",
+        "path": "HealthcareService.type.coding.system",
+        "fixedUri": "https://fhir.nhs.uk/CodeSystem/eRS-AppointmentType"
+      },
+      {
+        "id": "HealthcareService.specialty",
+        "path": "HealthcareService.specialty",
+        "definition": "Specialty **SHOULD** be from the {{link:http://hl7.org/fhir/ValueSet/c80-practice-codes}}\r\nand is the SNOMED equivalent of the [NHS Data Dictionary - Main Specialty and Treament Function Codes](https://datadictionary.nhs.uk/supporting_information/main_specialty_and_treatment_function_codes_table.html) and FHIR {{pagelink: NHSDataDictionaryClinicalSpecialty.md}}\r\n\r\n```json\r\n\"specialty\":  [\r\n        {\r\n            \"coding\":  [\r\n                {\r\n                    \"system\": \"http://snomed.info/sct\",\r\n                    \"code\": \"394579002\",\r\n                    \"display\": \"Cardiology\"\r\n                }\r\n            ]\r\n        }\r\n    ],\r\n```\r\n\r\nor using NHS Data Dictionary codes.\r\n\r\n```json\r\n\"specialty\":  [\r\n        {\r\n            \"coding\":  [\r\n                {\r\n                    \"system\": \"https://fhir.nhs.uk/CodeSystem/NHSDataModelAndDictionary-clinical-specialty\",\r\n                    \"code\": \"320\",\r\n                    \"display\": \"Cardiology\"\r\n                }\r\n            ]\r\n        }\r\n    ],\r\n```\r\n\r\nor for e-RS Patient Care\r\n\r\n```json\r\n \"specialty\": [\r\n        {\r\n            \"coding\": [\r\n                {\r\n                    \"display\": \"Dermatology\"\r\n                }\r\n            ]\r\n        }\r\n    ],\r\n```",
+        "mustSupport": true
+      },
+      {
+        "id": "HealthcareService.specialty.coding",
+        "path": "HealthcareService.specialty.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "system"
+            }
+          ],
+          "rules": "open"
+        }
+      },
+      {
+        "id": "HealthcareService.specialty.coding.system",
+        "path": "HealthcareService.specialty.coding.system",
+        "min": 1
+      },
+      {
+        "id": "HealthcareService.specialty.coding.code",
+        "path": "HealthcareService.specialty.coding.code",
+        "min": 1
+      },
+      {
+        "id": "HealthcareService.specialty.coding:NHSDataDictionarySpecialty",
+        "path": "HealthcareService.specialty.coding",
+        "sliceName": "NHSDataDictionarySpecialty",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "description": "NHS Data Dictionary Specialty/Treatment Function Code",
+          "valueSet": "https://fhir.nhs.uk/ValueSet/NHSDataModelAndDictionary-clinical-specialty"
+        }
+      },
+      {
+        "id": "HealthcareService.specialty.coding:NHSDataDictionarySpecialty.system",
+        "path": "HealthcareService.specialty.coding.system",
+        "fixedUri": "https://fhir.nhs.uk/CodeSystem/NHSDataModelAndDictionary-clinical-specialty"
+      },
+      {
+        "id": "HealthcareService.specialty.coding:SNOMEDPracticeCode",
+        "path": "HealthcareService.specialty.coding",
+        "sliceName": "SNOMEDPracticeCode",
+        "mustSupport": true,
+        "binding": {
+          "strength": "preferred",
+          "description": "Specific specialty associated with the agency.",
+          "valueSet": "http://hl7.org/fhir/ValueSet/c80-practice-codes"
+        }
+      },
+      {
+        "id": "HealthcareService.specialty.coding:SNOMEDPracticeCode.system",
+        "path": "HealthcareService.specialty.coding.system",
+        "fixedUri": "http://snomed.info/sct"
+      },
+      {
+        "id": "HealthcareService.specialty.coding:eRSSpecialty",
+        "path": "HealthcareService.specialty.coding",
+        "sliceName": "eRSSpecialty",
+        "mustSupport": true,
+        "binding": {
+          "strength": "preferred",
+          "description": "Specific specialty associated with the agency.",
+          "valueSet": "https://fhir.nhs.uk/ValueSet/NHSDigital-eRS-Specialty"
+        }
+      },
+      {
+        "id": "HealthcareService.specialty.coding:eRSSpecialty.system",
+        "path": "HealthcareService.specialty.coding.system",
+        "fixedUri": "https://fhir.nhs.uk/CodeSystem/eRS-Specialty"
+      },
+      {
+        "id": "HealthcareService.location",
+        "path": "HealthcareService.location",
+        "definition": "Reference to a location. ODS codes may be used, however this may differ from Directory of Services and so DoS addresses are preferred.\r\n\r\n```json\r\n \"location\":  [\r\n        {\r\n            \"reference\": \"urn:uuid:8a5d7d67-64fb-44ec-9802-2dc214bb3dcb\"\r\n        }\r\n    ],\r\n```\r\n\r\nor \r\n\r\n```json\r\n\"location\": [\r\n        {\r\n            \"identifier\": {\r\n                \"system\": \"https://fhir.nhs.uk/Id/ods-site-code\",\r\n                \"value\": \"R6901\"\r\n            }\r\n        }\r\n    ],\r\n```",
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://fhir.nhs.uk/StructureDefinition/NHSDigital-Location"
+            ]
+          }
+        ],
+        "constraint": [
+          {
+            "key": "nhsd-8",
+            "severity": "error",
+            "human": "location - An identifier reference or resource reference must be provided",
+            "expression": "(reference.exists() or identifier.exists())"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "HealthcareService.location.identifier.system",
+        "path": "HealthcareService.location.identifier.system",
+        "min": 1,
+        "fixedUri": "https://fhir.nhs.uk/Id/ods-site-code"
+      },
+      {
+        "id": "HealthcareService.location.identifier.value",
+        "path": "HealthcareService.location.identifier.value",
+        "min": 1
+      },
+      {
+        "id": "HealthcareService.name",
+        "path": "HealthcareService.name",
+        "definition": "Name of the clinic or service.\r\n\r\n```json\r\n \"name\": \"SOMERSET BOWEL CANCER SCREENING CENTRE\",\r\n```",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "HealthcareService.telecom",
+        "path": "HealthcareService.telecom",
+        "definition": "Contact details for the clinic or service. \r\n\r\n```json\r\n   \"telecom\": [\r\n    {\r\n      \"system\": \"phone\",\r\n      \"value\": \"0113 922 4984\",\r\n      \"use\": \"work\"\r\n    },\r\n    {\r\n      \"system\": \"email\",\r\n      \"value\": \"directaddress@example.com\",\r\n      \"use\": \"work\"\r\n    }\r\n  ],\r\n```",
+        "mustSupport": true
+      },
+      {
+        "id": "HealthcareService.telecom.value",
+        "path": "HealthcareService.telecom.value",
+        "min": 1
+      },
+      {
+        "id": "HealthcareService.telecom.use",
+        "path": "HealthcareService.telecom.use",
+        "min": 1
+      },
+      {
+        "id": "HealthcareService.serviceProvisionCode",
+        "path": "HealthcareService.serviceProvisionCode",
+        "mustSupport": true
+      },
+      {
+        "id": "HealthcareService.serviceProvisionCode.coding",
+        "path": "HealthcareService.serviceProvisionCode.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "system"
+            }
+          ],
+          "rules": "open"
+        }
+      },
+      {
+        "id": "HealthcareService.serviceProvisionCode.coding:eRSClinicType",
+        "path": "HealthcareService.serviceProvisionCode.coding",
+        "sliceName": "eRSClinicType",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://fhir.nhs.uk/ValueSet/NHSDigital-eRS-ClinicType"
+        }
+      },
+      {
+        "id": "HealthcareService.serviceProvisionCode.coding:eRSClinicType.system",
+        "path": "HealthcareService.serviceProvisionCode.coding.system",
+        "fixedUri": "https://fhir.nhs.uk/CodeSystem/NHSDigital-ClinicType"
+      },
+      {
+        "id": "HealthcareService.availableTime",
+        "path": "HealthcareService.availableTime",
+        "definition": "Opening times for the clinic or service. \r\n\r\n\r\n```json\r\n\"availableTime\": [\r\n    {\r\n      \"daysOfWeek\": [\r\n        \"wed\"\r\n      ],\r\n      \"allDay\": true\r\n    },\r\n    {\r\n      \"daysOfWeek\": [\r\n        \"mon\",\r\n        \"tue\",\r\n        \"wed\",\r\n        \"thu\"\r\n      ],\r\n      \"availableStartTime\": \"08:30:00\",\r\n      \"availableEndTime\": \"05:30:00\"\r\n    },\r\n    {\r\n      \"daysOfWeek\": [\r\n        \"sat\",\r\n        \"fri\"\r\n      ],\r\n      \"availableStartTime\": \"09:30:00\",\r\n      \"availableEndTime\": \"04:30:00\"\r\n    }\r\n  ],\r\n```",
+        "mustSupport": true
+      },
+      {
+        "id": "HealthcareService.endpoint",
+        "path": "HealthcareService.endpoint",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "identifier.system"
+            }
+          ],
+          "rules": "open"
+        },
+        "definition": "Technical endpoints providing access to services operated for the specific healthcare services defined at this resource.\r\n\r\nEndpoint identfiers to be used with the HealthcareService. Endpoints can be resolved using the SDS API\r\n\r\n```json\r\n\"endpoint\": [\r\n        {\r\n            \"identifier\": {\r\n                \"system\": \"https://fhir.nhs.uk/Id/nhsSpineASID\", // or https://fhir.nhs.uk/Id/nhsMhsPartyKey\r\n                \"value\": \"999900000041\"\r\n            }\r\n        }\r\n    ]\r\n```",
+        "mustSupport": true
+      },
+      {
+        "id": "HealthcareService.endpoint.identifier",
+        "path": "HealthcareService.endpoint.identifier",
+        "min": 1
+      },
+      {
+        "id": "HealthcareService.endpoint.identifier.system",
+        "path": "HealthcareService.endpoint.identifier.system",
+        "min": 1
+      },
+      {
+        "id": "HealthcareService.endpoint.identifier.value",
+        "path": "HealthcareService.endpoint.identifier.value",
+        "min": 1
+      },
+      {
+        "id": "HealthcareService.endpoint:nhsMhsPartyKey",
+        "path": "HealthcareService.endpoint",
+        "sliceName": "nhsMhsPartyKey",
+        "max": "1"
+      },
+      {
+        "id": "HealthcareService.endpoint:nhsMhsPartyKey.identifier.system",
+        "path": "HealthcareService.endpoint.identifier.system",
+        "fixedUri": "https://fhir.nhs.uk/Id/nhsMhsPartyKey"
+      },
+      {
+        "id": "HealthcareService.endpoint:nhsSpineASID",
+        "path": "HealthcareService.endpoint",
+        "sliceName": "nhsSpineASID",
+        "max": "1"
+      },
+      {
+        "id": "HealthcareService.endpoint:nhsSpineASID.identifier.system",
+        "path": "HealthcareService.endpoint.identifier.system",
+        "fixedUri": "https://fhir.nhs.uk/Id/nhsSpineASID"
+      }
+    ]
+  }
+}

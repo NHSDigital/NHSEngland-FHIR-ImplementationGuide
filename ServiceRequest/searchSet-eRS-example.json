@@ -1,0 +1,55 @@
+{
+    "id": "9ee70d6a-a2aa-4e9f-8b5e-eccee0c1ab54",
+    "resourceType": "Bundle",
+    "meta": {
+        "lastUpdated": "2022-12-07T13:26:45.940Z"
+    },
+    "type": "searchset",
+    "total": 1,
+    "timestamp": "2022-12-07T13:26:45.940Z",
+    "link": [
+        {
+            "relation": "self",
+            "url": "base_url/FHIR/R4/ServiceRequest?identifier=000000000001"
+        }
+    ],
+    "entry": [
+        {
+            "fullUrl": "base_url/FHIR/R4/ServiceRequest/r.a79768c6-9eca-40e3-b43c-cba975b118ef",
+            "resource": {
+                "id": "r.a79768c6-9eca-40e3-b43c-cba975b118ef",
+                "resourceType": "ServiceRequest",
+                "meta": {
+                    "versionId": "0"
+                },
+                "intent": "order",
+                "identifier": [
+                    {
+                        "system": "https://fhir.nhs.uk/Id/UBRN",
+                        "value": "000000000001"
+                    }
+                ],
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "https://fhir.nhs.uk/CodeSystem/message-category-servicerequest",
+                                "code": "referral"
+                            }
+                        ]
+                    }
+                ],
+                "status": "active",
+                "subject": {
+                    "identifier": {
+                        "system": "https://fhir.nhs.uk/Id/nhs-number",
+                        "value": "9999998887"
+                    }
+                }
+            },
+            "search": {
+                "mode": "match"
+            }
+        }
+    ]
+}

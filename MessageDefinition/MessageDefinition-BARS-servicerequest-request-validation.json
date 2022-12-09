@@ -60,24 +60,6 @@
             "max": "1"
         },
         {
-            "code": "Organization",
-            "profile": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Organization",
-            "min": 2,
-            "max": "*"
-        },
-        {
-            "code": "Practitioner",
-            "profile": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Practitioner",
-            "min": 1,
-            "max": "*"
-        },
-        {
-            "code": "PractitionerRole",
-            "profile": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-PractitionerRole",
-            "min": 1,
-            "max": "*"
-        },
-        {
             "code": "Observation",
             "profile": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Observation",
             "min": 0,
