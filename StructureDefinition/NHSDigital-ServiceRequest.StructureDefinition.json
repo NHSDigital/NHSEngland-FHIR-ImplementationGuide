@@ -243,7 +243,7 @@
       {
         "id": "ServiceRequest.code",
         "path": "ServiceRequest.code",
-        "definition": "A code that identifies a particular service (i.e., procedure, diagnostic investigation, or panel of investigations) that have been requested.\r\n\r\nIdeally this should be a child code of the ServiceRequest.category",
+        "definition": "A code that identifies a particular service (i.e., procedure, diagnostic investigation, or panel of investigations) that have been requested.\r\n\r\n```json\r\n\"code\": {\r\n        \"coding\":  [\r\n            {\r\n                \"system\": \"http://snomed.info/sct\",\r\n                \"code\": \"73761001\",\r\n                \"display\": \"Colonoscopy\"\r\n            }\r\n        ],\r\n        \"text\": \"Colonoscopy requested\"\r\n    }\r\n```",
         "mustSupport": true
       },
       {
@@ -435,6 +435,7 @@
       {
         "id": "ServiceRequest.reasonCode",
         "path": "ServiceRequest.reasonCode",
+        "definition": "An explanation or justification for why this service is being requested in coded or textual form.   This is often for billing purposes.  May relate to the resources referred to in `supportingInfo`.\r\n\r\n```json\r\n\"reasonCode\":  [\r\n        {\r\n            \"coding\":  [\r\n                {\r\n                    \"system\": \"http://snomed.info/sct\",\r\n                    \"code\": \"271835004\",\r\n                    \"display\": \"Abdominal distension, gaseous\"\r\n                }\r\n            ],\r\n            \"text\": \"Swollen abdomen\"\r\n        }\r\n    ]\r\n```",
         "mustSupport": true
       },
       {
