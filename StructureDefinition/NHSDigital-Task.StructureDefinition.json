@@ -173,7 +173,6 @@
         "path": "Task.code.coding.system",
         "fixedUri": "http://hl7.org/fhir/CodeSystem/task-code"
       },
-
       {
         "id": "Task.code.coding:Worflow",
         "path": "Task.code.coding",
@@ -188,7 +187,6 @@
         "path": "Task.code.coding.system",
         "fixedUri": "https://fhir.nhs.uk/CodeSystem/Workflow-Code"
       },
-      
       {
         "id": "Task.focus",
         "path": "Task.focus",
