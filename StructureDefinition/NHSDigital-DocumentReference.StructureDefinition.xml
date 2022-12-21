@@ -23,13 +23,6 @@
       <path value="DocumentReference.type" />
       <definition value="Specifies the particular kind of document referenced  (e.g. History and Physical, Discharge Summary, Progress Note). This usually equates to the purpose of making the document referenced.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;type&quot;: {&#xD;&#xA;        &quot;coding&quot;:  [&#xD;&#xA;            {&#xD;&#xA;                &quot;system&quot;: &quot;http://snomed.info/sct&quot;,&#xD;&#xA;                &quot;code&quot;: &quot;736253002&quot;,&#xD;&#xA;                &quot;display&quot;: &quot;Mental health crisis plan&quot;&#xD;&#xA;            }&#xD;&#xA;        ]&#xD;&#xA;    }&#xD;&#xA;```" />
       <mustSupport value="true" />
-      <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="DocumentC80Type" />
-        </extension>
-        <strength value="required" />
-        <valueSet value="https://fhir.nhs.uk/ValueSet/Document-Type" />
-      </binding>
     </element>
     <element id="DocumentReference.type.coding">
       <path value="DocumentReference.type.coding" />
