@@ -1,9 +1,6 @@
 {
   "resourceType": "ValueSet",
   "id": "09c259c0-8bf1-49a6-a508-ba40290380be",
-  "text": {
-    "status": "generated"
-  },
   "url": "https://fhir.nhs.uk/ValueSet/Document-Type",
   "version": "1.3.0",
   "name": "NHSEnglandDocumentType",

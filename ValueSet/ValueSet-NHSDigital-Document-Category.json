@@ -1,9 +1,6 @@
 {
     "resourceType": "ValueSet",
     "id": "ef05c352-dc00-4856-8272-fbf7dbd3fec8",
-    "text": {
-      "status": "generated"
-    },
     "url": "https://fhir.nhs.uk/ValueSet/DocumentCategory",
     "version": "1.1.0",
     "name": "NHSEnglandDocumentCategory",
