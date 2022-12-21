@@ -1,0 +1,44 @@
+{
+    "resourceType": "ValueSet",
+    "id": "ef05c352-dc00-4856-8272-fbf7dbd3fec8",
+    "text": {
+      "status": "generated"
+    },
+    "url": "https://fhir.nhs.uk/ValueSet/DocumentCategory",
+    "version": "1.1.0",
+    "name": "NHSEnglandDocumentCategory",
+    "status": "draft",
+    "date": "2022-12-20T00:00:00+00:00",
+    "publisher": "NHS Digital",
+    "contact": [
+      {
+        "name": "Interoperability Team",
+        "telecom": [
+          {
+            "system": "email",
+            "value": "interoperabilityteam@nhs.net",
+            "use": "work"
+          }
+        ]
+      }
+    ],
+    "description": "A code from the SNOMED Clinical Terminology UK coding system to represent the NHS England clinical record category. This was known in FHIR STU3 as https://fhir.nhs.uk/STU3/ValueSet/NRL-RecordClass-1",
+    "copyright": "Copyright © 2019 NHS Digital. bThis value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement.",
+    "compose": {
+      "include": [
+        {
+          "system": "http://snomed.info/sct",
+          "concept": [
+            {
+              "code": "734163000",
+              "display": "Care plan"
+            },
+            {
+              "code": "1102421000000108",
+              "display": "Observations"
+            }
+          ]
+        }
+      ]
+    }
+  }
