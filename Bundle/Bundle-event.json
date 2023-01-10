@@ -13,7 +13,7 @@
             "resource": {
                 "resourceType": "MessageHeader",
                 "source": {
-                    "endpoint": "urn:nhs-uk:addressing:ods:X2601"
+                    "endpoint": "https://directory.spineservices.nhs.uk/STU3/Organization/X2601"
                 },
                 "eventCoding": {
                     "system": "https://fhir.nhs.uk/CodeSystem/message-event",

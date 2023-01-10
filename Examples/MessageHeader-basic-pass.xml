@@ -23,7 +23,7 @@
         <display value="TAUNTON AND SOMERSET NHS FOUNDATION TRUST" />
     </sender>
     <source>
-        <endpoint value="urn:nhs-uk:addressing:ods:RBA" />
+        <endpoint value="https://directory.spineservices.nhs.uk/STU3/Organization/RBA" />
     </source>
     <focus>
         <reference value="urn:uuid:78d3c2eb-009e-4ec8-a358-b042954aa9b2" />
