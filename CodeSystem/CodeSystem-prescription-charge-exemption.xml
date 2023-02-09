@@ -5,12 +5,12 @@
         <system value="https://fhir.nhs.uk/identifier/CodeSystem" />
         <value value="prescription-charge-exemption" />
     </identifier>
-    <version value="1.0.2" />
+    <version value="1.0.3" />
     <name value="PrescriptionChargeExemption" />
     <title value="Prescription Charge Exemption" />
     <status value="draft" />
     <experimental value="true" />
-    <date value="2022-11-09" />
+    <date value="2023-02-03" />
     <publisher value="NHS Digital" />
     <contact>
         <name value="Interoperability Team" />
@@ -110,5 +110,37 @@
 	<concept>
         <code value="0020"></code>
         <display value="HRT only Prescription prepayment certificate" />
+    </concept>
+	<concept>
+        <code value="9180"></code>
+        <display value="Real-time exemption checking" />
+    </concept>
+	<concept>
+        <code value="9181"></code>
+        <display value="Maternity exemption certificate" />
+    </concept>
+	<concept>
+        <code value="9182"></code>
+        <display value="Medical exemption certificate" />
+    </concept>
+	<concept>
+        <code value="9183"></code>
+        <display value="Tax credit exemption certificate" />
+    </concept>
+	<concept>
+        <code value="9184"></code>
+        <display value="Is named on a current HC2 charges certificate" />
+    </concept>
+	<concept>
+        <code value="9185"></code>
+        <display value="Prescription prepayment certificate" />
+    </concept>
+	<concept>
+        <code value="9186"></code>
+        <display value="HRT Only PPC" />
+    </concept>
+	<concept>
+        <code value="9200"></code>
+        <display value="All DWP" />
     </concept>
 </CodeSystem>
