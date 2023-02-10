@@ -24,6 +24,11 @@
       <code value="394592004" />
       <display value="Clinical oncology" />
     </coding>
+	<coding>
+      <system value="https://fhir.hl7.org.uk/CodeSystem/UKCore-PracticeSettingCode" />
+      <code value="800" />
+      <display value="Clinical oncology" />
+    </coding>
   </specialty>
   <location>
     <reference value="urn:uuid:8a5d7d67-64fb-44ec-9802-2dc214bb3dcb" />

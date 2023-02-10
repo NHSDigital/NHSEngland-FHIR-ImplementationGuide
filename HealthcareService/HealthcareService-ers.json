@@ -49,7 +49,7 @@
           "code": "RESPIRATORY_MEDICINE"
         },
         {
-          "system": "https://fhir.nhs.uk/CodeSystem/NHSDataModelAndDictionary-clinical-specialty",
+          "system": "https://fhir.hl7.org.uk/CodeSystem/UKCore-PracticeSettingCode",
           "code": "340",
           "display": "Respiratory Medicine"
         }
