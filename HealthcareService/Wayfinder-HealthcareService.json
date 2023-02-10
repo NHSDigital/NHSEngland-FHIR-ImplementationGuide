@@ -29,11 +29,6 @@
   "specialty": [
     {
       "coding": [
-	    {
-          "system": "https://fhir.nhs.uk/CodeSystem/eRS-Specialty",
-          "code": "DERMATOLOGY",
-          "display": "Dermatology"
-        },
         {
           "system": "https://fhir.hl7.org.uk/CodeSystem/UKCore-PracticeSettingCode",
           "code": "330",

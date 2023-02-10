@@ -45,10 +45,6 @@
     {
       "coding": [
         {
-          "system": "https://fhir.nhs.uk/CodeSystem/eRS-Specialty",
-          "code": "RESPIRATORY_MEDICINE"
-        },
-        {
           "system": "https://fhir.hl7.org.uk/CodeSystem/UKCore-PracticeSettingCode",
           "code": "340",
           "display": "Respiratory Medicine"
