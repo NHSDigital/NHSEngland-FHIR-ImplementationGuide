@@ -35,7 +35,7 @@
       </type>
       <mustSupport value="true" />
     </element>
-	<element id="MedicationDispense.extension:prescriptionNonDispensingReason">
+    <element id="MedicationDispense.extension:prescriptionNonDispensingReason">
       <path value="MedicationDispense.extension" />
       <sliceName value="prescriptionNonDispensingReason" />
       <short value="This is the non dispensing reason for the overall prescription" />
@@ -61,7 +61,7 @@
       </type>
       <mustSupport value="true" />
     </element>
-	<element id="MedicationDispense.extension:supplyHeaderIdentifier">
+    <element id="MedicationDispense.extension:supplyHeaderIdentifier">
       <path value="MedicationDispense.extension" />
       <sliceName value="supplyHeaderIdentifier" />
       <short value="Identifier for the SupplyHeader" />
@@ -185,7 +185,6 @@
         <severity value="warning" />
         <human value="subject - An identifier reference or resource reference must be provided" />
         <expression value="(reference.exists() or (identifier.exists()))" />
-        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationDispense" />
       </constraint>
       <constraint>
         <key value="patient-nhs" />
@@ -209,7 +208,7 @@
       <path value="MedicationDispense.context" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/EpisodeOfCare" />
+        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-EpisodeOfCare" />
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Encounter" />
       </type>
     </element>
@@ -232,7 +231,6 @@
         <severity value="error" />
         <human value="An identifier reference or resource reference must be provided" />
         <expression value="(reference.exists() or identifier.exists())" />
-        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationDispense" />
       </constraint>
     </element>
     <element id="MedicationDispense.performer.actor.reference">

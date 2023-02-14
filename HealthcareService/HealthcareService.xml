@@ -19,9 +19,9 @@
     </coding>
   </type>
   <specialty>
-    <coding>
-      <system value="http://snomed.info/sct" />
-      <code value="394592004" />
+	<coding>
+      <system value="https://fhir.hl7.org.uk/CodeSystem/UKCore-PracticeSettingCode" />
+      <code value="800" />
       <display value="Clinical oncology" />
     </coding>
   </specialty>
