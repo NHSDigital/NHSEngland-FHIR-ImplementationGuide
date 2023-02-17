@@ -15,7 +15,7 @@
         <code value="unsolicited-observations" />
         <display value="Unsolicited Observations" />
     </eventCoding>
-    <description value="Unsolicited transmission of an observation message"/>
+    <description value="Unsolicited transmission of an observation message. If a Patient resource is not supplied, a NHS Number must be present in the DiaganosticReport and Observations"/>
     <category value="notification" />
     <focus>
         <code value="DiagnosticReport" />
@@ -32,7 +32,7 @@
      <focus>
         <code value="Patient" />
         <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient" />
-        <min value="1" />
+        <min value="0" />
         <max value="1" />
     </focus>
      <focus>
