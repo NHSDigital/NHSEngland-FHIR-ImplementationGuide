@@ -25,11 +25,46 @@
     "include": [
       {
         "system": "http://snomed.info/sct",
-        "filter": [
+        "concept": [
           {
-            "property": "constraint",
-            "op": "=",
-            "value": "717341000000101 OR 325931000000109 OR 734163000 OR 706825008 OR 373942005 OR 717131000000107 OR 25831000000103 OR 823751000000102 OR 933361000000108 OR 38651000000103 OR 715311000000107 OR 419891008 OR 25611000000107 OR 371525003"
+            "code": "734163000",
+            "display": "Care plan"
+          },
+          {
+            "code": "1102421000000108",
+            "display": "Observations"
+          },
+          {
+            "code": "373942005",
+            "display": "Discharge summary"
+          },
+          {
+            "code": "823681000000100",
+            "display": "Outpatient letter"
+          },
+          {
+            "code": "721927009",
+            "display": "Referral note"
+          },
+          {
+            "code": "325851000000107",
+            "display": "Consultation"
+          },
+          {
+            "code": "25611000000107",
+            "display": "Referral letter"
+          },
+          {
+            "code": "25831000000103",
+            "display": "Image (document)"
+          },
+          {
+            "code": "823751000000102",
+            "display": "Letter"
+          },
+          {
+            "code": "371525003",
+            "display": "Clinical procedure report"
           }
         ]
       }
