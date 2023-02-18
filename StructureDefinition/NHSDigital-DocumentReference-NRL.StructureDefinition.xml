@@ -21,9 +21,5 @@
         <valueSet value="https://fhir.nhs.uk/ValueSet/Document-Type" />
       </binding>
     </element>
-    <element id="DocumentReference.category">
-      <path value="DocumentReference.category" />
-      <min value="1" />
-    </element>
   </differential>
 </StructureDefinition>
