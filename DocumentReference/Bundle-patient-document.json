@@ -55,6 +55,17 @@
           "meta": {
             "lastUpdated": "2016-03-08T15:26:01+01:00"
           },
+          "category":  [
+            {
+                "coding":  [
+                    {
+                        "system": "http://snomed.info/sct",
+                        "code": "734163000",
+                        "display": "Care plan"
+                    }
+                ]
+            }
+        ],
           "status": "current",
           "subject": {
             "identifier": {
