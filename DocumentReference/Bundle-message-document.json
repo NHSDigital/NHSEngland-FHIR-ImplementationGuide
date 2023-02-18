@@ -83,6 +83,15 @@
                         "value": "5da894e0-a57e-43e9-a1a1-e283a484003c"
                     }
                 ],
+                "category": [{
+                    "coding": [
+                        {
+                            "system": "http://snomed.info/sct",
+                            "code": "325851000000107",
+                            "display": "Consultation"
+                        }
+                    ]
+                }],
                 "type": {
                     "coding": [
                         {

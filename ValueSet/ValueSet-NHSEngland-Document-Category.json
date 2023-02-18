@@ -41,6 +41,14 @@
             {
               "code": "823681000000100",
               "display": "Outpatient letter"
+            },
+            {
+              "code": "373942005",
+              "display": "Referral note"
+            },
+            {
+              "code" : "325851000000107",
+              "display": "Consultation"
             }
           ]
         }
