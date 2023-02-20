@@ -257,14 +257,12 @@
             }
           ],
           "rules": "open"
-        },
-        "min": 1
+        }
       },
       {
         "id": "ServiceRequest.code.coding:SNOMEDProcedureCode",
         "path": "ServiceRequest.code.coding",
-        "sliceName": "SNOMEDProcedureCode",
-        "min": 1
+        "sliceName": "SNOMEDProcedureCode"
       },
       {
         "id": "ServiceRequest.code.coding:SNOMEDProcedureCode.system",
