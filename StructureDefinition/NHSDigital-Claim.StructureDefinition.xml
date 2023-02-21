@@ -63,7 +63,7 @@
       </type>
       <mustSupport value="true" />
     </element>
-	<element id="Claim.extension:supplyHeaderIdentifier">
+    <element id="Claim.extension:supplyHeaderIdentifier">
       <path value="Claim.extension" />
       <sliceName value="supplyHeaderIdentifier" />
       <short value="Identifier for the SupplyHeader" />
@@ -125,14 +125,12 @@
         <severity value="error" />
         <human value="An identifier reference or resource reference must be provided" />
         <expression value="(reference.exists() or identifier.exists())" />
-        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Claim" />
       </constraint>
       <constraint>
         <key value="patient-nhs" />
         <severity value="error" />
         <human value="Supplied NHS Number is outside the English and Welsh NHS Number range or length of the number is wrong." />
         <expression value="identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').exists().not() or (identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').exists()  and identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').value.matches('^([456789]{1}[0-9]{9})$'))" />
-        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Claim" />
       </constraint>
       <mustSupport value="true" />
     </element>
@@ -306,7 +304,6 @@
         <severity value="error" />
         <human value="party - An identifier reference or resource reference must be provided" />
         <expression value="(reference.exists() or (identifier.exists()))" />
-        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Claim" />
       </constraint>
     </element>
     <element id="Claim.payee.party.identifier.system">
@@ -529,6 +526,18 @@
         <code value="Extension" />
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-EPS-RepeatInformation" />
       </type>
+    </element>
+    <element id="Claim.item.detail.extension:taskBusinessStatusReason">
+      <path value="Claim.item.detail.extension" />
+      <sliceName value="taskBusinessStatusReason" />
+      <definition value="To capture non-dispensing reason within a Claim at the line-item level" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-EPS-TaskBusinessStatusReason" />
+      </type>
+      <isModifier value="false" />
     </element>
     <element id="Claim.item.detail.sequence">
       <path value="Claim.item.detail.sequence" />
