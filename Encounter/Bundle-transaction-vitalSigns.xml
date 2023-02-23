@@ -1,0 +1,396 @@
+<Bundle xmlns="http://hl7.org/fhir">
+    <id value="dd2098d7-7c5f-428d-a5ba-0304dea1e1bc" />
+    <identifier>
+        <system value="https://tools.ietf.org/html/rfc4122" />
+        <value value="dd2098d7-7c5f-428d-a5ba-0304dea1e1bc" />
+    </identifier>
+    <type value="transaction" />
+    <timestamp value="2021-01-07T15:13:00+00:00" />
+    <entry>
+        <fullUrl value="urn:uuid:afa74963-7ba1-430f-8ff5-d621108a2617" />
+        <resource>
+            <Encounter xmlns="http://hl7.org/fhir">
+                <identifier>
+                    <system value="https://tools.ietf.org/html/rfc4122"/>
+                    <value value="afa74963-7ba1-430f-8ff5-d621108a2617"/>
+                </identifier>
+                <status value="finished" />
+                <class>
+                    <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode" />
+                    <code value="VR" />
+                    <display value="virtual" />
+                </class>
+                <subject>
+                    <identifier>
+                        <system value="https://fhir.nhs.uk/Id/nhs-number"/>
+                        <value value="9378954317"/>
+                    </identifier>
+                </subject>
+                <participant>
+                    <individual>
+                        <identifier>
+                            <system value="https://fhir.nhs.uk/Id/ods-organization-code"/>
+                            <value value="RR8"/>
+                        </identifier>
+                    </individual>
+                </participant>
+                <period>
+                    <start value="2023-02-01T12:45:00Z"/>
+                </period>
+            </Encounter>
+        </resource>
+        <request>
+            <method value="POST" />
+            <url value="Encounter" />
+        </request>
+    </entry>
+    <entry>
+        <fullUrl value="urn:uuid:cabf8eae-246e-457b-b0eb-ea1c031e1a5d" />
+        <resource>
+            <Observation xmlns="http://hl7.org/fhir">
+            <identifier>
+                    <system value="https://tools.ietf.org/html/rfc4122"/>
+                    <value value="afa74963-7ba1-430f-8ff5-d621108a2617-resp"/>
+                </identifier>
+                <status value="final"/>
+                <category>
+                    <coding>
+                        <system value="http://terminology.hl7.org/CodeSystem/observation-category" />
+                        <code value="vital-signs" />
+                        <display value="Vital Signs" />
+                    </coding>
+                </category>
+                <code>
+                    <coding>
+                        <system value="http://snomed.info/sct" />
+                        <code value="86290005" />
+                        <display value="Respiratory rate" />
+                    </coding>
+                    <coding>
+                        <system value="http://loinc.org" />
+                        <code value="9279-1" />
+                        <display value="Respiratory Rate" />
+                    </coding>
+                </code>
+                <subject>
+                    <identifier>
+                        <system value="https://fhir.nhs.uk/Id/nhs-number"/>
+                        <value value="9378954317"/>
+                    </identifier>
+                </subject>
+                <encounter>
+                    <reference value="urn:uuid:afa74963-7ba1-430f-8ff5-d621108a2617"/>
+                </encounter>
+                <effectiveDateTime value="2023-02-01T12:45:00Z"/>
+                <performer>
+                    <identifier>
+                        <system value="https://fhir.hl7.org.uk/Id/gmc-number"/>
+                        <value value="C3266131"/>
+                    </identifier>
+                </performer>
+                <performer>
+                    <identifier>
+                        <system value="https://fhir.nhs.uk/Id/ods-organization-code"/>
+                        <value value="RR8"/>
+                    </identifier>
+                </performer>
+                <valueQuantity>
+                    <value value="56"/>
+                    <unit value="Breaths / minute" />
+                    <system value="http://unitsofmeasure.org" />
+                    <code value="{Breaths}/min" />
+                </valueQuantity>
+            </Observation>
+        </resource>
+        <request>
+            <method value="POST" />
+            <url value="Observation" />
+        </request>
+    </entry>
+    <entry>
+        <fullUrl value="urn:uuid:1f5878e2-4a37-4514-aa50-7f42fcee34fc" />
+        <resource>
+            <Observation xmlns="http://hl7.org/fhir">
+            <identifier>
+                    <system value="https://tools.ietf.org/html/rfc4122"/>
+                    <value value="afa74963-7ba1-430f-8ff5-d621108a2617-spo2"/>
+                </identifier>
+                <status value="final"/>
+                <category>
+                    <coding>
+                        <system value="http://terminology.hl7.org/CodeSystem/observation-category" />
+                        <code value="vital-signs" />
+                        <display value="Vital Signs" />
+                    </coding>
+                </category>
+                <subject>
+                    <identifier>
+                        <system value="https://fhir.nhs.uk/Id/nhs-number"/>
+                        <value value="9378954317"/>
+                    </identifier>
+                </subject>
+                <encounter>
+                    <reference value="urn:uuid:afa74963-7ba1-430f-8ff5-d621108a2617"/>
+                </encounter>
+                <code>
+                    <coding>
+                        <system value="http://snomed.info/sct" />
+                        <code value="103228002" />
+                        <display value="Hemoglobin saturation with oxygen" />
+                    </coding>
+                    <coding>
+                        <system value="http://loinc.org" />
+                        <code value="2708-6" />
+                        <display value="Oxygen Saturation" />
+                    </coding>
+                </code>
+                <effectiveDateTime value="2023-02-01T12:45:00Z"/>
+                <performer>
+                    <identifier>
+                        <system value="https://fhir.hl7.org.uk/Id/gmc-number"/>
+                        <value value="C3266131"/>
+                    </identifier>
+                </performer>
+                <performer>
+                    <identifier>
+                        <system value="https://fhir.nhs.uk/Id/ods-organization-code"/>
+                        <value value="RR8"/>
+                    </identifier>
+                </performer>
+                <valueQuantity>
+                    <value value="90"/>
+                    <unit value="percent" />
+                    <system value="http://unitsofmeasure.org" />
+                    <code value="%" />
+                </valueQuantity>
+            </Observation>
+        </resource>
+        <request>
+            <method value="POST" />
+            <url value="Observation" />
+        </request>
+    </entry>
+    <entry>
+        <fullUrl value="urn:uuid:7dd2b2a9-997d-47d0-8693-73a765b4de35" />
+        <resource>
+            <Observation xmlns="http://hl7.org/fhir">
+            <identifier>
+                    <system value="https://tools.ietf.org/html/rfc4122"/>
+                    <value value="afa74963-7ba1-430f-8ff5-d621108a2617-bp"/>
+                </identifier>
+                <status value="final"/>
+                <category>
+                    <coding>
+                        <system value="http://terminology.hl7.org/CodeSystem/observation-category" />
+                        <code value="vital-signs" />
+                        <display value="Vital Signs" />
+                    </coding>
+                </category>
+                <code>
+                    <coding>
+                        <system value="http://snomed.info/sct" />
+                        <code value="75367002" />
+                        <display value="Blood pressure" />
+                    </coding>
+                    <coding>
+                        <system value="http://loinc.org" />
+                        <code value="85354-9" />
+                        <display value="Blood pressure panel with all children optional" />
+                    </coding>
+                </code>
+                <subject>
+                    <identifier>
+                        <system value="https://fhir.nhs.uk/Id/nhs-number"/>
+                        <value value="9378954317"/>
+                    </identifier>
+                </subject>
+                <encounter>
+                    <reference value="urn:uuid:afa74963-7ba1-430f-8ff5-d621108a2617"/>
+                </encounter>
+                <effectiveDateTime value="2023-02-01T12:45:00Z"/>
+                <performer>
+                    <identifier>
+                        <system value="https://fhir.hl7.org.uk/Id/gmc-number"/>
+                        <value value="C3266131"/>
+                    </identifier>
+                </performer>
+                <performer>
+                    <identifier>
+                        <system value="https://fhir.nhs.uk/Id/ods-organization-code"/>
+                        <value value="RR8"/>
+                    </identifier>
+                </performer>
+                <component>
+                    <code>
+                        <coding>
+                            <system value="http://snomed.info/sct" />
+                            <code value="1091811000000102" />
+                            <display value="Diastolic arterial pressure" />
+                        </coding>
+                        <coding>
+                            <system value="http://loinc.org" />
+                            <code value="8462-4" />
+                            <display value="Diastolic blood pressure" />
+                        </coding>
+                    </code>
+                    <valueQuantity>
+                        <value value="120"/>
+                        <unit value="millimeter of mercury" />
+                        <system value="http://unitsofmeasure.org" />
+                        <code value="mm[Hg]" />
+                    </valueQuantity>
+                </component>
+                <component>
+                    <code>
+                        <coding>
+                            <system value="http://snomed.info/sct" />
+                            <code value="72313002" />
+                            <display value="Systolic arterial pressure" />
+                        </coding>
+                        <coding>
+                            <system value="http://loinc.org" />
+                            <code value="8480-6" />
+                            <display value="Systolic blood pressure" />
+                        </coding>
+                    </code>
+                    <valueQuantity>
+                        <value value="80"/>
+                        <unit value="millimeter of mercury" />
+                        <system value="http://unitsofmeasure.org" />
+                        <code value="mm[Hg]" />
+                    </valueQuantity>
+                </component>
+            </Observation>
+        </resource>
+        <request>
+            <method value="POST" />
+            <url value="Observation" />
+        </request>
+    </entry>
+    <entry>
+        <fullUrl value="urn:uuid:7dd2b2a9-997d-47d0-8693-73a765b4de35" />
+        <resource>
+            <Observation xmlns="http://hl7.org/fhir">
+            <identifier>
+                    <system value="https://tools.ietf.org/html/rfc4122"/>
+                    <value value="afa74963-7ba1-430f-8ff5-d621108a2617-hr"/>
+                </identifier>
+                <status value="final"/>
+                <category>
+                    <coding>
+                        <system value="http://terminology.hl7.org/CodeSystem/observation-category" />
+                        <code value="vital-signs" />
+                        <display value="Vital Signs" />
+                    </coding>
+                </category>
+                <code>
+                    <coding>
+                        <system value="http://snomed.info/sct" />
+                        <code value="364075005" />
+                        <display value="Heart rate" />
+                    </coding>
+                    <coding>
+                        <system value="http://loinc.org" />
+                        <code value="8867-4" />
+                        <display value="Heart rate" />
+                    </coding>
+                </code>
+                <subject>
+                    <identifier>
+                        <system value="https://fhir.nhs.uk/Id/nhs-number"/>
+                        <value value="87"/>
+                    </identifier>
+                </subject>
+                <encounter>
+                    <reference value="urn:uuid:afa74963-7ba1-430f-8ff5-d621108a2617"/>
+                </encounter>
+                <effectiveDateTime value="2023-02-01T12:45:00Z"/>
+                <performer>
+                    <identifier>
+                        <system value="https://fhir.hl7.org.uk/Id/gmc-number"/>
+                        <value value="C3266131"/>
+                    </identifier>
+                </performer>
+                <performer>
+                    <identifier>
+                        <system value="https://fhir.nhs.uk/Id/ods-organization-code"/>
+                        <value value="RR8"/>
+                    </identifier>
+                </performer>
+                <valueQuantity>
+                    <value value="87"/>
+                    <unit value="heart beats per minute" />
+                    <system value="http://unitsofmeasure.org" />
+                    <code value="{beats}/min" />
+                </valueQuantity>
+            </Observation>
+        </resource>
+        <request>
+            <method value="POST" />
+            <url value="Observation" />
+        </request>
+    </entry>
+    <entry>
+        <fullUrl value="urn:uuid:e3db7055-9fdb-454f-8e59-c4bc3da99a68" />
+        <resource>
+            <Observation xmlns="http://hl7.org/fhir">
+            <identifier>
+                    <system value="https://tools.ietf.org/html/rfc4122"/>
+                    <value value="afa74963-7ba1-430f-8ff5-d621108a2617-temp"/>
+                </identifier>
+                <status value="final"/>
+                <category>
+                    <coding>
+                        <system value="http://terminology.hl7.org/CodeSystem/observation-category" />
+                        <code value="vital-signs" />
+                        <display value="Vital Signs" />
+                    </coding>
+                </category>
+                <code>
+                    <coding>
+                        <system value="http://snomed.info/sct" />
+                        <code value="276885007" />
+                        <display value="Core body temperature" />
+                    </coding>
+                    <coding>
+                        <system value="http://loinc.org" />
+                        <code value="8310-5" />
+                        <display value="Body temperature" />
+                    </coding>
+                </code>
+                <subject>
+                    <identifier>
+                        <system value="https://fhir.nhs.uk/Id/nhs-number"/>
+                        <value value="37.1"/>
+                    </identifier>
+                </subject>
+                <encounter>
+                    <reference value="urn:uuid:afa74963-7ba1-430f-8ff5-d621108a2617"/>
+                </encounter>
+                <effectiveDateTime value="2023-02-01T12:45:00Z"/>
+                <performer>
+                    <identifier>
+                        <system value="https://fhir.hl7.org.uk/Id/gmc-number"/>
+                        <value value="C3266131"/>
+                    </identifier>
+                </performer>
+                <performer>
+                    <identifier>
+                        <system value="https://fhir.nhs.uk/Id/ods-organization-code"/>
+                        <value value="RR8"/>
+                    </identifier>
+                </performer>
+                <valueQuantity>
+                    <value value="37.1"/>
+                    <unit value="degree Celsius" />
+                    <system value="http://unitsofmeasure.org" />
+                    <code value="Cel" />
+                </valueQuantity>
+            </Observation>"
+        </resource>
+        <request>
+            <method value="POST" />
+            <url value="Observation" />
+        </request>
+    </entry>
+</Bundle>
