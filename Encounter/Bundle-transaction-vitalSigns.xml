@@ -268,7 +268,7 @@
         </request>
     </entry>
     <entry>
-        <fullUrl value="urn:uuid:7dd2b2a9-997d-47d0-8693-73a765b4de35" />
+        <fullUrl value="urn:uuid:2f68a449-8d06-4658-b1fd-d91a76bba1cf" />
         <resource>
             <Observation xmlns="http://hl7.org/fhir">
             <identifier>
@@ -298,7 +298,7 @@
                 <subject>
                     <identifier>
                         <system value="https://fhir.nhs.uk/Id/nhs-number"/>
-                        <value value="87"/>
+                        <value value="9378954317"/>
                     </identifier>
                 </subject>
                 <encounter>
@@ -361,7 +361,7 @@
                 <subject>
                     <identifier>
                         <system value="https://fhir.nhs.uk/Id/nhs-number"/>
-                        <value value="37.1"/>
+                        <value value="9378954317"/>
                     </identifier>
                 </subject>
                 <encounter>
