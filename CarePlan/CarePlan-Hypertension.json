@@ -28,7 +28,19 @@
     ],
     "addresses": [
         {
-            "reference": "Condition/va-cond-dan-dm",
+            "extension" : [{
+                "url":"https://fhir.nhs.uk/StructureDefinition/CodeableReference",
+                "valueCodeableConcept" : {
+                    "coding" : [
+                        {
+                            "system": "http://snomed.info/sct",
+                            "code": "44054006",
+                            "display": "Type 2 diabetes mellitus"
+                        }
+                    ]
+                }
+
+            }],
             "display": "Type 2 diabetes mellitus"
         },
         {
@@ -51,13 +63,37 @@
     "activity": [
         {
             "reference": {
-                "reference": "MedicationRequest/va-med-dan-metformin",
+                "extension" : [{
+                    "url":"https://fhir.nhs.uk/StructureDefinition/CodeableReference",
+                    "valueCodeableConcept" : {
+                        "coding" : [
+                            {
+                                "system": "http://snomed.info/sct",
+                                "code": "765507008",
+                                "display": "Metformin hydrochloride 500 mg prolonged-release oral tablet"
+                            }
+                        ]
+                    }
+    
+                }],
                 "display": "Metformin hydrochloride 500 MG Oral Tablet"
             }
         },
         {
             "reference": {
-                "reference": "MedicationRequest/va-med-dan-lisinopril",
+                "extension" : [{
+                    "url":"https://fhir.nhs.uk/StructureDefinition/CodeableReference",
+                    "valueCodeableConcept" : {
+                        "coding" : [
+                            {
+                                "system": "http://snomed.info/sct",
+                                "code": "1193825003",
+                                "display": "Amlodipine (as amlodipine besilate) 10 mg and lisinopril 20 mg oral tablet"
+                            }
+                        ]
+                    }
+    
+                }],
                 "display": "Lisinopril 10 MG Oral Tablet"
             }
         } 
