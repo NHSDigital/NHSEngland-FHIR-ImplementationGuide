@@ -37,14 +37,14 @@
                         "coding" : [
                             {
                                 "system": "http://snomed.info/sct",
-                                "code": "38341003",
-                                "display": "Hypertensive disorder"
+                                "code": "44054006",
+                                "display": "Type 2 diabetes mellitus"
                             }
                         ]
                     }
 
                 }],
-                "display": "Hypertensive disorder. This is like a R5 CodeableReference"
+                "display": "Type 2 diabetes mellitus. This is like a R5 CodeableReference"
             },
             "role": {
                 "coding": [
