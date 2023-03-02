@@ -1,0 +1,65 @@
+{
+    "resourceType": "CarePlan",
+    "id": "50b2b5fe-6997-4875-b317-fb7c35524cfb",
+    "subject": {
+        "identifier": {
+            "system": "https://fhir.nhs.uk/Id/nhs-number",
+            "value": "9876543210"
+        }
+    },
+    "identifier": [
+        {
+            "system": "http://example.org/sampleepisodeofcare-identifier",
+            "value": "50b2b5fe-6997-4875-b317-fb7c35524cfb"
+        }
+    ],
+    "status": "active",
+    "intent": "plan",
+    "title": "Primary Care",
+    "goal": [
+        {
+            "reference": "Goal/va-goal-dan-a1c",
+            "display": "Hemoglobin A1c"
+        },
+        {
+            "reference": "Goal/va-goal-dan-glucose",
+            "display": "Fasting blood glucose level"
+        }
+    ],
+    "addresses": [
+        {
+            "reference": "Condition/va-cond-dan-dm",
+            "display": "Type 2 diabetes mellitus"
+        },
+        {
+            "reference": "Condition/va-cond-dan-concern-glucose",
+            "display": "Inability to maintain effective blood glucose control"
+        },
+        {
+            "reference": "Condition/va-cond-dan-concern-foot",
+            "display": "Peripheral vascular and neuropathy risks leading to heightened foot complication risks"
+        }
+    ],
+    "careTeam": [
+        {
+            "identifier": {
+                "value": "a85535c8-a0ba-4bae-bce9-8a245123ad8f"
+            },
+            "display": "example care team"
+        }
+    ],
+    "activity": [
+        {
+            "reference": {
+                "reference": "MedicationRequest/va-med-dan-metformin",
+                "display": "Metformin hydrochloride 500 MG Oral Tablet"
+            }
+        },
+        {
+            "reference": {
+                "reference": "MedicationRequest/va-med-dan-lisinopril",
+                "display": "Lisinopril 10 MG Oral Tablet"
+            }
+        } 
+    ]
+}

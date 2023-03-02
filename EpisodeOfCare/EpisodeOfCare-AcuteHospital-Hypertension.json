@@ -31,10 +31,19 @@
     "diagnosis": [
         {
             "condition": {
-                "identifier": {
-                    "system": "http://snomed.info/sct",
-                    "value": "38341003"
-                },
+                "extension" : [{
+                    "url":"https://fhir.nhs.uk/StructureDefinition/CodeableReference",
+                    "valueCodeableConcept" : {
+                        "coding" : [
+                            {
+                                "system": "http://snomed.info/sct",
+                                "code": "38341003",
+                                "display": "Hypertensive disorder"
+                            }
+                        ]
+                    }
+
+                }],
                 "display": "Hypertensive disorder. This is like a R5 CodeableReference"
             },
             "role": {
