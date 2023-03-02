@@ -10,50 +10,6 @@
         <include>
             <system value="https://fhir.nhs.uk/CodeSystem/medicationdispense-endorsement" />
             <version value="1.0.1" />
-            <concept>
-                <code value="BB" />
-                <display value="Broken Bulk" />
-            </concept>
-            <concept>
-                <code value="ED" />
-                <display value="Extemporaneously dispensed" />
-            </concept>
-            <concept>
-                <code value="IP" />
-                <display value="Invoice Price for less common products or special items" />
-            </concept>
-            <concept>
-                <code value="MF" />
-                <display value="Measured and Fitted" />
-            </concept>
-            <concept>
-                <code value="NCSO" />
-                <display value="No Cheaper Stock Obtainable" />
-            </concept>
-            <concept>
-                <code value="NDEC" />
-                <display value="No Dispenser Endorsement Code" />
-            </concept>
-            <concept>
-                <code value="XP" />
-                <display value="Out of Pocket Expenses" />
-            </concept>
-            <concept>
-                <code value="RC" />
-                <display value="Rebate Claimed" />
-            </concept>
-            <concept>
-                <code value="SSP" />
-                <display value="Serious Shortage Protocol" />
-            </concept>
-            <concept>
-                <code value="SP" />
-                <display value="Special License" />
-            </concept>
-            <concept>
-                <code value="ZD" />
-                <display value="Zero Discount (List B only)" />
-            </concept>
         </include>
     </compose>
 </ValueSet>
