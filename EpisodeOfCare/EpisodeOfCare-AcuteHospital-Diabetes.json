@@ -31,22 +31,24 @@
     "diagnosis": [
         {
             "condition": {
-                "extension" : [{
-                    "url":"https://fhir.nhs.uk/StructureDefinition/CodeableReference",
-                    "valueCodeableConcept" : {
-                        "coding" : [
-                            {
-                                "system": "http://snomed.info/sct",
-                                "code": "44054006",
-                                "display": "Type 2 diabetes mellitus"
-                            }
-                        ]
+                "extension": [
+                    {
+                        "url": "https://fhir.nhs.uk/StructureDefinition/CodeableReference",
+                        "valueCodeableConcept": {
+                            "coding": [
+                                {
+                                    "system": "http://snomed.info/sct",
+                                    "code": "44054006",
+                                    "display": "Type 2 diabetes mellitus"
+                                }
+                            ]
+                        }
                     }
-                }],
-                "type" : "Condition",
-                "identifier" : {
-                    "system" : "https://tools.ietf.org/html/rfc4122",
-                    "value" : "81ee47ad-717d-413f-8ec9-62c19060da88"
+                ],
+                "type": "Condition",
+                "identifier": {
+                    "system": "https://tools.ietf.org/html/rfc4122",
+                    "value": "81ee47ad-717d-413f-8ec9-62c19060da88"
                 },
                 "display": "Type 2 diabetes mellitus. This is like a R5 CodeableReference"
             },
@@ -79,6 +81,10 @@
     },
     "referralRequest": [
         {
+            "identifier": {
+                "system": "https://fhir.nhs.uk/Id/UBRN",
+                "value": "b4a16b72-0403-4c2b-80e4-c57c7679b552"
+            },
             "display": "Referral Virtual Ward Services"
         }
     ],
