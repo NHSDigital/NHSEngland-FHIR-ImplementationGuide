@@ -39,8 +39,12 @@
                         }
                     ]
                 }
-
             }],
+            "type" : "Condition",
+            "identifier" : {
+                "system" : "https://tools.ietf.org/html/rfc4122",
+                "value" : "81ee47ad-717d-413f-8ec9-62c19060da88"
+            },
             "display": "Type 2 diabetes mellitus"
         },
         {
@@ -94,10 +98,6 @@
                     }
     
                 }],
-                "identifier" : {
-                    "system" : "https://tools.ietf.org/html/rfc4122",
-                    "value" : "81ee47ad-717d-413f-8ec9-62c19060da88"
-                },
                 "display": "Lisinopril 10 MG Oral Tablet"
             }
         } 
