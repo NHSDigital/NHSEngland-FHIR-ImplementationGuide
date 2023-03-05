@@ -92,15 +92,6 @@
                         }
                     ]
                 }],
-                "type": {
-                    "coding": [
-                        {
-                            "system": "http://snomed.info/sct",
-                            "code": "766841000000106",
-                            "display": "Consultation with patient"
-                        }
-                    ]
-                },
                 "status": "current",
                 "subject": {
                     "reference": "urn:uuid:221c028d-e15b-4d60-8035-c460c8231fa3"
@@ -186,13 +177,6 @@
                     }
                 ],
                 "generalPractitioner": [
-                    {
-                        "identifier": {
-                            "system": "https://fhir.hl7.org.uk/Id/gmp-number",
-                            "value": "G5612908"
-                        },
-                        "display": "Dr Gregory Townley"
-                    },
                     {
                         "identifier": {
                             "system": "https://fhir.nhs.uk/Id/ods-organization-code",
