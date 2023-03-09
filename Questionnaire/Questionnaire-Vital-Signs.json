@@ -26,6 +26,15 @@
             "valueCoding": {
               "display": "%"
             }
+          },
+          {
+            "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observationLinkPeriod",
+            "valueDuration": {
+              "value": 2,
+              "unit": "weeks",
+              "system": "http://unitsofmeasure.org",
+              "code": "wk"
+            }
           }
         ],
         "required": false,
@@ -48,6 +57,15 @@
               "system": "http://unitsofmeasure.org",
               "code": "kg",
               "display": "kilogram"
+            }
+          },
+          {
+            "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observationLinkPeriod",
+            "valueDuration": {
+              "value": 2,
+              "unit": "weeks",
+              "system": "http://unitsofmeasure.org",
+              "code": "wk"
             }
           }
         ],
@@ -79,6 +97,15 @@
             "valueCoding": {
               "display": "cm"
             }
+          },
+          {
+            "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observationLinkPeriod",
+            "valueDuration": {
+              "value": 2,
+              "unit": "weeks",
+              "system": "http://unitsofmeasure.org",
+              "code": "wk"
+            }
           }
         ],
         "required": false,
@@ -106,6 +133,15 @@
             "valueCoding": {
               "display": "meters"
             }
+          },
+          {
+            "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observationLinkPeriod",
+            "valueDuration": {
+              "value": 2,
+              "unit": "weeks",
+              "system": "http://unitsofmeasure.org",
+              "code": "wk"
+            }
           }
         ],
         "required": false,
@@ -132,15 +168,18 @@
           {
             "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
             "valueCoding": {
-              "display": "Cel"
-            }
-          },
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
-            "valueCoding": {
               "system": "http://unitsofmeasure.org",
               "code": "Cel",
               "display": "degree Celsius"
+            }
+          },
+          {
+            "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observationLinkPeriod",
+            "valueDuration": {
+              "value": 2,
+              "unit": "weeks",
+              "system": "http://unitsofmeasure.org",
+              "code": "wk"
             }
           }
         ],
@@ -185,6 +224,15 @@
             "valueCoding": {
               "display": "mm[Hg]"
             }
+          },
+          {
+            "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observationLinkPeriod",
+            "valueDuration": {
+              "value": 2,
+              "unit": "weeks",
+              "system": "http://unitsofmeasure.org",
+              "code": "wk"
+            }
           }
         ],
         "required": false,
@@ -206,6 +254,15 @@
             "valueCoding": {
               "display": "{beats}/min"
             }
+          },
+          {
+            "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observationLinkPeriod",
+            "valueDuration": {
+              "value": 2,
+              "unit": "weeks",
+              "system": "http://unitsofmeasure.org",
+              "code": "wk"
+            }
           }
         ],
         "required": false,
@@ -226,6 +283,15 @@
             "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
             "valueCoding": {
               "display": "{breaths}/min"
+            }
+          },
+          {
+            "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observationLinkPeriod",
+            "valueDuration": {
+              "value": 2,
+              "unit": "weeks",
+              "system": "http://unitsofmeasure.org",
+              "code": "wk"
             }
           }
         ],
