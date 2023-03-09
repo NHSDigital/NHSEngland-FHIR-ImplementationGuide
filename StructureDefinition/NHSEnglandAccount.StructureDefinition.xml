@@ -17,5 +17,38 @@
         <valueSet value="https://fhir.nhs.uk/ValueSet/account-type" />
       </binding>
     </element>
+    <element id="Account.type.extension">
+      <path value="Account.type.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="Account.type.extension:accountRole">
+      <path value="Account.type.extension" />
+      <sliceName value="accountRole" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-ODS-Organization-Role" />
+      </type>
+      <isModifier value="false" />
+    </element>
+    <element id="Account.type.extension:activePeriod">
+      <path value="Account.type.extension" />
+      <sliceName value="activePeriod" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-ODS-Organization-Role-ActivePeriod" />
+      </type>
+      <isModifier value="false" />
+    </element>
   </differential>
 </StructureDefinition>

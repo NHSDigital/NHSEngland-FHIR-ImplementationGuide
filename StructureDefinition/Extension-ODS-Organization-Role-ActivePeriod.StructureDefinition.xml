@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="04733847-bb2e-4342-9cf6-d37cbeca99c9"/>
+  <id value="04733847-bb2e-4342-9cf6-d37cbeca99c9" />
   <url value="https://fhir.nhs.uk/StructureDefinition/Extension-ODS-Organization-Role-ActivePeriod" />
   <name value="ExtensionNHSDigitalOrganizationRoleActivePeriod" />
   <status value="draft" />
@@ -16,6 +16,14 @@
     <type value="element" />
     <expression value="Organization.type" />
   </context>
+  <context>
+    <type value="element" />
+    <expression value="Location.type" />
+  </context>
+  <context>
+    <type value="element" />
+    <expression value="Account.type" />
+  </context>
   <type value="Extension" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
   <derivation value="constraint" />
@@ -29,10 +37,12 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <min value="0" />
     </element>
     <element id="Extension.extension:activePeriod">
       <path value="Extension.extension" />
       <sliceName value="activePeriod" />
+      <min value="0" />
     </element>
     <element id="Extension.extension:activePeriod.url">
       <path value="Extension.extension.url" />
@@ -47,6 +57,7 @@
     <element id="Extension.extension:dateType">
       <path value="Extension.extension" />
       <sliceName value="dateType" />
+      <min value="0" />
     </element>
     <element id="Extension.extension:dateType.url">
       <path value="Extension.extension.url" />

@@ -45,6 +45,39 @@
         <valueSet value="https://fhir.nhs.uk/ValueSet/location-type" />
       </binding>
     </element>
+    <element id="Location.type.extension">
+      <path value="Location.type.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="Location.type.extension:locationRole">
+      <path value="Location.type.extension" />
+      <sliceName value="locationRole" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-ODS-Organization-Role" />
+      </type>
+      <isModifier value="false" />
+    </element>
+    <element id="Location.type.extension:activePeriod">
+      <path value="Location.type.extension" />
+      <sliceName value="activePeriod" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-ODS-Organization-Role-ActivePeriod" />
+      </type>
+      <isModifier value="false" />
+    </element>
     <element id="Location.address">
       <path value="Location.address" />
       <min value="1" />
