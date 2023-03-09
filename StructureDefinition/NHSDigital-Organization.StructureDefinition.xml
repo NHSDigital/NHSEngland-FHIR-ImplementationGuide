@@ -40,10 +40,6 @@
       <min value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Organization.identifier:odsOrganisationCode">
-      <path value="Organization.identifier" />
-      <sliceName value="odsOrganisationCode" />
-    </element>
     <element id="Organization.identifier:odsSiteCode">
       <path value="Organization.identifier" />
       <sliceName value="odsSiteCode" />
@@ -105,22 +101,21 @@
       <path value="Organization.telecom.value" />
       <min value="1" />
     </element>
-     <element id="Organization.address">
+    <element id="Organization.address">
       <path value="Organization.address" />
       <definition value="Contact phone numbers and address of the organisation.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA;    &quot;telecom&quot;:  [&#xD;&#xA;        {&#xD;&#xA;            &quot;system&quot;: &quot;fax&quot;,&#xD;&#xA;            &quot;value&quot;: &quot;0113 242 6496&quot;,&#xD;&#xA;            &quot;use&quot;: &quot;work&quot;&#xD;&#xA;        },&#xD;&#xA;        {&#xD;&#xA;            &quot;system&quot;: &quot;phone&quot;,&#xD;&#xA;            &quot;value&quot;: &quot;0113 243 3144&quot;,&#xD;&#xA;            &quot;use&quot;: &quot;work&quot;&#xD;&#xA;        }&#xD;&#xA;    ],&#xD;&#xA;    &quot;address&quot;:  [&#xD;&#xA;        {&#xD;&#xA;            &quot;line&quot;:  [&#xD;&#xA;                &quot;KINGS ROAD&quot;&#xD;&#xA;            ],&#xD;&#xA;            &quot;city&quot;: &quot;HARROGATE&quot;,&#xD;&#xA;            &quot;postalCode&quot;: &quot;HG1 5LA&quot;,&#xD;&#xA;            &quot;country&quot;: &quot;ENGLAND&quot;&#xD;&#xA;        }&#xD;&#xA;    ],&#xD;&#xA;    &quot;partOf&quot;: {&#xD;&#xA;        &quot;reference&quot;: &quot;https://directory.spineservices.nhs.uk/R4/Organization/RR805&quot;,&#xD;&#xA;        &quot;identifier&quot;: {&#xD;&#xA;            &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/ods-organization-code&quot;,&#xD;&#xA;            &quot;value&quot;: &quot;RR8&quot;&#xD;&#xA;        }&#xD;&#xA;    }&#xD;&#xA;```" />
       <mustSupport value="true" />
     </element>
     <element id="Organization.partOf">
       <path value="Organization.partOf" />
-      <definition value="Recommended mandatory for primary care organisations.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA;    &quot;telecom&quot;:  [&#xD;&#xA;        {&#xD;&#xA;            &quot;system&quot;: &quot;fax&quot;,&#xD;&#xA;            &quot;value&quot;: &quot;0113 242 6496&quot;,&#xD;&#xA;            &quot;use&quot;: &quot;work&quot;&#xD;&#xA;        },&#xD;&#xA;        {&#xD;&#xA;            &quot;system&quot;: &quot;phone&quot;,&#xD;&#xA;            &quot;value&quot;: &quot;0113 243 3144&quot;,&#xD;&#xA;            &quot;use&quot;: &quot;work&quot;&#xD;&#xA;        }&#xD;&#xA;    ],&#xD;&#xA;    &quot;address&quot;:  [&#xD;&#xA;        {&#xD;&#xA;            &quot;line&quot;:  [&#xD;&#xA;                &quot;KINGS ROAD&quot;&#xD;&#xA;            ],&#xD;&#xA;            &quot;city&quot;: &quot;HARROGATE&quot;,&#xD;&#xA;            &quot;postalCode&quot;: &quot;HG1 5LA&quot;,&#xD;&#xA;            &quot;country&quot;: &quot;ENGLAND&quot;&#xD;&#xA;        }&#xD;&#xA;    ],&#xD;&#xA;    &quot;partOf&quot;: {&#xD;&#xA;        &quot;reference&quot;: &quot;https://directory.spineservices.nhs.uk/R4/Organization/RR805&quot;,&#xD;&#xA;        &quot;identifier&quot;: {&#xD;&#xA;            &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/ods-organization-code&quot;,&#xD;&#xA;            &quot;value&quot;: &quot;RR8&quot;&#xD;&#xA;        }&#xD;&#xA;    }&#xD;&#xA;```" />    
-      <mustSupport value="true" />
-       <constraint>
+      <definition value="Recommended mandatory for primary care organisations.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA;    &quot;telecom&quot;:  [&#xD;&#xA;        {&#xD;&#xA;            &quot;system&quot;: &quot;fax&quot;,&#xD;&#xA;            &quot;value&quot;: &quot;0113 242 6496&quot;,&#xD;&#xA;            &quot;use&quot;: &quot;work&quot;&#xD;&#xA;        },&#xD;&#xA;        {&#xD;&#xA;            &quot;system&quot;: &quot;phone&quot;,&#xD;&#xA;            &quot;value&quot;: &quot;0113 243 3144&quot;,&#xD;&#xA;            &quot;use&quot;: &quot;work&quot;&#xD;&#xA;        }&#xD;&#xA;    ],&#xD;&#xA;    &quot;address&quot;:  [&#xD;&#xA;        {&#xD;&#xA;            &quot;line&quot;:  [&#xD;&#xA;                &quot;KINGS ROAD&quot;&#xD;&#xA;            ],&#xD;&#xA;            &quot;city&quot;: &quot;HARROGATE&quot;,&#xD;&#xA;            &quot;postalCode&quot;: &quot;HG1 5LA&quot;,&#xD;&#xA;            &quot;country&quot;: &quot;ENGLAND&quot;&#xD;&#xA;        }&#xD;&#xA;    ],&#xD;&#xA;    &quot;partOf&quot;: {&#xD;&#xA;        &quot;reference&quot;: &quot;https://directory.spineservices.nhs.uk/R4/Organization/RR805&quot;,&#xD;&#xA;        &quot;identifier&quot;: {&#xD;&#xA;            &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/ods-organization-code&quot;,&#xD;&#xA;            &quot;value&quot;: &quot;RR8&quot;&#xD;&#xA;        }&#xD;&#xA;    }&#xD;&#xA;```" />
+      <constraint>
         <key value="nhsd-6" />
         <severity value="warning" />
         <human value="partOf.display - a display name should be provided" />
         <expression value="display.exists()" />
-        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Organization" />
       </constraint>
+      <mustSupport value="true" />
     </element>
     <element id="Organization.partOf.identifier">
       <path value="Organization.partOf.identifier" />
@@ -133,10 +128,6 @@
     <element id="Organization.partOf.identifier.value">
       <path value="Organization.partOf.identifier.value" />
       <min value="1" />
-    </element>
-    <element id="Organization.partOf.display">
-      <path value="Organization.partOf.display" />
-     
     </element>
   </differential>
 </StructureDefinition>

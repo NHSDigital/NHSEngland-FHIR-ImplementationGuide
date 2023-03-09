@@ -22,18 +22,12 @@
   <differential>
     <element id="Location.identifier">
       <path value="Location.identifier" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="system" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
       <comment value="SHOULD contain an ANANA/ODS code." />
     </element>
     <element id="Location.identifier:odsCode">
       <path value="Location.identifier" />
       <sliceName value="odsCode" />
+      <max value="0" />
     </element>
     <element id="Location.identifier:odsCode.system">
       <path value="Location.identifier.system" />
@@ -43,6 +37,13 @@
     <element id="Location.identifier:odsCode.value">
       <path value="Location.identifier.value" />
       <min value="1" />
+    </element>
+    <element id="Location.type">
+      <path value="Location.type" />
+      <binding>
+        <strength value="extensible" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/location-type" />
+      </binding>
     </element>
     <element id="Location.address">
       <path value="Location.address" />
