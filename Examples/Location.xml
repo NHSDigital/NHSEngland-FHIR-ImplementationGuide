@@ -2,7 +2,7 @@
     <id value="8a5d7d67-64fb-44ec-9802-2dc214bb3dcb"/> 
     <identifier>
       <use value="official" />
-      <system value="https://fhir.nhs.uk/Id/ods-organization-code" />
+      <system value="https://fhir.nhs.uk/Id/ods-site-code" />
       <value value="RBA11" />
     </identifier>
     <status value="active"/> 

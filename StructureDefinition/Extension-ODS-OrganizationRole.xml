@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="Extension-NHSDigital-Organization-Role" />
   <meta>
-    <lastUpdated value="2018-04-03T10:19:11.773+01:00" />
+    <lastUpdated value="2023-03-09T10:37:02.9740647+00:00" />
   </meta>
   <url value="https://fhir.nhs.uk/StructureDefinition/Extension-ODS-Organization-Role" />
   <version value="1.0.0" />
@@ -27,6 +27,14 @@
     <type value="element" />
     <expression value="Organization.type" />
   </context>
+  <context>
+    <type value="element" />
+    <expression value="Location.type" />
+  </context>
+  <context>
+    <type value="element" />
+    <expression value="Account.type" />
+  </context>
   <type value="Extension" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
   <derivation value="constraint" />
@@ -45,10 +53,12 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <min value="0" />
     </element>
     <element id="Extension.extension:primaryRole">
       <path value="Extension.extension" />
       <sliceName value="primaryRole" />
+      <min value="0" />
       <max value="1" />
     </element>
     <element id="Extension.extension:primaryRole.url">
@@ -64,6 +74,7 @@
     <element id="Extension.extension:status">
       <path value="Extension.extension" />
       <sliceName value="status" />
+      <min value="0" />
       <max value="1" />
     </element>
     <element id="Extension.extension:status.url">
