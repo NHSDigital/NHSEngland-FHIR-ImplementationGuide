@@ -179,7 +179,7 @@
    </concept>
    <concept>
       <code value="0119" />
-      <display value="General Practitioner Prescribing - PCT employed Podiatrist/Chiropodist " />
+      <display value="General Practitioner Prescribing - PCT employed Podiatrist/Chiropodist" />
 	  <definition value="Code obsolete must not be used as PCTs abolished 01 April 2013 For a podiatrist/chiropodist employed as a prescriber use 0114" />
       <property>
 		<code value="deprecated" />
@@ -299,7 +299,7 @@
    </concept>
    <concept>
       <code value="0713" />
-      <display value="Supplementary Prescribing - Practice employed Optometrist " />
+      <display value="Supplementary Prescribing - Practice employed Optometrist" />
 	  <definition value="Code retired 01 September 2016 For an optometrist employed as a prescriber use 0113" />
       <property>
 		<code value="deprecated" />
