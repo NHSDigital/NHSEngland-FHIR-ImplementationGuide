@@ -100,12 +100,6 @@
         "definition": "Type **SHOULD** be populated. \r\n\r\n```json\r\n\"type\":  [\r\n        {\r\n            \"coding\":  [\r\n                {\r\n                    \"system\": \"https://fhir.nhs.uk/CodeSystem/DoS-ClinicType\",\r\n                    \"code\": \"PHARMACY\",\r\n                    \"display\": \"Pharmacy\"\r\n                }\r\n            ]\r\n        }\r\n    ],\r\n```\r\n\r\nor \r\n\r\n```json\r\n\"type\": [\r\n        {\r\n            \"coding\": [\r\n                {\r\n                    \"system\": \"https://fhir.nhs.uk/CodeSystem/eRS-AppointmentType\",\r\n                    \"code\": \"DAY_CASE\",\r\n                }\r\n            ]\r\n        }\r\n    ],\r\n```",
         "mustSupport": true,
         "binding": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "valueString": "service-type"
-            }
-          ],
           "strength": "preferred"
         }
       },
