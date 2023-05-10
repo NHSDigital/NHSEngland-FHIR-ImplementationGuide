@@ -104,7 +104,7 @@
                         "coding": [
                             {
                                 "system": "https://fhir.nhs.uk/CodeSystem/eRS-RequestFlowType",
-                                "code": "DIRECTLY_BOOKABLEE",
+                                "code": "DIRECTLY_BOOKABLE",
                                 "display": "Directly Bookable"
                             }
                         ]
