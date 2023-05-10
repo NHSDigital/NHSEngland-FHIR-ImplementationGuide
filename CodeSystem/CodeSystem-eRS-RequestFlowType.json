@@ -36,14 +36,6 @@
         {
             "code": "ADVICE_AND_GUIDANCE",
             "display": "A service which can discuss the patient and receive guidance rather than a patient attending an appointment"
-        },
-        {
-            "code": "DIRECTLY_BOOKABLE",
-            "display": "Directly Bookable"
-        },
-        {
-            "code": "INDIRECTLY_BOOKABLE",
-            "display": "Indirectly Bookable"
         }
     ]
 }

@@ -312,6 +312,20 @@
         "fixedUri": "https://fhir.nhs.uk/CodeSystem/NHSDigital-ClinicType"
       },
       {
+        "id": "HealthcareService.characteristic:ERSBookableType",
+        "path": "HealthcareService.characteristic",
+        "sliceName": "ERSBookableType",
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://fhir.nhs.uk/ValueSet/eRS-BookableType"
+        }
+      },
+      {
+        "id": "HealthcareService.characteristic:ERSBookableType.coding.system",
+        "path": "HealthcareService.characteristic.coding.system",
+        "fixedUri": "https://fhir.nhs.uk/CodeSystem/eRS-BookableType"
+      },
+      {
         "id": "HealthcareService.availableTime",
         "path": "HealthcareService.availableTime",
         "definition": "Opening times for the clinic or service. \r\n\r\n\r\n```json\r\n\"availableTime\": [\r\n    {\r\n      \"daysOfWeek\": [\r\n        \"wed\"\r\n      ],\r\n      \"allDay\": true\r\n    },\r\n    {\r\n      \"daysOfWeek\": [\r\n        \"mon\",\r\n        \"tue\",\r\n        \"wed\",\r\n        \"thu\"\r\n      ],\r\n      \"availableStartTime\": \"08:30:00\",\r\n      \"availableEndTime\": \"05:30:00\"\r\n    },\r\n    {\r\n      \"daysOfWeek\": [\r\n        \"sat\",\r\n        \"fri\"\r\n      ],\r\n      \"availableStartTime\": \"09:30:00\",\r\n      \"availableEndTime\": \"04:30:00\"\r\n    }\r\n  ],\r\n```",
