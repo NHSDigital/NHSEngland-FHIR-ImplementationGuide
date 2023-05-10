@@ -3,7 +3,7 @@
     "id": "557c247f-f482-4841-9179-9205573955a2",
     "url": "https://fhir.nhs.uk/CodeSystem/eRS-BookableType",
     "version": "1.1.0",
-    "name": "eRS Bookable Type 1",
+    "name": "ERSBookableType",
     "status": "draft",
     "date": "2016-06-27",
     "publisher": "NHS Digital",
