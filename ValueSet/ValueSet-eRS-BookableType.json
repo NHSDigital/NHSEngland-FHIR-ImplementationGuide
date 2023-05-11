@@ -1,12 +1,12 @@
 {
     "resourceType": "ValueSet",
-    "id": "eRS-RequestFlowType",
-    "url": "https://fhir.nhs.uk/ValueSet/eRS-RequestFlowType",
-    "version": "1.0.1",
-    "name": "ERSRequestFlowType",
-    "title": "eRS Request Flow Type",
+    "id": "eRS-BookableType",
+    "url": "https://fhir.nhs.uk/ValueSet/eRS-BookableType",
+    "version": "1.0.0",
+    "name": "ERSBookableType",
+    "title": "eRS Bookable Type",
     "status": "active",
-    "date": "2022-03-14",
+    "date": "2022-05-10",
     "publisher": "NHS Digital",
     "contact":  [
         {
@@ -25,7 +25,7 @@
     "compose": {
         "include":  [
             {
-                "system": "https://fhir.nhs.uk/CodeSystem/eRS-RequestFlowType"
+                "system": "https://fhir.nhs.uk/CodeSystem/eRS-BookableType"
             }
         ]
     }
