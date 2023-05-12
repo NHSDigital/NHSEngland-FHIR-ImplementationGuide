@@ -1,10 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="19aa8f3d-46b0-486a-bab8-056a383e0f88" />
-  <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Organization" />
-  <name value="NHSDigitalOrganization" />
+  <id value="England-Organization" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/England-Organization" />
+  <version value="2.0.0" />
+  <name value="England-Organization" />
+  <title value="England-Organization" />
   <status value="draft" />
-  <purpose value="NHS Digital generic definintion of the data requirements for Organization." />
+  <date value="2023-06-01" />
+  <publisher value="NHS England" />
+  <contact>
+    <name value="NHS England" />
+    <telecom>
+      <system value="email" />
+      <value value="interoperabilityteam@nhs.net" />
+      <use value="work" />
+      <rank value="1" />
+    </telecom>
+  </contact>
+  <description value="This profile defines the NHS England constraints and extensions on the UK Core FHIR resource [Organization](https://simplifier.net/hl7fhirukcorer4/ukcoreorganization)." />
+  <purpose value="This profile allows exchange of a formally or informally recognised grouping of people or organisations formed for the purpose of achieving some form of collective action. Includes companies, institutions, corporations, departments, community groups, healthcare practice groups, etc." />
+  <copyright value="Copyright © 2021+ HL7 UK Licensed under the Apache License, Version 2.0 (the \&quot;License\&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at  http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \&quot;AS IS\&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. HL7® FHIR® standard Copyright © 2011+ HL7 The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at  https://www.hl7.org/fhir/license.html." />
   <fhirVersion value="4.0.1" />
   <kind value="resource" />
   <abstract value="false" />
@@ -22,6 +37,18 @@
         <rules value="open" />
       </slicing>
       <min value="0" />
+    </element>
+    <element id="Organization.extension:mainLocation">
+      <path value="Organization.extension" />
+      <sliceName value="mainLocation" />
+      <min value="0" />
+    </element>
+    <element id="Organization.extension:mainLocation.value[x]">
+      <path value="Organization.extension.value[x]" />
+      <type>
+        <code value="Reference" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/England-Location" />
+      </type>
     </element>
     <element id="Organization.extension:relationships">
       <path value="Organization.extension" />
