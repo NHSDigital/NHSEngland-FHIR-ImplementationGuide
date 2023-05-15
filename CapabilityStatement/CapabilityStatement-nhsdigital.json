@@ -1,13 +1,14 @@
 {
     "resourceType": "CapabilityStatement",
-    "id": "nhsdigital-requirements",
-    "url": "https://fhir.nhs.uk/CapabilityStatement/nhsdigital-requirements",
+    "id": "England-CapabilityStatement-IGrequirements",
+    "url": "https://fhir.nhs.uk/CapabilityStatement/England-CapabilityStatement-IGrequirements",
     "version": "1.0.0",
-    "name": "NHSDigitalRequirements",
+    "name": "EnglandCapabilityStatementIGrequirements",
+    "title": "England CapabilityStatement IG Requirements",
     "status": "active",
     "date": "2021-04-28T00:00:00+00:00",
-    "publisher": "digital.nhs.uk",
-    "description": "Conformance requirements for NHS Digital Implementation Guide",
+    "publisher": "NHS England",
+    "description": "Conformance requirements for NHS England Implementation Guide",
     "kind": "requirements",
     "fhirVersion": "4.0.1",
     "format": [
@@ -33,7 +34,7 @@
             "resource": [
                 {
                     "type": "Account",
-                    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-Account"
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/England-Account"
                 },
                 {
                     "type": "AllergyIntolerance",
@@ -41,15 +42,15 @@
                 },
                 {
                     "type": "Appointment",
-                    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-Appointment"
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/England-Appointment"
                 },
                 {
                     "type": "Binary",
-                    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-Binary"
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/England-Binary"
                 },
                 {
                     "type": "CapabilityStatement",
-                    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-CapabilityStatement"
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/England-CapabilityStatement"
                 },
                 {
                     "type": "Condition",
@@ -57,35 +58,35 @@
                 },
                 {
                     "type": "Claim",
-                    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-Claim"
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/England-Claim"
                 },
                 {
                     "type": "CommunicationRequest",
-                    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-CommunicationRequest"
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/England-CommunicationRequest"
                 },
                 {
                     "type": "Encounter",
-                    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-Encounter"
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/England-Encounter"
                 },
                 {
                     "type": "DocumentReference",
-                    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-DocumentReference"
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/England-DocumentReference"
                 },
                 {
                     "type": "Flag",
-                    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-Flag"
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/England-Flag"
                 },
                 {
                     "type": "HealthcareService",
-                    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-HealthcareService"
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/England-HealthcareService"
                 },
                 {
                     "type": "Immunization",
-                    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-Immunization"
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/England-Immunization"
                 },
                 {
                     "type": "Location",
-                    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-Location"
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/England-Location"
                 },
                 {
                     "type": "List",
@@ -97,59 +98,59 @@
                 },
                 {
                     "type": "MedicationRequest",
-                    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationRequest"
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/England-MedicationRequest"
                 },
                 {
                     "type": "MedicationDispense",
-                    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationDispense"
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/England-MedicationDispense"
                 },
                 {
                     "type": "Medication",
-                    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-Medication"
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/England-Medication"
                 },
                 {
                     "type": "MedicationStatement",
-                    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationStatement"
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/England-MedicationStatement"
                 },
                 {
                     "type": "MessageDefinition",
-                    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-MessageDefinition"
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/England-MessageDefinition"
                 },
                 {
                     "type": "Observation",
-                    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-Observation"
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/England-Observation"
                 },
                 {
                     "type": "Organization",
-                    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-Organization"
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/England-Organization"
                 },
                 {
                     "type": "OperationDefinition",
-                    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-OperationDefinition"
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/England-OperationDefinition"
                 },
                 {
                     "type": "OperationOutcome",
-                    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-OperationOutcome"
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/England-OperationOutcome"
                 },
                 {
                     "type": "Patient",
-                    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient"
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/England-Patient"
                 },
                 {
                     "type": "Practitioner",
-                    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-Practitioner"
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/England-Practitioner"
                 },
                 {
                     "type": "PractitionerRole",
-                    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole"
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/England-PractitionerRole"
                 },
                 {
                     "type": "Questionnaire",
-                    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-Questionnaire"
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/England-Questionnaire"
                 },
                 {
                     "type": "QuestionnaireResponse",
-                    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-QuestionnaireResponse"
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/England-QuestionnaireResponse"
                 },
                 {
                     "type": "RelatedPerson",
@@ -157,7 +158,7 @@
                 },
                 {
                     "type": "ServiceRequest",
-                    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-ServiceRequest"
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/England-ServiceRequest"
                 },
                 {
                     "type": "Slot",
@@ -165,7 +166,7 @@
                 },
                 {
                     "type": "Task",
-                    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-Task"
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/England-Task"
                 },
                 {
                     "type": "Device",
