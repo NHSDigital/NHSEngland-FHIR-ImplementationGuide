@@ -28,7 +28,7 @@
   <concept>
     <code value="ACCESS_DENIED_LEVEL" />
     <display value="Access has been denied because you need higher level permissions" />
-    <definition value="The request requires higher pemission levels than the authentication provided. For example NHS login has three main levels of P0, P5 and P9 - and the request held a P0 level, instead of P9. Recommend using HTTP Status Code 403" />
+    <definition value="The request requires higher permission levels than the authentication provided. For example NHS login has three main levels of P0, P5 and P9 - and the request held a P0 level, instead of P9. Recommend using HTTP Status Code 403" />
   </concept>
   <concept>
     <code value="ACCESS_TOKEN_EXPIRED" />
@@ -37,13 +37,13 @@
   </concept>
   <concept>
     <code value="ACCESS_TOKEN_INVALID" />
-    <display value="Authorization header not formatted correctly" />
-    <definition value="The bearer token could not be retrieved from the Authorization header, format should be 'Bearer INSERT-ACCESS-TOKEN'. Recommend using HTTP Status Code 401" />
+    <display value="Authorisation header not formatted correctly" />
+    <definition value="The bearer token could not be retrieved from the Authorisation header, format should be 'Bearer INSERT-ACCESS-TOKEN'. Recommend using HTTP Status Code 401" />
   </concept>
   <concept>
     <code value="ACCESS_TOKEN_MISSING" />
-    <display value="Authorization header not sent" />
-    <definition value="The access token must be passed in the Authorization header. The format should be 'Bearer INSERT-ACCESS-TOKEN'. Recommend using HTTP Status Code 400" />
+    <display value="Authorisation header not sent" />
+    <definition value="The access token must be passed in the Authorisation header. The format should be 'Bearer INSERT-ACCESS-TOKEN'. Recommend using HTTP Status Code 400" />
   </concept>
   <!-- Operational Outcomes -->
   <concept>
@@ -54,7 +54,7 @@
   <concept>
     <code value="TOO_MANY_REQUESTS" />
     <display value="Your connection has exceeded the rate limit" />
-    <definition value="APIs have different rate limits - and your request has been rejected. Rate limits can be per application (connection) or per API. A detailed reason will be returned in the diagnoistics field. Wait a short period and re-try, ideally with an exponential back-off policy. Recommend using HTTP Status Code 429" />
+    <definition value="APIs have different rate limits - and your request has been rejected. Rate limits can be per application (connection) or per API. A detailed reason will be returned in the diagnostics field. Wait a short period and re-try, ideally with an exponential back-off policy. Recommend using HTTP Status Code 429" />
   </concept>
   <concept>
     <code value="METHOD_NOT_ALLOWED" />
@@ -65,7 +65,7 @@
   <concept>
     <code value="SERVICE_UNAVAILABLE" />
     <display value="Service unavailable - could be temporary" />
-    <definition value="There has been a processing failure in the request chain. This could be tranisent failure for a single request, a temporary service issue or maintenance window. Re-send the request after the time specified in the Retry-After header. Normally maps to HTTP Status Code 503" />
+    <definition value="There has been a processing failure in the request chain. This could be transient failure for a single request, a temporary service issue or maintenance window. Re-send the request after the time specified in the Retry-After header. Normally maps to HTTP Status Code 503" />
   </concept>
   <concept>
   <code value="SERVICE_ERROR" />
@@ -85,7 +85,7 @@
    </concept>
    <concept>
       <code value="VALIDATION_ERROR" />
-      <display value="A paremeter or value has resulted in a validation error" />
+      <display value="A parameter or value has resulted in a validation error" />
       <definition value="Returns which parameter or value was incorrect, and why. Some APIs will return a list of errors, others will return the first one. If a list is returned, there will be one issue per error. Recommend using HTTP Status Code 400" />
    </concept>
    <concept>
