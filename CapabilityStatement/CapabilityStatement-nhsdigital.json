@@ -121,7 +121,7 @@
                 },
                 {
                     "type": "Organization",
-                    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-Organization"
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/England-Organization"
                 },
                 {
                     "type": "OperationDefinition",
