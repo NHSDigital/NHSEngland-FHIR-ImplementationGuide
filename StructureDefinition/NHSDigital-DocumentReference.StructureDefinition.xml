@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="19354975-cb99-492c-b469-798ed7534b51" />
-  <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-DocumentReference" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/England-DocumentReference" />
   <name value="NHSDigitalDocumentReference" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
@@ -56,11 +56,11 @@
     </element>
     <element id="DocumentReference.subject">
       <path value="DocumentReference.subject" />
-      <definition value="A reference to a [NHSDigital-Patient](https://simplifier.net/resolve?target=simplifier&amp;scope=uk.nhsdigital.r4&amp;canonical=https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient) and/or an identifier reference using NHSNumber. Only traced NHS Numbers may be used. &#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA;    &quot;subject&quot;: {&#xD;&#xA;        &quot;reference&quot;: &quot;urn:uuid:edea022a-2d81-11eb-adc1-0242ac120002&quot;,&#xD;&#xA;        &quot;identifier&quot;: [&#xD;&#xA;            {&#xD;&#xA;                &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/nhs-number&quot;,&#xD;&#xA;                &quot;value&quot;: &quot;9912003888&quot;&#xD;&#xA;            }&#xD;&#xA;        ]&#xD;&#xA;    },&#xD;&#xA;&#xD;&#xA;```&#xD;&#xA;&#xD;&#xA;Preference is for a reference to a Patient resource, however current document flows may only support limited metadata." />
+      <definition value="A reference to a [England-Patient](https://simplifier.net/resolve?target=simplifier&amp;scope=uk.nhsdigital.r4&amp;canonical=https://fhir.nhs.uk/StructureDefinition/England-Patient) and/or an identifier reference using NHSNumber. Only traced NHS Numbers may be used. &#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA;    &quot;subject&quot;: {&#xD;&#xA;        &quot;reference&quot;: &quot;urn:uuid:edea022a-2d81-11eb-adc1-0242ac120002&quot;,&#xD;&#xA;        &quot;identifier&quot;: [&#xD;&#xA;            {&#xD;&#xA;                &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/nhs-number&quot;,&#xD;&#xA;                &quot;value&quot;: &quot;9912003888&quot;&#xD;&#xA;            }&#xD;&#xA;        ]&#xD;&#xA;    },&#xD;&#xA;&#xD;&#xA;```&#xD;&#xA;&#xD;&#xA;Preference is for a reference to a Patient resource, however current document flows may only support limited metadata." />
       <min value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-Patient" />
         <aggregation value="referenced" />
       </type>
       <constraint>
@@ -91,14 +91,14 @@
     </element>
     <element id="DocumentReference.author">
       <path value="DocumentReference.author" />
-      <definition value="A resource reference to a contained [NHSDigital-PractitionerRole](https://simplifier.net/resolve?target=simplifier&amp;scope=uk.nhsdigital.r4&amp;canonical=https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole)&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA;    &quot;author&quot;: [&#xD;&#xA;        {&#xD;&#xA;          &quot;reference&quot; : &quot;#author&quot;,&#xD;&#xA;        }&#xD;&#xA;    ]&#xD;&#xA;```&#xD;&#xA;&#xD;&#xA;The contained resource: &#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;{&#xD;&#xA;  &quot;resourceType&quot;: &quot;DocumentReference&quot;,&#xD;&#xA;  &quot;id&quot;: &quot;a9b9f0f4-cc37-4ea3-bd4b-16d15ddbe63b&quot;,&#xD;&#xA;  &quot;contained&quot;: [&#xD;&#xA;    {&#xD;&#xA;      &quot;resourceType&quot;: &quot;PractitionerRole&quot;,&#xD;&#xA;      &quot;id&quot;: &quot;author&quot;,&#xD;&#xA;      &quot;practitioner&quot;: {&#xD;&#xA;        &quot;identifier&quot;: {&#xD;&#xA;          &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/sds-user-id&quot;,&#xD;&#xA;          &quot;value&quot;: &quot;0987654321&quot;&#xD;&#xA;        }&#xD;&#xA;      },&#xD;&#xA;      &quot;organization&quot;: {&#xD;&#xA;        &quot;identifier&quot;: {&#xD;&#xA;          &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/ods-organization-code&quot;,&#xD;&#xA;          &quot;value&quot;: &quot;RR8&quot;&#xD;&#xA;        },&#xD;&#xA;        &quot;display&quot;: &quot;LEEDS TEACHING HOSPITALS NHS TRUST&quot;&#xD;&#xA;      }&#xD;&#xA;    }&#xD;&#xA;  ],&#xD;&#xA;```" />
+      <definition value="A resource reference to a contained [England-PractitionerRole](https://simplifier.net/resolve?target=simplifier&amp;scope=uk.nhsdigital.r4&amp;canonical=https://fhir.nhs.uk/StructureDefinition/England-PractitionerRole)&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA;    &quot;author&quot;: [&#xD;&#xA;        {&#xD;&#xA;          &quot;reference&quot; : &quot;#author&quot;,&#xD;&#xA;        }&#xD;&#xA;    ]&#xD;&#xA;```&#xD;&#xA;&#xD;&#xA;The contained resource: &#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;{&#xD;&#xA;  &quot;resourceType&quot;: &quot;DocumentReference&quot;,&#xD;&#xA;  &quot;id&quot;: &quot;a9b9f0f4-cc37-4ea3-bd4b-16d15ddbe63b&quot;,&#xD;&#xA;  &quot;contained&quot;: [&#xD;&#xA;    {&#xD;&#xA;      &quot;resourceType&quot;: &quot;PractitionerRole&quot;,&#xD;&#xA;      &quot;id&quot;: &quot;author&quot;,&#xD;&#xA;      &quot;practitioner&quot;: {&#xD;&#xA;        &quot;identifier&quot;: {&#xD;&#xA;          &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/sds-user-id&quot;,&#xD;&#xA;          &quot;value&quot;: &quot;0987654321&quot;&#xD;&#xA;        }&#xD;&#xA;      },&#xD;&#xA;      &quot;organization&quot;: {&#xD;&#xA;        &quot;identifier&quot;: {&#xD;&#xA;          &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/ods-organization-code&quot;,&#xD;&#xA;          &quot;value&quot;: &quot;RR8&quot;&#xD;&#xA;        },&#xD;&#xA;        &quot;display&quot;: &quot;LEEDS TEACHING HOSPITALS NHS TRUST&quot;&#xD;&#xA;      }&#xD;&#xA;    }&#xD;&#xA;  ],&#xD;&#xA;```" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Organization" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-Organization" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-Patient" />
         <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-RelatedPerson" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-PractitionerRole" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -107,7 +107,7 @@
       <definition value="An identifier reference to an ODS Organisation. &#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA;        &quot;custodian&quot;: {&#xD;&#xA;                &quot;identifier&quot;: {&#xD;&#xA;                    &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/ods-organization-code&quot;,&#xD;&#xA;                    &quot;value&quot;: &quot;VNE51&quot;&#xD;&#xA;                },&#xD;&#xA;                &quot;display&quot;: &quot;The Pharmacy System&quot;&#xD;&#xA;        }&#xD;&#xA;```" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Organization" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-Organization" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -148,7 +148,7 @@
           <valueString value="DocumentC80PracticeSetting" />
         </extension>
         <strength value="extensible" />
-        <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDigital-CareSettingType" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/England-CareSettingType" />
       </binding>
     </element>
     <element id="DocumentReference.context.related">
@@ -156,8 +156,8 @@
       <definition value="Related identifiers or resources associated with the DocumentReference.&#xD;&#xA;&#xD;&#xA;In eRS this is used to link a DocumentReference (i.e. a document) to a ServiceRequest and/or Task." />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-ServiceRequest" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Task" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-ServiceRequest" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-Task" />
       </type>
       <mustSupport value="true" />
     </element>
