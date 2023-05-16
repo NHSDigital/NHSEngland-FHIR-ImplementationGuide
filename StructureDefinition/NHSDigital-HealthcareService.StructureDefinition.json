@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
   "id": "23dc287d-ffe2-4524-8498-9d57cf115240",
-  "url": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-HealthcareService",
+  "url": "https://fhir.nhs.uk/StructureDefinition/England-HealthcareService",
   "name": "NHSDigitalHealthcareService",
   "status": "draft",
   "fhirVersion": "4.0.1",
@@ -72,7 +72,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "https://fhir.nhs.uk/StructureDefinition/NHSDigital-Organization"
+              "https://fhir.nhs.uk/StructureDefinition/England-Organization"
             ]
           }
         ],
@@ -236,7 +236,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "https://fhir.nhs.uk/StructureDefinition/NHSDigital-Location"
+              "https://fhir.nhs.uk/StructureDefinition/England-Location"
             ]
           }
         ],

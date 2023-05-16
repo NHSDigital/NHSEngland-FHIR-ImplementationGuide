@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="51533f7f-1fa3-4866-a200-01618d377455" />
-  <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/England-PractitionerRole" />
   <name value="NHSDigitalPractitionerRole" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
@@ -44,7 +44,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-Account-code" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-Account-code" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -85,7 +85,7 @@
       <definition value="This **MUST** either be a reference to a Practitioner resource or an identifier reference plus a display. In both cases the referenced resource or identfier reference should contain a professional code. &#xD;&#xA;&#xD;&#xA;It is recommended an *identifier reference* and *display* (practioner full name) is included. This identifier should be the Practitioner's primary professional code (see `NHSDigital-Practitioner` for details on professional codes). &#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;practitioner&quot;: {&#xD;&#xA;        &quot;display&quot;: &quot;Dr Smith&quot;,&#xD;&#xA;        &quot;identifier&quot;: {&#xD;&#xA;            &quot;system&quot;: &quot;https://fhir.hl7.org.uk/Id/gmc-number&quot;,&#xD;&#xA;            &quot;value&quot;: &quot;C9876543&quot;&#xD;&#xA;          }&#xD;&#xA;    },&#xD;&#xA;```&#xD;&#xA;&#xD;&#xA;For EPS, currently a *Resource reference* is required.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;practitioner&quot;: {&#xD;&#xA;        &quot;reference&quot;: &quot;urn:uuid:1557E58E-3B1E-41DD-B3B5-D4D393DC5A3D&quot;,&#xD;&#xA;        &quot;display&quot;: &quot;Dr Smith&quot;&#xD;&#xA;    },&#xD;&#xA;```" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Practitioner" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-Practitioner" />
       </type>
       <constraint>
         <key value="nhsd-2" />
@@ -134,21 +134,21 @@
         <severity value="error" />
         <human value="sds-user-id must be numeric" />
         <expression value="identifier.where(system='https://fhir.nhs.uk/Id/sds-user-id').exists().not() or (identifier.where(system='https://fhir.nhs.uk/Id/sds-user-id').exists()  and identifier.where(system='https://fhir.nhs.uk/Id/sds-user-id').value.matches('^[0-9]+$'))" />
-        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Practitioner" />
+        <source value="https://fhir.nhs.uk/StructureDefinition/England-Practitioner" />
       </constraint>
       <constraint>
         <key value="role-gmcreferencenumber" />
         <severity value="error" />
         <human value="GMC Reference Number must be of the format NNNNNNN" />
         <expression value="identifier.where(system='https://fhir.hl7.org.uk/Id/gmc-reference-number').exists().not() or (identifier.where(system='https://fhir.hl7.org.uk/Id/gphc-number').exists()  and identifier.where(system='https://fhir.hl7.org.uk/Id/gmc-reference-number').value.matches('^[0-9]{7}$'))" />
-        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Practitioner" />
+        <source value="https://fhir.nhs.uk/StructureDefinition/England-Practitioner" />
       </constraint>
       <constraint>
         <key value="nacs-code-retired" />
         <severity value="warning" />
         <human value="NACS (/ODS) Practitioner Identifier is retired in NHS FHIR and should not be used. Please use the actual naming system instead (e,g, https://fhir.hl7.org.uk/Id/gmc-number, https://fhir.hl7.org.uk/Id/gmp-number, etc)." />
         <expression value="identifier.where(system='https://fhir.hl7.org.uk/Id/professional-code').exists().not()" />
-        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Practitioner" />
+        <source value="https://fhir.nhs.uk/StructureDefinition/England-Practitioner" />
       </constraint>
       <mustSupport value="true" />
     </element>
@@ -157,7 +157,7 @@
       <definition value="This **MUST** either be a reference to a Organization resource or an identifier reference. In both cases the reference must contain an ANANA/ODS organisation code. &#xD;&#xA;&#xD;&#xA;&#xD;&#xA;#### organisation resource references&#xD;&#xA;&#xD;&#xA;It is recommended an *identifier reference* is included. &#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;organization&quot;: {&#xD;&#xA;        &quot;identifier&quot;: {&#xD;&#xA;            &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/ods-organization-code&quot;,&#xD;&#xA;            &quot;value&quot;: &quot;RBA&quot;&#xD;&#xA;          },&#xD;&#xA;        &quot;display&quot;: &quot;TAUNTON AND SOMERSET NHS FOUNDATION TRUST&quot;&#xD;&#xA;    }&#xD;&#xA;```&#xD;&#xA;&#xD;&#xA;Optionally *Resource reference* can be provided. This is required in the current version of EPS but this will be changed to supporting the *identifier reference* only.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;organization&quot;: {&#xD;&#xA;        &quot;reference&quot;: &quot;urn:uuid:17c4270d-6966-4788-8cbc-1d1d63536b25&quot;,&#xD;&#xA;        &quot;identifier&quot;: {&#xD;&#xA;            &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/ods-organization-code&quot;,&#xD;&#xA;            &quot;value&quot;: &quot;RBA&quot;&#xD;&#xA;          },&#xD;&#xA;        &quot;display&quot;: &quot;TAUNTON AND SOMERSET NHS FOUNDATION TRUST&quot;&#xD;&#xA;    }&#xD;&#xA;```" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Organization" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-Organization" />
       </type>
       <constraint>
         <key value="nhsd-1" />
@@ -278,7 +278,7 @@
       <definition value="The contact address for the practitioner for the service they are providing in this role. This will often be the surgery address, clinic or service address. &#xD;&#xA;&#xD;&#xA;If using ODS Codes, the address on ODS must be checked to ensure it is correct. If the address is not correct, then *Resource reference* **MUST** be supplied.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;location&quot;:  [&#xD;&#xA;         {&#xD;&#xA;            &quot;identifier&quot;: {&#xD;&#xA;              &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/ods-organization-code&quot;,&#xD;&#xA;              &quot;value&quot;: &quot;RCB55&quot;&#xD;&#xA;            }&#xD;&#xA;            &quot;display&quot;: &quot;YORK HOSPITAL&quot;&#xD;&#xA;          }&#xD;&#xA;  ]&#xD;&#xA;```&#xD;&#xA;&#xD;&#xA;For EPS, currently a *Resource reference* is required.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;location&quot;:  [&#xD;&#xA;         {&#xD;&#xA;            &quot;reference&quot;: &quot;urn:uuid:ecc2db8e-3757-4758-a4f1-7f4c7e06662f&quot;,&#xD;&#xA;            &quot;display&quot;: &quot;YORK HOSPITAL&quot;&#xD;&#xA;          }&#xD;&#xA;  ]&#xD;&#xA;```" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Location" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-Location" />
       </type>
       <constraint>
         <key value="nhsd-3" />
@@ -302,7 +302,7 @@
       <max value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-HealthcareService" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-HealthcareService" />
       </type>
       <constraint>
         <key value="nhsd-4" />

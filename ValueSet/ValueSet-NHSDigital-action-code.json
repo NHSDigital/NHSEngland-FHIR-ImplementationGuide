@@ -1,7 +1,7 @@
 {
   "resourceType": "ValueSet",
   "id": "effdbf4d-a7e3-47dd-9f94-ebe84ed970df",
-  "url": "https://fhir.nhs.uk/ValueSet/NHSDigital-action-code",
+  "url": "https://fhir.nhs.uk/ValueSet/England-action-code",
   "version": "0.0.4",
   "name": "NHSDigitalActionCode",
   "title": "NHSDigital Action Code",

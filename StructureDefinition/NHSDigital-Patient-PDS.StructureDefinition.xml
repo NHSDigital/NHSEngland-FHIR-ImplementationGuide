@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="d8f37a5d-2c06-41c6-bf36-46e987d8111e" />
-  <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient-PDS" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/England-Patient-PDS" />
   <name value="NHSDigitalPatientPDS" />
   <status value="draft" />
   <description value="This profile is designed around Patient Demographics Services and PDS may be used as the source of this data. &#xD;&#xA;Use of PDS is not mandatory for Patient resources, Patient Administration Systems (PAS) and Master Patient Index (MPI) may be used instead. Only traced NHS Number SHOULD be used with this resource unless explicitly stated. Within NHS Trusts the inclusion of MRN (Medical Record Numbers) identifiers is highly recommended." />
@@ -10,7 +10,7 @@
   <kind value="resource" />
   <abstract value="false" />
   <type value="Patient" />
-  <baseDefinition value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient" />
+  <baseDefinition value="https://fhir.nhs.uk/StructureDefinition/England-Patient" />
   <derivation value="constraint" />
   <differential>
     <element id="Patient.identifier">
