@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Condition" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/England-Condition" />
   <name value="NHSDigitalCondition" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
@@ -23,7 +23,7 @@
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-Patient" />
         <aggregation value="referenced" />
       </type>
       <mustSupport value="true" />
@@ -34,7 +34,7 @@
         <code value="Reference" />
         <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Patient" />
         <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-RelatedPerson" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole-Minimal" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-PractitionerRole-Minimal" />
       </type>
       <mustSupport value="true" />
     </element>

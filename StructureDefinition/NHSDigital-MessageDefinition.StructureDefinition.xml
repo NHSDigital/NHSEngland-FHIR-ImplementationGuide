@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-MessageDefinition" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/England-MessageDefinition" />
   <name value="NHSDigitalMessageDefinition" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />

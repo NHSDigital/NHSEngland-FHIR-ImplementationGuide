@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Appointment-PatientCare" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/England-Appointment-PatientCare" />
   <name value="NHSDigitalAppointmentPatientCare" />
   <status value="draft" />
   <purpose value="Profile on NHSDigital-Appointment for NHS App/e-RS PatientCare" />
@@ -8,7 +8,7 @@
   <kind value="resource" />
   <abstract value="false" />
   <type value="Appointment" />
-  <baseDefinition value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Appointment" />
+  <baseDefinition value="https://fhir.nhs.uk/StructureDefinition/England-Appointment" />
   <derivation value="constraint" />
   <differential>
     <element id="Appointment.basedOn">
@@ -37,7 +37,7 @@
       <path value="Appointment.participant.actor" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-HealthcareService" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-HealthcareService" />
       </type>
     </element>
     <element id="Appointment.participant:service.actor.identifier">
@@ -58,7 +58,7 @@
       <path value="Appointment.participant.actor" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-Patient" />
       </type>
     </element>
     <element id="Appointment.participant:patient.actor.identifier">

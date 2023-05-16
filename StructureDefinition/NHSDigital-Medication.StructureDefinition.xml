@@ -1,6 +1,6 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
-    <id value="NHSDigital-Medication" />
-    <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Medication" />
+    <id value="England-Medication" />
+    <url value="https://fhir.nhs.uk/StructureDefinition/England-Medication" />
     <version value="2.1.0" />
     <name value="NHSDigitalMedication" />
     <title value="NHS Digital Medication" />
@@ -31,7 +31,7 @@
             <min value="1" />
             <binding>
                 <strength value="extensible" />
-                <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDigital-MedicationCode" />
+                <valueSet value="https://fhir.nhs.uk/ValueSet/England-MedicationCode" />
             </binding>
         </element>
     </differential>

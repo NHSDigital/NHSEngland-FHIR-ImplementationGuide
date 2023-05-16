@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="fd471b8d-3b37-46a3-af00-568de477864a" />
-  <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationDispense" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/England-MedicationDispense" />
   <name value="NHSDigitalMedicationDispense" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
@@ -157,17 +157,17 @@
       <definition value="Actual Medical Product Packs (AMPP) SHOULD be used. &#xD;&#xA;It is valid to include a FHIR Medication resource within the FHIR Message, this practice is discouraged to simplify handling of the event messages.&#xD;&#xA;&#xD;&#xA;&lt;table&gt;&#xD;&#xA;&lt;thead&gt;&#xD;&#xA;&lt;th data-no-sort width=&quot;25%&quot;&gt;&#xD;&#xA;dm+d Category&#xD;&#xA;&lt;/th&gt;&#xD;&#xA;&lt;th data-no-sort width=&quot;50%&quot;&gt;&#xD;&#xA;dm+d Description&#xD;&#xA;&lt;/th&gt;&#xD;&#xA;&lt;th data-no-sort width=&quot;25%&quot;&gt;&#xD;&#xA;UK SNOMED Members Of&#xD;&#xA;&lt;/th&gt;&#xD;&#xA;&#xD;&#xA;&lt;/thead&gt;&#xD;&#xA;&lt;tr&gt;&#xD;&#xA;&lt;td&gt;&#xD;&#xA;VMPP&#xD;&#xA;&lt;/td&gt;&#xD;&#xA;&lt;td&gt;&#xD;&#xA;Virtual Medical Product Pack&#xD;&#xA;&lt;/td&gt;&#xD;&#xA;&lt;td&gt;&#xD;&#xA;&lt;a href=&quot;https://termbrowser.nhs.uk/?perspective=full&amp;conceptId1=999000571000001104&quot; target=&quot;_blank&quot;&gt;999000571000001104&lt;/a&gt;&#xD;&#xA;&lt;/td&gt;&#xD;&#xA;&#xD;&#xA;&lt;/tr&gt;&#xD;&#xA;&lt;tr&gt;&#xD;&#xA;&lt;td&gt;&#xD;&#xA;AMPP&#xD;&#xA;&lt;/td&gt;&#xD;&#xA;&lt;td&gt;&#xD;&#xA;Actual Medical Product Pack&#xD;&#xA;&lt;/td&gt;&#xD;&#xA;&lt;td&gt;&#xD;&#xA;&lt;a href=&quot;https://termbrowser.nhs.uk/?perspective=full&amp;conceptId1=999000551000001106&quot; target=&quot;_blank&quot;&gt;999000551000001106&lt;/a&gt;&#xD;&#xA;&lt;/td&gt;&#xD;&#xA;&lt;/tr&gt;&#xD;&#xA;&lt;tr&gt;&#xD;&#xA;&lt;td&gt;&#xD;&#xA;VMP&#xD;&#xA;&lt;/td&gt;&#xD;&#xA;&lt;td&gt;&#xD;&#xA;Virtual Medical Product&#xD;&#xA;&lt;/td&gt;&#xD;&#xA;&lt;td&gt;&#xD;&#xA;&lt;a href=&quot;https://termbrowser.nhs.uk/?perspective=full&amp;conceptId1=999000561000001109&quot; target=&quot;_blank&quot;&gt;999000561000001109&lt;/a&gt;&#xD;&#xA;&lt;/td&gt;&#xD;&#xA;&lt;/tr&gt;&#xD;&#xA;&lt;tr&gt;&#xD;&#xA;&lt;td&gt;&#xD;&#xA;AMP&#xD;&#xA;&lt;/td&gt;&#xD;&#xA;&lt;td&gt;&#xD;&#xA;Actual Medical Product&#xD;&#xA;&lt;/td&gt;&#xD;&#xA;&lt;td&gt;&#xD;&#xA;&lt;a href=&quot;https://termbrowser.nhs.uk/?perspective=full&amp;conceptId1=999000541000001108&quot; target=&quot;_blank&quot;&gt;999000541000001108&lt;/a&gt;&#xD;&#xA;&lt;/td&gt;&#xD;&#xA;&lt;/tr&gt;&#xD;&#xA;&lt;/table&gt;&#xD;&#xA;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;medicationCodeableConcept&quot;: {&#xD;&#xA;        &quot;coding&quot;:  [&#xD;&#xA;        {&#xD;&#xA;            &quot;system&quot;: &quot;http://snomed.info/sct&quot;,&#xD;&#xA;            &quot;code&quot;: &quot;10460811000001109&quot;,&#xD;&#xA;            &quot;display&quot;: &quot;Amoxil 500mg capsules (Dowelhurst Ltd) 12 capsule&quot;&#xD;&#xA;        }&#xD;&#xA;    ]&#xD;&#xA;}&#xD;&#xA;```" />
       <type>
         <code value="CodeableConcept" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationDispense-CodeableConcept" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/England-MedicationDispense-CodeableConcept" />
       </type>
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationDispense-Medication" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-MedicationDispense-Medication" />
         <aggregation value="bundled" />
       </type>
       <mustSupport value="true" />
       <binding>
         <strength value="extensible" />
-        <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDigital-MedicationCode" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/England-MedicationCode" />
       </binding>
     </element>
     <element id="MedicationDispense.subject">
@@ -176,7 +176,7 @@
       <min value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient-PDS" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-Patient-PDS" />
         <aggregation value="referenced" />
         <aggregation value="bundled" />
       </type>
@@ -191,7 +191,7 @@
         <severity value="error" />
         <human value="Supplied NHS Number is outside the English and Welsh NHS Number range or length of the number is wrong." />
         <expression value="identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').exists().not() or (identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').exists()  and identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').value.matches('^([456789]{1}[0-9]{9})$'))" />
-        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Claim" />
+        <source value="https://fhir.nhs.uk/StructureDefinition/England-Claim" />
       </constraint>
       <mustSupport value="true" />
     </element>
@@ -209,7 +209,7 @@
       <type>
         <code value="Reference" />
         <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-EpisodeOfCare" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Encounter" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-Encounter" />
       </type>
     </element>
     <element id="MedicationDispense.performer">
@@ -222,8 +222,8 @@
       <path value="MedicationDispense.performer.actor" />
       <type>
         <code value="Reference" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Reference" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole-SDS" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/England-Reference" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-PractitionerRole-SDS" />
         <aggregation value="contained" />
       </type>
       <constraint>
@@ -249,7 +249,7 @@
       <path value="MedicationDispense.location" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Location" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-Location" />
       </type>
     </element>
     <element id="MedicationDispense.location.identifier.system">
@@ -270,7 +270,7 @@
       <min value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationRequest-Minimal" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-MedicationRequest-Minimal" />
         <aggregation value="contained" />
         <aggregation value="referenced" />
       </type>
@@ -365,7 +365,7 @@
       <definition value="At present only the `text` element **MUST** be provided. It is recommended the guidance in [FHIR Dose Syntax Implementation Guidance](https://developer.nhs.uk/apis/dose-syntax-implementation-1-3-2-alpha/dosage-overview.html) is followed. &#xD;&#xA;&#xD;&#xA;Note the structure of this section is similar as the [NHSDigital-MedicationRequest](https://simplifier.net/resolve?target=simplifier&amp;scope=uk.nhsdigital.r4&amp;canonical=https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationRequest) from the `prescription-order`.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;dosageInstruction&quot;: [&#xD;&#xA;    {&#xD;&#xA;        &quot;text&quot;: &quot;4 times a day for 7 days&quot;,&#xD;&#xA;        &quot;timing&quot;: {&#xD;&#xA;            &quot;repeat&quot;: {&#xD;&#xA;                &quot;boundsDuration&quot;: {&#xD;&#xA;                    &quot;value&quot;: 7,&#xD;&#xA;                    &quot;unit&quot;: &quot;d&quot;&#xD;&#xA;                },&#xD;&#xA;                &quot;frequency&quot;: 4,&#xD;&#xA;                &quot;period&quot;: 1,&#xD;&#xA;                &quot;periodUnit&quot;: &quot;d&quot;&#xD;&#xA;            }&#xD;&#xA;        },&#xD;&#xA;        &quot;doseAndRate&quot;: [&#xD;&#xA;            {&#xD;&#xA;                &quot;doseQuantity&quot;: {&#xD;&#xA;                    &quot;value&quot;: 1,&#xD;&#xA;                    &quot;unit&quot;: &quot;capsule&quot;,&#xD;&#xA;                    &quot;system&quot;: &quot;http://snomed.info/sct&quot;,&#xD;&#xA;                    &quot;code&quot;: &quot;3316911000001105&quot;&#xD;&#xA;                }&#xD;&#xA;            }&#xD;&#xA;        ]&#xD;&#xA;    }&#xD;&#xA;]&#xD;&#xA;```" />
       <type>
         <code value="Dosage" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Dosage" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/England-Dosage" />
       </type>
       <mustSupport value="true" />
     </element>
