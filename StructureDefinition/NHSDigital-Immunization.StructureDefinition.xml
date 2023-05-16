@@ -36,7 +36,7 @@
       <mustSupport value="true" />
       <binding>
         <strength value="required" />
-        <description value="https://fhir.nhs.uk/ValueSet/NHSDigital-VaccinationProcedure" />
+        <description value="https://fhir.nhs.uk/ValueSet/England-VaccinationProcedure" />
       </binding>
     </element>
     <element id="Immunization.identifier">
@@ -62,7 +62,7 @@
       <path value="Immunization.statusReason" />
       <binding>
         <strength value="required" />
-        <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDigital-ReasonImmunizationNotAdministered" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/England-ReasonImmunizationNotAdministered" />
       </binding>
     </element>
     <element id="Immunization.statusReason.coding">
@@ -227,7 +227,7 @@
     </element>
     <element id="Immunization.performer">
       <path value="Immunization.performer" />
-      <definition value="The organisation ODS code of the location where the vaccination event took place with corresponding system of `https://fhir.nhs.uk/Id/ods-organization-code`. For roving teams on home visits or care home visits use the site code of the responsible site e.g. GP practice or dedicated vaccination site. It is strongly recommend the name of the Organisation is present in the display field.&#xD;&#xA;&#xD;&#xA;Vaccination professional should be recorded using professional codes, see [NHSDigital-Practitioner](https://simplifier.net/guide/nhsdigital/NHSDigital-Practitioner) for details.&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA;&quot;performer&quot;:  [&#xD;&#xA;        {&#xD;&#xA;            &quot;actor&quot;: {&#xD;&#xA;                &quot;type&quot;: &quot;Practitioner&quot;,&#xD;&#xA;                &quot;identifier&quot;: {&#xD;&#xA;                    &quot;system&quot;: &quot;https://fhir.hl7.org.uk/Id/nmc-number&quot;,&#xD;&#xA;                    &quot;value&quot;: &quot;5566789&quot;&#xD;&#xA;                },&#xD;&#xA;                &quot;display&quot;: &quot;HOLDING, Rafferty&quot;&#xD;&#xA;            }&#xD;&#xA;        },&#xD;&#xA;        {&#xD;&#xA;            &quot;actor&quot;: {&#xD;&#xA;                &quot;type&quot;: &quot;Organization&quot;,&#xD;&#xA;                &quot;identifier&quot;: {&#xD;&#xA;                    &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/ods-organization-code&quot;,&#xD;&#xA;                    &quot;value&quot;: &quot;C4B2A&quot;&#xD;&#xA;                },&#xD;&#xA;                &quot;display&quot;: &quot;ELLAND ROAD STADIUM - COVID VACCINATION CENTRE&quot;&#xD;&#xA;            }&#xD;&#xA;        }&#xD;&#xA;    ],&#xD;&#xA;```" />
+      <definition value="The organisation ODS code of the location where the vaccination event took place with corresponding system of `https://fhir.nhs.uk/Id/ods-organization-code`. For roving teams on home visits or care home visits use the site code of the responsible site e.g. GP practice or dedicated vaccination site. It is strongly recommend the name of the Organisation is present in the display field.&#xD;&#xA;&#xD;&#xA;Vaccination professional should be recorded using professional codes, see [England-Practitioner](https://simplifier.net/guide/nhsdigital/NHSDigital-Practitioner) for details.&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA;&quot;performer&quot;:  [&#xD;&#xA;        {&#xD;&#xA;            &quot;actor&quot;: {&#xD;&#xA;                &quot;type&quot;: &quot;Practitioner&quot;,&#xD;&#xA;                &quot;identifier&quot;: {&#xD;&#xA;                    &quot;system&quot;: &quot;https://fhir.hl7.org.uk/Id/nmc-number&quot;,&#xD;&#xA;                    &quot;value&quot;: &quot;5566789&quot;&#xD;&#xA;                },&#xD;&#xA;                &quot;display&quot;: &quot;HOLDING, Rafferty&quot;&#xD;&#xA;            }&#xD;&#xA;        },&#xD;&#xA;        {&#xD;&#xA;            &quot;actor&quot;: {&#xD;&#xA;                &quot;type&quot;: &quot;Organization&quot;,&#xD;&#xA;                &quot;identifier&quot;: {&#xD;&#xA;                    &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/ods-organization-code&quot;,&#xD;&#xA;                    &quot;value&quot;: &quot;C4B2A&quot;&#xD;&#xA;                },&#xD;&#xA;                &quot;display&quot;: &quot;ELLAND ROAD STADIUM - COVID VACCINATION CENTRE&quot;&#xD;&#xA;            }&#xD;&#xA;        }&#xD;&#xA;    ],&#xD;&#xA;```" />
       <mustSupport value="true" />
     </element>
     <element id="Immunization.performer.actor">
