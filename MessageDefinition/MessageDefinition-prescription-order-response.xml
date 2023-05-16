@@ -19,7 +19,7 @@
     <category value="notification" />
     <focus>
         <code value="MedicationRequest" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationRequest-Outcome" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/England-MedicationRequest-Outcome" />
         <min value="1" />
         <max value="4" />
     </focus>
