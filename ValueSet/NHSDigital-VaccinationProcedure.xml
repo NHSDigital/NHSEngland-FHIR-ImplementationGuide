@@ -1,8 +1,8 @@
 <ValueSet xmlns="http://hl7.org/fhir">
-    <id value="NHSDigital-VaccinationProcedure" />
-    <url value="https://fhir.nhs.uk/ValueSet/NHSDigital-VaccinationProcedure" />
+    <id value="England-VaccinationProcedure" />
+    <url value="https://fhir.nhs.uk/ValueSet/England-VaccinationProcedure" />
     <version value="2.0.1" />
-    <name value="NHSDigitalVaccinationProcedure" />
+    <name value="EnglandVaccinationProcedure" />
     <title value="Interim version of UK Core Vaccination Procedure."/>
     <status value="draft" />
     <date value="2021-04-20T00:00:00+00:00" />

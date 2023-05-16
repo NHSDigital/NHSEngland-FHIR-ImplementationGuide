@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole-SDS" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/England-PractitionerRole-SDS" />
   <name value="NHSDigitalPractitionerRoleSDS" />
   <status value="draft" />
   <description value="This profile is designed to support backwards compatibility with NHS Digital Spine HL7 v3 API's. It should not be used for new API's. &#xD;&#xA;&#xD;&#xA;The use of SDS identifiers here is not widely supported and ODS identifiers (professional codes) are preferred instead." />
@@ -9,7 +9,7 @@
   <kind value="resource" />
   <abstract value="false" />
   <type value="PractitionerRole" />
-  <baseDefinition value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole" />
+  <baseDefinition value="https://fhir.nhs.uk/StructureDefinition/England-PractitionerRole" />
   <derivation value="constraint" />
   <differential>
     <element id="PractitionerRole.identifier">
@@ -47,7 +47,7 @@
       <min value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Organization-SDS" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-Organization-SDS" />
       </type>
     </element>
     <element id="PractitionerRole.organization.reference">

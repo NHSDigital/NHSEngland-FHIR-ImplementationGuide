@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Dosage" />
-  <name value="NHSDigitalDosage" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/England-Dosage" />
+  <name value="EnglandDosage" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
   <kind value="complex-type" />
@@ -45,7 +45,7 @@
       </type>
       <type>
         <code value="Range" />
-        <profile value="https://fhir.nhs.uk.uk/StructureDefinition/NHSDigital-Range" />
+        <profile value="https://fhir.nhs.uk.uk/StructureDefinition/England-Range" />
       </type>
       <type>
         <code value="Period" />
@@ -79,7 +79,7 @@
       <path value="Dosage.doseAndRate.dose[x]" />
       <type>
         <code value="Range" />
-        <profile value="https://fhir.nhs.uk.uk/StructureDefinition/NHSDigital-Range" />
+        <profile value="https://fhir.nhs.uk.uk/StructureDefinition/England-Range" />
       </type>
       <type>
         <code value="Quantity" />
