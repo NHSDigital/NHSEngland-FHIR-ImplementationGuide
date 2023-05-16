@@ -1,10 +1,10 @@
 {
   "resourceType": "ValueSet",
   "id": "ce41138f-5921-4e7d-98b9-acc90bc4edbf",
-  "url": "https://fhir.nhs.uk/ValueSet/NHSDigital-workflow-code",
+  "url": "https://fhir.nhs.uk/ValueSet/England-workflow-code",
   "version": "0.0.4",
-  "name": "NHSDigitalWorkflowCode",
-  "title": "NHSDigital Workflow Code",
+  "name": "EnglandWorkflowCode",
+  "title": "England Workflow Code",
   "status": "draft",
   "date": "2022-03-01T06:00:00+00:00",
   "publisher": "NHS Digital",

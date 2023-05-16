@@ -1,7 +1,7 @@
 {
     "resourceType": "ValueSet",
     "id": "d389710d-08bf-4325-999b-154435caed03",
-    "url": "https://fhir.nhs.uk/ValueSet/NHSDigital-Consent-Category",
+    "url": "https://fhir.nhs.uk/ValueSet/England-Consent-Category",
     "version": "4.0.1",
     "name": "NHSDigitalConsentCategory",
     "status": "draft",

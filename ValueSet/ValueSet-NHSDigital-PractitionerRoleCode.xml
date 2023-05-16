@@ -1,9 +1,9 @@
 <ValueSet xmlns="http://hl7.org/fhir">
     <id value="a6876ad9-6ac5-431a-980d-b093a07e84d6"></id>
-    <url value="https://fhir.nhs.uk/ValueSet/NHSDigital-PractitionerRoleCode"></url>
+    <url value="https://fhir.nhs.uk/ValueSet/England-PractitionerRoleCode"></url>
     <version value="0.0.4"></version>
-    <name value="NHSDigitalPractitionerRoleCode"></name>
-    <title value="NHSDigital Practitioner Role Code"></title>
+    <name value="EnglandPractitionerRoleCode"></name>
+    <title value="England Practitioner Role Code"></title>
     <status value="draft"></status>
     <date value="2022-08-02T06:00:00+00:00"></date>
     <publisher value="NHS Digital"></publisher>
@@ -18,7 +18,7 @@
     <description value="PractitionerRole.code definition"></description>
     <compose>
         <include>
-            <system value="https://fhir.nhs.uk/CodeSystem/NHSDigital-SDS-JobRoleCode"></system>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-SDS-JobRoleCode"></system>
         </include>
         <include>
             <system value="https://fhir.hl7.org.uk/CodeSystem/UKCore-SDSJobRoleName"></system>

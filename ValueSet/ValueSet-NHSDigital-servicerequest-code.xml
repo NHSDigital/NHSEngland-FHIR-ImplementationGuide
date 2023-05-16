@@ -1,5 +1,5 @@
 <ValueSet xmlns="http://hl7.org/fhir">
-    <url value="https://fhir.nhs.uk/ValueSet/NHSDigital-servicerequest-code" />
+    <url value="https://fhir.nhs.uk/ValueSet/England-servicerequest-code" />
     <version value="1.0.0" />
     <name value="ServiceRequestCode" />
 	<title value="ServiceRequestCode" />
