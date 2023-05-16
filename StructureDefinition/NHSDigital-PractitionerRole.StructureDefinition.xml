@@ -177,7 +177,7 @@
     </element>
     <element id="PractitionerRole.code">
       <path value="PractitionerRole.code" />
-      <definition value="Only supply if this is known from SmartCard/CIS2 data.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;code&quot;:  [&#xD;&#xA;        {&#xD;&#xA;            &quot;coding&quot;:  [&#xD;&#xA;                {&#xD;&#xA;                    &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/NHSDigital-SDS-JobRoleCode&quot;,&#xD;&#xA;                    &quot;code&quot;: &quot;S0030:G0100:R0620&quot;&#xD;&#xA;                  }&#xD;&#xA;            ]&#xD;&#xA;        }&#xD;&#xA;    ],&#xD;&#xA;```&#xD;&#xA;&#xD;&#xA;The previous system for this entry was `https://fhir.hl7org.uk/CodeSystem/UKCore-SDSJobRoleName`, this has been retired and `https://fhir.nhs.uk/CodeSystem/NHSDigital-SDS-JobRoleCode` should be used instead. Note: `https://fhir.hl7org.uk/CodeSystem/UKCore-SDSJobRoleName` is currently used by EPS but will be retired in a future release. Pending further guidance, both CodeSystems should be used for EPS interations" />
+      <definition value="Only supply if this is known from SmartCard/CIS2 data.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;code&quot;:  [&#xD;&#xA;        {&#xD;&#xA;            &quot;coding&quot;:  [&#xD;&#xA;                {&#xD;&#xA;                    &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/England-SDS-JobRoleCode&quot;,&#xD;&#xA;                    &quot;code&quot;: &quot;S0030:G0100:R0620&quot;&#xD;&#xA;                  }&#xD;&#xA;            ]&#xD;&#xA;        }&#xD;&#xA;    ],&#xD;&#xA;```&#xD;&#xA;&#xD;&#xA;The previous system for this entry was `https://fhir.hl7org.uk/CodeSystem/UKCore-SDSJobRoleName`, this has been retired and `https://fhir.nhs.uk/CodeSystem/England-SDS-JobRoleCode` should be used instead. Note: `https://fhir.hl7org.uk/CodeSystem/UKCore-SDSJobRoleName` is currently used by EPS but will be retired in a future release. Pending further guidance, both CodeSystems should be used for EPS interations" />
       <mustSupport value="true" />
     </element>
     <element id="PractitionerRole.code.coding">
@@ -209,7 +209,7 @@
     </element>
     <element id="PractitionerRole.code.coding:sdsJobRoleCode.system">
       <path value="PractitionerRole.code.coding.system" />
-      <fixedUri value="https://fhir.nhs.uk/CodeSystem/NHSDigital-SDS-JobRoleCode" />
+      <fixedUri value="https://fhir.nhs.uk/CodeSystem/England-SDS-JobRoleCode" />
     </element>
     <element id="PractitionerRole.code.coding:SDSJobRoleName">
       <path value="PractitionerRole.code.coding" />

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Task-PatientCare" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/England-Task-PatientCare" />
   <name value="NHSDigitalTaskPatientCare" />
   <status value="draft" />
   <purpose value="Profile on NHSDigital-Task for NHS App/e-RS PatientCare" />
@@ -8,7 +8,7 @@
   <kind value="resource" />
   <abstract value="false" />
   <type value="Task" />
-  <baseDefinition value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Task" />
+  <baseDefinition value="https://fhir.nhs.uk/StructureDefinition/England-Task" />
   <derivation value="constraint" />
   <differential>
     <element id="Task.code">

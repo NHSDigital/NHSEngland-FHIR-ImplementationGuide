@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="c7a6e6f2-4e97-48b9-9ec2-bd4f220e8a5d" />
-  <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Claim" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/England-Claim" />
   <name value="NHSDigitalClaim" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
@@ -157,7 +157,7 @@
       <definition value="The organisation responsible for the claim, this must be a reference to a contained PractitoinerRole&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA; &quot;provider&quot;: {&#xD;&#xA;        &quot;reference&quot; : &quot;#provider&quot;&#xD;&#xA;    },&#xD;&#xA;```&#xD;&#xA;&#xD;&#xA;The contained PractitionerRole&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;{&#xD;&#xA;    &quot;resourceType&quot;: &quot;Claim&quot;,&#xD;&#xA;    &quot;id&quot;: &quot;258E153F-567B-4D60-B045-BA315A6B8DB0&quot;,&#xD;&#xA;    &quot;contained&quot;: [&#xD;&#xA;  {&#xD;&#xA;      &quot;resourceType&quot;: &quot;PractitionerRole&quot;,&#xD;&#xA;      &quot;id&quot;: &quot;provider&quot;,&#xD;&#xA;      &quot;identifier&quot;: [&#xD;&#xA;        {&#xD;&#xA;          &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/sds-role-profile-id&quot;,&#xD;&#xA;          &quot;value&quot;: &quot;454567759542&quot;&#xD;&#xA;        }&#xD;&#xA;      ],&#xD;&#xA;      &quot;code&quot;: [&#xD;&#xA;        {&#xD;&#xA;          &quot;coding&quot;: [&#xD;&#xA;            {&#xD;&#xA;              &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/NHSDigital-SDS-JobRoleCode&quot;,&#xD;&#xA;              &quot;code&quot;: &quot;S0030:G0100:R0620&quot;&#xD;&#xA;            }&#xD;&#xA;          ]&#xD;&#xA;        }&#xD;&#xA;      ],&#xD;&#xA;      &quot;practitioner&quot;: {&#xD;&#xA;        &quot;identifier&quot;: {&#xD;&#xA;          &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/sds-user-id&quot;,&#xD;&#xA;          &quot;value&quot;: &quot;7654321&quot;&#xD;&#xA;        },&#xD;&#xA;        &quot;display&quot;: &quot;Mr Peter Potion&quot;&#xD;&#xA;      },&#xD;&#xA;      &quot;organization&quot;: {&#xD;&#xA;        &quot;reference&quot;: &quot;#organisation&quot;&#xD;&#xA;      },&#xD;&#xA;      &quot;telecom&quot;: [&#xD;&#xA;        {&#xD;&#xA;          &quot;system&quot;: &quot;phone&quot;,&#xD;&#xA;          &quot;use&quot;: &quot;work&quot;,&#xD;&#xA;          &quot;value&quot;: &quot;01234567890&quot;&#xD;&#xA;        }&#xD;&#xA;      ]&#xD;&#xA;    },&#xD;&#xA;    {&#xD;&#xA;      &quot;resourceType&quot;: &quot;Organization&quot;,&#xD;&#xA;      &quot;id&quot;: &quot;organisation&quot;,&#xD;&#xA;      &quot;identifier&quot;: [&#xD;&#xA;        {&#xD;&#xA;          &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/ods-organization-code&quot;,&#xD;&#xA;          &quot;value&quot;: &quot;VNE51&quot;&#xD;&#xA;        }&#xD;&#xA;      ],&#xD;&#xA;      &quot;address&quot;: [&#xD;&#xA;        {&#xD;&#xA;          &quot;city&quot;: &quot;West Yorkshire&quot;,&#xD;&#xA;          &quot;use&quot;: &quot;work&quot;,&#xD;&#xA;          &quot;line&quot;: [&#xD;&#xA;            &quot;17 Austhorpe Road&quot;,&#xD;&#xA;            &quot;Crossgates&quot;,&#xD;&#xA;            &quot;Leeds&quot;&#xD;&#xA;          ],&#xD;&#xA;          &quot;postalCode&quot;: &quot;LS15 8BA&quot;&#xD;&#xA;        }&#xD;&#xA;      ],&#xD;&#xA;      &quot;active&quot;: true,&#xD;&#xA;      &quot;type&quot;: [&#xD;&#xA;        {&#xD;&#xA;          &quot;coding&quot;: [&#xD;&#xA;            {&#xD;&#xA;              &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/organisation-role&quot;,&#xD;&#xA;              &quot;code&quot;: &quot;182&quot;,&#xD;&#xA;              &quot;display&quot;: &quot;PHARMACY&quot;&#xD;&#xA;            }&#xD;&#xA;          ]&#xD;&#xA;        }&#xD;&#xA;      ],&#xD;&#xA;      &quot;name&quot;: &quot;The Simple Pharmacy&quot;,&#xD;&#xA;      &quot;telecom&quot;: [&#xD;&#xA;        {&#xD;&#xA;          &quot;system&quot;: &quot;phone&quot;,&#xD;&#xA;          &quot;use&quot;: &quot;work&quot;,&#xD;&#xA;          &quot;value&quot;: &quot;0113 3180277&quot;&#xD;&#xA;        }&#xD;&#xA;      ]&#xD;&#xA;    }        &#xD;&#xA;    ],&#xD;&#xA;```" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole-SDS" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-PractitionerRole-SDS" />
         <aggregation value="contained" />
       </type>
       <mustSupport value="true" />
@@ -297,7 +297,7 @@
       <min value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Organization" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-Organization" />
       </type>
       <constraint>
         <key value="nhsd-claim-party" />
@@ -551,7 +551,7 @@
       <binding>
         <strength value="required" />
         <description value="DMD Medication Code" />
-        <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDigital-MedicationRequest-Code" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/England-MedicationRequest-Code" />
       </binding>
     </element>
     <element id="Claim.item.detail.modifier">
@@ -678,7 +678,7 @@
       <binding>
         <strength value="extensible" />
         <description value="DMD Medication Code" />
-        <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDigital-MedicationDispense-Code" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/England-MedicationDispense-Code" />
       </binding>
     </element>
     <element id="Claim.item.detail.subDetail.quantity">

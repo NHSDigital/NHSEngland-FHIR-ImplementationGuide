@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="97509562-0326-459e-a863-430574146520" />
-  <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-CommunicationRequest" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/England-CommunicationRequest" />
   <name value="NHSDigitalCommunicationRequest" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
@@ -37,7 +37,7 @@
       <definition value="The patient or group that is the focus of this communication request.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;subject&quot;: {&#xD;&#xA;        &quot;type&quot;: &quot;Patient&quot;,&#xD;&#xA;        &quot;identifier&quot;: {&#xD;&#xA;            &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/nhs-number&quot;,&#xD;&#xA;            &quot;value&quot;: &quot;9453740519&quot;&#xD;&#xA;        }&#xD;&#xA;    }&#xD;&#xA;```" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-Patient" />
         <aggregation value="referenced" />
       </type>
       <constraint>
@@ -45,14 +45,14 @@
         <severity value="warning" />
         <human value="subject - An identifier reference or resource reference must be provided" />
         <expression value="(reference.exists() or (identifier.exists()))" />
-        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-CommunicationRequest" />
+        <source value="https://fhir.nhs.uk/StructureDefinition/England-CommunicationRequest" />
       </constraint>
       <constraint>
         <key value="patient-nhs" />
         <severity value="error" />
         <human value="Supplied NHS Number is outside the English and Welsh NHS Number range or length of the number is wrong." />
         <expression value="identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').exists().not() or (identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').exists()  and identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').value.matches('^([456789]{1}[0-9]{9})$'))" />
-        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-CommunicationRequest" />
+        <source value="https://fhir.nhs.uk/StructureDefinition/England-CommunicationRequest" />
       </constraint>
       <mustSupport value="true" />
     </element>
@@ -98,9 +98,9 @@
       <min value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Organization" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-Patient" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-PractitionerRole" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-Organization" />
         <aggregation value="referenced" />
       </type>
       <mustSupport value="true" />
@@ -121,11 +121,11 @@
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/CareTeam" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Organization" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Practitioner" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-HealthcareService" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-Organization" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-Patient" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-Practitioner" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-PractitionerRole" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-HealthcareService" />
         <aggregation value="referenced" />
       </type>
       <mustSupport value="true" />
@@ -151,7 +151,7 @@
       <binding>
         <strength value="preferred" />
         <description value="UKCore event types" />
-        <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDigital-message-events" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/England-message-events" />
       </binding>
     </element>
     <element id="CommunicationRequest.reasonCode.coding.system">

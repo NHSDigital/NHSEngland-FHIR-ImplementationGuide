@@ -1,6 +1,6 @@
 <ValueSet xmlns="http://hl7.org/fhir">
-    <id value="NHSDigital-CareSettingType" />
-    <url value="https://fhir.nhs.uk/ValueSet/NHSDigital-CareSettingType" />
+    <id value="England-CareSettingType" />
+    <url value="https://fhir.nhs.uk/ValueSet/England-CareSettingType" />
     <version value="1.0.0" />
     <name value="NHSDigitalCareSettingType" />
     <title value="NHSDigital-CareSettingType" />
