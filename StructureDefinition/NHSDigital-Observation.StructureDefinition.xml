@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="1dd6f087-4c10-4fd8-93a2-8a96b628a0fa" />
-  <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Observation" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/England-Observation" />
   <name value="NHSDigitalObservation" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
@@ -113,7 +113,7 @@
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group" />
         <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Device" />
         <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Location" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient-Minimal" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-Patient-Minimal" />
       </type>
       <constraint>
         <key value="patient-reference" />
@@ -153,10 +153,10 @@
       <type>
         <code value="Reference" />
         <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Reference" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Organization" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-Organization" />
         <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-CareTeam" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole-Minimal" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-Patient" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-PractitionerRole-Minimal" />
         <aggregation value="referenced" />
       </type>
       <constraint>

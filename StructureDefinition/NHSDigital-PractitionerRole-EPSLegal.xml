@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole-EPSLegal" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/England-PractitionerRole-EPSLegal" />
   <name value="NHSDigitalPractitionerRoleEPSLegal" />
   <status value="draft" />
   <purpose value="Constraint profile for EPS MedicationRequest which enforces the legal requirement for prescriptions" />
@@ -8,7 +8,7 @@
   <kind value="resource" />
   <abstract value="false" />
   <type value="PractitionerRole" />
-  <baseDefinition value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole" />
+  <baseDefinition value="https://fhir.nhs.uk/StructureDefinition/England-PractitionerRole" />
   <derivation value="constraint" />
   <differential>
     <element id="PractitionerRole.identifier">
@@ -28,7 +28,7 @@
         <severity value="error" />
         <human value="practitioner - An identifier reference or resource reference must be provided" />
         <expression value="(reference.exists() or (identifier.exists()))" />
-        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole-EPSLegal" />
+        <source value="https://fhir.nhs.uk/StructureDefinition/England-PractitionerRole-EPSLegal" />
       </constraint>
     </element>
     <element id="PractitionerRole.organization">
@@ -39,7 +39,7 @@
         <severity value="error" />
         <human value="organisation - An identifier reference or resource reference must be provided" />
         <expression value="(reference.exists() or (identifier.exists()))" />
-        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole-EPSLegal" />
+        <source value="https://fhir.nhs.uk/StructureDefinition/England-PractitionerRole-EPSLegal" />
       </constraint>
     </element>
     <element id="PractitionerRole.code">
