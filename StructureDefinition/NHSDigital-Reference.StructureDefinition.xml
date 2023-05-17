@@ -9,13 +9,4 @@
   <type value="Reference" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Reference" />
   <derivation value="constraint" />
-  <differential>
-    <element id="Reference.identifier">
-      <path value="Reference.identifier" />
-      <type>
-        <code value="Identifier" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Identifier" />
-      </type>
-    </element>
-  </differential>
 </StructureDefinition>

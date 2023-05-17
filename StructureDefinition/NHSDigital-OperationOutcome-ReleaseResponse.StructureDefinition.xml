@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="76b4a80a-a0af-4882-962b-9769a7910954" />
-  <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-OperationOutcome-ReleaseResponse" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/England-OperationOutcome-ReleaseResponse" />
   <version value="1.1.1" />
-  <name value="NHSDigitalOperationOutcomeReleaseResponse" />
+  <name value="EnglandOperationOutcomeReleaseResponse" />
   <status value="draft" />
   <date value="2022-10-13" />
   <publisher value="NHS Digital" />
@@ -11,7 +11,7 @@
   <kind value="resource" />
   <abstract value="false" />
   <type value="OperationOutcome" />
-  <baseDefinition value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-OperationOutcome" />
+  <baseDefinition value="https://fhir.nhs.uk/StructureDefinition/England-OperationOutcome" />
   <derivation value="constraint" />
   <differential>
     <element id="OperationOutcome.extension">
