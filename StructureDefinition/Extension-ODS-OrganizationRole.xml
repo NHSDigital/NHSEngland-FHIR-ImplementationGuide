@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="Extension-NHSDigital-Organization-Role" />
+  <id value="Extension-England-Organization-Role" />
   <meta>
     <lastUpdated value="2023-03-09T10:37:02.9740647+00:00" />
   </meta>
   <url value="https://fhir.nhs.uk/StructureDefinition/Extension-ODS-Organization-Role" />
   <version value="1.0.0" />
-  <name value="ExtensionNHSDigitalOrganizationRole" />
+  <name value="ExtensionEnglandOrganizationRole" />
   <status value="active" />
   <date value="2020-03-08" />
   <publisher value="NHS Digital" />

@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="c7a6e6f2-4e97-48b9-9ec2-bd4f220e8a5d" />
   <url value="https://fhir.nhs.uk/StructureDefinition/England-Claim" />
-  <name value="NHSDigitalClaim" />
+  <name value="EnglandClaim" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
   <mapping>
