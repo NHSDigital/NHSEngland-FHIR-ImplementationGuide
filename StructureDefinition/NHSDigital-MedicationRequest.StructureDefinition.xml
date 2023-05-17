@@ -387,7 +387,7 @@
       <path value="MedicationRequest.performer" />
       <type>
         <code value="Reference" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/England-Reference" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/Reference" />
       </type>
     </element>
     <element id="MedicationRequest.recorder">

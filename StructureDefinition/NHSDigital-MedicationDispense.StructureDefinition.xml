@@ -222,7 +222,7 @@
       <path value="MedicationDispense.performer.actor" />
       <type>
         <code value="Reference" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/England-Reference" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/Reference" />
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-PractitionerRole-SDS" />
         <aggregation value="contained" />
       </type>
@@ -232,18 +232,6 @@
         <human value="An identifier reference or resource reference must be provided" />
         <expression value="(reference.exists() or identifier.exists())" />
       </constraint>
-    </element>
-    <element id="MedicationDispense.performer.actor.reference">
-      <path value="MedicationDispense.performer.actor.reference" />
-      <min value="1" />
-    </element>
-    <element id="MedicationDispense.performer.actor.identifier.system">
-      <path value="MedicationDispense.performer.actor.identifier.system" />
-      <min value="1" />
-    </element>
-    <element id="MedicationDispense.performer.actor.identifier.value">
-      <path value="MedicationDispense.performer.actor.identifier.value" />
-      <min value="1" />
     </element>
     <element id="MedicationDispense.location">
       <path value="MedicationDispense.location" />

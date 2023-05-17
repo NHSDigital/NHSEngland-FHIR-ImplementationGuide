@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <url value="https://fhir.nhs.uk/StructureDefinition/England-MedicationDispense-Message" />
-  <name value="EnglandMedicationDispenseMessage" />
+  <name value="NHSDigitalMedicationDispenseMessage" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
   <kind value="resource" />
@@ -10,6 +10,13 @@
   <baseDefinition value="https://fhir.nhs.uk/StructureDefinition/England-MedicationDispense" />
   <derivation value="constraint" />
   <differential>
+    <element id="MedicationDispense.performer.actor">
+      <path value="MedicationDispense.performer.actor" />
+      <type>
+        <code value="Reference" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/Reference" />
+      </type>
+    </element>
     <element id="MedicationDispense.authorizingPrescription">
       <path value="MedicationDispense.authorizingPrescription" />
       <type>
