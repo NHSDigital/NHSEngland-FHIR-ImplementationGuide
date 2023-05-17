@@ -24,7 +24,7 @@
   "compose": {
     "include": [
       {
-        "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationCategory"
       },
       {
         "system": "https://fhir.nhs.uk/CodeSystem/covid-test-pillar"
