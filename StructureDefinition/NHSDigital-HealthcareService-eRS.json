@@ -27,7 +27,7 @@
   "kind": "resource",
   "abstract": false,
   "type": "HealthcareService",
-  "baseDefinition": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-HealthcareService",
+  "baseDefinition": "https://fhir.nhs.uk/StructureDefinition/England-HealthcareService",
   "derivation": "constraint",
   "differential": {
     "element": [

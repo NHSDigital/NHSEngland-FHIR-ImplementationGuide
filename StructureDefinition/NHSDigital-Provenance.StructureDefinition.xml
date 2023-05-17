@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="360cc25d-b3c1-4404-a13a-7963a384280e"/>
-  <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Provenance" />
-  <name value="NHSDigitalProvenance" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/England-Provenance" />
+  <name value="EnglandProvenance" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
   <mapping>
@@ -63,7 +63,7 @@
       <path value="Provenance.agent.who" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-PractitionerRole" />
       </type>
        <constraint>
         <key value="who-reference" />
@@ -97,8 +97,8 @@
       <path value="Provenance.signature.who" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Practitioner" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-Practitioner" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-PractitionerRole" />
       </type>
       <mustSupport value="true" />
     </element>
