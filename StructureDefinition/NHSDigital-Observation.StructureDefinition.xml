@@ -65,7 +65,7 @@
       <mustSupport value="true" />
       <binding>
         <strength value="required" />
-        <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDigital-Observation-category" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/England-Observation-category" />
       </binding>
     </element>
     <element id="Observation.category.coding">
