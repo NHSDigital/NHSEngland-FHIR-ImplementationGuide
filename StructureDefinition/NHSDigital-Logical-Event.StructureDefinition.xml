@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="2b99c030-7ecf-45f9-960f-2b468d26204b" />
-  <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Logical-Event" />
-  <name value="NHSDigitalLogicalEvent" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/England-Logical-Event" />
+  <name value="EnglandLogicalEvent" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
   <kind value="logical" />
   <abstract value="false" />
-  <type value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Logical-Event" />
+  <type value="https://fhir.nhs.uk/StructureDefinition/England-Logical-Event" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element" />
   <derivation value="specialization" />
   <differential>

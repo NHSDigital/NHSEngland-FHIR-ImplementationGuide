@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="1dd6f087-4c10-4fd8-93a2-8a96b628a0fa" />
-  <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Observation" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/England-Observation" />
   <name value="NHSDigitalObservation" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
@@ -61,11 +61,11 @@
         </discriminator>
         <rules value="open" />
       </slicing>
-      <definition value="This is an optional element. If used the category will always be `laboratory`&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA;    &quot;category&quot;:  [&#xD;&#xA;        {&#xD;&#xA;            &quot;coding&quot;:  [&#xD;&#xA;                {&#xD;&#xA;                    &quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/observation-category&quot;,&#xD;&#xA;                    &quot;code&quot;: &quot;laboratory&quot;,&#xD;&#xA;                    &quot;display&quot;: &quot;Laboratory&quot;&#xD;&#xA;                }&#xD;&#xA;            ],&#xD;&#xA;            &quot;text&quot;: &quot;Laboratory&quot;&#xD;&#xA;        }&#xD;&#xA;    ],&#xD;&#xA;```&#xD;&#xA;&#xD;&#xA;For COVID-19 Tests, the ValueSet **SHOULD** be used to indicate which test pillar the observation originated.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA;     &quot;category&quot;: [&#xD;&#xA;        {&#xD;&#xA;            &quot;coding&quot;: [&#xD;&#xA;                {&#xD;&#xA;                    &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/covid-test-pillar&quot;,&#xD;&#xA;                    &quot;code&quot;: &quot;pillar-1&quot;,&#xD;&#xA;                    &quot;display&quot;: &quot;pillar 1&quot;&#xD;&#xA;                }&#xD;&#xA;            ]&#xD;&#xA;        }&#xD;&#xA;    ],&#xD;&#xA;```" />
+      <definition value="This is an optional element. If used the category will always be `laboratory`&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA;    &quot;category&quot;:  [&#xD;&#xA;        {&#xD;&#xA;            &quot;coding&quot;:  [&#xD;&#xA;                {&#xD;&#xA;                    &quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/v3-ObservationCategory&quot;,&#xD;&#xA;                    &quot;code&quot;: &quot;laboratory&quot;,&#xD;&#xA;                    &quot;display&quot;: &quot;Laboratory&quot;&#xD;&#xA;                }&#xD;&#xA;            ],&#xD;&#xA;            &quot;text&quot;: &quot;Laboratory&quot;&#xD;&#xA;        }&#xD;&#xA;    ],&#xD;&#xA;```&#xD;&#xA;&#xD;&#xA;For COVID-19 Tests, the ValueSet **SHOULD** be used to indicate which test pillar the observation originated.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA;     &quot;category&quot;: [&#xD;&#xA;        {&#xD;&#xA;            &quot;coding&quot;: [&#xD;&#xA;                {&#xD;&#xA;                    &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/covid-test-pillar&quot;,&#xD;&#xA;                    &quot;code&quot;: &quot;pillar-1&quot;,&#xD;&#xA;                    &quot;display&quot;: &quot;pillar 1&quot;&#xD;&#xA;                }&#xD;&#xA;            ]&#xD;&#xA;        }&#xD;&#xA;    ],&#xD;&#xA;```" />
       <mustSupport value="true" />
       <binding>
         <strength value="required" />
-        <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDigital-Observation-category" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/England-Observation-category" />
       </binding>
     </element>
     <element id="Observation.category.coding">
@@ -97,7 +97,7 @@
     </element>
     <element id="Observation.category:UKCoreCategory.coding.system">
       <path value="Observation.category.coding.system" />
-      <fixedUri value="http://terminology.hl7.org/CodeSystem/observation-category" />
+      <fixedUri value="http://terminology.hl7.org/CodeSystem/v3-ObservationCategory" />
     </element>
     <element id="Observation.code">
       <path value="Observation.code" />
@@ -113,7 +113,7 @@
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group" />
         <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Device" />
         <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Location" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient-Minimal" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-Patient-Minimal" />
       </type>
       <constraint>
         <key value="patient-reference" />
@@ -152,11 +152,10 @@
       <definition value="Who was responsible for asserting the observed value as &quot;true&quot;. &#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA;&quot;performer&quot;: [&#xD;&#xA;  {&#xD;&#xA;    &quot;type&quot;: &quot;Organization&quot;,&#xD;&#xA;    &quot;identifier&quot;: {&#xD;&#xA;      &quot;type&quot;: {&#xD;&#xA;        &quot;coding&quot;: [&#xD;&#xA;          {&#xD;&#xA;            &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/organisation-role&quot;,&#xD;&#xA;            &quot;code&quot;: &quot;173&quot;,&#xD;&#xA;            &quot;display&quot;: &quot;PATHOLOGY LAB&quot;&#xD;&#xA;          }&#xD;&#xA;        ]&#xD;&#xA;      },&#xD;&#xA;      &quot;value&quot;: &quot;LFD004&quot;&#xD;&#xA;    }&#xD;&#xA;  },&#xD;&#xA;  {&#xD;&#xA;    &quot;type&quot;: &quot;Organization&quot;,&#xD;&#xA;    &quot;identifier&quot;: {&#xD;&#xA;      &quot;type&quot;: {&#xD;&#xA;        &quot;coding&quot;: [&#xD;&#xA;          {&#xD;&#xA;            &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/OrgType&quot;,&#xD;&#xA;            &quot;code&quot;: &quot;TestCentreId&quot;,&#xD;&#xA;            &quot;display&quot;: &quot;Testing Centre&quot;&#xD;&#xA;          }&#xD;&#xA;        ]&#xD;&#xA;      },&#xD;&#xA;      &quot;value&quot;: &quot;WKE03&quot;&#xD;&#xA;    }&#xD;&#xA;  }&#xD;&#xA;]&#xD;&#xA;&#xD;&#xA;```" />
       <type>
         <code value="Reference" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Reference" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Organization" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-Organization" />
         <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-CareTeam" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole-Minimal" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-Patient" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-PractitionerRole-Minimal" />
         <aggregation value="referenced" />
       </type>
       <constraint>

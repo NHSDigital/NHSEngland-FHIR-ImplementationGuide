@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-MessageDefinition" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/England-MessageDefinition" />
   <name value="NHSDigitalMessageDefinition" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
@@ -24,7 +24,7 @@
       <path value="MessageDefinition.useContext.code" />
       <binding>
         <strength value="required" />
-        <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDigital-usage-context-type" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/England-usage-context-type" />
       </binding>
     </element>
     <element id="MessageDefinition.event[x]">
@@ -35,7 +35,7 @@
       <mustSupport value="true" />
       <binding>
         <strength value="required" />
-        <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDigital-message-events" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/England-message-events" />
       </binding>
     </element>
     <element id="MessageDefinition.focus">

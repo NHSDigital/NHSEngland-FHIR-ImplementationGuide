@@ -25,19 +25,19 @@
     </focus>
      <focus>
         <code value="Observation" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Observation" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/England-Observation" />
         <min value="1" />
         <max value="*" />
     </focus>
      <focus>
         <code value="Patient" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/England-Patient" />
         <min value="0" />
         <max value="1" />
     </focus>
      <focus>
         <code value="PractitionerRole" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/England-PractitionerRole" />
         <min value="0" />
         <max value="*" />
     </focus>

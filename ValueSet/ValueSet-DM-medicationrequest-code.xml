@@ -1,6 +1,6 @@
 <ValueSet xmlns="http://hl7.org/fhir">
     <id value="74e2757d-bd4b-47d6-ae90-774a36e01080" />
-    <url value="https://fhir.nhs.uk/ValueSet/NHSDigital-MedicationRequest-Code" />
+    <url value="https://fhir.nhs.uk/ValueSet/England-MedicationRequest-Code" />
     <version value="1.0.0" />
     <name value="DMMedicationRequestCode" />
     <title value="Digital Medicine MedicationRequest Code" />

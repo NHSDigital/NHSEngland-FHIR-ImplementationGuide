@@ -1,9 +1,9 @@
 {
     "resourceType": "ValueSet",
-    "id": "NHSDigital-MedicationCode",
-    "url": "https://fhir.nhs.uk/ValueSet/NHSDigital-MedicationCode",
+    "id": "England-MedicationCode",
+    "url": "https://fhir.nhs.uk/ValueSet/England-MedicationCode",
     "version": "2.1.0",
-    "name": "NHSDigitalMedicationCode",
+    "name": "EnglandMedicationCode",
     "title": "NHS Digital Medication Code",
     "status": "active",
     "date": "2022-08-03",

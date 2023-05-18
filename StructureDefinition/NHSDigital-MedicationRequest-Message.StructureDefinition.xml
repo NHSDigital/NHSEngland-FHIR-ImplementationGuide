@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationRequest-Message" />
-  <name value="NHSDigitalMedicationRequestMessage" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/England-MedicationRequest-Message" />
+  <name value="EnglandMedicationRequestMessage" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
   <kind value="resource" />
   <abstract value="false" />
   <type value="MedicationRequest" />
-  <baseDefinition value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationRequest" />
+  <baseDefinition value="https://fhir.nhs.uk/StructureDefinition/England-MedicationRequest" />
   <derivation value="constraint" />
   <differential>
     <element id="MedicationRequest.subject">
@@ -21,7 +21,7 @@
       <path value="MedicationRequest.requester" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole-EPSLegal" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-PractitionerRole-EPSLegal" />
         <aggregation value="bundled" />
       </type>
     </element>

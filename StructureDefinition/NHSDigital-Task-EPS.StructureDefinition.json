@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
   "id": "790504c4-6314-4c50-a3e8-909ee027e020",
-  "url": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-Task-EPS",
+  "url": "https://fhir.nhs.uk/StructureDefinition/England-Task-EPS",
   "name": "NHSDigitalTaskEPS",
   "status": "draft",
   "purpose": "Constraint profile for Electronic Prescription System",
@@ -9,7 +9,7 @@
   "kind": "resource",
   "abstract": false,
   "type": "Task",
-  "baseDefinition": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-Task",
+  "baseDefinition": "https://fhir.nhs.uk/StructureDefinition/England-Task",
   "derivation": "constraint",
   "differential": {
     "element": [
@@ -146,7 +146,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "https://fhir.nhs.uk/StructureDefinition/NHSDigital-Bundle-FHIRMessage"
+              "https://fhir.nhs.uk/StructureDefinition/England-Bundle-FHIRMessage"
             ]
           }
         ]
@@ -169,13 +169,13 @@
       {
         "id": "Task.requester",
         "path": "Task.requester",
-        "definition": "Who is created the Request or the Event. In NHSDigital API's this **SHOULD** always be a PractitionerRole role reference.\r\n\r\n```json\r\n \"requester\": {\r\n        \"reference\": \"#requester\"\r\n    },\r\n```\r\n\r\nThis will reference a `contained` PractitionerRole (note: this resource only contains limited user metadata such as ODS Code, professional code and SDS User Profile Id). This resource should not hold data which is held in SDS, only enough information to identify the SDS Entry,\r\n\r\n```json\r\n{\r\n    \"resourceType\": \"Task\",\r\n    \"id\": \"bd1ca5c4-ff49-4f2a-9db4-f5dda0112084\",\r\n    \"meta\": {\r\n        \"lastUpdated\": \"2016-07-11T11:07:22+00:00\"\r\n    },\r\n    \"contained\": [\r\n       {\r\n            \"resourceType\": \"PractitionerRole\",\r\n            \"id\": \"requester\",\r\n            \"identifier\": [\r\n                {\r\n                    \"system\": \"https://fhir.nhs.uk/Id/sds-role-profile-id\",\r\n                    \"value\": \"641555508106\"\r\n                }\r\n            ],\r\n            \"code\": [\r\n                {\r\n                    \"coding\": [\r\n                        {\r\n                            \"system\": \"https://fhir.nhs.uk/CodeSystem/NHSDigital-SDS-JobRoleCode\",\r\n                            \"code\": \"S0030:G0100:R0620\"\r\n                        }\r\n                    ]\r\n                }\r\n            ],\r\n            \"practitioner\": {\r\n                   \"identifier\": {\r\n                      \"system\": \"https://fhir.nhs.uk/Id/sds-user-id\",\r\n                       \"value\": \"7654321\"\r\n                    },\r\n                   \"display\": \"Mr Peter Potion\"\r\n            },\r\n            \"organization\": {\r\n                \"identifier\": {\r\n                    \"system\": \"https://fhir.nhs.uk/Id/ods-organization-code\",\r\n                    \"value\": \"VNE51\"\r\n                },\r\n                \"display\": \"SIMPLE PHARMACY\"\r\n            },\r\n            \"telecom\": [\r\n                {\r\n                    \"system\": \"phone\",\r\n                    \"use\": \"work\",\r\n                    \"value\": \"01234567890\"\r\n                }\r\n            ]\r\n        }\r\n    ],\r\n```",
+        "definition": "Who is created the Request or the Event. In NHSDigital API's this **SHOULD** always be a PractitionerRole role reference.\r\n\r\n```json\r\n \"requester\": {\r\n        \"reference\": \"#requester\"\r\n    },\r\n```\r\n\r\nThis will reference a `contained` PractitionerRole (note: this resource only contains limited user metadata such as ODS Code, professional code and SDS User Profile Id). This resource should not hold data which is held in SDS, only enough information to identify the SDS Entry,\r\n\r\n```json\r\n{\r\n    \"resourceType\": \"Task\",\r\n    \"id\": \"bd1ca5c4-ff49-4f2a-9db4-f5dda0112084\",\r\n    \"meta\": {\r\n        \"lastUpdated\": \"2016-07-11T11:07:22+00:00\"\r\n    },\r\n    \"contained\": [\r\n       {\r\n            \"resourceType\": \"PractitionerRole\",\r\n            \"id\": \"requester\",\r\n            \"identifier\": [\r\n                {\r\n                    \"system\": \"https://fhir.nhs.uk/Id/sds-role-profile-id\",\r\n                    \"value\": \"641555508106\"\r\n                }\r\n            ],\r\n            \"code\": [\r\n                {\r\n                    \"coding\": [\r\n                        {\r\n                            \"system\": \"https://fhir.nhs.uk/CodeSystem/England-SDS-JobRoleCode\",\r\n                            \"code\": \"S0030:G0100:R0620\"\r\n                        }\r\n                    ]\r\n                }\r\n            ],\r\n            \"practitioner\": {\r\n                   \"identifier\": {\r\n                      \"system\": \"https://fhir.nhs.uk/Id/sds-user-id\",\r\n                       \"value\": \"7654321\"\r\n                    },\r\n                   \"display\": \"Mr Peter Potion\"\r\n            },\r\n            \"organization\": {\r\n                \"identifier\": {\r\n                    \"system\": \"https://fhir.nhs.uk/Id/ods-organization-code\",\r\n                    \"value\": \"VNE51\"\r\n                },\r\n                \"display\": \"SIMPLE PHARMACY\"\r\n            },\r\n            \"telecom\": [\r\n                {\r\n                    \"system\": \"phone\",\r\n                    \"use\": \"work\",\r\n                    \"value\": \"01234567890\"\r\n                }\r\n            ]\r\n        }\r\n    ],\r\n```",
         "min": 1,
         "type": [
           {
             "code": "Reference",
             "targetProfile": [
-              "https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole-SDS"
+              "https://fhir.nhs.uk/StructureDefinition/England-PractitionerRole-SDS"
             ]
           }
         ]
@@ -192,7 +192,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "https://fhir.nhs.uk/StructureDefinition/NHSDigital-Organization"
+              "https://fhir.nhs.uk/StructureDefinition/England-Organization"
             ]
           }
         ]

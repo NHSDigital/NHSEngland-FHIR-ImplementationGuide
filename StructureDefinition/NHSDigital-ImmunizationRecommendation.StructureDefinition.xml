@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-ImmunizationRecommendation" />
-  <name value="NHSDigitalImmunizationRecommendation" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/England-ImmunizationRecommendation" />
+  <name value="EnglandImmunizationRecommendation" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
   <kind value="resource" />

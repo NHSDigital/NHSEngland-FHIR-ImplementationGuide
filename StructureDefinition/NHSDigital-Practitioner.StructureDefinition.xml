@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="cf075664-89f6-49d6-bc3d-cfc7176b9ac6" />
-  <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Practitioner" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/England-Practitioner" />
   <name value="NHSDigitalPractitioner" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
@@ -33,63 +33,63 @@
         <severity value="warning" />
         <human value="NMC must be of the format NNANNNNA" />
         <expression value="identifier.where(system='https://fhir.hl7.org.uk/Id/nmc-number').exists().not() or (identifier.where(system='https://fhir.hl7.org.uk/Id/nmc-number').exists()  and identifier.where(system='https://fhir.hl7.org.uk/Id/nmc-number').value.matches('^[0-9]{2}[A-Z]{1}[0-9]{4}[A-Z]{1}$'))" />
-        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Practitioner" />
+        <source value="https://fhir.nhs.uk/StructureDefinition/England-Practitioner" />
       </constraint>
       <constraint>
         <key value="prac-gmp" />
         <severity value="warning" />
         <human value="GMP must be of the format GNNNNNNN and not be a spurious code (starts with G6 or G7)" />
         <expression value="identifier.where(system='https://fhir.hl7.org.uk/Id/gmp-number').exists().not() or (identifier.where(system='https://fhir.hl7.org.uk/Id/gmp-number').exists()  and identifier.where(system='https://fhir.hl7.org.uk/Id/gmp-number').value.matches('^[G]{1}[01234589]{1}[0-9]{6}$'))" />
-        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Practitioner" />
+        <source value="https://fhir.nhs.uk/StructureDefinition/England-Practitioner" />
       </constraint>
       <constraint>
         <key value="prac-gmc" />
         <severity value="warning" />
         <human value="GMC must be of the format CNNNNNNN" />
         <expression value="identifier.where(system='https://fhir.hl7.org.uk/Id/gmc-number').exists().not() or (identifier.where(system='https://fhir.hl7.org.uk/Id/gmc-number').exists()  and identifier.where(system='https://fhir.hl7.org.uk/Id/gmc-number').value.matches('^[C]{1}[0-9]{7}$'))" />
-        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Practitioner" />
+        <source value="https://fhir.nhs.uk/StructureDefinition/England-Practitioner" />
       </constraint>
       <constraint>
         <key value="prac-gphc" />
         <severity value="warning" />
         <human value="GPHC must be of the format NNNNNNN" />
         <expression value="identifier.where(system='https://fhir.hl7.org.uk/Id/gphc-number').exists().not() or (identifier.where(system='https://fhir.hl7.org.uk/Id/gphc-number').exists()  and identifier.where(system='https://fhir.hl7.org.uk/Id/gphc-number').value.matches('^[0-9]{7}$'))" />
-        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Practitioner" />
+        <source value="https://fhir.nhs.uk/StructureDefinition/England-Practitioner" />
       </constraint>
       <constraint>
         <key value="prac-gmcreferencenumber" />
         <severity value="error" />
         <human value="GMC Reference Number must be of the format NNNNNNN" />
         <expression value="identifier.where(system='https://fhir.hl7.org.uk/Id/gmc-reference-number').exists().not() or (identifier.where(system='https://fhir.hl7.org.uk/Id/gphc-number').exists()  and identifier.where(system='https://fhir.hl7.org.uk/Id/gmc-reference-number').value.matches('^[0-9]{7}$'))" />
-        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Practitioner" />
+        <source value="https://fhir.nhs.uk/StructureDefinition/England-Practitioner" />
       </constraint>
       <constraint>
         <key value="prac-hcpc" />
         <severity value="warning" />
         <human value="HCPC must be of the format AANNNNNN" />
         <expression value="identifier.where(system='https://fhir.hl7.org.uk/Id/hcpc-number').exists().not() or (identifier.where(system='https://fhir.hl7.org.uk/Id/hcpc-number').exists()  and identifier.where(system='https://fhir.hl7.org.uk/Id/hcpc-number').value.matches('^[A-Z]{2}[0-9]{6}$'))" />
-        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Practitioner" />
+        <source value="https://fhir.nhs.uk/StructureDefinition/England-Practitioner" />
       </constraint>
       <constraint>
         <key value="prac-din" />
         <severity value="warning" />
         <human value="DIN format must be NNNNNN" />
         <expression value="identifier.where(system='https://fhir.hl7.org.uk/Id/din-number').exists().not() or (identifier.where(system='https://fhir.hl7.org.uk/Id/din-number').exists()  and identifier.where(system='https://fhir.hl7.org.uk/Id/din-number').value.matches('^[0-9]{6}$'))" />
-        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Practitioner" />
+        <source value="https://fhir.nhs.uk/StructureDefinition/England-Practitioner" />
       </constraint>
       <constraint>
         <key value="prac-sds-user-numeric" />
         <severity value="error" />
         <human value="sds-user-id must be numeric" />
         <expression value="identifier.where(system='https://fhir.nhs.uk/Id/sds-user-id').exists().not() or (identifier.where(system='https://fhir.nhs.uk/Id/sds-user-id').exists()  and identifier.where(system='https://fhir.nhs.uk/Id/sds-user-id').value.matches('^[0-9]+$'))" />
-        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Practitioner" />
+        <source value="https://fhir.nhs.uk/StructureDefinition/England-Practitioner" />
       </constraint>
       <constraint>
         <key value="nacs-code-retired" />
         <severity value="warning" />
         <human value="NACS (/ODS) Practitioner Identifier is retired in NHS FHIR and should not be used. Please use the actual naming system instead (e,g, https://fhir.hl7.org.uk/Id/gmc-number, https://fhir.hl7.org.uk/Id/gmp-number, etc)." />
         <expression value="identifier.where(system='https://fhir.hl7.org.uk/Id/professional-code').exists().not()" />
-        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Practitioner" />
+        <source value="https://fhir.nhs.uk/StructureDefinition/England-Practitioner" />
       </constraint>
     </element>
     <element id="Practitioner.identifier">

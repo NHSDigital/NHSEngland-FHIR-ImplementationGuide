@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="1ec262fa-2976-4df2-8cac-eb6a03a1b7c7" />
-  <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Bundle-Collection" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/England-Bundle-Collection" />
   <name value="NHSDigitalBundleCollection" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />

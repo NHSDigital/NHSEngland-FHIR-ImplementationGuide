@@ -19,31 +19,31 @@
     <category value="consequence" />
     <focus>
         <code value="Encounter" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Encounter" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/England-Encounter" />
         <min value="1" />
         <max value="1" />
     </focus>
     <focus>
         <code value="Patient" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/England-Patient" />
         <min value="1" />
         <max value="1" />
     </focus>
     <focus>
         <code value="Observation" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Observation" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/England-Observation" />
         <min value="0" />
         <max value="*" />
     </focus>
     <focus>
         <code value="QuestionnaireResponse" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-QuestionnaireResponse" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/England-QuestionnaireResponse" />
         <min value="0" />
         <max value="*" />
     </focus>
      <focus>
         <code value="Condition" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Condition" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/England-Condition" />
         <min value="0" />
         <max value="*" />
     </focus>

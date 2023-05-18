@@ -19,7 +19,7 @@
     <category value="notification" />
     <focus>
         <code value="CommunicationRequest" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-CommunicationRequest" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/England-CommunicationRequest" />
         <min value="1" />
         <max value="*" />
     </focus>

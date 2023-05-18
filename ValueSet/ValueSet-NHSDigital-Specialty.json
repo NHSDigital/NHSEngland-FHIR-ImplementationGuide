@@ -1,9 +1,9 @@
 {
     "resourceType": "ValueSet",
     "id": "c4880a00-b908-4877-9b71-4f3b8a50faee",
-    "url": "https://fhir.nhs.uk/ValueSet/NHSDigital-eRS-Specialty",
+    "url": "https://fhir.nhs.uk/ValueSet/England-eRS-Specialty",
     "version": "1.0.0",
-    "name": "NHSDigitaleRSSpecialty",
+    "name": "EnglandeRSSpecialty",
     "status": "draft",
     "publisher": "NHS Digital",
     "contact": [

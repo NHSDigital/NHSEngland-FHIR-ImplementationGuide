@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Location" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/England-Location" />
   <name value="NHSDigitalLocation" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
@@ -87,7 +87,7 @@
       <path value="Location.managingOrganization" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Organization" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-Organization" />
       </type>
       <constraint>
         <key value="nhds-10" />

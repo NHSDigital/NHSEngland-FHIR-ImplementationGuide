@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-CapabilityStatement-Examples" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/Extension-England-CapabilityStatement-Examples" />
   <name value="ExtensionCapabilityStatementExamples" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
@@ -149,7 +149,7 @@
     </element>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="https://fhir.nhs.uk/StructureDefinition/Extension-NHSDigital-CapabilityStatement-Examples" />
+      <fixedUri value="https://fhir.nhs.uk/StructureDefinition/Extension-England-CapabilityStatement-Examples" />
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />
