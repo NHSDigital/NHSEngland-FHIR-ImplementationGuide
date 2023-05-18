@@ -1,16 +1,16 @@
 {
     "resourceType": "ValueSet",
-    "id": "vs-location-type",
-    "url": "https://fhir.nhs.uk/ValueSet/location-type",
-    "version": "2.0.4",
-    "name": "NHSLocationType",
+    "id": "ValueSet-England-LocationType",
+    "url": "https://fhir.nhs.uk/ValueSet/England-LocationType",
+    "version": "1.0.0",
+    "name": "EnglandLocationType",
     "status": "draft",
     "description": "A ValueSet to identify the roles (type) of location.",
     "compose": {
         "include": [
             {
-                "system": "https://fhir.nhs.uk/CodeSystem/organisation-role",
-                "version": "2.0.2",
+                "system": "https://fhir.nhs.uk/CodeSystem/England-organisation-role",
+                "version": "1.0.0",
                 "concept": [
                     {
                         "code": "140",
