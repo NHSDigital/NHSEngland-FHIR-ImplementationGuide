@@ -1,11 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="England-CapabilityStatement" />
   <url value="https://fhir.nhs.uk/StructureDefinition/England-CapabilityStatement" />
-  <version value="2.0.0" />
+  <version value="1.0.0" />
   <name value="EnglandCapabilityStatement" />
   <title value="England CapabilityStatement" />
   <status value="draft" />
-  <date value="2023-05-15T15:06:12.7859957+00:00" />
+  <date value="2023-06-01" />
   <publisher value="NHS England" />
   <contact>
     <name value="NHS England" />
@@ -67,10 +68,6 @@
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-CapabilityStatement-Package" />
       </type>
       <mustSupport value="true" />
-    </element>
-    <element id="CapabilityStatement.extension:Package.url">
-      <path value="CapabilityStatement.extension.url" />
-      <fixedUri value="https://fhir.nhs.uk/StructureDefinition/Extension-England-CapabilityStatement-Package" />
     </element>
     <element id="CapabilityStatement.status">
       <path value="CapabilityStatement.status" />
@@ -174,10 +171,6 @@
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-CapabilityStatement-Examples" />
       </type>
     </element>
-    <element id="CapabilityStatement.rest.resource.interaction.extension:Examples.url">
-      <path value="CapabilityStatement.rest.resource.interaction.extension.url" />
-      <fixedUri value="https://fhir.nhs.uk/StructureDefinition/Extension-England-CapabilityStatement-Examples" />
-    </element>
     <element id="CapabilityStatement.messaging">
       <path value="CapabilityStatement.messaging" />
       <mustSupport value="true" />
@@ -201,10 +194,6 @@
         <code value="Extension" />
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-CapabilityStatement-Examples" />
       </type>
-    </element>
-    <element id="CapabilityStatement.messaging.supportedMessage.extension:Examples.url">
-      <path value="CapabilityStatement.messaging.supportedMessage.extension.url" />
-      <fixedUri value="https://fhir.nhs.uk/StructureDefinition/Extension-England-CapabilityStatement-Examples" />
     </element>
   </differential>
 </StructureDefinition>

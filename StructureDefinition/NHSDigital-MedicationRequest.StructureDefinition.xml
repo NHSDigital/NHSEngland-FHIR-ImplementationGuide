@@ -383,13 +383,6 @@
       <path value="MedicationRequest.requester.reference" />
       <min value="1" />
     </element>
-    <element id="MedicationRequest.performer">
-      <path value="MedicationRequest.performer" />
-      <type>
-        <code value="Reference" />
-        <profile value="http://hl7.org/fhir/StructureDefinition/Reference" />
-      </type>
-    </element>
     <element id="MedicationRequest.recorder">
       <path value="MedicationRequest.recorder" />
       <type>
