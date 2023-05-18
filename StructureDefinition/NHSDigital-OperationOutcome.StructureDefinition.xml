@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="76b4a80a-a0af-4882-962b-9769a7910954" />
-  <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-OperationOutcome" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/England-OperationOutcome" />
   <version value="1.1.1" />
-  <name value="NHSDigitalOperationOutcome" />
+  <name value="EnglandOperationOutcome" />
   <status value="draft" />
   <date value="2020-08-05" />
   <publisher value="NHS Digital" />
@@ -57,7 +57,7 @@
         <severity value="error" />
         <human value="An NHS Digital error or warning code is required" />
         <expression value="(severity = 'information') or ((severity != 'information') and details.empty().not())" />
-        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-OperationOutcome" />
+        <source value="https://fhir.nhs.uk/StructureDefinition/England-OperationOutcome" />
       </constraint>
       <mustSupport value="true" />
     </element>
@@ -77,7 +77,7 @@
       <mustSupport value="true" />
       <binding>
         <strength value="preferred" />
-        <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDigital-OperationOutcome-Codes" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/England-OperationOutcome-Codes" />
       </binding>
     </element>
     <element id="OperationOutcome.issue.details.coding">
@@ -87,7 +87,7 @@
       <mustSupport value="true" />
       <binding>
         <strength value="extensible" />
-        <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDigital-OperationOutcome-Codes" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/England-OperationOutcome-Codes" />
       </binding>
     </element>
     <element id="OperationOutcome.issue.details.coding.system">

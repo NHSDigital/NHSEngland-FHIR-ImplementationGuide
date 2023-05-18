@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="d56cd4e6-b5b7-43f1-92a9-d232310c0924" />
-  <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Bundle-FHIRDocument" />
-  <name value="NHSDigitalBundleFHIRDocument" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/England-Bundle-FHIRDocument" />
+  <name value="EnglandBundleFHIRDocument" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
   <mapping>
@@ -62,7 +62,7 @@
       <path value="Bundle.entry.resource" />
       <type>
         <code value="Resource" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Composition" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/England-Composition" />
       </type>
     </element>
     <element id="Bundle.entry:patient">
@@ -74,7 +74,7 @@
       <path value="Bundle.entry.resource" />
       <type>
         <code value="Resource" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/England-Patient" />
       </type>
     </element>
     <element id="Bundle.entry:patient.search">

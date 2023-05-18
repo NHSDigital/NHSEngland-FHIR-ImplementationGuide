@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Flag" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/England-Flag" />
   <name value="NHSDigitalFlag" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
@@ -14,7 +14,7 @@
       <path value="Flag.subject" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-Patient" />
         <aggregation value="referenced" />
       </type>
     </element>

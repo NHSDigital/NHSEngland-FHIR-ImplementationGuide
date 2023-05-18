@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="35cdca0d-46a3-4dd3-9967-9470b864b92e" />
-  <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-MessageHeader" />
-  <name value="NHSDigitalMessageHeader" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/England-MessageHeader" />
+  <name value="EnglandMessageHeader" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
   <kind value="resource" />
@@ -60,7 +60,7 @@
           <valueBoolean value="true" />
         </extension>
         <strength value="required" />
-        <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDigital-message-events" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/England-message-events" />
       </binding>
     </element>
     <element id="MessageHeader.event[x].system">
@@ -82,9 +82,9 @@
       <min value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Practitioner" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Organization" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-PractitionerRole" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-Practitioner" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-Organization" />
       </type>
     </element>
     <element id="MessageHeader.destination.receiver.extension">
@@ -125,9 +125,9 @@
       <definition value="The current requirement in NHS Digital API's is to rely on the [Access Tokens and Audit (JWT)](https://developer.nhs.uk/apis/spine-core/security_jwt.html) for sender details.&#xD;&#xA;&#xD;&#xA;For use outside of NHS Digital it is recommended this is populated with either the Organisation ODS code or the Practitioner's professional code.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;sender&quot;: {&#xD;&#xA;    &quot;identifier&quot;: {&#xD;&#xA;        &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/ods-organization-code&quot;,&#xD;&#xA;        &quot;value&quot;: &quot;VNE51&quot;&#xD;&#xA;   }&#xD;&#xA;}&#xD;&#xA;```" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Practitioner" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Organization" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-PractitionerRole" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-Practitioner" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-Organization" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -169,8 +169,8 @@
       <path value="MessageHeader.enterer" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Practitioner" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-PractitionerRole" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-Practitioner" />
       </type>
     </element>
     <element id="MessageHeader.author">
@@ -178,8 +178,8 @@
       <definition value="If present, this **SHOULD** be an identifier reference to a `Practitioner` or `PractitionerRole`. Internal references to resources should **NOT** be used. &#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;author&quot;: {&#xD;&#xA;    &quot;type&quot;: &quot;PractitionerRole&quot;,&#xD;&#xA;    &quot;identifier&quot;: {&#xD;&#xA;        &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/sds-role-profile-id&quot;,&#xD;&#xA;        &quot;value&quot;: &quot;100102238986&quot;&#xD;&#xA;    },&#xD;&#xA;    &quot;display&quot;: &quot;DR ALI&quot;&#xD;&#xA;},&#xD;&#xA;```" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Practitioner" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-PractitionerRole" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-Practitioner" />
       </type>
     </element>
     <element id="MessageHeader.author.identifier">
@@ -203,8 +203,8 @@
       <path value="MessageHeader.responsible" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Practitioner" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Organization" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-Practitioner" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-Organization" />
       </type>
     </element>
     <element id="MessageHeader.responsible.identifier">
@@ -244,7 +244,7 @@
     </element>
     <element id="MessageHeader.focus">
       <path value="MessageHeader.focus" />
-      <definition value="The focus element of the MessageHeader specifies the content of the message. The MessageHeader is followed by other resources depending on the type of request. &#xD;&#xA;For example, a request to book an appointment may contain the Patient to book the appointment for, the Practitioner to book the appointment with and the actual Appointment that is requested.&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&#xD;&#xA;The focus section **SHOULD** match the focus section of the corresponding `MessageDefinition` &#xD;&#xA;&#xD;&#xA;*MessageDefinition.focus extract*&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;focus&quot;:  [&#xD;&#xA;        {&#xD;&#xA;            &quot;code&quot;: &quot;MedicationRequest&quot;,&#xD;&#xA;            &quot;profile&quot;: &quot;https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationRequest&quot;,&#xD;&#xA;            &quot;min&quot;: 1,&#xD;&#xA;            &quot;max&quot;: &quot;4&quot;&#xD;&#xA;        },&#xD;&#xA;        {&#xD;&#xA;            &quot;code&quot;: &quot;Patient&quot;,&#xD;&#xA;            &quot;profile&quot;: &quot;https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient&quot;,&#xD;&#xA;            &quot;min&quot;: 1,&#xD;&#xA;            &quot;max&quot;: &quot;1&quot;&#xD;&#xA;        },&#xD;&#xA;        {&#xD;&#xA;            &quot;code&quot;: &quot;CommunicationRequest&quot;,&#xD;&#xA;            &quot;profile&quot;: &quot;https://fhir.nhs.uk/StructureDefinition/DM-CommunicationRequest&quot;,&#xD;&#xA;            &quot;min&quot;: 0,&#xD;&#xA;            &quot;max&quot;: &quot;*&quot;&#xD;&#xA;        }&#xD;&#xA;    ]&#xD;&#xA;```&#xD;&#xA;&#xD;&#xA;Corresponding *MessageHeader.focus* (Note: type is not required and is included for illustration purposes)&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;focus&quot;: [&#xD;&#xA;    {&#xD;&#xA;        &quot;type&quot;: &quot;Patient&quot;,&#xD;&#xA;        &quot;reference&quot;: &quot;urn:uuid:78d3c2eb-009e-4ec8-a358-b042954aa9b2&quot;&#xD;&#xA;    },&#xD;&#xA;    {&#xD;&#xA;        &quot;type&quot;: &quot;MedicationRequest&quot;,&#xD;&#xA;        &quot;reference&quot;: &quot;urn:uuid:a54219b8-f741-4c47-b662-e4f8dfa49ab6&quot;&#xD;&#xA;    },&#xD;&#xA;    {&#xD;&#xA;        &quot;type&quot;: &quot;CommunicationRequest&quot;,&#xD;&#xA;        &quot;reference&quot;: &quot;urn:uuid:28828C55-8FA7-42D7-916F-FCF076E0C10E&quot;&#xD;&#xA;    }&#xD;&#xA;]&#xD;&#xA;```" />
+      <definition value="The focus element of the MessageHeader specifies the content of the message. The MessageHeader is followed by other resources depending on the type of request. &#xD;&#xA;For example, a request to book an appointment may contain the Patient to book the appointment for, the Practitioner to book the appointment with and the actual Appointment that is requested.&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&#xD;&#xA;The focus section **SHOULD** match the focus section of the corresponding `MessageDefinition` &#xD;&#xA;&#xD;&#xA;*MessageDefinition.focus extract*&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;focus&quot;:  [&#xD;&#xA;        {&#xD;&#xA;            &quot;code&quot;: &quot;MedicationRequest&quot;,&#xD;&#xA;            &quot;profile&quot;: &quot;https://fhir.nhs.uk/StructureDefinition/England-MedicationRequest&quot;,&#xD;&#xA;            &quot;min&quot;: 1,&#xD;&#xA;            &quot;max&quot;: &quot;4&quot;&#xD;&#xA;        },&#xD;&#xA;        {&#xD;&#xA;            &quot;code&quot;: &quot;Patient&quot;,&#xD;&#xA;            &quot;profile&quot;: &quot;https://fhir.nhs.uk/StructureDefinition/England-Patient&quot;,&#xD;&#xA;            &quot;min&quot;: 1,&#xD;&#xA;            &quot;max&quot;: &quot;1&quot;&#xD;&#xA;        },&#xD;&#xA;        {&#xD;&#xA;            &quot;code&quot;: &quot;CommunicationRequest&quot;,&#xD;&#xA;            &quot;profile&quot;: &quot;https://fhir.nhs.uk/StructureDefinition/DM-CommunicationRequest&quot;,&#xD;&#xA;            &quot;min&quot;: 0,&#xD;&#xA;            &quot;max&quot;: &quot;*&quot;&#xD;&#xA;        }&#xD;&#xA;    ]&#xD;&#xA;```&#xD;&#xA;&#xD;&#xA;Corresponding *MessageHeader.focus* (Note: type is not required and is included for illustration purposes)&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;focus&quot;: [&#xD;&#xA;    {&#xD;&#xA;        &quot;type&quot;: &quot;Patient&quot;,&#xD;&#xA;        &quot;reference&quot;: &quot;urn:uuid:78d3c2eb-009e-4ec8-a358-b042954aa9b2&quot;&#xD;&#xA;    },&#xD;&#xA;    {&#xD;&#xA;        &quot;type&quot;: &quot;MedicationRequest&quot;,&#xD;&#xA;        &quot;reference&quot;: &quot;urn:uuid:a54219b8-f741-4c47-b662-e4f8dfa49ab6&quot;&#xD;&#xA;    },&#xD;&#xA;    {&#xD;&#xA;        &quot;type&quot;: &quot;CommunicationRequest&quot;,&#xD;&#xA;        &quot;reference&quot;: &quot;urn:uuid:28828C55-8FA7-42D7-916F-FCF076E0C10E&quot;&#xD;&#xA;    }&#xD;&#xA;]&#xD;&#xA;```" />
       <min value="1" />
     </element>
     <element id="MessageHeader.focus.reference">

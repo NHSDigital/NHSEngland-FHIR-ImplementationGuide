@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="46e1089a-5562-4a91-8951-40db0a35bd69" />
-  <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Composition" />
-  <name value="NHSDigitalComposition" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/England-Composition" />
+  <name value="EnglandComposition" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
   <kind value="resource" />
@@ -16,7 +16,7 @@
       <min value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-Patient" />
         <aggregation value="referenced" />
       </type>
       <constraint>
@@ -91,7 +91,7 @@
       <min value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Encounter" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-Encounter" />
       </type>
     </element>
     <element id="Composition.section:allergiesAndAdverseReactionsSection">
@@ -330,7 +330,7 @@
       <min value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Encounter" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-Encounter" />
       </type>
     </element>
     <element id="Composition.section:dischargeDetailsSection.entry.reference">
@@ -451,7 +451,7 @@
       <min value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Organization" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-Organization" />
       </type>
     </element>
     <element id="Composition.section:individualRequirementsSection">
@@ -676,7 +676,7 @@
       <min value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-Patient" />
         <aggregation value="referenced" />
       </type>
     </element>
@@ -702,7 +702,7 @@
       <path value="Composition.section.entry" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Practitioner" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-Practitioner" />
       </type>
     </element>
     <element id="Composition.section:personCompletingRecordSection.entry.reference">

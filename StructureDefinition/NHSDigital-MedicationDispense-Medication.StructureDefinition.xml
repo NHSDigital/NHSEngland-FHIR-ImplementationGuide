@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="ad94deb2-6141-4ea2-a9dc-f1133de3fc28"/>
-  <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationDispense-Medication" />
-  <name value="NHSDigitalMedicationDispenseMedication" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/England-MedicationDispense-Medication" />
+  <name value="EnglandMedicationDispenseMedication" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
   <mapping>
@@ -28,7 +28,7 @@
   <kind value="resource" />
   <abstract value="false" />
   <type value="Medication" />
-  <baseDefinition value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Medication" />
+  <baseDefinition value="https://fhir.nhs.uk/StructureDefinition/England-Medication" />
   <derivation value="constraint" />
   <differential>
     <element id="Medication.code">
@@ -37,7 +37,7 @@
       <min value="1" />
       <binding>
         <strength value="required" />
-        <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDigital-MedicationDispense-Code" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/England-MedicationDispense-Code" />
       </binding>
     </element>
     <element id="Medication.code.coding">

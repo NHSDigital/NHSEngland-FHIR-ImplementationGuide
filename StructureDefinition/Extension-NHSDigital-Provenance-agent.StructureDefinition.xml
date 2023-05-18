@@ -37,9 +37,9 @@
       <min value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Practitioner" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-HealthcareService" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-PractitionerRole" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-Practitioner" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-HealthcareService" />
       </type>
       <constraint>
         <key value="usercode-reference" />
@@ -95,7 +95,7 @@
         <severity value="error" />
         <human value="SDS Role Profile Id must be 12 digits" />
         <expression value="identifier.where(system='https://fhir.nhs.uk/Id/sds-role-profile-id').exists().not() or (identifier.where(system='https://fhir.nhs.uk/Id/sds-role-profile-id').exists()  and identifier.where(system='https://fhir.nhs.uk/Id/sds-role-profile-id').value.matches('^[0-9]{12}$'))" />
-        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole" />
+        <source value="https://fhir.nhs.uk/StructureDefinition/England-PractitionerRole" />
       </constraint>
     </element>
     <element id="Extension.value[x].identifier">

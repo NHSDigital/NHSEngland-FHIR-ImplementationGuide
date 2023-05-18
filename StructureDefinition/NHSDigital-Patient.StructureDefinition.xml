@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="7c42ccf1-3e8f-446c-8f7f-d703281a07d5" />
-  <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient" />
-  <name value="NHSDigitalPatient" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/England-Patient" />
+  <name value="EnglandPatient" />
   <status value="draft" />
   <description value="This profile is designed around Patient Demographics Services and PDS may be used as the source of this data. &#xD;&#xA;Use of PDS is not mandatory for Patient resources, Patient Administration Systems (PAS) and Master Patient Index (MPI) may be used instead. Only traced NHS Number SHOULD be used with this resource unless explicitly stated. Within NHS Trusts the inclusion of MRN (Medical Record Numbers) identifiers is highly recommended." />
   <fhirVersion value="4.0.1" />
@@ -185,9 +185,9 @@
       <requirements value="GP Surgery SHOULD be provided. It is recommended the patients GP Surgery is the first item in the array and branch surgery is second. It is also suggested type and display (name of practice) is also included." />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Practitioner" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Organization" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-Practitioner" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-PractitionerRole" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-Organization" />
       </type>
       <mustSupport value="true" />
     </element>

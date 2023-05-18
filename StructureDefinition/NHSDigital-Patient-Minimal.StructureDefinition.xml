@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient-Minimal" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/England-Patient-Minimal" />
   <name value="NHSDigitalPatientMinimal" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
@@ -8,7 +8,7 @@
   <kind value="resource" />
   <abstract value="false" />
   <type value="Patient" />
-  <baseDefinition value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient" />
+  <baseDefinition value="https://fhir.nhs.uk/StructureDefinition/England-Patient" />
   <derivation value="constraint" />
   <differential>
     <element id="Patient.birthDate">

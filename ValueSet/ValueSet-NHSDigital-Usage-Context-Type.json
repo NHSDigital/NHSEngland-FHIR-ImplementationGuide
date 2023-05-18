@@ -1,9 +1,9 @@
 {
     "resourceType": "ValueSet",
     "id": "usage-context-type",
-    "url": "https://fhir.nhs.uk/ValueSet/NHSDigital-usage-context-type",
+    "url": "https://fhir.nhs.uk/ValueSet/England-usage-context-type",
     "version": "1.0.0",
-    "name": "NHSDigitalUsageContextType",
+    "name": "EnglandUsageContextType",
     "title": "BARS Usage Context Type",
     "status": "draft",
     "experimental": false,

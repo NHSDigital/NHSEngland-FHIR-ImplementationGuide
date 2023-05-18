@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
-  "url": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-Task",
-  "name": "NHSDigitalTask",
+  "url": "https://fhir.nhs.uk/StructureDefinition/England-Task",
+  "name": "EnglandTask",
   "status": "draft",
   "fhirVersion": "4.0.1",
   "kind": "resource",
@@ -151,7 +151,7 @@
         "sliceName": "SNOMED",
         "binding": {
           "strength": "extensible",
-          "valueSet": "https://fhir.nhs.uk/ValueSet/NHSDigital-action-code"
+          "valueSet": "https://fhir.nhs.uk/ValueSet/England-action-code"
         }
       },
       {
@@ -165,7 +165,7 @@
         "sliceName": "Fulfilment",
         "binding": {
           "strength": "extensible",
-          "valueSet": "https://fhir.nhs.uk/ValueSet/NHSDigital-task-code"
+          "valueSet": "https://fhir.nhs.uk/ValueSet/England-task-code"
         }
       },
       {
@@ -179,7 +179,7 @@
         "sliceName": "Worflow",
         "binding": {
           "strength": "extensible",
-          "valueSet": "https://fhir.nhs.uk/ValueSet/NHSDigital-workflow-code"
+          "valueSet": "https://fhir.nhs.uk/ValueSet/England-workflow-code"
         }
       },
       {
@@ -196,12 +196,12 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "https://fhir.nhs.uk/StructureDefinition/NHSDigital-Appointment",
-              "https://fhir.nhs.uk/StructureDefinition/NHSDigital-ServiceRequest",
-              "https://fhir.nhs.uk/StructureDefinition/NHSDigital-Bundle-FHIRMessage",
-              "https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationRequest",
+              "https://fhir.nhs.uk/StructureDefinition/England-Appointment",
+              "https://fhir.nhs.uk/StructureDefinition/England-ServiceRequest",
+              "https://fhir.nhs.uk/StructureDefinition/England-Bundle-FHIRMessage",
+              "https://fhir.nhs.uk/StructureDefinition/England-MedicationRequest",
               "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Patient",
-              "https://fhir.nhs.uk/StructureDefinition/NHSDigital-Questionnaire"
+              "https://fhir.nhs.uk/StructureDefinition/England-Questionnaire"
             ]
           }
         ],
@@ -232,7 +232,7 @@
             "severity": "error",
             "human": "NHS Number must be in the English and Welsh NHS Number range or length of the number is wrong.",
             "expression": "identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').exists().not() or (identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').exists()  and identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').value.matches('^([456789]{1}[0-9]{9})$'))",
-            "source": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-Claim"
+            "source": "https://fhir.nhs.uk/StructureDefinition/England-Claim"
           }
         ],
         "mustSupport": true
@@ -267,7 +267,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole"
+              "https://fhir.nhs.uk/StructureDefinition/England-PractitionerRole"
             ],
             "aggregation": [
               "contained"
@@ -295,8 +295,8 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole",
-              "https://fhir.nhs.uk/StructureDefinition/NHSDigital-Organization"
+              "https://fhir.nhs.uk/StructureDefinition/England-PractitionerRole",
+              "https://fhir.nhs.uk/StructureDefinition/England-Organization"
             ]
           }
         ],

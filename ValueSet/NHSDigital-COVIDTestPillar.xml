@@ -1,6 +1,6 @@
 <ValueSet xmlns="http://hl7.org/fhir">
-    <id value="NHSDigital-COVIDTestPillar" />
-    <url value="https://fhir.nhs.uk/ValueSet/NHSDigital-COVIDTestPillar" />
+    <id value="England-COVIDTestPillar" />
+    <url value="https://fhir.nhs.uk/ValueSet/England-COVIDTestPillar" />
     <version value="1.0.0" />
     <name value="NHSDigitalCOVIDTestPillar" />
     <title value="COVID-19 testing data method"/>

@@ -1,9 +1,9 @@
 {
     "resourceType": "ValueSet",
-    "id": "NHSDigital-ImmunizationExplanationReason",
-    "url": "https://fhir.nhs.uk/ValueSet/NHSDigital-ImmunizationExplanationReason",
+    "id": "England-ImmunizationExplanationReason",
+    "url": "https://fhir.nhs.uk/ValueSet/England-ImmunizationExplanationReason",
     "version": "2.1.0",
-    "name": "NHSDigitalImmunizationExplanationReason",
+    "name": "EnglandImmunizationExplanationReason",
     "title": "NHS Digital Immunization Explanation Reason",
     "status": "active",
     "date": "2021-08-03",

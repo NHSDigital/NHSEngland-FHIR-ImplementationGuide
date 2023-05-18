@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="d35adc97-8e55-4041-bd01-f4f5ee3dde47" />
-  <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationRequest-Outcome" />
-  <name value="NHSDigitalMedicationRequestOutcome" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/England-MedicationRequest-Outcome" />
+  <name value="EnglandMedicationRequestOutcome" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
   <kind value="resource" />
@@ -76,23 +76,23 @@
       <comment value="Any code from the SnomedCT UK DMD subset for VMP, AMP and VTM concepts&#xD;&#xA;&#xD;&#xA;&lt;table&gt;&#xD;&#xA;&lt;thead&gt;&#xD;&#xA;&lt;th data-no-sort width=&quot;25%&quot;&gt;&#xD;&#xA;dm+d Category&#xD;&#xA;&lt;/th&gt;&#xD;&#xA;&lt;th data-no-sort width=&quot;50%&quot;&gt;&#xD;&#xA;dm+d Description&#xD;&#xA;&lt;/th&gt;&#xD;&#xA;&lt;th data-no-sort width=&quot;25%&quot;&gt;&#xD;&#xA;UK SNOMED Members Of&#xD;&#xA;&lt;/th&gt;&#xD;&#xA;&#xD;&#xA;&lt;/thead&gt;&#xD;&#xA;&lt;tr&gt;&#xD;&#xA;&lt;td&gt;&#xD;&#xA;VMP&#xD;&#xA;&lt;/td&gt;&#xD;&#xA;&lt;td&gt;&#xD;&#xA;Virtual Medical Product&#xD;&#xA;&lt;/td&gt;&#xD;&#xA;&lt;td&gt;&#xD;&#xA;&lt;a href=&quot;https://termbrowser.nhs.uk/?perspective=full&amp;conceptId1=999000561000001109&quot; target=&quot;_blank&quot;&gt;999000561000001109&lt;/a&gt;&#xD;&#xA;&lt;/td&gt;&#xD;&#xA;&lt;/tr&gt;&#xD;&#xA;&lt;tr&gt;&#xD;&#xA;&lt;td&gt;&#xD;&#xA;AMP&#xD;&#xA;&lt;/td&gt;&#xD;&#xA;&lt;td&gt;&#xD;&#xA;Actual Medical Product&#xD;&#xA;&lt;/td&gt;&#xD;&#xA;&lt;td&gt;&#xD;&#xA;&lt;a href=&quot;https://termbrowser.nhs.uk/?perspective=full&amp;conceptId1=999000541000001108&quot; target=&quot;_blank&quot;&gt;999000541000001108&lt;/a&gt;&#xD;&#xA;&lt;/td&gt;&#xD;&#xA;&lt;/tr&gt;&#xD;&#xA;&lt;/table&gt;" />
       <type>
         <code value="CodeableConcept" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationRequest-CodeableConcept" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/England-MedicationRequest-CodeableConcept" />
       </type>
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationRequest-Medication" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-MedicationRequest-Medication" />
         <aggregation value="bundled" />
       </type>
       <binding>
         <strength value="extensible" />
-        <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDigital-MedicationCode" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/England-MedicationCode" />
       </binding>
     </element>
     <element id="MedicationRequest.subject">
       <path value="MedicationRequest.subject" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-Patient" />
       </type>
     </element>
     <element id="MedicationRequest.subject.reference">
@@ -104,7 +104,7 @@
       <min value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-PractitionerRole" />
       </type>
     </element>
     <element id="MedicationRequest.requester.reference">

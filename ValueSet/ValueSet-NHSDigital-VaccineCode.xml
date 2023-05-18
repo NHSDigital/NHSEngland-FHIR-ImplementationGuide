@@ -1,8 +1,8 @@
 <ValueSet xmlns="http://hl7.org/fhir">
-    <id value="NHSDigital-VaccineCode" />
-    <url value="https://fhir.nhs.uk/ValueSet/NHSDigital-VaccineCode" />
+    <id value="England-VaccineCode" />
+    <url value="https://fhir.nhs.uk/ValueSet/England-VaccineCode" />
     <version value="2.2.0" />
-    <name value="NHSDigitalVaccineCode" />
+    <name value="EnglandVaccineCode" />
     <title value="NHS Digital Vaccine Code" />
     <status value="active" />
     <date value="2022-08-26" />

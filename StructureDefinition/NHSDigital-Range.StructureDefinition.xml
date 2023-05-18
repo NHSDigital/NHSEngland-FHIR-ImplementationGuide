@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="https://fhir.nhs.uk.uk/StructureDefinition/NHSDigital-Range" />
-  <name value="NHSDigitalRange" />
+  <url value="https://fhir.nhs.uk.uk/StructureDefinition/England-Range" />
+  <name value="EnglandRange" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
   <kind value="complex-type" />
@@ -17,7 +17,7 @@
         <severity value="error" />
         <human value="If both low and high present, both should use the same units or both should have units absent" />
         <expression value="low.empty() or high.empty() or (low.unit = high.unit) or (low.unit.empty() and high.unit.empty())" />
-        <source value="https://fhir.nhs.uk.uk/StructureDefinition/NHSDigital-Range" />
+        <source value="https://fhir.nhs.uk.uk/StructureDefinition/England-Range" />
       </constraint>
     </element>
     <element id="Range.low.value">

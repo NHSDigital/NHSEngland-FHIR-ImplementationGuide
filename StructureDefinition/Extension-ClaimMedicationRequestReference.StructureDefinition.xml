@@ -28,7 +28,7 @@
       <path value="Extension.value[x]" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationRequest" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-MedicationRequest" />
       </type>
     </element>
     <element id="Extension.value[x].identifier">

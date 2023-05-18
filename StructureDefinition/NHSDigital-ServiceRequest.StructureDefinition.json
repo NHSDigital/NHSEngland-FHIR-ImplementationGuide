@@ -1,6 +1,6 @@
 {
   "resourceType": "StructureDefinition",
-  "url": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-ServiceRequest",
+  "url": "https://fhir.nhs.uk/StructureDefinition/England-ServiceRequest",
   "name": "NHSDigitalServiceRequest",
   "status": "draft",
   "fhirVersion": "4.0.1",
@@ -147,8 +147,8 @@
             "code": "Reference",
             "targetProfile": [
               "https://fhir.hl7.org.uk/StructureDefinition/UKCore-CarePlan",
-              "https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationRequest",
-              "https://fhir.nhs.uk/StructureDefinition/NHSDigital-ServiceRequest"
+              "https://fhir.nhs.uk/StructureDefinition/England-MedicationRequest",
+              "https://fhir.nhs.uk/StructureDefinition/England-ServiceRequest"
             ]
           }
         ],
@@ -212,7 +212,7 @@
         "sliceName": "BARSCategory",
         "binding": {
           "strength": "preferred",
-          "valueSet": "https://fhir.nhs.uk/ValueSet/NHSDigital-BARS-message-category"
+          "valueSet": "https://fhir.nhs.uk/ValueSet/England-BARS-message-category"
         }
       },
       {
@@ -226,7 +226,7 @@
         "sliceName": "NHSDigitalServiceRequestCategory",
         "binding": {
           "strength": "preferred",
-          "valueSet": "https://fhir.nhs.uk/ValueSet/NHSDigital-ServiceRequest-category"
+          "valueSet": "https://fhir.nhs.uk/ValueSet/England-ServiceRequest-category"
         }
       },
       {
@@ -299,7 +299,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient"
+              "https://fhir.nhs.uk/StructureDefinition/England-Patient"
             ],
             "aggregation": [
               "referenced"
@@ -340,7 +340,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "https://fhir.nhs.uk/StructureDefinition/NHSDigital-Encounter"
+              "https://fhir.nhs.uk/StructureDefinition/England-Encounter"
             ],
             "aggregation": [
               "referenced"
@@ -363,7 +363,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole-Minimal"
+              "https://fhir.nhs.uk/StructureDefinition/England-PractitionerRole-Minimal"
             ],
             "aggregation": [
               "contained",
@@ -394,7 +394,7 @@
         },
         "binding": {
           "strength": "example",
-          "valueSet": "https://fhir.nhs.uk/ValueSet/NHSDigital-CareSettingType"
+          "valueSet": "https://fhir.nhs.uk/ValueSet/England-CareSettingType"
         }
       },
       {
@@ -418,7 +418,7 @@
         "sliceName": "eRSSpecialty",
         "binding": {
           "strength": "required",
-          "valueSet": "https://fhir.nhs.uk/ValueSet/NHSDigital-eRS-Specialty"
+          "valueSet": "https://fhir.nhs.uk/ValueSet/England-eRS-Specialty"
         }
       },
       {
@@ -461,7 +461,7 @@
             "code": "Reference",
             "targetProfile": [
               "http://hl7.org/fhir/StructureDefinition/Resource",
-              "https://fhir.nhs.uk/StructureDefinition/NHSDigital-DocumentReference"
+              "https://fhir.nhs.uk/StructureDefinition/England-DocumentReference"
             ],
             "aggregation": [
               "referenced"

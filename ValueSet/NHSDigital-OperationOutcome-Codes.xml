@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ValueSet xmlns="http://hl7.org/fhir">
-    <id value="NHSDigital-OperationOutcome-Codes"/>
-    <url value="https://fhir.nhs.uk/ValueSet/NHSDigital-OperationOutcome-Codes"/>
+    <id value="England-OperationOutcome-Codes"/>
+    <url value="https://fhir.nhs.uk/ValueSet/England-OperationOutcome-Codes"/>
     <version value="1.0.10"/>
-    <name value="NHSDigitalOperationOutcomeCodes"/>
+    <name value="EnglandOperationOutcomeCodes"/>
     <status value="draft"/>
-    <description value="NHSDigital OperationOutcome Codes"/>
+    <description value="England OperationOutcome Codes"/>
     <compose>
         <include>
             <system value="https://fhir.nhs.uk/CodeSystem/Spine-ErrorOrWarningCode"/>

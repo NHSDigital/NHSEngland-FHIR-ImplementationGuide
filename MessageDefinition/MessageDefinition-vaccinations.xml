@@ -19,7 +19,7 @@
     <category value="notification" />
     <focus>
         <code value="Immunization" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Immunization" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/England-Immunization" />
         <min value="1" />
         <max value="*" />
     </focus>

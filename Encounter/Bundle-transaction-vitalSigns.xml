@@ -55,7 +55,7 @@
                 <status value="final"/>
                 <category>
                     <coding>
-                        <system value="http://terminology.hl7.org/CodeSystem/observation-category" />
+                        <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationCategory" />
                         <code value="vital-signs" />
                         <display value="Vital Signs" />
                     </coding>
@@ -118,7 +118,7 @@
                 <status value="final"/>
                 <category>
                     <coding>
-                        <system value="http://terminology.hl7.org/CodeSystem/observation-category" />
+                        <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationCategory" />
                         <code value="vital-signs" />
                         <display value="Vital Signs" />
                     </coding>
@@ -181,7 +181,7 @@
                 <status value="final"/>
                 <category>
                     <coding>
-                        <system value="http://terminology.hl7.org/CodeSystem/observation-category" />
+                        <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationCategory" />
                         <code value="vital-signs" />
                         <display value="Vital Signs" />
                     </coding>
@@ -278,7 +278,7 @@
                 <status value="final"/>
                 <category>
                     <coding>
-                        <system value="http://terminology.hl7.org/CodeSystem/observation-category" />
+                        <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationCategory" />
                         <code value="vital-signs" />
                         <display value="Vital Signs" />
                     </coding>
@@ -341,7 +341,7 @@
                 <status value="final"/>
                 <category>
                     <coding>
-                        <system value="http://terminology.hl7.org/CodeSystem/observation-category" />
+                        <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationCategory" />
                         <code value="vital-signs" />
                         <display value="Vital Signs" />
                     </coding>

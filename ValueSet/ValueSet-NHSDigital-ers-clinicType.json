@@ -4,7 +4,7 @@
     "meta": {
       "lastUpdated": "2017-10-05T00:00:00+01:00"
     },
-    "url": "https://fhir.nhs.uk/ValueSet/NHSDigital-eRS-ClinicType",
+    "url": "https://fhir.nhs.uk/ValueSet/England-eRS-ClinicType",
     "version": "1.0.0",
     "name": "ERSClinicType",
     "status": "draft",
@@ -26,7 +26,7 @@
     "compose": {
       "include": [
         {
-          "system": "https://fhir.nhs.uk/CodeSystem/NHSDigital-ClinicType"
+          "system": "https://fhir.nhs.uk/CodeSystem/England-ClinicType"
         }
       ]
     }

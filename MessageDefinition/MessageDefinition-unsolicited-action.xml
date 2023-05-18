@@ -19,7 +19,7 @@
     <category value="notification" />
     <focus>
         <code value="Task" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Task" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/England-Task" />
         <min value="1" />
         <max value="1" />
     </focus>

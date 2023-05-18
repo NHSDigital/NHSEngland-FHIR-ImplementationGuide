@@ -1,7 +1,7 @@
 {
     "resourceType": "ValueSet",
     "id": "d2a51dd0-9e86-4cea-9064-077637cb79b7",
-    "url": "https://fhir.nhs.uk/ValueSet/NHSDigital-eRS-AppointmentCancellationReason",
+    "url": "https://fhir.nhs.uk/ValueSet/England-eRS-AppointmentCancellationReason",
     "version": "1.0.0",
     "name": "ERSAppointmentCancellationReason",
     "status": "draft",
@@ -23,7 +23,7 @@
     "compose": {
       "include": [
         {
-          "system": "https://fhir.nhs.uk/CodeSystem/NHSDigital-AppointmentCancellationReason"
+          "system": "https://fhir.nhs.uk/CodeSystem/England-AppointmentCancellationReason"
         }
       ]
     }

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Appointment" />
-  <name value="NHSDigitalAppointment" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/England-Appointment" />
+  <name value="EnglandAppointment" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
   <kind value="resource" />
@@ -74,7 +74,7 @@
       <path value="Appointment.serviceCategory.coding" />
       <binding>
         <strength value="required" />
-        <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDigital-CareSettingType" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/England-CareSettingType" />
       </binding>
     </element>
     <element id="Appointment.serviceCategory:NHSDataDictionaryTreatmentFunction.coding.system">
@@ -90,19 +90,19 @@
       <path value="Appointment.serviceCategory.coding" />
       <binding>
         <strength value="required" />
-        <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDigital-eRS-ClinicType" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/England-eRS-ClinicType" />
       </binding>
     </element>
     <element id="Appointment.serviceCategory:eRSClinicType.coding.system">
       <path value="Appointment.serviceCategory.coding.system" />
-      <fixedUri value="https://fhir.nhs.uk/CodeSystem/NHSDigital-ClinicType" />
+      <fixedUri value="https://fhir.nhs.uk/CodeSystem/England-ClinicType" />
     </element>
     <element id="Appointment.serviceType">
       <path value="Appointment.serviceType" />
       <definition value="UKCore will probably use this ValueSet https://fhir.hl7.org.uk/ValueSet/UKCore-CareSettingType&#xD;&#xA;&#xD;&#xA;At present we will base this on NHS Data Dictionary ValueSet" />
       <binding>
         <strength value="required" />
-        <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDigital-CareSettingType" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/England-CareSettingType" />
       </binding>
     </element>
     <element id="Appointment.specialty">
@@ -157,7 +157,7 @@
       <definition value="The service request this appointment is allocated to assess (e.g. incoming referral or procedure request).&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;basedOn&quot;: [&#xD;&#xA;                    {&#xD;&#xA;                        &quot;reference&quot;: &quot;https://server.fire.ly/ServiceRequest/6c2a1f9b-2517-419d-9099-591ba63f176c&quot;&#xD;&#xA;                    }&#xD;&#xA;                ],&#xD;&#xA;```" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-ServiceRequest" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-ServiceRequest" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -183,18 +183,18 @@
       <min value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-HealthcareService" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole-Minimal" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Location" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Practitioner" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-HealthcareService" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-PractitionerRole-Minimal" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-Patient" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-Location" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-Practitioner" />
       </type>
       <constraint>
         <key value="participant" />
         <severity value="error" />
         <human value="An identifier reference or resource reference must be provided" />
         <expression value="(reference.exists() or identifier.exists())" />
-        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Appointment" />
+        <source value="https://fhir.nhs.uk/StructureDefinition/England-Appointment" />
       </constraint>
       <mustSupport value="true" />
     </element>

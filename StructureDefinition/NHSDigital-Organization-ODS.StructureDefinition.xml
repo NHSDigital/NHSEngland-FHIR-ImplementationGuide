@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="453a7368-3c29-4331-a627-3d312e880ec6" />
-  <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Organization-ODS" />
-  <name value="NHSDigitalOrganizationODS" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/England-Organization-ODS" />
+  <name value="EnglandOrganizationODS" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
   <purpose value="Constraint profile which represents the full NHS Digital requirement for Organization resources as defined in ODS." />
   <kind value="resource" />
   <abstract value="false" />
   <type value="Organization" />
-  <baseDefinition value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Organization" />
+  <baseDefinition value="https://fhir.nhs.uk/StructureDefinition/England-Organization" />
   <derivation value="constraint" />
   <differential>
     <element id="Organization.identifier">

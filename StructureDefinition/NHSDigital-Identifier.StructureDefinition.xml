@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Identifier" />
-  <name value="NHSDigitalIdentifier" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/England-Identifier" />
+  <name value="EnglandIdentifier" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
   <kind value="complex-type" />
@@ -14,7 +14,7 @@
       <path value="Identifier.type" />
       <binding>
         <strength value="required" />
-        <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDigital-IdentifierType" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/England-IdentifierType" />
       </binding>
     </element>
   </differential>
