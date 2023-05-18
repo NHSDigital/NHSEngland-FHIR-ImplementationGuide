@@ -31,22 +31,26 @@
     <element id="Account.type.extension:accountRole">
       <path value="Account.type.extension" />
       <sliceName value="accountRole" />
+      <short value="An Extension to describe what an Organization does and whether this is the primary role of the Organization." />
+      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-ODS-Organization-Role" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-ODS-Organization-Role" />
       </type>
       <isModifier value="false" />
     </element>
     <element id="Account.type.extension:activePeriod">
       <path value="Account.type.extension" />
       <sliceName value="activePeriod" />
+      <short value="Optional Extensions Element" />
+      <definition value="Optional Extension Element - found in all resources." />
       <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-ODS-Organization-Role-ActivePeriod" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-ODS-Organization-Role-ActivePeriod" />
       </type>
       <isModifier value="false" />
     </element>
