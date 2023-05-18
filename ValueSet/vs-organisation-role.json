@@ -1,16 +1,16 @@
 {
   "resourceType": "ValueSet",
-  "id": "vs-organisation-role",
-  "url": "https://fhir.nhs.uk/ValueSet/organisation-role",
-  "version": "2.0.4",
-  "name": "NHSOrganisationRole",
+  "id": "ValueSet-England-OrganisationRole",
+  "url": "https://fhir.nhs.uk/ValueSet/England-OrganisationRole",
+  "version": "1.0.0",
+  "name": "EnglandOrganisationRole",
   "status": "active",
   "description": "A ValueSet to identify the roles (type) of organisation.",
   "compose": {
     "include": [
       {
-        "system": "https://fhir.nhs.uk/CodeSystem/organisation-role",
-        "version": "2.0.2",
+        "system": "https://fhir.nhs.uk/CodeSystem/England-organisation-role",
+        "version": "1.0.0",
         "concept": [
           {
             "code": "94",

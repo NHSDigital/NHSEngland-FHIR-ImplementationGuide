@@ -2,9 +2,9 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="England-Organization" />
   <url value="https://fhir.nhs.uk/StructureDefinition/England-Organization" />
-  <version value="2.0.0" />
-  <name value="England-Organization" />
-  <title value="England-Organization" />
+  <version value="1.0.0" />
+  <name value="EnglandOrganization" />
+  <title value="England Organization" />
   <status value="draft" />
   <date value="2023-06-01" />
   <publisher value="NHS England" />
@@ -38,18 +38,6 @@
       </slicing>
       <min value="0" />
     </element>
-    <element id="Organization.extension:mainLocation">
-      <path value="Organization.extension" />
-      <sliceName value="mainLocation" />
-      <min value="0" />
-    </element>
-    <element id="Organization.extension:mainLocation.value[x]">
-      <path value="Organization.extension.value[x]" />
-      <type>
-        <code value="Reference" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/England-Location" />
-      </type>
-    </element>
     <element id="Organization.extension:relationships">
       <path value="Organization.extension" />
       <sliceName value="relationships" />
@@ -57,8 +45,9 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-ODS-OrganisationRelationships" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-ODS-OrganisationRelationships" />
       </type>
+      <isModifier value="false" />
     </element>
     <element id="Organization.identifier">
       <path value="Organization.identifier" />
@@ -66,6 +55,17 @@
       <comment value="MUST contain an ANANA/ODS code." />
       <min value="1" />
       <mustSupport value="true" />
+    </element>
+    <element id="Organization.identifier:odsOrganisationCode">
+      <path value="Organization.identifier" />
+      <sliceName value="odsOrganisationCode" />
+    </element>
+    <element id="Organization.identifier:odsOrganisationCode.assigner">
+      <path value="Organization.identifier.assigner" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-Organization" />
+      </type>
     </element>
     <element id="Organization.identifier:odsSiteCode">
       <path value="Organization.identifier" />
@@ -77,7 +77,7 @@
       <definition value="The Organisation types **MUST** be present and comes from the valueSet.&#xD;&#xA;`type` will also include details on when these roles applied, the current status and a boolean to indicate the Organisations primary role. These extensions are for API's produced by NHS Digital one, the are not expected to be present in resources created by NHS providers or suppliers.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA; &quot;type&quot;:  [&#xD;&#xA;        {&#xD;&#xA;            &quot;extension&quot;:  [&#xD;&#xA;                {&#xD;&#xA;                    &quot;url&quot;: &quot;https://fhir.nhs.uk/StructureDefinition/Extension-ODS-Organization-Role&quot;,&#xD;&#xA;                    &quot;extension&quot;:  [&#xD;&#xA;                        {&#xD;&#xA;                            &quot;url&quot;: &quot;primaryRole&quot;,&#xD;&#xA;                            &quot;valueBoolean&quot;: true&#xD;&#xA;                        },&#xD;&#xA;                        {&#xD;&#xA;                            &quot;url&quot;: &quot;status&quot;,&#xD;&#xA;                            &quot;valueString&quot;: &quot;Active&quot;&#xD;&#xA;                        }&#xD;&#xA;                    ]&#xD;&#xA;                },&#xD;&#xA;                {&#xD;&#xA;                    &quot;url&quot;: &quot;https://fhir.nhs.uk/StructureDefinition/Extension-ODS-Organization-Role-ActivePeriod&quot;,&#xD;&#xA;                    &quot;extension&quot;:  [&#xD;&#xA;                        {&#xD;&#xA;                            &quot;url&quot;: &quot;activePeriod&quot;,&#xD;&#xA;                            &quot;valuePeriod&quot;: {&#xD;&#xA;                                &quot;start&quot;: &quot;2020-04-01&quot;&#xD;&#xA;                            }&#xD;&#xA;                        },&#xD;&#xA;                        {&#xD;&#xA;                            &quot;url&quot;: &quot;dateType&quot;,&#xD;&#xA;                            &quot;valueString&quot;: &quot;Operational&quot;&#xD;&#xA;                        }&#xD;&#xA;                    ]&#xD;&#xA;                }&#xD;&#xA;            ],&#xD;&#xA;            &quot;coding&quot;:  [&#xD;&#xA;                {&#xD;&#xA;                    &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/organisation-role&quot;,&#xD;&#xA;                    &quot;code&quot;: &quot;198&quot;,&#xD;&#xA;                    &quot;display&quot;: &quot;NHS TRUST SITE&quot;&#xD;&#xA;                }&#xD;&#xA;            ]&#xD;&#xA;        }&#xD;&#xA;    ],&#xD;&#xA;```" />
       <binding>
         <strength value="preferred" />
-        <valueSet value="https://fhir.nhs.uk/ValueSet/organisation-role" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/England-OrganisationRole" />
       </binding>
     </element>
     <element id="Organization.type.extension">
@@ -95,19 +95,23 @@
       <path value="Organization.type.extension" />
       <sliceName value="activePeriod" />
       <min value="0" />
+      <max value="*" />
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-ODS-Organization-Role-ActivePeriod" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-ODS-Organization-Role-ActivePeriod" />
       </type>
+      <isModifier value="false" />
     </element>
     <element id="Organization.type.extension:organisationRole">
       <path value="Organization.type.extension" />
       <sliceName value="organisationRole" />
       <min value="0" />
+      <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-ODS-Organization-Role" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-ODS-Organization-Role" />
       </type>
+      <isModifier value="false" />
     </element>
     <element id="Organization.type.coding.system">
       <path value="Organization.type.coding.system" />
@@ -155,6 +159,13 @@
     <element id="Organization.partOf.identifier.value">
       <path value="Organization.partOf.identifier.value" />
       <min value="1" />
+    </element>
+    <element id="Organization.endpoint.identifier.assigner">
+      <path value="Organization.endpoint.identifier.assigner" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-Organization" />
+      </type>
     </element>
   </differential>
 </StructureDefinition>
