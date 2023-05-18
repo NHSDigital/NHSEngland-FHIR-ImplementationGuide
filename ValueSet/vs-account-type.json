@@ -1,7 +1,7 @@
 {
     "resourceType": "ValueSet",
     "id": "ValueSet-England-AccountType",
-    "url": "https://fhir.nhs.uk/ValueSet/ValueSet-England-AccountType",
+    "url": "https://fhir.nhs.uk/ValueSet/England-AccountType",
     "version": "1.0.0",
     "name": "EnglandAccountType",
     "status": "draft",
@@ -9,7 +9,7 @@
     "compose": {
         "include": [
             {
-                "system": "https://fhir.nhs.uk/ValueSet/England-OrganisationRole",
+                "system": "https://fhir.nhs.uk/CodeSystem/England-organisation-role",
                 "version": "1.0.0",
                 "concept": [
                     {
