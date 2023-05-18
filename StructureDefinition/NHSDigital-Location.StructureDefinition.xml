@@ -42,7 +42,7 @@
       <path value="Location.type" />
       <binding>
         <strength value="extensible" />
-        <valueSet value="https://fhir.nhs.uk/ValueSet/location-type" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/England-LocationType" />
       </binding>
     </element>
     <element id="Location.type.extension">
