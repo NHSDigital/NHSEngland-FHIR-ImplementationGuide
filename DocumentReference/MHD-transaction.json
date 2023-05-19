@@ -39,6 +39,17 @@
             "value": "urn:uuid:7d5bb8ac-68ee-4926-85e7-b8aac8e1f09d"
           }
         ],
+        "category":  [
+          {
+              "coding":  [
+                  {
+                      "system": "http://snomed.info/sct",
+                      "code": "823681000000100",
+                      "display": "Outpatient letter"
+                  }
+              ]
+          }
+      ],
         "status": "current",
         "subject": {
           "identifier": {

@@ -111,7 +111,7 @@
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device" />
+        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Device" />
         <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Location" />
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient-Minimal" />
       </type>
@@ -120,14 +120,12 @@
         <severity value="warning" />
         <human value="subject - An identifier reference or resource reference must be provided" />
         <expression value="(reference.exists() or (identifier.exists()))" />
-        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Observation" />
       </constraint>
       <constraint>
         <key value="patient-nhs" />
         <severity value="error" />
         <human value="Supplied NHS Number is outside the English and Welsh NHS Number range or length of the number is wrong." />
         <expression value="identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').exists().not() or (identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').exists()  and identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').value.matches('^([456789]{1}[0-9]{9})$'))" />
-        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Observation" />
       </constraint>
       <mustSupport value="true" />
     </element>
@@ -156,7 +154,7 @@
         <code value="Reference" />
         <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Reference" />
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Organization" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/CareTeam" />
+        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-CareTeam" />
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient" />
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole-Minimal" />
         <aggregation value="referenced" />
@@ -166,7 +164,6 @@
         <severity value="error" />
         <human value="An identifier reference or resource reference must be provided" />
         <expression value="(reference.exists() or identifier.exists())" />
-        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Observation" />
       </constraint>
       <mustSupport value="true" />
     </element>

@@ -22,18 +22,12 @@
   <differential>
     <element id="Location.identifier">
       <path value="Location.identifier" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="system" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
       <comment value="SHOULD contain an ANANA/ODS code." />
     </element>
     <element id="Location.identifier:odsCode">
       <path value="Location.identifier" />
       <sliceName value="odsCode" />
+      <max value="0" />
     </element>
     <element id="Location.identifier:odsCode.system">
       <path value="Location.identifier.system" />
@@ -43,6 +37,46 @@
     <element id="Location.identifier:odsCode.value">
       <path value="Location.identifier.value" />
       <min value="1" />
+    </element>
+    <element id="Location.type">
+      <path value="Location.type" />
+      <binding>
+        <strength value="extensible" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/location-type" />
+      </binding>
+    </element>
+    <element id="Location.type.extension">
+      <path value="Location.type.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="Location.type.extension:locationRole">
+      <path value="Location.type.extension" />
+      <sliceName value="locationRole" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-ODS-Organization-Role" />
+      </type>
+      <isModifier value="false" />
+    </element>
+    <element id="Location.type.extension:activePeriod">
+      <path value="Location.type.extension" />
+      <sliceName value="activePeriod" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-ODS-Organization-Role-ActivePeriod" />
+      </type>
+      <isModifier value="false" />
     </element>
     <element id="Location.address">
       <path value="Location.address" />

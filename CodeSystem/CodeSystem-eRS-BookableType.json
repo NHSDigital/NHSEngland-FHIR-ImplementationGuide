@@ -1,0 +1,36 @@
+{
+    "resourceType": "CodeSystem",
+    "id": "557c247f-f482-4841-9179-9205573955a2",
+    "url": "https://fhir.nhs.uk/CodeSystem/eRS-BookableType",
+    "version": "1.1.0",
+    "name": "ERSBookableType",
+    "status": "draft",
+    "date": "2016-06-27",
+    "publisher": "NHS Digital",
+    "contact": [
+      {
+        "name": "Interoperability Team",
+        "telecom": [
+          {
+            "system": "email",
+            "value": "interoperabilityteam@nhs.net",
+            "use": "work"
+          }
+        ]
+      }
+    ],
+    "description": "Code System for eRS Bookable Type",
+    "copyright": "Copyright © 2017 NHS Digital",
+    "caseSensitive": true,
+    "content": "complete",
+    "concept": [
+      {
+        "code": "DIRECTLY_BOOKABLE",
+        "display": "Directly Bookable"
+      },
+      {
+        "code": "INDIRECTLY_BOOKABLE",
+        "display": "Indirectly Bookable"
+      }
+    ]
+  }

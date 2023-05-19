@@ -44,6 +44,7 @@
       <path value="DocumentReference.category" />
       <definition value="A categorization for the type of document referenced - helps for indexing and searching. This may be implied by or derived from the code specified in the DocumentReference.type.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;category&quot;:  [&#xD;&#xA;        {&#xD;&#xA;            &quot;coding&quot;:  [&#xD;&#xA;                {&#xD;&#xA;                    &quot;system&quot;: &quot;http://snomed.info/sct&quot;,&#xD;&#xA;                    &quot;code&quot;: &quot;734163000&quot;,&#xD;&#xA;                    &quot;display&quot;: &quot;Care plan&quot;&#xD;&#xA;                }&#xD;&#xA;            ]&#xD;&#xA;        }&#xD;&#xA;    ]&#xD;&#xA;```" />
       <mustSupport value="true" />
+      <min value="1" />
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="DocumentC80Class" />

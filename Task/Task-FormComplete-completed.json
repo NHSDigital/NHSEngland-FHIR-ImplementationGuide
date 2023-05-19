@@ -1,13 +1,13 @@
 {
     "resourceType": "Task",
-    "id": "06570d9e-1dd7-49b6-8276-c903eef74b73",
+    "id": "35f3dcdf-fda5-404d-87a0-f6846a58bec4",
     "identifier": [
         {
             "system": "https://tools.ietf.org/html/rfc4122",
             "value": "06570d9e-1dd7-49b6-8276-c903eef74b73"
         }
     ],
-    "status": "requested",
+    "status": "completed",
     "intent": "order",
     "code": {
         "coding": [
@@ -41,9 +41,10 @@
         "display": "LEEDS TEACHING HOSPITALS NHS TRUST"
     },
     "authoredOn": "2023-02-22T12:00:00+00:00",
+    "lastModified": "2023-02-23T12:00:00+00:00",
     "note": [
         {
-            "text": "Please perfrom this health check on this patient."
+            "text": "Please perform this health check on this patient."
         }
     ],
     "reasonCode": {
@@ -55,5 +56,25 @@
             }
         ],
         "text": "Code is for demonstration purposes and is probably not correct"
-    }
+    },
+    "output": [
+        {
+            "type": {
+                "coding": [
+                    {
+                        "system": "http://hl7.org/fhir/resource-types",
+                        "code": "QuestionnaireResponse"
+                    }
+                ],
+                "text": "Link to completed Health review"
+            },
+            "valueReference": {
+                "reference":"https://3cdzg7kbj4.execute-api.eu-west-2.amazonaws.com/poc/clinicaldatasharing/FHIR/R4/QuestionnaireResponse/9a3ea8c7-d1a4-4383-969b-5b3617245553",
+                "identifier": {
+                    "system": "https://tools.ietf.org/html/rfc4122",
+                    "value": "9a3ea8c7-d1a4-4383-969b-5b3617245553"
+                }
+            }
+        }
+    ]
 }
