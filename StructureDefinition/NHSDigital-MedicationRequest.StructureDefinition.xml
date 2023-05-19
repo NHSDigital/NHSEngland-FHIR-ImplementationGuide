@@ -18,91 +18,78 @@
         <severity value="error" />
         <human value="medication[x] - Only one of medicationReference or medicationCodeableConcept should be provided" />
         <expression value="(medicationReference.exists() and medicationCodeableConcept.exists().not()) or (medicationReference.exists().not() and medicationCodeableConcept.exists())" />
-        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationRequest" />
       </constraint>
       <constraint>
         <key value="eps-5" />
         <severity value="error" />
         <human value="Extension(responsiblePractitioner) - An identifier or resource reference must be provided" />
         <expression value="extension('https://fhir.nhs.uk/StructureDefinition/Extension-DM-ResponsiblePractitioner').exists().not() or (extension('https://fhir.nhs.uk/StructureDefinition/Extension-DM-ResponsiblePractitioner').value.reference.exists() or extension('https://fhir.nhs.uk/StructureDefinition/Extension-DM-ResponsiblePractitioner').value.system.exists())" />
-        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationRequest" />
       </constraint>
       <constraint>
         <key value="eps-6" />
         <severity value="error" />
         <human value="Extension repeatInformation is required for continuous and continuous-repeat-dispensing MedicationRequests. It is not required for actue MedicationRequests" />
         <expression value="(courseOfTherapyType.coding.code.startsWith('acute') and extension('https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-MedicationRepeatInformation').exists().not()) or  ((courseOfTherapyType.coding.code.startsWith('continuous')) and extension('https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-MedicationRepeatInformation').exists())" />
-        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationRequest" />
       </constraint>
       <constraint>
         <key value="eps-7" />
         <severity value="warning" />
         <human value="For continuous-repeat-dispensing intent must be reflex-order or original-order" />
         <expression value="(courseOfTherapyType.coding.code != 'continuous-repeat-dispensing') or ((courseOfTherapyType.coding.code = 'continuous-repeat-dispensing') and ((intent ='original-order') or (intent ='reflex-order')))" />
-        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationRequest" />
       </constraint>
       <constraint>
         <key value="eps-8" />
         <severity value="error" />
         <human value="For continuous intent must be instance-order or original-order" />
         <expression value="(courseOfTherapyType.coding.code != 'continuous') or ((courseOfTherapyType.coding.code = 'continuous') and ((intent ='original-order') or (intent ='instance-order')))" />
-        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationRequest" />
       </constraint>
       <constraint>
         <key value="eps-9" />
         <severity value="warning" />
         <human value="dispenseRequest.numberOfRepeatsAllowed should be populated for continuous and continuous-repeat-dispensing MedicationRequests." />
         <expression value="(courseOfTherapyType.coding.code.startsWith('acute')) or  (courseOfTherapyType.coding.code.startsWith('continuous') and dispenseRequest.exists() and dispenseRequest.numberOfRepeatsAllowed.exists())" />
-        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationRequest" />
       </constraint>
       <constraint>
         <key value="eps-10" />
         <severity value="error" />
         <human value="For continuous-repeat-dispensing (intent=reflex-order) basedOn must be populated" />
         <expression value="(courseOfTherapyType.coding.code = 'acute') or (courseOfTherapyType.coding.code = 'continuous') or (courseOfTherapyType.coding.code = 'continuous-repeat-dispensing' and intent !='reflex-order') or (courseOfTherapyType.coding.code = 'continuous-repeat-dispensing' and intent ='reflex-order' and dispenseRequest.exists() and basedOn.exists())" />
-        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationRequest" />
       </constraint>
       <constraint>
         <key value="eps-11" />
         <severity value="error" />
         <human value="For continuous-repeat-dispensing (intent=reflex-order) or continous orders, numberOfRepeatsAllowed must be empty or equal to 0" />
         <expression value="(courseOfTherapyType.coding.code = 'acute') or (courseOfTherapyType.coding.code = 'continuous-repeat-dispensing' and intent !='reflex-order') or ((courseOfTherapyType.coding.code = 'continuous' or (courseOfTherapyType.coding.code = 'continuous-repeat-dispensing' and intent ='reflex-order')) and (dispenseRequest.numberOfRepeatsAllowed.exists().not() or (dispenseRequest.numberOfRepeatsAllowed.exists() and dispenseRequest.numberOfRepeatsAllowed = 0)))" />
-        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationRequest" />
       </constraint>
       <constraint>
         <key value="eps-12" />
         <severity value="warning" />
         <human value="For continuous issues basedOn should be populated" />
         <expression value="(courseOfTherapyType.coding.code = 'acute') or (courseOfTherapyType.coding.code = 'continuous-repeat-dispensing') or (courseOfTherapyType.coding.code = 'continuous' and dispenseRequest.exists() and basedOn.exists())" />
-        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationRequest" />
       </constraint>
       <constraint>
         <key value="eps-13" />
         <severity value="error" />
         <human value="Extension repeatInformation.numberOfPrescriptionsIssued should not be present for continuous-repeat-dispensing that are not intent=reflex-order" />
         <expression value="(courseOfTherapyType.coding.code != 'continuous-repeat-dispensing') or (courseOfTherapyType.coding.code = 'continuous-repeat-dispensing' and intent='reflex-order') or (courseOfTherapyType.coding.code = 'continuous-repeat-dispensing' and intent!='reflex-order' and extension('https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-MedicationRepeatInformation').exists() and extension('https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-MedicationRepeatInformation').extension('numberOfPrescriptionsIssued').exists().not())" />
-        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationRequest" />
       </constraint>
       <constraint>
         <key value="eps-14" />
         <severity value="error" />
         <human value="Extension repeatInformation.numberOfPrescriptionsIssued should be present for continuous-repeat-dispensing that have intent=reflex-order" />
         <expression value="(courseOfTherapyType.coding.code != 'continuous-repeat-dispensing') or (courseOfTherapyType.coding.code = 'continuous-repeat-dispensing' and intent != 'reflex-order') or (courseOfTherapyType.coding.code = 'continuous-repeat-dispensing' and intent='reflex-order' and extension('https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-MedicationRepeatInformation').exists() and extension('https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-MedicationRepeatInformation').extension('numberOfPrescriptionsIssued').exists())" />
-        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationRequest" />
       </constraint>
       <constraint>
         <key value="eps-15" />
         <severity value="warning" />
         <human value="Extension repeatInformation.numberOfPrescriptionsIssued is recommend to be present for continuous issues" />
         <expression value="(courseOfTherapyType.coding.code != 'continuous') or (courseOfTherapyType.coding.code = 'continuous' and extension('https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-MedicationRepeatInformation').exists() and extension('https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-MedicationRepeatInformation').extension('numberOfPrescriptionsIssued').exists())" />
-        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationRequest" />
       </constraint>
       <constraint>
         <key value="eps-16" />
         <severity value="error" />
         <human value="Extension repeatInformation.numberOfPrescriptionsIssued should not be present for acute issues" />
         <expression value="(courseOfTherapyType.coding.code != 'acute') or (courseOfTherapyType.coding.code = 'acute' and extension('https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-MedicationRepeatInformation').exists().not())" />
-        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationRequest" />
       </constraint>
     </element>
     <element id="MedicationRequest.extension">
@@ -395,7 +382,6 @@
         <severity value="error" />
         <human value="requester - An identifier reference or resource reference must be provided" />
         <expression value="(reference.exists() or (identifier.exists()))" />
-        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationRequest" />
       </constraint>
       <mustSupport value="true" />
     </element>
@@ -421,7 +407,6 @@
         <severity value="error" />
         <human value="recorder - An identifier reference or resource reference must be provided" />
         <expression value="(reference.exists() or (identifier.exists()))" />
-        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationRequest" />
       </constraint>
     </element>
     <element id="MedicationRequest.basedOn">
@@ -548,7 +533,8 @@
     </element>
     <element id="MedicationRequest.dosageInstruction">
       <path value="MedicationRequest.dosageInstruction" />
-      <definition value="The content of the `dosageInstruction` should follow guidance in [Dosage Structure Overview](https://developer.nhs.uk/apis/dose-syntax-implementation/dosage-overview.html). (Note this is based on CareConnect STU3 but the guidance is still valid in UKCore R4)&#xD;&#xA;&#xD;&#xA;`dosageInstruction.text` **MUST** be supplied and is a human readable version of the structured dose as would be printed on a paper prescription. The prescriber is required to enter a medication item dosage. The use of a generic default value, for example “Use as directed”, if a value is not entered, is not acceptable from a clinical perspective.&#xD;&#xA;&#xD;&#xA;The prescriber is required to enter a medication item dosage. The use of a generic default value, for example “Use as directed”, if a value is not entered, is not acceptable from a clinical perspective. The user must be asked to select a dosage instruction from a pick list, type by hand or have the system populate with a valid and clinically safe dosage instruction relevant to the prescribed medication or clinical circumstances.&#xD;&#xA;&#xD;&#xA;As per BNF guidelines, the dosage must be presented to the user without abbreviation although it may be entered and stored within the PMR in an abbreviated form. Within HL7 messaging, the dosage instruction must be represented without abbreviation.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;dosageInstruction&quot;: [&#xD;&#xA;   {&#xD;&#xA;        &quot;text&quot;: &quot;10 milligram, Inject, Subcutaneous route, once weekly&quot;,&#xD;&#xA;        &quot;timing&quot;: {&#xD;&#xA;            &quot;repeat&quot;: {&#xD;&#xA;                &quot;boundsDuration&quot;: {&#xD;&#xA;                    &quot;value&quot;: 10,&#xD;&#xA;                    &quot;unit&quot;: &quot;day&quot;,&#xD;&#xA;                     &quot;system&quot;: &quot;http://unitsofmeasure.org&quot;,&#xD;&#xA;                     &quot;code&quot;: &quot;d&quot;&#xD;&#xA;                },&#xD;&#xA;                 &quot;frequency&quot;: 5,&#xD;&#xA;                 &quot;period&quot;: 1,&#xD;&#xA;                &quot;periodUnit&quot;: &quot;d&quot;&#xD;&#xA;             }&#xD;&#xA;        },&#xD;&#xA;        &quot;route&quot;: {&#xD;&#xA;            &quot;coding&quot;: [&#xD;&#xA;                {&#xD;&#xA;                    &quot;system&quot;: &quot;http://snomed.info/sct&quot;,&#xD;&#xA;                    &quot;code&quot;: &quot;34206005&quot;,&#xD;&#xA;                    &quot;display&quot;: &quot;Subcutaneous route&quot;&#xD;&#xA;                }&#xD;&#xA;            ]&#xD;&#xA;        },&#xD;&#xA;        &quot;method&quot;: {&#xD;&#xA;            &quot;coding&quot;: [&#xD;&#xA;                {&#xD;&#xA;                    &quot;system&quot;: &quot;http://snomed.info/sct&quot;,&#xD;&#xA;                    &quot;code&quot;: &quot;422145002&quot;,&#xD;&#xA;                    &quot;display&quot;: &quot;Inject&quot;&#xD;&#xA;                }&#xD;&#xA;            ]&#xD;&#xA;        },&#xD;&#xA;        &quot;doseAndRate&quot;: [&#xD;&#xA;            {&#xD;&#xA;                &quot;doseQuantity&quot;: {&#xD;&#xA;                    &quot;value&quot;: 10,&#xD;&#xA;                    &quot;unit&quot;: &quot;milligram&quot;,&#xD;&#xA;                    &quot;system&quot;: &quot;http://unitsofmeasure.org&quot;,&#xD;&#xA;                    &quot;code&quot;: &quot;mg&quot;&#xD;&#xA;                }&#xD;&#xA;            }&#xD;&#xA;        ]&#xD;&#xA;    }&#xD;&#xA;]&#xD;&#xA;&#xD;&#xA;```" />
+      <definition value="The content of the `dosageInstruction` should follow guidance in [Digital Medicines Dosage](https://simplifier.net/guide/ukcoreimplementationguideformedicines/ElementDosage).&#xD;&#xA;&#xD;&#xA;`dosageInstruction.text` **MUST** be supplied and is a human readable version of the structured dose as would be printed on a paper prescription. The use of a generic default value, for example “Use as directed”, if a value is not entered, is not acceptable from a clinical perspective. The user must be asked to select a dosage instruction from a pick list, type by hand or have the system populate with a valid and clinically safe dosage instruction relevant to the prescribed medication or clinical circumstances.&#xD;&#xA;&#xD;&#xA;As per BNF guidelines, the dosage must be presented to the user without abbreviation although it may be entered and stored within the PMR in an abbreviated form. Within HL7 messaging, the dosage instruction must be represented without abbreviation.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;dosageInstruction&quot;: [&#xD;&#xA;   {&#xD;&#xA;        &quot;text&quot;: &quot;Inject 10 milligram, once a week, Subcutaneous route, for 10 weeks&quot;,&#xD;&#xA;        &quot;timing&quot;: {&#xD;&#xA;            &quot;repeat&quot;: {&#xD;&#xA;                &quot;boundsDuration&quot;: {&#xD;&#xA;                    &quot;value&quot;: 10,&#xD;&#xA;                    &quot;unit&quot;: &quot;week&quot;,&#xD;&#xA;                     &quot;system&quot;: &quot;http://unitsofmeasure.org&quot;,&#xD;&#xA;                     &quot;code&quot;: &quot;wk&quot;&#xD;&#xA;                },&#xD;&#xA;                 &quot;frequency&quot;: 1,&#xD;&#xA;                 &quot;period&quot;: 1,&#xD;&#xA;                &quot;periodUnit&quot;: &quot;wk&quot;&#xD;&#xA;             }&#xD;&#xA;        },&#xD;&#xA;        &quot;route&quot;: {&#xD;&#xA;            &quot;coding&quot;: [&#xD;&#xA;                {&#xD;&#xA;                    &quot;system&quot;: &quot;http://snomed.info/sct&quot;,&#xD;&#xA;                    &quot;code&quot;: &quot;34206005&quot;,&#xD;&#xA;                    &quot;display&quot;: &quot;Subcutaneous route&quot;&#xD;&#xA;                }&#xD;&#xA;            ]&#xD;&#xA;        },&#xD;&#xA;        &quot;method&quot;: {&#xD;&#xA;            &quot;coding&quot;: [&#xD;&#xA;                {&#xD;&#xA;                    &quot;system&quot;: &quot;http://snomed.info/sct&quot;,&#xD;&#xA;                    &quot;code&quot;: &quot;422145002&quot;,&#xD;&#xA;                    &quot;display&quot;: &quot;Inject&quot;&#xD;&#xA;                }&#xD;&#xA;            ]&#xD;&#xA;        },&#xD;&#xA;        &quot;doseAndRate&quot;: [&#xD;&#xA;            {&#xD;&#xA;                &quot;doseQuantity&quot;: {&#xD;&#xA;                    &quot;value&quot;: 10,&#xD;&#xA;                    &quot;unit&quot;: &quot;milligram&quot;,&#xD;&#xA;                    &quot;system&quot;: &quot;http://unitsofmeasure.org&quot;,&#xD;&#xA;                    &quot;code&quot;: &quot;mg&quot;&#xD;&#xA;                }&#xD;&#xA;            }&#xD;&#xA;        ]&#xD;&#xA;    }&#xD;&#xA;]&#xD;&#xA;&#xD;&#xA;```" />
+      <comment value="There are examples where a medication request may include the option of an oral dose or an Intravenous or Intramuscular dose.  For example, &quot;Ondansetron 8mg orally or IV twice a day as needed for nausea&quot; or &quot;Compazine® (prochlorperazine) 5-10mg PO or 25mg PR bid prn nausea or vomiting&quot;.  In these cases, two medication requests would be created and should be grouped together via a parent [RequestGroup](https://www.hl7.org/fhir/R4/requestgroup.html) resource, specifying selectionBehaviour=&quot;exactly-one&quot;.  The decision on which dose and route of administration to use is based on the patient's condition at the time the dose is needed." />
       <min value="1" />
       <type>
         <code value="Dosage" />
