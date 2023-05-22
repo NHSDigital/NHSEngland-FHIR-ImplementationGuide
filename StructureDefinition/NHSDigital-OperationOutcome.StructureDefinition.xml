@@ -71,7 +71,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-SupportingInfoPrescription" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-SpineSupportingInfoPrescription" />
       </type>
       <isModifier value="false" />
     </element>
