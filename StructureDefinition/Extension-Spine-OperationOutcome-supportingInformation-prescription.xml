@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="Extension-England-OperationOutcome-SupportingInfo-Prescription" />
-  <url value="https://fhir.nhs.uk/StructureDefinition/Extension-England-OperationOutcome-SupportingInfo-Prescription" />
+  <id value="Extension-England-SpineSupportingInfoPrescription" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/Extension-England-SpineSupportingInfoPrescription" />
   <version value="4.0.1" />
-  <name value="ExtensionEnglandOperationOutcomeSupportingInfoPrescription" />
+  <name value="ExtensionEnglandOperationSpineSupportingInfoPrescription" />
   <title value="Extension England Spine Supporting Information Prescription" />
   <status value="draft" />
   <date value="2023-06-01" />
@@ -43,7 +43,7 @@
     </element>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="https://fhir.nhs.uk/StructureDefinition/Extension-England-OperationOutcome-SupportingInfo-Prescription" />
+      <fixedUri value="https://fhir.nhs.uk/StructureDefinition/Extension-England-SpineSupportingInfoPrescription" />
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />

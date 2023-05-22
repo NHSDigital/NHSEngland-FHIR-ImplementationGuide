@@ -60,7 +60,7 @@
       <min value="0" />
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-OperationOutcome-Spine-SupportingInfo" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-SpineSupportingInfo" />
       </type>
     </element>
     <element id="OperationOutcome.extension:supportingInfoPrescription">
@@ -71,7 +71,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-OperationOutcome-SupportingInfo-Prescription" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-SupportingInfoPrescription" />
       </type>
       <isModifier value="false" />
     </element>
@@ -101,7 +101,7 @@
       <mustSupport value="true" />
       <binding>
         <strength value="preferred" />
-        <valueSet value="https://fhir.nhs.uk/ValueSet/England-OperationOutcome-Codes" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/England-OperationOutcomeCodes" />
       </binding>
     </element>
     <element id="OperationOutcome.issue.details.coding">
@@ -111,7 +111,7 @@
       <mustSupport value="true" />
       <binding>
         <strength value="extensible" />
-        <valueSet value="https://fhir.nhs.uk/ValueSet/England-OperationOutcome-Codes" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/England-OperationOutcomeCodes" />
       </binding>
     </element>
     <element id="OperationOutcome.issue.details.coding.system">
