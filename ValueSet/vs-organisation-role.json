@@ -9,7 +9,7 @@
   "compose": {
     "include": [
       {
-        "system": "https://fhir.nhs.uk/CodeSystem/England-organisation-role",
+        "system": "https://fhir.nhs.uk/CodeSystem/England-OrganisationRole",
         "version": "1.0.0",
         "concept": [
           {

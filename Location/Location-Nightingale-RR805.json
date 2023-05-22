@@ -42,7 +42,7 @@
             ],
             "coding": [
                 {
-                    "system": "https://fhir.nhs.uk/CodeSystem/England-organisation-role",
+                    "system": "https://fhir.nhs.uk/CodeSystem/England-OrganisationRole",
                     "code": "198",
                     "display": "NHS TRUST SITE"
                 }
