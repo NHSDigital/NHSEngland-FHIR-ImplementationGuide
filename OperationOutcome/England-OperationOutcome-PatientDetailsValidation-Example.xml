@@ -15,7 +15,7 @@
         <code value="processing" />
         <details>
             <coding>
-                <system value="https://fhir.nhs.uk/CodeSystem/Spine-ErrorOrWarningCode" />
+                <system value="https://fhir.nhs.uk/CodeSystem/England-SpineErrorOrWarningCode" />
                 <code value="INVALID_VALUE" />
                 <display value="Invalid value" />
             </coding>
