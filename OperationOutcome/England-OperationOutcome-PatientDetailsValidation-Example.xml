@@ -6,7 +6,7 @@
     <issue>
         <severity value="information" />
         <code value="processing" />
-        <diagnostics value="This element does not match any known slice defined in the profile https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient" />
+        <diagnostics value="This element does not match any known slice defined in the profile https://fhir.nhs.uk/StructureDefinition/England-Patient" />
         <location value="Patient.identifier[1]" />
         <location value="Line 1, Col 651" />
     </issue>
@@ -20,7 +20,7 @@
                 <display value="Invalid value" />
             </coding>
         </details>
-        <diagnostics value="Patient.gender: minimum required = 1, but only found 0 (from https://fhir.nhs.uk/StructureDefinition/NHSDigital-Patient)" />
+        <diagnostics value="Patient.gender: minimum required = 1, but only found 0 (from https://fhir.nhs.uk/StructureDefinition/England-Patient)" />
         <location value="Patient" />
         <location value="Line 1, Col 37" />
     </issue>
