@@ -63,7 +63,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-ODS-Organization-Role" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-ODSOrganizationRole" />
       </type>
       <isModifier value="false" />
     </element>
@@ -74,7 +74,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-ODS-Organization-Role-ActivePeriod" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-ODSOrganizationRoleActivePeriod" />
       </type>
       <isModifier value="false" />
     </element>

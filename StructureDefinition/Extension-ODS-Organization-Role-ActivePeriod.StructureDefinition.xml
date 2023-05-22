@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="Extension-England-ODS-Organization-Role-ActivePeriod" />
-  <url value="https://fhir.nhs.uk/StructureDefinition/Extension-England-ODS-Organization-Role-ActivePeriod" />
+  <id value="Extension-England-ODSOrganizationRoleActivePeriod" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/Extension-England-ODSOrganizationRoleActivePeriod" />
   <version value="1.0.0" />
   <name value="ExtensionEnglandODSOrganizationRoleActivePeriod" />
   <title value="Extension England ODS Organization Role Active Period" />
@@ -87,7 +87,7 @@
     </element>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="https://fhir.nhs.uk/StructureDefinition/Extension-England-ODS-Organization-Role-ActivePeriod" />
+      <fixedUri value="https://fhir.nhs.uk/StructureDefinition/Extension-England-ODSOrganizationRoleActivePeriod" />
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />

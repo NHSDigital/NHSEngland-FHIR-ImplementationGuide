@@ -12,7 +12,7 @@
         {
             "extension": [
                 {
-                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-England-ODS-Organization-Role",
+                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-England-ODSOrganizationRole",
                     "extension": [
                         {
                             "url": "primaryRole",
@@ -25,7 +25,7 @@
                     ]
                 },
                 {
-                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-England-ODS-Organization-Role-ActivePeriod",
+                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-England-ODSOrganizationRoleActivePeriod",
                     "extension": [
                         {
                             "url": "activePeriod",

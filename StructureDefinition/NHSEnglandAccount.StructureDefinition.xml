@@ -14,7 +14,7 @@
       <path value="Account.type" />
       <binding>
         <strength value="extensible" />
-        <valueSet value="https://fhir.nhs.uk/ValueSet/account-type" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/England-AccountType" />
       </binding>
     </element>
     <element id="Account.type.extension">
@@ -37,7 +37,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-ODS-Organization-Role" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-ODSOrganizationRole" />
       </type>
       <isModifier value="false" />
     </element>
@@ -50,7 +50,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-ODS-Organization-Role-ActivePeriod" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-ODSOrganizationRoleActivePeriod" />
       </type>
       <isModifier value="false" />
     </element>
