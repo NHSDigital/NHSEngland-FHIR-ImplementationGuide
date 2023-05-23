@@ -111,7 +111,7 @@
       <definition value="A traced NHS Number **SHOULD** be provided and when applicable a resource reference to the Patient resource.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;patient&quot;: {&#xD;&#xA;                    &quot;reference&quot;: &quot;urn:uuid:edea022a-2d81-11eb-adc1-0242ac120002&quot;,&#xD;&#xA;                    &quot;type&quot;: &quot;Patient&quot;,&#xD;&#xA;                    &quot;identifier&quot;: {&#xD;&#xA;                        &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/nhs-number&quot;,&#xD;&#xA;                        &quot;value&quot;: &quot;9912003888&quot;&#xD;&#xA;                    }&#xD;&#xA;                },&#xD;&#xA;```" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-Patient-Minimal" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-PatientMinimal" />
       </type>
       <constraint>
         <key value="patient-reference" />
