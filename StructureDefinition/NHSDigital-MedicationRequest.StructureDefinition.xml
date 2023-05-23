@@ -1,9 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="db5e6fcc-2f29-42a8-ab29-18faa469d032" />
+  <id value="England-MedicationRequest" />
   <url value="https://fhir.nhs.uk/StructureDefinition/England-MedicationRequest" />
-  <name value="NHSDigitalMedicationRequest" />
+  <version value="1.0.0" />
+  <name value="EnglandMedicationRequest" />
+  <title value="England MedicationRequest" />
   <status value="draft" />
+  <date value="2023-06-01" />
+  <publisher value="NHS England" />
+  <contact>
+    <name value="NHS England" />
+    <telecom>
+      <system value="email" />
+      <value value="interoperabilityteam@nhs.net" />
+      <use value="work" />
+      <rank value="1" />
+    </telecom>
+  </contact>
+  <description value="This profile defines the NHS England constraints and extensions on the UK Core FHIR resource [UKCore MedicationRequest](https://simplifier.net/hl7fhirukcorer4/ukcore-medicationrequest)." />
+  <purpose value="An order or request for both supply of the medication and the instructions for administration of the medication to an individual. \n\nThis profile covers inpatient medication orders as well as community orders (whether filled by the prescriber or by a pharmacy). It also includes orders for over-the-counter medications (e.g. Aspirin), total parenteral nutrition and diet/ vitamin supplements, and may be used to support the order of medication-related devices. \n\nIt is not intended for use in prescribing particular diets, or for ordering non-medication-related items (eyeglasses, supplies, etc)." />
+  <copyright value="Copyright © 2021+ HL7 UK Licensed under the Apache License, Version 2.0 (the \&quot;License\&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at  http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \&quot;AS IS\&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. HL7® FHIR® standard Copyright © 2011+ HL7 The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at  https://www.hl7.org/fhir/license.html." />
   <fhirVersion value="4.0.1" />
   <kind value="resource" />
   <abstract value="false" />
@@ -108,77 +124,68 @@
     <element id="MedicationRequest.extension:responsiblePractitioner">
       <path value="MedicationRequest.extension" />
       <sliceName value="responsiblePractitioner" />
-      <short value="Responsible Practitioner for the prescription" />
-      <definition value="Must only be populated if the  `requester` can not be responsible for the prescription, i.e. they would not be named as the prescriber on the FP10.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;extension&quot;: [&#xD;&#xA;        &#xD;&#xA;    {&#xD;&#xA;        &quot;url&quot;: &quot;https://fhir.nhs.uk/StructureDefinition/Extension-DM-ResponsiblePractitioner&quot;,&#xD;&#xA;        &quot;valueReference&quot;: {&#xD;&#xA;            &quot;reference&quot;: &quot;urn:uuid:a5acefc1-f8ca-4989-a5ac-34ae36741466&quot;,&#xD;&#xA;            &quot;display&quot;: &quot;DR SAZ RAZ&quot;&#xD;&#xA;        }&#xD;&#xA;    }&#xD;&#xA;],&#xD;&#xA;```" />
       <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-DM-ResponsiblePractitioner" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-DMResponsiblePractitioner" />
       </type>
-      <mustSupport value="true" />
+      <isModifier value="false" />
     </element>
     <element id="MedicationRequest.extension:prescriptionEndorsement">
       <path value="MedicationRequest.extension" />
       <sliceName value="prescriptionEndorsement" />
-      <short value="NHS BSA Prescription Endorsements" />
-      <definition value="The codes are contained in the valueset&#xD;&#xA;&#xD;&#xA;| Code | Display |&#xD;&#xA;|---|---|&#xD;&#xA;| CC |  Contraceptive |&#xD;&#xA;| FS |  Sexual Health| &#xD;&#xA;| ACBS |  Advisory Committee on Borderline Substances. Part XV Drug Tariff | &#xD;&#xA;| SLS |  Selected List Scheme. Part XVIIIB Drug Tariff | &#xD;&#xA;| AF |  Food replacement/food supplement products|&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;resourceType&quot;: &quot;MedicationRequest&quot;,&#xD;&#xA;    &quot;extension&quot;:  [&#xD;&#xA;      {&#xD;&#xA;          &quot;url&quot;: &quot;https://fhir.nhs.uk/StructureDefinition/Extension-DM-PrescriptionEndorsement&quot;,&#xD;&#xA;          &quot;valueCodeableConcept&quot;: {&#xD;&#xA;              &quot;coding&quot;:  [&#xD;&#xA;                {&#xD;&#xA;                    &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/medicationrequest-endorsement&quot;,&#xD;&#xA;                    &quot;code&quot;: &quot;SLS&quot;,&#xD;&#xA;                    &quot;display&quot;: &quot;Selected List Scheme&quot;&#xD;&#xA;                }&#xD;&#xA;            ]&#xD;&#xA;        }&#xD;&#xA;    }&#xD;&#xA;  ],&#xD;&#xA;```" />
       <min value="0" />
+      <max value="*" />
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-DM-PrescriptionEndorsement" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-DMPrescriptionEndorsement" />
       </type>
-      <mustSupport value="true" />
+      <isModifier value="false" />
     </element>
     <element id="MedicationRequest.extension:prescriptionTaskStatusReason">
       <path value="MedicationRequest.extension" />
       <sliceName value="prescriptionTaskStatusReason" />
-      <short value="Prescription task status reason" />
-      <definition value="The status history within EPS is primarily a technical Status and the statusReason will reflect current clinical status of the order." />
       <min value="0" />
+      <max value="*" />
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-DM-PrescriptionStatusHistory" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-DMPrescriptionStatusHistory" />
       </type>
-      <mustSupport value="true" />
-    </element>
-    <element id="MedicationRequest.extension:NHSBSAprescriptionType">
-      <path value="MedicationRequest.extension" />
-      <sliceName value="NHSBSAprescriptionType" />
-      <short value="NHS BSA Prescription Type" />
-      <definition value="The vocabulary for the ‘PrescriptionType’ vocabulary is defined within the NHSBSA Overprint Specification. &#xD;&#xA;&#xD;&#xA;The System must populate the ‘PrescriptionType’ attribute for the appropriate combination of prescriber and care setting. Retired codes within this vocabulary must not be used&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;extension&quot;:  [&#xD;&#xA;    {&#xD;&#xA;        &quot;url&quot;: &quot;https://fhir.nhs.uk/StructureDefinition/Extension-DM-PrescriptionType&quot;,&#xD;&#xA;        &quot;valueCoding&quot;: {&#xD;&#xA;            &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/prescription-type&quot;,&#xD;&#xA;            &quot;code&quot;: &quot;1201&quot;,&#xD;&#xA;            &quot;display&quot;: &quot;Outpatient Homecare Prescriber - Medical Prescriber&quot;&#xD;&#xA;        }&#xD;&#xA;    }&#xD;&#xA;    ]&#xD;&#xA;```" />
-      <min value="1" />
-      <type>
-        <code value="Extension" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-DM-PrescriptionType" />
-      </type>
-      <mustSupport value="true" />
+      <isModifier value="false" />
     </element>
     <element id="MedicationRequest.extension:controlledDrug">
       <path value="MedicationRequest.extension" />
       <sliceName value="controlledDrug" />
-      <short value="Optional Controlled Drug Extensions" />
-      <definition value="The table below summarises the EPS requirements for the CD schedules. The terms “Hand signature” and “Electronic signature” expressed in the table are shortened references to the legal definition of signature requirements within government legislation.&#xD;&#xA;&#xD;&#xA;| Sch. | Code | Signing Legal Requirement | EPS Scope | Expiry Date | Quantity Representation | Repeat Dispensing Allowed | RD 1st Issue Expiry | RD Subsequent Expiry |&#xD;&#xA;|---|---|---|---|---|---|---|---|---|&#xD;&#xA;| 1 | CD1 | Invalid to prescribe | Out of scope | N/A | N/A | N/A | N/A ||&#xD;&#xA;| 2 | CD2 | Hand signature or electronic signature | In scope | 28 days | Words and Figures | No | N/A | N/A ||&#xD;&#xA;| 3 | CD3 | Hand signature or electronic signature | In scope | 28 days | Words and Figures | No | N/A | N/A ||&#xD;&#xA;| 4 | CD4-1 CD4-2 | Hand signature or electronic signature | In scope | 28 days | Figures | Yes | 28 days | Up to 12 months |&#xD;&#xA;| 5 | CD5 | Hand signature or electronic signature | In scope | 6 Months | Figures | Yes | 6 months | Up to 12 months |&#xD;&#xA;&#xD;&#xA;It is a legal requirement to state the prescribed quantity as words in the `quantityWords`&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;{&#xD;&#xA;    &quot;url&quot;: &quot;https://fhir.nhs.uk/StructureDefinition/Extension-DM-ControlledDrug&quot;,&#xD;&#xA;    &quot;extension&quot;: [&#xD;&#xA;        {&#xD;&#xA;            &quot;url&quot;: &quot;quantityWords&quot;,&#xD;&#xA;            &quot;valueString&quot;: &quot;twenty eight&quot;&#xD;&#xA;        },&#xD;&#xA;        {&#xD;&#xA;            &quot;url&quot;: &quot;schedule&quot;,&#xD;&#xA;            &quot;valueCoding&quot;: {&#xD;&#xA;                &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/medicationrequest-controlled-drug&quot;,&#xD;&#xA;                &quot;code&quot;: &quot;CD2&quot;,&#xD;&#xA;                &quot;display&quot;: &quot;Schedule 2&quot;&#xD;&#xA;            }&#xD;&#xA;        }&#xD;&#xA;    ]&#xD;&#xA;}&#xD;&#xA;```" />
       <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-DM-ControlledDrug" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-DMControlledDrug" />
       </type>
-      <mustSupport value="true" />
+      <isModifier value="false" />
     </element>
     <element id="MedicationRequest.extension:dispensingInformation">
       <path value="MedicationRequest.extension" />
       <sliceName value="dispensingInformation" />
-      <short value="For EPS use only" />
-      <definition value="This extension is used in `continuous-repeat-dispensing` prescriptions sent by EPS to dispensing systems to convey information on prior dispensed medications.&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;extension&quot;:  [&#xD;&#xA;                {&#xD;&#xA;                    &quot;url&quot;: &quot;https://fhir.nhs.uk/StructureDefinition/Extension-EPS-DispensingInformation&quot;,&#xD;&#xA;                    &quot;extension&quot;:  [&#xD;&#xA;                        {&#xD;&#xA;                            &quot;url&quot;: &quot;dispenseStatus&quot;,&#xD;&#xA;                            &quot;valueCoding&quot;: {&#xD;&#xA;                                &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/medicationdispense-type&quot;,&#xD;&#xA;                                &quot;code&quot;: &quot;0001&quot;,&#xD;&#xA;                                &quot;display&quot;: &quot;Item fully dispensed&quot;&#xD;&#xA;                            }&#xD;&#xA;                        },&#xD;&#xA;                        {&#xD;&#xA;                            &quot;url&quot;: &quot;dateLastDispensed&quot;,&#xD;&#xA;                            &quot;valueDateTime&quot;: &quot;2018-04-22T09:57:03+00:00&quot;&#xD;&#xA;                        }&#xD;&#xA;                    ]&#xD;&#xA;                }&#xD;&#xA;            ],&#xD;&#xA;```" />
       <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-EPS-DispensingInformation" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-EPSDispensingInformation" />
       </type>
-      <mustSupport value="true" />
+      <isModifier value="false" />
+    </element>
+    <element id="MedicationRequest.extension:NHSBSAPrescriptionType">
+      <path value="MedicationRequest.extension" />
+      <sliceName value="NHSBSAPrescriptionType" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-DMPrescriptionType" />
+      </type>
+      <isModifier value="false" />
     </element>
     <element id="MedicationRequest.identifier">
       <path value="MedicationRequest.identifier" />

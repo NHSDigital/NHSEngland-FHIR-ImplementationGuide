@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="a3d92f68-fc3d-4004-a5c9-b6eb6049d368"/>
-  <url value="https://fhir.nhs.uk/StructureDefinition/Extension-DM-PrescriptionEndorsement" />
-  <name value="ExtensionPrescriptionEndorsement" />
+  <id value="Extension-England-DMPrescriptionEndorsement" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/Extension-England-DMPrescriptionEndorsement" />
+  <version value="1.0.0" />
+  <name value="ExtensionEnglandDMPrescriptionEndorsementNew" />
+  <title value="Extension England DM PrescriptionEndorsement" />
   <status value="draft" />
+  <date value="2023-06-01" />
+  <description value="Extension for PrescriptionEndorsement" />
+  <purpose value="Extension for PrescriptionEndorsement" />
   <fhirVersion value="4.0.1" />
   <mapping>
     <identity value="rim" />
@@ -22,7 +27,7 @@
   <differential>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="https://fhir.nhs.uk/StructureDefinition/Extension-DM-PrescriptionEndorsement" />
+      <fixedUri value="https://fhir.nhs.uk/StructureDefinition/Extension-England-DMPrescriptionEndorsement" />
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />

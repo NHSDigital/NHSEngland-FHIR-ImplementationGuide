@@ -1,9 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="cb27c46c-ea79-4609-8a79-efa1e799755c"/>
-  <url value="https://fhir.nhs.uk/StructureDefinition/Extension-DM-PrescriptionStatusHistory" />
-  <name value="ExtensionDMPrescriptionStatusHistory" />
+  <id value="Extension-England-DMPrescriptionStatusHistory" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/Extension-England-DMPrescriptionStatusHistory" />
+  <version value="1.0.0" />
+  <name value="ExtensionEnglandDMPrescriptionStatusHistory" />
+  <title value="Extension England DM PrescriptionStatusHistory" />
   <status value="draft" />
+  <date value="2023-06-01" />
+  <publisher value="NHS England" />
+  <contact>
+    <name value="NHS England" />
+    <telecom>
+      <system value="email" />
+      <value value="interoperabilityteam@nhs.net" />
+      <use value="work" />
+      <rank value="1" />
+    </telecom>
+  </contact>
+  <description value="Extension for Prescription Status History" />
+  <purpose value="Extension for Prescription Status History" />
+  <copyright value="Copyright © 2021+ HL7 UK Licensed under the Apache License, Version 2.0 (the \&quot;License\&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at  http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \&quot;AS IS\&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. HL7® FHIR® standard Copyright © 2011+ HL7 The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at  https://www.hl7.org/fhir/license." />
   <fhirVersion value="4.0.1" />
   <mapping>
     <identity value="rim" />
@@ -29,10 +45,12 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <min value="1" />
     </element>
     <element id="Extension.extension:statusDate">
       <path value="Extension.extension" />
       <sliceName value="statusDate" />
+      <min value="0" />
       <max value="1" />
     </element>
     <element id="Extension.extension:statusDate.url">
@@ -75,7 +93,7 @@
     </element>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="https://fhir.nhs.uk/StructureDefinition/Extension-DM-PrescriptionStatusHistory" />
+      <fixedUri value="https://fhir.nhs.uk/StructureDefinition/Extension-England-DMPrescriptionStatusHistory" />
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />
