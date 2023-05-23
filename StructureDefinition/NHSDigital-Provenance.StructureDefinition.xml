@@ -96,7 +96,7 @@
       <path value="Provenance.agent.onBehalfOf.identifier.assigner" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/England-Organization" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-Organization" />
       </type>
     </element>
     <element id="Provenance.signature">
@@ -115,8 +115,8 @@
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-Practitioner" />
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-PractitionerRole" />
         <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-RelatedPerson" />
-        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/England-Patient" />
-        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/England-Organization" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-Patient" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-Organization" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -128,7 +128,7 @@
       <path value="Provenance.signature.onBehalfOf.identifier.assigner" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/England-Organization" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-Organization" />
       </type>
     </element>
   </differential>
