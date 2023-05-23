@@ -31,7 +31,7 @@
       <min value="0" />
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-ODS-Organization-Role" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-ODSOrganizationRole" />
       </type>
     </element>
     <element id="Organization.type.coding.system">

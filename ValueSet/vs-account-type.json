@@ -1,16 +1,16 @@
 {
     "resourceType": "ValueSet",
-    "id": "vs-account-type",
-    "url": "https://fhir.nhs.uk/ValueSet/account-type",
-    "version": "2.0.4",
-    "name": "NHSAccountType",
+    "id": "ValueSet-England-AccountType",
+    "url": "https://fhir.nhs.uk/ValueSet/England-AccountType",
+    "version": "1.0.0",
+    "name": "EnglandAccountType",
     "status": "draft",
     "description": "A ValueSet to identify the roles (type) of account.",
     "compose": {
         "include": [
             {
-                "system": "https://fhir.nhs.uk/CodeSystem/organisation-role",
-                "version": "2.0.2",
+                "system": "https://fhir.nhs.uk/CodeSystem/England-OrganisationRole",
+                "version": "1.0.0",
                 "concept": [
                     {
                         "code": "260",

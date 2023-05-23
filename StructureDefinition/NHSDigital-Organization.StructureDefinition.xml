@@ -1,10 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="19aa8f3d-46b0-486a-bab8-056a383e0f88" />
+  <id value="England-Organization" />
   <url value="https://fhir.nhs.uk/StructureDefinition/England-Organization" />
-  <name value="NHSDigitalOrganization" />
+  <version value="1.0.0" />
+  <name value="EnglandOrganization" />
+  <title value="England Organization" />
   <status value="draft" />
-  <purpose value="NHS Digital generic definintion of the data requirements for Organization." />
+  <date value="2023-06-01" />
+  <publisher value="NHS England" />
+  <contact>
+    <name value="NHS England" />
+    <telecom>
+      <system value="email" />
+      <value value="interoperabilityteam@nhs.net" />
+      <use value="work" />
+      <rank value="1" />
+    </telecom>
+  </contact>
+  <description value="This profile defines the NHS England constraints and extensions on the UK Core FHIR resource [UK Core Organization]https://simplifier.net/hl7fhirukcorer4/ukcore-organization)." />
+  <purpose value="This profile allows exchange of a formally or informally recognised grouping of people or organisations formed for the purpose of achieving some form of collective action. Includes companies, institutions, corporations, departments, community groups, healthcare practice groups, etc." />
+  <copyright value="Copyright © 2021+ HL7 UK Licensed under the Apache License, Version 2.0 (the \&quot;License\&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at  http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \&quot;AS IS\&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. HL7® FHIR® standard Copyright © 2011+ HL7 The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at  https://www.hl7.org/fhir/license.html." />
   <fhirVersion value="4.0.1" />
   <kind value="resource" />
   <abstract value="false" />
@@ -30,8 +45,9 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-ODS-OrganisationRelationships" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-ODSOrganisationRelationships" />
       </type>
+      <isModifier value="false" />
     </element>
     <element id="Organization.identifier">
       <path value="Organization.identifier" />
@@ -39,6 +55,17 @@
       <comment value="MUST contain an ANANA/ODS code." />
       <min value="1" />
       <mustSupport value="true" />
+    </element>
+    <element id="Organization.identifier:odsOrganisationCode">
+      <path value="Organization.identifier" />
+      <sliceName value="odsOrganisationCode" />
+    </element>
+    <element id="Organization.identifier:odsOrganisationCode.assigner">
+      <path value="Organization.identifier.assigner" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-Organization" />
+      </type>
     </element>
     <element id="Organization.identifier:odsSiteCode">
       <path value="Organization.identifier" />
@@ -50,7 +77,7 @@
       <definition value="The Organisation types **MUST** be present and comes from the valueSet.&#xD;&#xA;`type` will also include details on when these roles applied, the current status and a boolean to indicate the Organisations primary role. These extensions are for API's produced by NHS Digital one, the are not expected to be present in resources created by NHS providers or suppliers.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA; &quot;type&quot;:  [&#xD;&#xA;        {&#xD;&#xA;            &quot;extension&quot;:  [&#xD;&#xA;                {&#xD;&#xA;                    &quot;url&quot;: &quot;https://fhir.nhs.uk/StructureDefinition/Extension-ODS-Organization-Role&quot;,&#xD;&#xA;                    &quot;extension&quot;:  [&#xD;&#xA;                        {&#xD;&#xA;                            &quot;url&quot;: &quot;primaryRole&quot;,&#xD;&#xA;                            &quot;valueBoolean&quot;: true&#xD;&#xA;                        },&#xD;&#xA;                        {&#xD;&#xA;                            &quot;url&quot;: &quot;status&quot;,&#xD;&#xA;                            &quot;valueString&quot;: &quot;Active&quot;&#xD;&#xA;                        }&#xD;&#xA;                    ]&#xD;&#xA;                },&#xD;&#xA;                {&#xD;&#xA;                    &quot;url&quot;: &quot;https://fhir.nhs.uk/StructureDefinition/Extension-ODS-Organization-Role-ActivePeriod&quot;,&#xD;&#xA;                    &quot;extension&quot;:  [&#xD;&#xA;                        {&#xD;&#xA;                            &quot;url&quot;: &quot;activePeriod&quot;,&#xD;&#xA;                            &quot;valuePeriod&quot;: {&#xD;&#xA;                                &quot;start&quot;: &quot;2020-04-01&quot;&#xD;&#xA;                            }&#xD;&#xA;                        },&#xD;&#xA;                        {&#xD;&#xA;                            &quot;url&quot;: &quot;dateType&quot;,&#xD;&#xA;                            &quot;valueString&quot;: &quot;Operational&quot;&#xD;&#xA;                        }&#xD;&#xA;                    ]&#xD;&#xA;                }&#xD;&#xA;            ],&#xD;&#xA;            &quot;coding&quot;:  [&#xD;&#xA;                {&#xD;&#xA;                    &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/organisation-role&quot;,&#xD;&#xA;                    &quot;code&quot;: &quot;198&quot;,&#xD;&#xA;                    &quot;display&quot;: &quot;NHS TRUST SITE&quot;&#xD;&#xA;                }&#xD;&#xA;            ]&#xD;&#xA;        }&#xD;&#xA;    ],&#xD;&#xA;```" />
       <binding>
         <strength value="preferred" />
-        <valueSet value="https://fhir.nhs.uk/ValueSet/organisation-role" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/England-OrganisationRole" />
       </binding>
     </element>
     <element id="Organization.type.extension">
@@ -68,24 +95,28 @@
       <path value="Organization.type.extension" />
       <sliceName value="activePeriod" />
       <min value="0" />
+      <max value="*" />
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-ODS-Organization-Role-ActivePeriod" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-ODSOrganizationRoleActivePeriod" />
       </type>
+      <isModifier value="false" />
     </element>
     <element id="Organization.type.extension:organisationRole">
       <path value="Organization.type.extension" />
       <sliceName value="organisationRole" />
       <min value="0" />
+      <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-ODS-Organization-Role" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-ODSOrganizationRole" />
       </type>
+      <isModifier value="false" />
     </element>
     <element id="Organization.type.coding.system">
       <path value="Organization.type.coding.system" />
       <min value="1" />
-      <fixedUri value="https://fhir.nhs.uk/CodeSystem/organisation-role" />
+      <fixedUri value="https://fhir.nhs.uk/CodeSystem/England-OrganisationRole" />
     </element>
     <element id="Organization.name">
       <path value="Organization.name" />
@@ -128,6 +159,13 @@
     <element id="Organization.partOf.identifier.value">
       <path value="Organization.partOf.identifier.value" />
       <min value="1" />
+    </element>
+    <element id="Organization.endpoint.identifier.assigner">
+      <path value="Organization.endpoint.identifier.assigner" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-Organization" />
+      </type>
     </element>
   </differential>
 </StructureDefinition>
