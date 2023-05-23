@@ -79,6 +79,10 @@
       <type>
         <code value="Reference" />
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-PractitionerRole" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-Practitioner" />
+        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-RelatedPerson" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-Patient" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-Organization" />
       </type>
       <constraint>
         <key value="who-reference" />
@@ -88,13 +92,12 @@
       </constraint>
       <mustSupport value="true" />
     </element>
-    <element id="Provenance.agent.who.identifier.system">
-      <path value="Provenance.agent.who.identifier.system" />
-      <min value="1" />
-    </element>
-    <element id="Provenance.agent.who.identifier.value">
-      <path value="Provenance.agent.who.identifier.value" />
-      <min value="1" />
+    <element id="Provenance.agent.onBehalfOf.identifier.assigner">
+      <path value="Provenance.agent.onBehalfOf.identifier.assigner" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/England-Organization" />
+      </type>
     </element>
     <element id="Provenance.signature">
       <path value="Provenance.signature" />
@@ -111,12 +114,22 @@
         <code value="Reference" />
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-Practitioner" />
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-PractitionerRole" />
+        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-RelatedPerson" />
+        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/England-Patient" />
+        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/England-Organization" />
       </type>
       <mustSupport value="true" />
     </element>
     <element id="Provenance.signature.who.reference">
       <path value="Provenance.signature.who.reference" />
       <min value="1" />
+    </element>
+    <element id="Provenance.signature.onBehalfOf.identifier.assigner">
+      <path value="Provenance.signature.onBehalfOf.identifier.assigner" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/England-Organization" />
+      </type>
     </element>
   </differential>
 </StructureDefinition>
