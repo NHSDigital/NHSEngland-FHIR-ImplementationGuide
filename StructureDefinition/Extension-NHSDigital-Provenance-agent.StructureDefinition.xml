@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="Extension-England-ProvenanceAgent" />
-  <url value="https://fhir.nhs.uk/StructureDefinition/Extension-ProvenanceAgent" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/Extension-Provenance-agent" />
   <version value="1.0.0" />
   <name value="ExtensionProvenanceAgent" />
   <title value="Extension-England-" />
@@ -44,7 +44,7 @@
   <differential>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="https://fhir.nhs.uk/StructureDefinition/Extension-ProvenanceAgent" />
+      <fixedUri value="https://fhir.nhs.uk/StructureDefinition/Extension-Provenance-agent" />
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />
