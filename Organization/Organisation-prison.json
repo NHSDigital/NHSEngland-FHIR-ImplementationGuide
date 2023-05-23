@@ -12,7 +12,7 @@
         {
             "coding": [
                 {
-                  "system": "https://fhir.nhs.uk/CodeSystem/organisation-role",
+                  "system": "https://fhir.nhs.uk/CodeSystem/England-Organisation-Role",
                   "code": "175",
                   "display": "PRISON"
                 }
