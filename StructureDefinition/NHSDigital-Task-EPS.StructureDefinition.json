@@ -226,7 +226,7 @@
           {
             "code": "Extension",
             "profile": [
-              "https://fhir.nhs.uk/StructureDefinition/Extension-EPS-DispensingInformation"
+              "https://fhir.nhs.uk/StructureDefinition/Extension-England-EPSDispensingInformation"
             ]
           }
         ]

@@ -39,7 +39,7 @@
         <key value="eps-5" />
         <severity value="error" />
         <human value="Extension(responsiblePractitioner) - An identifier or resource reference must be provided" />
-        <expression value="extension('https://fhir.nhs.uk/StructureDefinition/Extension-DM-ResponsiblePractitioner').exists().not() or (extension('https://fhir.nhs.uk/StructureDefinition/Extension-DM-ResponsiblePractitioner').value.reference.exists() or extension('https://fhir.nhs.uk/StructureDefinition/Extension-DM-ResponsiblePractitioner').value.system.exists())" />
+        <expression value="extension('https://fhir.nhs.uk/StructureDefinition/Extension--England-DMResponsiblePractitioner').exists().not() or (extension('https://fhir.nhs.uk/StructureDefinition/Extension-England-DMResponsiblePractitioner').value.reference.exists() or extension('https://fhir.nhs.uk/StructureDefinition/Extension-England-DMResponsiblePractitioner').value.system.exists())" />
       </constraint>
       <constraint>
         <key value="eps-7" />

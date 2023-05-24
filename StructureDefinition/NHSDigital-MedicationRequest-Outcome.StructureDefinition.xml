@@ -29,7 +29,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-DM-ResponsiblePractitioner" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-DMResponsiblePractitioner" />
       </type>
     </element>
     <element id="MedicationRequest.extension:prescriptionStatusHistory">
@@ -39,7 +39,7 @@
       <min value="1" />
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-DM-PrescriptionStatusHistory" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-DMPrescriptionStatusHistory" />
       </type>
     </element>
     <element id="MedicationRequest.identifier">
