@@ -3,7 +3,7 @@
     "id": "RR8",
     "extension": [
         {
-            "url": "https://fhir.nhs.uk/StructureDefinition/Extension-ODS-OrganisationRelationships",
+            "url": "https://fhir.nhs.uk/StructureDefinition/Extension-England-ODSOrganisationRelationships",
             "extension": [
                 {
                     "url": "highLevelHealthGeography",
@@ -26,7 +26,7 @@
         {
             "extension": [
                 {
-                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-ODS-Organization-Role",
+                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-England-ODSOrganizationRole",
                     "extension": [
                         {
                             "url": "primaryRole",
@@ -39,7 +39,7 @@
                     ]
                 },
                 {
-                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-ODS-Organization-Role-ActivePeriod",
+                    "url": "https://fhir.nhs.uk/StructureDefinition/Extension-England-ODSOrganizationRoleActivePeriod",
                     "extension": [
                         {
                             "url": "activePeriod",
@@ -56,7 +56,7 @@
             ],
             "coding": [
                 {
-                    "system": "https://fhir.nhs.uk/CodeSystem/organisation-role",
+                    "system": "https://fhir.nhs.uk/CodeSystem/England-OrganisationRole",
                     "code": "197",
                     "display": "NHS TRUST"
                 }

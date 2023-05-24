@@ -11,7 +11,7 @@
         {
             "coding": [
                 {
-                    "system": "https://fhir.nhs.uk/CodeSystem/organisation-role",
+                    "system": "https://fhir.nhs.uk/CodeSystem/England-OrganisationRole",
                     "code": "76"
                 }
             ]

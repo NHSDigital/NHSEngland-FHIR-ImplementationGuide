@@ -1,9 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="d1235b27-88f5-4c85-b9a2-e36c4a9bd0e6"/>
-  <url value="https://fhir.nhs.uk/StructureDefinition/Extension-ODS-OrganisationRelationships" />
-  <name value="ExtensionODSOrganisationRelationships" />
+  <id value="Extension-England-ODSOrganisationRelationships" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/Extension-England-ODSOrganisationRelationships" />
+  <version value="1.0.0" />
+  <name value="ExtensionEnglandODSOrganisationRelationships" />
+  <title value="Extension England ODS Organisation Relationships" />
   <status value="draft" />
+  <publisher value="NHS England" />
+  <contact>
+    <name value="NHS England" />
+    <telecom>
+      <system value="email" />
+      <value value="interoperabilityteam@nhs.net" />
+      <use value="work" />
+      <rank value="1" />
+    </telecom>
+  </contact>
+  <description value="Providing information regarding organisational relationships to an organisation." />
+  <purpose value="Providing information regarding organisational relationships to an organisation." />
+  <copyright value="Copyright © 2021+ HL7 UK Licensed under the Apache License, Version 2.0 (the \&quot;License\&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at  http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \&quot;AS IS\&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. HL7® FHIR® standard Copyright © 2011+ HL7 The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at  https://www.hl7.org/fhir/license.html." />
   <fhirVersion value="4.0.1" />
   <kind value="complex-type" />
   <abstract value="false" />
@@ -24,10 +39,12 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <min value="0" />
     </element>
     <element id="Extension.extension:nationalGrouping">
       <path value="Extension.extension" />
       <sliceName value="nationalGrouping" />
+      <min value="0" />
       <max value="1" />
     </element>
     <element id="Extension.extension:nationalGrouping.url">
@@ -51,6 +68,7 @@
     <element id="Extension.extension:highLevelHealthGeography">
       <path value="Extension.extension" />
       <sliceName value="highLevelHealthGeography" />
+      <min value="0" />
       <max value="1" />
     </element>
     <element id="Extension.extension:highLevelHealthGeography.url">
@@ -74,6 +92,7 @@
     <element id="Extension.extension:commissionedBy">
       <path value="Extension.extension" />
       <sliceName value="commissionedBy" />
+      <min value="0" />
       <max value="1" />
     </element>
     <element id="Extension.extension:commissionedBy.url">
@@ -97,6 +116,7 @@
     <element id="Extension.extension:reimbursementAuthority">
       <path value="Extension.extension" />
       <sliceName value="reimbursementAuthority" />
+      <min value="0" />
       <max value="1" />
     </element>
     <element id="Extension.extension:reimbursementAuthority.url">
@@ -120,6 +140,7 @@
     <element id="Extension.extension:primaryCareNetwork">
       <path value="Extension.extension" />
       <sliceName value="primaryCareNetwork" />
+      <min value="0" />
       <max value="1" />
     </element>
     <element id="Extension.extension:primaryCareNetwork.url">
@@ -142,7 +163,7 @@
     </element>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="https://fhir.nhs.uk/StructureDefinition/Extension-ODS-OrganisationRelationships" />
+      <fixedUri value="https://fhir.nhs.uk/StructureDefinition/Extension-England-ODSOrganisationRelationships" />
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />
