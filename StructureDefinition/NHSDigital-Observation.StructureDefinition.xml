@@ -113,7 +113,7 @@
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group" />
         <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Device" />
         <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Location" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-Patient-Minimal" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-PatientMinimal" />
       </type>
       <constraint>
         <key value="patient-reference" />
