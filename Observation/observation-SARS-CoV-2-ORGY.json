@@ -31,7 +31,7 @@
         {
             "coding": [
                 {
-                    "system": "https://fhir.nhs.uk/CodeSystem/covid-test-pillar",
+                    "system": "https://fhir.nhs.uk/CodeSystem/England-CovidTestPillar",
                     "code": "pillar-1",
                     "display": "pillar 1"
                 }
