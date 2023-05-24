@@ -24,7 +24,7 @@
           },
           "extension": [
             {
-              "url": "https://fhir.nhs.uk/StructureDefinition/Extension-DM-PrescriptionType",
+              "url": "https://fhir.nhs.uk/StructureDefinition/Extension-England-DMPrescriptionType",
               "valueCoding": {
                 "system": "https://fhir.nhs.uk/CodeSystem/prescription-type",
                 "code": "1001",
@@ -333,7 +333,7 @@
           },
           "extension": [
             {
-              "url": "https://fhir.nhs.uk/StructureDefinition/Extension-DM-PrescriptionType",
+              "url": "https://fhir.nhs.uk/StructureDefinition/Extension-England-DMPrescriptionType",
               "valueCoding": {
                 "system": "https://fhir.nhs.uk/CodeSystem/prescription-type",
                 "code": "0101",
