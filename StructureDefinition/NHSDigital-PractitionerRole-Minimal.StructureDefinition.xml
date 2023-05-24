@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="51533f7f-1fa3-4866-a200-01618d377455" />
-  <url value="https://fhir.nhs.uk/StructureDefinition/England-PractitionerRole-Minimal" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/England-PractitionerRoleMinimal" />
   <name value="NHSDigitalPractitionerRoleMinimal" />
   <status value="draft" />
   <purpose value="Constraint profile for which enforces practitioner and organization elements in contained resources," />
