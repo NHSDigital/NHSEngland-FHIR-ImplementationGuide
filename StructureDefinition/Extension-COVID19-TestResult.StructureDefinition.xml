@@ -1,11 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="68172784-12f2-4437-8680-2595272a885f"/>
-  <url value="https://fhir.nhs.uk/StructureDefinition/Extension-COVID19-TestResult" />
-  <name value="ExtensionCOVID19TestResult" />
+  <id value="Extension-England-COVID19TestResult" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/Extension-England-COVID19TestResult" />
+  <version value="1.0.0" />
+  <name value="ExtensionEnglandCOVID19TestResult" />
+  <title value="Extension England COVID19 Test Result" />
   <status value="draft" />
-  <date value="2021-04-20" />
+  <date value="2023-06-01" />
+  <publisher value="NHS England" />
+  <contact>
+    <name value="NHS England" />
+    <telecom>
+      <system value="email" />
+      <value value="interoperabilityteam@nhs.net" />
+      <use value="work" />
+      <rank value="1" />
+    </telecom>
+  </contact>
+  <description value="Extension for Covid 19 Test Results" />
   <purpose value="COVID 19 Test Results" />
+  <copyright value="Copyright © 2021+ HL7 UK Licensed under the Apache License, Version 2.0 (the \&quot;License\&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at  http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \&quot;AS IS\&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. HL7® FHIR® standard Copyright © 2011+ HL7 The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at  https://www.hl7.org/fhir/license.html." />
   <fhirVersion value="4.0.1" />
   <kind value="complex-type" />
   <abstract value="false" />
@@ -26,12 +40,14 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <min value="0" />
     </element>
     <element id="Extension.extension:reportOrigin">
       <path value="Extension.extension" />
       <sliceName value="reportOrigin" />
       <short value="Indicates the source of a secondarily reported record" />
       <definition value="Source of record creation - i.e. the digital service used to record the test registration.&#xD;&#xA;&#xD;&#xA;The source of the data when the report of the observation event is not based on information from the person who performed the observation." />
+      <min value="0" />
       <max value="1" />
     </element>
     <element id="Extension.extension:reportOrigin.url">
@@ -49,6 +65,7 @@
       <sliceName value="administrationMethod" />
       <short value="Used to convey how the test was administered" />
       <definition value="used to convey how the test was administered. Possible values are &quot;self&quot; or &quot;health_care_professional&quot;" />
+      <min value="0" />
       <max value="1" />
     </element>
     <element id="Extension.extension:administrationMethod.url">
@@ -63,7 +80,7 @@
     </element>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="https://fhir.nhs.uk/StructureDefinition/Extension-COVID19-TestResult" />
+      <fixedUri value="https://fhir.nhs.uk/StructureDefinition/Extension-England-COVID19TestResult" />
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />
