@@ -1,11 +1,11 @@
 <CodeSystem xmlns="http://hl7.org/fhir">
-   <id value="NHSDataModelAndDictionary-clinical-specialty" />
-   <url value="https://fhir.nhs.uk/CodeSystem/NHSDataModelAndDictionary-clinical-specialty" />
-   <version value="1.2.1" />
-   <name value="NHSDataModelandDictionaryClinicalSpecialty" />
+   <id value="England-NHSDataModelAndDictionaryClinicalSpecialty" />
+   <url value="https://fhir.nhs.uk/CodeSystem/England-NHSDataModelAndDictionaryClinicalSpecialty" />
+   <version value="1.0.0" />
+   <name value="EnglandNHSDataModelAndDictionaryClinicalSpecialty" />
    <status value="draft" />
-   <date value="2021-03-10T00:00:00+00:00" />
-   <publisher value="NHS Digital" />
+   <date value="2023-06-01" />
+   <publisher value="NHS England" />
    <contact>
       <name value="Interoperability Team" />
       <telecom>

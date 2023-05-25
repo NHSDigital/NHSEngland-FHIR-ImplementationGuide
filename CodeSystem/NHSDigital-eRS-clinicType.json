@@ -1,12 +1,12 @@
 {
     "resourceType": "CodeSystem",
-    "id": "eRS-ClinicType-1",
-    "url": "https://fhir.nhs.uk/CodeSystem/NHSDigital-ClinicType",
+    "id": "England-ClinicType",
+    "url": "https://fhir.nhs.uk/CodeSystem/England-ClinicType",
     "version": "1.0.0",
-    "name": "NHSDigitalClinicType",
+    "name": "EnglandClinicType",
     "status": "draft",
-    "date": "2016-06-27",
-    "publisher": "NHS Digital",
+    "date": "2023-06-01",
+    "publisher": "NHS England",
     "contact": [
       {
         "name": "Interoperability Team",

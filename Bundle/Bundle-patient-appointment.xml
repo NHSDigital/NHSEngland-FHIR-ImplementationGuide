@@ -15,7 +15,7 @@
                     <endpoint value="urn:nhs-uk:addressing:ods:RR8" />
                 </source>
                 <eventCoding>
-                    <system value="https://fhir.nhs.uk/CodeSystem/message-event" />
+                    <system value="https://fhir.nhs.uk/CodeSystem/England-MessageEvent" />
                     <code value="appointment" />
                     <display value="Appointment" />
                 </eventCoding>
@@ -49,7 +49,7 @@
                 <description value="Reason for calling"></description>
                 <specialty>
                     <coding>
-                        <system value="https://fhir.nhs.uk/CodeSystem/NHSDataModelAndDictionary-clinical-specialty" />
+                        <system value="https://fhir.nhs.uk/CodeSystem/England-NHSDataModelAndDictionaryClinicalSpecialty" />
                         <code value="370" />
                         <display value="Medical Oncology Service" />
                     </coding>

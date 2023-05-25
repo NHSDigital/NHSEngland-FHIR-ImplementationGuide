@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="https://fhir.nhs.uk/StructureDefinition/Extension-ServiceRequest-Priority" />
-  <name value="ExtensionServiceRequestPriority" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/Extension-England-ServiceRequestPriority" />
+  <name value="ExtensionEnglandServiceRequestPriority" />
   <status value="draft" />
-  <fhirVersion value="4.0.1" />
+  <fhirVersion value="1.0.0" />
   <kind value="complex-type" />
   <abstract value="false" />
   <context>
@@ -16,7 +16,7 @@
   <differential>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="https://fhir.nhs.uk/StructureDefinition/Extension-ServiceRequest-Priority" />
+      <fixedUri value="https://fhir.nhs.uk/StructureDefinition/Extension-England-ServiceRequestPriority" />
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />
@@ -26,12 +26,12 @@
       </type>
       <binding>
         <strength value="required" />
-        <valueSet value="https://fhir.nhs.uk/ValueSet/eRS-Priority" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/England-eRSPriority" />
       </binding>
     </element>
     <element id="Extension.value[x].system">
       <path value="Extension.value[x].system" />
-      <fixedUri value="https://fhir.nhs.uk/CodeSystem/eRS-Priority" />
+      <fixedUri value="https://fhir.nhs.uk/CodeSystem/England-eRSPriority" />
     </element>
   </differential>
 </StructureDefinition>

@@ -24,7 +24,7 @@
           },
           "extension": [
             {
-              "url": "https://fhir.nhs.uk/StructureDefinition/Extension-ERS-Referral",
+              "url": "https://fhir.nhs.uk/StructureDefinition/England-Extension-ERSReferral",
               "extension": [
                 {
                   "url": "sourceSystem",
@@ -37,7 +37,7 @@
               ]
             },
             {
-              "url": "https://fhir.nhs.uk/StructureDefinition/Extension-eRS-ServiceRequest-State",
+              "url": "https://fhir.nhs.uk/StructureDefinition/England-Extension-eRSServiceRequestState",
               "extension": [  
               ]
             }
@@ -94,7 +94,7 @@
           "performerType": {
             "coding": [
               {
-                "system": "https://fhir.nhs.uk/CodeSystem/NHSDigital-ClinicType",
+                "system": "https://fhir.nhs.uk/CodeSystem/England-ClinicType",
                 "code": "HEART_FAILURE"
               }
             ],

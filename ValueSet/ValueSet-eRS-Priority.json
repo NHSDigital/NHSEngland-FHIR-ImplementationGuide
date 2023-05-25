@@ -1,12 +1,12 @@
 {
     "resourceType": "ValueSet",
-    "id": "31a5995a-449f-4066-8226-09e9cdf6a7bc",
-    "url": "https://fhir.nhs.uk/ValueSet/eRS-Priority",
+    "id": "England-eRSPriority",
+    "url": "https://fhir.nhs.uk/ValueSet/England-eRSPriority",
     "version": "1.1.0",
-    "name": "ERSPriority",
+    "name": "EnglandeRSPriority",
     "status": "active",
-    "date": "2021-09-27",
-    "publisher": "NHS Digital",
+    "date": "2023-06-01",
+    "publisher": "NHS England",
     "contact": [
       {
         "name": "Interoperability Team",
@@ -24,7 +24,7 @@
     "compose": {
       "include": [
         {
-          "system": "https://fhir.nhs.uk/CodeSystem/eRS-Priority"
+          "system": "https://fhir.nhs.uk/CodeSystem/England-eRSPriority"
         }
       ]
     }

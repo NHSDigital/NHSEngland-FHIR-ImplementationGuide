@@ -1,12 +1,12 @@
 {
     "resourceType": "CodeSystem",
-    "id": "482f9e0a-6f01-4037-b8fe-bfc88d88702c",
-    "url": "https://fhir.nhs.uk/CodeSystem/eRS-Priority",
+    "id": "England-eRSPriority",
+    "url": "https://fhir.nhs.uk/CodeSystem/England-eRSPriority",
     "version": "1.1.0",
-    "name": "ERSPriority",
+    "name": "EnglandeRSPriority",
     "status": "active",
-    "date": "2021-09-28T00:00:00+00:00",
-    "publisher": "NHS Digital",
+    "date": "2023-06-01",
+    "publisher": "NHS England",
     "contact": [
         {
             "name": "Interoperability Team",

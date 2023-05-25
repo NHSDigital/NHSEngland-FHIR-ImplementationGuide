@@ -2,7 +2,7 @@
     "id": "be735573-9f24-42e1-ae98-af89d632e4bf", 
     "extension": [
         {
-            "url": "https://fhir.nhs.uk/StructureDefinition/Extension-ERS-Referral",
+            "url": "https://fhir.nhs.uk/StructureDefinition/England-Extension-ERSReferral",
             "extension": [
                 {
                     "url": "sourceSystem",
@@ -15,7 +15,7 @@
             ]
         },
         {
-            "url": "https://fhir.nhs.uk/StructureDefinition/Extension-eRS-ServiceRequest-State"
+            "url": "https://fhir.nhs.uk/StructureDefinition/England-Extension-eRSServiceRequestState"
         }
     ],
     "contained": [
@@ -70,7 +70,7 @@
     "performerType": {
         "coding": [
             {
-                "system": "https://fhir.nhs.uk/CodeSystem/eRS-Specialty",
+                "system": "https://fhir.nhs.uk/CodeSystem/England-eRSSpecialty",
                 "code": "GENERAL_MEDICINE"
             }
         ]

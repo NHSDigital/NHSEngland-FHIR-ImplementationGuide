@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="https://fhir.nhs.uk/StructureDefinition/Extension-ERS-Referral" />
-  <name value="ExtensionERSAdviceAndGuidance" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/Extension-England-ERSReferral" />
+  <name value="Extension-England-ERSReferral" />
   <status value="draft" />
-  <fhirVersion value="4.0.1" />
+  <fhirVersion value="1.0.0" />
   <kind value="complex-type" />
   <abstract value="false" />
   <context>
@@ -80,7 +80,7 @@
     </element>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="https://fhir.nhs.uk/StructureDefinition/Extension-ERS-Referral" />
+      <fixedUri value="https://fhir.nhs.uk/StructureDefinition/Extension-England-ERSReferral" />
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="https://fhir.nhs.uk/StructureDefinition/Extension-eRS-ServiceRequest-State" />
-  <name value="ExtensionNHSDigitaleRSReferralState" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/Extension-England-eRSServiceRequestState" />
+  <name value="Extension-England-eRSServiceRequestState" />
   <status value="draft" />
-  <fhirVersion value="4.0.1" />
+  <fhirVersion value="1.0.0" />
   <kind value="complex-type" />
   <abstract value="false" />
   <context>
@@ -48,13 +48,13 @@
       </type>
       <binding>
         <strength value="required" />
-        <valueSet value="https://fhir.nhs.uk/ValueSet/England-eRS-ReferralState" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/England-eRSReferralState" />
       </binding>
     </element>
     <element id="Extension.extension:state.value[x].system">
       <path value="Extension.extension.value[x].system" />
       <min value="1" />
-      <fixedUri value="https://fhir.nhs.uk/CodeSystem/eRS-ReferralState" />
+      <fixedUri value="https://fhir.nhs.uk/CodeSystem/England-eRSReferralState" />
     </element>
     <element id="Extension.extension:state.value[x].code">
       <path value="Extension.extension.value[x].code" />
@@ -78,7 +78,7 @@
       </type>
       <binding>
         <strength value="extensible" />
-        <valueSet value="https://fhir.nhs.uk/ValueSet/England-eRS-AppointmentCancellationReason" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/England-eRSAppointmentCancellationReason" />
       </binding>
     </element>
     <element id="Extension.extension:reason.value[x].system">
@@ -127,7 +127,7 @@
     </element>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="https://fhir.nhs.uk/StructureDefinition/Extension-eRS-ServiceRequest-State" />
+      <fixedUri value="https://fhir.nhs.uk/StructureDefinition/Extension-England-eRSServiceRequestState" />
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />

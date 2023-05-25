@@ -1,11 +1,11 @@
 <CodeSystem xmlns="http://hl7.org/fhir">
-    <id value="NHSDataModelAndDictionary-treatment-function"/>
-    <url value="https://fhir.nhs.uk/CodeSystem/NHSDataModelAndDictionary-treatment-function"/>
-    <version value="1.2.1"/>
-    <name value="NHSDataModelandDictionaryTreatmentFunction"/>
+    <id value="England-NHSDataModelAndDictionaryTreatmentFunction"/>
+    <url value="https://fhir.nhs.uk/CodeSystem/England-NHSDataModelAndDictionaryTreatmentFunction"/>
+    <version value="1.0.0"/>
+    <name value="EnglandNHSDataModelAndDictionaryTreatmentFunction"/>
     <status value="draft"/>
-    <date value="2021-03-10T00:00:00+00:00"/>
-    <publisher value="NHS Digital"/>
+    <date value="2023-06-01"/>
+    <publisher value="NHS England"/>
     <contact>
        <name value="Interoperability Team"/>
        <telecom>

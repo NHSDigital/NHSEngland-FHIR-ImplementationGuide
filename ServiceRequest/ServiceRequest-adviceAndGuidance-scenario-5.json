@@ -5,7 +5,7 @@
     },
     "extension": [
         {
-            "url": "https://fhir.nhs.uk/StructureDefinition/Extension-ERS-Referral",
+            "url": "https://fhir.nhs.uk/StructureDefinition/Extension-England-ERSReferral",
             "extension": [
                 {
                     "url": "sourceSystem",
@@ -18,7 +18,7 @@
             ]
         },
         {
-            "url": "https://fhir.nhs.uk/StructureDefinition/Extension-eRS-ServiceRequest-State",
+            "url": "https://fhir.nhs.uk/StructureDefinition/Extension-England-eRSServiceRequestState",
             "extension": [              
                 {
                     "url": "stateResource",
@@ -91,7 +91,7 @@
     "performerType": {
         "coding": [
             {
-                "system": "https://fhir.nhs.uk/CodeSystem/NHSDigital-ClinicType",
+                "system": "https://fhir.nhs.uk/CodeSystem/England-ClinicType",
                 "code": "GENERAL_MEDICINE_1"
             }
         ]

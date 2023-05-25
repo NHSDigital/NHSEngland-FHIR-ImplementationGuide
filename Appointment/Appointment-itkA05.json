@@ -21,7 +21,7 @@
         {
             "coding": [
                 {
-                    "system": "https://fhir.nhs.uk/CodeSystem/NHSDataModelAndDictionary-treatment-function",
+                    "system": "https://fhir.nhs.uk/CodeSystem/England-NHSDataModelAndDictionaryTreatmentFunction",
                     "code": "300",
                     "display": "GENERAL MEDICINE"
                 }
@@ -32,7 +32,7 @@
         {
             "coding": [
                 {
-                    "system": "https://fhir.nhs.uk/CodeSystem/NHSDataModelAndDictionary-clinical-specialty",
+                    "system": "https://fhir.nhs.uk/CodeSystem/England-NHSDataModelAndDictionaryClinicalSpecialty",
                     "code": "340",
                     "display": "Respiratory Medicine"
                 }
