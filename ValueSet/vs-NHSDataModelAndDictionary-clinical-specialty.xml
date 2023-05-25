@@ -29,7 +29,8 @@
       <offset value="0"/>
       <parameter>
           <name value="version"/>
-          <valueUri value="https://fhir.nhs.uk/CodeSystem/England-NHSDataModelAndDictionaryClinicalSpecialty|1.0.0"/>
+          <valueUri value="https://fhir.nhs.uk/CodeSystem/England-NHSDataModelAndDictionaryClinicalSpecialty"/>
+          <version value="1.0.0"/>
       </parameter>
       <parameter>
           <name value="count"/>
