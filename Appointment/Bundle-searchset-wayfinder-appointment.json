@@ -20,7 +20,7 @@
             {
               "coding": [
                 {
-                  "system": "https://fhir.nhs.uk/CodeSystem/England-ClinicType",
+                  "system": "https://fhir.nhs.uk/CodeSystem/England-eRSClinicType",
                   "code": "GENERAL_MEDICINE_1"
                 }
               ]

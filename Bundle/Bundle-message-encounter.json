@@ -1,19 +1,19 @@
 {
     "resourceType": "Bundle",
-    "id": "England-Bundle",
+    "id": "7fbd2029-975c-43d3-9738-47ae7d5ca4fc",
     "identifier": {
         "system": "https://tools.ietf.org/html/rfc4122",
         "value": "7fbd2029-975c-43d3-9738-47ae7d5ca4fc"
     },
     "type": "message",
-    "timestamp": "2023-06-01",
+    "timestamp": "2021-09-17T12:20:00.742000+00:00",
     "entry": [
         {
             "fullUrl": "urn:uuid:844ebe20-78f0-4d77-8890-44d588717ca9",
             "resource": {
                 "resourceType": "MessageHeader",
                 "eventCoding": {
-                    "system": "https://fhir.nhs.uk/CodeSystem/MessageEvent",
+                    "system": "https://fhir.nhs.uk/CodeSystem/message-event",
                     "code": "encounter"
                 },
                 "destination": [
@@ -113,7 +113,7 @@
                 "serviceType": {
                     "coding": [
                         {
-                            "system": "https://fhir.nhs.uk/CodeSystem/England-NHSDataModelAndDictionaryTtreatmentFunction",
+                            "system": "https://fhir.nhs.uk/CodeSystem/England-NHSDataModelAndDictionaryTreatmentFunction",
                             "code": "100",
                             "display": "GENERAL SURGERY"
                         }

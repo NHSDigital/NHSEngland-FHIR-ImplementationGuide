@@ -1,9 +1,9 @@
 {
     "resourceType": "CodeSystem",
-    "id": "England-ClinicType",
-    "url": "https://fhir.nhs.uk/CodeSystem/England-ClinicType",
+    "id": "England-eRSClinicType",
+    "url": "https://fhir.nhs.uk/CodeSystem/England-eRSClinicType",
     "version": "1.0.0",
-    "name": "EnglandClinicType",
+    "name": "EnglandeRSClinicType",
     "status": "draft",
     "date": "2023-06-01",
     "publisher": "NHS England",
