@@ -1,14 +1,14 @@
 <ValueSet xmlns="http://hl7.org/fhir">
-    <id value="a6876ad9-6ac5-431a-980d-b093a07e84d6"></id>
+    <id value="England-PractitionerRoleCode"></id>
     <url value="https://fhir.nhs.uk/ValueSet/England-PractitionerRoleCode"></url>
-    <version value="0.0.4"></version>
+    <version value="1.0.0"></version>
     <name value="EnglandPractitionerRoleCode"></name>
-    <title value="England Practitioner Role Code"></title>
+    <title value="England PractitionerRole Code"></title>
     <status value="draft"></status>
-    <date value="2022-08-02T06:00:00+00:00"></date>
-    <publisher value="NHS Digital"></publisher>
+    <date value="2023-06-01"></date>
+    <publisher value="NHS England"></publisher>
     <contact>
-        <name value="Interoperability Team"></name>
+        <name value="NHS England"></name>
         <telecom>
             <system value="email"></system>
             <value value="interoperabilityteam@nhs.net"></value>
@@ -18,13 +18,13 @@
     <description value="PractitionerRole.code definition"></description>
     <compose>
         <include>
-            <system value="https://fhir.nhs.uk/CodeSystem/England-SDS-JobRoleCode"></system>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-SDSJobRoleCode"></system>
         </include>
         <include>
             <system value="https://fhir.hl7.org.uk/CodeSystem/UKCore-SDSJobRoleName"></system>
         </include>
         <include>
-            <valueSet value="https://fhir.hl7.org.uk/ValueSet/UKCore-PractitionerRoleCode"></valueSet>
+            <valueSet value="https://fhir.hl7.org.uk/ValueSet/England-PractitionerRoleCode"></valueSet>
         </include>
     </compose>
 </ValueSet>

@@ -1,22 +1,22 @@
 {
   "resourceType": "CodeSystem",
-  "id": "NHSDigital-SDSJobRoleName",
-  "url": "https://fhir.nhs.uk/CodeSystem/NHSDigital-SDS-JobRoleCode",
+  "id": "England-SDSJobRoleCode",
+  "url": "https://fhir.nhs.uk/CodeSystem/England-SDSJobRoleCode",
   "version": "2.0.0",
-  "name": "NHSDigitalSDSJobRoleName",
-  "title": "NHSDigital SDS Job Role Name",
+  "name": "EnglandSDSJobRoleCode",
+  "title": "England SDSJobRoleCode",
   "status": "retired",
   "date": "2021-09-10",
-  "publisher": "NHS Digital",
+  "publisher": "NHS England",
   "contact": [
     {
-      "name": "NHS Digital",
+      "name": "NHS England",
       "telecom": [
         {
           "system": "email",
           "value": "interoperabilityteam@nhs.net",
           "use": "work",
-          "rank": 2
+          "rank": 1
         }
       ]
     }

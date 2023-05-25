@@ -1,9 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="51533f7f-1fa3-4866-a200-01618d377455" />
+  <id value="England-PractitionerRole" />
   <url value="https://fhir.nhs.uk/StructureDefinition/England-PractitionerRole" />
-  <name value="NHSDigitalPractitionerRole" />
+  <version value="1.0.0" />
+  <name value="EnglandPractitionerRole" />
+  <title value="England PractitionerRole" />
   <status value="draft" />
+  <date value="2023-06-01" />
+  <publisher value="NHS England" />
+  <contact>
+    <name value="NHS England" />
+    <telecom>
+      <system value="email" />
+      <value value="interoperabilityteam@nhs.net" />
+      <use value="work" />
+      <rank value="1" />
+    </telecom>
+  </contact>
+  <description value="This profile defines the UK constraints and extensions on the UK Core FHIR resource [UK Core PractitionerRole](https://simplifier.net/hl7fhirukcorer4/ukcore-practitionerrole)." />
+  <purpose value="This profile allows exchange of a specific set of roles, specialties and services that a practitioner may perform at an organisation for a period of time." />
+  <copyright value="Copyright © 2021+ HL7 UK Licensed under the Apache License, Version 2.0 (the \&quot;License\&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at  http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \&quot;AS IS\&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. HL7® FHIR® standard Copyright © 2011+ HL7 The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at  https://www.hl7.org/fhir/license.html." />
   <fhirVersion value="4.0.1" />
   <kind value="resource" />
   <abstract value="false" />
@@ -44,7 +60,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-Account-code" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-AccountCode" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -209,7 +225,7 @@
     </element>
     <element id="PractitionerRole.code.coding:sdsJobRoleCode.system">
       <path value="PractitionerRole.code.coding.system" />
-      <fixedUri value="https://fhir.nhs.uk/CodeSystem/England-SDS-JobRoleCode" />
+      <fixedUri value="https://fhir.nhs.uk/CodeSystem/England-SDSJobRoleCode" />
     </element>
     <element id="PractitionerRole.code.coding:SDSJobRoleName">
       <path value="PractitionerRole.code.coding" />
@@ -224,7 +240,7 @@
       <sliceName value="ukCoreSNOMEDCT" />
       <binding>
         <strength value="preferred" />
-        <valueSet value="https://fhir.hl7.org.uk/ValueSet/UKCore-PractitionerRoleCode" />
+        <valueSet value="https://fhir.hl7.org.uk/ValueSet/England-PractitionerRoleCode" />
       </binding>
     </element>
     <element id="PractitionerRole.code.coding:ukCoreSNOMEDCT.system">
