@@ -5,10 +5,10 @@
     <name value="EnglandCareSettingType" />
     <title value="England-CareSettingType" />
     <status value="draft" />
-    <date value="2020-11-04T00:00:00+00:00" />
-    <publisher value="NHS Digital" />
+    <date value="2023-06-01" />
+    <publisher value="NHS England" />
     <contact>
-        <name value="NHS Digital" />
+        <name value="NHS England" />
         <telecom>
             <system value="email" />
             <value value="interoperabilityteam@nhs.net" />
@@ -28,8 +28,8 @@
             </filter>
         </include>
          <include>
-          <system value="https://fhir.nhs.uk/CodeSystem/NHSDataModelAndDictionary-treatment-function"/>
-          <version value="1.2.1"/>
+          <system value="https://fhir.nhs.uk/CodeSystem/England-NHSDataModelAndDictionaryTreatmentFunction"/>
+          <version value="1.0.0"/>
        </include>
     </compose>
 </ValueSet>
