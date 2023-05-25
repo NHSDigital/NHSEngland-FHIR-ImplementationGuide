@@ -19,7 +19,7 @@
     <category value="notification"></category>
     <focus>
         <code value="MedicationDispense"></code>
-        <profile value="https://fhir.nhs.uk/StructureDefinition/England-MedicationDispense-Message"></profile>
+        <profile value="https://fhir.nhs.uk/StructureDefinition/England-MedicationDispenseMessage"></profile>
         <min value="1"></min>
         <max value="*"></max>
     </focus>
