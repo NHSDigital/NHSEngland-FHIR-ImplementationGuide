@@ -24,7 +24,7 @@
             <system value="https://fhir.hl7.org.uk/CodeSystem/UKCore-SDSJobRoleName"></system>
         </include>
         <include>
-            <valueSet value="https://fhir.hl7.org.uk/ValueSet/England-PractitionerRoleCode"></valueSet>
+            <valueSet value="https://fhir.nhs.uk/ValueSet/England-PractitionerRoleCode"></valueSet>
         </include>
     </compose>
 </ValueSet>
