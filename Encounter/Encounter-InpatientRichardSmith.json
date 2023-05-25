@@ -91,7 +91,7 @@
         "dischargeDisposition": {
             "coding": [
                 {
-                    "system": "https://fhir.hl7.org.uk/CodeSystem/England-UKCoreDischargeDestination",
+                    "system": "https://fhir.hl7.org.uk/CodeSystem/UKCoreDischargeDestination",
                     "code": "19",
                     "display": "Usual place of residence unless listed below, for example, a private dwelling whether owner occupied or owned by Local Authority, housing association or other landlord. This includes wardened accommodation but not residential accommodation where health care is provided. It also includes Patients with no fixed abode."
                 }

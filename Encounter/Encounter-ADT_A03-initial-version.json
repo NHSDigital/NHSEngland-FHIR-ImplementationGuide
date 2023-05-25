@@ -116,7 +116,7 @@
         "admitSource": {
             "coding": [
                 {
-                    "system": "https://fhir.hl7.org.uk/CodeSystem/England-UKCoreSourceOfAdmission",
+                    "system": "https://fhir.hl7.org.uk/CodeSystem/UKCoreSourceOfAdmission",
                     "code": "79"
                 }
             ]
@@ -124,7 +124,7 @@
         "dischargeDisposition": {
             "coding": [
                 {
-                    "system": "https://fhir.hl7.org.uk/CodeSystem/England-UKCoreDischargeMethod",
+                    "system": "https://fhir.hl7.org.uk/CodeSystem/UKCoreDischargeMethod",
                     "code": "19"
                 }
             ]

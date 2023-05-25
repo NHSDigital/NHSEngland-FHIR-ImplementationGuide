@@ -11,7 +11,7 @@
     <status value="active"></status>
     <date value="2023-06-01"></date>
     <eventCoding>
-        <system value="https://fhir.nhs.uk/CodeSystem/England-MessageEvent"></system>
+        <system value="https://fhir.nhs.uk/CodeSystem/MessageEvent"></system>
         <code value="dispense-notification"></code>
         <display value="Dispense Notification"></display>
     </eventCoding>
@@ -19,7 +19,7 @@
     <category value="notification"></category>
     <focus>
         <code value="MedicationDispense"></code>
-        <profile value="https://fhir.nhs.uk/StructureDefinition/England-MedicationDispenseMessage"></profile>
+        <profile value="https://fhir.nhs.uk/StructureDefinition/MedicationDispenseMessage"></profile>
         <min value="1"></min>
         <max value="*"></max>
     </focus>

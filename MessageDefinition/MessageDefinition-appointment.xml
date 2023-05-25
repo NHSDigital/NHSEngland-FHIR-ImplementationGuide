@@ -11,7 +11,7 @@
     <status value="active" />
     <date value="2023-06-01" />
     <eventCoding>
-        <system value="https://fhir.nhs.uk/CodeSystem/England-MessageEvent" />
+        <system value="https://fhir.nhs.uk/CodeSystem/MessageEvent" />
         <code value="appointment" />
         <display value="Appointment" />
     </eventCoding>
@@ -24,7 +24,7 @@
     </focus>
     <focus>
         <code value="Patient" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/England-Patient" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Patient" />
         <min value="0" />
         <max value="1" />
     </focus>
