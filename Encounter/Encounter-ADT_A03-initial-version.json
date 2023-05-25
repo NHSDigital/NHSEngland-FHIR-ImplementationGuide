@@ -3,7 +3,7 @@
     "id": "England-Encounter",
     "extension": [
         {
-            "url": "https://fhir.nhs.uk/StructureDefinition/England-ExtensionUKCore-AdmissionMethod",
+            "url": "https://fhir.nhs.uk/StructureDefinition/ExtensionUKCore-AdmissionMethod",
             "valueCodeableConcept": {
                 "coding": [
                     {
@@ -29,7 +29,7 @@
     "serviceType": {
         "coding": [
             {
-                "system": "https://fhir.nhs.uk/CodeSystem/NHSDataModelAndDictionaryTreatmentFunction",
+                "system": "https://fhir.nhs.uk/CodeSystem/England-NHSDataModelAndDictionaryTreatmentFunction",
                 "code": "500"
             }
         ]

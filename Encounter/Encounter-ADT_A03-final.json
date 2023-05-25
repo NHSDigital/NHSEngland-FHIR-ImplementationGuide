@@ -8,7 +8,7 @@
     },
     "extension": [
         {
-            "url": "https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCoreAdmissionMethod",
+            "url": "https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-AdmissionMethod",
             "valueCodeableConcept": {
                 "coding": [
                     {
@@ -34,7 +34,7 @@
     "serviceType": {
         "coding": [
             {
-                "system": "https://fhir.nhs.uk/CodeSystem/NHSDataModelAndDictionaryTreatmentFunction",
+                "system": "https://fhir.nhs.uk/CodeSystem/England-NHSDataModelAndDictionaryTreatmentFunction",
                 "code": "500"
             }
         ]
