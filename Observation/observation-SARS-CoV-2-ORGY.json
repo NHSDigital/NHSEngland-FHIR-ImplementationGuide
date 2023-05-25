@@ -1,9 +1,9 @@
 {
     "resourceType": "Observation",
-    "id": "08fa43dc-6bda-456f-b10c-5bc8abaca855",
+    "id": "England-Observation",
     "extension": [
         {
-            "url": "https://fhir.nhs.uk/StructureDefinition/Extension-COVID19-TestResult",
+            "url": "https://fhir.nhs.uk/StructureDefinition/England-Extension-COVID19TestResult",
             "extension": [
                 {
                     "url": "reportOrigin",

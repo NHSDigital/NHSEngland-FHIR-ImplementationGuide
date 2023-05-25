@@ -1,17 +1,17 @@
 <MessageDefinition xmlns="http://hl7.org/fhir">
-    <id value="20286153-8c5e-449a-aa60-34d9856fcaac" />
-    <url value="https://fhir.nhs.uk/MessageDefinition/appointment" />
+    <id value="England-Appointment" />
+    <url value="https://fhir.nhs.uk/MessageDefinition/England-Appointment" />
     <identifier>
         <system value="https://tools.ietf.org/html/rfc4122" />
         <value value="64011859-32d9-4fd2-abc2-00e31a15b5fc" />
     </identifier>
     <version value="1.0.0" />
-    <title value="Patient Appointment" />
-    <name value="PatientAppointment" />
+    <title value="England Appointment" />
+    <name value="EnglandAppointment" />
     <status value="active" />
-    <date value="2021-06-08" />
+    <date value="2023-06-01" />
     <eventCoding>
-        <system value="https://fhir.nhs.uk/CodeSystem/message-event" />
+        <system value="https://fhir.nhs.uk/CodeSystem/England-MessageEvent" />
         <code value="appointment" />
         <display value="Appointment" />
     </eventCoding>

@@ -1,17 +1,17 @@
 <MessageDefinition xmlns="http://hl7.org/fhir">
-    <id value="bf729ea8-280b-4109-b2f5-02ce8e51d870"></id>
-    <url value="https://fhir.nhs.uk/MessageDefinition/dispense-notification"></url>
+    <id value="England-DispenseNotification"></id>
+    <url value="https://fhir.nhs.uk/MessageDefinition/England-DispenseNotification"></url>
     <identifier>
         <system value="https://tools.ietf.org/html/rfc4122"></system>
         <value value="bf729ea8-280b-4109-b2f5-02ce8e51d870"></value>
     </identifier>
     <version value="1.0.0"></version>
-    <name value="NHSDigitalDispenseNotification"/>
-    <title value="Pharmacy/Treatment Dispense"></title>
+    <name value="EnglandDispenseNotification"/>
+    <title value="England DispenseNotification"></title>
     <status value="active"></status>
-    <date value="2020-10-02"></date>
+    <date value="2023-06-01"></date>
     <eventCoding>
-        <system value="https://fhir.nhs.uk/CodeSystem/message-event"></system>
+        <system value="https://fhir.nhs.uk/CodeSystem/England-MessageEvent"></system>
         <code value="dispense-notification"></code>
         <display value="Dispense Notification"></display>
     </eventCoding>
@@ -19,7 +19,7 @@
     <category value="notification"></category>
     <focus>
         <code value="MedicationDispense"></code>
-        <profile value="https://fhir.nhs.uk/StructureDefinition/England-MedicationDispense-Message"></profile>
+        <profile value="https://fhir.nhs.uk/StructureDefinition/England-MedicationDispenseMessage"></profile>
         <min value="1"></min>
         <max value="*"></max>
     </focus>

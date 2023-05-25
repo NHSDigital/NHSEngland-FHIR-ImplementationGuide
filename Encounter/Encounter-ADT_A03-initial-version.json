@@ -1,13 +1,13 @@
 {
     "resourceType": "Encounter",
-    "id": "adt-a03-initial",
+    "id": "England-Encounter",
     "extension": [
         {
-            "url": "https://fhir.nhs.uk/StructureDefinition/Extension-UKCore-AdmissionMethod",
+            "url": "https://fhir.nhs.uk/StructureDefinition/England-ExtensionUKCore-AdmissionMethod",
             "valueCodeableConcept": {
                 "coding": [
                     {
-                        "system": "https://fhir.nhs.uk/CodeSystem/UKCore-AdmissionMethod",
+                        "system": "https://fhir.nhs.uk/CodeSystem/England-UKCoreAdmissionMethod",
                         "code": "82"
                     }
                 ]
@@ -29,7 +29,7 @@
     "serviceType": {
         "coding": [
             {
-                "system": "https://fhir.nhs.uk/CodeSystem/NHSDataModelAndDictionary-treatment-function",
+                "system": "https://fhir.nhs.uk/CodeSystem/England-NHSDataModelAndDictionaryTreatmentFunction",
                 "code": "500"
             }
         ]
@@ -116,7 +116,7 @@
         "admitSource": {
             "coding": [
                 {
-                    "system": "https://fhir.hl7.org.uk/CodeSystem/UKCore-SourceOfAdmission",
+                    "system": "https://fhir.hl7.org.uk/CodeSystem/England-UKCoreSourceOfAdmission",
                     "code": "79"
                 }
             ]
@@ -124,7 +124,7 @@
         "dischargeDisposition": {
             "coding": [
                 {
-                    "system": "https://fhir.hl7.org.uk/CodeSystem/UKCore-DischargeMethod",
+                    "system": "https://fhir.hl7.org.uk/CodeSystem/England-UKCoreDischargeMethod",
                     "code": "19"
                 }
             ]

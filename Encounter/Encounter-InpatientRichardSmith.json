@@ -1,6 +1,6 @@
 {
     "resourceType": "Encounter",
-    "id": "9d222207-7b26-42a0-9abe-f9883a330662",
+    "id": "England-Encounter",
     "identifier": [
         {
             "system": "https://fhir.leedsth.nhs.uk/Id/encounter",
@@ -27,7 +27,7 @@
     "serviceType": {
         "coding": [
             {
-                "system": "https://fhir.nhs.uk/CodeSystem/NHSDataModelAndDictionary-treatment-function",
+                "system": "https://fhir.nhs.uk/CodeSystem/England-NHSDataModelAndDictionaryTreatmentFunction",
                 "code": "320",
                 "display": "CARDIOLOGY"
             }
@@ -91,7 +91,7 @@
         "dischargeDisposition": {
             "coding": [
                 {
-                    "system": "https://fhir.hl7.org.uk/CodeSystem/UKCore-DischargeDestination",
+                    "system": "https://fhir.hl7.org.uk/CodeSystem/England-UKCoreDischargeDestination",
                     "code": "19",
                     "display": "Usual place of residence unless listed below, for example, a private dwelling whether owner occupied or owned by Local Authority, housing association or other landlord. This includes wardened accommodation but not residential accommodation where health care is provided. It also includes Patients with no fixed abode."
                 }
