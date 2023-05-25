@@ -1,13 +1,13 @@
 <MessageDefinition xmlns="http://hl7.org/fhir">
-    <id value="England-DispenseNotification"></id>
-    <url value="https://fhir.nhs.uk/MessageDefinition/England-DispenseNotification"></url>
+    <id value="England-dispensenotification"></id>
+    <url value="https://fhir.nhs.uk/MessageDefinition/England-dispensenotification"></url>
     <identifier>
         <system value="https://tools.ietf.org/html/rfc4122"></system>
         <value value="bf729ea8-280b-4109-b2f5-02ce8e51d870"></value>
     </identifier>
     <version value="1.0.0"></version>
-    <name value="EnglandDispenseNotification"/>
-    <title value="England DispenseNotification"></title>
+    <name value="Englanddispensenotification"/>
+    <title value="England dispensenotification"></title>
     <status value="active"></status>
     <date value="2023-06-01"></date>
     <eventCoding>

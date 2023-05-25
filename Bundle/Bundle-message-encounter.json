@@ -13,7 +13,7 @@
             "resource": {
                 "resourceType": "MessageHeader",
                 "eventCoding": {
-                    "system": "https://fhir.nhs.uk/CodeSystem/England-MessageEvent",
+                    "system": "https://fhir.nhs.uk/CodeSystem/MessageEvent",
                     "code": "encounter"
                 },
                 "destination": [

@@ -15,7 +15,7 @@
                     <endpoint value="urn:nhs-uk:addressing:ods:RR8" />
                 </source>
                 <eventCoding>
-                    <system value="https://fhir.nhs.uk/CodeSystem/England-MessageEvent" />
+                    <system value="https://fhir.nhs.uk/CodeSystem/MessageEvent" />
                     <code value="appointment" />
                     <display value="Appointment" />
                 </eventCoding>

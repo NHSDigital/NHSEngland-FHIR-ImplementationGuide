@@ -34,7 +34,7 @@
     "serviceType": {
         "coding": [
             {
-                "system": "https://fhir.nhs.uk/CodeSystem/England-NHSDataModelAndDictionaryTreatmentFunction",
+                "system": "https://fhir.nhs.uk/CodeSystem/NHSDataModelAndDictionaryTreatmentFunction",
                 "code": "500"
             }
         ]

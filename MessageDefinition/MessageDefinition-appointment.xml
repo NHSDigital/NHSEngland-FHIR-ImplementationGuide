@@ -1,13 +1,13 @@
 <MessageDefinition xmlns="http://hl7.org/fhir">
-    <id value="England-Appointment" />
-    <url value="https://fhir.nhs.uk/MessageDefinition/England-Appointment" />
+    <id value="England-appointment" />
+    <url value="https://fhir.nhs.uk/MessageDefinition/England-appointment" />
     <identifier>
         <system value="https://tools.ietf.org/html/rfc4122" />
         <value value="64011859-32d9-4fd2-abc2-00e31a15b5fc" />
     </identifier>
     <version value="1.0.0" />
-    <title value="England Appointment" />
-    <name value="EnglandAppointment" />
+    <title value="England appointment" />
+    <name value="Englandappointment" />
     <status value="active" />
     <date value="2023-06-01" />
     <eventCoding>
