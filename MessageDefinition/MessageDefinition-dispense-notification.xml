@@ -11,7 +11,7 @@
     <status value="active"></status>
     <date value="2023-06-01"></date>
     <eventCoding>
-        <system value="https://fhir.nhs.uk/CodeSystem/MessageEvent"></system>
+        <system value="https://fhir.nhs.uk/CodeSystem/message-event"></system>
         <code value="dispense-notification"></code>
         <display value="Dispense Notification"></display>
     </eventCoding>
