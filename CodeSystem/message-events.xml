@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeSystem xmlns="http://hl7.org/fhir">
     <id value="England-MessageEvent"/>
-    <url value="https://fhir.nhs.uk/CodeSystem/England-MessageEvent"/>
+    <url value="https://fhir.nhs.uk/CodeSystem/message-event"/>
     <identifier>
         <system value="https://fhir.nhs.uk/identifier/CodeSystem"/>
         <value value="message-events"/>
