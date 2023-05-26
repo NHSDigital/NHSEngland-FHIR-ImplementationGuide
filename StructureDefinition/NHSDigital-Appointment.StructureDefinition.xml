@@ -79,7 +79,7 @@
     </element>
     <element id="Appointment.serviceCategory:NHSDataDictionaryTreatmentFunction.coding.system">
       <path value="Appointment.serviceCategory.coding.system" />
-      <fixedUri value="https://fhir.nhs.uk/CodeSystem/NHSDataModelAndDictionary-treatment-function" />
+      <fixedUri value="https://fhir.nhs.uk/CodeSystem/England-NHSDataModelAndDictionaryTreatmentFunction" />
     </element>
     <element id="Appointment.serviceCategory:eRSClinicType">
       <path value="Appointment.serviceCategory" />
@@ -110,7 +110,7 @@
       <binding>
         <strength value="required" />
         <description value="NHS Dictionary Main Specialty" />
-        <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDataModelAndDictionary-clinical-specialty" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/England-NHSDataModelAndDictionaryClinicalSpecialty" />
       </binding>
     </element>
     <element id="Appointment.reasonCode">
@@ -184,7 +184,7 @@
       <type>
         <code value="Reference" />
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-HealthcareService" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-PractitionerRole-Minimal" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-PractitionerRoleMinimal" />
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-Patient" />
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-Location" />
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-Practitioner" />
