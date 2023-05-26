@@ -151,7 +151,7 @@
       <binding>
         <strength value="preferred" />
         <description value="UKCore event types" />
-        <valueSet value="https://fhir.nhs.uk/ValueSet/England-message-events" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/England-MessageEvents" />
       </binding>
     </element>
     <element id="CommunicationRequest.reasonCode.coding.system">
