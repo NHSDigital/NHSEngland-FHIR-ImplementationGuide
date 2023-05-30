@@ -1,9 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="35cdca0d-46a3-4dd3-9967-9470b864b92e" />
+  <id value="England-MessageHeader" />
   <url value="https://fhir.nhs.uk/StructureDefinition/England-MessageHeader" />
+  <version value="1.0.0" />
   <name value="EnglandMessageHeader" />
+  <title value="England MessageHeader" />
   <status value="draft" />
+  <date value="2023-06-01" />
+  <publisher value="NHS England" />
+  <contact>
+    <name value="NHS England" />
+    <telecom>
+      <system value="email" />
+      <value value="interoperabilityteam@nhs.net" />
+      <use value="work" />
+      <rank value="1" />
+    </telecom>
+  </contact>
+  <description value="This profile defines the NHS England constraints and extensions on the UKCore FHIR resource [UKCore MessageHeader ](https://simplifier.net/hl7fhirukcorer4/ukcore-messageheader)" />
+  <purpose value="This profile carries the header data for a message exchange that is either requesting or responding to an action." />
+  <copyright value="&quot;Copyright © 2021+ HL7 UK Licensed under the Apache License, Version 2.0 (the \&quot;License\&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at  http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \&quot;AS IS\&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. HL7® FHIR® standard Copyright © 2011+ HL7 The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at  https://www.hl7.org/fhir/license.html.&quot;," />
   <fhirVersion value="4.0.1" />
   <kind value="resource" />
   <abstract value="false" />
@@ -47,18 +63,12 @@
     </element>
     <element id="MessageHeader.event[x]">
       <path value="MessageHeader.event[x]" />
-      <definition value="The main message type is held in the mandatory `eventCoding` section which can be subdivided by the optional `reason` codes.&#xD;&#xA;&#xD;&#xA;Every code **MUST** have a corresponding `MessageDefinition`.&#xD;&#xA;&#xD;&#xA;For example the event code `dispense-notification` has a MessageDefintion of [https://fhir.nhs.uk/MessageDefinition/pharmacy-dispense](https://simplifier.net/guide/DigitalMedicines/dispense-notification). This definition lists the profiles and cardinality of the resources in the message. `eventCoding` and MessageDefintion define the structure of the message. &#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;eventCoding&quot;: {&#xD;&#xA;  &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/England-MessageEventEPS&quot;,&#xD;&#xA;  &quot;code&quot;: &quot;dispense-notification&quot;,&#xD;&#xA;  &quot;display&quot;: &quot;Dispense Notification&quot;&#xD;&#xA;}&#xD;&#xA;```" />
+      <definition value="The main message type is held in the mandatory `eventCoding` section which can be subdivided by the optional `reason` codes.&#xD;&#xA;&#xD;&#xA;Every code **MUST** have a corresponding `MessageDefinition`.&#xD;&#xA;&#xD;&#xA;For example the event code `dispense-notification` has a MessageDefintion of [https://fhir.nhs.uk/MessageDefinition/pharmacy-dispense](https://simplifier.net/guide/DigitalMedicines/dispense-notification). This definition lists the profiles and cardinality of the resources in the message. `eventCoding` and MessageDefintion define the structure of the message. &#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;eventCoding&quot;: {&#xD;&#xA;  &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/message-event&quot;,&#xD;&#xA;  &quot;code&quot;: &quot;dispense-notification&quot;,&#xD;&#xA;  &quot;display&quot;: &quot;Dispense Notification&quot;&#xD;&#xA;}&#xD;&#xA;```" />
       <type>
         <code value="Coding" />
       </type>
       <mustSupport value="true" />
       <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="MessageEvent" />
-        </extension
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding">
-          <valueBoolean value="true" />
-        </extension>
         <strength value="required" />
         <valueSet value="https://fhir.nhs.uk/ValueSet/England-MessageEvents" />
       </binding>
@@ -223,9 +233,6 @@
       <path value="MessageHeader.reason" />
       <definition value="`reason` can be used to subdivide `eventCoding`. In the example below, `cancel` is used to indicate the specific reason for the event `prescription-order-update`. &#xD;&#xA;The physical cancellation would be the `status=cancelled` in the `MedicationRequest` reason, the reason is a hint.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;reason&quot;: {&#xD;&#xA;  &quot;coding&quot;:  [&#xD;&#xA;    {&#xD;&#xA;      &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/message-reason-prescription&quot;,&#xD;&#xA;      &quot;code&quot;: &quot;cancel&quot;,&#xD;&#xA;      &quot;display&quot;: &quot;Cancel&quot;&#xD;&#xA;    }&#xD;&#xA;  ]&#xD;&#xA;}&#xD;&#xA;```" />
       <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="EventReason" />
-        </extension>
         <strength value="required" />
         <valueSet value="https://fhir.nhs.uk/ValueSet/message-reason-code" />
       </binding>
