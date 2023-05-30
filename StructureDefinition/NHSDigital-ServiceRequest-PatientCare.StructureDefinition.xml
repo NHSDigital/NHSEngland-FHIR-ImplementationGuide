@@ -47,7 +47,7 @@
       <sliceName value="state" />
       <min value="1" />
     </element>
-    <element id="ServiceRequest.extension:portalLink">
+    <element id="ServiceRequest.extension:PortalLink">
       <path value="ServiceRequest.extension" />
       <sliceName value="portalLink" />
       <min value="1" />

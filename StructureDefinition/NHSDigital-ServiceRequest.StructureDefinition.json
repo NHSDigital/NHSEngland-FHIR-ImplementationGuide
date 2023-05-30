@@ -65,7 +65,7 @@
         "mustSupport": true
       },
       {
-        "id": "ServiceRequest.extension:portalLink",
+        "id": "ServiceRequest.extension:PortalLink",
         "path": "ServiceRequest.extension",
         "sliceName": "portalLink",
         "short": "Portal Link",
