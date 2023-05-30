@@ -46,7 +46,7 @@
         {
             "coding": [
                 {
-                    "system": "https://fhir.nhs.uk/CodeSystem/message-event",
+                    "system": "https://fhir.nhs.uk/CodeSystem/MessageEventEPS",
                     "code": "dispense-notification",
                     "display": "Dispense Notification"
                 }

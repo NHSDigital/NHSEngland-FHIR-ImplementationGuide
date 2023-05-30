@@ -16,7 +16,7 @@
           "endpoint": "urn:nhs-uk:addressing:ods:RR8"
         },
         "eventCoding": {
-          "system": "https://fhir.nhs.uk/CodeSystem/message-event",
+          "system": "https://fhir.nhs.uk/CodeSystem/MessageEventEPS",
           "code": "document",
           "display": "Document"
         },

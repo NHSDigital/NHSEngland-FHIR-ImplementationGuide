@@ -11,7 +11,7 @@
             "resource": {
                 "resourceType": "MessageHeader",
                 "eventCoding": {
-                    "system": "https://fhir.nhs.uk/CodeSystem/message-event",
+                    "system": "https://fhir.nhs.uk/CodeSystem/MessageEventEPS",
                     "code": "unsolicited-observations"
                 },
                 "destination": [
