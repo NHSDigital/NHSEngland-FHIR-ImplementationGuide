@@ -16,7 +16,7 @@
                     "endpoint": "https://directory.spineservices.nhs.uk/STU3/Organization/X2601"
                 },
                 "eventCoding": {
-                    "system": "https://fhir.nhs.uk/CodeSystem/MessageEventEPS",
+                    "system": "https://fhir.nhs.uk/CodeSystem/England-MessageEventEPS",
                     "code": "notification",
                     "display": "Subscription Event Notification"
                 },
