@@ -1,8 +1,8 @@
 {
 	"resourceType": "ValueSet",
-	"id": "England-IdentifierType",
+	"id": "10bc93a4-9270-4c65-916c-5436f2db10b4",
 	"url": "https://fhir.nhs.uk/ValueSet/England-IdentifierType",
-	"version": "1.1.0",
+	"version": "1.0.0",
 	"name": "EnglandIdentifierType",
 	"title": "England Identifier Type",
 	"status": "draft",
@@ -10,7 +10,7 @@
 	"publisher": "NHS England",
 	"contact": [
 		{
-			"name": "NHS England",
+			"name": "Interoperability Team",
 			"telecom": [
 				{
 					"system": "email",
@@ -20,14 +20,14 @@
 			]
 		}
 	],
-	"description": "Expansion of http://hl7.org/fhir/ValueSet/England-IdentifierType to include NHS Organization types",
+	"description": "Expansion of http://hl7.org/fhir/ValueSet/identifier-type to include NHS Organization types",
 	"compose": {
 		"include": [
 			{
-				"system": "https://fhir.nhs.uk/CodeSystem/England-OrganisationRole"
+				"system": "https://fhir.nhs.uk/CodeSystem/organisation-role"
 			},
 			{
-				"system": "http://terminology.hl7.org/CodeSystem/England-V20203",
+				"system": "http://terminology.hl7.org/CodeSystem/v2-0203",
 				"concept": [
 					{
 						"code": "DL"

@@ -23,7 +23,7 @@
   "compose": {
     "include": [
       {
-        "system": "https://fhir.nhs.uk/CodeSystem/eRS-ReferralState",
+        "system": "https://fhir.nhs.uk/CodeSystem/England-eRSReferralState",
         "concept": [
           {
             "code": "REJECTED"
