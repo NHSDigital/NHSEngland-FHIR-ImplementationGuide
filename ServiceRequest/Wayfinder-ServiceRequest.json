@@ -81,7 +81,7 @@
   "performerType": {
     "coding": [
       {
-        "system": "https://fhir.nhs.uk/CodeSystem/England-eRSSpecialty",
+        "system": "https://fhir.nhs.uk/CodeSystem/eRS-Specialty",
         "code": "DERMATOLOGY",
         "display": "Dermatology"
       }

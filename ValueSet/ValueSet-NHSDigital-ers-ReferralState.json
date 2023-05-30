@@ -1,7 +1,7 @@
 {
   "resourceType": "ValueSet",
   "id": "d2a51dd0-9e86-4cea-9064-077637cb79b7",
-  "url": "https://fhir.nhs.uk/ValueSet/England-eRS-ReferralState",
+  "url": "https://fhir.nhs.uk/ValueSet/England-eRSReferralState",
   "version": "1.0.0",
   "name": "ERSReferralState",
   "status": "draft",

@@ -1,9 +1,9 @@
 {
     "resourceType": "CodeSystem",
-    "id": "England-eRSClinicType",
-    "url": "https://fhir.nhs.uk/CodeSystem/England-eRSClinicType",
+    "id": "England-ClinicType",
+    "url": "https://fhir.nhs.uk/CodeSystem/England-ClinicType",
     "version": "1.0.0",
-    "name": "EnglandeRSClinicType",
+    "name": "EnglandClinicType",
     "status": "draft",
     "date": "2023-06-01",
     "publisher": "NHS England",
@@ -19,7 +19,7 @@
         ]
       }
     ],
-    "description": "CodeSystem for eRS Clinic Type",
+    "description": "CodeSystem for Clinic Type",
     "copyright": "Copyright © 2017 NHS Digital",
     "caseSensitive": true,
     "content": "complete",

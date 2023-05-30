@@ -5,7 +5,7 @@
     },
     "extension": [
         {
-            "url": "https://fhir.nhs.uk/StructureDefinition/England-Extension-ERSReferral",
+            "url": "https://fhir.nhs.uk/StructureDefinition/Extension-England-ERSReferral",
             "extension": [
                 {
                     "url": "sourceSystem",
@@ -18,7 +18,7 @@
             ]
         },
         {
-            "url": "https://fhir.nhs.uk/StructureDefinition/England-Extension-eRSServiceRequestState"
+            "url": "https://fhir.nhs.uk/StructureDefinition/Extension-England-eRSServiceRequestState"
         }
     ],
     "contained": [
