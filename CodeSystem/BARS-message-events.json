@@ -1,33 +1,34 @@
 {
     "resourceType": "CodeSystem",
-    "id": "message-events-bars",
-    "url": "https://fhir.nhs.uk/CodeSystem/message-events-bars",
+    "id": "England-MessageEventBARS",
+    "url": "https://fhir.nhs.uk/CodeSystem/MessageEventBARS",
     "identifier":  [
         {
             "system": "https://fhir.nhs.uk/identifier/CodeSystem",
-            "value": "message-events-bars"
+            "value": "England-MessageEventBARS"
         }
     ],
     "version": "1.0.0",
-    "name": "MessageEventsBARS",
-    "title": "Message Events BARS",
+    "name": "EnglandMessageEventBARS",
+    "title": "England MessageEvent BARS",
     "status": "active",
-    "date": "2022-02-11",
-    "publisher": "NHS Digital",
+    "date": "2023-06-01",
+    "publisher": "NHS England",
     "contact":  [
         {
-            "name": "NHS Digital",
+            "name": "NHS England",
             "telecom":  [
                 {
                     "system": "email",
                     "value": "interoperabilityteam@nhs.net",
-                    "use": "work"
+                    "use": "work",
+                    "rank":1
                 }
             ]
         }
     ],
     "description": "Common messaging events for BARS Service Requests.",
-    "copyright": "Copyright © 2021 NHS Digital",
+    "copyright":"&quot;Copyright © 2021+ HL7 UK Licensed under the Apache License, Version 2.0 (the \&quot;License\&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at  http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \&quot;AS IS\&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. HL7® FHIR® standard Copyright © 2011+ HL7 The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at  https://www.hl7.org/fhir/license.html.&quot;,",
     "caseSensitive": true,
     "content": "complete",
     "concept":  [

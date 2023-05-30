@@ -1,7 +1,7 @@
 {
   "name": "uk.nhsdigital.r4",
-  "description": "NHS Digital FHIR Implementation Guide",
-  "author": "nhsdigital",
+  "description": "NHS England FHIR Implementation Guide",
+  "author": "nhsengland",
   "dependencies": {
     "hl7.fhir.r4.core": "4.0.1",
     "fhir.r4.ukcore.stu3.currentbuild": "0.0.5-sprint-6-review"
