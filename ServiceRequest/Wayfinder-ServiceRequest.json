@@ -7,25 +7,25 @@
   },
   "extension": [
     {
-      "url": "https://fhir.nhs.uk/StructureDefinition/Extension-Portal-Link",
+      "url": "https://fhir.nhs.uk/StructureDefinition/Extension-England-PortalLink",
       "valueUrl": "https://refer.nhs.uk/nhslogin?ubrn=111111111111"
     },
     {
-      "url": "https://fhir.nhs.uk/StructureDefinition/Extension-eRS-ServiceRequest-State",
+      "url": "https://fhir.nhs.uk/StructureDefinition/England-Extension-eRSServiceRequestState",
       "extension": [
         {
           "url": "state",
           "valueCoding": {
-            "system": "https://fhir.nhs.uk/CodeSystem/eRS-ReferralState",
+            "system": "https://fhir.nhs.uk/CodeSystem/England-eRSReferralState",
             "code": "BOOKED"
           }
         }
       ]
     },
     {
-      "url": "https://fhir.nhs.uk/StructureDefinition/Extension-ServiceRequest-Priority",
+      "url": "https://fhir.nhs.uk/StructureDefinition/Extension-England-ServiceRequestPriority",
       "valueCoding": {
-        "system": "https://fhir.nhs.uk/CodeSystem/eRS-Priority",
+        "system": "https://fhir.nhs.uk/CodeSystem/England-eRS-Priority",
         "code": "TWO_WEEK_WAIT",
         "display": "2 Week Wait"
       }
@@ -81,7 +81,7 @@
   "performerType": {
     "coding": [
       {
-        "system": "https://fhir.nhs.uk/CodeSystem/eRS-Specialty",
+        "system": "https://fhir.nhs.uk/CodeSystem/England-eRSSpecialty",
         "code": "DERMATOLOGY",
         "display": "Dermatology"
       }
