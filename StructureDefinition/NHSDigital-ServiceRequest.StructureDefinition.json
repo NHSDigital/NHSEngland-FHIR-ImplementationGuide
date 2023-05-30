@@ -65,9 +65,9 @@
         "mustSupport": true
       },
       {
-        "id": "ServiceRequest.extension:portalLink",
+        "id": "ServiceRequest.extension:PortalLink",
         "path": "ServiceRequest.extension",
-        "sliceName": "portalLink",
+        "sliceName": "PortalLink",
         "short": "Portal Link",
         "definition": "Deep Link into the specific landing page in MYR\r\n\r\n```json\r\n\"extension\": [\r\n        {\r\n            \"url\": \"https://fhir.nhs.uk/StructureDefinition/Extension-Portal-Link\",\r\n            \"valueUrl\": \"https://virtual.nhs.uk/MyPatientRecords\"\r\n        }\r\n    ],\r\n```",
         "min": 0,
@@ -212,13 +212,13 @@
         "sliceName": "BARSCategory",
         "binding": {
           "strength": "preferred",
-          "valueSet": "https://fhir.nhs.uk/ValueSet/England-BARS-message-category"
+          "valueSet": "https://fhir.nhs.uk/ValueSet/England-BARSMessageCategory"
         }
       },
       {
         "id": "ServiceRequest.category.coding:BARSCategory.system",
         "path": "ServiceRequest.category.coding.system",
-        "fixedUri": "https://fhir.nhs.uk/CodeSystem/message-category-servicerequest"
+        "fixedUri": "https://fhir.nhs.uk/CodeSystem/England-MessageCategoryServiceRequest"
       },
       {
         "id": "ServiceRequest.category.coding:NHSDigitalServiceRequestCategory",
@@ -226,7 +226,7 @@
         "sliceName": "NHSDigitalServiceRequestCategory",
         "binding": {
           "strength": "preferred",
-          "valueSet": "https://fhir.nhs.uk/ValueSet/England-ServiceRequest-category"
+          "valueSet": "https://fhir.nhs.uk/ValueSet/England-ServiceRequestCategory"
         }
       },
       {
@@ -284,7 +284,7 @@
         "id": "ServiceRequest.code.coding:ServiceRequestCode.system",
         "path": "ServiceRequest.code.coding.system",
         "min": 1,
-        "fixedUri": "https://fhir.nhs.uk/CodeSystem/ServiceRequest-Code"
+        "fixedUri": "https://fhir.nhs.uk/CodeSystem/England-ServiceRequestCode"
       },
       {
         "id": "ServiceRequest.code.coding:ServiceRequestCode.code",
