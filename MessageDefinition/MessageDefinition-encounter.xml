@@ -11,7 +11,7 @@
     <status value="active" />
     <date value="2022-03-25" />
     <eventCoding>
-        <system value="https://fhir.nhs.uk/CodeSystem/message-event" />
+        <system value="https://fhir.nhs.uk/CodeSystem/MessageEventEPS" />
         <code value="encounter" />
         <display value="Patient Encounter" />
     </eventCoding>

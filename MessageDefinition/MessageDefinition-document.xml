@@ -11,7 +11,7 @@
     <status value="active" />
     <date value="2021-04-23" />
     <eventCoding>
-        <system value="https://fhir.nhs.uk/CodeSystem/message-event" />
+        <system value="https://fhir.nhs.uk/CodeSystem/MessageEventEPS" />
         <code value="document" />
         <display value="Document" />
     </eventCoding>

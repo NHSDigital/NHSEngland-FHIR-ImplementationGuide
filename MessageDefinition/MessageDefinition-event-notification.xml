@@ -11,7 +11,7 @@
     <status value="active" />
     <date value="2022-01-07" />
     <eventCoding>
-        <system value="https://fhir.nhs.uk/CodeSystem/message-event" />
+        <system value="https://fhir.nhs.uk/CodeSystem/MessageEventEPS" />
         <code value="notification" />
         <display value="Event Notification" />
     </eventCoding>
