@@ -23,27 +23,22 @@
 			<valueString value="ebs"></valueString>
 		</extension>
 	</extension>
-	<!-- NhsEndpointServiceId -->
 	<identifier>
 		<system value="https://fhir.nhs.uk/Id/nhsEndpointServiceId"></system>
 		<value value="urn:nhs:names:services:psis:REPC_IN150016UK05"></value>
 	</identifier>
-	<!-- NhsMhsFQDN -->
 	<identifier>
 		<system value="https://fhir.nhs.uk/Id/nhsMhsFQDN"></system>
 		<value value="192.168.128.11"></value>
 	</identifier>
-	<!-- NhsMhsPartyKey -->
 	<identifier>
 		<system value="https://fhir.nhs.uk/Id/nhsMhsPartyKey"></system>
 		<value value="R8008-0000806"></value>
 	</identifier>
-	<!-- NhsMhsCPAId -->
 	<identifier>
 		<system value="https://fhir.nhs.uk/Id/nhsMhsCPAId"></system>
 		<value value="S20001A000182"></value>
 	</identifier>
-	<!-- NhsSpineASID -->
 	<identifier>
 		<system value="https://fhir.nhs.uk/Id/nhsSpineASID"></system>
 		<value value="227319907548"></value>
@@ -67,6 +62,5 @@
 			<display value="Any"></display>
 		</coding>
 	</payloadType>
-	<!-- NhsMhsEndPoint -->
 	<address value="https://192.168.128.11/reliablemessaging/reliablerequest"></address>
 </Endpoint>
