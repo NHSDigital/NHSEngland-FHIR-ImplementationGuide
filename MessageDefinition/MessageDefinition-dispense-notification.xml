@@ -11,7 +11,7 @@
     <status value="active"></status>
     <date value="2020-10-02"></date>
     <eventCoding>
-        <system value="https://fhir.nhs.uk/CodeSystem/MessageEventEPS"></system>
+        <system value="https://fhir.nhs.uk/CodeSystem/England-MessageEventEPS"></system>
         <code value="dispense-notification"></code>
         <display value="Dispense Notification"></display>
     </eventCoding>

@@ -13,7 +13,7 @@
             "resource": {
                 "resourceType": "MessageHeader",
                 "eventCoding": {
-                    "system": "https://fhir.nhs.uk/CodeSystem/MessageEventEPS",
+                    "system": "https://fhir.nhs.uk/CodeSystem/England-MessageEventEPS",
                     "code": "document"
                 },
                 "destination": [

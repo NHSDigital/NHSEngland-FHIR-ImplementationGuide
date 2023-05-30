@@ -51,7 +51,7 @@
         {
             "coding": [
                 {
-                    "system": "https://fhir.nhs.uk/CodeSystem/MessageEventEPS",
+                    "system": "https://fhir.nhs.uk/CodeSystem/England-MessageEventEPS",
                     "code": "prescription-order-response",
                     "display": "Prescription Order Response"
                 }

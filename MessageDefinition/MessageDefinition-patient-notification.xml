@@ -12,7 +12,7 @@
     <date value="2020-10-29" />
     <description value="Changes to a patient resource/demographics"/>
     <eventCoding>
-        <system value="https://fhir.nhs.uk/CodeSystem/MessageEventEPS" />
+        <system value="https://fhir.nhs.uk/CodeSystem/England-MessageEventEPS" />
         <code value="patient-notification" />
         <display value="patient-notification" />
     </eventCoding>

@@ -11,7 +11,7 @@
     <status value="active" />
     <date value="2021-07-07" />
     <eventCoding>
-        <system value="https://fhir.nhs.uk/CodeSystem/MessageEventEPS" />
+        <system value="https://fhir.nhs.uk/CodeSystem/England-MessageEventEPS" />
         <code value="unsolicited-observations" />
         <display value="Unsolicited Observations" />
     </eventCoding>

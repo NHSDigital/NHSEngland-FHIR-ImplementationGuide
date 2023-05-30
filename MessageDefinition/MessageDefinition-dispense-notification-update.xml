@@ -11,7 +11,7 @@
     <status value="retired"></status>
     <date value="2022-03-01"></date>
     <eventCoding>
-        <system value="https://fhir.nhs.uk/CodeSystem/MessageEventEPS"></system>
+        <system value="https://fhir.nhs.uk/CodeSystem/England-MessageEventEPS"></system>
         <code value="dispense-notification-update"></code>
         <display value="Dispense Notification Update"></display>
     </eventCoding>

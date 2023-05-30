@@ -11,7 +11,7 @@
     <status value="active" />
     <date value="2021-06-08" />
     <eventCoding>
-        <system value="https://fhir.nhs.uk/CodeSystem/MessageEventEPS" />
+        <system value="https://fhir.nhs.uk/CodeSystem/England-MessageEventEPS" />
         <code value="appointment" />
         <display value="Appointment" />
     </eventCoding>

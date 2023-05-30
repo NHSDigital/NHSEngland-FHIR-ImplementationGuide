@@ -11,7 +11,7 @@
     <status value="active" />
     <date value="2021-07-28" />
     <eventCoding>
-        <system value="https://fhir.nhs.uk/CodeSystem/MessageEventEPS" />
+        <system value="https://fhir.nhs.uk/CodeSystem/England-MessageEventEPS" />
         <code value="referral" />
         <display value="Patient Referral" />
     </eventCoding>

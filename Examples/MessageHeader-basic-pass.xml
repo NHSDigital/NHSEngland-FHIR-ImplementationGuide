@@ -1,7 +1,7 @@
 <MessageHeader>
     <id value="3599c0e9-9292-413e-9270-9a1ef1ead99c" />
     <eventCoding>
-        <system value="https://fhir.nhs.uk/CodeSystem/MessageEventEPS" />
+        <system value="https://fhir.nhs.uk/CodeSystem/England-MessageEventEPS" />
         <code value="prescription-order" />
         <display value="Prescription Order" />
     </eventCoding>

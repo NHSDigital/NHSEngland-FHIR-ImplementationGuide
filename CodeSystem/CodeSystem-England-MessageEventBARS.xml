@@ -1,6 +1,6 @@
 <CodeSystem xmlns="http://hl7.org/fhir">
     <id value="England-MessageEventBARS" />
-    <url value="https://fhir.nhs.uk/CodeSystem/MessageEventBARS" />
+    <url value="https://fhir.nhs.uk/CodeSystem/England-MessageEventBARS" />
     <identifier>
         <system value="https://fhir.nhs.uk/identifier/CodeSystem" />
         <value value="England-MessageEventBARS" />
