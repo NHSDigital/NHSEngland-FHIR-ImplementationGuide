@@ -76,7 +76,7 @@
           {
             "code": "Extension",
             "profile": [
-              "https://fhir.nhs.uk/StructureDefinition/Extension-Portal-Link"
+              "https://fhir.nhs.uk/StructureDefinition/Extension-England-PortalLink"
             ]
           }
         ],
@@ -92,7 +92,7 @@
           {
             "code": "Extension",
             "profile": [
-              "https://fhir.nhs.uk/StructureDefinition/Extension-ServiceRequest-Priority"
+              "https://fhir.nhs.uk/StructureDefinition/Extension-England-ServiceRequestPriority"
             ]
           }
         ],
