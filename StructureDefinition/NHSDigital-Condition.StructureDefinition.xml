@@ -34,7 +34,7 @@
         <code value="Reference" />
         <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Patient" />
         <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-RelatedPerson" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-PractitionerRole-Minimal" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-PractitionerRoleMinimal" />
       </type>
       <mustSupport value="true" />
     </element>

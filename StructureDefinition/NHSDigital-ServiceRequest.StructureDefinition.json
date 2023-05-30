@@ -41,7 +41,7 @@
           {
             "code": "Extension",
             "profile": [
-              "https://fhir.nhs.uk/StructureDefinition/Extension-ERS-Referral"
+              "https://fhir.nhs.uk/StructureDefinition/Extension-England-ERSReferral"
             ]
           }
         ],
@@ -58,7 +58,7 @@
           {
             "code": "Extension",
             "profile": [
-              "https://fhir.nhs.uk/StructureDefinition/Extension-eRS-ServiceRequest-State"
+              "https://fhir.nhs.uk/StructureDefinition/Extension-England-eRSServiceRequestState"
             ]
           }
         ],
@@ -363,7 +363,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "https://fhir.nhs.uk/StructureDefinition/England-PractitionerRole-Minimal"
+              "https://fhir.nhs.uk/StructureDefinition/England-PractitionerRoleMinimal"
             ],
             "aggregation": [
               "contained",
@@ -404,13 +404,13 @@
         "mustSupport": true,
         "binding": {
           "strength": "required",
-          "valueSet": "https://fhir.nhs.uk/ValueSet/NHSDataModelAndDictionary-treatment-function"
+          "valueSet": "https://fhir.nhs.uk/ValueSet/England-NHSDataModelAndDictionaryTreatmentFunction"
         }
       },
       {
         "id": "ServiceRequest.performerType.coding:treatmentFunctionCodes.system",
         "path": "ServiceRequest.performerType.coding.system",
-        "fixedUri": "https://fhir.nhs.uk/CodeSystem/NHSDataModelAndDictionary-treatment-function"
+        "fixedUri": "https://fhir.nhs.uk/CodeSystem/England-NHSDataModelAndDictionaryTreatmentFunction"
       },
       {
         "id": "ServiceRequest.performerType.coding:eRSSpecialty",
@@ -418,13 +418,13 @@
         "sliceName": "eRSSpecialty",
         "binding": {
           "strength": "required",
-          "valueSet": "https://fhir.nhs.uk/ValueSet/England-eRS-Specialty"
+          "valueSet": "https://fhir.nhs.uk/ValueSet/England-eRSSpecialty"
         }
       },
       {
         "id": "ServiceRequest.performerType.coding:eRSSpecialty.system",
         "path": "ServiceRequest.performerType.coding.system",
-        "fixedUri": "https://fhir.nhs.uk/CodeSystem/eRS-Specialty"
+        "fixedUri": "https://fhir.nhs.uk/CodeSystem/England-eRSSpecialty"
       },
       {
         "id": "ServiceRequest.performer",
