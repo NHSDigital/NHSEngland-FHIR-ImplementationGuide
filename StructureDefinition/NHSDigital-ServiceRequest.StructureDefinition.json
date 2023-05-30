@@ -65,9 +65,9 @@
         "mustSupport": true
       },
       {
-        "id": "ServiceRequest.extension:PortalLink",
+        "id": "ServiceRequest.extension:portalLink",
         "path": "ServiceRequest.extension",
-        "sliceName": "PortalLink",
+        "sliceName": "portalLink",
         "short": "Portal Link",
         "definition": "Deep Link into the specific landing page in MYR\r\n\r\n```json\r\n\"extension\": [\r\n        {\r\n            \"url\": \"https://fhir.nhs.uk/StructureDefinition/Extension-Portal-Link\",\r\n            \"valueUrl\": \"https://virtual.nhs.uk/MyPatientRecords\"\r\n        }\r\n    ],\r\n```",
         "min": 0,
