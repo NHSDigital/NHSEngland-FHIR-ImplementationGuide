@@ -7,7 +7,7 @@
     },
     "extension": [
         {
-            "url": "https://fhir.nhs.uk/StructureDefinition/Extension-Portal-Link",
+            "url": "https://fhir.nhs.uk/StructureDefinition/Extension-England-PortalLink",
             "valueUrl": "https:/examples.nhs.uk/nhslogin?ubrn=111111111111"
         },
         {
@@ -25,7 +25,7 @@
         {
             "url": "https://fhir.nhs.uk/StructureDefinition/Extension-England-ServiceRequestPriority",
             "valueCoding": {
-                "system": "https://fhir.nhs.uk/CodeSystem/eRS-Priority",
+                "system": "https://fhir.nhs.uk/CodeSystem/England-eRSPriority",
                 "code": "TWO_WEEK_WAIT",
                 "display": "2 Week Wait"
             }
