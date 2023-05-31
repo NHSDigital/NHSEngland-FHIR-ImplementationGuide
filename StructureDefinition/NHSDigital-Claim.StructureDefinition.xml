@@ -1,9 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="c7a6e6f2-4e97-48b9-9ec2-bd4f220e8a5d" />
+  <id value="England-Claim" />
   <url value="https://fhir.nhs.uk/StructureDefinition/England-Claim" />
+  <version value="1.0.0" />
   <name value="EnglandClaim" />
+  <title value="England Claim" />
   <status value="draft" />
+  <date value="2023-06-01" />
+  <publisher value="NHS England" />
+  <contact>
+    <name value="NHS England" />
+    <telecom>
+      <system value="email" />
+      <value value="interoperabilityteam@nhs.net" />
+      <use value="work" />
+      <rank value="1" />
+    </telecom>
+  </contact>
+  <description value="This profile defines the NHS England constraints and extensions on the International FHIR resource [Claim](http://hl7.org/fhir/R4/claim.html)." />
+  <purpose value="Issued list of provider professional services, products which have been provided or are to be provided, to a patient which is sent to an insurer for reimbursement." />
+  <copyright value="&quot;Copyright © 2021+ HL7 UK Licensed under the Apache License, Version 2.0 (the \&quot;License\&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at  http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \&quot;AS IS\&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. HL7® FHIR® standard Copyright © 2011+ HL7 The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at  https://www.hl7.org/fhir/license.html.&quot;," />
   <fhirVersion value="4.0.1" />
   <mapping>
     <identity value="workflow" />
