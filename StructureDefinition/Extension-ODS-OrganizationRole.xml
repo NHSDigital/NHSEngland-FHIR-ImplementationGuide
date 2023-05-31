@@ -10,9 +10,9 @@
   <title value="Extension England ODS Organization Role" />
   <status value="active" />
   <date value="2020-03-08" />
-  <publisher value="NHS Digital" />
+  <publisher value="NHS England" />
   <contact>
-    <name value="Interoperability Team" />
+    <name value="NHS England" />
     <telecom>
       <system value="email" />
       <value value="interoperabilityteam@nhs.net" />

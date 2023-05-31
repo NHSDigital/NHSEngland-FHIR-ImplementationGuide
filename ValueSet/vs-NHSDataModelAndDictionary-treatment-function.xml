@@ -19,7 +19,7 @@
     <compose>
        <include>
           <system value="https://fhir.nhs.uk/CodeSystem/England-NHSDataModelAndDictionaryTreatmentFunction"/>
-          <version value="1.0.0"/>
+          <version value="1.2.1"/>
        </include>
     </compose>
  </ValueSet>

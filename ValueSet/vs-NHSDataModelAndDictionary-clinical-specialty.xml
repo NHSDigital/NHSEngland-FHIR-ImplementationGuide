@@ -19,7 +19,7 @@
     <compose>
        <include>
           <system value="https://fhir.nhs.uk/CodeSystem/England-NHSDataModelAndDictionaryClinicalSpecialty"/>
-          <version value="1.0.0"/>
+          <version value="1.2.1"/>
        </include>
     </compose>
     <expansion>
@@ -30,7 +30,7 @@
       <parameter>
           <name value="version"/>
           <valueUri value="https://fhir.nhs.uk/CodeSystem/England-NHSDataModelAndDictionaryClinicalSpecialty"/>
-          <version value="1.0.0"/>
+          <version value="1.2.1"/>
       </parameter>
       <parameter>
           <name value="count"/>
