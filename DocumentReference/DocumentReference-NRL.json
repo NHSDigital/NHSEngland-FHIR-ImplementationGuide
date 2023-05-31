@@ -60,19 +60,5 @@
                 "display": "Unstructured Document"
             }
         }
-    ],
-    "context": {
-        "period": {
-            "start": "2016-03-07T13:34:00+01:00"
-        },
-        "practiceSetting": {
-            "coding":  [
-                {
-                    "system": "http://snomed.info/sct",
-                    "code": "708168004",
-                    "display": "Mental health service"
-                }
-            ]
-        }
-    }
+    ]
 }
