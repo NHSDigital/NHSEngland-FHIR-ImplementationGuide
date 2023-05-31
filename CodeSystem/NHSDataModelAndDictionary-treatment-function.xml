@@ -7,7 +7,7 @@
     <date value="2023-06-01"/>
     <publisher value="NHS England"/>
     <contact>
-       <name value="Interoperability Team"/>
+       <name value="NHS England"/>
        <telecom>
           <system value="email"/>
           <value value="interoperabilityteam@nhs.net"/>
