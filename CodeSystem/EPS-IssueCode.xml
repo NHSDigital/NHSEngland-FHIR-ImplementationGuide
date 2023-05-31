@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <CodeSystem xmlns="http://hl7.org/fhir">
     <id value="EPS-IssueCode" />
     <url value="https://fhir.nhs.uk/CodeSystem/EPS-IssueCode" />
@@ -25,138 +24,111 @@
     <caseSensitive value="true" />
     <content value="complete" />
     <concept>
-        
         <code value="PATIENT_DECEASED" />
         <display value="Patient is recorded as dead" />
         <definition value="Not applicable to prescribing systems Note. The Spine will not reject a prescription for a dead patient however the requirement to check PDS for death status before prescribing prevents this scenario occurring." />
     </concept>
     <concept>
-        
         <code value="DUPLICATE_PRESCRIPTION_ID" />
         <display value="Duplicate prescription ID exists" />
         <definition value="The System must create a new prescription UUID and re-submit the prescription to the Spine." />
     </concept>
     <concept>
-       
         <code value="MISSING_DIGITAL_SIGNATURE" />
         <display value="Digital signature not found" />
         <definition value="The System must create and apply a digital signature to the prescription and re-submit the prescription to the Spine" />
     </concept>
-
     <concept>
         <code value="INVALID_MESSAGE" />
         <display value="Invalid message" />
         <definition value="The prescription message has failed structural validation at the Spine. A defect report should be raised against the local System or the Spine (whichever is in error). The prescriber must be notified accordingly to use a paper FP10 prescription." />
     </concept>
     <concept>
-       
         <code value="INVALID_NUMBER_MEDICATIONREQUESTS" />
         <display value="Number of items on a prescription should be between 1 and 4" />
         <definition value="The prescriber must be notified accordingly and asked to split the items across separate prescriptions." />
     </concept>
     <concept>
-        
         <code value="MISMATCH_AUTHORISED_REPEAT_COUNT" />
         <display value="Mismatch in authorised repeat counts" />
         <definition value="The “repeatNumber” attribute exists at both the prescription and item level. An item cannot be authorised for more repeats than the prescription." />
     </concept>
     <concept>
-       
         <code value="INVALID_REPEAT_COUNT" />
         <display value="Repeat count should be between 1 and 99" />
         <definition value="The maximum “high” value for the “repeatNumber” attribute is 99." />
     </concept>
-   
-    <concept>
-        
+     <concept>
         <code value="DUPLICATE_MEDICATIONREQUEST_ID" />
         <display value="Duplicate item ID exists" />
         <definition value="The System must create a new line item UUID and re-submit the prescription to the Spine." />
     </concept>
     <concept>
-        
         <code value="INVALID_CHECK_DIGIT" />
         <display value="Error in check digit" />
         <definition value="The System must re-calculate / correct the check digit and re-submit the prescription to the Spine." />
     </concept>
     <concept>
-      
         <code value="INVALID_DATE_FORMAT" />
         <display value="Format of date passed is invalid" />
         <definition value="The format of a date/time attribute with the prescription does not confirm with the format defined within the DMS. The System must correct the date/time attribute and re-submit the prescription to the Spine." />
     </concept>
-    
     <concept>
-      
         <code value="PRESCRIPTION_CANCELLED"></code>
         <display value="Prescription has been cancelled" />
         <definition value="Inform the dispenser to advise the patient that their prescription has been cancelled" />
     </concept>
     <concept>
-        
         <code value="PRESCRIPTION_EXPIRED"></code>
         <display value="Prescription has expired" />
         <definition value="Inform the dispenser that the prescription has expired and it cannot be downloaded" />
     </concept>
     <concept>
-        
         <code value="PRESCRIPTION_WITH_ANOTHER_DISPENSER"></code>
         <display value="Prescription is with another dispenser" />
         <definition value="Inform the dispenser that the prescription has been downloaded by another dispenser. The rejection message will contain details of the dispensing site that has the prescription." />
     </concept>
     <concept>
-       
         <code value="PRESCRIPTION_DISPENSED"></code>
         <display value="Prescription has been dispensed" />
         <definition value="Inform the dispenser to advise the patient that this prescription has already been dispensed." />
     </concept>
     <concept>
-        
         <code value="NO_MORE_PRESCRIPTIONS" />
         <display value="No more prescriptions available" />
         <definition value="No further request messages to pull down nominated prescriptions should be submitted at this time" />
     </concept>
     <concept>
-       
         <code value="SERVICE_DISABLED" />
         <display value="functionality disabled in spine" />
         <definition value="The Spine nomination functionality has been disabled at the request of the Authority and the message is rejected. The request will not be processed. However, the prescription request by prescription unique identifier should be available." />
     </concept>
-
     <concept>
-       
         <code value="PRESCRIPTION_NOT_FOUND"></code>
         <display value="Prescription can not be found. Contact prescriber" />
     </concept>
     <concept>
-      
         <code value="PRESCRIPTION_INVALID_STATE_TRANSITION" />
         <display value="Invalid State Transition for Prescription" />
     </concept>
     <concept>
-      
         <code value="MEDICATIONREQUEST_INVALID_STATE_TRANSITION" />
         <display value="Invalid State Transition for Prescription Item" />
     </concept>
     <concept>
-        
         <code value="MEDICATIONREQUEST_NOT_FOUND" />
         <display value="Prescription Item Not found" />
     </concept>
     <concept>
-        
         <code value="CLAIM_INVALID_NOT_DISPENSED" />
         <display value="Invalid Claim. Prescription is not Dispensed" />
     </concept>
     <concept>
-       
         <code value="DISPENSE_AMEND_IDENTIFIER_MISMATCH" />
         <display value="Dispense Amendment/Cancellation Request does not pertain to Last Dispense" />
     </concept>
     <concept>
-       
         <code value="CLAIM_AMEND_PERIOD_ISSUE" />
         <display value="Claim amendment is not permitted outside of the claim period" />
     </concept>
-
 </CodeSystem>
