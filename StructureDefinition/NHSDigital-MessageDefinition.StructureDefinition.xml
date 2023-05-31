@@ -17,7 +17,7 @@
       <rank value="1" />
     </telecom>
   </contact>
-  <description value="This profile defines the NHS England constraints and extensions on the UKCore FHIR resource [UKCore MessageHeader](https://simplifier.net/hl7fhirukcorer4/ukcoreoperationoutcome)&#xD;&#xA;This profile defines the NHS England constraints and extensions on the International FHIR resource [MessageDefnitionr](http://hl7.org/fhir/R4/messagedefinition.html)" />
+  <description value="This profile defines the NHS England constraints and extensions on the International FHIR resource [MessageDefnitionr](http://hl7.org/fhir/R4/messagedefinition.html)" />
   <purpose value="This profile defines the characteristics of a message that can be shared between systems. The content of message to be transmitted and the type of event that initiates them, and associated response(s), if any, are permitted." />
   <copyright value="&quot;Copyright © 2021+ HL7 UK Licensed under the Apache License, Version 2.0 (the \&quot;License\&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at  http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \&quot;AS IS\&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. HL7® FHIR® standard Copyright © 2011+ HL7 The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at  https://www.hl7.org/fhir/license.html.&quot;," />
   <fhirVersion value="4.0.1" />

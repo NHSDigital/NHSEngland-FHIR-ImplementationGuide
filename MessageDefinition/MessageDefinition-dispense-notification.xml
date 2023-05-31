@@ -1,26 +1,27 @@
+<?xml version="1.0"?>
 <MessageDefinition xmlns="http://hl7.org/fhir">
-    <id value="bf729ea8-280b-4109-b2f5-02ce8e51d870"></id>
-    <url value="https://fhir.nhs.uk/MessageDefinition/dispense-notification"></url>
-    <identifier>
-        <system value="https://tools.ietf.org/html/rfc4122"></system>
-        <value value="bf729ea8-280b-4109-b2f5-02ce8e51d870"></value>
-    </identifier>
-    <version value="1.0.0"></version>
-    <name value="NHSDigitalDispenseNotification"/>
-    <title value="Pharmacy/Treatment Dispense"></title>
-    <status value="active"></status>
-    <date value="2020-10-02"></date>
-    <eventCoding>
-        <system value="https://fhir.nhs.uk/CodeSystem/England-MessageEventEPS"></system>
-        <code value="dispense-notification"></code>
-        <display value="Dispense Notification"></display>
-    </eventCoding>
-    <description value="Notification of dispensed medication"/>
-    <category value="notification"></category>
-    <focus>
-        <code value="MedicationDispense"></code>
-        <profile value="https://fhir.nhs.uk/StructureDefinition/England-MedicationDispense-Message"></profile>
-        <min value="1"></min>
-        <max value="*"></max>
-    </focus>
+  <id value="bf729ea8-280b-4109-b2f5-02ce8e51d870"/>
+  <url value="https://fhir.nhs.uk/MessageDefinition/dispense-notification"/>
+  <identifier>
+    <system value="https://tools.ietf.org/html/rfc4122"/>
+    <value value="bf729ea8-280b-4109-b2f5-02ce8e51d870"/>
+  </identifier>
+  <version value="1.0.0"/>
+  <name value="NHSDigitalDispenseNotification"/>
+  <title value="Pharmacy/Treatment Dispense"/>
+  <status value="active"/>
+  <date value="2020-10-02"/>
+  <eventCoding>
+    <system value="https://fhir.nhs.uk/CodeSystem/message-event"/>
+    <code value="dispense-notification"/>
+    <display value="Dispense Notification"/>
+  </eventCoding>
+  <description value="Notification of dispensed medication"/>
+  <category value="notification"/>
+  <focus>
+    <code value="MedicationDispense"/>
+    <profile value="https://fhir.nhs.uk/StructureDefinition/England-MedicationDispense-Message"/>
+    <min value="1"/>
+    <max value="*"/>
+  </focus>
 </MessageDefinition>

@@ -1,26 +1,27 @@
+<?xml version="1.0"?>
 <MessageDefinition xmlns="http://hl7.org/fhir">
-    <id value="dispense-notification-update"></id>
-    <url value="https://fhir.nhs.uk/MessageDefinition/dispense-notification-update"></url>
-    <identifier>
-        <system value="https://tools.ietf.org/html/rfc4122"></system>
-        <value value="16aa190c-9ef3-49b3-b323-a40148f0f072"></value>
-    </identifier>
-    <version value="1.0.1"></version>
-    <name value="NHSDigitalDispenseNotificationUpdate" />
-    <title value="Pharmacy/Treatment Dispense Update"></title>
-    <status value="retired"></status>
-    <date value="2022-03-01"></date>
-    <eventCoding>
-        <system value="https://fhir.nhs.uk/CodeSystem/England-MessageEventEPS"></system>
-        <code value="dispense-notification-update"></code>
-        <display value="Dispense Notification Update"></display>
-    </eventCoding>
-     <description value="Notification of medication dispenses."/>
-    <category value="notification"></category>
-    <focus>
-        <code value="MedicationDispense"></code>
-        <profile value="https://fhir.nhs.uk/StructureDefinition/England-MedicationDispense-Message"></profile>
-        <min value="1"></min>
-        <max value="*"></max>
-    </focus>
+  <id value="dispense-notification-update"/>
+  <url value="https://fhir.nhs.uk/MessageDefinition/dispense-notification-update"/>
+  <identifier>
+    <system value="https://tools.ietf.org/html/rfc4122"/>
+    <value value="16aa190c-9ef3-49b3-b323-a40148f0f072"/>
+  </identifier>
+  <version value="1.0.1"/>
+  <name value="NHSDigitalDispenseNotificationUpdate"/>
+  <title value="Pharmacy/Treatment Dispense Update"/>
+  <status value="retired"/>
+  <date value="2022-03-01"/>
+  <eventCoding>
+    <system value="https://fhir.nhs.uk/CodeSystem/England-MessageEventEPS"/>
+    <code value="dispense-notification-update"/>
+    <display value="Dispense Notification Update"/>
+  </eventCoding>
+  <description value="Notification of medication dispenses."/>
+  <category value="notification"/>
+  <focus>
+    <code value="MedicationDispense"/>
+    <profile value="https://fhir.nhs.uk/StructureDefinition/England-MedicationDispense-Message"/>
+    <min value="1"/>
+    <max value="*"/>
+  </focus>
 </MessageDefinition>
