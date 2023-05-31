@@ -342,10 +342,6 @@
       </constraint>
       <mustSupport value="true" />
     </element>
-    <element id="MedicationRequest.subject.reference">
-      <path value="MedicationRequest.subject.reference" />
-      <min value="1" />
-    </element>
     <element id="MedicationRequest.subject.identifier.system">
       <path value="MedicationRequest.subject.identifier.system" />
       <min value="1" />
@@ -376,6 +372,7 @@
         <code value="Reference" />
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole-EPSLegal" />
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole-SDS" />
+		<targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole" />
       </type>
       <constraint>
         <key value="eps-3" />
@@ -393,7 +390,9 @@
       <path value="MedicationRequest.performer" />
       <type>
         <code value="Reference" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Reference" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Organization" />
+		<targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole" />
+		<targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Practitioner" />
       </type>
     </element>
     <element id="MedicationRequest.recorder">
