@@ -21,10 +21,12 @@
 			"resource": {
 				"resourceType": "RequestGroup",
 				"id": "0cb82cfa-76c8-4fb2-a08e-bf0e326e5487",
-				"identifier": {
-					"system": "https://tools.ietf.org/html/rfc4122",
-					"value": "46183abc-9fad-4673-85db-ce2cb6614732"
-				},
+				"identifier": [ 
+					{
+						"system": "https://tools.ietf.org/html/rfc4122",
+						"value": "46183abc-9fad-4673-85db-ce2cb6614732"
+					}
+				],
 				"status": "active",
 				"intent": "order",
 				"subject": {

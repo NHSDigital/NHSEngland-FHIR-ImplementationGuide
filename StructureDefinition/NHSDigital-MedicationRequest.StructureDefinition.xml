@@ -659,10 +659,6 @@
       </type>
       <mustSupport value="true" />
     </element>
-    <element id="MedicationRequest.dispenseRequest.performer.identifier">
-      <path value="MedicationRequest.dispenseRequest.performer.identifier" />
-      <min value="1" />
-    </element>
     <element id="MedicationRequest.dispenseRequest.performer.identifier.system">
       <path value="MedicationRequest.dispenseRequest.performer.identifier.system" />
       <min value="1" />
