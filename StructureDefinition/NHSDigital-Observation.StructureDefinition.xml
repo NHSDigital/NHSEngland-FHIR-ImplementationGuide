@@ -173,7 +173,7 @@
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group" />
         <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Device" />
-        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-PatientMinimal" />
+        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Patient" />
         <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Location" />
       </type>
       <constraint>
@@ -251,7 +251,7 @@
         <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Organization" />
         <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-CareTeam" />
         <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Patient" />
-        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-PractitionerRoleMinimal" />
+        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-PractitionerRole" />
         <aggregation value="referenced" />
       </type>
       <constraint>
