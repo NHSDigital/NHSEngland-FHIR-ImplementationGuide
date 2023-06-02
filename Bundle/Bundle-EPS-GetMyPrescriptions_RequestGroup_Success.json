@@ -39,34 +39,32 @@
 				"author": {
 					"reference": "urn:uuid:56166769-c1c4-4d07-afa8-132b5dfca666"
 				},
-				"action": {
-					"action": [
-						{
-							"timingDateTime": "2022-10-21T13:47:00+00:00",
-							"resource": {
-								"reference": "urn:uuid:a54219b8-f741-4c47-b662-e4f8dfa49ab6"
-							}
-						},
-						{
-							"timingDateTime": "2022-10-21T13:47:00+00:00",
-							"resource": {
-								"reference": "urn:uuid:6989b7bd-8db6-428c-a593-4022e3044c00"
-							}
-						},
-						{
-							"timingDateTime": "2022-10-21T13:47:00+00:00",
-							"resource": {
-								"reference": "urn:uuid:2868554c-5565-4d31-b92a-c5b8dab8b90a"
-							}
-						},
-						{
-							"timingDateTime": "2022-10-21T13:47:00+00:00",
-							"resource": {
-								"reference": "urn:uuid:5cb17f5a-11ac-4e18-825f-6470467238b3"
-							}
+				"action": [
+					{
+						"timingDateTime": "2022-10-21T13:47:00+00:00",
+						"resource": {
+							"reference": "urn:uuid:a54219b8-f741-4c47-b662-e4f8dfa49ab6"
 						}
-					]
-				}
+					},
+					{
+						"timingDateTime": "2022-10-21T13:47:00+00:00",
+						"resource": {
+							"reference": "urn:uuid:6989b7bd-8db6-428c-a593-4022e3044c00"
+						}
+					},
+					{
+						"timingDateTime": "2022-10-21T13:47:00+00:00",
+						"resource": {
+							"reference": "urn:uuid:2868554c-5565-4d31-b92a-c5b8dab8b90a"
+						}
+					},
+					{
+						"timingDateTime": "2022-10-21T13:47:00+00:00",
+						"resource": {
+							"reference": "urn:uuid:5cb17f5a-11ac-4e18-825f-6470467238b3"
+						}
+					}
+				]
 			}
 		},
 		{
