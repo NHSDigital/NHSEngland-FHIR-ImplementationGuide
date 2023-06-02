@@ -80,7 +80,7 @@
         },
         "authoredOn": "2022-10-21T13:47:00+00:00",
         "requester": {
-          "reference": "urn:uuid:56166769-c1c4-4d07-afa8-132b5dfca666"
+          "reference": "PractitionerRole/56166769-c1c4-4d07-afa8-132b5dfca666"
         },
         "groupIdentifier": {
           "system": "https://fhir.nhs.uk/Id/prescription-order-number",
@@ -145,7 +145,7 @@
             "code": "428673006"
           },
           "performer": {
-            "reference": "urn:uuid:afb07f8b-e8d7-4cad-895d-494e6b35b2a1"
+            "reference": "Organization/afb07f8b-e8d7-4cad-895d-494e6b35b2a1"
           }
         },
         "substitution": {
@@ -220,7 +220,7 @@
         },
         "authoredOn": "2022-10-21T13:47:00+00:00",
         "requester": {
-          "reference": "urn:uuid:56166769-c1c4-4d07-afa8-132b5dfca666"
+          "reference": "PractitionerRole/56166769-c1c4-4d07-afa8-132b5dfca666"
         },
         "groupIdentifier": {
           "system": "https://fhir.nhs.uk/Id/prescription-order-number",
@@ -285,7 +285,7 @@
             "code": "428673006"
           },
           "performer": {
-            "reference": "urn:uuid:afb07f8b-e8d7-4cad-895d-494e6b35b2a1"
+            "reference": "Organization/afb07f8b-e8d7-4cad-895d-494e6b35b2a1"
           }
         },
         "substitution": {
@@ -361,7 +361,7 @@
         },
         "authoredOn": "2022-10-21T13:47:00+00:00",
         "requester": {
-          "reference": "urn:uuid:56166769-c1c4-4d07-afa8-132b5dfca666"
+          "reference": "PractitionerRole/56166769-c1c4-4d07-afa8-132b5dfca666"
         },
         "groupIdentifier": {
           "system": "https://fhir.nhs.uk/Id/prescription-order-number",
@@ -426,7 +426,7 @@
             "code": "428673006"
           },
           "performer": {
-            "reference": "urn:uuid:afb07f8b-e8d7-4cad-895d-494e6b35b2a1"
+            "reference": "Organization/afb07f8b-e8d7-4cad-895d-494e6b35b2a1"
           }
         },
         "substitution": {
@@ -528,7 +528,7 @@
         },
         "authoredOn": "2022-10-21T13:47:00+00:00",
         "requester": {
-          "reference": "urn:uuid:56166769-c1c4-4d07-afa8-132b5dfca666"
+          "reference": "PractitionerRole/56166769-c1c4-4d07-afa8-132b5dfca666"
         },
         "groupIdentifier": {
           "system": "https://fhir.nhs.uk/Id/prescription-order-number",
@@ -593,7 +593,7 @@
             "code": "428673006"
           },
           "performer": {
-            "reference": "urn:uuid:afb07f8b-e8d7-4cad-895d-494e6b35b2a1"
+            "reference": "Organization/afb07f8b-e8d7-4cad-895d-494e6b35b2a1"
           }
         },
         "substitution": {
@@ -610,10 +610,10 @@
         "resourceType": "PractitionerRole",
         "id": "56166769-c1c4-4d07-afa8-132b5dfca666",
         "practitioner": {
-          "reference": "urn:uuid:a8c85454-f8cb-498d-9629-78e2cb5fa47a"
+          "reference": "Practitioner/a8c85454-f8cb-498d-9629-78e2cb5fa47a"
         },
         "organization": {
-          "reference": "urn:uuid:3b4b03a5-52ba-4ba6-9b82-70350aa109d8"
+          "reference": "Organization/3b4b03a5-52ba-4ba6-9b82-70350aa109d8"
         }
       }
     },
