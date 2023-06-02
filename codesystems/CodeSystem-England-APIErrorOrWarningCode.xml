@@ -13,7 +13,7 @@
          <system value="email" />
          <value value="interoperabilityteam@nhs.net" />
          <use value="work" />
-         <rank value="1" />
+         <rank value=1 />
       </telecom>
    </contact>
    <description value="A CodeSystem that identifies generic API error or warning codes in response to a request. The list is not exhaustive and many APIs will have an additional set of codes specific to their business logic and implementation.
