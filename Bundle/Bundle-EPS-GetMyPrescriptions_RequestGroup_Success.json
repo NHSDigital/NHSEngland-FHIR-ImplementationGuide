@@ -14,7 +14,7 @@
   "total": 9,
   "entry": [
     {
-      "fullUrl": "urn:uuid:0cb82cfa-76c8-4fb2-a08e-bf0e326e5487",
+      "fullUrl": "RequestGroup/0cb82cfa-76c8-4fb2-a08e-bf0e326e5487",
       "search": {
         "mode": "match"
       },
@@ -37,38 +37,38 @@
             }
         },
         "author": {
-          "reference": "urn:uuid:56166769-c1c4-4d07-afa8-132b5dfca666"
+          "reference": "PractitionerRole/56166769-c1c4-4d07-afa8-132b5dfca666"
         },
         "action": [
           {
             "timingDateTime": "2022-10-21T13:47:00+00:00",
             "resource": {
-              "reference": "urn:uuid:a54219b8-f741-4c47-b662-e4f8dfa49ab6"
+              "reference": "MedicationRequest/a54219b8-f741-4c47-b662-e4f8dfa49ab6"
             }
           },
           {
             "timingDateTime": "2022-10-21T13:47:00+00:00",
             "resource": {
-              "reference": "urn:uuid:6989b7bd-8db6-428c-a593-4022e3044c00"
+              "reference": "MedicationRequest/6989b7bd-8db6-428c-a593-4022e3044c00"
             }
           },
           {
             "timingDateTime": "2022-10-21T13:47:00+00:00",
             "resource": {
-              "reference": "urn:uuid:2868554c-5565-4d31-b92a-c5b8dab8b90a"
+              "reference": "MedicationRequest/2868554c-5565-4d31-b92a-c5b8dab8b90a"
             }
           },
           {
             "timingDateTime": "2022-10-21T13:47:00+00:00",
             "resource": {
-              "reference": "urn:uuid:5cb17f5a-11ac-4e18-825f-6470467238b3"
+              "reference": "MedicationRequest/5cb17f5a-11ac-4e18-825f-6470467238b3"
             }
           }
         ]
       }
     },
     {
-      "fullUrl": "urn:uuid:a54219b8-f741-4c47-b662-e4f8dfa49ab6",
+      "fullUrl": "MedicationRequest/a54219b8-f741-4c47-b662-e4f8dfa49ab6",
       "search": {
         "mode": "include"
       },
@@ -134,7 +134,7 @@
         },
         "authoredOn": "2022-10-21T13:47:00+00:00",
         "requester": {
-          "reference": "urn:uuid:56166769-c1c4-4d07-afa8-132b5dfca666"
+          "reference": "PractitionerRole/56166769-c1c4-4d07-afa8-132b5dfca666"
         },
         "groupIdentifier": {
           "system": "https://fhir.nhs.uk/Id/prescription-order-number",
@@ -199,7 +199,7 @@
             "code": "428673006"
           },
           "performer": {
-            "reference": "urn:uuid:afb07f8b-e8d7-4cad-895d-494e6b35b2a1"
+            "reference": "Organization/afb07f8b-e8d7-4cad-895d-494e6b35b2a1"
           }
         },
         "substitution": {
@@ -208,7 +208,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:6989b7bd-8db6-428c-a593-4022e3044c00",
+      "fullUrl": "MedicationRequest/6989b7bd-8db6-428c-a593-4022e3044c00",
       "search": {
         "mode": "include"
       },
@@ -274,7 +274,7 @@
         },
         "authoredOn": "2022-10-21T13:47:00+00:00",
         "requester": {
-          "reference": "urn:uuid:56166769-c1c4-4d07-afa8-132b5dfca666"
+          "reference": "PractitionerRole/56166769-c1c4-4d07-afa8-132b5dfca666"
         },
         "groupIdentifier": {
           "system": "https://fhir.nhs.uk/Id/prescription-order-number",
@@ -339,7 +339,7 @@
             "code": "428673006"
           },
           "performer": {
-            "reference": "urn:uuid:afb07f8b-e8d7-4cad-895d-494e6b35b2a1"
+            "reference": "Organization/afb07f8b-e8d7-4cad-895d-494e6b35b2a1"
           }
         },
         "substitution": {
@@ -348,7 +348,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:2868554c-5565-4d31-b92a-c5b8dab8b90a",
+      "fullUrl": "MedicationRequest/2868554c-5565-4d31-b92a-c5b8dab8b90a",
       "search": {
         "mode": "include"
       },
@@ -415,7 +415,7 @@
         },
         "authoredOn": "2022-10-21T13:47:00+00:00",
         "requester": {
-          "reference": "urn:uuid:56166769-c1c4-4d07-afa8-132b5dfca666"
+          "reference": "PractitionerRole/56166769-c1c4-4d07-afa8-132b5dfca666"
         },
         "groupIdentifier": {
           "system": "https://fhir.nhs.uk/Id/prescription-order-number",
@@ -480,7 +480,7 @@
             "code": "428673006"
           },
           "performer": {
-            "reference": "urn:uuid:afb07f8b-e8d7-4cad-895d-494e6b35b2a1"
+            "reference": "Organization/afb07f8b-e8d7-4cad-895d-494e6b35b2a1"
           }
         },
         "substitution": {
@@ -489,7 +489,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:5cb17f5a-11ac-4e18-825f-6470467238b3",
+      "fullUrl": "MedicationRequest/5cb17f5a-11ac-4e18-825f-6470467238b3",
       "search": {
         "mode": "include"
       },
@@ -582,7 +582,7 @@
         },
         "authoredOn": "2022-10-21T13:47:00+00:00",
         "requester": {
-          "reference": "urn:uuid:56166769-c1c4-4d07-afa8-132b5dfca666"
+          "reference": "PractitionerRole/56166769-c1c4-4d07-afa8-132b5dfca666"
         },
         "groupIdentifier": {
           "system": "https://fhir.nhs.uk/Id/prescription-order-number",
@@ -647,7 +647,7 @@
             "code": "428673006"
           },
           "performer": {
-            "reference": "urn:uuid:afb07f8b-e8d7-4cad-895d-494e6b35b2a1"
+            "reference": "Organization/afb07f8b-e8d7-4cad-895d-494e6b35b2a1"
           }
         },
         "substitution": {
@@ -656,7 +656,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:56166769-c1c4-4d07-afa8-132b5dfca666",
+      "fullUrl": "PractitionerRole/56166769-c1c4-4d07-afa8-132b5dfca666",
       "search": {
         "mode": "include"
       },
@@ -664,15 +664,15 @@
         "resourceType": "PractitionerRole",
         "id": "56166769-c1c4-4d07-afa8-132b5dfca666",
         "practitioner": {
-          "reference": "urn:uuid:a8c85454-f8cb-498d-9629-78e2cb5fa47a"
+          "reference": "Practitioner/a8c85454-f8cb-498d-9629-78e2cb5fa47a"
         },
         "organization": {
-          "reference": "urn:uuid:3b4b03a5-52ba-4ba6-9b82-70350aa109d8"
+          "reference": "Organization/3b4b03a5-52ba-4ba6-9b82-70350aa109d8"
         }
       }
     },
     {
-      "fullUrl": "urn:uuid:a8c85454-f8cb-498d-9629-78e2cb5fa47a",
+      "fullUrl": "Practitioner/a8c85454-f8cb-498d-9629-78e2cb5fa47a",
       "search": {
         "mode": "include"
       },
@@ -693,7 +693,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:3b4b03a5-52ba-4ba6-9b82-70350aa109d8",
+      "fullUrl": "Organization/3b4b03a5-52ba-4ba6-9b82-70350aa109d8",
       "search": {
         "mode": "include"
       },
@@ -730,7 +730,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:afb07f8b-e8d7-4cad-895d-494e6b35b2a1",
+      "fullUrl": "Organization/afb07f8b-e8d7-4cad-895d-494e6b35b2a1",
       "search": {
         "mode": "include"
       },
