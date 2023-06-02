@@ -1,0 +1,115 @@
+{
+    "resourceType": "ValueSet",
+    "id": "ValueSet-England-LocationType",
+    "url": "https://fhir.nhs.uk/ValueSet/England-LocationType",
+    "version": "1.0.0",
+    "name": "EnglandLocationType",
+    "status": "draft",
+    "description": "A ValueSet to identify the roles (type) of location.",
+    "compose": {
+        "include": [
+            {
+                "system": "https://fhir.nhs.uk/CodeSystem/England-OrganisationRole",
+                "version": "1.0.0",
+                "concept": [
+                    {
+                        "code": "140",
+                        "display": "ISLE OF MAN GOVERNMENT DIRECTORATE SITE"
+                    },
+                    {
+                        "code": "234",
+                        "display": "POLICE CUSTODY SUITE"
+                    },
+                    {
+                        "code": "148",
+                        "display": "LOCAL HEALTH BOARD SITE"
+                    },
+                    {
+                        "code": "149",
+                        "display": "WELSH LOCAL HEALTH BOARD SITE"
+                    },
+                    {
+                        "code": "217",
+                        "display": "DSCRO SITE"
+                    },
+                    {
+                        "code": "131",
+                        "display": "GOVERNMENT DEPARTMENT SITE"
+                    },
+                    {
+                        "code": "114",
+                        "display": "DMU SITE"
+                    },
+                    {
+                        "code": "212",
+                        "display": "NHS ENGLAND (REGION, LOCAL OFFICE) SITE"
+                    },
+                    {
+                        "code": "147",
+                        "display": "LSP SITE"
+                    },
+                    {
+                        "code": "168",
+                        "display": "OTHER STATUTORY AUTHORITY SITE"
+                    },
+                    {
+                        "code": "180",
+                        "display": "PRIMARY CARE TRUST SITE"
+                    },
+                    {
+                        "code": "108",
+                        "display": "CARE TRUST SITE"
+                    },
+                    {
+                        "code": "214",
+                        "display": "COMMISSIONING SUPPORT UNIT SITE"
+                    },
+                    {
+                        "code": "136",
+                        "display": "STRATEGIC HEALTH AUTHORITY SITE"
+                    },
+                    {
+                        "code": "99",
+                        "display": "CLINICAL COMMISSIONING GROUP SITE"
+                    },
+                    {
+                        "code": "222",
+                        "display": "LOCAL AUTHORITY SITE"
+                    },
+                    {
+                        "code": "176",
+                        "display": "INDEPENDENT SECTOR H/C PROVIDER SITE"
+                    },
+                    {
+                        "code": "101",
+                        "display": "SOCIAL CARE SITE"
+                    },
+                    {
+                        "code": "198",
+                        "display": "NHS TRUST SITE"
+                    },
+                    {
+                        "code": "96",
+                        "display": "BRANCH SURGERY"
+                    },
+                    {
+                        "code": "280",
+                        "display": "PHARMACY SITE"
+                    },
+                    {
+                        "code": "167",
+                        "display": "OPTICAL SITE"
+                    },
+                    {
+                        "code": "191",
+                        "display": "SPECIAL HEALTH AUTHORITY SITE"
+                    },
+                    {
+                        "code": "90",
+                        "display": "EXECUTIVE AGENCY SITE"
+                    }
+                ]
+            }
+        ]
+    }
+}

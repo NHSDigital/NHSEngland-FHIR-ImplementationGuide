@@ -1,0 +1,38 @@
+{
+    "resourceType": "Organization",
+    "id": "3b4b03a5-52ba-4ba6-9b82-70350aa109d8",
+    "identifier": [
+        {
+            "system": "https://fhir.nhs.uk/Id/ods-organization-code",
+            "value": "B81001"
+        }
+    ],
+    "type": [
+        {
+            "coding": [
+                {
+                    "system": "https://fhir.nhs.uk/CodeSystem/England-OrganisationRole",
+                    "code": "76"
+                }
+            ]
+        }
+    ],
+    "name": "DR ME AHMED'S PRACTICE",
+    "address": [
+        {
+            "line": [
+                "700 HOLDERNESS ROAD",
+                "HULL",
+                "NORTH HUMBERSIDE"
+            ],
+            "postalCode": "HU9 3JA"
+        }
+    ],
+    "partOf": {
+        "identifier": {
+            "system": "https://fhir.nhs.uk/Id/ods-organization-code",
+            "value": "5E5"
+        },
+        "display" : "The NHS CCG"
+    }
+}

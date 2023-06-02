@@ -1,0 +1,79 @@
+{
+    "resourceType": "ValueSet",
+    "id": "ValueSet-England-AccountType",
+    "url": "https://fhir.nhs.uk/ValueSet/England-AccountType",
+    "version": "1.0.0",
+    "name": "EnglandAccountType",
+    "status": "draft",
+    "description": "A ValueSet to identify the roles (type) of account.",
+    "compose": {
+        "include": [
+            {
+                "system": "https://fhir.nhs.uk/CodeSystem/England-OrganisationRole",
+                "version": "1.0.0",
+                "concept": [
+                    {
+                        "code": "260",
+                        "display": "YOUNG OFFENDER INSTITUTION PRESCRIBING COST CENTRE"
+                    },
+                    {
+                        "code": "251",
+                        "display": "IMMIGRATION REMOVAL CENTRE PRESCRIBING COST CENTRE"
+                    },
+                    {
+                        "code": "257",
+                        "display": "SECURE TRAINING CENTRE PRESCRIBING COST CENTRE"
+                    },
+                    {
+                        "code": "256",
+                        "display": "SECURE CHILDREN'S HOME PRESCRIBING COST CENTRE"
+                    },
+                    {
+                        "code": "255",
+                        "display": "PUBLIC HEALTH SERVICE PRESCRIBING COST CENTRE"
+                    },
+                    {
+                        "code": "249",
+                        "display": "HOSPICE PRESCRIBING COST CENTRE"
+                    },
+                    {
+                        "code": "246",
+                        "display": "CARE HOME/NURSING HOME PRESCRIBING COST CENTRE"
+                    },
+                    {
+                        "code": "82",
+                        "display": "PRISON PRESCRIBING COST CENTRE"
+                    },
+                    {
+                        "code": "252",
+                        "display": "OPTOMETRY SERVICE PRESCRIBING COST CENTRE"
+                    },
+                    {
+                        "code": "250",
+                        "display": "HOSPITAL SERVICE PRESCRIBING COST CENTRE"
+                    },
+                    {
+                        "code": "259",
+                        "display": "URGENT & EMERGENCY CARE PRESCRIBING COST CENTRE"
+                    },
+                    {
+                        "code": "72",
+                        "display": "OTHER PRESCRIBING COST CENTRE"
+                    },
+                    {
+                        "code": "80",
+                        "display": "OUT OF HOURS COST CENTRE"
+                    },
+                    {
+                        "code": "247",
+                        "display": "COMMUNITY HEALTH SERVICE PRESCRIBING COST CENTRE"
+                    },
+                    {
+                        "code": "177",
+                        "display": "PRESCRIBING COST CENTRE"
+                    }
+                ]
+            }
+        ]
+    }
+}
