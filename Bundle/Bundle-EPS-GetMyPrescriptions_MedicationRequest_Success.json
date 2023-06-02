@@ -14,7 +14,7 @@
   "total": 8,
   "entry": [
     {
-      "fullUrl": "urn:uuid:a54219b8-f741-4c47-b662-e4f8dfa49ab6",
+      "fullUrl": "MedicationRequest/a54219b8-f741-4c47-b662-e4f8dfa49ab6",
       "search": {
         "mode": "match"
       },
@@ -154,7 +154,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:6989b7bd-8db6-428c-a593-4022e3044c00",
+      "fullUrl": "MedicationRequest/6989b7bd-8db6-428c-a593-4022e3044c00",
       "search": {
         "mode": "match"
       },
@@ -294,7 +294,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:2868554c-5565-4d31-b92a-c5b8dab8b90a",
+      "fullUrl": "MedicationRequest/2868554c-5565-4d31-b92a-c5b8dab8b90a",
       "search": {
         "mode": "match"
       },
@@ -435,7 +435,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:5cb17f5a-11ac-4e18-825f-6470467238b3",
+      "fullUrl": "MedicationRequest/5cb17f5a-11ac-4e18-825f-6470467238b3",
       "search": {
         "mode": "match"
       },
@@ -602,7 +602,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:56166769-c1c4-4d07-afa8-132b5dfca666",
+      "fullUrl": "PractitionerRole/56166769-c1c4-4d07-afa8-132b5dfca666",
       "search": {
         "mode": "include"
       },
@@ -618,7 +618,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:a8c85454-f8cb-498d-9629-78e2cb5fa47a",
+      "fullUrl": "Practitioner/a8c85454-f8cb-498d-9629-78e2cb5fa47a",
       "search": {
         "mode": "include"
       },
@@ -639,7 +639,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:3b4b03a5-52ba-4ba6-9b82-70350aa109d8",
+      "fullUrl": "Organization/3b4b03a5-52ba-4ba6-9b82-70350aa109d8",
       "search": {
         "mode": "include"
       },
@@ -676,7 +676,7 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:afb07f8b-e8d7-4cad-895d-494e6b35b2a1",
+      "fullUrl": "Organization/afb07f8b-e8d7-4cad-895d-494e6b35b2a1",
       "search": {
         "mode": "include"
       },
