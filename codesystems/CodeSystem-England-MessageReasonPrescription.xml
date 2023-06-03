@@ -4,7 +4,7 @@
     <id value="England-MessageReasonPrescription"/>
     <url value="https://fhir.nhs.uk/CodeSystem/England-MessageReasonPrescription"/>
     <identifier>
-        <system value="https://fhir.nhs.uk/identifier/message-reason-code"/>
+        <system value="https://fhir.nhs.uk/identifier/England-MessageReasonCode"/>
         <value value="England-MessageReasonPrescription"/>
     </identifier>
     <version value="1.0.0"/>
