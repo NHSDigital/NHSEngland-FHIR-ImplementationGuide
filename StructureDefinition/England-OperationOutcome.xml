@@ -17,7 +17,7 @@
       <rank value="1" />
     </telecom>
   </contact>
-  <description value="This profile defines the NHS England constraints and extensions on the UKCore FHIR resource [UKCore OperationOutcome](https://simplifier.net/hl7fhirukcorer4/ukcoreoperationoutcome)" />
+  <description value="This profile defines the NHS England constraints and extensions on the FHIR UKCore resource [UKCore OperationOutcome](https://simplifier.net/hl7fhirukcorer4/ukcoreoperationoutcome)" />
   <purpose value="&quot;The purpose of this profile is to provide detailed information about the outcome of an attempted system operation. Operation outcomes are sets of error, warning and information messages provided as a direct system response, or part of one, and provide information about the outcome of the operation.&quot;," />
   <copyright value="&quot;Copyright © 2021+ HL7 UK Licensed under the Apache License, Version 2.0 (the \&quot;License\&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at  http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \&quot;AS IS\&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. HL7® FHIR® standard Copyright © 2011+ HL7 The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at  https://www.hl7.org/fhir/license.html.&quot;," />
   <fhirVersion value="4.0.1" />
@@ -78,7 +78,7 @@
     <element id="OperationOutcome.issue">
       <path value="OperationOutcome.issue" />
       <constraint>
-        <key value="nhsd-errrorcode" />
+        <key value="nhse-errrorcode" />
         <severity value="error" />
         <human value="An NHS England error or warning code is required" />
         <expression value="(severity = 'information') or ((severity != 'information') and details.empty().not())" />

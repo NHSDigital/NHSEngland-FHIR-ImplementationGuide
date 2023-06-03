@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSystem xmlns="http://hl7.org/fhir">
+    <id value="England-MessageEventEPS"/>
+    <url value="https://fhir.nhs.uk/CodeSystem/England-MessageEventEPS"/>
+    <identifier>
+        <system value="https://fhir.nhs.uk/identifier/CodeSystem"/>
+        <value value="England-MessageEventEPS"/>
+    </identifier>
+    <version value="1.0.0"/>
+    <name value="EnglandMessageEventEPS"/>
+    <title value="EnglandMessageEvent EPS"/>
+    <status value="draft"/>
+    <date value="2023-06-01"/>
+    <publisher value="NHS England"/>
+    <contact>
+        <name value="NHS England" />
+        <telecom>
+            <system value="email" />
+            <value value="interoperabilityteam@nhs.net" />
+            <use value="work" />
+            <rank value="1" />
+        </telecom>
+    </contact>
+    <description value="CodeSystem to identify messaging events."/>
+    <copyright value="&quot;Copyright © 2021+ HL7 UK Licensed under the Apache License, Version 2.0 (the \&quot;License\&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at  http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \&quot;AS IS\&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. HL7® FHIR® standard Copyright © 2011+ HL7 The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at  https://www.hl7.org/fhir/license.html.&quot;," />
+    <caseSensitive value="true"/>
+    <content value="complete"/>
+    <concept>
+        <code value="prescription-order"/>
+        <display value="Prescription Order"/>
+        <definition value="Pharmacy/treatment encoded order"/>
+    </concept>
+    <concept>
+        <code value="prescription-order-update"/>
+        <display value="Prescription Order Update"/>
+    </concept>
+    <concept>
+        <code value="prescription-order-response"/>
+        <display value="Prescription Order Response"/>
+        <definition value="Pharmacy/treatment order acknowledgement"/>
+        <property>
+            <code value="deprecated"/>
+            <valueBoolean value="true"/>
+        </property>
+    </concept>
+    <concept>
+        <code value="dispense-notification"/>
+        <display value="Dispense Notification"/>
+        <definition value="Dispense Notification"/>
+    </concept>
+    <concept>
+        <code value="unsolicited-observations"/>
+        <display value="Unsolicited Observations"/>
+    </concept>
+    <concept>
+        <code value="patient-notification"/>
+        <display value="Patient Notifications"/>
+        <definition value="Used to send CommunicationRequests"/>
+    </concept>
+    <concept>
+        <code value="vaccinations"/>
+        <display value="Vaccinations"/>
+    </concept>
+    <concept>
+        <code value="document"/>
+        <display value="Document"/>
+        <definition value="Original document notification and content"/>
+    </concept>
+    <concept>
+        <code value="document-notification"/>
+        <display value="Document Notification"/>
+        <definition value="Original document notification"/>
+    </concept>
+    <concept>
+        <code value="dispense-notification-update"/>
+        <display value="Dispense Notification Update"/>
+        <definition value="This message is used by the Dispensing System to notify the EPS System of an amendment to a previousy submitted dispense-notification"/>
+        <property>
+            <code value="deprecated"/>
+            <valueBoolean value="true"/>
+        </property>
+    </concept>
+    <concept>
+        <code value="appointment"/>
+        <display value="Appointment"/>
+        <definition value="Pre-admit a patient / Patient Appointment"/>
+    </concept>
+    <concept>
+        <code value="referral" />
+        <display value="Patient Referral" />
+        <definition value="Patient referral/handover"/>
+    </concept>
+    <concept>
+        <code value="notification" />
+        <display value="Event Notification" />
+        <definition value="Event Notification"/>
+    </concept>
+     <concept>
+        <code value="encounter"/>
+        <display value="Patient Encounter"/>
+        <definition value="Can be used for an admission/discharge report or consulations"/>
+    </concept>
+    <concept>
+        <code value="patient"/>
+        <display value="Patient Demographics"/>
+        <definition value="Patient demographic change events"/>
+    </concept>
+    <concept>
+        <code value="unsolicited-action"/>
+        <display value="Unsolicited actions"/>
+        <definition value="Unsolicited actions using FHIR Task"/>
+    </concept>
+</CodeSystem>
