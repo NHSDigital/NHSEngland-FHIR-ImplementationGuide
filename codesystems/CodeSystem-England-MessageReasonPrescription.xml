@@ -5,7 +5,7 @@
     <url value="https://fhir.nhs.uk/CodeSystem/England-MessageReasonPrescription"/>
     <identifier>
         <system value="https://fhir.nhs.uk/identifier/England-MessageReasonCode"/>
-        <value value="England-MessageReason-Prescription"/>
+        <value value="EnglandMessageReasonPrescription"/>
     </identifier>
     <version value="1.0.0"/>
     <name value="EnglandMessageReasonPrescription"/>
@@ -19,7 +19,7 @@
             <system value="email" />
             <value value="interoperabilityteam@nhs.net" />
             <use value="work" />
-            <use rank="1" />
+            <rank value="1" />
         </telecom>
     </contact>
     <description value="Set of message reason prescription codes."/>
