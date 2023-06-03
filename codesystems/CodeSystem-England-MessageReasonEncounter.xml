@@ -3,7 +3,7 @@
     <url value="https://fhir.nhs.uk/CodeSystem/England-MessageReasonEncounter"/> 
     <identifier>
         <system value="https://fhir.nhs.uk/identifier/England-MessageReasonCode"/>
-        <value value="England-MessageReasonEncounter"/>
+        <value value="England-MessageReason-Encounter"/>
     </identifier>
     <version value="1.0.0"/> 
     <name value="EnglandMessageReasonEncounter"/> 
