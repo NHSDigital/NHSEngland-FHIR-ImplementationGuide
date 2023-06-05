@@ -269,13 +269,6 @@
         <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Organization" />
       </type>
     </element>
-    <element id="Observation.performer.identifier.type">
-      <path value="Observation.performer.identifier.type" />
-      <binding>
-        <strength value="required" />
-        <valueSet value="https://fhir.nhs.uk/ValueSet/England-OrganisationRole" />
-      </binding>
-    </element>
     <element id="Observation.value[x]">
       <path value="Observation.value[x]" />
       <definition value="### COVID-19 valueCodeableConcept &#xD;&#xA;&#xD;&#xA;The COVID 19 test result. This is a SNOMED CT from the valueSet associated with the `code`, see [Observation Definition](https://simplifier.net/guide/NHSDigital/Home/FHIRAssets/AllAssets/ObservationDefinition/ObservationDefinition.guide.md)&#xD;&#xA;&#xD;&#xA;```json &#xD;&#xA;&#xD;&#xA;    &quot;valueCodeableConcept&quot;: {&#xD;&#xA;        &quot;coding&quot;:  [&#xD;&#xA;            {&#xD;&#xA;                &quot;system&quot;: &quot;http://snomed.info/sct&quot;,&#xD;&#xA;                &quot;code&quot;: &quot;1240581000000104&quot;,&#xD;&#xA;                &quot;display&quot;: &quot;SARS-CoV-2 (severe acute respiratory syndrome coronavirus 2) detection result positive&quot;&#xD;&#xA;            }&#xD;&#xA;        ],&#xD;&#xA;        &quot;text&quot;: &quot;SARS-CoV-2-ORGY&quot;&#xD;&#xA;    },&#xD;&#xA;```" />
