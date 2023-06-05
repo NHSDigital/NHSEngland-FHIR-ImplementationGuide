@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="Extension-England-MessageHeaderRreplacement" />
-  <url value="https://fhir.nhs.uk/StructureDefinition/Extension-England-MessageHeaderRreplacement" />
+  <id value="Extension-England-MessageHeaderReplacement" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/Extension-England-MessageHeaderReplacement" />
   <version value="1.0.0" />
-  <name value="ExtensionEnglandMessageHeaderRreplacement" />
-  <title value="Extension England MessageHeaderIRreplacement" />
+  <name value="ExtensionEnglandMessageHeaderReplacement" />
+  <title value="Extension England MessageHeader Replacement" />
   <status value="draft" />
   <date value="2023-06-01" />
   <publisher value="NHS England" />
@@ -37,7 +37,7 @@
   <differential>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="https://fhir.nhs.uk/StructureDefinition/Extension-England-MessageHeaderRreplacement" />
+      <fixedUri value="https://fhir.nhs.uk/StructureDefinition/Extension-England-MessageHeaderReplacement" />
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />

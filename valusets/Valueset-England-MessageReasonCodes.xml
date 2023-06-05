@@ -4,14 +4,14 @@
   <url value="https://fhir.nhs.uk/ValueSet/England-MessageReasonCode" />
   <version value="1.0.0" />
   <name value="EnglandMessageReasonCode" />
-  <title value="England Message ReasonCode" />
-  <status value="active" />
-  <date value="2023-06-03T12:07:34.8813472+00:00" />
+  <title value="England Message Reason Code" />
+  <status value="draft" />
+  <date value="2023-06-01" />
   <description value="Complete set of message reason codes" />
   <compose>
     <include>
       <system value="https://fhir.nhs.uk/CodeSystem/England-MessageReasonPrescription" />
-      <version value="1.0.1" />
+      <version value="1.0.0" />
     </include>
     <include>
       <system value="https://fhir.nhs.uk/CodeSystem/England-MessageReasonEncounter" />
@@ -50,13 +50,13 @@
     </contains>
     <contains>
       <system value="https://fhir.nhs.uk/CodeSystem/England-MessageReasonPrescription" />
-      <version value="1.0.1" />
+      <version value="1.0.0" />
       <code value="claim" />
       <display value="Claim" />
     </contains>
     <contains>
       <system value="https://fhir.nhs.uk/CodeSystem/England-MessageReasonPrescription" />
-      <version value="1.0.1" />
+      <version value="1.0.0" />
       <code value="cancel" />
       <display value="Cancel" />
     </contains>

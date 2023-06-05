@@ -35,7 +35,7 @@
         <key value="nhsd-11" />
         <severity value="warning" />
         <human value="replacementOf extension is required for update messages" />
-        <expression value="event.code.where(substring($this.length()-6) = 'update').exists().not() or (event.code.where(substring($this.length()-6) = 'update').exists() and extension('https://fhir.nhs.uk/StructureDefinition/Extension-England-MessageHeaderRreplacement').exists())" />
+        <expression value="event.code.where(substring($this.length()-6) = 'update').exists().not() or (event.code.where(substring($this.length()-6) = 'update').exists() and extension('https://fhir.nhs.uk/StructureDefinition/Extension-England-MessageHeaderReplacement').exists())" />
       </constraint>
     </element>
     <element id="MessageHeader.extension">
@@ -53,12 +53,12 @@
       <path value="MessageHeader.extension" />
       <sliceName value="replacementOf" />
       <short value="An extension used to track history of message headers (Previous Bundle.identifier)." />
-      <definition value="If the message is an update or replaceOf a previous message, then this extension should reference the replaced FHIR Message (Bundle.identifier).&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;extension&quot;: [&#xD;&#xA;    {&#xD;&#xA;        &quot;url&quot;: &quot;https://fhir.nhs.uk/StructureDefinition/Extension-England-MessageHeaderRreplacement&quot;,&#xD;&#xA;        &quot;valueIdentifier&quot;: {&#xD;&#xA;            &quot;system&quot;: &quot;https://tools.ietf.org/html/rfc4122&quot;,&#xD;&#xA;            &quot;value&quot;: &quot;334a3195-1f6c-497a-8efe-d272ca9c4e38&quot;&#xD;&#xA;        }&#xD;&#xA;    }&#xD;&#xA;],&#xD;&#xA;```" />
+      <definition value="If the message is an update or replaceOf a previous message, then this extension should reference the replaced FHIR Message (Bundle.identifier).&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;extension&quot;: [&#xD;&#xA;    {&#xD;&#xA;        &quot;url&quot;: &quot;https://fhir.nhs.uk/StructureDefinition/Extension-England-MessageHeaderReplacement&quot;,&#xD;&#xA;        &quot;valueIdentifier&quot;: {&#xD;&#xA;            &quot;system&quot;: &quot;https://tools.ietf.org/html/rfc4122&quot;,&#xD;&#xA;            &quot;value&quot;: &quot;334a3195-1f6c-497a-8efe-d272ca9c4e38&quot;&#xD;&#xA;        }&#xD;&#xA;    }&#xD;&#xA;],&#xD;&#xA;```" />
       <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-MessageHeaderRreplacement" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-MessageHeaderReplacement" />
       </type>
       <mustSupport value="true" />
     </element>

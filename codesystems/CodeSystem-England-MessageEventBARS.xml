@@ -2,13 +2,13 @@
     <id value="England-MessageEventBARS" />
     <url value="https://fhir.nhs.uk/CodeSystem/England-MessageEventBARS" />
     <identifier>
-        <system value="https://fhir.nhs.uk/identifier/CodeSystem" />
+        <system value="https://fhir.nhs.uk/identifier/England-MessageEvents" />
         <value value="England-MessageEventBARS" />
     </identifier>
     <version value="1.0.0" />
     <name value="EnglandMessageEventBARS" />
     <title value="England MessageEvent BARS" />
-    <status value="active" />
+    <status value="draft" />
     <date value="2023-06-01" />
     <publisher value="NHS England" />
     <contact>
