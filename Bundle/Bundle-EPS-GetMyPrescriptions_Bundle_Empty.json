@@ -1,0 +1,17 @@
+{
+  "resourceType": "Bundle",
+  "id": "155e1102-9e71-4f19-9453-b905c0bbc494",
+  "meta": {
+    "lastUpdated": "2022-11-21T14:00:00+00:00"
+  },
+  "type": "searchset",
+  "link": [
+    {
+      "relation": "self",
+      "url": "https://sandbox.api.service.nhs.uk/electronic-prescriptions/Bundle"
+    }
+  ],
+  "total": 0,
+  "entry": [
+  ]
+}
