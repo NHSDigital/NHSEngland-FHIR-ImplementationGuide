@@ -1,0 +1,90 @@
+{
+	"resourceType": "ValueSet",
+	"id": "10bc93a4-9270-4c65-916c-5436f2db10b4",
+	"url": "https://fhir.nhs.uk/ValueSet/England-IdentifierType",
+	"version": "1.0.0",
+	"name": "EnglandIdentifierType",
+	"title": "England Identifier Type",
+	"status": "draft",
+	"date": "2023-06-01",
+	"publisher": "NHS England",
+	"contact": [
+		{
+			"name": "Interoperability Team",
+			"telecom": [
+				{
+					"system": "email",
+					"value": "interoperabilityteam@nhs.net",
+					"use": "work"
+				}
+			]
+		}
+	],
+	"description": "Expansion of http://hl7.org/fhir/ValueSet/identifier-type to include NHS Organization types",
+	"compose": {
+		"include": [
+			{
+				"system": "https://fhir.nhs.uk/CodeSystem/England-OrganisationRole"
+			},
+			{
+				"system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+				"concept": [
+					{
+						"code": "DL"
+					},
+					{
+						"code": "PPN"
+					},
+					{
+						"code": "BRN"
+					},
+					{
+						"code": "MR"
+					},
+					{
+						"code": "MCN"
+					},
+					{
+						"code": "EN"
+					},
+					{
+						"code": "TAX"
+					},
+					{
+						"code": "NIIP"
+					},
+					{
+						"code": "PRN"
+					},
+					{
+						"code": "MD"
+					},
+					{
+						"code": "DR"
+					},
+					{
+						"code": "ACSN"
+					},
+					{
+						"code": "UDI"
+					},
+					{
+						"code": "SNO"
+					},
+					{
+						"code": "SB"
+					},
+					{
+						"code": "PLAC"
+					},
+					{
+						"code": "FILL"
+					},
+					{
+						"code": "JHN"
+					}
+				]
+			}
+		]
+	}
+}
