@@ -263,8 +263,8 @@
       </constraint>
       <mustSupport value="true" />
     </element>
-    <element id="Observation.performer.identifier.assigner">
-      <path value="Observation.performer.identifier.assigner" />
+    <element id="Observation.performer.Identifier.type">
+      <path value="Observation.performer.Identifier.type" />
       <type>
         <code value="Reference" />
         <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Organization" />
