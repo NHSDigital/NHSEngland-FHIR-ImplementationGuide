@@ -19,7 +19,7 @@
     <code>
         <coding>
             <system value="https://fhir.nhs.uk/CodeSystem/England-SDSJobRoleCode" />
-            <code value="R0050 />
+            <code value="R0050" />
         </coding>
     </code>
 </PractitionerRole>
