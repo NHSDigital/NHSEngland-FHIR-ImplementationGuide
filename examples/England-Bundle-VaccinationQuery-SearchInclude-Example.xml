@@ -1,5 +1,5 @@
 <Bundle xmlns="http://hl7.org/fhir">
-    <id value="England-Bundle-VaccinationQuery-Search_Include-Example" />
+    <id value="England-Bundle-VaccinationQuery-SearchInclude-Example" />
     <type value="searchset" />
     <total value="2" />
     <link>

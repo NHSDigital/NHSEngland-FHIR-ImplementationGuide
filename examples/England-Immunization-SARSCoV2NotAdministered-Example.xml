@@ -1,5 +1,5 @@
 <Immunization xmlns="http://hl7.org/fhir">
-    <id value="England-Immunization-SARS_CoV2_NotAdministered-Example" />
+    <id value="England-Immunization-SARSCoV2NotAdministered-Example" />
     <extension url="https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-VaccinationProcedure">
         <valueCodeableConcept>
             <coding>
