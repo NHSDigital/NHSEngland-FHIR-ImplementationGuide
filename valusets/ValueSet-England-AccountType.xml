@@ -1,0 +1,86 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+    <id value="England-AccountType" />
+    <url value="https://fhir.nhs.uk/ValueSet/England-AccountType" />
+    <version value="1.0.0" />
+    <name value="EnglandAccountType" />
+	<title value="England Account Type" />
+    <status value="draft" />
+	<date value="2023-06-01" />
+	<publisher value="NHS England" />
+    <contact>
+		<name value="NHS England" />
+		<telecom>
+			<system value="email" />
+			<value value="interoperabilityteam@nhs.net" />
+			<use value="work" />
+			<rank value="1" />
+		</telecom>
+	</contact>
+    <description value="A ValueSet to identify the roles (type) of account." />
+    <compose>
+        <include>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-OrganisationRole" />
+            <version value="1.0.0" />
+            <concept>
+                <code value="260" />
+                <display value="YOUNG OFFENDER INSTITUTION PRESCRIBING COST CENTRE" />
+            </concept>
+            <concept>
+                <code value="251" />
+                <display value="IMMIGRATION REMOVAL CENTRE PRESCRIBING COST CENTRE" />
+            </concept>
+            <concept>
+                <code value="257" />
+                <display value="SECURE TRAINING CENTRE PRESCRIBING COST CENTRE" />
+            </concept>
+            <concept>
+                <code value="256" />
+                <display value="SECURE CHILDREN&#39;S HOME PRESCRIBING COST CENTRE" />
+            </concept>
+            <concept>
+                <code value="255" />
+                <display value="PUBLIC HEALTH SERVICE PRESCRIBING COST CENTRE" />
+            </concept>
+            <concept>
+                <code value="249" />
+                <display value="HOSPICE PRESCRIBING COST CENTRE" />
+            </concept>
+            <concept>
+                <code value="246" />
+                <display value="CARE HOME/NURSING HOME PRESCRIBING COST CENTRE" />
+            </concept>
+            <concept>
+                <code value="82" />
+                <display value="PRISON PRESCRIBING COST CENTRE" />
+            </concept>
+            <concept>
+                <code value="252" />
+                <display value="OPTOMETRY SERVICE PRESCRIBING COST CENTRE" />
+            </concept>
+            <concept>
+                <code value="250" />
+                <display value="HOSPITAL SERVICE PRESCRIBING COST CENTRE" />
+            </concept>
+            <concept>
+                <code value="259" />
+                <display value="URGENT &amp; EMERGENCY CARE PRESCRIBING COST CENTRE" />
+            </concept>
+            <concept>
+                <code value="72" />
+                <display value="OTHER PRESCRIBING COST CENTRE" />
+            </concept>
+            <concept>
+                <code value="80" />
+                <display value="OUT OF HOURS COST CENTRE" />
+            </concept>
+            <concept>
+                <code value="247" />
+                <display value="COMMUNITY HEALTH SERVICE PRESCRIBING COST CENTRE" />
+            </concept>
+            <concept>
+                <code value="177" />
+                <display value="PRESCRIBING COST CENTRE" />
+            </concept>
+        </include>
+    </compose>
+</ValueSet>

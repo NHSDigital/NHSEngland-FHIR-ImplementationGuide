@@ -9,13 +9,13 @@
   <date value="2023-06-01" />
   <publisher value="NHS England" />
   <contact>
-    <name value="NHS England" />
-    <telecom>
-      <system value="email" />
-      <value value="interoperabilityteam@nhs.net" />
-      <use value="work" />
-      <rank value="1" />
-    </telecom>
+		<name value="NHS England" />
+		<telecom>
+			<system value="email" />
+			<value value="interoperabilityteam@nhs.net" />
+			<use value="work" />
+			<rank value="1" />
+		</telecom>
   </contact>
   <description value="This profile defines the NHS England constraints and extensions on the UK Core FHIR resource [UK Core Organization]https://simplifier.net/hl7fhirukcorer4/ukcore-organization)." />
   <purpose value="This profile allows exchange of a formally or informally recognised grouping of people or organisations formed for the purpose of achieving some form of collective action. Includes companies, institutions, corporations, departments, community groups, healthcare practice groups, etc." />
