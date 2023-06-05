@@ -1,0 +1,44 @@
+<Immunization xmlns="http://hl7.org/fhir">
+    <id value="England-Immunization-AdministrationofSARS_CoV_2-Example" />
+    <extension url="https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-VaccinationProcedure">
+        <valueCodeableConcept>
+            <coding>
+                <system value="http://snomed.info/sct" />
+                <code value="1324691000000104" />
+                <display value="Administration of second dose of SARS-CoV-2 (severe acute respiratory syndrome coronavirus 2) vaccine" />
+            </coding>
+        </valueCodeableConcept>
+    </extension>
+    <identifier>
+        <system value="https://tools.ietf.org/html/rfc4122" />
+        <value value="7ec28d82-33bf-4e6d-a8de-91dcbc8d1802" />
+    </identifier>
+    <status value="completed" />
+    <vaccineCode>
+        <coding>
+            <system value="http://snomed.info/sct" />
+            <code value="39114911000001105" />
+            <display value="COVID-19 Vaccine Vaxzevria (ChAdOx1 S [recombinant]) not less than 2.5x100,000,000 infectious units/0.5ml dose suspension for injection multidose vials (AstraZeneca UK Ltd)" />
+        </coding>
+    </vaccineCode>
+    <patient>
+        <reference value="Patient/1953684" />
+        <type value="Patient" />
+        <identifier>
+            <system value="https://fhir.nhs.uk/Id/nhs-number" />
+            <value value="9912003888" />
+        </identifier>
+    </patient>
+    <occurrenceDateTime value="2021-02-23T13:00:08.476+00:00" />
+    <primarySource value="false" />
+    <reportOrigin>
+        <text value="RR8 - LEEDS TEACHING HOSPITALS NHS TRUST" />
+    </reportOrigin>
+    <manufacturer>
+        <display value="DREAMLAND Pharmaceuticals Ltd" />
+    </manufacturer>
+    <lotNumber value="R04X" />
+    <protocolApplied>
+        <doseNumberPositiveInt value="2" />
+    </protocolApplied>
+</Immunization>
