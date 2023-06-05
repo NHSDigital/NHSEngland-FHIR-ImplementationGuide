@@ -3,7 +3,7 @@
     "id": "England-Observation",
     "extension": [
         {
-            "url": "https://fhir.nhs.uk/StructureDefinition/England-Extension-COVID19TestResult",
+            "url": "https://fhir.nhs.uk/StructureDefinition/Extension-England-COVID19TestResult",
             "extension": [
                 {
                     "url": "reportOrigin",
