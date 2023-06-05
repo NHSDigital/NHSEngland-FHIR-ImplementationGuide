@@ -21,7 +21,7 @@
     <code>
         <coding>
             <system value="https://fhir.nhs.uk/CodeSystem/England-SDSJobRoleCode" />
-            <code value="S0030:G0100:R0620" />
+            <code value="R0050" />
         </coding>
     </code>
     <telecom>

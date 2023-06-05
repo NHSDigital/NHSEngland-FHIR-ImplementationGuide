@@ -22,7 +22,7 @@
   <code>
     <coding>
       <system value="https://fhir.nhs.uk/CodeSystem/England-SDSJobRoleCode" />
-      <code value="R0260" />
+      <code value="R0050" />
     </coding>
   </code>
   <specialty>
