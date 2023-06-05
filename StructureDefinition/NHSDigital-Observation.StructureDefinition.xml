@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="England-Observation" />
-  <url value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Observation" />
+  <url value="https://fhir.hl7.org.uk/StructureDefinition/England-Observation" />
   <version value="1.0.0" />
   <name value="EnglandObservation" />
   <title value="England Observation" />
