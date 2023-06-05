@@ -153,7 +153,6 @@
       <sliceName value="NHSBSAprescriptionType" />
       <short value="NHS BSA Prescription Type" />
       <definition value="The vocabulary for the ‘PrescriptionType’ vocabulary is defined within the NHSBSA Overprint Specification. &#xD;&#xA;&#xD;&#xA;The System must populate the ‘PrescriptionType’ attribute for the appropriate combination of prescriber and care setting. Retired codes within this vocabulary must not be used&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;extension&quot;:  [&#xD;&#xA;    {&#xD;&#xA;        &quot;url&quot;: &quot;https://fhir.nhs.uk/StructureDefinition/Extension-DM-PrescriptionType&quot;,&#xD;&#xA;        &quot;valueCoding&quot;: {&#xD;&#xA;            &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/prescription-type&quot;,&#xD;&#xA;            &quot;code&quot;: &quot;1201&quot;,&#xD;&#xA;            &quot;display&quot;: &quot;Outpatient Homecare Prescriber - Medical Prescriber&quot;&#xD;&#xA;        }&#xD;&#xA;    }&#xD;&#xA;    ]&#xD;&#xA;```" />
-      <min value="1" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-DM-PrescriptionType" />
@@ -361,7 +360,6 @@
     </element>
     <element id="MedicationRequest.authoredOn">
       <path value="MedicationRequest.authoredOn" />
-      <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="MedicationRequest.requester">

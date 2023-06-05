@@ -77,14 +77,6 @@
         "id": "a54219b8-f741-4c47-b662-e4f8dfa49ab6",
         "extension": [
           {
-            "url": "https://fhir.nhs.uk/StructureDefinition/Extension-DM-PrescriptionType",
-            "valueCoding": {
-              "system": "https://fhir.nhs.uk/CodeSystem/prescription-type",
-              "code": "0101",
-              "display": "Primary Care Prescriber - Medical Prescriber"
-            }
-          },
-          {
             "url": "https://fhir.nhs.uk/StructureDefinition/Extension-EPS-DispensingInformation",
             "extension":  [
               {
@@ -132,7 +124,6 @@
             "value": "9449304130"
           }
         },
-        "authoredOn": "2022-10-21T13:47:00+00:00",
         "requester": {
           "reference": "PractitionerRole/56166769-c1c4-4d07-afa8-132b5dfca666"
         },
@@ -217,14 +208,6 @@
         "id": "6989b7bd-8db6-428c-a593-4022e3044c00",
         "extension": [
           {
-            "url": "https://fhir.nhs.uk/StructureDefinition/Extension-DM-PrescriptionType",
-            "valueCoding": {
-              "system": "https://fhir.nhs.uk/CodeSystem/prescription-type",
-              "code": "0101",
-              "display": "Primary Care Prescriber - Medical Prescriber"
-            }
-          },
-          {
             "url": "https://fhir.nhs.uk/StructureDefinition/Extension-EPS-DispensingInformation",
             "extension":  [
               {
@@ -272,7 +255,6 @@
             "value": "9449304130"
           }
         },
-        "authoredOn": "2022-10-21T13:47:00+00:00",
         "requester": {
           "reference": "PractitionerRole/56166769-c1c4-4d07-afa8-132b5dfca666"
         },
@@ -357,14 +339,6 @@
         "id": "2868554c-5565-4d31-b92a-c5b8dab8b90a",
         "extension": [
           {
-            "url": "https://fhir.nhs.uk/StructureDefinition/Extension-DM-PrescriptionType",
-            "valueCoding": {
-              "system": "https://fhir.nhs.uk/CodeSystem/prescription-type",
-              "code": "0101",
-              "display": "Primary Care Prescriber - Medical Prescriber"
-            }
-          },
-          {
             "url": "https://fhir.nhs.uk/StructureDefinition/Extension-EPS-DispensingInformation",
             "extension":  [
               {
@@ -413,7 +387,6 @@
             "value": "9449304130"
           }
         },
-        "authoredOn": "2022-10-21T13:47:00+00:00",
         "requester": {
           "reference": "PractitionerRole/56166769-c1c4-4d07-afa8-132b5dfca666"
         },
@@ -498,31 +471,6 @@
         "id": "5cb17f5a-11ac-4e18-825f-6470467238b3",
         "extension": [
           {
-            "url": "https://fhir.nhs.uk/StructureDefinition/Extension-DM-PrescriptionType",
-            "valueCoding": {
-              "system": "https://fhir.nhs.uk/CodeSystem/prescription-type",
-              "code": "0101",
-              "display": "Primary Care Prescriber - Medical Prescriber"
-            }
-          },
-          {
-            "url": "https://fhir.nhs.uk/StructureDefinition/Extension-DM-PrescriptionStatusHistory",
-            "extension": [
-              {
-                "url": "status",
-                "valueCoding": {
-                  "system": "https://fhir.nhs.uk/CodeSystem/medicationrequest-status-history",
-                  "code": "R-0001",
-                  "display": "Prescription/item was cancelled"
-                }
-              },
-              {
-                "url": "statusDate",
-                "valueDateTime": "2022-10-21T13:48:00+00:00"
-              }
-            ]
-          },
-          {
             "url": "https://fhir.nhs.uk/StructureDefinition/Extension-EPS-DispensingInformation",
             "extension":  [
               {
@@ -543,15 +491,6 @@
           }
         ],
         "status": "cancelled",
-        "statusReason": {
-          "coding": [
-            {
-              "system": "https://fhir.nhs.uk/CodeSystem/medicationrequest-status-reason",
-              "code": "0002",
-              "display": "Clinical contra-indication"
-            }
-          ]
-        },
         "intent": "order",
         "category": [
           {
@@ -580,7 +519,6 @@
             "value": "9449304130"
           }
         },
-        "authoredOn": "2022-10-21T13:47:00+00:00",
         "requester": {
           "reference": "PractitionerRole/56166769-c1c4-4d07-afa8-132b5dfca666"
         },
