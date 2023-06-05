@@ -1,0 +1,32 @@
+<PractitionerRole xmlns="http://hl7.org/fhir">
+    <id value="England-PractitionerRole-SDSProvenance-Example" />
+    <identifier>
+        <system value="https://fhir.nhs.uk/Id/sds-role-profile-id" />
+        <value value="454567759542" />
+    </identifier>
+    <practitioner>
+        <identifier>
+            <system value="https://fhir.hl7.org.uk/Id/gmc-number" />
+            <value value="C9876543" />
+        </identifier>
+        <display value="Dr Smith" />
+    </practitioner>
+    <organization>
+        <identifier>
+            <system value="https://fhir.nhs.uk/Id/ods-organization-code" />
+            <value value="RBA" />
+        </identifier>
+        <display value="TAUNTON AND SOMERSET NHS FOUNDATION TRUST" />
+    </organization>
+    <code>
+        <coding>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-SDSJobRoleCode" />
+            <code value="S0030:G0100:R0620" />
+        </coding>
+    </code>
+    <telecom>
+        <system value="phone" />
+        <value value="01234567890" />
+        <use value="work" />
+    </telecom>
+</PractitionerRole>
