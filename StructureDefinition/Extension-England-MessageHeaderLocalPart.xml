@@ -51,9 +51,6 @@
       <path value="Extension.value[x]" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-HealthcareService" />
-        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-PractitionerRole" />
-        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Practitioner" />
       </type>
     </element>
     <element id="Extension.value[x].identifier.system">
