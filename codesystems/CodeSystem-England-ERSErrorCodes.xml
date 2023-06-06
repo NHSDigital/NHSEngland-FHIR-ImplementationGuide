@@ -4,8 +4,8 @@
     <version value="1.0.0" />
     <name value="EnglandERSErrorCodes" />
     <title value="England ERS Error Codes" />
-    <status value="active" />
-    <date value="2022-09-30" />
+    <status value="draft" />
+    <date value="2023-06-01" />
     <publisher value="NHS England" />
     <contact>
         <name value="NHS England" />
