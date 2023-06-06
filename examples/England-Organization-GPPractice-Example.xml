@@ -1,5 +1,5 @@
 <Organization xmlns="http://hl7.org/fhir">
-    <id value="England-Organization-Organisation-Example" />
+    <id value="England-Organization-GPPractice-Example" />
     <extension url="https://fhir.nhs.uk/StructureDefinition/Extension-England-ODSOrganisationRelationships">
         <extension url="commissionedBy">
             <valueIdentifier>

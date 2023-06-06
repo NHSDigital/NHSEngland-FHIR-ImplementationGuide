@@ -1,5 +1,5 @@
 <Organization xmlns="http://hl7.org/fhir">
-    <id value="England-Organization-Organisation2-Example" />
+    <id value="England-Organization-NHSICS-Example" />
     <identifier>
         <system value="https://fhir.nhs.uk/Id/ods-organization-code" />
         <value value="B81001" />
