@@ -93,15 +93,6 @@
         {
             "type": "Organization",
             "identifier": {
-                "type": {
-                    "coding": [
-                        {
-                            "system": "https://fhir.nhs.uk/CodeSystem/England-OrganisationRole",
-                            "code": "173",
-                            "display": "PATHOLOGY LAB"
-                        }
-                    ]
-                },
                 "value": "LFD004"
             },
             "display": "Add if possible"
