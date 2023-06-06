@@ -49,7 +49,6 @@
       <path value="Extension.value[x]" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Bundle" />
       </type>
     </element>
   </differential>
