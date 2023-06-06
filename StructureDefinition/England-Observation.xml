@@ -63,51 +63,6 @@
       <path value="Observation.identifier.value" />
       <min value="1" />
     </element>
-    <element id="Observation.identifier.assigner">
-      <path value="Observation.identifier.assigner" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Organization" />
-      </type>
-    </element>
-    <element id="Observation.basedOn">
-      <path value="Observation.basedOn" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/DeviceRequest" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/ImmunizationRecommendation" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/NutritionOrder" />
-        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-MedicationRequest" />
-        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-ServiceRequest" />
-        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-CarePlan" />
-      </type>
-    </element>
-    <element id="Observation.basedOn.identifier.assigner">
-      <path value="Observation.basedOn.identifier.assigner" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Organization" />
-      </type>
-    </element>
-    <element id="Observation.partOf">
-      <path value="Observation.partOf" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-ImagingStudy" />
-        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-MedicationAdministration" />
-        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Procedure" />
-        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Immunization" />
-        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-MedicationDispense" />
-        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-MedicationStatement" />
-      </type>
-    </element>
-    <element id="Observation.partOf.identifier.assigner">
-      <path value="Observation.partOf.identifier.assigner" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Organization" />
-      </type>
-    </element>
     <element id="Observation.status">
       <path value="Observation.status" />
       <definition value="The status of the result value.&#xD;&#xA;&#xD;&#xA;For COVID-19 Test History the status of the observation will always be `final`&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA;    &quot;status&quot;: &quot;final&quot;,&#xD;&#xA;```" />
@@ -169,13 +124,6 @@
       <path value="Observation.subject" />
       <definition value="The NHS Number will be an identifier reference which can be used with PDS FHIR API to return Patient demographics. If a local Patient is available, a reference to this will be present (e.g. &quot;Patient/123&quot;)&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA;    &quot;subject&quot;: {&#xD;&#xA;        &quot;reference&quot;: &quot;Patient/123&quot;,&#xD;&#xA;        &quot;identifier&quot;:  [&#xD;&#xA;            {&#xD;&#xA;                &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/nhs-number&quot;,&#xD;&#xA;                &quot;value&quot;: &quot;987123456&quot;&#xD;&#xA;            }&#xD;&#xA;        ]&#xD;&#xA;    },&#xD;&#xA;```" />
       <min value="1" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group" />
-        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Device" />
-        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Patient" />
-        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Location" />
-      </type>
       <constraint>
         <key value="patient-reference" />
         <severity value="warning" />
@@ -199,41 +147,6 @@
       <path value="Observation.subject.identifier.value" />
       <min value="1" />
     </element>
-    <element id="Observation.subject.identifier.assigner">
-      <path value="Observation.subject.identifier.assigner" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Organization" />
-      </type>
-    </element>
-    <element id="Observation.focus.identifier.assigner">
-      <path value="Observation.focus.identifier.assigner" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Organization" />
-      </type>
-    </element>
-    <element id="Observation.encounter">
-      <path value="Observation.encounter" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Encounter" />
-      </type>
-    </element>
-    <element id="Observation.encounter.identifier.assigner">
-      <path value="Observation.encounter.identifier.assigner" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Organization" />
-      </type>
-    </element>
-    <element id="Observation.encounter.identifier.assigner.identifier.assigner">
-      <path value="Observation.encounter.identifier.assigner.identifier.assigner" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Organization" />
-      </type>
-    </element>
     <element id="Observation.effective[x]">
       <path value="Observation.effective[x]" />
       <definition value="The date and time the result was asserted.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA;    &quot;effectiveDateTime&quot;: &quot;2020-09-23T13:00:08.476+00:00&quot;&#xD;&#xA;```" />
@@ -248,44 +161,20 @@
       <definition value="Who was responsible for asserting the observed value as &quot;true&quot;. &#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA;&quot;performer&quot;: [&#xD;&#xA;  {&#xD;&#xA;    &quot;type&quot;: &quot;Organization&quot;,&#xD;&#xA;    &quot;identifier&quot;: {&#xD;&#xA;      &quot;type&quot;: {&#xD;&#xA;        &quot;coding&quot;: [&#xD;&#xA;          {&#xD;&#xA;            &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/England-OrganisationRole&quot;,&#xD;&#xA;            &quot;code&quot;: &quot;173&quot;,&#xD;&#xA;            &quot;display&quot;: &quot;PATHOLOGY LAB&quot;&#xD;&#xA;          }&#xD;&#xA;        ]&#xD;&#xA;      },&#xD;&#xA;      &quot;value&quot;: &quot;LFD004&quot;&#xD;&#xA;    }&#xD;&#xA;  },&#xD;&#xA;  {&#xD;&#xA;    &quot;type&quot;: &quot;Organization&quot;,&#xD;&#xA;    &quot;identifier&quot;: {&#xD;&#xA;      &quot;type&quot;: {&#xD;&#xA;        &quot;coding&quot;: [&#xD;&#xA;          {&#xD;&#xA;            &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/OrgType&quot;,&#xD;&#xA;            &quot;code&quot;: &quot;TestCentreId&quot;,&#xD;&#xA;            &quot;display&quot;: &quot;Testing Centre&quot;&#xD;&#xA;          }&#xD;&#xA;        ]&#xD;&#xA;      },&#xD;&#xA;      &quot;value&quot;: &quot;WKE03&quot;&#xD;&#xA;    }&#xD;&#xA;  }&#xD;&#xA;]&#xD;&#xA;&#xD;&#xA;```" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Organization" />
-        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-CareTeam" />
-        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Patient" />
-        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-PractitionerRole" />
         <aggregation value="referenced" />
       </type>
       <constraint>
-        <key value="performer"/>
-        <severity value="error"/>
-        <human value="An identifier reference or resource reference must be provided"/>
+        <key value="performer" />
+        <severity value="error" />
+        <human value="An identifier reference or resource reference must be provided" />
         <expression value="(reference.exists() or identifier.exists())" />
       </constraint>
       <mustSupport value="true" />
-    </element>
-    <element id="Observation.performer.identifier.assigner">
-      <path value="Observation.performer.identifier.assigner" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Organization" />
-      </type>
     </element>
     <element id="Observation.value[x]">
       <path value="Observation.value[x]" />
       <definition value="### COVID-19 valueCodeableConcept &#xD;&#xA;&#xD;&#xA;The COVID 19 test result. This is a SNOMED CT from the valueSet associated with the `code`, see [Observation Definition](https://simplifier.net/guide/NHSDigital/Home/FHIRAssets/AllAssets/ObservationDefinition/ObservationDefinition.guide.md)&#xD;&#xA;&#xD;&#xA;```json &#xD;&#xA;&#xD;&#xA;    &quot;valueCodeableConcept&quot;: {&#xD;&#xA;        &quot;coding&quot;:  [&#xD;&#xA;            {&#xD;&#xA;                &quot;system&quot;: &quot;http://snomed.info/sct&quot;,&#xD;&#xA;                &quot;code&quot;: &quot;1240581000000104&quot;,&#xD;&#xA;                &quot;display&quot;: &quot;SARS-CoV-2 (severe acute respiratory syndrome coronavirus 2) detection result positive&quot;&#xD;&#xA;            }&#xD;&#xA;        ],&#xD;&#xA;        &quot;text&quot;: &quot;SARS-CoV-2-ORGY&quot;&#xD;&#xA;    },&#xD;&#xA;```" />
       <mustSupport value="true" />
-    </element>
-    <element id="Observation.note.author[x]">
-      <path value="Observation.note.author[x]" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Organization" />
-        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Patient" />
-        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Practitioner" />
-        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-RelatedPerson" />
-      </type>
-      <type>
-        <code value="string" />
-      </type>
     </element>
     <element id="Observation.method">
       <path value="Observation.method" />
@@ -317,20 +206,6 @@
       <path value="Observation.specimen.identifier.value" />
       <min value="1" />
     </element>
-    <element id="Observation.specimen.identifier.assigner">
-      <path value="Observation.specimen.identifier.assigner" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Organization" />
-      </type>
-    </element>
-    <element id="Observation.specimen.identifier.assigner.identifier.assigner">
-      <path value="Observation.specimen.identifier.assigner.identifier.assigner" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Organization" />
-      </type>
-    </element>
     <element id="Observation.device">
       <path value="Observation.device" />
       <definition value="Details of the [COVID-19 test kit](https://simplifier.net/resolve?target=simplifier&amp;scope=uk.nhsdigital.r4&amp;canonical=https://fhir.nhs.uk/Id/Covid19-TestKit) used.  &#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA;    &quot;device&quot;: {&#xD;&#xA;        &quot;identifier&quot;: {&#xD;&#xA;            &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/Covid19-TestKit&quot;,&#xD;&#xA;            &quot;value&quot;: &quot;LFT&quot;&#xD;&#xA;        },&#xD;&#xA;        &quot;display&quot;: &quot;Lateral Flow Test&quot;&#xD;&#xA;    }&#xD;&#xA;```" />
@@ -344,72 +219,9 @@
       <path value="Observation.device.identifier.value" />
       <min value="1" />
     </element>
-    <element id="Observation.device.identifier.assigner">
-      <path value="Observation.device.identifier.assigner" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Organization" />
-      </type>
-    </element>
-    <element id="Observation.device.identifier.assigner.identifier.assigner">
-      <path value="Observation.device.identifier.assigner.identifier.assigner" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Organization" />
-      </type>
-    </element>
     <element id="Observation.device.display">
       <path value="Observation.device.display" />
       <min value="1" />
-    </element>
-    <element id="Observation.hasMember">
-      <path value="Observation.hasMember" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/MolecularSequence" />
-        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Observation" />
-        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-QuestionnaireResponse" />
-      </type>
-    </element>
-    <element id="Observation.hasMember.identifier.assigner">
-      <path value="Observation.hasMember.identifier.assigner" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Organization" />
-      </type>
-    </element>
-    <element id="Observation.hasMember.identifier.assigner.identifier.assigner">
-      <path value="Observation.hasMember.identifier.assigner.identifier.assigner" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Organization" />
-      </type>
-    </element>
-    <element id="Observation.derivedFrom">
-      <path value="Observation.derivedFrom" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Media" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/MolecularSequence" />
-        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-ImagingStudy" />
-        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-QuestionnaireResponse" />
-        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Observation" />
-        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-DocumentReference" />
-      </type>
-    </element>
-    <element id="Observation.derivedFrom.identifier.assigner">
-      <path value="Observation.derivedFrom.identifier.assigner" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Organization" />
-      </type>
-    </element>
-    <element id="Observation.derivedFrom.identifier.assigner.identifier.assigner">
-      <path value="Observation.derivedFrom.identifier.assigner.identifier.assigner" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Organization" />
-      </type>
     </element>
   </differential>
 </StructureDefinition>
