@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PractitionerRole xmlns="http://hl7.org/fhir">
-  <id value="England-PractitionerRole-Pass-Example" />
+  <id value="England-PractitionerRole-GeneralSurgeryConsultant-Example" />
   <identifier>
     <system value="https://fhir.nhs.uk/Id/sds-role-profile-id" />
     <value value="125686540025" />
