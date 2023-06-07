@@ -1,0 +1,111 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+    <id value="England-LocationType" />
+    <url value="https://fhir.nhs.uk/ValueSet/England-LocationType" />
+    <version value="1.0.0" />
+    <name value="EnglandLocationType" />
+	<title value="England Location Type" />
+    <status value="draft" />
+    <description value="A ValueSet to identify the roles (type) of location." />
+    <compose>
+        <include>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-OrganisationRole" />
+            <version value="1.0.0" />
+            <concept>
+                <code value="140" />
+                <display value="ISLE OF MAN GOVERNMENT DIRECTORATE SITE" />
+            </concept>
+            <concept>
+                <code value="234" />
+                <display value="POLICE CUSTODY SUITE" />
+            </concept>
+            <concept>
+                <code value="148" />
+                <display value="LOCAL HEALTH BOARD SITE" />
+            </concept>
+            <concept>
+                <code value="149" />
+                <display value="WELSH LOCAL HEALTH BOARD SITE" />
+            </concept>
+            <concept>
+                <code value="217" />
+                <display value="DSCRO SITE" />
+            </concept>
+            <concept>
+                <code value="131" />
+                <display value="GOVERNMENT DEPARTMENT SITE" />
+            </concept>
+            <concept>
+                <code value="114" />
+                <display value="DMU SITE" />
+            </concept>
+            <concept>
+                <code value="212" />
+                <display value="NHS ENGLAND (REGION, LOCAL OFFICE) SITE" />
+            </concept>
+            <concept>
+                <code value="147" />
+                <display value="LSP SITE" />
+            </concept>
+            <concept>
+                <code value="168" />
+                <display value="OTHER STATUTORY AUTHORITY SITE" />
+            </concept>
+            <concept>
+                <code value="180" />
+                <display value="PRIMARY CARE TRUST SITE" />
+            </concept>
+            <concept>
+                <code value="108" />
+                <display value="CARE TRUST SITE" />
+            </concept>
+            <concept>
+                <code value="214" />
+                <display value="COMMISSIONING SUPPORT UNIT SITE" />
+            </concept>
+            <concept>
+                <code value="136" />
+                <display value="STRATEGIC HEALTH AUTHORITY SITE" />
+            </concept>
+            <concept>
+                <code value="99" />
+                <display value="CLINICAL COMMISSIONING GROUP SITE" />
+            </concept>
+            <concept>
+                <code value="222" />
+                <display value="LOCAL AUTHORITY SITE" />
+            </concept>
+            <concept>
+                <code value="176" />
+                <display value="INDEPENDENT SECTOR H/C PROVIDER SITE" />
+            </concept>
+            <concept>
+                <code value="101" />
+                <display value="SOCIAL CARE SITE" />
+            </concept>
+            <concept>
+                <code value="198" />
+                <display value="NHS TRUST SITE" />
+            </concept>
+            <concept>
+                <code value="96" />
+                <display value="BRANCH SURGERY" />
+            </concept>
+            <concept>
+                <code value="280" />
+                <display value="PHARMACY SITE" />
+            </concept>
+            <concept>
+                <code value="167" />
+                <display value="OPTICAL SITE" />
+            </concept>
+            <concept>
+                <code value="191" />
+                <display value="SPECIAL HEALTH AUTHORITY SITE" />
+            </concept>
+            <concept>
+                <code value="90" />
+                <display value="EXECUTIVE AGENCY SITE" />
+            </concept>
+        </include>
+    </compose>
+</ValueSet>
