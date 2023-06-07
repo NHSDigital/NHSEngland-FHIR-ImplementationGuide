@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSystem xmlns="http://hl7.org/fhir">
+    <id value="England-MedicationRequestCategory"/>
+    <url value="https://fhir.nhs.uk/CodeSystem/England-MedicationRequestCategory"/>
+    <identifier>
+        <system value="https://fhir.nhs.uk/identifier/CodeSystem"/>
+        <value value="medicationrequest-category"/>
+    </identifier>
+    <version value="1.0.0"/>
+    <name value="EnglandMedicationRequestCategory"/>
+    <title value="England MedicationRequestCategory"/>
+    <status value="draft"/>
+    <experimental value="true"/>
+    <date value="2023-06-01"/>
+    <publisher value="NHS England"/>
+    <contact>
+        <name value="NHS England" />
+        <telecom>
+          <system value="email" />
+          <value value="interoperabilityteam@nhs.net" />
+          <use value="work" />
+        </telecom>
+      </contact>
+    <description value="MedicationRequest Category extension"/>
+    <caseSensitive value="true"/>
+    <content value="complete"/>
+    <concept>
+        <code value="leave"/>
+        <display value="Leave"/>
+    </concept>
+</CodeSystem>

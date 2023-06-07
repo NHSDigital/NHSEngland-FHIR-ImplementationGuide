@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+    <id value="England-DMMedicationRequestCourseOfTherapy" />
+    <url value="https://fhir.nhs.uk/ValueSet/England-DMMedicationRequestCourseOfTherapy" />
+    <version value="1.0.0" />
+    <name value="EnglandDMMedicationRequestCourseOfTherapy" />
+    <title value="England DMMedicationRequestCourseOfTherapy" />
+    <status value="draft" />
+    <experimental value="false" />
+    <date value="2023-06-01" />
+    <publisher value="NHS England" />
+    <contact>
+        <telecom>
+            <system value="url" />
+            <value value="http://hl7.org/fhir" />
+        </telecom>
+    </contact>
+    <description value="MedicationRequest Course of Therapy Codes" />
+    <immutable value="true" />
+    <compose>
+        <include>
+            <system value="http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy" />
+            <concept>
+                <code value="continuous" />
+                <display value="Continuous long term therapy" />
+            </concept>
+            <concept>
+                <code value="acute" />
+                <display value="Short course (acute) therapy" />
+            </concept>
+        </include>
+        <include>
+            <system value="https://fhir.nhs.uk/CodeSystem/medicationrequest-course-of-therapy" />
+            <concept>
+                <code value="continuous-repeat-dispensing"/>
+                <display value="Continuous long term (repeat dispensing)"/>
+            </concept>
+        </include>
+        <exclude>
+            <system value="http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy" />
+            <concept>
+                <code value="seasonal" />
+                <display value="Seasonal" />
+            </concept>
+        </exclude>
+    </compose>
+    <expansion>
+        <timestamp value="2020-07-29T17:18:27+10:00"/>
+        <total value="3"/>
+        <offset value="0"/>
+        <parameter>
+            <name value="version"/>
+            <valueUri value="https://fhir.nhs.uk/CodeSystem/medicationrequest-course-of-therapy|1.0.0"/>
+        </parameter>
+        <parameter>
+            <name value="version"/>
+            <valueUri value="http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy|4.0.1"/>
+        </parameter>
+        <parameter>
+            <name value="count"/>
+            <valueInteger value="2147483647"/>
+        </parameter>
+        <parameter>
+            <name value="offset"/>
+            <valueInteger value="0"/>
+        </parameter>
+        <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy"/>
+            <version value="4.0.1"/>
+            <code value="continuous"/>
+            <display value="Continuous long term therapy"/>
+        </contains>
+        <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy"/>
+            <version value="4.0.1"/>
+            <code value="acute"/>
+            <display value="Short course (acute) therapy"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/medicationrequest-course-of-therapy"/>
+            <version value="1.0.0"/>
+            <code value="continuous-repeat-dispensing"/>
+            <display value="Continuous long term (repeat dispensing)"/>
+        </contains>
+    </expansion>
+</ValueSet> 

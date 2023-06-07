@@ -1,0 +1,26 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+    <id value="England-eRSClinicType" />
+    <meta>
+        <lastUpdated value="2017-10-05T00:00:00+01:00" />
+    </meta>
+    <url value="https://fhir.nhs.uk/ValueSet/England-eRSClinicType" />
+    <version value="1.0.0" />
+    <name value="EnglandeRSClinicType" />
+    <status value="draft" />
+    <publisher value="NHS England" />
+    <contact>
+        <name value="NHS England" />
+        <telecom>
+            <system value="email" />
+            <value value="interoperabilityteam@nhs.net" />
+            <use value="work" />
+        </telecom>
+    </contact>
+    <description value="A valueset to describe the clinic type" />
+    <copyright value="Copyright &#169; 2017 NHS Digital" />
+    <compose>
+        <include>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-ClinicType" />
+        </include>
+    </compose>
+</ValueSet>

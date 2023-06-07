@@ -1,0 +1,95 @@
+<CodeSystem xmlns="http://hl7.org/fhir">
+    <id value="England-MedicationRequestStatusHistory" />
+    <url value="https://fhir.nhs.uk/CodeSystem/England-MedicationRequestStatusHistory" />
+    <identifier>
+        <system value="https://fhir.nhs.uk/identifier/CodeSystem" />
+        <value value="medicationrequest-status-history" />
+    </identifier>
+    <version value="1.0.0" />
+    <name value="EnglandMedicationRequestStatusHistory" />
+    <title value="England MedicationRequestStatusHistory" />
+    <status value="draft" />
+    <experimental value="true" />
+    <date value="2023-06-01" />
+    <publisher value="NHS England" />
+    <contact>
+        <name value="NHS England" />
+        <telecom>
+          <system value="email" />
+          <value value="interoperabilityteam@nhs.net" />
+          <use value="work" />
+        </telecom>
+      </contact>
+    <description value="MedicationRequest Status Reason History. Taken from HL7v3 UK Cancellation Reason Response" />
+    <caseSensitive value="true" />
+    <content value="complete" />
+    <concept>
+        <code value="R-0001"></code>
+        <display value="Prescription/item was cancelled successfully" />
+        <definition value="The cancellation request was successful, and the user is notified accordingly. If the entire prescription has been cancelled, the wording “prescription cancelled successfully” should be included within the user notification. Where one or more medication items have been cancelled, the wording “prescription item(s) cancelled successfully” should be included within the user notification. If the system cannot determine whether an individual item or the entire prescription has been cancelled, the wording “prescription/prescription item cancelled successfully” should be included within the user notification." />
+    </concept>
+    <concept>
+        <code value="R-0002"></code>
+        <display value="This prescription item(s) cannot be cancelled as it is currently with a dispenser, please contact them directly to complete the cancellation." />
+        <definition value="The cancellation request was unsuccessful because the prescription has been transmitted to a pharmacy for dispensing. The cancellation request identifies the prescription/item to be cancelled and sets a flag in the Spine that should that prescription be returned to the Spine by the dispenser, the prescription will be cancelled, and a cancel response will be sent to the prescriber indicating that the initial cancel request was successful. The user is notified accordingly." />
+    </concept>
+    <concept>
+        <code value="R-0003"></code>
+        <display value="This prescription item(s) cannot be cancelled as it is currently with a dispenser, please contact them directly to complete the cancellation." />
+        <definition value="The cancellation request was unsuccessful because the prescription has been transmitted to a pharmacy for dispensing and the Spine has identified that dispensing events have been recorded against that prescription. The Spine has been updated accordingly. The response will notify the prescriber which dispenser has the prescription using the ‘Dispenser Information’ block defined within the DMS. It cannot be cancelled. The user must be notified accordingly." />
+    </concept>
+    <concept>
+        <code value="R-0004"></code>
+        <display value="This prescription cannot be cancelled as it is has been dispensed to the patient, please contact the patient or the dispenser to take appropriate action." />
+        <definition value="The cancellation request was unsuccessful because the prescription has been transmitted to a pharmacy for dispensing and the Spine has identified that dispensing events have been recorded against that prescription. The Spine has been updated accordingly. The prescription is recorded as having been dispensed. The user must be notified accordingly." />
+    </concept>
+    <concept>
+        <code value="R-0005"></code>
+        <display value="The cancellation was unsuccessful as this prescription/item has expired and cannot be dispensed" />
+        <definition value="The prescription item cannot be cancelled because the prescription item has expired. The user must be notified accordingly." />
+    </concept>
+    <concept>
+        <code value="R-0006"></code>
+        <display value="Prescription/item had already been cancelled" />
+        <definition value="The prescription/item cannot be cancelled because a cancellation request from a prescriber has already been received and the prescription has been cancelled. The user must be notified accordingly. If the entire prescription has been cancelled, the wording “prescription cancelled successfully” should be included within the user notification. Where one or more medication items have been cancelled, the wording “prescription item(s) cancelled successfully” should be included within the user notification. If the system cannot determine whether an individual item or the entire prescription has been cancelled, the wording “prescription/prescription item cancelled successfully” should be included within the user notification." />
+    </concept>
+    <concept>
+        <code value="R-0007"></code>
+        <display value="There has previously been an unsuccessful attempt to cancel this prescription which failed because it is already with a dispenser/patient. Please contact the dispenser or patient to take appropriate action." />
+        <definition value="The prescription/item cannot be cancelled because a cancellation request from a prescriber has already been received and the prescription has been marked for cancellation. This would indicate that the prescription is with a dispenser. In this case, the previous cancellation request has set a flag in the Spine such that should that prescription be returned to the Spine, the prescription will be cancelled and a cancel response will be sent to the prescriber The user must be notified accordingly" />
+    </concept>
+    <concept>
+        <code value="R-0008"></code>
+        <display value="This prescription cannot be located and therefore cannot be cancelled. Please retry and if this error persists contact your system supplier. Try checking the prescription tracker to locate this prescription" />
+        <definition value="The prescription/item cannot be cancelled because the prescription to be cancelled has not been recorded by the Spine. This situation can occur when; • The cancel request arrives in the ETP component of the Spine before the prescription that is being cancelled. See below for guidance on this scenario. • A cancel request is made for a prescription where there is an error in the prescription UUID defined in the prescription message. • The processing of the prescription has been completed by the ETP component and the Spine has been updated accordingly. In all cases the user must be notified accordingly." />
+    </concept>
+    <concept>
+        <code value="R-0009"></code>
+        <display value="Cancellation is currently unavailable, please contact the dispenser/patient directly to complete the cancellation and make your system supplier aware of this error" />
+        <definition value="The Spine cancellation functionality has been disabled at the request of the Authority and the message is rejected. The cancellation request will not be processed. The prescriber should seek other means to cancel the prescription." />
+    </concept>
+    <concept>
+        <code value="R-0010"></code>
+        <display value="This prescription cannot be cancelled as it has already been marked 'not dispensed' by the dispenser." />        
+    </concept>
+    <concept>
+        <code value="R-0099"></code>
+        <display value="EPS cancellation request cannot be processed, please contact the dispenser/patient directly to take appropriate action and make your system supplier aware of this error. [Additional Information (if any)]" />
+        <definition value="The user should inform their system supplier that an incompatible version of a request message has been used. This scenario may occur when a new version of the ETP service is deployed but any messaging incompatibles will be carefully managed by the CFH Programme." />
+    </concept>
+    <concept>
+        <code value="R-5000"></code>
+        <display value="EPS cancellation request cannot be processed, please contact the dispenser/patient directly to take appropriate action and make your system supplier aware of this error ([additional info(if any)])" />
+        <definition value="The user should inform their system supplier that a message was rejected by the Spine." />
+    </concept>
+    <concept>
+        <code value="R-5888"></code>
+        <display value="Invalid message" />
+        <definition value="EPS cancellation request cannot be processed, please contact the dispenser/patient directly to take appropriate action and make your system supplier aware of this error ([additional info(if any)])" />
+    </concept>
+    <concept>
+        <code value="R-5006"></code>
+        <display value="EPS cancellation request cannot be processed, please contact the dispenser/patient directly to take appropriate action and make your system supplier aware of this error ([additional info(if any)])" />
+        <definition value="The format of a date/time attribute with the prescription does not confirm with the format defined within the DMS. The System must correct the date/time attribute and re-submit the prescription to the Spine." />
+    </concept>
+</CodeSystem>

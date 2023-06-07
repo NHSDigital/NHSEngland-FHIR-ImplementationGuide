@@ -1,0 +1,50 @@
+<CodeSystem xmlns="http://hl7.org/fhir">
+    <id value="England-EPSTaskDispenseWithdrawReason" />
+    <url value="https://fhir.nhs.uk/CodeSystem/England-EPSTaskDispenseWithdrawReason" />
+    <identifier>
+        <system value="https://fhir.nhs.uk/identifier/CodeSystem" />
+        <value value="EPS-task-dispense-withdraw-reason" />
+    </identifier>
+    <version value="01" />
+    <name value="EnglandEPSTaskDispenseWithdrawReason" />
+    <title value="England EPSTaskDispenseWithdrawReason" />
+    <status value="draft" />
+    <experimental value="false" />
+    <date value="2023-06-01" />
+    <publisher value="NHS England" />
+    <contact>
+        <name value="NHS England" />
+        <telecom>
+            <system value="email" />
+            <value value="interoperabilityteam@nhs.net" />
+            <use value="work" />
+        </telecom>
+    </contact>
+    <description value="EPS Dispense Withdraw Reason. Taken from HL7v3 UK Cancellation Reason Response" />
+    <caseSensitive value="true" />
+    <content value="complete" />
+    <concept>
+        <code value="QU"></code>
+        <display value="Quantity Update" />
+    </concept>
+    <concept>
+        <code value="MU"></code>
+        <display value="Medication Update" />
+    </concept>
+    <concept>
+        <code value="DA"></code>
+        <display value="Dosage Amendments" />
+    </concept>
+    <concept>
+        <code value="PA"></code>
+        <display value="Patient Details Amendments" />
+    </concept>
+    <concept>
+        <code value="OC"></code>
+        <display value="Other Clinical" />
+    </concept>
+    <concept>
+        <code value="ONC"></code>
+        <display value="Other Non-Clinical" />
+    </concept>
+</CodeSystem>

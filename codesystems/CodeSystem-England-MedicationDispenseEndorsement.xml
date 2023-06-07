@@ -1,0 +1,91 @@
+<CodeSystem xmlns="http://hl7.org/fhir">
+    <id value="England-MedicationDispenseEndorsement" />
+    <url value="https://fhir.nhs.uk/CodeSystem/England-MedicationDispenseEndorsement" />
+    <identifier>
+        <system value="https://fhir.nhs.uk/identifier/CodeSystem" />
+        <value value="medicationdispense-endorsement" />
+    </identifier>
+    <version value="1.0.0" />
+    <name value="EnglandMedicationDispenseEndorsement" />
+    <title value="England MedicationDispenseEndorsement" />
+    <status value="draft" />
+    <experimental value="true" />
+    <date value="2023-06-01" />
+    <publisher value="NHS England" />
+    <contact>
+        <name value="NHS England" />
+        <telecom>
+            <system value="email" />
+            <value value="interoperabilityteam@nhs.net" />
+            <use value="work" />
+        </telecom>
+    </contact>
+    <description value="Guidance for Endorsement in the Electronic Prescription Service v6.7 [Sub-Prog / Project ETP NPFIT-ETP-EIM-0015.20 ]" />
+    <caseSensitive value="true" />
+    <content value="complete" />
+    <concept>
+        <code value="BB" />
+        <display value="Broken Bulk" />
+        <definition value="No Supporting Information Required" />
+    </concept>
+    <concept>
+        <code value="IP" />
+        <display value="Invoice Price for less common products or special items" />
+        <definition value="Supporting Information Required" />
+    </concept>
+    <concept>
+        <code value="MF" />
+        <display value="Measured and Fitted" />
+        <definition value="No Supporting Information Required" />
+    </concept>
+    <concept>
+        <code value="NCSO" />
+        <display value="No Cheaper Stock Obtainable" />
+        <definition value="Supporting Information Required" />
+    </concept>
+    <concept>
+        <code value="PC" />
+        <display value="Prescriber Contacted" />
+        <definition value="Supporting Information Required" />
+    </concept>
+    <concept>
+        <code value="PNC" />
+        <display value="Prescriber Not Contacted" />
+        <definition value="Supporting Information Required" />
+    </concept>
+    <concept>
+        <code value="RC" />
+        <display value="Rebate Claimed" />
+        <definition value="No Supporting Information Required" />
+    </concept>
+    <concept>
+        <code value="XP" />
+        <display value="Out of Pocket Expenses" />
+        <definition value="Supporting Information Required" />
+    </concept>
+    <concept>
+        <code value="ZD" />
+        <display value="Zero Discount (List B only)" />
+        <definition value="No Supporting" />
+    </concept>
+    <concept>
+        <code value="SP" />
+        <display value="Special License" />
+    </concept>
+    <concept>
+        <code value="ED" />
+        <display value="Extemporaneously dispensed" />
+    </concept>
+    <concept>
+        <code value="NDEC" />
+        <display value="No Dispenser Endorsement Code" />
+    </concept>
+    <concept>
+        <code value="SSP" />
+        <display value="Serious Shortage Protocol" />
+    </concept>
+    <concept>
+        <code value="PD" />
+        <display value="Packaged Doses" />
+    </concept>
+</CodeSystem>

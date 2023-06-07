@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+    <id value="England-DispensingSitePreference"/>
+    <url value="https://fhir.nhs.uk/CodeSystem/England-DispensingSitePreference"/>
+    <identifier>
+        <system value="https://fhir.nhs.uk/identifier/CodeSystem"/>
+        <value value="dispensing-site-preference"/>
+    </identifier>
+    <version value="1.0.0"/>
+    <name value="EnglandDispensingSitePreference"/>
+    <title value="England DispensingSitePreference"/>
+    <status value="draft"/>
+    <experimental value="true"/>
+    <date value="2023-06-01"/>
+    <publisher value="NHS England"/>
+    <contact>
+        <name value="NHS England" />
+        <telecom>
+          <system value="email" />
+          <value value="interoperabilityteam@nhs.net" />
+          <use value="work" />
+        </telecom>
+      </contact>
+    <description value="Dispensing Contractors and Nomination. As per current processes, a patient may require prescribed items to be authorised across different prescriptions to allow for dispensing by different dispensing contractors. Question? Should this move to Medication.performerType?"/>
+    <caseSensitive value="true"/>
+    <content value="complete"/>
+    <concept>
+        <code value="P1"/>
+        <display value="Other (e.g. Community Pharmacy)"/>
+    </concept>
+    <concept>
+        <code value="P2"/>
+        <display value="Appliance Contractor"/>
+    </concept>
+    <concept>
+        <code value="P3"/>
+        <display value="Dispensing Doctor"/>
+    </concept>
+    <concept>
+        <code value="0004"/>
+        <display value="None"/>
+    </concept>
+</CodeSystem>
