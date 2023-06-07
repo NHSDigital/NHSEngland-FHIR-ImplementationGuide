@@ -25,19 +25,20 @@
             <version value="1.0.0"/>
         </include>
         <include>
-            <system value="https://fhir.nhs.uk/CodeSystem/EPS-IssueCode"/>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-EPSIssueCode"/>
             <version value="1.0.0"/>
         </include>
         <include>
-            <system value="https://fhir.nhs.uk/CodeSystem/NHSD-API-ErrorOrWarningCode"/>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-APIErrorOrWarningCode"/>
             <version value="1.0.0"/>
         </include>
         <include>
-            <system value="https://fhir.nhs.uk/CodeSystem/http-error-codes"/>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-HTTPErrorCodes"/>
             <version value="1.0.0"/>
         </include>
         <include>
-            <system value="https://fhir.nhs.uk/CodeSystem/ers-error-codes"/>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-ERSErrorCodes"/>
+            <version value="1.0.0"/>
         </include>
     </compose>
 </ValueSet>
