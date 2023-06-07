@@ -56,17 +56,6 @@
         ],
         "status": "active",
         "intent": "order",
-        "category": [
-          {
-          "coding": [
-            {
-            "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
-            "code": "community",
-            "display": "Community"
-            }
-          ]
-          }
-        ],
         "medicationCodeableConcept": {
           "coding": [
           {
@@ -185,17 +174,6 @@
         ],
         "status": "active",
         "intent": "order",
-        "category": [
-          {
-          "coding": [
-            {
-            "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
-            "code": "community",
-            "display": "Community"
-            }
-          ]
-          }
-        ],
         "medicationCodeableConcept": {
           "coding": [
           {
@@ -314,17 +292,6 @@
         ],
         "status": "active",
         "intent": "order",
-        "category": [
-          {
-          "coding": [
-            {
-            "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
-            "code": "community",
-            "display": "Community"
-            }
-          ]
-          }
-        ],
         "medicationCodeableConcept": {
           "coding": [
           {
@@ -443,17 +410,6 @@
         ],
         "status": "cancelled",
         "intent": "order",
-        "category": [
-          {
-          "coding": [
-            {
-            "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
-            "code": "community",
-            "display": "Community"
-            }
-          ]
-          }
-        ],
         "medicationCodeableConcept": {
           "coding": [
           {

@@ -255,7 +255,6 @@
     <element id="MedicationRequest.category">
       <path value="MedicationRequest.category" />
       <definition value="In primary care the code of `community` should be used. In secondary care the category will often match the Episode/Spell type.&#xD;&#xA;&#xD;&#xA;| Code | System | Display |&#xD;&#xA;|---|---|&#xD;&#xA;| leave | https://fhir.nhs.uk/CodeSystem/medicationrequest-category | Leave |&#xD;&#xA;|outpatient | http://terminology.hl7.org/CodeSystem/medicationrequest-category |Outpatient |&#xD;&#xA;| discharge | http://terminology.hl7.org/CodeSystem/medicationrequest-category | Discharge |&#xD;&#xA;| community |http://terminology.hl7.org/CodeSystem/medicationrequest-category | Community |&#xD;&#xA;| inpatient  |http://terminology.hl7.org/CodeSystem/medicationrequest-category | Inpatient |&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;category&quot;: [&#xD;&#xA;    {&#xD;&#xA;        &quot;coding&quot;: [&#xD;&#xA;            {&#xD;&#xA;                &quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/medicationrequest-category&quot;,&#xD;&#xA;                &quot;code&quot;: &quot;outpatient&quot;,&#xD;&#xA;                &quot;display&quot;: &quot;Outpatient&quot;&#xD;&#xA;            }&#xD;&#xA;        ]&#xD;&#xA;    }&#xD;&#xA;],&#xD;&#xA;```" />
-      <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="MedicationRequest.category.coding">
