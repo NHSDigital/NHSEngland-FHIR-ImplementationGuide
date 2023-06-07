@@ -2,7 +2,7 @@
     <id value="England-ClinicType" />
     <url value="https://fhir.nhs.uk/CodeSystem/England-ClinicType" />
     <version value="1.0.0" />
-    <name value="England-ClinicType" />
+    <name value="EnglandClinicType" />
     <status value="draft" />
     <date value="2023-06-01" />
     <publisher value="NHS England" />

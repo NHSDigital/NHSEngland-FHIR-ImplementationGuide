@@ -6,7 +6,7 @@
         <value value="EPS-task-dispense-return-status-reason" />
     </identifier>
     <version value="1.0.0" />
-    <name value="England-EPSTaskDispenseReturnStatusReason" />
+    <name value="EnglandEPSTaskDispenseReturnStatusReason" />
     <title value="England EPSTaskDispenseReturnStatusReason" />
     <status value="draft" />
     <experimental value="false" />
