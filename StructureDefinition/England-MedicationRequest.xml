@@ -136,7 +136,6 @@
       <path value="MedicationRequest.extension" />
       <sliceName value="prescriptionEndorsement" />
       <min value="0" />
-      <max value="*" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-DMPrescriptionEndorsement" />
@@ -147,7 +146,6 @@
       <path value="MedicationRequest.extension" />
       <sliceName value="prescriptionTaskStatusReason" />
       <min value="0" />
-      <max value="*" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-DMPrescriptionStatusHistory" />
@@ -180,7 +178,6 @@
       <path value="MedicationRequest.extension" />
       <sliceName value="NHSBSAPrescriptionType" />
       <min value="1" />
-      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-DMPrescriptionType" />
@@ -318,7 +315,6 @@
       </type>
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-MedicationRequest-Medication" />
         <aggregation value="bundled" />
       </type>
       <mustSupport value="true" />
@@ -330,10 +326,6 @@
     <element id="MedicationRequest.subject">
       <path value="MedicationRequest.subject" />
       <definition value="A resource reference to a Patient with a traced NHS Number is required, an untraced NHS Number **MUST NOT** be used.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA; &quot;subject&quot;: {&#xD;&#xA;                    &quot;type&quot;: &quot;Patient&quot;,&#xD;&#xA;                    &quot;reference&quot;: &quot;urn:uuid:bde9eba6-079f-4210-8108-6ea8db58de8c&quot;,&#xD;&#xA;                    &quot;display&quot;: &quot;Miss Bernie Kanfeld&quot;&#xD;&#xA;                }&#xD;&#xA;```" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition//England-PatientPDS" />
-      </type>
       <constraint>
         <key value="patient-nhs" />
         <severity value="error" />
@@ -359,10 +351,6 @@
     <element id="MedicationRequest.encounter">
       <path value="MedicationRequest.encounter" />
       <definition value="Encounter is required for secondary care prescriptions." />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-Encounter" />
-      </type>
     </element>
     <element id="MedicationRequest.authoredOn">
       <path value="MedicationRequest.authoredOn" />
@@ -373,11 +361,6 @@
       <path value="MedicationRequest.requester" />
       <definition value="The requester must contain a resource reference to the Practitioner who has electronically signed the prescription.&#xD;&#xA;&#xD;&#xA;If the `requester` can not take responsibility for the prescription, i.e. they would not be the prescriber on the FP10. Then the **extension responsiblePractitioner** must be populated.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;requester&quot;: {&#xD;&#xA;    &quot;reference&quot;: &quot;urn:uuid:56166769-c1c4-4d07-afa8-132b5dfca666&quot;&#xD;&#xA;},&#xD;&#xA;```" />
       <min value="1" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-PractitionerRole-EPSLegal" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-PractitionerRole-SDS" />
-      </type>
       <constraint>
         <key value="eps-3" />
         <severity value="error" />
@@ -392,10 +375,6 @@
     </element>
     <element id="MedicationRequest.recorder">
       <path value="MedicationRequest.recorder" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-Practitioner" />
-      </type>
       <constraint>
         <key value="eps-4" />
         <severity value="error" />
@@ -406,11 +385,6 @@
     <element id="MedicationRequest.basedOn">
       <path value="MedicationRequest.basedOn" />
       <definition value="This MUST be populated for `continuous-repeat-dispensing` issues where intent=`reflex-order`, i.e. the issues sent from EPS to pharmacists.&#xD;&#xA;It is recommended this is populated for `continuous` issues and this should reference the original order.&#xD;&#xA;&#xD;&#xA;Example for a `reflex-order` (continuous-repeat-dispensing): &#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA; &quot;basedOn&quot;: [&#xD;&#xA;        {&#xD;&#xA;            &quot;extension&quot;: [&#xD;&#xA;                {&#xD;&#xA;                    &quot;url&quot;: &quot;https://fhir.nhs.uk/StructureDefinition/Extension-EPS-RepeatInformation&quot;,&#xD;&#xA;                    &quot;extension&quot;: [&#xD;&#xA;                        {&#xD;&#xA;                            &quot;url&quot;: &quot;numberOfRepeatsAllowed&quot;,&#xD;&#xA;                            &quot;valueInteger&quot;: 6&#xD;&#xA;                        }&#xD;&#xA;                    ]&#xD;&#xA;                }&#xD;&#xA;            ],&#xD;&#xA;            &quot;identifier&quot;: {&#xD;&#xA;                &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/prescription-order-item-number&quot;,&#xD;&#xA;                &quot;value&quot;: &quot;A7B86F8D-1D59-FC28-E050-D20AE3A215F0&quot;&#xD;&#xA;            }&#xD;&#xA;        }&#xD;&#xA;    ]&#xD;&#xA;```&#xD;&#xA;&#xD;&#xA;Example for a `instance-order` (continuous). Note this references an example MedicationRequest from GP Connect:&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA; &quot;basedOn&quot;: [&#xD;&#xA;        {&#xD;&#xA;            &quot;extension&quot;: [&#xD;&#xA;                {&#xD;&#xA;                    &quot;url&quot;: &quot;https://fhir.nhs.uk/StructureDefinition/Extension-EPS-RepeatInformation&quot;,&#xD;&#xA;                    &quot;extension&quot;: [&#xD;&#xA;                        {&#xD;&#xA;                            &quot;url&quot;: &quot;numberOfRepeatsAllowed&quot;,&#xD;&#xA;                            &quot;valueInteger&quot;: 5&#xD;&#xA;                        }&#xD;&#xA;                    ]&#xD;&#xA;                }&#xD;&#xA;            ],&#xD;&#xA;            &quot;identifier&quot;: {&#xD;&#xA;                &quot;system&quot;: &quot;https://provider.nhs.uk/data-identifier&quot;,&#xD;&#xA;                &quot;value&quot;: &quot;53426283749629&quot;&#xD;&#xA;            }&#xD;&#xA;        }&#xD;&#xA;    ]&#xD;&#xA;```" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/ImmunizationRecommendation" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-MedicationRequest" />
-      </type>
       <mustSupport value="true" />
     </element>
     <element id="MedicationRequest.basedOn.extension">
@@ -623,10 +597,6 @@
     <element id="MedicationRequest.dispenseRequest.performer">
       <path value="MedicationRequest.dispenseRequest.performer" />
       <definition value="For non token based prescriptions the destination pharmacy **MUST** be recorded in the *dispenseRequest.performer.identifier* and a identifier reference (not a resource reference) with an ANANA/ODS Code **MUST** used. &#xD;&#xA;&#xD;&#xA;The extension https://fhir.nhs.uk/StructureDefinition/Extension-DM-PerformerSiteType **MUST** be present.&#xD;&#xA;&#xD;&#xA;Patients pharmacy preferences may be sourced from PDS.&#xD;&#xA;&#xD;&#xA;Patients pharmacy preferences may be overriden by an 'one-off pharmacy nomination' by populating the *dispenseRequest.performer.identifier* with the ODS/ANANA code of the destination pharmacy.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;dispenseRequest&quot;: {&#xD;&#xA;        &quot;extension&quot;:  [&#xD;&#xA;            {&#xD;&#xA;                &quot;url&quot;: &quot;https://fhir.nhs.uk/StructureDefinition/Extension-DM-PerformerSiteType&quot;,&#xD;&#xA;                &quot;valueCoding&quot;: {&#xD;&#xA;                    &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/dispensing-site-preference&quot;,&#xD;&#xA;                    &quot;code&quot;: &quot;0004&quot;&#xD;&#xA;                }&#xD;&#xA;            },&#xD;&#xA;        ],&#xD;&#xA;        &quot;performer&quot;: {&#xD;&#xA;            &quot;identifier&quot;: {&#xD;&#xA;                &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/ods-organization-code&quot;,&#xD;&#xA;                &quot;value&quot;: &quot;FX748&quot;&#xD;&#xA;            }&#xD;&#xA;        },&#xD;&#xA;```" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-Organization-ODS" />
-      </type>
       <mustSupport value="true" />
     </element>
     <element id="MedicationRequest.dispenseRequest.performer.extension">
@@ -675,13 +645,6 @@
       <path value="MedicationRequest.substitution.allowed[x]" />
       <type>
         <code value="boolean" />
-      </type>
-    </element>
-    <element id="MedicationRequest.eventHistory">
-      <path value="MedicationRequest.eventHistory" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-Provenance" />
       </type>
     </element>
   </differential>
