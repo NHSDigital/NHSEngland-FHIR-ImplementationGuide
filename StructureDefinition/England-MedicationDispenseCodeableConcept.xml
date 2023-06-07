@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="England-MedicationDispenseCodeableConcept"/>
+  <url value="https://fhir.nhs.uk/StructureDefinition/England-MedicationDispenseCodeableConcept" />
+  <name value="EnglandMedicationDispenseCodeableConcept" />
+  <status value="draft" />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="v2" />
+    <uri value="http://hl7.org/v2" />
+    <name value="HL7 v2 Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="rim" />
+    <uri value="http://hl7.org/v3" />
+    <name value="RIM Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="orim" />
+    <uri value="http://hl7.org/orim" />
+    <name value="Ontological RIM Mapping" />
+  </mapping>
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <type value="CodeableConcept" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/CodeableConcept" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="CodeableConcept.coding">
+      <path value="CodeableConcept.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="CodeableConcept.coding:SNOMED">
+      <path value="CodeableConcept.coding" />
+      <sliceName value="SNOMED" />
+      <short value="Digital Medicine Medication Code AMMP, VMPP, AMP or VMP SNOMED CT Must be present" />
+      <min value="1" />
+      <max value="1" />
+      <binding>
+        <strength value="required" />
+        <description value="Digital Medicine Medication Code" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/England-MedicationDispenseCode" />
+      </binding>
+    </element>
+    <element id="CodeableConcept.coding:SNOMED.system">
+      <path value="CodeableConcept.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://snomed.info/sct" />
+    </element>
+    <element id="CodeableConcept.coding:SNOMED.code">
+      <path value="CodeableConcept.coding.code" />
+      <min value="1" />
+    </element>
+  </differential>
+</StructureDefinition>
