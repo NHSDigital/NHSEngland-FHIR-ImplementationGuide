@@ -2,7 +2,7 @@
     <id value="England-LocationType" />
     <url value="https://fhir.nhs.uk/ValueSet/England-LocationType" />
     <version value="1.0.0" />
-    <name value="England LocationType" />
+    <name value="EnglandLocationType" />
     <status value="draft" />
     <description value="A ValueSet to identify the roles (type) of location." />
     <compose>
