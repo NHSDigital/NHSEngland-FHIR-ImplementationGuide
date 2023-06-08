@@ -542,8 +542,8 @@
         <display value="NHS TRUST"></display>
     </concept>
     <concept>
-        <code value="198"></code>
-        <display value="NHS TRUST SITE"></display>
+        <code value="198" />
+        <display value="NHS TRUST SITE" />
     </concept>
     <concept>
         <code value="116"></code>
