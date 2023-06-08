@@ -311,7 +311,6 @@
       <comment value="Any code from the SnomedCT UK DMD subset for VMP, AMP and VTM concepts&#xD;&#xA;&#xD;&#xA;&lt;table&gt;&#xD;&#xA;&lt;thead&gt;&#xD;&#xA;&lt;th data-no-sort width=&quot;25%&quot;&gt;&#xD;&#xA;dm+d Category&#xD;&#xA;&lt;/th&gt;&#xD;&#xA;&lt;th data-no-sort width=&quot;50%&quot;&gt;&#xD;&#xA;dm+d Description&#xD;&#xA;&lt;/th&gt;&#xD;&#xA;&lt;th data-no-sort width=&quot;25%&quot;&gt;&#xD;&#xA;UK SNOMED Members Of&#xD;&#xA;&lt;/th&gt;&#xD;&#xA;&#xD;&#xA;&lt;/thead&gt;&#xD;&#xA;&lt;tr&gt;&#xD;&#xA;&lt;td&gt;&#xD;&#xA;VMP&#xD;&#xA;&lt;/td&gt;&#xD;&#xA;&lt;td&gt;&#xD;&#xA;Virtual Medical Product&#xD;&#xA;&lt;/td&gt;&#xD;&#xA;&lt;td&gt;&#xD;&#xA;&lt;a href=&quot;https://termbrowser.nhs.uk/?perspective=full&amp;conceptId1=999000561000001109&quot; target=&quot;_blank&quot;&gt;999000561000001109&lt;/a&gt;&#xD;&#xA;&lt;/td&gt;&#xD;&#xA;&lt;/tr&gt;&#xD;&#xA;&lt;tr&gt;&#xD;&#xA;&lt;td&gt;&#xD;&#xA;AMP&#xD;&#xA;&lt;/td&gt;&#xD;&#xA;&lt;td&gt;&#xD;&#xA;Actual Medical Product&#xD;&#xA;&lt;/td&gt;&#xD;&#xA;&lt;td&gt;&#xD;&#xA;&lt;a href=&quot;https://termbrowser.nhs.uk/?perspective=full&amp;conceptId1=999000541000001108&quot; target=&quot;_blank&quot;&gt;999000541000001108&lt;/a&gt;&#xD;&#xA;&lt;/td&gt;&#xD;&#xA;&lt;/tr&gt;&#xD;&#xA;&lt;/table&gt;" />
       <type>
         <code value="CodeableConcept" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/England-MedicationRequestCodeableConcept" />
       </type>
       <type>
         <code value="Reference" />
