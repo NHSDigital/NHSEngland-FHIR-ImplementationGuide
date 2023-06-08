@@ -26,7 +26,7 @@
             </extension>
         </extension>
         <coding>
-            <system value="https://fhir.nhs.uk/ValueSet/England-LocationType" />
+            <system value="https://fhir.nhs.uk/CodeSystem/England-OrganisationRole" />
             <code value="198" />
             <display value="NHS TRUST SITE" />
         </coding>
