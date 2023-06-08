@@ -18,7 +18,7 @@
                     <versionId value="23" />
                     <lastUpdated value="2022-10-15T13:01:20.279Z" />
                 </meta>
-                <extension url="https://fhir.nhs.uk/StructureDefinition/Extension-England-DMPrescriptionType">
+                <extension url="https://fhir.nhs.uk/StructureDefinition/Extension-MedicationRequest-BundleDMPrescriptionType-Example">
                     <valueCoding>
                         <system value="https://fhir.nhs.uk/CodeSystem/prescription-type" />
                         <code value="1001" />
@@ -146,7 +146,7 @@
                     <versionId value="11" />
                     <lastUpdated value="2022-10-16T09:17:00.415Z" />
                 </meta>
-                <extension url="https://fhir.nhs.uk/StructureDefinition/Extension-England-DMPrescriptionType">
+                <extension url="https://fhir.nhs.uk/StructureDefinition/Extension-MedicationRequest-BundleDMPrescriptionType-Example">
                     <valueCoding>
                         <system value="https://fhir.nhs.uk/CodeSystem/prescription-type" />
                         <code value="0101" />
@@ -273,7 +273,7 @@
                     <versionId value="11" />
                     <lastUpdated value="2022-10-16T09:17:00.834Z" />
                 </meta>
-                <extension url="https://fhir.nhs.uk/StructureDefinition/Extension-England-DMPrescriptionType">
+                <extension url="https://fhir.nhs.uk/StructureDefinition/Extension-MedicationRequest-BundleDMPrescriptionType-Example">
                     <valueCoding>
                         <system value="https://fhir.nhs.uk/CodeSystem/England-PrescriptionType" />
                         <code value="0101" />
