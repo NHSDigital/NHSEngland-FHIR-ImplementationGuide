@@ -1,5 +1,5 @@
 <Location xmlns="http://hl7.org/fhir">
-    <id value="England-Location-NightingaleHospital-Examplee" />
+    <id value="England-Location-NightingaleHospital-Example" />
     <identifier>
         <system value="https://fhir.nhs.uk/Id/ods-site-code" />
         <value value="RR805" />
