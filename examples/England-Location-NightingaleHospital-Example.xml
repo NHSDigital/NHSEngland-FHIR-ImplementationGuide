@@ -27,6 +27,7 @@
         </extension>
         <coding>
             <system value="https://fhir.nhs.uk/ValueSet/England-LocationType" />
+			<version value="1.0.0" />
             <code value="198" />
             <display value="NHS TRUST SITE" />
         </coding>
