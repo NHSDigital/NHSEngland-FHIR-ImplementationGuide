@@ -3,7 +3,7 @@
     <url value="https://fhir.nhs.uk/ValueSet/England-CareSettingType" />
     <version value="1.0.0" />
     <name value="EnglandCareSettingType" />
-    <title value="England-CareSettingType" />
+    <title value="England CareSettingType" />
     <status value="draft" />
     <date value="2023-06-01" />
     <publisher value="NHS England" />

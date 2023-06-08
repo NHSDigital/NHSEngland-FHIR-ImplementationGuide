@@ -504,7 +504,7 @@
       <min value="1" />
       <type>
         <code value="Dosage" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/England-Dosage" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/Dosage" />
       </type>
       <mustSupport value="true" />
     </element>

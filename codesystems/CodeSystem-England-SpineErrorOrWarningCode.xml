@@ -3,7 +3,7 @@
    <url value="https://fhir.nhs.uk/CodeSystem/England-SpineErrorOrWarningCode" />
    <version value="1.0.0" />
    <name value="EnglandSpineErrorOrWarningCode" />
-   <title value="England Spine Error or Warning Code" />
+   <title value="England SpineErrorOrWarningCode" />
    <status value="active" />
    <date value="2023-06-01" />
    <publisher value="NHS England" />

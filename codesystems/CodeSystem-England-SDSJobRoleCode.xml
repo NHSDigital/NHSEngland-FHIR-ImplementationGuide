@@ -3,7 +3,7 @@
     <url value="https://fhir.nhs.uk/CodeSystem/England-SDSJobRoleCode" />
     <version value="1.0.0" />
     <name value="EnglandSDSJobRoleCode" />
-    <title value="England SDS-JobRoleCode" />
+    <title value="England SDSJobRoleCode" />
     <status value="retired" />
     <date value="2023-06-01" />
     <publisher value="NHS England" />
