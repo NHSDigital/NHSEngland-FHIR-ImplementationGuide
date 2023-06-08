@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="Extension-England-DMDispensingPerformer" />
-  <url value="https://fhir.nhs.uk/StructureDefinition/Extension-EnglandDMDispensingPerformer" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/Extension-England-DMDispensingPerformer" />
   <version value="1.0.0" />
   <name value="ExtensionEnglandDMDispensingPerformer" />
-  <title value="Extension EnglandDMDispensingPerformer" />
+  <title value="Extension England DMDispensingPerformer" />
   <status value="draft" />
   <date value="2023-06-01" />
   <publisher value="NHS England" />
