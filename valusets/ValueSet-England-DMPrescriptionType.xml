@@ -24,7 +24,7 @@
         <offset value="0"/>
         <parameter>
             <name value="version"/>
-            <valueUri value="https://fhir.nhs.uk/CodeSystem/England-PrescriptionType|1.1.3"/>
+            <valueUri value="https://fhir.nhs.uk/CodeSystem/England-PrescriptionType"/>
         </parameter>
         <parameter>
             <name value="count"/>
