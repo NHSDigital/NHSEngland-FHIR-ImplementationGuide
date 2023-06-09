@@ -3,7 +3,7 @@
   <id value="Extension-England-DMPrescriptionType" />
   <url value="https://fhir.nhs.uk/StructureDefinition/Extension-England-DMPrescriptionType" />
   <version value="1.0.0" />
-  <name value="ExtensionEnglandNHSBSAPrescriptionType" />
+  <name value="ExtensionEnglandDMPrescriptionType" />
   <title value="Extension England DMPrescriptionType" />
   <status value="draft" />
   <date value="2023-06-01" />
