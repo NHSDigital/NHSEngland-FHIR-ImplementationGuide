@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+    <id value="England-DMPrescriptionType"/>
+    <url value="https://fhir.nhs.uk/ValueSet/England-DMPrescriptionType"/>
+    <version value="1.0.0"/>
+    <name value="EnglandDMPrescriptionType"/>
+    <status value="draft"/>
+    <description value="Subset on UK Core Prescription Therapy Type which is permitted for EPS use."/>
+    <compose>
+        <include>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-PrescriptionType"/>
+            <version value="1.1.5"/>
+            <filter>
+                <property value="deprecated"/>
+                <op value="exists"/>
+                <value value="false"/>
+            </filter>
+        </include>
+    </compose>
+    <expansion>
+        <identifier value="8a5f2d29-63b6-4835-bd60-412031a1e654"/>
+        <timestamp value="2020-10-12T20:11:12+10:00"/>
+        <total value="51"/>
+        <offset value="0"/>
+        <parameter>
+            <name value="version"/>
+            <valueUri value="https://fhir.nhs.uk/CodeSystem/England-PrescriptionType|1.1.3"/>
+        </parameter>
+        <parameter>
+            <name value="count"/>
+            <valueInteger value="2147483647"/>
+        </parameter>
+        <parameter>
+            <name value="offset"/>
+            <valueInteger value="0"/>
+        </parameter>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-PrescriptionType"/>
+            <code value="0924"/>
+            <display value="Private prescribing - Dietician"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-PrescriptionType"/>
+            <code value="0925"/>
+            <display value="Private prescribing - Paramedic"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-PrescriptionType"/>
+            <code value="1017"/>
+            <display value="Outpatient Community Prescriber - Physiotherapist Independent Supplementary prescriber"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-PrescriptionType"/>
+            <code value="1216"/>
+            <display value="Outpatient Homecare Prescriber – Radiographer Independent Supplementary prescriber"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-PrescriptionType"/>
+            <code value="1217"/>
+            <display value="Outpatient Homecare Prescriber - Physiotherapist Independent Supplementary prescriber"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-PrescriptionType"/>
+            <code value="0607"/>
+            <display value="Dental Prescribing – Dentist"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-PrescriptionType"/>
+            <code value="1024"/>
+            <display value="Outpatient Community Prescriber – Dietician Supplementary prescriber"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-PrescriptionType"/>
+            <code value="1101"/>
+            <display value="Outpatient Pharmacy Prescriber - Medical Prescriber"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-PrescriptionType"/>
+            <code value="1025"/>
+            <display value="Outpatient Community Prescriber – Paramedic Independent Supplementary prescriber"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-PrescriptionType"/>
+            <code value="1224"/>
+            <display value="Outpatient Homecare Prescriber – Dietician Supplementary prescriber"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-PrescriptionType"/>
+            <code value="1225"/>
+            <display value="Outpatient Homecare Prescriber – Paramedic Independent Supplementary prescriber"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-PrescriptionType"/>
+            <code value="1104"/>
+            <display value="Outpatient Hospital Pharmacy Prescriber - Nurse Independent Supplementary prescriber"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-PrescriptionType"/>
+            <code value="1105"/>
+            <display value="Outpatient Hospital Pharmacy Prescriber - Community Practitioner Nurse prescriber"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-PrescriptionType"/>
+            <code value="1108"/>
+            <display value="Outpatient Hospital Pharmacy Prescriber - Pharmacist Independent Supplementary prescriber"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-PrescriptionType"/>
+            <code value="1113"/>
+            <display value="Outpatient Hospital Pharmacy Prescriber – Optometrist Independent Supplementary prescriber"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-PrescriptionType"/>
+            <code value="0101"/>
+            <display value="Primary Care Prescriber – Medical Prescriber"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-PrescriptionType"/>
+            <code value="1114"/>
+            <display value="Outpatient Hospital Pharmacy Prescriber – Podiatrist Chiropodist Independent Supplementary prescriber"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-PrescriptionType"/>
+            <code value="0108"/>
+            <display value="Primary Care Prescriber - Pharmacist Independent/Supplementary prescriber"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-PrescriptionType"/>
+            <code value="0901"/>
+            <display value="Private prescribing - GP"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-PrescriptionType"/>
+            <code value="1116"/>
+            <display value="Outpatient Hospital Pharmacy Prescriber – Radiographer Independent Supplementary prescriber"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-PrescriptionType"/>
+            <code value="0104"/>
+            <display value="Primary Care Prescriber - Nurse Independent/Supplementary prescriber"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-PrescriptionType"/>
+            <code value="1117"/>
+            <display value="Outpatient Hospital Pharmacy Prescriber - Physiotherapist Independent Supplementary prescriber"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-PrescriptionType"/>
+            <code value="0105"/>
+            <display value="Primary Care Prescriber - Community Practitioner Nurse prescriber"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-PrescriptionType"/>
+            <code value="0908"/>
+            <display value="Private prescribing - Pharmacist prescribing"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-PrescriptionType"/>
+            <code value="0904"/>
+            <display value="Private prescribing - Nurse prescribing"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-PrescriptionType"/>
+            <code value="1124"/>
+            <display value="Outpatient Hospital Pharmacy Prescriber – Dietician Supplementary prescriber"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-PrescriptionType"/>
+            <code value="1201"/>
+            <display value="Outpatient Homecare Prescriber - Medical Prescriber"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-PrescriptionType"/>
+            <code value="1125"/>
+            <display value="Outpatient Hospital Pharmacy Prescriber – Paramedic Independent Supplementary prescriber"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-PrescriptionType"/>
+            <code value="1004"/>
+            <display value="Outpatient Community Prescriber - Nurse Independent Supplementary prescriber"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-PrescriptionType"/>
+            <code value="0113"/>
+            <display value="Primary Care Prescriber – Optometrist Independent/Supplementary prescriber"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-PrescriptionType"/>
+            <code value="1005"/>
+            <display value="Outpatient Community Prescriber - Community Practitioner Nurse prescriber"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-PrescriptionType"/>
+            <code value="0114"/>
+            <display value="Primary Care Prescriber – Podiatrist/Chiropodist Independent/Supplementary prescriber"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-PrescriptionType"/>
+            <code value="1001"/>
+            <display value="Outpatient Community Prescriber - Medical Prescriber"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-PrescriptionType"/>
+            <code value="1208"/>
+            <display value="Outpatient Homecare Prescriber - Pharmacist Independent Supplementary prescriber"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-PrescriptionType"/>
+            <code value="0913"/>
+            <display value="Private prescribing - Optometrist"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-PrescriptionType"/>
+            <code value="0914"/>
+            <display value="Private prescribing - Podiatrist Chiropodist"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-PrescriptionType"/>
+            <code value="1204"/>
+            <display value="Outpatient Homecare Prescriber - Nurse Independent Supplementary prescriber"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-PrescriptionType"/>
+            <code value="1205"/>
+            <display value="Outpatient Homecare Prescriber - Community Practitioner Nurse prescriber"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-PrescriptionType"/>
+            <code value="0116"/>
+            <display value="Primary Care Prescriber – Radiographer Independent/Supplementary prescriber"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-PrescriptionType"/>
+            <code value="1008"/>
+            <display value="Outpatient Community Prescriber - Pharmacist Independent Supplementary prescriber"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-PrescriptionType"/>
+            <code value="0117"/>
+            <display value="Primary Care Prescriber - Physiotherapist Independent/Supplementary prescriber"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-PrescriptionType"/>
+            <code value="0916"/>
+            <display value="Private prescribing - Radiographer"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-PrescriptionType"/>
+            <code value="0917"/>
+            <display value="Private prescribing - Physiotherapist"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-PrescriptionType"/>
+            <code value="1013"/>
+            <display value="Outpatient Community Prescriber – Optometrist Independent Supplementary prescriber"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-PrescriptionType"/>
+            <code value="1014"/>
+            <display value="Outpatient Community Prescriber – Podiatrist Chiropodist Independent Supplementary prescriber"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-PrescriptionType"/>
+            <code value="1213"/>
+            <display value="Outpatient Homecare Prescriber – Optometrist Independent Supplementary prescriber"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-PrescriptionType"/>
+            <code value="0124"/>
+            <display value="Primary Care Prescriber – Dietician Supplementary prescriber"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-PrescriptionType"/>
+            <code value="1214"/>
+            <display value="Outpatient Homecare Prescriber – Podiatrist Chiropodist Independent Supplementary prescriber"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-PrescriptionType"/>
+            <code value="1016"/>
+            <display value="Outpatient Community Prescriber – Radiographer Independent Supplementary prescriber"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-PrescriptionType"/>
+            <code value="0125"/>
+            <display value="Primary Care Prescriber – Paramedic Independent/Supplementary prescriber"/>
+        </contains>
+    </expansion>
+</ValueSet>
