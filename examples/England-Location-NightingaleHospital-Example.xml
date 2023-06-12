@@ -26,7 +26,7 @@
             </extension>
         </extension>
 		<coding>
-			<system value="http://terminology.hl7.org/ValueSet/v3-ServiceDeliveryLocationRoleType" />
+			<system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode" />
 			<code value="HOSP" />
 			<display value="Hospital" />
 		</coding>
