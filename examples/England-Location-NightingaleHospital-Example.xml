@@ -25,6 +25,11 @@
                 <valueString value="Operational" />
             </extension>
         </extension>
+		<coding>
+			<system value="http://terminology.hl7.org/ValueSet/v3-ServiceDeliveryLocationRoleType" />
+			<code value="HOSP" />
+			<display value="Hospital" />
+		</coding>
     </type>
     <address>
         <line value="KINGS ROAD" />
