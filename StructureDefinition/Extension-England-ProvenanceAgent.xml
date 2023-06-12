@@ -118,19 +118,5 @@
       <path value="Extension.value[x].identifier.value" />
       <min value="1" />
     </element>
-    <element id="Extension.value[x].identifier.assigner">
-      <path value="Extension.value[x].identifier.assigner" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Organization" />
-      </type>
-    </element>
-    <element id="Extension.value[x].identifier.assigner.identifier.assigner">
-      <path value="Extension.value[x].identifier.assigner.identifier.assigner" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Organization" />
-      </type>
-    </element>
   </differential>
 </StructureDefinition>
