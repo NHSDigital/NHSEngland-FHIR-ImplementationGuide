@@ -4,7 +4,7 @@
   <url value="https://fhir.nhs.uk/StructureDefinition/Extension-England-DMPrescriptionEndorsement" />
   <version value="1.0.0" />
   <name value="ExtensionEnglandDMPrescriptionEndorsement" />
-  <title value="Extension England DMPrescriptionEndorsement" />
+  <title value="Extension England DM Prescription Endorsement" />
   <status value="draft" />
   <date value="2023-06-01" />
   <publisher value="NHS England" />

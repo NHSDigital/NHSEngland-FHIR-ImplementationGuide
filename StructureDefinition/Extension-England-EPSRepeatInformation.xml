@@ -4,7 +4,7 @@
   <url value="https://fhir.nhs.uk/StructureDefinition/Extension-England-EPSRepeatInformation" />
   <version value="1.0.0" />
   <name value="ExtensionEnglandEPSRepeatInformation" />
-  <title value="Extension England EPSRepeatInformation" />
+  <title value="Extension England EPS Repeat Information" />
   <status value="draft" />
   <date value="2023-06-01" />
   <publisher value="NHS England" />

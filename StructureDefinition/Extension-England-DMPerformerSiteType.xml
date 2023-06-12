@@ -4,7 +4,7 @@
   <url value="https://fhir.nhs.uk/StructureDefinition/Extension-England-DMPerformerSiteType" />
   <version value="1.0.0" />
   <name value="ExtensionEnglandDMPerformerSiteType" />
-  <title value="Extension England DMPerformerSiteType" />
+  <title value="Extension England DM Performer Site Type" />
   <status value="draft" />
   <date value="2023-06-01" />
   <publisher value="NHS England" />
