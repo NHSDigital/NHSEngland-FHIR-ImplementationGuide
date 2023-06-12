@@ -81,7 +81,7 @@
         </route>
     </dosageInstruction>
     <dispenseRequest>
-        <extension url="https://fhir.nhs.uk/StructureDefinition//Extension-England-DMPerformerSiteType">
+        <extension url="https://fhir.nhs.uk/StructureDefinition/Extension-England-DMPerformerSiteType">
             <valueCoding>
                 <system value="https://fhir.nhs.uk/CodeSystem/England-DispensingSitePreference" />
                 <code value="P1" />
