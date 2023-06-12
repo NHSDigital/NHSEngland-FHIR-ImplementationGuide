@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="England-ServiceRequest" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/England-ServiceRequest" />
+  <version value="1.0.0" />
+  <name value="EnglandServiceRequest" />
+  <title value="England ServiceRequest" />
+  <status value="draft" />
+  <date value="2023-06-01" />
+  <publisher value="NHS England" />
+  <contact>
+    <name value="NHS England" />
+    <telecom>
+      <system value="email" />
+      <value value="interoperabilityteam@nhs.net" />
+      <use value="work" />
+      <rank value="1" />
+    </telecom>
+  </contact>
+  <description value="This profile defines the NHS England constraints and extensions on the FHIR UK Core resource [UK Core ServiceRequest](https://simplifier.net/hl7fhirukcorer4/ukcore-servicerequest)" />
+  <purpose value="This profile is a record of a request for a procedure or diagnostic or other service to be planned, proposed, or performed, as distinguished by the ServiceRequest.intent field value, with or on a patient." />
+  <copyright value="&quot;Copyright © 2021+ HL7 UK Licensed under the Apache License, Version 2.0 (the \&quot;License\&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at  http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \&quot;AS IS\&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. HL7® FHIR® standard Copyright © 2011+ HL7 The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at  https://www.hl7.org/fhir/license.html.&quot;," />
+  <fhirVersion value="4.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="ServiceRequest" />
+  <baseDefinition value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-ServiceRequest" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="ServiceRequest.id">
+      <path value="ServiceRequest.id" />
+      <short value="Local Referral ID" />
+    </element>
+    <element id="ServiceRequest.extension">
+      <path value="ServiceRequest.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="ServiceRequest.extension:ERSAdviceAndGuidance">
+      <path value="ServiceRequest.extension" />
+      <sliceName value="ERSAdviceAndGuidance" />
+      <short value="ERS Advice and Guidance" />
+      <definition value="```json&#xD;&#xA;  &quot;extension&quot;: [&#xD;&#xA;        {&#xD;&#xA;            &quot;url&quot;: &quot;https://fhir.nhs.uk/StructureDefinition/Extension-England-ERSReferral&quot;,&#xD;&#xA;            &quot;extension&quot;: [&#xD;&#xA;                {&#xD;&#xA;                    &quot;url&quot;: &quot;sourceSystem&quot;,&#xD;&#xA;                    &quot;valueCode&quot;: &quot;ers&quot;&#xD;&#xA;                },&#xD;&#xA;                {&#xD;&#xA;                    &quot;url&quot;: &quot;status&quot;,&#xD;&#xA;                    &quot;valueCode&quot;: &quot;unbooked&quot;&#xD;&#xA;                }&#xD;&#xA;            ]&#xD;&#xA;        },&#xD;&#xA;```" />
+      <min value="0" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-ERSReferral" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="ServiceRequest.extension:ERSServiceRequestState">
+      <path value="ServiceRequest.extension" />
+      <sliceName value="ERSServiceRequestState" />
+      <short value="Request Status" />
+      <definition value="e-RS representation of the state of the referral&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;extension&quot;: [&#xD;&#xA;        {&#xD;&#xA;            &quot;url&quot;: &quot;https://fhir.nhs.uk/StructureDefinition/Extension-England-ERSServiceRequestState&quot;,&#xD;&#xA;            &quot;extension&quot;: [&#xD;&#xA;                {&#xD;&#xA;                    &quot;url&quot;: &quot;sourceSystem&quot;,&#xD;&#xA;                    &quot;valueCode&quot;: &quot;ers&quot;&#xD;&#xA;                },&#xD;&#xA;                {&#xD;&#xA;                    &quot;url&quot;: &quot;status&quot;,&#xD;&#xA;                    &quot;valueCode&quot;: &quot;unbooked&quot;&#xD;&#xA;                }&#xD;&#xA;            ]&#xD;&#xA;        }&#xD;&#xA;    ],&#xD;&#xA;```" />
+      <min value="0" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-ERSServiceRequestState" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="ServiceRequest.extension:portalLink">
+      <path value="ServiceRequest.extension" />
+      <sliceName value="portalLink" />
+      <short value="Portal Link" />
+      <definition value="Deep Link into the specific landing page in MYR&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;extension&quot;: [&#xD;&#xA;        {&#xD;&#xA;            &quot;url&quot;: &quot;https://fhir.nhs.uk/StructureDefinition/Extension-England-PortalLink&quot;,&#xD;&#xA;            &quot;valueUrl&quot;: &quot;https://virtual.nhs.uk/MyPatientRecords&quot;&#xD;&#xA;        }&#xD;&#xA;    ],&#xD;&#xA;```" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-PortalLink" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="ServiceRequest.extension:serviceRequestPriority">
+      <path value="ServiceRequest.extension" />
+      <sliceName value="serviceRequestPriority" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-ServiceRequestPriority" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="ServiceRequest.identifier">
+      <path value="ServiceRequest.identifier" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <definition value="Identifiers assigned to this order instance by the orderer and/or the receiver and/or order fulfiller.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;identifier&quot;: [&#xD;&#xA;                    {&#xD;&#xA;                        &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/UBRN&quot;,&#xD;&#xA;                        &quot;value&quot;: &quot;111111111112&quot;&#xD;&#xA;                    }&#xD;&#xA;                ],&#xD;&#xA;```" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="ServiceRequest.identifier.value">
+      <path value="ServiceRequest.identifier.value" />
+      <min value="1" />
+    </element>
+    <element id="ServiceRequest.identifier:UBRN">
+      <path value="ServiceRequest.identifier" />
+      <sliceName value="UBRN" />
+      <short value="Unique Booking Reference Numbe" />
+      <definition value="Unique Booking Reference Number&#xD;&#xA;(12 digit number used as an internal and external identifier of the referral), known as &quot;Booking Reference&quot; Patient side" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="ServiceRequest.identifier:UBRN.system">
+      <path value="ServiceRequest.identifier.system" />
+      <min value="1" />
+      <fixedUri value="https://fhir.nhs.uk/Id/UBRN" />
+    </element>
+    <element id="ServiceRequest.identifier:UBRN.value">
+      <path value="ServiceRequest.identifier.value" />
+      <min value="1" />
+    </element>
+    <element id="ServiceRequest.basedOn">
+      <path value="ServiceRequest.basedOn" />
+      <mustSupport value="true" />
+    </element>
+    <element id="ServiceRequest.basedOn.identifier">
+      <path value="ServiceRequest.basedOn.identifier" />
+      <mustSupport value="true" />
+    </element>
+    <element id="ServiceRequest.basedOn.identifier.system">
+      <path value="ServiceRequest.basedOn.identifier.system" />
+      <min value="1" />
+    </element>
+    <element id="ServiceRequest.basedOn.identifier.value">
+      <path value="ServiceRequest.basedOn.identifier.value" />
+      <min value="1" />
+    </element>
+    <element id="ServiceRequest.intent">
+      <path value="ServiceRequest.intent" />
+      <definition value="In **e-RS** default to `order`" />
+    </element>
+    <element id="ServiceRequest.category">
+      <path value="ServiceRequest.category" />
+      <definition value="A code that classifies the service for searching, sorting and display purposes (e.g. &quot;Surgical Procedure&quot;).&#xD;&#xA;&#xD;&#xA;At present the only code in use is Patient Referral&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA; &quot;category&quot;: [&#xD;&#xA;        {&#xD;&#xA;            &quot;coding&quot;: [&#xD;&#xA;                {&#xD;&#xA;                    &quot;system&quot;: &quot;http://snomed.info/sct&quot;,&#xD;&#xA;                    &quot;code&quot;: &quot;3457005&quot;,&#xD;&#xA;                    &quot;display&quot;: &quot;Patient referral&quot;&#xD;&#xA;                }&#xD;&#xA;            ]&#xD;&#xA;        }&#xD;&#xA;    ],&#xD;&#xA;```" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="ServiceRequest.category.coding">
+      <path value="ServiceRequest.category.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="ServiceRequest.category.coding.system">
+      <path value="ServiceRequest.category.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="ServiceRequest.category.coding.code">
+      <path value="ServiceRequest.category.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="ServiceRequest.category.coding:BARSMessageServiceRequestCategory">
+      <path value="ServiceRequest.category.coding" />
+      <sliceName value="BARSMessageServiceRequestCategory" />
+      <binding>
+        <strength value="preferred" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/BARSMessageServiceRequestCategory" />
+      </binding>
+    </element>
+    <element id="ServiceRequest.category.coding:BARSMessageServiceRequestCategory.system">
+      <path value="ServiceRequest.category.coding.system" />
+      <fixedUri value="https://fhir.nhs.uk/CodeSystem/England-BARSMessageServiceRequestCodes" />
+    </element>
+    <element id="ServiceRequest.category.coding:EnglandServiceRequestCategory">
+      <path value="ServiceRequest.category.coding" />
+      <sliceName value="EnglandServiceRequestCategory" />
+      <binding>
+        <strength value="preferred" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/England-ServiceRequestCategory" />
+      </binding>
+    </element>
+    <element id="ServiceRequest.category.coding:EnglandServiceRequestCategory.system">
+      <path value="ServiceRequest.category.coding.system" />
+      <fixedUri value="http://snomed.info/sct" />
+    </element>
+    <element id="ServiceRequest.category.coding:genomicsWholeCaseSequencing">
+      <path value="ServiceRequest.category.coding" />
+      <sliceName value="genomicsWholeCaseSequencing" />
+      <binding>
+        <strength value="extensible" />
+        <valueSet value="https://fhir.hl7.org.uk/ValueSet/UKCore-GenomeSequencingCategory" />
+      </binding>
+    </element>
+    <element id="ServiceRequest.category.coding:genomicsWholeCaseSequencing.system">
+      <path value="ServiceRequest.category.coding.system" />
+      <fixedUri value="https://fhir.hl7.org.uk/CodeSystem/UKCore-GenomeSequencingCategory" />
+    </element>
+    <element id="ServiceRequest.priority">
+      <path value="ServiceRequest.priority" />
+      <definition value="Request Priority Code &#xD;&#xA;&#xD;&#xA;Code for the priority of the referral set by the Referring Clinician&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA; &quot;priority&quot;: &quot;routine&quot;,&#xD;&#xA;```" />
+      <mustSupport value="true" />
+    </element>
+    <element id="ServiceRequest.code">
+      <path value="ServiceRequest.code" />
+      <definition value="A code that identifies a particular service (i.e., procedure, diagnostic investigation, or panel of investigations) that have been requested.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;code&quot;: {&#xD;&#xA;        &quot;coding&quot;:  [&#xD;&#xA;            {&#xD;&#xA;                &quot;system&quot;: &quot;http://snomed.info/sct&quot;,&#xD;&#xA;                &quot;code&quot;: &quot;73761001&quot;,&#xD;&#xA;                &quot;display&quot;: &quot;Colonoscopy&quot;&#xD;&#xA;            }&#xD;&#xA;        ],&#xD;&#xA;        &quot;text&quot;: &quot;Colonoscopy requested&quot;&#xD;&#xA;    }&#xD;&#xA;```" />
+      <mustSupport value="true" />
+    </element>
+    <element id="ServiceRequest.code.coding">
+      <path value="ServiceRequest.code.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="ServiceRequest.code.coding:SNOMEDProcedureCode">
+      <path value="ServiceRequest.code.coding" />
+      <sliceName value="SNOMEDProcedureCode" />
+      <binding>
+        <strength value="preferred" />
+        <valueSet value="https://fhir.hl7.org.uk/ValueSet/UKCore-ProcedureCode" />
+      </binding>
+    </element>
+    <element id="ServiceRequest.code.coding:SNOMEDProcedureCode.system">
+      <path value="ServiceRequest.code.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://snomed.info/sct" />
+    </element>
+    <element id="ServiceRequest.code.coding:SNOMEDProcedureCode.code">
+      <path value="ServiceRequest.code.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="ServiceRequest.code.coding:ServiceRequestCode">
+      <path value="ServiceRequest.code.coding" />
+      <sliceName value="ServiceRequestCode" />
+      <binding>
+        <strength value="preferred" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/England-ServiceRequestCodes" />
+      </binding>
+    </element>
+    <element id="ServiceRequest.code.coding:ServiceRequestCode.system">
+      <path value="ServiceRequest.code.coding.system" />
+      <min value="1" />
+      <fixedUri value="https://fhir.nhs.uk/CodeSystem/England-ServiceRequestCodes" />
+    </element>
+    <element id="ServiceRequest.code.coding:ServiceRequestCode.code">
+      <path value="ServiceRequest.code.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="ServiceRequest.subject">
+      <path value="ServiceRequest.subject" />
+      <definition value="On whom or what the service is to be performed. This is usually a human patient, but can also be requested on animals, groups of humans or animals, devices such as dialysis machines, or even locations (typically for environmental scans).&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;subject&quot;: {&#xD;&#xA;        &quot;identifier&quot;: {&#xD;&#xA;            &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/nhs-number&quot;,&#xD;&#xA;            &quot;value&quot;: &quot;9999998887&quot;&#xD;&#xA;        }&#xD;&#xA;    },&#xD;&#xA;```" />
+      <type>
+        <code value="Reference" />
+        <aggregation value="referenced" />
+      </type>
+      <constraint>
+        <key value="patient-reference" />
+        <severity value="error" />
+        <human value="An identifier reference or resource reference must be provided" />
+        <expression value="(reference.exists() or identifier.exists())" />
+      </constraint>
+      <constraint>
+        <key value="patient-nhs" />
+        <severity value="error" />
+        <human value="NHS Number must be in the English and Welsh NHS Number range or length of the number is wrong." />
+        <expression value="identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').exists().not() or (identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').exists()  and identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').value.matches('^([456789]{1}[0-9]{9})$'))" />
+      </constraint>
+      <mustSupport value="true" />
+    </element>
+    <element id="ServiceRequest.subject.identifier.system">
+      <path value="ServiceRequest.subject.identifier.system" />
+      <min value="1" />
+      <fixedUri value="https://fhir.nhs.uk/Id/nhs-number" />
+    </element>
+    <element id="ServiceRequest.subject.identifier.value">
+      <path value="ServiceRequest.subject.identifier.value" />
+      <min value="1" />
+    </element>
+    <element id="ServiceRequest.encounter">
+      <path value="ServiceRequest.encounter" />
+      <type>
+        <code value="Reference" />
+        <aggregation value="referenced" />
+      </type>
+    </element>
+    <element id="ServiceRequest.authoredOn">
+      <path value="ServiceRequest.authoredOn" />
+      <short value="Referral Initiated Date" />
+      <definition value="Date the referral was initiated in e-RS&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;authoredOn&quot;: &quot;2022-01-11T16:40:00+00:00&quot;,&#xD;&#xA;```" />
+      <mustSupport value="true" />
+    </element>
+    <element id="ServiceRequest.requester">
+      <path value="ServiceRequest.requester" />
+      <definition value="Who created the Request or the Event. In NHS England API's this **SHOULD** always be a PractitionerRole role reference.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA; &quot;requester&quot;: {&#xD;&#xA;        &quot;reference&quot;: &quot;#requester&quot;&#xD;&#xA;    },&#xD;&#xA;```&#xD;&#xA;&#xD;&#xA;This will reference a `contained` PractitionerRole (note: this resource only contains limited user metadata such as ODS Code, professional code and SDS User Profile Id). This resource should not hold data which is held in SDS, only enough information to identify the SDS Entry,&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;{&#xD;&#xA;    &quot;resourceType&quot;: &quot;ServiceRequest&quot;,&#xD;&#xA;    &quot;id&quot;: &quot;bd1ca5c4-ff49-4f2a-9db4-f5dda0112084&quot;,&#xD;&#xA;    &quot;meta&quot;: {&#xD;&#xA;        &quot;lastUpdated&quot;: &quot;2016-07-11T11:07:22+00:00&quot;&#xD;&#xA;    },&#xD;&#xA;    &quot;contained&quot;: [&#xD;&#xA;        {&#xD;&#xA;            &quot;resourceType&quot;: &quot;PractitionerRole&quot;,&#xD;&#xA;            &quot;id&quot;: &quot;requester&quot;,&#xD;&#xA;            &quot;practitioner&quot;: {&#xD;&#xA;                &quot;identifier&quot;: {&#xD;&#xA;                    &quot;system&quot;: &quot;https://fhir.hl7.org.uk/Id/gmp-number&quot;,&#xD;&#xA;                    &quot;value&quot;: &quot;G8123456&quot;&#xD;&#xA;                },&#xD;&#xA;                &quot;display&quot;: &quot;DR AA BHATIA&quot;&#xD;&#xA;            },&#xD;&#xA;            &quot;organization&quot;: {&#xD;&#xA;                &quot;identifier&quot;: {&#xD;&#xA;                    &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/ods-organization-code&quot;,&#xD;&#xA;                    &quot;value&quot;: &quot;C81007&quot;&#xD;&#xA;                },&#xD;&#xA;                &quot;display&quot;: &quot;VERNON STREET MEDICAL CTR&quot;&#xD;&#xA;            },&#xD;&#xA;        }&#xD;&#xA;    ],&#xD;&#xA;    &quot;requester&quot;: {&#xD;&#xA;        &quot;reference&quot;: &quot;#requester&quot;&#xD;&#xA;    },&#xD;&#xA;```&#xD;&#xA;&#xD;&#xA;**e-RS**&#xD;&#xA;&#xD;&#xA;The contained PractitionerRole must contain&#xD;&#xA;&#xD;&#xA;- SDS User ID of the Referrer in `practitioner`&#xD;&#xA;- ODS Code of the Referring Organisation in `organization`" />
+      <type>
+        <code value="Reference" />
+        <aggregation value="contained" />
+        <aggregation value="referenced" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="ServiceRequest.performerType">
+      <path value="ServiceRequest.performerType" />
+      <short value="Requested Specialty Name" />
+      <definition value="**ERS**&#xD;&#xA;&#xD;&#xA;Specialty used to search for the shortlisted service(s) (if one was used)&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;performerType&quot;: {&#xD;&#xA;        &quot;coding&quot;: [&#xD;&#xA;            {&#xD;&#xA;                &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/eRS-Specialty&quot;,&#xD;&#xA;                &quot;code&quot;: &quot;GENERAL_MEDICINE&quot;&#xD;&#xA;            }&#xD;&#xA;        ]&#xD;&#xA;    },&#xD;&#xA;```&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;performerType&quot;: {&#xD;&#xA;                    &quot;coding&quot;: [&#xD;&#xA;                        {&#xD;&#xA;                            &quot;display&quot;: &quot;Dermatology&quot;&#xD;&#xA;                        }&#xD;&#xA;                    ]&#xD;&#xA;                }&#xD;&#xA;```" />
+      <mustSupport value="true" />
+    </element>
+    <element id="ServiceRequest.performerType.coding">
+      <path value="ServiceRequest.performerType.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <binding>
+        <strength value="example" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/England-CareSettingType" />
+      </binding>
+    </element>
+    <element id="ServiceRequest.performerType.coding:treatmentFunctionCodes">
+      <path value="ServiceRequest.performerType.coding" />
+      <sliceName value="treatmentFunctionCodes" />
+      <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDataModelAndDictionary-treatment-function" />
+      </binding>
+    </element>
+    <element id="ServiceRequest.performerType.coding:treatmentFunctionCodes.system">
+      <path value="ServiceRequest.performerType.coding.system" />
+      <fixedUri value="https://fhir.nhs.uk/CodeSystem/NHSDataModelAndDictionary-treatment-function" />
+    </element>
+    <element id="ServiceRequest.performerType.coding:eRSSpecialty">
+      <path value="ServiceRequest.performerType.coding" />
+      <sliceName value="eRSSpecialty" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/England-eRS-Specialty" />
+      </binding>
+    </element>
+    <element id="ServiceRequest.performerType.coding:eRSSpecialty.system">
+      <path value="ServiceRequest.performerType.coding.system" />
+      <fixedUri value="https://fhir.nhs.uk/CodeSystem/eRS-Specialty" />
+    </element>
+    <element id="ServiceRequest.performer">
+      <path value="ServiceRequest.performer" />
+      <mustSupport value="true" />
+    </element>
+    <element id="ServiceRequest.performer.identifier">
+      <path value="ServiceRequest.performer.identifier" />
+      <mustSupport value="true" />
+    </element>
+    <element id="ServiceRequest.performer.identifier.system">
+      <path value="ServiceRequest.performer.identifier.system" />
+      <min value="1" />
+    </element>
+    <element id="ServiceRequest.performer.identifier.value">
+      <path value="ServiceRequest.performer.identifier.value" />
+      <min value="1" />
+    </element>
+    <element id="ServiceRequest.reasonCode">
+      <path value="ServiceRequest.reasonCode" />
+      <definition value="An explanation or justification for why this service is being requested in coded or textual form.   This is often for billing purposes.  May relate to the resources referred to in `supportingInfo`.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;reasonCode&quot;:  [&#xD;&#xA;        {&#xD;&#xA;            &quot;coding&quot;:  [&#xD;&#xA;                {&#xD;&#xA;                    &quot;system&quot;: &quot;http://snomed.info/sct&quot;,&#xD;&#xA;                    &quot;code&quot;: &quot;271835004&quot;,&#xD;&#xA;                    &quot;display&quot;: &quot;Abdominal distension, gaseous&quot;&#xD;&#xA;                }&#xD;&#xA;            ],&#xD;&#xA;            &quot;text&quot;: &quot;Swollen abdomen&quot;&#xD;&#xA;        }&#xD;&#xA;    ]&#xD;&#xA;```" />
+      <mustSupport value="true" />
+    </element>
+    <element id="ServiceRequest.supportingInfo">
+      <path value="ServiceRequest.supportingInfo" />
+      <definition value="Additional clinical information about the patient or specimen that may influence the services or their interpretations.     This information includes diagnosis, clinical findings and other observations.  In laboratory ordering these are typically referred to as &quot;ask at order entry questions (AOEs)&quot;.  This includes observations explicitly requested by the producer (filler) to provide context or supporting information needed to complete the order. For example,  reporting the amount of inspired oxygen for blood gas measurements.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;supportingInfo&quot;: [&#xD;&#xA;        {&#xD;&#xA;            &quot;type&quot; : &quot;DocumentReference&quot;,&#xD;&#xA;            &quot;reference&quot;: &quot;DocumentReference/5da894e0-a57e-43e9-a1a1-e283a484003c&quot;&#xD;&#xA;        },&#xD;&#xA;        {&#xD;&#xA;            &quot;type&quot; : &quot;QuestionnaireResponse&quot;,&#xD;&#xA;            &quot;reference&quot; : &quot;QuestionnaireResponse/d9d4cf80-3f9d-4435-9f3b-e6efb09ad654&quot;&#xD;&#xA;        }&#xD;&#xA;    ],&#xD;&#xA;```" />
+      <type>
+        <code value="Reference" />
+        <aggregation value="referenced" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="ServiceRequest.note">
+      <path value="ServiceRequest.note" />
+      <comment value="For systems that do not have structured annotations, they can simply communicate a single annotation with no author or time.  This element may need to be included in narrative because of the potential for modifying information.  *Annotations SHOULD NOT* be used to communicate &quot;modifying&quot; information that could be computable. (This is a SHOULD because enforcing user behavior is nearly impossible).&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;note&quot;: [&#xD;&#xA;        {&#xD;&#xA;            &quot;text&quot;: &quot;Please advise me on this patient who ...(information about patient)&quot;&#xD;&#xA;        }&#xD;&#xA;    ]&#xD;&#xA;```" />
+      <mustSupport value="true" />
+    </element>
+  </differential>
+</StructureDefinition>

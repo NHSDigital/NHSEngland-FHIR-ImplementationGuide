@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="Extension-England-ERSReferral" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/Extension-England-ERSReferral" />
+  <version value="1.0.0" />
+  <name value="ExtensionERSAdviceAndGuidance" />
+  <title value="Extension England ERS Referral" />
+  <status value="draft" />
+  <date value="2023-06-01" />
+  <publisher value="NHS England" />
+  <contact>
+    <name value="NHS England" />
+    <telecom>
+      <system value="email" />
+      <value value="interoperabilityteam@nhs.net" />
+      <use value="work" />
+      <rank value="1" />
+    </telecom>
+  </contact>
+  <description value="This extension documents the source (system) of a ServiceRequest, the authority of the source system and the status of the request." />
+  <purpose value="This extension extends the ServiceRequest Resource to support the exchange of information describing the source of the Service Request." />
+  <copyright value="&quot;Copyright © 2021+ HL7 UK Licensed under the Apache License, Version 2.0 (the \&quot;License\&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at  http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \&quot;AS IS\&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. HL7® FHIR® standard Copyright © 2011+ HL7 The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at  https://www.hl7.org/fhir/license.html.&quot;," />
+  <fhirVersion value="4.0.1" />
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <context>
+    <type value="element" />
+    <expression value="ServiceRequest" />
+  </context>
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Extension">
+      <path value="Extension" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension">
+      <path value="Extension.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="Extension.extension:sourceSystem">
+      <path value="Extension.extension" />
+      <sliceName value="sourceSystem" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:sourceSystem.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="sourceSystem" />
+    </element>
+    <element id="Extension.extension:sourceSystem.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <min value="1" />
+      <type>
+        <code value="code" />
+      </type>
+    </element>
+    <element id="Extension.extension:authorisedToRefer">
+      <path value="Extension.extension" />
+      <sliceName value="authorisedToRefer" />
+      <min value="0" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:authorisedToRefer.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="authorisedToRefer" />
+    </element>
+    <element id="Extension.extension:authorisedToRefer.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <min value="1" />
+      <type>
+        <code value="code" />
+      </type>
+    </element>
+    <element id="Extension.extension:status">
+      <path value="Extension.extension" />
+      <sliceName value="status" />
+      <min value="0" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:status.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="status" />
+    </element>
+    <element id="Extension.extension:status.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <min value="1" />
+      <type>
+        <code value="code" />
+      </type>
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url" />
+      <fixedUri value="https://fhir.nhs.uk/StructureDefinition/Extension-England-ERSReferral" />
+    </element>
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>

@@ -1,0 +1,89 @@
+<ServiceRequest xmlns="http://hl7.org/fhir">
+    <id value="England-ServiceRequest-ERSCounsellig-Example" />
+    <meta>
+        <lastUpdated value="2021-10-11T15:23:30+00:00" />
+    </meta>
+    <contained>
+        <PractitionerRole>
+            <id value="requester" />
+            <practitioner>
+                <identifier>
+                    <system value="https://fhir.nhs.uk/Id/sds-user-id" />
+                    <value value="0987654321" />
+                </identifier>
+            </practitioner>
+            <organization>
+                <identifier>
+                    <system value="https://fhir.nhs.uk/Id/ods-organization-code" />
+                    <value value="RR8" />
+                </identifier>
+                <display value="LEEDS TEACHING HOSPITALS NHS TRUST" />
+            </organization>
+        </PractitionerRole>
+    </contained>
+    <identifier>
+        <system value="https://fhir.nhs.uk/Id/UBRN" />
+        <value value="000000070001" />
+    </identifier>
+    <status value="active" />
+    <intent value="plan" />
+    <category>
+        <coding>
+            <system value="http://snomed.info/sct" />
+            <code value="409063005" />
+            <display value="Counselling" />
+        </coding>
+    </category>
+    <subject>
+        <identifier>
+            <system value="https://fhir.nhs.uk/Id/nhs-number" />
+            <value value="9478526985" />
+        </identifier>
+        <display value="Julie Jones" />
+    </subject>
+    <encounter>
+        <reference value="urn:uuid:8c63d621-4d86-4f57-8699-e8e22d49935d" />
+    </encounter>
+    <occurrencePeriod>
+        <start value="2021-10-13T16:20:27+07:00" />
+    </occurrencePeriod>
+    <authoredOn value="2021-10-13T16:30:00+07:00" />
+    <requester>
+        <reference value="#requester" />
+    </requester>
+    <performer>
+        <identifier>
+            <system value="https://fhir.nhs.uk/Id/ods-organization-code" />
+            <value value="RR8" />
+        </identifier>
+        <display value="Leeds Teaching NHS Trust" />
+    </performer>
+    <locationReference>
+        <reference value="urn:uuid:2ec99e82-a0af-4b70-bd53-1869d84b2ad1" />
+    </locationReference>
+    <reasonReference>
+        <reference value="urn:uuid:f2d2a6f8-1ef5-40a6-a697-849bb1264a91" />
+        <display value="Person reported complaints or issues (Symptoms)" />
+    </reasonReference>
+    <supportingInfo>
+        <reference value="urn:uuid:65508934-c9e6-46d2-a393-af096b502daf" />
+        <display value="Rejected Services - Patient Choice in Service Selection - Details" />
+    </supportingInfo>
+    <supportingInfo>
+        <reference value="urn:uuid:41e591ab-d333-4fb8-87b4-d35f740b6bfc" />
+        <display value="Rejected Services - Patient Choice in Service Selection - Flag" />
+    </supportingInfo>
+    <supportingInfo>
+        <reference value="urn:uuid:e53b2595-7875-4687-80e9-23a0c8cb8ea0" />
+        <display value="Person expectations and wishes" />
+    </supportingInfo>
+    <supportingInfo>
+        <reference value="urn:uuid:ea37a499-245c-40e9-b0fa-df4383c4d413" />
+        <display value="Safeguarding Concerns Flag" />
+    </supportingInfo>
+    <supportingInfo>
+        <reference value="urn:uuid:75f0e2c7-79db-4518-8a03-edcf096fccbb" />
+        <display value="Additional Information Sources" />
+    </supportingInfo>
+    <patientInstruction value="ADVICE GIVEN: If there are any new symptoms, or if the condition gets worse, changes or you have any other concerns, call us back." />
+</ServiceRequest>
