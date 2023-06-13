@@ -1,0 +1,29 @@
+<CodeSystem xmlns="http://hl7.org/fhir">
+    <id value="England-ERSPurpose" />
+    <url value="https://fhir.nhs.uk/CodeSystem/England-ERSPurpose" />
+    <version value="1.0.0" />
+    <name value="EnglandERSPurpose" />
+    <title value="England ERS Purpose" />
+    <status value="draft" />
+    <date value="2023-06-01" />
+    <publisher value="NHS England" />
+    <contact>
+        <name value="NHS England" />
+        <telecom>
+            <system value="email" />
+            <value value="interoperabilityteam@nhs.net" />
+            <use value="work" />
+			<rank value="1" />
+        </telecom>
+    </contact>
+    <description value="A Code System for eRS Purpose" />
+	<purpose value="A Code System for eRS Purpose" />
+    <copyright value="Copyright &#169; 2022 NHS Digital" />
+    <caseSensitive value="true" />
+    <content value="complete" />
+    <concept>
+        <code value="HEALTHCARE_PROFESSIONALS" />
+        <display value="Healthcare Professionals" />
+        <definition value="Contact details available to healthcare professionals." />
+    </concept>
+</CodeSystem>

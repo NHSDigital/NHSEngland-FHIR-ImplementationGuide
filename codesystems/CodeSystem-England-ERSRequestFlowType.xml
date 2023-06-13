@@ -1,0 +1,36 @@
+<CodeSystem xmlns="http://hl7.org/fhir">
+    <id value="England-ERSRequestFlowType" />
+    <url value="https://fhir.nhs.uk/CodeSystem/England-ERSRequestFlowType" />
+    <version value="1.0.0" />
+    <name value="EnglandERSRequestFlowType" />
+    <title value="England ERS Request Flow Type" />
+    <status value="draft" />
+    <date value="2023-06-01" />
+    <publisher value="NHS England" />
+    <contact>
+        <name value="NHS England" />
+        <telecom>
+            <system value="email" />
+            <value value="interoperabilityteam@nhs.net" />
+            <use value="work" />
+			<rank value="1" />
+        </telecom>
+    </contact>
+    <description value="A Code System for eRS Request Flow Type" />
+	<purpose value="A Code System for eRS Request Flow Type" />
+    <copyright value="Copyright &#169; 2022 NHS Digital" />
+    <caseSensitive value="true" />
+    <content value="complete" />
+    <concept>
+        <code value="REVIEW" />
+        <display value="A service that reviews referrals, without the support or need for any appointment with the patient to be made" />
+    </concept>
+    <concept>
+        <code value="BOOKABLE" />
+        <display value="A service which supports a patient appointment" />
+    </concept>
+    <concept>
+        <code value="ADVICE_AND_GUIDANCE" />
+        <display value="A service which can discuss the patient and receive guidance rather than a patient attending an appointment" />
+    </concept>
+</CodeSystem>
