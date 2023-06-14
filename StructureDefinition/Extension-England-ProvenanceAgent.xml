@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="Extension-England-ProvenanceAgent" />
-  <url value="https://fhir.nhs.uk/StructureDefinition/Extension-Provenance-agent" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/Extension-England-ProvenanceAgent" />
   <version value="1.0.0" />
   <name value="ExtensionProvenanceAgent" />
   <title value="Extension England Provenance Agent" />
   <status value="draft" />
-  <date value="2023-06-23" />
+  <date value="2023-06-01" />
   <publisher value="NHS England" />
   <contact>
     <name value="NHS England" />
@@ -17,8 +17,7 @@
       <rank value="1" />
     </telecom>
   </contact>
-  <description value="NHS England Extension for Provenance Agent" />
-  <purpose value="NHS England Extension for Provenance Agent" />
+  <description value="An extenstion to track a healthcare provider activities on a patient." />
   <copyright value="&quot;Copyright © 2021+ HL7 UK Licensed under the Apache License, Version 2.0 (the \&quot;License\&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at  http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \&quot;AS IS\&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. HL7® FHIR® standard Copyright © 2011+ HL7 The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at  https://www.hl7.org/fhir/license.html.&quot;," />
   <fhirVersion value="4.0.1" />
   <mapping>
@@ -44,18 +43,19 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
   <derivation value="constraint" />
   <differential>
+    <element id="Extension">
+      <path value="Extension" />
+      <definition value="An extenstion to track a healthcare provider activities on a patient." />
+    </element>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="https://fhir.nhs.uk/StructureDefinition/Extension-Provenance-agent" />
+      <fixedUri value="https://fhir.nhs.uk/StructureDefinition/Extension-England-ProvenanceAgent" />
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />
       <min value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-PractitionerRole" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-Practitioner" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-HealthcareService" />
       </type>
       <constraint>
         <key value="usercode-reference" />
@@ -104,7 +104,6 @@
         <severity value="error" />
         <human value="SDS Role Profile Id must be 12 digits" />
         <expression value="identifier.where(system='https://fhir.nhs.uk/Id/sds-role-profile-id').exists().not() or (identifier.where(system='https://fhir.nhs.uk/Id/sds-role-profile-id').exists()  and identifier.where(system='https://fhir.nhs.uk/Id/sds-role-profile-id').value.matches('^[0-9]{12}$'))" />
-        <source value="https://fhir.nhs.uk/StructureDefinition/England-PractitionerRole" />
       </constraint>
     </element>
     <element id="Extension.value[x].identifier">

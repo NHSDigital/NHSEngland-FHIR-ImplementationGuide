@@ -50,7 +50,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-Provenance-agent" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-ProvenanceAgent" />
       </type>
       <isModifier value="false" />
     </element>
@@ -217,7 +217,6 @@
       <definition value="Who is created the Request or the Event. In NHSDigital API's this **SHOULD** always be a PractitionerRole role reference.\n\n```json\n &quot;requester&quot;: {\n        &quot;reference&quot;: &quot;#requester&quot;\n    },\n```\n\nThis will reference a `contained` PractitionerRole (note: this resource only contains limited user metadata such as ODS Code, professional code and SDS User Profile Id). This resource should not hold data which is held in SDS, only enough information to identify the SDS Entry,\n\n```json\n{\n    &quot;resourceType&quot;: &quot;Task&quot;,\n    &quot;id&quot;: &quot;bd1ca5c4-ff49-4f2a-9db4-f5dda0112084&quot;,\n    &quot;meta&quot;: {\n        &quot;lastUpdated&quot;: &quot;2016-07-11T11:07:22+00:00&quot;\n    },\n    &quot;contained&quot;: [\n        {\n            &quot;resourceType&quot;: &quot;PractitionerRole&quot;,\n            &quot;id&quot;: &quot;requester&quot;,\n            &quot;practitioner&quot;: {\n                &quot;identifier&quot;: {\n                    &quot;system&quot;: &quot;https://fhir.hl7.org.uk/Id/gmp-number&quot;,\n                    &quot;value&quot;: &quot;G8123456&quot;\n                },\n                &quot;display&quot;: &quot;DR AA BHATIA&quot;\n            },\n            &quot;organization&quot;: {\n                &quot;identifier&quot;: {\n                    &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/ods-organization-code&quot;,\n                    &quot;value&quot;: &quot;C81007&quot;\n                },\n                &quot;display&quot;: &quot;VERNON STREET MEDICAL CTR&quot;\n            },\n            &quot;telecom&quot;: [\n                {\n                    &quot;system&quot;: &quot;phone&quot;,\n                    &quot;use&quot;: &quot;work&quot;,\n                    &quot;value&quot;: &quot;01234567890&quot;\n                }\n            ]\n        }\n    ],\n```" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-PractitionerRole" />
         <aggregation value="contained" />
       </type>
       <mustSupport value="true" />
@@ -236,8 +235,6 @@
       <definition value="**EPS**\n\nWho is responsible for actioning the request Task (e.g. for a prescription-order this will be the pharmacy). \n\n```json\n&quot;owner&quot;: {\n        &quot;identifier&quot;: {\n            &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/ods-organization-code&quot;,\n            &quot;value&quot;: &quot;FB444&quot;\n        },\n        &quot;display&quot;: &quot;Freds Pharmacy&quot;\n    },\n```\n\n**e-RS**\n\n```json\n&quot;owner&quot;: {\n        &quot;identifier&quot;: {\n            &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/ers-service&quot;,\n            &quot;value&quot;: &quot;12444&quot;\n        }\n    },\n```" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-PractitionerRole" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/England-Organization" />
       </type>
       <mustSupport value="true" />
     </element>
