@@ -1,0 +1,59 @@
+<CodeSystem xmlns="http://hl7.org/fhir">
+    <id value="England-MedicationDispenseType" />
+    <url value="https://fhir.nhs.uk/CodeSystem/England-MedicationDispenseType" />
+    <identifier>
+        <system value="https://fhir.nhs.uk/identifier/CodeSystem" />
+        <value value="medicationdispense-type" />
+    </identifier>
+    <version value="1.0.0" />
+    <name value="EnglandMedicationDispenseType" />
+    <title value="England MedicationDispense Type" />
+    <status value="draft" />
+    <experimental value="true" />
+    <date value="2023-06-01" />
+    <publisher value="NHS England" />
+    <contact>
+        <name value="NHS England" />
+        <telecom>
+          <system value="email" />
+          <value value="interoperabilityteam@nhs.net" />
+          <use value="work" />
+                <rank value="1" />
+        </telecom>
+      </contact>
+    <description value="MedicationRequest Type. Taken from HL7v3 UK Item Status" />
+    <caseSensitive value="true" />
+    <content value="complete" />
+    <concept>
+        <code value="0001"></code>
+        <display value="Item fully dispensed" />
+    </concept>
+    <concept>
+        <code value="0002"></code>
+        <display value="Item not dispensed" />
+    </concept>
+    <concept>
+        <code value="0003"></code>
+        <display value="Item dispensed - partial" />
+    </concept>
+    <concept>
+        <code value="0004"></code>
+        <display value="Item not dispensed owing" />
+    </concept>
+    <concept>
+        <code value="0005"></code>
+        <display value="Item cancelled" />
+    </concept>
+    <concept>
+        <code value="0006"></code>
+        <display value="Expired" />
+    </concept>
+    <concept>
+        <code value="0007"></code>
+        <display value="Item to be dispensed" />
+    </concept>
+    <concept>
+        <code value="0008"></code>
+        <display value="Item with dispenser" />
+    </concept>
+</CodeSystem>
