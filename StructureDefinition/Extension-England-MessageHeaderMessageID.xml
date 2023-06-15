@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="England-MessageHeaderMessageID" />
+  <id value="Extension-England-MessageHeaderMessageID" />
   <url value="https://fhir.nhs.uk/StructureDefinition/Extension-England-MessageHeaderMessageID" />
   <version value="1.0.0" />
-  <name value="EnglandMessageHeaderMessageID" />
-  <title value="England MessageHeader MessageID" />
+  <name value="ExtensionEnglandMessageHeaderMessageID" />
+  <title value="Extension England MessageHeader Message ID" />
   <status value="draft" />
   <date value="2023-06-01" />
   <publisher value="NHS England" />

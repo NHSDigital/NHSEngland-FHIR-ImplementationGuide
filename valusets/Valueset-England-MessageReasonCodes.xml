@@ -32,7 +32,7 @@
     </parameter>
     <parameter>
       <name value="version" />
-      <valueUri value="https://fhir.nhs.uk/CodeSystem/England-MessageReasonPrescription|1.0.1" />
+      <valueUri value="https://fhir.nhs.uk/CodeSystem/England-MessageReasonPrescription|1.0.0" />
     </parameter>
     <parameter>
       <name value="count" />
@@ -44,7 +44,7 @@
     </parameter>
     <contains>
       <system value="https://fhir.nhs.uk/CodeSystem/England-MessageReasonPrescription" />
-      <version value="1.0.1" />
+      <version value="1.0.0" />
       <code value="notification" />
       <display value="Notification" />
     </contains>

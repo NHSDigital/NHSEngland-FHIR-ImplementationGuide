@@ -3,8 +3,8 @@
   <id value="Extension-England-MessageHeaderLocalPart" />
   <url value="https://fhir.nhs.uk/StructureDefinition/Extension-England-MessageHeaderLocalPart" />
   <version value="1.0.0" />
-  <name value="ExtensionMessageHeaderLocalPart" />
-  <title value="Extension MessageHeader Local Part" />
+  <name value="ExtensionEnglandMessageHeaderLocalPart" />
+  <title value="Extension England MessageHeader Local Part" />
   <status value="draft" />
   <date value="2023-06-01" />
   <publisher value="NHS England" />

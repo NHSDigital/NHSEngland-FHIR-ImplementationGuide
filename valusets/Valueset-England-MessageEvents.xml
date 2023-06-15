@@ -23,7 +23,7 @@
     <compose>
         <include>
             <system value="https://fhir.nhs.uk/CodeSystem/England-MessageEventEPS" />
-            <version value="1.0.19" />
+            <version value="1.0.0" />
         </include>
         <include>
             <system value="https://fhir.nhs.uk/CodeSystem/England-MessageEventBARS" />
