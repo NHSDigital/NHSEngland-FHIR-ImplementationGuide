@@ -17,7 +17,7 @@
       <rank value="1" />
     </telecom>
   </contact>
-  <description value="This profile defines the NHS England constraints and extensions on the FHIR UK Core resource [UKCore MedicationRequest](https://simplifier.net/hl7fhirukcorer4/ukcore-medicationrequest)." />
+  <description value="This profile defines the NHS England constraints and extensions on the FHIR resource." />
   <purpose value="An order or request for both supply of the medication and the instructions for administration of the medication to an individual. \n\nThis profile covers inpatient medication orders as well as community orders (whether filled by the prescriber or by a pharmacy). It also includes orders for over-the-counter medications (e.g. Aspirin), total parenteral nutrition and diet/ vitamin supplements, and may be used to support the order of medication-related devices. \n\nIt is not intended for use in prescribing particular diets, or for ordering non-medication-related items (eyeglasses, supplies, etc)." />
   <copyright value="Copyright © 2021+ HL7 UK Licensed under the Apache License, Version 2.0 (the \&quot;License\&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at  http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \&quot;AS IS\&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. HL7® FHIR® standard Copyright © 2011+ HL7 The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at  https://www.hl7.org/fhir/license.html." />
   <fhirVersion value="4.0.1" />
@@ -39,7 +39,7 @@
         <key value="eps-5" />
         <severity value="error" />
         <human value="Extension(responsiblePractitioner) - An identifier or resource reference must be provided" />
-        <expression value="extension('https://fhir.nhs.uk/StructureDefinition/Extension--England-DMResponsiblePractitioner').exists().not() or (extension('https://fhir.nhs.uk/StructureDefinition/Extension-England-DMResponsiblePractitioner').value.reference.exists() or extension('https://fhir.nhs.uk/StructureDefinition/Extension-England-DMResponsiblePractitioner').value.system.exists())" />
+        <expression value="extension('https://fhir.nhs.uk/StructureDefinition/Extension-England-DMResponsiblePractitioner').exists().not() or (extension('https://fhir.nhs.uk/StructureDefinition/Extension-England-DMResponsiblePractitioner').value.reference.exists() or extension('https://fhir.nhs.uk/StructureDefinition/Extension-England-DMResponsiblePractitioner').value.system.exists())" />
       </constraint>
       <constraint>
         <key value="eps-7" />
@@ -330,7 +330,6 @@
         <severity value="error" />
         <human value="Supplied NHS Number is outside the English and Welsh NHS Number range or length of the number is wrong." />
         <expression value="identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').exists().not() or (identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').exists()  and identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').value.matches('^([456789]{1}[0-9]{9})$'))" />
-        <source value="https://fhir.nhs.uk/StructureDefinition/England-Claim" />
       </constraint>
       <mustSupport value="true" />
     </element>
