@@ -50,7 +50,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-EnglandProvenanceAgent" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-ProvenanceAgent" />
       </type>
       <isModifier value="false" />
     </element>
