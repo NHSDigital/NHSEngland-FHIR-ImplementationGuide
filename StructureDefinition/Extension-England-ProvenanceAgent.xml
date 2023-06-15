@@ -3,7 +3,7 @@
   <id value="Extension-England-ProvenanceAgent" />
   <url value="https://fhir.nhs.uk/StructureDefinition/Extension-England-ProvenanceAgent" />
   <version value="1.0.0" />
-  <name value="ExtensionProvenanceAgent" />
+  <name value="ExtensionEnglandProvenanceAgent" />
   <title value="Extension England Provenance Agent" />
   <status value="draft" />
   <date value="2023-06-01" />

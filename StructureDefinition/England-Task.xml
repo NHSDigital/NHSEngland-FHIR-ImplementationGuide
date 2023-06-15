@@ -6,19 +6,19 @@
   <name value="EnglandTask" />
   <title value="England Task" />
   <status value="draft" />
-  <date value="2023-06-23" />
+  <date value="2023-06-01" />
   <publisher value="NHS England" />
   <contact>
     <name value="NHS England" />
     <telecom>
       <system value="email" />
-      <value value="nteroperabilityteam@nhs.net" />
+      <value value="interoperabilityteam@nhs.net" />
       <use value="work" />
       <rank value="1" />
     </telecom>
   </contact>
-  <description value="NHSE IG for Task" />
-  <purpose value="NHSE IG for Task" />
+  <description value="This profile defines the NHS England constraints and extensions on the FHIR UK Core resource UK Core Task." />
+  <purpose value="A task resource describes an activity that can be performed and tracks the state of completion of that activity. It is a representation that an activity should be or has been initiated, and eventually, represents the successful or unsuccessful completion of that activity.\n\nNote that there are a variety of processes associated with making and processing orders. Some orders may be handled immediately by automated systems but most require real world actions by one or more humans. Some orders can only be processed when other real world actions happen, such as a patient presenting themselves so that the action to be performed can actually be performed. Often these real world dependencies are only implicit in the order details." />
   <copyright value="Copyright: Copyright © 2021+ HL7 UK Licensed under the Apache License, Version 2.0 (the \&quot;License\&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at  http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \&quot;AS IS\&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. HL7® FHIR® standard Copyright © 2011+ HL7 The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at  https://www.hl7.org/fhir/license.html." />
   <fhirVersion value="4.0.1" />
   <kind value="resource" />
@@ -50,7 +50,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-ProvenanceAgent" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-EnglandProvenanceAgent" />
       </type>
       <isModifier value="false" />
     </element>
@@ -61,7 +61,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-EPS-Prescription" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-EPSPrescription" />
       </type>
       <isModifier value="false" />
     </element>
@@ -73,7 +73,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-EPS-RepeatInformation" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-EPSRepeatInformation" />
       </type>
       <mustSupport value="true" />
       <isModifier value="false" />
