@@ -155,9 +155,11 @@
     "typeMode": "none",
     "input": [ {
       "name": "src",
+      "type": "unsignedInt",
       "mode": "source"
     }, {
       "name": "tgt",
+      "type": "unsignedInt",
       "mode": "target"
     } ],
     "rule": [ {
@@ -191,9 +193,11 @@
     "typeMode": "none",
     "input": [ {
       "name": "src",
+      "type": "dateTime",
       "mode": "source"
     }, {
       "name": "tgt",
+      "type": "dateTime",
       "mode": "target"
     } ],
     "rule": [ {
@@ -227,9 +231,11 @@
     "typeMode": "none",
     "input": [ {
       "name": "src",
+      "type": "unsignedInt",
       "mode": "source"
     }, {
       "name": "tgt",
+      "type": "unsignedInt",
       "mode": "target"
     } ],
     "rule": [ {
