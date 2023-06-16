@@ -19,18 +19,18 @@
   }, {
     "url": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationRequest",
     "mode": "target",
-    "alias": "MedicationRequest"
+    "alias": "MedicationRequestSTU3"
   } ],
   "group": [ {
-    "name": "MedicationRequest",
+    "name": "MedicationRequestR4",
     "typeMode": "none",
     "input": [ {
       "name": "src",
-      "type": "MedicationRequest",
+      "type": "MedicationRequestSTU3",
       "mode": "source"
     }, {
       "name": "tgt",
-      "type": "MedicationRequest",
+      "type": "MedicationRequestR4",
       "mode": "target"
     } ],
     "rule": [ {

@@ -15,22 +15,22 @@
   "structure": [ {
     "url": "https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-GPC-MedicationRequest-1",
     "mode": "source",
-    "alias": "MedicationRequest"
+    "alias": "MedicationRequestSTU3"
   }, {
     "url": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationRequest",
     "mode": "target",
-    "alias": "MedicationRequest"
+    "alias": "MedicationRequestR4"
   } ],
   "group": [ {
     "name": "MedicationRequest",
     "typeMode": "none",
     "input": [ {
       "name": "src",
-      "type": "MedicationRequest",
+      "type": "MedicationRequestSTU3",
       "mode": "source"
     }, {
       "name": "tgt",
-      "type": "MedicationRequest",
+      "type": "MedicationRequestR4",
       "mode": "target"
     } ],
     "rule": [ {
@@ -62,7 +62,7 @@
           "variable": "vt1"
         } ],
         "rule": [ {
-          "name": "value-CodeableConcept",
+          "name": "valueCodeableConcept",
           "source": [ {
             "context": "vs",
             "type": "CodeableConcept",
