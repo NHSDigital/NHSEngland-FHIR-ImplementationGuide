@@ -15,14 +15,14 @@
   "structure": [ {
     "url": "https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-GPC-MedicationRequest-1",
     "mode": "source",
-    "alias": "MedicationRequest"
+    "alias": "MedicationRequestSTU3"
   }, {
     "url": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationRequest",
     "mode": "target",
-    "alias": "MedicationRequestSTU3"
+    "alias": "MedicationRequestR4"
   } ],
   "group": [ {
-    "name": "MedicationRequestR4",
+    "name": "MedicationRequest",
     "typeMode": "none",
     "input": [ {
       "name": "src",
