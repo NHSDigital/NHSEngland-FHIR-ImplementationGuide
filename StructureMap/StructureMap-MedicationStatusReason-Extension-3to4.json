@@ -28,7 +28,7 @@
   },
 	{
     "url": "http://hl7.org/fhir/StructureDefinition/CodeableConcept",
-    "mode": "target",
+    "mode": "source",
     "alias": "CodeableConceptR4"
   }	],
   "group": [ {
