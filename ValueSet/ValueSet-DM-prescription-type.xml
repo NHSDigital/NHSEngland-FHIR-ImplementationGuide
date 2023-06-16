@@ -2,14 +2,19 @@
 <ValueSet xmlns="http://hl7.org/fhir">
     <id value="043b4a0c-1677-4d95-b804-9880ef818e27"/>
     <url value="https://fhir.nhs.uk/ValueSet/DM-prescription-type"/>
-    <version value="1.0.4"/>
+    <version value="1.0.5"/>
     <name value="DMPrescriptionType"/>
     <status value="draft"/>
     <description value="Subset on UK Core Prescription Therapy Type which is permitted for EPS use."/>
     <compose>
         <include>
             <system value="https://fhir.nhs.uk/CodeSystem/prescription-type"/>
-            <version value="1.1.4"/>
+            <version value="1.1.5"/>
+            <filter>
+                <property value="deprecated"/>
+                <op value="exists"/>
+                <value value="false"/>
+            </filter>
         </include>
     </compose>
     <expansion>

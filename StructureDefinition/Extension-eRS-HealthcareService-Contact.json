@@ -101,8 +101,7 @@
         "sliceName": "telecom",
         "short": "The contact point details",
         "definition": "The contact point details.",
-        "min": 1,
-        "max": "1"
+        "min": 1
       },
       {
         "id": "Extension.extension:telecom.url",

@@ -8,7 +8,7 @@
     "lastUpdated": "2016-03-08T15:26:01+01:00"
   },
   "status": "current",
-  "type": {
+  "category": [{
     "coding": [
       {
         "system": "http://snomed.info/sct",
@@ -16,7 +16,7 @@
         "display": "Discharge summary"
       }
     ]
-  },
+  }],
   "subject": {
     "identifier": {
       "system": "https://fhir.nhs.uk/Id/nhs-number",

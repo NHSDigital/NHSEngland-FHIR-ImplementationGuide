@@ -200,7 +200,8 @@
               "https://fhir.nhs.uk/StructureDefinition/NHSDigital-ServiceRequest",
               "https://fhir.nhs.uk/StructureDefinition/NHSDigital-Bundle-FHIRMessage",
               "https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationRequest",
-              "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Patient"
+              "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Patient",
+              "https://fhir.nhs.uk/StructureDefinition/NHSDigital-Questionnaire"
             ]
           }
         ],
@@ -209,8 +210,7 @@
             "key": "nhsd-taskfocus",
             "severity": "error",
             "human": "focus - An identifier reference or resource reference must be provided",
-            "expression": "(reference.exists() or identifier.exists())",
-            "source": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-Task"
+            "expression": "(reference.exists() or identifier.exists())"
           }
         ],
         "mustSupport": true
@@ -225,8 +225,7 @@
             "key": "patient-reference",
             "severity": "error",
             "human": "An identifier reference or resource reference must be provided",
-            "expression": "(reference.exists() or identifier.exists())",
-            "source": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-Task"
+            "expression": "(reference.exists() or identifier.exists())"
           },
           {
             "key": "patient-nhs",

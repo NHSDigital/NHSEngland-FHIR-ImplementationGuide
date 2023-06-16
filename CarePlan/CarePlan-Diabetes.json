@@ -1,0 +1,105 @@
+{
+    "resourceType": "CarePlan",
+    "id": "50b2b5fe-6997-4875-b317-fb7c35524cfb",
+    "subject": {
+        "identifier": {
+            "system": "https://fhir.nhs.uk/Id/nhs-number",
+            "value": "9876543210"
+        }
+    },
+    "identifier": [
+        {
+            "system": "http://example.org/sampleepisodeofcare-identifier",
+            "value": "50b2b5fe-6997-4875-b317-fb7c35524cfb"
+        }
+    ],
+    "status": "active",
+    "intent": "plan",
+    "title": "Primary Care",
+    "goal": [
+        {
+            "reference": "Goal/va-goal-dan-a1c",
+            "display": "Hemoglobin A1c"
+        },
+        {
+            "reference": "Goal/va-goal-dan-glucose",
+            "display": "Fasting blood glucose level"
+        }
+    ],
+    "addresses": [
+        {
+            "extension" : [{
+                "url":"https://fhir.nhs.uk/StructureDefinition/CodeableReference",
+                "valueCodeableConcept" : {
+                    "coding" : [
+                        {
+                            "system": "http://snomed.info/sct",
+                            "code": "44054006",
+                            "display": "Type 2 diabetes mellitus"
+                        }
+                    ]
+                }
+            }],
+            "type" : "Condition",
+            "identifier" : {
+                "system" : "https://tools.ietf.org/html/rfc4122",
+                "value" : "81ee47ad-717d-413f-8ec9-62c19060da88"
+            },
+            "display": "Type 2 diabetes mellitus"
+        },
+        {
+            "reference": "Condition/va-cond-dan-concern-glucose",
+            "display": "Inability to maintain effective blood glucose control"
+        },
+        {
+            "reference": "Condition/va-cond-dan-concern-foot",
+            "display": "Peripheral vascular and neuropathy risks leading to heightened foot complication risks"
+        }
+    ],
+    "careTeam": [
+        {
+            "identifier": {
+                "value": "a85535c8-a0ba-4bae-bce9-8a245123ad8f"
+            },
+            "display": "Diabetes Care Team"
+        }
+    ],
+    "activity": [
+        {
+            "reference": {
+                "extension" : [{
+                    "url":"https://fhir.nhs.uk/StructureDefinition/CodeableReference",
+                    "valueCodeableConcept" : {
+                        "coding" : [
+                            {
+                                "system": "http://snomed.info/sct",
+                                "code": "765507008",
+                                "display": "Metformin hydrochloride 500 mg prolonged-release oral tablet"
+                            }
+                        ]
+                    }
+    
+                }],
+                "display": "Metformin hydrochloride 500 MG Oral Tablet"
+            }
+        },
+        {
+            "reference": {
+                "extension" : [{
+                    "url":"https://fhir.nhs.uk/StructureDefinition/CodeableReference",
+                    "valueCodeableConcept" : {
+                        "coding" : [
+                            {
+                                "system": "http://snomed.info/sct",
+                                "code": "1193825003",
+                                "display": "Amlodipine (as amlodipine besilate) 10 mg and lisinopril 20 mg oral tablet"
+                            }
+                        ]
+                    }
+    
+                }],
+                "display": "Lisinopril 10 MG Oral Tablet"
+            }
+        } 
+    ]
+}

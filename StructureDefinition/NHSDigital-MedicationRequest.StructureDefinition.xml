@@ -26,12 +26,6 @@
         <expression value="extension('https://fhir.nhs.uk/StructureDefinition/Extension-DM-ResponsiblePractitioner').exists().not() or (extension('https://fhir.nhs.uk/StructureDefinition/Extension-DM-ResponsiblePractitioner').value.reference.exists() or extension('https://fhir.nhs.uk/StructureDefinition/Extension-DM-ResponsiblePractitioner').value.system.exists())" />
       </constraint>
       <constraint>
-        <key value="eps-6" />
-        <severity value="error" />
-        <human value="Extension repeatInformation is required for continuous and continuous-repeat-dispensing MedicationRequests. It is not required for actue MedicationRequests" />
-        <expression value="(courseOfTherapyType.coding.code.startsWith('acute') and extension('https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-MedicationRepeatInformation').exists().not()) or  ((courseOfTherapyType.coding.code.startsWith('continuous')) and extension('https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-MedicationRepeatInformation').exists())" />
-      </constraint>
-      <constraint>
         <key value="eps-7" />
         <severity value="warning" />
         <human value="For continuous-repeat-dispensing intent must be reflex-order or original-order" />
@@ -71,7 +65,7 @@
         <key value="eps-13" />
         <severity value="error" />
         <human value="Extension repeatInformation.numberOfPrescriptionsIssued should not be present for continuous-repeat-dispensing that are not intent=reflex-order" />
-        <expression value="(courseOfTherapyType.coding.code != 'continuous-repeat-dispensing') or (courseOfTherapyType.coding.code = 'continuous-repeat-dispensing' and intent='reflex-order') or (courseOfTherapyType.coding.code = 'continuous-repeat-dispensing' and intent!='reflex-order' and extension('https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-MedicationRepeatInformation').exists() and extension('https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-MedicationRepeatInformation').extension('numberOfPrescriptionsIssued').exists().not())" />
+        <expression value="(courseOfTherapyType.coding.code != 'continuous-repeat-dispensing') or (courseOfTherapyType.coding.code = 'continuous-repeat-dispensing' and intent='reflex-order') or (courseOfTherapyType.coding.code = 'continuous-repeat-dispensing' and intent!='reflex-order' and extension('https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-MedicationRepeatInformation').exists().not()) or (courseOfTherapyType.coding.code = 'continuous-repeat-dispensing' and intent!='reflex-order' and extension('https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-MedicationRepeatInformation').exists() and extension('https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-MedicationRepeatInformation').extension('numberOfPrescriptionsIssued').exists().not())" />
       </constraint>
       <constraint>
         <key value="eps-14" />
@@ -107,7 +101,7 @@
       <path value="MedicationRequest.extension" />
       <sliceName value="medicationRepeatInformation" />
       <short value="Continous and Continuous Repeat Dispensing" />
-      <definition value="This extension &lt;b&gt;MUST&lt;/b&gt; be present for  `continuous` and `continuous-repeat-dispensing` therapy types. &#xD;&#xA;&#xD;&#xA;| Field | Description |&#xD;&#xA;|---|---|&#xD;&#xA;| numberOfPrescriptionsIssued |  Running total of number of issues made against a repeat authorisation. Including this issue.   |&#xD;&#xA;| ~~numberOfRepeatPrescriptionsAllowed~~ | Retired. See &lt;a href=&quot;#numberOfRepeatsAllowed&quot;&gt;numberOfRepeatsAllowed&lt;/a&gt; | &#xD;&#xA;| authorisationExpiryDate | The date a repeat prescription authorisation will expire. |&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;extension&quot;: [&#xD;&#xA;  {&#xD;&#xA;       &quot;url&quot;: &quot;https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-MedicationRepeatInformation&quot;,&#xD;&#xA;       &quot;extension&quot;: [&#xD;&#xA;           {&#xD;&#xA;               &quot;url&quot;: &quot;numberOfPrescriptionsIssued&quot;,&#xD;&#xA;               &quot;valueUnsignedInt&quot;: 3&#xD;&#xA;           },&#xD;&#xA;           {&#xD;&#xA;               &quot;url&quot;: &quot;authorisationExpiryDate&quot;,&#xD;&#xA;               &quot;valueDateTime&quot;: &quot;2020-08-07&quot;&#xD;&#xA;           }&#xD;&#xA;       ]&#xD;&#xA;   }&#xD;&#xA;]&#xD;&#xA;```" />
+      <definition value="This extension &lt;b&gt;SHOULD&lt;/b&gt; be present for  `continuous` and `continuous-repeat-dispensing` therapy types. &#xD;&#xA;&#xD;&#xA;| Field | Description |&#xD;&#xA;|---|---|&#xD;&#xA;| numberOfPrescriptionsIssued |  Running total of number of issues made against a repeat authorisation. Including this issue.   |&#xD;&#xA;| ~~numberOfRepeatPrescriptionsAllowed~~ | Retired. See &lt;a href=&quot;#numberOfRepeatsAllowed&quot;&gt;numberOfRepeatsAllowed&lt;/a&gt; | &#xD;&#xA;| authorisationExpiryDate | The date a repeat prescription authorisation will expire. |&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;extension&quot;: [&#xD;&#xA;  {&#xD;&#xA;       &quot;url&quot;: &quot;https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-MedicationRepeatInformation&quot;,&#xD;&#xA;       &quot;extension&quot;: [&#xD;&#xA;           {&#xD;&#xA;               &quot;url&quot;: &quot;numberOfPrescriptionsIssued&quot;,&#xD;&#xA;               &quot;valueUnsignedInt&quot;: 3&#xD;&#xA;           },&#xD;&#xA;           {&#xD;&#xA;               &quot;url&quot;: &quot;authorisationExpiryDate&quot;,&#xD;&#xA;               &quot;valueDateTime&quot;: &quot;2020-08-07&quot;&#xD;&#xA;           }&#xD;&#xA;       ]&#xD;&#xA;   }&#xD;&#xA;]&#xD;&#xA;```" />
       <min value="0" />
       <mustSupport value="true" />
     </element>

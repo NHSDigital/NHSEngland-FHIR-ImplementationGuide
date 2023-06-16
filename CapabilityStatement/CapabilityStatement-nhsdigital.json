@@ -32,6 +32,10 @@
             },
             "resource": [
                 {
+                    "type": "Account",
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-Account"
+                },
+                {
                     "type": "AllergyIntolerance",
                     "profile": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-AllergyIntolerance"
                 },
@@ -81,7 +85,7 @@
                 },
                 {
                     "type": "Location",
-                    "profile": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Location"
+                    "profile": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-Location"
                 },
                 {
                     "type": "List",

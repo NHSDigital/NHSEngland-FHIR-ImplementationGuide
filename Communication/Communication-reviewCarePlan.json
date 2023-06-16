@@ -1,0 +1,53 @@
+{
+    "resourceType": "Communication",
+    "id": "f2443c65-61f3-4389-a98c-e4f8c50d6538",
+    "identifier": [
+        {
+            "value": "f2443c65-61f3-4389-a98c-e4f8c50d6538"
+        }
+    ],
+    "status": "completed",
+    "payload": [
+        {
+            "contentString": "I've tried increasing my physical activity but it isn't altering my weight. Do we need to review my nutritional goals?"
+        }
+    ],
+    "inResponseTo": [
+        {
+            "identifier": {
+                "value": "14256fa0-59c3-45b8-b363-e2ed10af93d2"
+            }
+        }
+    ],
+    "sent": "2023-03-13T09:38:30.404Z",
+    "subject": {
+        "type": "Patient",
+        "identifier": {
+            "system": "https://fhir.nhs.uk/Id/nhs-number",
+            "value": "9333333333"
+        }
+    },
+    "sender": {
+        "type": "Patient",
+        "identifier": {
+            "system": "https://fhir.nhs.uk/Id/nhs-number",
+            "value": "9333333333"
+        }
+    },
+    "recipient": [
+        {
+            "type": "Organization",
+            "identifier": {
+                "system": "https://fhir.nhs.uk/Id/ods-organization-code",
+                "value": "RY6"
+            }
+        },
+        {
+            "type": "Organization",
+            "identifier": {
+                "system": "https://fhir.nhs.uk/Id/ods-organization-code",
+                "value": "B86009"
+            }
+        }
+    ]
+}
