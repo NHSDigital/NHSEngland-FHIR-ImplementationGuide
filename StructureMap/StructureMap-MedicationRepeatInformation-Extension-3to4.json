@@ -155,11 +155,11 @@
     "typeMode": "none",
     "input": [ {
       "name": "src",
-      "type": "unsignedInt",
+      "type": "Extension",
       "mode": "source"
     }, {
       "name": "tgt",
-      "type": "unsignedInt",
+      "type": "Extension",
       "mode": "target"
     } ],
     "rule": [ {
@@ -193,11 +193,11 @@
     "typeMode": "none",
     "input": [ {
       "name": "src",
-      "type": "dateTime",
+      "type": "Extension",
       "mode": "source"
     }, {
       "name": "tgt",
-      "type": "dateTime",
+      "type": "Extension",
       "mode": "target"
     } ],
     "rule": [ {
@@ -231,11 +231,11 @@
     "typeMode": "none",
     "input": [ {
       "name": "src",
-      "type": "unsignedInt",
+      "type": "Extension",
       "mode": "source"
     }, {
       "name": "tgt",
-      "type": "unsignedInt",
+      "type": "BackboneElement",
       "mode": "target"
     } ],
     "rule": [ {
