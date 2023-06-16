@@ -20,17 +20,7 @@
     "url": "http://hl7.org/fhir/StructureDefinition/MedicationRequest",
     "mode": "target",
     "alias": "MedicationRequestR4"
-  },
-	{
-    "url": "http://hl7.org/fhir/StructureDefinition/CodeableConcept",
-    "mode": "source",
-    "alias": "CodeableConceptSTU3"
-  },
-	{
-    "url": "http://hl7.org/fhir/StructureDefinition/CodeableConcept",
-    "mode": "source",
-    "alias": "CodeableConceptR4"
-  }	],
+  } ],
   "group": [ {
     "name": "MedicationRequest",
     "typeMode": "none",
