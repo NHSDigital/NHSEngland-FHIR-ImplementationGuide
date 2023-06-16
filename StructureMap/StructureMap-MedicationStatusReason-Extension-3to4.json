@@ -13,11 +13,11 @@
   "url": "http://fhir.nhs.uk/StructureMap/MedicationStatusReason-Extension-3to4",
   "name": "R3toR4conversionforCareConnectMedicationStatusReasonextension",
   "structure": [ {
-    "url": "http://hl7.org/fhir/StructureDefinition/MedicationRequest",
+    "url": "https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-GPC-MedicationRequest-1",
     "mode": "source",
     "alias": "MedicationRequest"
   }, {
-    "url": "http://hl7.org/fhir/StructureDefinition/MedicationRequest",
+    "url": "https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationRequest",
     "mode": "target",
     "alias": "MedicationRequest"
   } ],

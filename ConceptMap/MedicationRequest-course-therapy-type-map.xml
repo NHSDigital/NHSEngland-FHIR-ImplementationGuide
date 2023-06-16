@@ -24,7 +24,7 @@
         <target value="https://fhir.nhs.uk/CodeSystem/DM-prescription-treatment-type"/>
         <element>
             <code value="acute"/>
-            <display value="Acute"/>
+            <display value="Short course (acute) therapy"/>
             <target>
                 <code value="0001"/>
                 <display value="Acute"/>

@@ -34,7 +34,7 @@
             </target>
         </element>
         <element>
-            <code value="INVALID_NUMBER_MEDICATIONREQUEST" />
+            <code value="INVALID_NUMBER_MEDICATIONREQUESTS" />
             <display value="Number of items on a prescription should be between 1 and 4" />
             <target>
                 <code value="business-rule" />
