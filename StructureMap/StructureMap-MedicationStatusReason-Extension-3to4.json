@@ -12,212 +12,296 @@
   },
   "url": "http://fhir.nhs.uk/StructureMap/MedicationStatusReason-Extension-3to4",
   "name": "R3toR4conversionforCareConnectMedicationStatusReasonextension",
-  "structure": [ {
-    "url": "http://hl7.org/fhir/StructureDefinition/MedicationRequest",
-    "mode": "source",
-    "alias": "MedicationRequestSTU3"
-  }, {
-    "url": "http://hl7.org/fhir/StructureDefinition/MedicationRequest",
-    "mode": "target",
-    "alias": "MedicationRequestR4"
-  } ],
-  "group": [ {
-    "name": "MedicationRequest",
-    "typeMode": "none",
-    "input": [ {
-      "name": "src",
-      "type": "MedicationRequestSTU3",
-      "mode": "source"
-    }, {
-      "name": "tgt",
-      "type": "MedicationRequestR4",
-      "mode": "target"
-    } ],
-    "rule": [ {
-      "name": "extension",
-      "source": [ {
-        "context": "src",
-        "element": "extension",
-        "variable": "ext",
-        "condition": "$this.url = 'https://fhir.nhs.uk/STU3/StructureDefinition/Extension-CareConnect-MedicationStatusReason-1'"
-      } ],
-      "target": [ {
-        "context": "tgt",
-        "contextType": "variable",
-        "element": "statusReason",
-        "variable": "vt"
-      } ],
-      "rule": [ {
-        "name": "extension",
-        "source": [ {
-          "context": "ext",
-          "element": "extension",
-          "variable": "vs",
-          "condition": "$this.url = 'statusReason'"
-        } ],
-        "target": [ {
-          "context": "tgt",
-          "contextType": "variable",
-          "element": "statusReason",
-          "variable": "vt1"
-        } ],
-        "rule": [ {
-          "name": "valueCodeableConcept",
-          "source": [ {
-            "context": "vs",
-            "type": "CodeableConcept",
-            "element": "value",
-            "variable": "vs1"
-          } ],
-          "target": [ {
-            "context": "tgt",
-            "contextType": "variable",
-            "element": "statusReason",
-            "variable": "vt2"
-          } ],
-          "dependent": [ {
-            "name": "CodeableConceptStatusReason",
-            "variable": [ "vs1", "vt2" ]
-          } ]
-        } ]
-      } ]
-    } ]
-  }, {
-    "name": "CodeableConceptStatusReason",
-    "typeMode": "none",
-    "input": [ {
-      "name": "src",
-      "type": "CodeableConcept",
-      "mode": "source"
-    }, {
-      "name": "tgt",
-      "type": "CodeableConcept",
-      "mode": "target"
-    } ],
-    "rule": [ {
-      "name": "coding",
-      "source": [ {
-        "context": "src",
-        "element": "coding",
-        "variable": "vvv"
-      } ],
-      "target": [ {
-        "context": "tgt",
-        "contextType": "variable",
-        "element": "coding",
-        "variable": "vvv",
-        "transform": "create"
-      } ],
-      "documentation": "src.coding -> tgt.coding; the short form is only woking when you have a <<type>>"
-    }, {
-      "name": "text",
-      "source": [ {
-        "context": "src",
-        "element": "text",
-        "variable": "text"
-      } ],
-      "target": [ {
-        "context": "tgt",
-        "contextType": "variable",
-        "element": "text",
-        "transform": "copy",
-        "parameter": [ {
-          "valueId": "text"
-        } ]
-      } ]
-    } ]
-  }, {
-    "name": "Coding",
-    "typeMode": "type-and-types",
-    "input": [ {
-      "name": "src",
-      "type": "Coding",
-      "mode": "source"
-    }, {
-      "name": "tgt",
-      "type": "Coding",
-      "mode": "target"
-    } ],
-    "rule": [ {
-      "name": "system",
-      "source": [ {
-        "context": "src",
-        "element": "system",
-        "variable": "system"
-      } ],
-      "target": [ {
-        "context": "tgt",
-        "contextType": "variable",
-        "element": "system",
-        "transform": "copy",
-        "parameter": [ {
-          "valueId": "system"
-        } ]
-      } ]
-    }, {
-      "name": "version",
-      "source": [ {
-        "context": "src",
-        "element": "version",
-        "variable": "version"
-      } ],
-      "target": [ {
-        "context": "tgt",
-        "contextType": "variable",
-        "element": "version",
-        "transform": "copy",
-        "parameter": [ {
-          "valueId": "version"
-        } ]
-      } ]
-    }, {
-      "name": "code",
-      "source": [ {
-        "context": "src",
-        "element": "code",
-        "variable": "code"
-      } ],
-      "target": [ {
-        "context": "tgt",
-        "contextType": "variable",
-        "element": "code",
-        "transform": "copy",
-        "parameter": [ {
-          "valueId": "code"
-        } ]
-      } ]
-    }, {
-      "name": "display",
-      "source": [ {
-        "context": "src",
-        "element": "display",
-        "variable": "display"
-      } ],
-      "target": [ {
-        "context": "tgt",
-        "contextType": "variable",
-        "element": "display",
-        "transform": "copy",
-        "parameter": [ {
-          "valueId": "display"
-        } ]
-      } ]
-    }, {
-      "name": "userSelected",
-      "source": [ {
-        "context": "src",
-        "element": "userSelected",
-        "variable": "userSelected"
-      } ],
-      "target": [ {
-        "context": "tgt",
-        "contextType": "variable",
-        "element": "userSelected",
-        "transform": "copy",
-        "parameter": [ {
-          "valueId": "userSelected"
-        } ]
-      } ]
-    } ]
-  } ]
+  "structure": [ 
+	  {
+      "url": "http://hl7.org/fhir/StructureDefinition/MedicationRequest",
+      "mode": "source",
+      "alias": "MedicationRequestSTU3"
+    }, 
+		{
+      "url": "http://hl7.org/fhir/StructureDefinition/MedicationRequest",
+      "mode": "target",
+      "alias": "MedicationRequestR4"
+    }
+	],
+  "group": [ 
+	  {
+      "name": "MedicationRequest",
+			"typeMode": "none",
+			"input": [ 
+				{
+					"name": "src",
+					"type": "MedicationRequestSTU3",
+					"mode": "source"
+				},
+				{
+					"name": "tgt",
+					"type": "MedicationRequestR4",
+					"mode": "target"
+				}
+			],
+			"rule": [ 
+				{
+					"name": "extension",
+					"source": [ 
+						{
+							"context": "src",
+							"element": "extension",
+							"variable": "ext",
+							"condition": "$this.url = 'https://fhir.nhs.uk/STU3/StructureDefinition/Extension-CareConnect-MedicationStatusReason-1'"
+						}
+					],
+					"target": [ 
+						{
+							"context": "tgt",
+							"contextType": "variable",
+							"element": "statusReason",
+							"variable": "vt"
+						}
+					],
+					"rule": [ 
+						{
+							"name": "extension",
+							"source": [ 
+								{
+									"context": "ext",
+									"element": "extension",
+									"variable": "vs",
+									"condition": "$this.url = 'statusReason'"
+								}
+							],
+							"target": [ 
+								{
+									"context": "tgt",
+									"contextType": "variable",
+									"element": "statusReason",
+									"variable": "vt1"
+								}
+							],
+							"rule": [ 
+								{
+									"name": "valueCodeableConcept",
+									"source": [ 
+										{
+											"context": "vs",
+											"type": "CodeableConcept",
+											"element": "value",
+											"variable": "vs1"
+										} 
+									],
+									"target": [ 
+										{
+											"context": "tgt",
+											"contextType": "variable",
+											"element": "statusReason",
+											"variable": "vt2"
+										} 
+									],
+									"dependent": [ 
+										{
+											"name": "CodeableConceptStatusReason",
+											"variable": [ "vs1", "vt2" ]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		}, 
+		{
+			"name": "CodeableConceptStatusReason",
+			"typeMode": "none",
+			"input": [ 
+				{
+					"name": "src",
+					"type": "CodeableConcept",
+					"mode": "source"
+				},
+				{
+					"name": "tgt",
+					"mode": "target"
+				}
+			],
+			"rule": [ 
+				{
+					"name": "coding",
+					"source": [ 
+						{
+							"context": "src",
+							"element": "coding",
+							"variable": "vvv"
+						}
+					],
+					"target": [ 
+						{
+							"context": "tgt",
+							"contextType": "variable",
+							"element": "coding",
+							"variable": "vvv",
+							"transform": "create"
+						} 
+					],
+					"documentation": "src.coding -> tgt.coding; the short form is only woking when you have a <<type>>"
+				},
+				{
+					"name": "text",
+					"source": [ 
+						{
+							"context": "src",
+							"element": "text",
+							"variable": "text"
+						} 
+					],
+					"target": [
+						{
+							"context": "tgt",
+							"contextType": "variable",
+							"element": "text",
+							"transform": "copy",
+							"parameter": [ 
+								{
+									"valueId": "text"
+								}
+							]
+						}
+					]
+				} 
+			]
+		}, 
+		{
+			"name": "Coding",
+			"typeMode": "type-and-types",
+			"input": [ 
+				{
+					"name": "src",
+					"type": "Coding",
+					"mode": "source"
+				}, 
+				{
+					"name": "tgt",
+					"type": "Coding",
+					"mode": "target"
+				} 
+			],
+			"rule": [ 
+				{
+					"name": "system",
+					"source": [ 
+						{
+							"context": "src",
+							"element": "system",
+							"variable": "system"
+						}
+					],
+					"target": [
+						{
+							"context": "tgt",
+							"contextType": "variable",
+							"element": "system",
+							"transform": "copy",
+							"parameter": [ 
+								{
+									"valueId": "system"
+								} 
+							]
+						} 
+					]
+				}, 
+				{
+					"name": "version",
+					"source": [ 
+						{
+							"context": "src",
+							"element": "version",
+							"variable": "version"
+						} 
+					],
+					"target": [ 
+						{
+							"context": "tgt",
+							"contextType": "variable",
+							"element": "version",
+							"transform": "copy",
+							"parameter": [
+								{
+									"valueId": "version"
+								} 
+							]
+						} 
+					]
+				},
+				{
+					"name": "code",
+					"source": [ 
+						{
+							"context": "src",
+							"element": "code",
+							"variable": "code"
+						}
+					],
+					"target": [ 
+						{
+							"context": "tgt",
+							"contextType": "variable",
+							"element": "code",
+							"transform": "copy",
+							"parameter": [
+								{
+									"valueId": "code"
+								}
+							]
+						}
+					]
+				}, 
+				{
+					"name": "display",
+					"source": [ 
+						{
+							"context": "src",
+							"element": "display",
+							"variable": "display"
+						}
+					],
+					"target": [
+						{
+							"context": "tgt",
+							"contextType": "variable",
+							"element": "display",
+							"transform": "copy",
+							"parameter": [ 
+								{
+									"valueId": "display"
+								}
+							]
+						}
+					]
+				}, 
+				{
+					"name": "userSelected",
+					"source": [ 
+						{
+							"context": "src",
+							"element": "userSelected",
+							"variable": "userSelected"
+						} 
+					],
+					"target": [ 
+						{
+							"context": "tgt",
+							"contextType": "variable",
+							"element": "userSelected",
+							"transform": "copy",
+							"parameter": [ 
+								{
+									"valueId": "userSelected"
+								} 
+							]
+						} 
+					]
+				}
+			]
+		} 
+	]
 }
