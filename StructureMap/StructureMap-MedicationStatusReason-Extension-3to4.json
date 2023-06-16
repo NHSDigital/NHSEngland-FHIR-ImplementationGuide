@@ -97,7 +97,6 @@
     "typeMode": "none",
     "input": [ {
       "name": "src",
-      "type": "CodeableConceptSTU3",
       "type": "CodeableConcept",
       "mode": "source"
     }, {
