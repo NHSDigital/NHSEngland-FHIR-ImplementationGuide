@@ -98,10 +98,11 @@
     "input": [ {
       "name": "src",
       "type": "CodeableConceptSTU3",
+      "type": "CodeableConcept",
       "mode": "source"
     }, {
       "name": "tgt",
-      "type": "CodeableConceptR4",
+      "type": "CodeableConcept",
       "mode": "target"
     } ],
     "rule": [ {
