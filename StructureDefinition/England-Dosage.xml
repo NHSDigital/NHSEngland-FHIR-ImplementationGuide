@@ -62,7 +62,7 @@
       </type>
       <type>
         <code value="Range" />
-        <profile value="https://fhir.nhs.uk.uk/StructureDefinition/England-Range" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/Range" />
       </type>
       <type>
         <code value="Period" />
@@ -96,7 +96,7 @@
       <path value="Dosage.doseAndRate.dose[x]" />
       <type>
         <code value="Range" />
-        <profile value="https://fhir.nhs.uk.uk/StructureDefinition/England-Range" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/Range" />
       </type>
       <type>
         <code value="Quantity" />

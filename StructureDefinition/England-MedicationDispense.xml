@@ -18,6 +18,7 @@
     </telecom>
   </contact>
   <description value="Medication Dispense" />
+  This profile defines the NHS England constraints and extensions on the FHIR UK Core resource [UK Core MedicationDispense](https://simplifier.net/hl7fhirukcorer4/ukcore-MedicationDispense).
   <purpose value="Medication Dispense" />
   <copyright value="Copyright © 2021+ HL7 UK Licensed under the Apache License, Version 2.0 (the \&quot;License\&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at  http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \&quot;AS IS\&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. HL7® FHIR® standard Copyright © 2011+ HL7 The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at  https://www.hl7.org/fhir/license.html." />
   <fhirVersion value="4.0.1" />
@@ -153,12 +154,12 @@
       <mustSupport value="true" />
       <binding>
         <strength value="required" />
-        <valueSet value="https://fhir.nhs.uk/ValueSet/DM-task-reason-code" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/England-DMTaskReasonCode" />
       </binding>
     </element>
     <element id="MedicationDispense.statusReason[x].coding:amendmentStatusReason.system">
       <path value="MedicationDispense.statusReason[x].coding.system" />
-      <fixedUri value="https://fhir.nhs.uk/CodeSystem/EPS-task-dispense-withdraw-reason" />
+      <fixedUri value="https://fhir.nhs.uk/CodeSystem/England-EPSTaskDispenseWithdrawReason" />
     </element>
     <element id="MedicationDispense.category.coding.system">
       <path value="MedicationDispense.category.coding.system" />
@@ -173,7 +174,7 @@
       <definition value="Actual Medical Product Packs (AMPP) SHOULD be used. &#xD;&#xA;It is valid to include a FHIR Medication resource within the FHIR Message, this practice is discouraged to simplify handling of the event messages.&#xD;&#xA;&#xD;&#xA;&lt;table&gt;&#xD;&#xA;&lt;thead&gt;&#xD;&#xA;&lt;th data-no-sort width=&quot;25%&quot;&gt;&#xD;&#xA;dm+d Category&#xD;&#xA;&lt;/th&gt;&#xD;&#xA;&lt;th data-no-sort width=&quot;50%&quot;&gt;&#xD;&#xA;dm+d Description&#xD;&#xA;&lt;/th&gt;&#xD;&#xA;&lt;th data-no-sort width=&quot;25%&quot;&gt;&#xD;&#xA;UK SNOMED Members Of&#xD;&#xA;&lt;/th&gt;&#xD;&#xA;&#xD;&#xA;&lt;/thead&gt;&#xD;&#xA;&lt;tr&gt;&#xD;&#xA;&lt;td&gt;&#xD;&#xA;VMPP&#xD;&#xA;&lt;/td&gt;&#xD;&#xA;&lt;td&gt;&#xD;&#xA;Virtual Medical Product Pack&#xD;&#xA;&lt;/td&gt;&#xD;&#xA;&lt;td&gt;&#xD;&#xA;&lt;a href=&quot;https://termbrowser.nhs.uk/?perspective=full&amp;conceptId1=999000571000001104&quot; target=&quot;_blank&quot;&gt;999000571000001104&lt;/a&gt;&#xD;&#xA;&lt;/td&gt;&#xD;&#xA;&#xD;&#xA;&lt;/tr&gt;&#xD;&#xA;&lt;tr&gt;&#xD;&#xA;&lt;td&gt;&#xD;&#xA;AMPP&#xD;&#xA;&lt;/td&gt;&#xD;&#xA;&lt;td&gt;&#xD;&#xA;Actual Medical Product Pack&#xD;&#xA;&lt;/td&gt;&#xD;&#xA;&lt;td&gt;&#xD;&#xA;&lt;a href=&quot;https://termbrowser.nhs.uk/?perspective=full&amp;conceptId1=999000551000001106&quot; target=&quot;_blank&quot;&gt;999000551000001106&lt;/a&gt;&#xD;&#xA;&lt;/td&gt;&#xD;&#xA;&lt;/tr&gt;&#xD;&#xA;&lt;tr&gt;&#xD;&#xA;&lt;td&gt;&#xD;&#xA;VMP&#xD;&#xA;&lt;/td&gt;&#xD;&#xA;&lt;td&gt;&#xD;&#xA;Virtual Medical Product&#xD;&#xA;&lt;/td&gt;&#xD;&#xA;&lt;td&gt;&#xD;&#xA;&lt;a href=&quot;https://termbrowser.nhs.uk/?perspective=full&amp;conceptId1=999000561000001109&quot; target=&quot;_blank&quot;&gt;999000561000001109&lt;/a&gt;&#xD;&#xA;&lt;/td&gt;&#xD;&#xA;&lt;/tr&gt;&#xD;&#xA;&lt;tr&gt;&#xD;&#xA;&lt;td&gt;&#xD;&#xA;AMP&#xD;&#xA;&lt;/td&gt;&#xD;&#xA;&lt;td&gt;&#xD;&#xA;Actual Medical Product&#xD;&#xA;&lt;/td&gt;&#xD;&#xA;&lt;td&gt;&#xD;&#xA;&lt;a href=&quot;https://termbrowser.nhs.uk/?perspective=full&amp;conceptId1=999000541000001108&quot; target=&quot;_blank&quot;&gt;999000541000001108&lt;/a&gt;&#xD;&#xA;&lt;/td&gt;&#xD;&#xA;&lt;/tr&gt;&#xD;&#xA;&lt;/table&gt;&#xD;&#xA;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;medicationCodeableConcept&quot;: {&#xD;&#xA;        &quot;coding&quot;:  [&#xD;&#xA;        {&#xD;&#xA;            &quot;system&quot;: &quot;http://snomed.info/sct&quot;,&#xD;&#xA;            &quot;code&quot;: &quot;10460811000001109&quot;,&#xD;&#xA;            &quot;display&quot;: &quot;Amoxil 500mg capsules (Dowelhurst Ltd) 12 capsule&quot;&#xD;&#xA;        }&#xD;&#xA;    ]&#xD;&#xA;}&#xD;&#xA;```" />
       <type>
         <code value="CodeableConcept" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/England-MedicationDispenseCodeableConcept" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/CodeableConcept" />
       </type>
       <type>
         <code value="Reference" />
@@ -312,7 +313,7 @@
     </element>
     <element id="MedicationDispense.quantity.extension:runningTotal.url">
       <path value="MedicationDispense.quantity.extension.url" />
-      <fixedUri value="https://fhir.nhs.uk/StructureDefinition/Extension-DM-RunningTotal" />
+      <fixedUri value="https://fhir.nhs.uk/StructureDefinition/Extension-England-DMRunningTotal" />
     </element>
     <element id="MedicationDispense.quantity.value">
       <path value="MedicationDispense.quantity.value" />

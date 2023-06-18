@@ -1,57 +1,53 @@
 <CodeSystem xmlns="http://hl7.org/fhir">
-    <id value="England-EPSTaskBusinessStatus" />
-    <url value="https://fhir.nhs.uk/CodeSystem/England-EPSTaskBusinessStatus" />
+    <id value="England-EPSTaskDispenseWithdrawReason" />
+    <url value="https://fhir.nhs.uk/CodeSystem/England-EPSTaskDispenseWithdrawReason" />
     <identifier>
         <system value="https://fhir.nhs.uk/identifier/CodeSystem" />
-        <value value="EPS-task-business-status" />
+        <value value="EPS-task-dispense-withdraw-reason" />
     </identifier>
     <version value="1.0.0" />
-    <name value="EnglandEPSTaskBusinessStatus" />
-    <title value="England EPS Task Business Status" />
+    <name value="EnglandEPSTaskDispenseWithdrawReason" />
+    <title value="England EPS Task Dispense Withdraw Reason" />
     <status value="draft" />
-    <experimental value="true" />
+    <experimental value="false" />
     <date value="2023-06-01" />
     <publisher value="NHS England" />
    <contact>
-		<name value="NHS England"/>
-		<telecom>
-			<system value="email"/>
-			<value value="interoperabilityteam@nhs.net"/>
-			<use value="work"/>
-			<rank value="1"/>
-		</telecom>
-	</contact>
-    <description value="Describes the status of a prescription or of an item on a prescription." />
-	<purpose value="Describes the status of a prescription or of an item on a prescription." />
+    <name value="NHS England" />
+    <telecom>
+      <system value="email" />
+      <value value="interoperabilityteam@nhs.net" />
+      <use value="work" />
+      <rank value="1" />
+    </telecom>
+  </contact>
+    <description value="EPS Dispense Withdraw Reason. Taken from HL7v3 UK Cancellation Reason Response" />
+    <purpose value="EPS Dispense Withdraw Reason. Taken from HL7v3 UK Cancellation Reason Response" />
   <copyright value="Copyright © 2021+ HL7 UK Licensed under the Apache License, Version 2.0 (the \&quot;License\&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at  http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \&quot;AS IS\&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. HL7® FHIR® standard Copyright © 2011+ HL7 The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at  https://www.hl7.org/fhir/license.html." />
     <caseSensitive value="true" />
     <content value="complete" />
     <concept>
-        <code value="0001"></code>
-        <display value="To be Dispensed" />
+        <code value="QU"></code>
+        <display value="Quantity Update" />
     </concept>
     <concept>
-        <code value="0002"></code>
-        <display value="With Dispenser" />
+        <code value="MU"></code>
+        <display value="Medication Update" />
     </concept>
     <concept>
-        <code value="0003"></code>
-        <display value="With Dispenser - Active" />
+        <code value="DA"></code>
+        <display value="Dosage Amendments" />
     </concept>
     <concept>
-        <code value="0004"></code>
-        <display value="Expired" />
+        <code value="PA"></code>
+        <display value="Patient Details Amendments" />
     </concept>
     <concept>
-        <code value="0005"></code>
-        <display value="Cancelled" />
+        <code value="OC"></code>
+        <display value="Other Clinical" />
     </concept>
     <concept>
-        <code value="0006"></code>
-        <display value="Dispensed" />
+        <code value="ONC"></code>
+        <display value="Other Non-Clinical" />
     </concept>
-    <concept>
-        <code value="0007"></code>
-        <display value="Not Dispensed" />
-    </concept> 
 </CodeSystem>

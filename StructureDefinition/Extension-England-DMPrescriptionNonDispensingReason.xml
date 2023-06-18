@@ -48,7 +48,7 @@
       </type>
       <binding>
         <strength value="required" />
-        <valueSet value="https://fhir.nhs.uk/ValueSet/DM-medicationdispense-status-reason" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/England-DMMedicationDispenseStatusReason" />
       </binding>
     </element>
     <element id="Extension.value[x].system">
