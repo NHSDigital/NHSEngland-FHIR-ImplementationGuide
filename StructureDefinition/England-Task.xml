@@ -132,7 +132,7 @@
       <sliceName value="SNOMED" />
       <binding>
         <strength value="extensible" />
-        <valueSet value="https://fhir.nhs.uk/ValueSet/England-action-code" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/England-ActionCode" />
       </binding>
     </element>
     <element id="Task.code.coding:SNOMED.system">
@@ -144,7 +144,7 @@
       <sliceName value="Fulfilment" />
       <binding>
         <strength value="extensible" />
-        <valueSet value="https://fhir.nhs.uk/ValueSet/England-task-code" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/England-TaskCode" />
       </binding>
     </element>
     <element id="Task.code.coding:Fulfilment.system">
@@ -156,7 +156,7 @@
       <sliceName value="Worflow" />
       <binding>
         <strength value="extensible" />
-        <valueSet value="https://fhir.nhs.uk/ValueSet/England-workflow-code" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/England-WorkflowCode" />
       </binding>
     </element>
     <element id="Task.code.coding:Worflow.system">
