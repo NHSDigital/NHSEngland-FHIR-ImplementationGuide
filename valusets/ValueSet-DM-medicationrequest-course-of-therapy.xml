@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ValueSet xmlns="http://hl7.org/fhir">
-    <id value="c6c997f7-6b5c-4d92-85a5-9199cd2b17e8" />
-    <url value="https://fhir.nhs.uk/ValueSet/DM-medicationrequest-course-of-therapy" />
+    <id value="England-DMMedicationRequestCourseOfTherapy" />
+    <url value="https://fhir.nhs.uk/ValueSet/England-DMMedicationRequestCourseOfTherapy" />
     <version value="1.0.0" />
-    <name value="MedicationRequestCourseOfTherapyCodes" />
-    <title value="Medication Request  Course of  Therapy  Codes" />
+    <name value="EnglandMedicationRequestCourseOfTherapyCodes" />
+    <title value="England Medication Request Course of Therapy Codes" />
     <status value="draft" />
     <experimental value="false" />
-    <date value="2020-07-02T09:29:23+11:00" />
-    <publisher value="FHIR Project team" />
+    <date value="2023-06-01" />
     <contact>
-        <telecom>
-            <system value="url" />
-            <value value="http://hl7.org/fhir" />
-        </telecom>
+    <name value="NHS England" />
+    <telecom>
+      <system value="email" />
+      <value value="interoperabilityteam@nhs.net" />
+      <use value="work" />
+      <rank value="1" />
+    </telecom>
     </contact>
     <description value="MedicationRequest Course of Therapy Codes" />
     <immutable value="true" />
@@ -30,7 +32,7 @@
             </concept>
         </include>
         <include>
-            <system value="https://fhir.nhs.uk/CodeSystem/medicationrequest-course-of-therapy" />
+            <system value="https://fhir.nhs.uk/CodeSystem/England-DMMedicationRequestCourseOfTherapy" />
             <concept>
                 <code value="continuous-repeat-dispensing"/>
                 <display value="Continuous long term (repeat dispensing)"/>
@@ -50,7 +52,7 @@
         <offset value="0"/>
         <parameter>
             <name value="version"/>
-            <valueUri value="https://fhir.nhs.uk/CodeSystem/medicationrequest-course-of-therapy|1.0.0"/>
+            <valueUri value="https://fhir.nhs.uk/CodeSystem/England-DMMedicationRequestCourseOfTherapy|1.0.0"/>
         </parameter>
         <parameter>
             <name value="version"/>
@@ -77,7 +79,7 @@
             <display value="Short course (acute) therapy"/>
         </contains>
         <contains>
-            <system value="https://fhir.nhs.uk/CodeSystem/medicationrequest-course-of-therapy"/>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-DMMedicationRequestCourseOfTherapy"/>
             <version value="1.0.0"/>
             <code value="continuous-repeat-dispensing"/>
             <display value="Continuous long term (repeat dispensing)"/>

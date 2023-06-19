@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeSystem xmlns="http://hl7.org/fhir">
-    <id value="346d5570-a30d-4447-8aa1-ad5fad36b025"/>
-    <url value="https://fhir.nhs.uk/CodeSystem/medicationrequest-course-of-therapy"/>
+    <id value="England-MedicationRequestCourseOfTherapy"/>
+    <url value="https://fhir.nhs.uk/CodeSystem/England-MedicationRequestCourseOfTherapy"/>
     <identifier>
         <system value="https://fhir.nhs.uk/identifier/CodeSystem"/>
-        <value value="medicationrequest-course-of-therapy"/>
+        <value value="MedicationRequest-Course-Of-Therapy"/>
     </identifier>
     <version value="1.0.0"/>
-    <name value="MedicationRequestCourseOfTherapy"/>
-    <title value="MedicationRequest Course of Therapy"/>
+    <name value="EnglandMedicationRequestCourseOfTherapy"/>
+    <title value="England MedicationRequest Course Of Therapy"/>
     <status value="draft"/>
     <experimental value="true"/>
     <date value="2023-06-01"/>
@@ -19,9 +19,11 @@
           <system value="email" />
           <value value="interoperabilityteam@nhs.net" />
           <use value="work" />
+          <rank value="1" />
         </telecom>
       </contact>
     <description value="MedicationRequest Course of Therapy extension"/>
+    <purpose value="MedicationRequest Course of Therapy extension"/>
     <caseSensitive value="true"/>
     <content value="complete"/>
     <concept>
