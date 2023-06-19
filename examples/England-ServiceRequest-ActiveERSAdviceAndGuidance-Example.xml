@@ -56,7 +56,7 @@
     </requester>
     <performerType>
         <coding>
-            <system value="https://fhir.nhs.uk/CodeSystem/eRS-Specialty" />
+            <system value="https://fhir.nhs.uk/CodeSystem/England-ERSSpecialty" />
             <code value="GENERAL_MEDICINE" />
         </coding>
         <text value="SHOULD BE SAYING ADVICE AND GUIDANCE HERE??" />
