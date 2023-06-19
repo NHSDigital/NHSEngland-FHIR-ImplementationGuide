@@ -1,6 +1,6 @@
 <ValueSet xmlns="http://hl7.org/fhir">
     <id value="England-BARSMessageServiceRequestCategory" />
-    <url value="https://fhir.nhs.uk/ValueSet/BARSMessageServiceRequestCategory" />
+    <url value="https://fhir.nhs.uk/ValueSet/England-BARSMessageServiceRequestCategory" />
     <version value="1.0.0" />
     <name value="EnglandBARSMessageServiceRequestCategory" />
     <title value="England BARS Message ServiceRequest Category" />

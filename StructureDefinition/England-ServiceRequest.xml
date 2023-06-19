@@ -175,7 +175,7 @@
       <sliceName value="BARSMessageServiceRequestCategory" />
       <binding>
         <strength value="preferred" />
-        <valueSet value="https://fhir.nhs.uk/ValueSet/BARSMessageServiceRequestCategory" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/England-BARSMessageServiceRequestCategory" />
       </binding>
     </element>
     <element id="ServiceRequest.category.coding:BARSMessageServiceRequestCategory.system">
@@ -316,7 +316,7 @@
     <element id="ServiceRequest.performerType">
       <path value="ServiceRequest.performerType" />
       <short value="Requested Specialty Name" />
-      <definition value="**ERS**&#xD;&#xA;&#xD;&#xA;Specialty used to search for the shortlisted service(s) (if one was used)&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;performerType&quot;: {&#xD;&#xA;        &quot;coding&quot;: [&#xD;&#xA;            {&#xD;&#xA;                &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/eRS-Specialty&quot;,&#xD;&#xA;                &quot;code&quot;: &quot;GENERAL_MEDICINE&quot;&#xD;&#xA;            }&#xD;&#xA;        ]&#xD;&#xA;    },&#xD;&#xA;```&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;performerType&quot;: {&#xD;&#xA;                    &quot;coding&quot;: [&#xD;&#xA;                        {&#xD;&#xA;                            &quot;display&quot;: &quot;Dermatology&quot;&#xD;&#xA;                        }&#xD;&#xA;                    ]&#xD;&#xA;                }&#xD;&#xA;```" />
+      <definition value="**ERS**&#xD;&#xA;&#xD;&#xA;Specialty used to search for the shortlisted service(s) (if one was used)&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;performerType&quot;: {&#xD;&#xA;        &quot;coding&quot;: [&#xD;&#xA;            {&#xD;&#xA;                &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/England-ERSSpecialty&quot;,&#xD;&#xA;                &quot;code&quot;: &quot;GENERAL_MEDICINE&quot;&#xD;&#xA;            }&#xD;&#xA;        ]&#xD;&#xA;    },&#xD;&#xA;```&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;performerType&quot;: {&#xD;&#xA;                    &quot;coding&quot;: [&#xD;&#xA;                        {&#xD;&#xA;                            &quot;display&quot;: &quot;Dermatology&quot;&#xD;&#xA;                        }&#xD;&#xA;                    ]&#xD;&#xA;                }&#xD;&#xA;```" />
       <mustSupport value="true" />
     </element>
     <element id="ServiceRequest.performerType.coding">
@@ -339,24 +339,24 @@
       <mustSupport value="true" />
       <binding>
         <strength value="required" />
-        <valueSet value="https://fhir.nhs.uk/ValueSet/NHSDataModelAndDictionary-treatment-function" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/England-NHSDataModelAndDictionaryTreatmentFunctionCategory" />
       </binding>
     </element>
     <element id="ServiceRequest.performerType.coding:treatmentFunctionCodes.system">
       <path value="ServiceRequest.performerType.coding.system" />
-      <fixedUri value="https://fhir.nhs.uk/CodeSystem/NHSDataModelAndDictionary-treatment-function" />
+      <fixedUri value="https://fhir.nhs.uk/CodeSystem/England-NHSDataModelAndDictionaryTreatmentFunction" />
     </element>
     <element id="ServiceRequest.performerType.coding:eRSSpecialty">
       <path value="ServiceRequest.performerType.coding" />
       <sliceName value="eRSSpecialty" />
       <binding>
         <strength value="required" />
-        <valueSet value="https://fhir.nhs.uk/ValueSet/England-eRS-Specialty" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/England-ERSSpecialtyCategory" />
       </binding>
     </element>
     <element id="ServiceRequest.performerType.coding:eRSSpecialty.system">
       <path value="ServiceRequest.performerType.coding.system" />
-      <fixedUri value="https://fhir.nhs.uk/CodeSystem/eRS-Specialty" />
+      <fixedUri value="https://fhir.nhs.uk/CodeSystem/England-ERSSpecialty" />
     </element>
     <element id="ServiceRequest.performer">
       <path value="ServiceRequest.performer" />

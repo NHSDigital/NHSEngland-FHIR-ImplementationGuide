@@ -3,7 +3,7 @@
   <id value="Extension-England-ERSReferral" />
   <url value="https://fhir.nhs.uk/StructureDefinition/Extension-England-ERSReferral" />
   <version value="1.0.0" />
-  <name value="ExtensionERSAdviceAndGuidance" />
+  <name value="ExtensionEnglandERSReferral" />
   <title value="Extension England ERS Referral" />
   <status value="draft" />
   <date value="2023-06-01" />
