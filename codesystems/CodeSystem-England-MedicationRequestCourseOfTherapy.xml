@@ -21,7 +21,7 @@
           <use value="work" />
           <rank value="1" />
         </telecom>
-      </contact>
+    </contact>
     <description value="MedicationRequest Course of Therapy extension"/>
     <purpose value="MedicationRequest Course of Therapy extension"/>
     <caseSensitive value="true"/>
