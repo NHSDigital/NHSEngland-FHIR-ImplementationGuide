@@ -36,6 +36,10 @@
             </service>
         </security>
         <resource>
+            <type value="Immunization" />
+            <profile value="https://fhir.nhs.uk/StructureDefinition/England-Immunization" />
+        </resource>
+        <resource>
             <type value="Location" />
             <profile value="https://fhir.nhs.uk/StructureDefinition/England-PractitionerRole" />
         </resource>
