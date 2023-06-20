@@ -42,5 +42,9 @@
             <type value="Observation" />
             <profile value="https://fhir.nhs.uk/StructureDefinition/England-Observation" />
         </resource>
+        <resource>
+            <type value="Organization" />
+            <profile value="https://fhir.nhs.uk/StructureDefinition/England-Organization" />
+        </resource>
     </rest>
 </CapabilityStatement>
