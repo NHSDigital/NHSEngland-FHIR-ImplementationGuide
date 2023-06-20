@@ -15,22 +15,22 @@
   "structure": [ {
     "url": "http://hl7.org/fhir/StructureDefinition/MedicationRequest",
     "mode": "source",
-    "alias": "MedicationRequest"
+    "alias": "MedicationRequestSTU3"
   }, {
     "url": "http://hl7.org/fhir/StructureDefinition/MedicationRequest",
     "mode": "target",
-    "alias": "MedicationRequest"
+    "alias": "MedicationRequestR4"
   } ],
   "group": [ {
     "name": "MedicationRequest",
     "typeMode": "none",
     "input": [ {
       "name": "src",
-      "type": "MedicationRequest",
+      "type": "MedicationRequestSTU3",
       "mode": "source"
     }, {
       "name": "tgt",
-      "type": "MedicationRequest",
+      "type": "MedicationRequestR4",
       "mode": "target"
     } ],
     "rule": [ {
@@ -155,9 +155,11 @@
     "typeMode": "none",
     "input": [ {
       "name": "src",
+      "type": "Extension",
       "mode": "source"
     }, {
       "name": "tgt",
+      "type": "Extension",
       "mode": "target"
     } ],
     "rule": [ {
@@ -191,9 +193,11 @@
     "typeMode": "none",
     "input": [ {
       "name": "src",
+      "type": "Extension",
       "mode": "source"
     }, {
       "name": "tgt",
+      "type": "Extension",
       "mode": "target"
     } ],
     "rule": [ {
@@ -227,9 +231,11 @@
     "typeMode": "none",
     "input": [ {
       "name": "src",
+      "type": "Extension",
       "mode": "source"
     }, {
       "name": "tgt",
+      "type": "BackboneElement",
       "mode": "target"
     } ],
     "rule": [ {

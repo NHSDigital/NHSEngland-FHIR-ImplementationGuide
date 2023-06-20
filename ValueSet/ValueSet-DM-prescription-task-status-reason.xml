@@ -2,7 +2,7 @@
 <ValueSet xmlns="http://hl7.org/fhir">
     <id value="3c1b87e6-422d-4ed8-8372-ae3366ab5306"/>
     <url value="https://fhir.nhs.uk/ValueSet/DM-prescription-task-status-reason"/>
-    <version value="1.1.5"/>
+    <version value="1.1.6"/>
     <name value="TaskMedicationRequestStatusReason"/>
     <status value="draft"/>
     <description value="Task (MedicationRequest) Status Reason"/>
@@ -10,6 +10,10 @@
         <include>
             <system value="https://fhir.nhs.uk/CodeSystem/medicationrequest-status-history"/>
             <version value="1.1.4"/>
+        </include>
+				<include>
+            <system value="https://fhir.nhs.uk/CodeSystem/EPS-task-business-status"/>
+            <version value="1.0.1"/>
         </include>
     </compose>
     <expansion>
@@ -83,6 +87,41 @@
             <system value="https://fhir.nhs.uk/CodeSystem/medicationrequest-status-history"/>
             <code value="R-0006"/>
             <display value="Prescription/item had already been cancelled"/>
+        </contains>
+				<contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/EPS-task-business-status"/>
+            <code value="0001"/>
+            <display value="To be Dispensed"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/EPS-task-business-status"/>
+            <code value="0002"/>
+            <display value="With Dispenser"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/EPS-task-business-status"/>
+            <code value="0003"/>
+            <display value="With Dispenser - Active"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/EPS-task-business-status"/>
+            <code value="0004"/>
+            <display value="Expired"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/EPS-task-business-status"/>
+            <code value="0005"/>
+            <display value="Cancelled"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/EPS-task-business-status"/>
+            <code value="0006"/>
+            <display value="Dispensed"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/EPS-task-business-status"/>
+            <code value="0007"/>
+            <display value="Not Dispensed"/>
         </contains>
     </expansion>
 </ValueSet> 

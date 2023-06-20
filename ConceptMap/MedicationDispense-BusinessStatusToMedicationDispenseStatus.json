@@ -22,11 +22,11 @@
     ],
     "description": "MedicationDispense business status to MedicationDispense status Map",
     "purpose": "Medicine Management",
-    "sourceUri": "http://hl7.org/fhir/ValueSet/medicationdispense-status",
+    "sourceUri": "https://fhir.nhs.uk/ValueSet/DM-task-business-status",
     "targetUri": "http://hl7.org/fhir/ValueSet/task-status",
     "group":  [
         {
-            "source": "http://terminology.hl7.org/CodeSystem/medicationdispense-status",
+            "source": "https://fhir.nhs.uk/CodeSystem/EPS-task-business-status",
             "target": "http://hl7.org/fhir/task-status",
             "element":  [
                 {

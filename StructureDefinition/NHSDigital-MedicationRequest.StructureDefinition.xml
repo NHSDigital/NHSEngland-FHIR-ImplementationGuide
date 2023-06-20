@@ -147,7 +147,6 @@
       <sliceName value="NHSBSAprescriptionType" />
       <short value="NHS BSA Prescription Type" />
       <definition value="The vocabulary for the ‘PrescriptionType’ vocabulary is defined within the NHSBSA Overprint Specification. &#xD;&#xA;&#xD;&#xA;The System must populate the ‘PrescriptionType’ attribute for the appropriate combination of prescriber and care setting. Retired codes within this vocabulary must not be used&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;extension&quot;:  [&#xD;&#xA;    {&#xD;&#xA;        &quot;url&quot;: &quot;https://fhir.nhs.uk/StructureDefinition/Extension-DM-PrescriptionType&quot;,&#xD;&#xA;        &quot;valueCoding&quot;: {&#xD;&#xA;            &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/prescription-type&quot;,&#xD;&#xA;            &quot;code&quot;: &quot;1201&quot;,&#xD;&#xA;            &quot;display&quot;: &quot;Outpatient Homecare Prescriber - Medical Prescriber&quot;&#xD;&#xA;        }&#xD;&#xA;    }&#xD;&#xA;    ]&#xD;&#xA;```" />
-      <min value="1" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-DM-PrescriptionType" />
@@ -250,7 +249,6 @@
     <element id="MedicationRequest.category">
       <path value="MedicationRequest.category" />
       <definition value="In primary care the code of `community` should be used. In secondary care the category will often match the Episode/Spell type.&#xD;&#xA;&#xD;&#xA;| Code | System | Display |&#xD;&#xA;|---|---|&#xD;&#xA;| leave | https://fhir.nhs.uk/CodeSystem/medicationrequest-category | Leave |&#xD;&#xA;|outpatient | http://terminology.hl7.org/CodeSystem/medicationrequest-category |Outpatient |&#xD;&#xA;| discharge | http://terminology.hl7.org/CodeSystem/medicationrequest-category | Discharge |&#xD;&#xA;| community |http://terminology.hl7.org/CodeSystem/medicationrequest-category | Community |&#xD;&#xA;| inpatient  |http://terminology.hl7.org/CodeSystem/medicationrequest-category | Inpatient |&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;category&quot;: [&#xD;&#xA;    {&#xD;&#xA;        &quot;coding&quot;: [&#xD;&#xA;            {&#xD;&#xA;                &quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/medicationrequest-category&quot;,&#xD;&#xA;                &quot;code&quot;: &quot;outpatient&quot;,&#xD;&#xA;                &quot;display&quot;: &quot;Outpatient&quot;&#xD;&#xA;            }&#xD;&#xA;        ]&#xD;&#xA;    }&#xD;&#xA;],&#xD;&#xA;```" />
-      <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="MedicationRequest.category.coding">
@@ -336,10 +334,6 @@
       </constraint>
       <mustSupport value="true" />
     </element>
-    <element id="MedicationRequest.subject.reference">
-      <path value="MedicationRequest.subject.reference" />
-      <min value="1" />
-    </element>
     <element id="MedicationRequest.subject.identifier.system">
       <path value="MedicationRequest.subject.identifier.system" />
       <min value="1" />
@@ -359,7 +353,6 @@
     </element>
     <element id="MedicationRequest.authoredOn">
       <path value="MedicationRequest.authoredOn" />
-      <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="MedicationRequest.requester">
@@ -370,6 +363,7 @@
         <code value="Reference" />
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole-EPSLegal" />
         <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole-SDS" />
+		<targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole" />
       </type>
       <constraint>
         <key value="eps-3" />
@@ -387,7 +381,9 @@
       <path value="MedicationRequest.performer" />
       <type>
         <code value="Reference" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Reference" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Organization" />
+		<targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-PractitionerRole" />
+		<targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Practitioner" />
       </type>
     </element>
     <element id="MedicationRequest.recorder">
@@ -626,7 +622,7 @@
       <definition value="For non token based prescriptions the destination pharmacy **MUST** be recorded in the *dispenseRequest.performer.identifier* and a identifier reference (not a resource reference) with an ANANA/ODS Code **MUST** used. &#xD;&#xA;&#xD;&#xA;The extension https://fhir.nhs.uk/StructureDefinition/Extension-DM-PerformerSiteType **MUST** be present.&#xD;&#xA;&#xD;&#xA;Patients pharmacy preferences may be sourced from PDS.&#xD;&#xA;&#xD;&#xA;Patients pharmacy preferences may be overriden by an 'one-off pharmacy nomination' by populating the *dispenseRequest.performer.identifier* with the ODS/ANANA code of the destination pharmacy.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;dispenseRequest&quot;: {&#xD;&#xA;        &quot;extension&quot;:  [&#xD;&#xA;            {&#xD;&#xA;                &quot;url&quot;: &quot;https://fhir.nhs.uk/StructureDefinition/Extension-DM-PerformerSiteType&quot;,&#xD;&#xA;                &quot;valueCoding&quot;: {&#xD;&#xA;                    &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/dispensing-site-preference&quot;,&#xD;&#xA;                    &quot;code&quot;: &quot;0004&quot;&#xD;&#xA;                }&#xD;&#xA;            },&#xD;&#xA;        ],&#xD;&#xA;        &quot;performer&quot;: {&#xD;&#xA;            &quot;identifier&quot;: {&#xD;&#xA;                &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/ods-organization-code&quot;,&#xD;&#xA;                &quot;value&quot;: &quot;FX748&quot;&#xD;&#xA;            }&#xD;&#xA;        },&#xD;&#xA;```" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Organization-ODS" />
+        <targetProfile value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Organization" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -653,10 +649,6 @@
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-DM-DispensingPerformer" />
       </type>
       <mustSupport value="true" />
-    </element>
-    <element id="MedicationRequest.dispenseRequest.performer.identifier">
-      <path value="MedicationRequest.dispenseRequest.performer.identifier" />
-      <min value="1" />
     </element>
     <element id="MedicationRequest.dispenseRequest.performer.identifier.system">
       <path value="MedicationRequest.dispenseRequest.performer.identifier.system" />
