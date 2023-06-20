@@ -235,7 +235,6 @@
       "mode": "source"
     }, {
       "name": "tgt",
-      "type": "BackboneElement",
       "mode": "target"
     } ],
     "rule": [ {
