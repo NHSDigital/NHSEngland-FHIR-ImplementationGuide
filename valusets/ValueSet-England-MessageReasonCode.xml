@@ -1,118 +1,127 @@
-<?xml version="1.0" encoding="utf-8"?>
 <ValueSet xmlns="http://hl7.org/fhir">
-  <id value="England-MessageReasonCode" />
-  <url value="https://fhir.nhs.uk/ValueSet/England-MessageReasonCode" />
-  <version value="1.0.0" />
-  <name value="EnglandMessageReasonCode" />
-  <title value="England Message Reason Code" />
-  <status value="draft" />
-  <date value="2023-06-01" />
-  <description value="Complete set of message reason codes" />
-  <compose>
-    <include>
-      <system value="https://fhir.nhs.uk/CodeSystem/England-MessageReasonPrescription" />
-      <version value="1.0.0" />
-    </include>
-    <include>
-      <system value="https://fhir.nhs.uk/CodeSystem/England-MessageReasonEncounter" />
-      <version value="1.0.0" />
-    </include>
-    <include>
-      <system value="https://fhir.nhs.uk/CodeSystem/England-MessageReasonServiceRequest" />
-      <version value="1.0.0" />
-    </include>
-  </compose>
-  <expansion>
-    <timestamp value="2021-12-01T14:53:00+00:00" />
-    <total value="9" />
-    <offset value="0" />
-    <parameter>
-      <name value="version" />
-      <valueUri value="https://fhir.nhs.uk/CodeSystem/England-MessageReasonEncounter|1.0.0" />
-    </parameter>
-    <parameter>
-      <name value="version" />
-      <valueUri value="https://fhir.nhs.uk/CodeSystem/England-MessageReasonPrescription|1.0.0" />
-    </parameter>
-    <parameter>
-      <name value="count" />
-      <valueInteger value="2147483647" />
-    </parameter>
-    <parameter>
-      <name value="offset" />
-      <valueInteger value="0" />
-    </parameter>
-    <contains>
-      <system value="https://fhir.nhs.uk/CodeSystem/England-MessageReasonPrescription" />
-      <version value="1.0.0" />
-      <code value="notification" />
-      <display value="Notification" />
-    </contains>
-    <contains>
-      <system value="https://fhir.nhs.uk/CodeSystem/England-MessageReasonPrescription" />
-      <version value="1.0.0" />
-      <code value="claim" />
-      <display value="Claim" />
-    </contains>
-    <contains>
-      <system value="https://fhir.nhs.uk/CodeSystem/England-MessageReasonPrescription" />
-      <version value="1.0.0" />
-      <code value="cancel" />
-      <display value="Cancel" />
-    </contains>
-    <contains>
-      <system value="https://fhir.nhs.uk/CodeSystem/England-MessageReasonEncounter" />
-      <version value="1.0.0" />
-      <code value="edit" />
-      <display value="Edit" />
-    </contains>
-    <contains>
-      <system value="https://fhir.nhs.uk/CodeSystem/England-MessageReasonEncounter" />
-      <version value="1.0.0" />
-      <code value="moved" />
-      <display value="Moved" />
-    </contains>
-    <contains>
-      <system value="https://fhir.nhs.uk/CodeSystem/England-MessageReasonEncounter" />
-      <version value="1.0.0" />
-      <code value="discharge" />
-      <display value="Discharge" />
-    </contains>
-    <contains>
-      <system value="https://fhir.nhs.uk/CodeSystem/England-MessageReasonEncounter" />
-      <version value="1.0.0" />
-      <code value="absent" />
-      <display value="Absent" />
-    </contains>
-    <contains>
-      <system value="https://fhir.nhs.uk/CodeSystem/England-MessageReasonEncounter" />
-      <version value="1.0.0" />
-      <code value="admit" />
-      <display value="Admit" />
-    </contains>
-    <contains>
-      <system value="https://fhir.nhs.uk/CodeSystem/England-MessageReasonEncounter" />
-      <version value="1.0.0" />
-      <code value="return" />
-      <display value="Returned" />
-    </contains>
-    <contains>
-      <system value="https://fhir.nhs.uk/CodeSystem/England-MessageReasonServiceRequest" />
-      <version value="1.0.0" />
-      <code value="new" />
-      <display value="New" />
-    </contains>
-    <contains>
-      <system value="https://fhir.nhs.uk/CodeSystem/England-MessageReasonServiceRequest" />
-      <version value="1.0.0" />
-      <code value="update" />
-      <display value="Update" />
-    </contains>
-    <contains>
-      <system value="https://fhir.nhs.uk/CodeSystem/England-MessageReasonServiceRequest" />
-      <version value="1.0.0" />
-      <code value="delete" />
-      <display value="Delete" />
-    </contains>
-  </expansion>
+    <id value="England-MessageReasonCode" />
+    <url value="https://fhir.nhs.uk/ValueSet/England-MessageReasonCode" />
+    <version value="1.0.0" />
+    <name value="EnglandMessageReasonCode" />
+    <title value="England Message Reason Code" />
+    <status value="draft" />
+    <date value="2023-06-01" />
+    <publisher value="NHS England" />
+    <contact>
+        <name value="NHS England" />
+        <telecom>
+            <system value="email" />
+            <value value="interoperabilityteam@nhs.net" />
+            <use value="work" />
+            <rank value="1" />
+        </telecom>
+    </contact>
+    <description value="Complete set of message reason codes" />
+    <compose>
+        <include>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-MessageReasonPrescription" />
+            <version value="1.0.0" />
+        </include>
+        <include>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-MessageReasonEncounter" />
+            <version value="1.0.0" />
+        </include>
+        <include>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-MessageReasonServiceRequest" />
+            <version value="1.0.0" />
+        </include>
+    </compose>
+    <expansion>
+        <timestamp value="2021-12-01T14:53:00+00:00" />
+        <total value="9" />
+        <offset value="0" />
+        <parameter>
+            <name value="version" />
+            <valueUri value="https://fhir.nhs.uk/CodeSystem/England-MessageReasonEncounter|1.0.0" />
+        </parameter>
+        <parameter>
+            <name value="version" />
+            <valueUri value="https://fhir.nhs.uk/CodeSystem/England-MessageReasonPrescription|1.0.0" />
+        </parameter>
+        <parameter>
+            <name value="count" />
+            <valueInteger value="2147483647" />
+        </parameter>
+        <parameter>
+            <name value="offset" />
+            <valueInteger value="0" />
+        </parameter>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-MessageReasonPrescription" />
+            <version value="1.0.0" />
+            <code value="notification" />
+            <display value="Notification" />
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-MessageReasonPrescription" />
+            <version value="1.0.0" />
+            <code value="claim" />
+            <display value="Claim" />
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-MessageReasonPrescription" />
+            <version value="1.0.0" />
+            <code value="cancel" />
+            <display value="Cancel" />
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-MessageReasonEncounter" />
+            <version value="1.0.0" />
+            <code value="edit" />
+            <display value="Edit" />
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-MessageReasonEncounter" />
+            <version value="1.0.0" />
+            <code value="moved" />
+            <display value="Moved" />
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-MessageReasonEncounter" />
+            <version value="1.0.0" />
+            <code value="discharge" />
+            <display value="Discharge" />
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-MessageReasonEncounter" />
+            <version value="1.0.0" />
+            <code value="absent" />
+            <display value="Absent" />
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-MessageReasonEncounter" />
+            <version value="1.0.0" />
+            <code value="admit" />
+            <display value="Admit" />
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-MessageReasonEncounter" />
+            <version value="1.0.0" />
+            <code value="return" />
+            <display value="Returned" />
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-MessageReasonServiceRequest" />
+            <version value="1.0.0" />
+            <code value="new" />
+            <display value="New" />
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-MessageReasonServiceRequest" />
+            <version value="1.0.0" />
+            <code value="update" />
+            <display value="Update" />
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-MessageReasonServiceRequest" />
+            <version value="1.0.0" />
+            <code value="delete" />
+            <display value="Delete" />
+        </contains>
+    </expansion>
 </ValueSet>
