@@ -36,6 +36,10 @@
             </service>
         </security>
         <resource>
+            <type value="OperationOutcome" />
+            <profile value="https://fhir.nhs.uk/StructureDefinition/England-OperationOutcome" />
+        </resource> 
+        <resource>  
             <type value="Immunization" />
             <profile value="https://fhir.nhs.uk/StructureDefinition/England-Immunization" />
         </resource>
