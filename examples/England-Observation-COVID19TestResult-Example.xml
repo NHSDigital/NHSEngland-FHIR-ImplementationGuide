@@ -41,7 +41,14 @@
     <effectiveDateTime value="2020-09-23T13:00:08.476+00:00" />
     <performer>
         <type value="Organization" />
-        <identifier>
+           <identifier>
+            <type>
+                <coding>
+                    <system value="https://fhir.nhs.uk/CodeSystem/England-OrganisationRole" />
+                    <code value="173" />
+                    <display value="PATHOLOGY LAB" />
+                </coding>
+            </type>
             <value value="LFD004" />
         </identifier>
         <display value="Add if possible" />
