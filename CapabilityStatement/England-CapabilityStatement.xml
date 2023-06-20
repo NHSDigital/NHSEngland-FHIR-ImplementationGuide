@@ -35,6 +35,10 @@
             </service>
         </security>
         <resource>
+            <type value="Location" />
+            <profile value="https://fhir.nhs.uk/StructureDefinition/England-Location" />
+        </resource>
+        <resource>
             <type value="Observation" />
             <profile value="https://fhir.nhs.uk/StructureDefinition/England-Observation" />
         </resource>

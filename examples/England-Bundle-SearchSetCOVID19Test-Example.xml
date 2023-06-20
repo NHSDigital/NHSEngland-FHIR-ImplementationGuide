@@ -1,5 +1,5 @@
 <Bundle xmlns="http://hl7.org/fhir">
-    <id value="c01c8284-5561-4825-9f0d-3bdcaf18c8d4" />
+    <id value="England-Bundle-SearchSetCOVID19Test-Example" />
     <type value="searchset" />
     <total value="2" />
     <link>
