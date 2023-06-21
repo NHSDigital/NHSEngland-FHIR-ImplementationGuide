@@ -1,0 +1,56 @@
+<Immunization xmlns="http://hl7.org/fhir">
+    <id value="England-Immunization-SARSCoV2NotAdministered-Example" />
+    <extension url="https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-VaccinationProcedure">
+        <valueCodeableConcept>
+            <coding>
+                <system value="http://snomed.info/sct" />
+                <code value="1324681000000101" />
+                <display value="Administration of first dose of severe acute respiratory syndrome coronavirus 2 vaccine (procedure)" />
+            </coding>
+        </valueCodeableConcept>
+    </extension>
+    <identifier>
+        <use value="secondary" />
+        <system value="https://fhir.leedsth.nhs.uk/Id/vaccination" />
+        <value value="1001324761000000" />
+    </identifier>
+    <status value="not-done" />
+    <statusReason>
+        <coding>
+            <system value="http://snomed.info/sct" />
+            <code value="1324721000000108" />
+            <display value="SARS-CoV-2 (severe acute respiratory syndrome coronavirus 2) vaccination dose declined" />
+        </coding>
+    </statusReason>
+    <vaccineCode>
+        <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-NullFlavor" />
+            <code value="NA" />
+            <display value="not applicable" />
+        </coding>
+    </vaccineCode>
+    <patient>
+        <reference value="urn:uuid:edea022a-2d81-11eb-adc1-0242ac120002" />
+        <type value="Patient" />
+        <identifier>
+            <system value="https://fhir.nhs.uk/Id/nhs-number" />
+            <value value="9912003888" />
+        </identifier>
+    </patient>
+    <occurrenceDateTime value="2020-12-21T09:15:08.326+00:00" />
+    <recorded value="2020-12-21" />
+    <primarySource value="false" />
+    <reportOrigin>
+        <text value="RR8 - LEEDS TEACHING HOSPITALS NHS TRUST" />
+    </reportOrigin>
+    <performer>
+        <actor>
+            <type value="Organization" />
+            <identifier>
+                <system value="https://fhir.nhs.uk/Id/ods-organization-code" />
+                <value value="C4B2A" />
+            </identifier>
+            <display value="ELLAND ROAD STADIUM - COVID VACCINATION CENTRE" />
+        </actor>
+    </performer>
+</Immunization>
