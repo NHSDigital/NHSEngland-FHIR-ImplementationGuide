@@ -6,6 +6,7 @@
 	<title value="England Location Type" />
     <status value="draft" />
     <description value="A ValueSet to identify the roles (type) of location." />
+	<purpose value="A ValueSet to identify the roles (type) of location." />
     <compose>
         <include>
             <system value="https://fhir.nhs.uk/CodeSystem/England-OrganisationRole" />
