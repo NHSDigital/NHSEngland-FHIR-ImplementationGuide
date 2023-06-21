@@ -51,7 +51,7 @@
             <profile value="https://fhir.nhs.uk/StructureDefinition/England-MessageHeader" />
         </resource>
         <resource>
-            <type value="England-PractitionerRole" />
+            <type value="PractitionerRole" />
             <profile value="https://fhir.nhs.uk/StructureDefinition/England-PractitionerRole" />
         </resource>
     </rest>
