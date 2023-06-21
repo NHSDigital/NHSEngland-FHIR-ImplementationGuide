@@ -177,7 +177,7 @@
     <element id="MedicationRequest.extension:NHSBSAPrescriptionType">
       <path value="MedicationRequest.extension" />
       <sliceName value="NHSBSAPrescriptionType" />
-      <min value="1" />
+      <min value="0" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-DMPrescriptionType" />
