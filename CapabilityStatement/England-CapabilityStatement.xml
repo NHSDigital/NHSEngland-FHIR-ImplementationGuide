@@ -48,7 +48,7 @@
             <profile value="https://fhir.nhs.uk/StructureDefinition/England-Immunization" />
         </resource>
         <resource>
-            <type value="Location" />
+            <type value="PractitionerRole" />
             <profile value="https://fhir.nhs.uk/StructureDefinition/England-PractitionerRole" />
         </resource>
     </rest>
