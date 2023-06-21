@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CapabilityStatement xmlns="http://hl7.org/fhir">
+    <id value="England-CapabilityStatement" />
+    <url value="https://fhir.nhs.uk/StructureDefinition/England-CapabilityStatement" />
+    <version value="1.0.0" />
+    <name value="EnglandCapabilityStatement" />
+    <title value="England CapabilityStatement" />
+    <status value="draft" />
+    <date value="2023-06-01" />
+    <publisher value="NHS England" />
+	<contact>
+      <name value="NHS England" />
+      <telecom>
+        <system value="email" />
+        <value value="interoperabilityteam@nhs.net" />
+        <use value="work" />
+        <rank value="1" />
+      </telecom>
+	</contact>
+    <description value="Conformance requirements for NHS England Implementation Guide" />
+	<purpose value="Conformance requirements for NHS England Implementation Guide" />
+	<copyright value="Copyright © 2021+ HL7 UK Licensed under the Apache License, Version 2.0 (the \&quot;License\&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at  http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \&quot;AS IS\&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. HL7® FHIR® standard Copyright © 2011+ HL7 The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at  https://www.hl7.org/fhir/license.html." />
+    <kind value="requirements" />
+    <fhirVersion value="4.0.1" />
+    <format value="application/fhir+json" />
+    <format value="application/fhir+xml" />
+    <rest>
+        <mode value="server" />
+        <security>
+            <service>
+                <coding>
+                    <system value="http://terminology.hl7.org/CodeSystem/restful-security-service" />
+                    <code value="OAuth" />
+                    <display value="OAuth2 Token" />
+                </coding>
+            </service>
+        </security>
+        <resource>
+            <type value="Patient" />
+            <profile value="https://fhir.nhs.uk/StructureDefinition/England-Patient" />
+        </resource>
+    </rest>
+</CapabilityStatement>
