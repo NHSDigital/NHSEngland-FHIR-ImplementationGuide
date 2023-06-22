@@ -36,6 +36,10 @@
             </service>
         </security>
         <resource>
+            <type value="Observation" />
+            <profile value="https://fhir.nhs.uk/StructureDefinition/England-Observation" />
+        </resource>
+        <resource>
             <type value="OperationOutcome" />
             <profile value="https://fhir.nhs.uk/StructureDefinition/England-OperationOutcome" />
         </resource> 
@@ -44,7 +48,7 @@
             <profile value="https://fhir.nhs.uk/StructureDefinition/England-Immunization" />
         </resource>
         <resource>
-            <type value="Location" />
+            <type value="PractitionerRole" />
             <profile value="https://fhir.nhs.uk/StructureDefinition/England-PractitionerRole" />
         </resource>
     </rest>
