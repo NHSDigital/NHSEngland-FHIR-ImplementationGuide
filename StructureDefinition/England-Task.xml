@@ -17,7 +17,7 @@
       <rank value="1" />
     </telecom>
   </contact>
-  <description value="TThis profile defines the NHS England constraints and extensions on the FHIR UK Core resource [UK Core task](https://simplifier.net/hl7fhirukcorer4/ukcore-task)." />
+  <description value="This profile defines the NHS England constraints and extensions on the FHIR UK Core resource [UK Core Task](https://simplifier.net/hl7fhirukcorer4/ukcore-task)." />
   <purpose value="A task resource describes an activity that can be performed and tracks the state of completion of that activity. It is a representation that an activity should be or has been initiated, and eventually, represents the successful or unsuccessful completion of that activity.\n\nNote that there are a variety of processes associated with making and processing orders. Some orders may be handled immediately by automated systems but most require real world actions by one or more humans. Some orders can only be processed when other real world actions happen, such as a patient presenting themselves so that the action to be performed can actually be performed. Often these real world dependencies are only implicit in the order details." />
   <copyright value="Copyright: Copyright © 2021+ HL7 UK Licensed under the Apache License, Version 2.0 (the \&quot;License\&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at  http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \&quot;AS IS\&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. HL7® FHIR® standard Copyright © 2011+ HL7 The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at  https://www.hl7.org/fhir/license.html." />
   <fhirVersion value="4.0.1" />
@@ -96,7 +96,7 @@
     </element>
     <element id="Task.statusReason">
       <path value="Task.statusReason" />
-      <definition value="**For EPS only**\n\n| reasonCode | focus | status | CodeSystem |\n|--|--|--|--|\n| 373784005 - Dispensing medication | `dispense-notification` | `cancelled` | [https://fhir.nhs.uk/CodeSystem/EPS-task-dispense-withdraw-reason](https://simplifier.net/resolve?target=simplifier&amp;scope=uk.nhsdigital.r4&amp;canonical=https://fhir.nhs.uk/CodeSystem/EPS-task-dispense-withdraw-reason) |\n| 33633005 - Prescription of drug | `prescription-order` | `rejected` / `cancelled` / `failed` |  [https://fhir.nhs.uk/CodeSystem/EPS-task-dispense-return-status-reason](https://simplifier.net/resolve?target=simplifier&amp;scope=uk.nhsdigital.r4&amp;canonical=https://fhir.nhs.uk/CodeSystem/EPS-task-dispense-return-status-reason) |\n\n```json\n&quot;statusReason&quot;: [{\n        &quot;coding&quot;:  [\n            {\n                &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/EPS-task-dispense-withdraw-reason&quot;,\n                &quot;code&quot;: &quot;DA&quot;,\n                &quot;display&quot;: &quot;Dosage Amendments&quot;\n            }\n        ]\n    }]\n```" />
+      <definition value="**For EPS only**\n\n| reasonCode | focus | status | CodeSystem |\n|--|--|--|--|\n| 373784005 - Dispensing medication | `dispense-notification` | `cancelled` | [https://fhir.nhs.uk/CodeSystem/England-EPSTaskDispenseWithdrawReason](https://simplifier.net/resolve?target=simplifier&amp;scope=uk.nhsdigital.r4&amp;canonical=https://fhir.nhs.uk/CodeSystem/England-EPSTaskDispenseWithdrawReason) |\n| 33633005 - Prescription of drug | `prescription-order` | `rejected` / `cancelled` / `failed` |  [https://fhir.nhs.uk/CodeSystem/England-EPSTaskDispenseReturnStatusReason](https://simplifier.net/resolve?target=simplifier&amp;scope=uk.nhsdigital.r4&amp;canonical=https://fhir.nhs.uk/CodeSystem/England-EPSTaskDispenseReturnStatusReason) |\n\n```json\n&quot;statusReason&quot;: [{\n        &quot;coding&quot;:  [\n            {\n                &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/England-EPSTaskDispenseWithdrawReason&quot;,\n                &quot;code&quot;: &quot;DA&quot;,\n                &quot;display&quot;: &quot;Dosage Amendments&quot;\n            }\n        ]\n    }]\n```" />
     </element>
     <element id="Task.intent">
       <path value="Task.intent" />
@@ -161,7 +161,7 @@
     </element>
     <element id="Task.code.coding:Worflow.system">
       <path value="Task.code.coding.system" />
-      <fixedUri value="https://fhir.nhs.uk/CodeSystem/Workflow-Code" />
+      <fixedUri value="https://fhir.nhs.uk/CodeSystem/England-WorkflowCode" />
     </element>
     <element id="Task.focus">
       <path value="Task.focus" />
@@ -190,7 +190,6 @@
         <severity value="error" />
         <human value="NHS Number must be in the English and Welsh NHS Number range or length of the number is wrong." />
         <expression value="identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').exists().not() or (identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').exists()  and identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').value.matches('^([456789]{1}[0-9]{9})$'))" />
-        <source value="https://fhir.nhs.uk/StructureDefinition/England-Claim" />
       </constraint>
       <mustSupport value="true" />
     </element>
