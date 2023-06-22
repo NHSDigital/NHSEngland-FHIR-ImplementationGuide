@@ -1,18 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-<<<<<<<< HEAD:StructureDefinition/Extension-England-COVID19TestResult.xml
   <id value="Extension-England-COVID19TestResult" />
   <url value="https://fhir.nhs.uk/StructureDefinition/Extension-England-COVID19TestResult" />
   <version value="1.0.0" />
   <name value="ExtensionEnglandCOVID19TestResult" />
   <title value="Extension England COVID19 Test Result" />
-========
-  <id value="Extension-England-AccountCode" />
-  <url value="https://fhir.nhs.uk/StructureDefinition/Extension-England-AccountCode" />
-  <version value="1.0.0" />
-  <name value="ExtensionEnglandAccountCode" />
-  <title value="Extension England Account Code" />
->>>>>>>> DSTU2_develop:StructureDefinition/Extension-England-AccountCode.xml
   <status value="draft" />
   <date value="2023-06-01" />
   <publisher value="NHS England" />
@@ -25,32 +17,15 @@
       <rank value="1" />
     </telecom>
   </contact>
-<<<<<<<< HEAD:StructureDefinition/Extension-England-COVID19TestResult.xml
   <description value="Extension for Covid 19 Test Results" />
   <purpose value="COVID 19 Test Results" />
-========
-  <description value="Extension for account code" />
-  <purpose value="Extension for account code" />
->>>>>>>> DSTU2_develop:StructureDefinition/Extension-England-AccountCode.xml
   <copyright value="Copyright © 2021+ HL7 UK Licensed under the Apache License, Version 2.0 (the \&quot;License\&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at  http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \&quot;AS IS\&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. HL7® FHIR® standard Copyright © 2011+ HL7 The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at  https://www.hl7.org/fhir/license.html." />
   <fhirVersion value="4.0.1" />
   <kind value="complex-type" />
   <abstract value="false" />
   <context>
     <type value="element" />
-<<<<<<<< HEAD:StructureDefinition/Extension-England-COVID19TestResult.xml
     <expression value="Observation" />
-========
-    <expression value="PractitionerRole" />
-  </context>
-  <context>
-    <type value="element" />
-    <expression value="MedicationRequest" />
-  </context>
-  <context>
-    <type value="element" />
-    <expression value="MedicationDispense" />
->>>>>>>> DSTU2_develop:StructureDefinition/Extension-England-AccountCode.xml
   </context>
   <type value="Extension" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
@@ -67,7 +42,6 @@
       </slicing>
       <min value="0" />
     </element>
-<<<<<<<< HEAD:StructureDefinition/Extension-England-COVID19TestResult.xml
     <element id="Extension.extension:reportOrigin">
       <path value="Extension.extension" />
       <sliceName value="reportOrigin" />
@@ -102,75 +76,11 @@
       <path value="Extension.extension.value[x]" />
       <type>
         <code value="CodeableConcept" />
-========
-    <element id="Extension.extension:costCentre">
-      <path value="Extension.extension" />
-      <sliceName value="costCentre" />
-      <min value="0" />
-      <max value="1" />
-    </element>
-    <element id="Extension.extension:costCentre.url">
-      <path value="Extension.extension.url" />
-      <fixedUri value="costCentre" />
-    </element>
-    <element id="Extension.extension:costCentre.value[x]">
-      <path value="Extension.extension.value[x]" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Account" />
       </type>
-    </element>
-    <element id="Extension.extension:costCentre.value[x].identifier">
-      <path value="Extension.extension.value[x].identifier" />
-      <min value="1" />
-    </element>
-    <element id="Extension.extension:costCentre.value[x].identifier.system">
-      <path value="Extension.extension.value[x].identifier.system" />
-      <min value="1" />
-      <fixedUri value="https://fhir.nhs.uk/Id/ods-organization-code" />
-    </element>
-    <element id="Extension.extension:costCentre.value[x].identifier.value">
-      <path value="Extension.extension.value[x].identifier.value" />
-      <min value="1" />
-    </element>
-    <element id="Extension.extension:spuriousCode">
-      <path value="Extension.extension" />
-      <sliceName value="spuriousCode" />
-      <min value="0" />
-      <max value="1" />
-    </element>
-    <element id="Extension.extension:spuriousCode.url">
-      <path value="Extension.extension.url" />
-      <fixedUri value="spuriousCode" />
-    </element>
-    <element id="Extension.extension:spuriousCode.value[x]">
-      <path value="Extension.extension.value[x]" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Account" />
->>>>>>>> DSTU2_develop:StructureDefinition/Extension-England-AccountCode.xml
-      </type>
-    </element>
-    <element id="Extension.extension:spuriousCode.value[x].identifier">
-      <path value="Extension.extension.value[x].identifier" />
-      <min value="1" />
-    </element>
-    <element id="Extension.extension:spuriousCode.value[x].identifier.system">
-      <path value="Extension.extension.value[x].identifier.system" />
-      <min value="1" />
-      <fixedUri value="https://fhir.hl7.org.uk/Id/nhsbsa-spurious-code" />
-    </element>
-    <element id="Extension.extension:spuriousCode.value[x].identifier.value">
-      <path value="Extension.extension.value[x].identifier.value" />
-      <min value="1" />
     </element>
     <element id="Extension.url">
       <path value="Extension.url" />
-<<<<<<<< HEAD:StructureDefinition/Extension-England-COVID19TestResult.xml
       <fixedUri value="https://fhir.nhs.uk/StructureDefinition/Extension-England-COVID19TestResult" />
-========
-      <fixedUri value="https://fhir.nhs.uk/StructureDefinition/Extension-England-AccountCode" />
->>>>>>>> DSTU2_develop:StructureDefinition/Extension-England-AccountCode.xml
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />
