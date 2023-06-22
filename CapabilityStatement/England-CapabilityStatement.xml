@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<?xml version="1.0" encoding="utf-8"?>
+>>>>>>> DSTU2_develop
 <CapabilityStatement xmlns="http://hl7.org/fhir">
     <id value="England-CapabilityStatement" />
     <url value="https://fhir.nhs.uk/StructureDefinition/England-CapabilityStatement" />
@@ -37,6 +41,18 @@
         <resource>
             <type value="Observation" />
             <profile value="https://fhir.nhs.uk/StructureDefinition/England-Observation" />
+        </resource>
+        <resource>
+            <type value="OperationOutcome" />
+            <profile value="https://fhir.nhs.uk/StructureDefinition/England-OperationOutcome" />
+        </resource> 
+        <resource>  
+            <type value="Immunization" />
+            <profile value="https://fhir.nhs.uk/StructureDefinition/England-Immunization" />
+        </resource>
+        <resource>
+            <type value="PractitionerRole" />
+            <profile value="https://fhir.nhs.uk/StructureDefinition/England-PractitionerRole" />
         </resource>
     </rest>
 </CapabilityStatement>
