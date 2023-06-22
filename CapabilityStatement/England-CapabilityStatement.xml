@@ -37,6 +37,10 @@
         <resource>
             <type value="Provenance" />
             <profile value="https://fhir.nhs.uk/StructureDefinition/England-Provenance" />
+        </resource> 
+        <resource> 
+            <type value="Observation" />
+            <profile value="https://fhir.nhs.uk/StructureDefinition/England-Observation" />
         </resource>
         <resource>
             <type value="OperationOutcome" />
