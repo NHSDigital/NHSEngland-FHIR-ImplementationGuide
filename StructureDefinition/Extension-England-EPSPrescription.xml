@@ -59,7 +59,7 @@
       </type>
       <binding>
         <strength value="required" />
-        <valueSet value="https://fhir.nhs.uk/ValueSet/DM-medicationrequest-course-of-therapy" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/England-DMMedicationRequestCourseOfTherapy" />
       </binding>
     </element>
     <element id="Extension.url">
