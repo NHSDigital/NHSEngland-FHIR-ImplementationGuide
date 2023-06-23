@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PractitionerRole xmlns="http://hl7.org/fhir">
+  <id value="England-PractitionerRole-GeneralSurgeryConsultant-Example" />
+  <identifier>
+    <system value="https://fhir.nhs.uk/Id/sds-role-profile-id" />
+    <value value="125686540025" />
+  </identifier>
+  <practitioner>
+    <identifier>
+      <system value="https://fhir.hl7.org.uk/Id/gmp-number" />
+      <value value="G1234567" />
+    </identifier>
+    <display value="Dr Razia Ali" />
+  </practitioner>
+  <organization>
+    <identifier>
+      <system value="https://fhir.nhs.uk/Id/ods-organization-code" />
+      <value value="M85011" />
+    </identifier>
+    <display value="THE SWAN MEDICAL CENTRE" />
+  </organization>
+  <code>
+    <coding>
+      <system value="https://fhir.nhs.uk/CodeSystem/England-SDSJobRoleCode" />
+      <code value="R0050" />
+    </coding>
+  </code>
+  <specialty>
+    <coding>
+      <system value="https://fhir.hl7.org.uk/CodeSystem/UKCore-PracticeSettingCode" />
+      <code value="100" />
+      <display value="GENERAL SURGERY" />
+    </coding>
+  </specialty>
+  <telecom>
+    <system value="phone" />
+    <value value="01234567890" />
+    <use value="work" />
+  </telecom>
+</PractitionerRole>
