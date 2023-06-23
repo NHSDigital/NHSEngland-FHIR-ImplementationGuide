@@ -1,5 +1,5 @@
 <Bundle xmlns="http://hl7.org/fhir">
-    <id value="England-MedicationRequest-BundleDMPrescriptionType-Example" />
+    <id value="England-Bundle-MedicationPrescriptionType-Example" />
     <meta>
         <lastUpdated value="2022-11-01T11:06:18.371+00:00" />
     </meta>
