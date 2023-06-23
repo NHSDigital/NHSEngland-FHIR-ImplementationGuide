@@ -39,12 +39,20 @@
             <profile value="https://fhir.nhs.uk/StructureDefinition/England-Immunization" />
         </resource>
         <resource>
+            <type value="Provenance" />
+            <profile value="https://fhir.nhs.uk/StructureDefinition/England-Provenance" />
+        </resource> 
+        <resource> 
             <type value="Observation" />
             <profile value="https://fhir.nhs.uk/StructureDefinition/England-Observation" />
         </resource>
         <resource>
             <type value="OperationOutcome" />
             <profile value="https://fhir.nhs.uk/StructureDefinition/England-OperationOutcome" />
+        </resource>
+        <resource>
+            <type value="MessageHeader" />
+            <profile value="https://fhir.nhs.uk/StructureDefinition/England-MessageHeader" />
         </resource>
         <resource>
             <type value="PractitionerRole" />
