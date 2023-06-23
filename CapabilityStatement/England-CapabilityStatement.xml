@@ -66,5 +66,9 @@
             <type value="MedicationRequest" />
             <profile value="https://fhir.nhs.uk/StructureDefinition/England-MedicationRequest" />
         </resource>
+        <resource>
+            <type value="Task" />
+            <profile value="https://fhir.nhs.uk/StructureDefinition/England-Task" />
+        </resource>
     </rest>
 </CapabilityStatement>
