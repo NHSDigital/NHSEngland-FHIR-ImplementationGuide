@@ -1,0 +1,86 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+    <id value="England-DMMedicationDispenseStatusReason"/>
+    <url value="https://fhir.nhs.uk/ValueSet/England-DMMedicationDispenseStatusReason"/>
+    <version value="1.0.0"/>
+    <name value="EnglandDMMedicationDispenseStatusReason"/>
+    <title value="England DM MedicationDispense Status Reason" />
+    <status value="draft"/>
+    <date value="2023-06-01" />
+  <publisher value="NHS England" />
+  <contact>
+    <name value="NHS England" />
+    <telecom>
+      <system value="email" />
+      <value value="interoperabilityteam@nhs.net" />
+      <use value="work" />
+      <rank value="1" />
+    </telecom>
+  </contact>
+  <description value="MedicationDispense Status Reason" />
+  <purpose value="MedicationDispense Status Reason" />
+  <copyright value="Copyright © 2021+ HL7 UK Licensed under the Apache License, Version 2.0 (the \&quot;License\&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at  http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \&quot;AS IS\&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. HL7® FHIR® standard Copyright © 2011+ HL7 The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at  https://www.hl7.org/fhir/license.html." />
+    <compose>
+        <include>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-MedicationDispenseStatusReason"/>
+            <version value="1.0.0"/>
+        </include> 
+    </compose>
+    <expansion>
+        <timestamp value="2021-04-13T12:00:00+00:00"/>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-MedicationDispenseStatusReason"/>
+            <code value="0001"/>
+            <display value="Not required as instructed by the patient"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-MedicationDispenseStatusReason"/>
+            <code value="0011"/>
+            <display value="Patient purchased medication over the counter"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-MedicationDispenseStatusReason"/>
+            <code value="0003"/>
+            <display value="Owings note issued to patient"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-MedicationDispenseStatusReason"/>
+            <code value="0002"/>
+            <display value="Clinically unsuitable"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-MedicationDispenseStatusReason"/>
+            <code value="0010"/>
+            <display value="Patient did not collect medication"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-MedicationDispenseStatusReason"/>
+            <code value="0009"/>
+            <display value="Not allowed on FP10"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-MedicationDispenseStatusReason"/>
+            <code value="0008"/>
+            <display value="Item or prescription expired"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-MedicationDispenseStatusReason"/>
+            <code value="0005"/>
+            <display value="Prescription cancellation due to death"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-MedicationDispenseStatusReason"/>
+            <code value="0004"/>
+            <display value="Prescription cancellation"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-MedicationDispenseStatusReason"/>
+            <code value="0007"/>
+            <display value="Prescribed out of scope item"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-MedicationDispenseStatusReason"/>
+            <code value="0006"/>
+            <display value="Illegal NHS prescription"/>
+        </contains>
+    </expansion>
+</ValueSet>
