@@ -39,10 +39,6 @@
             <profile value="https://fhir.nhs.uk/StructureDefinition/England-Immunization" />
         </resource>
         <resource>
-            <type value="Immunization" />
-            <profile value="https://fhir.nhs.uk/StructureDefinition/England-Immunization" />
-        </resource>
-        <resource>
             <type value="Provenance" />
             <profile value="https://fhir.nhs.uk/StructureDefinition/England-Provenance" />
         </resource> 
@@ -61,6 +57,22 @@
         <resource>
             <type value="PractitionerRole" />
             <profile value="https://fhir.nhs.uk/StructureDefinition/England-PractitionerRole" />
+        </resource>
+        <resource>
+            <type value="ServiceRequest" />
+            <profile value="https://fhir.nhs.uk/StructureDefinition/England-ServiceRequest" />
+        </resource>
+        <resource>
+            <type value="MedicationRequest" />
+            <profile value="https://fhir.nhs.uk/StructureDefinition/England-MedicationRequest" />
+        </resource>
+        <resource>
+            <type value="Task" />
+            <profile value="https://fhir.nhs.uk/StructureDefinition/England-Task" />
+        </resource>
+        <resource>
+            <type value="MedicationDispense" />
+            <profile value="https://fhir.nhs.uk/StructureDefinition/England-MedicationDispense" />
         </resource>
     </rest>
 </CapabilityStatement>
