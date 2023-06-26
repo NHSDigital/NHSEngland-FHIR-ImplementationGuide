@@ -70,6 +70,9 @@
             <type value="Task" />
             <profile value="https://fhir.nhs.uk/StructureDefinition/England-Task" />
         </resource>
-        
+        <resource>
+            <type value="MedicationDispense" />
+            <profile value="https://fhir.nhs.uk/StructureDefinition/England-MedicationDispense" />
+        </resource>
     </rest>
 </CapabilityStatement>
