@@ -1,0 +1,649 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="England-MedicationRequest" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/England-MedicationRequest" />
+  <version value="1.0.0" />
+  <name value="EnglandMedicationRequest" />
+  <title value="England MedicationRequest" />
+  <status value="draft" />
+  <date value="2023-06-01" />
+  <publisher value="NHS England" />
+  <contact>
+    <name value="NHS England" />
+    <telecom>
+      <system value="email" />
+      <value value="interoperabilityteam@nhs.net" />
+      <use value="work" />
+      <rank value="1" />
+    </telecom>
+  </contact>
+  <description value="This profile defines the NHS England constraints and extensions on the FHIR UK Core resource [UK Core MedicationRequest](https://simplifier.net/hl7fhirukcorer4/ukcore-MedicationRequest)." />
+  <purpose value="An order or request for both supply of the medication and the instructions for administration of the medication to an individual. \n\nThis profile covers inpatient medication orders as well as community orders (whether filled by the prescriber or by a pharmacy). It also includes orders for over-the-counter medications (e.g. Aspirin), total parenteral nutrition and diet/ vitamin supplements, and may be used to support the order of medication-related devices. \n\nIt is not intended for use in prescribing particular diets, or for ordering non-medication-related items (eyeglasses, supplies, etc)." />
+  <copyright value="Copyright © 2021+ HL7 UK Licensed under the Apache License, Version 2.0 (the \&quot;License\&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at  http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \&quot;AS IS\&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. HL7® FHIR® standard Copyright © 2011+ HL7 The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at  https://www.hl7.org/fhir/license.html." />
+  <fhirVersion value="4.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="MedicationRequest" />
+  <baseDefinition value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-MedicationRequest" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="MedicationRequest">
+      <path value="MedicationRequest" />
+      <constraint>
+        <key value="eps-1" />
+        <severity value="error" />
+        <human value="medication[x] - Only one of medicationReference or medicationCodeableConcept should be provided" />
+        <expression value="(medicationReference.exists() and medicationCodeableConcept.exists().not()) or (medicationReference.exists().not() and medicationCodeableConcept.exists())" />
+      </constraint>
+      <constraint>
+        <key value="eps-5" />
+        <severity value="error" />
+        <human value="Extension(responsiblePractitioner) - An identifier or resource reference must be provided" />
+        <expression value="extension('https://fhir.nhs.uk/StructureDefinition/Extension-England-DMResponsiblePractitioner').exists().not() or (extension('https://fhir.nhs.uk/StructureDefinition/Extension-England-DMResponsiblePractitioner').value.reference.exists() or extension('https://fhir.nhs.uk/StructureDefinition/Extension-England-DMResponsiblePractitioner').value.system.exists())" />
+      </constraint>
+      <constraint>
+        <key value="eps-7" />
+        <severity value="warning" />
+        <human value="For continuous-repeat-dispensing intent must be reflex-order or original-order" />
+        <expression value="(courseOfTherapyType.coding.code != 'continuous-repeat-dispensing') or ((courseOfTherapyType.coding.code = 'continuous-repeat-dispensing') and ((intent ='original-order') or (intent ='reflex-order')))" />
+      </constraint>
+      <constraint>
+        <key value="eps-8" />
+        <severity value="error" />
+        <human value="For continuous intent must be instance-order or original-order" />
+        <expression value="(courseOfTherapyType.coding.code != 'continuous') or ((courseOfTherapyType.coding.code = 'continuous') and ((intent ='original-order') or (intent ='instance-order')))" />
+      </constraint>
+      <constraint>
+        <key value="eps-9" />
+        <severity value="warning" />
+        <human value="dispenseRequest.numberOfRepeatsAllowed should be populated for continuous and continuous-repeat-dispensing MedicationRequests." />
+        <expression value="(courseOfTherapyType.coding.code.startsWith('acute')) or  (courseOfTherapyType.coding.code.startsWith('continuous') and dispenseRequest.exists() and dispenseRequest.numberOfRepeatsAllowed.exists())" />
+      </constraint>
+      <constraint>
+        <key value="eps-10" />
+        <severity value="error" />
+        <human value="For continuous-repeat-dispensing (intent=reflex-order) basedOn must be populated" />
+        <expression value="(courseOfTherapyType.coding.code = 'acute') or (courseOfTherapyType.coding.code = 'continuous') or (courseOfTherapyType.coding.code = 'continuous-repeat-dispensing' and intent !='reflex-order') or (courseOfTherapyType.coding.code = 'continuous-repeat-dispensing' and intent ='reflex-order' and dispenseRequest.exists() and basedOn.exists())" />
+      </constraint>
+      <constraint>
+        <key value="eps-11" />
+        <severity value="error" />
+        <human value="For continuous-repeat-dispensing (intent=reflex-order) or continous orders, numberOfRepeatsAllowed must be empty or equal to 0" />
+        <expression value="(courseOfTherapyType.coding.code = 'acute') or (courseOfTherapyType.coding.code = 'continuous-repeat-dispensing' and intent !='reflex-order') or ((courseOfTherapyType.coding.code = 'continuous' or (courseOfTherapyType.coding.code = 'continuous-repeat-dispensing' and intent ='reflex-order')) and (dispenseRequest.numberOfRepeatsAllowed.exists().not() or (dispenseRequest.numberOfRepeatsAllowed.exists() and dispenseRequest.numberOfRepeatsAllowed = 0)))" />
+      </constraint>
+      <constraint>
+        <key value="eps-12" />
+        <severity value="warning" />
+        <human value="For continuous issues basedOn should be populated" />
+        <expression value="(courseOfTherapyType.coding.code = 'acute') or (courseOfTherapyType.coding.code = 'continuous-repeat-dispensing') or (courseOfTherapyType.coding.code = 'continuous' and dispenseRequest.exists() and basedOn.exists())" />
+      </constraint>
+      <constraint>
+        <key value="eps-13" />
+        <severity value="error" />
+        <human value="Extension repeatInformation.numberOfPrescriptionsIssued should not be present for continuous-repeat-dispensing that are not intent=reflex-order" />
+        <expression value="(courseOfTherapyType.coding.code != 'continuous-repeat-dispensing') or (courseOfTherapyType.coding.code = 'continuous-repeat-dispensing' and intent='reflex-order') or (courseOfTherapyType.coding.code = 'continuous-repeat-dispensing' and intent!='reflex-order' and extension('https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-MedicationRepeatInformation').exists().not()) or (courseOfTherapyType.coding.code = 'continuous-repeat-dispensing' and intent!='reflex-order' and extension('https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-MedicationRepeatInformation').exists() and extension('https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-MedicationRepeatInformation').extension('numberOfPrescriptionsIssued').exists().not())" />
+      </constraint>
+      <constraint>
+        <key value="eps-14" />
+        <severity value="error" />
+        <human value="Extension repeatInformation.numberOfPrescriptionsIssued should be present for continuous-repeat-dispensing that have intent=reflex-order" />
+        <expression value="(courseOfTherapyType.coding.code != 'continuous-repeat-dispensing') or (courseOfTherapyType.coding.code = 'continuous-repeat-dispensing' and intent != 'reflex-order') or (courseOfTherapyType.coding.code = 'continuous-repeat-dispensing' and intent='reflex-order' and extension('https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-MedicationRepeatInformation').exists() and extension('https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-MedicationRepeatInformation').extension('numberOfPrescriptionsIssued').exists())" />
+      </constraint>
+      <constraint>
+        <key value="eps-15" />
+        <severity value="warning" />
+        <human value="Extension repeatInformation.numberOfPrescriptionsIssued is recommend to be present for continuous issues" />
+        <expression value="(courseOfTherapyType.coding.code != 'continuous') or (courseOfTherapyType.coding.code = 'continuous' and extension('https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-MedicationRepeatInformation').exists() and extension('https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-MedicationRepeatInformation').extension('numberOfPrescriptionsIssued').exists())" />
+      </constraint>
+      <constraint>
+        <key value="eps-16" />
+        <severity value="error" />
+        <human value="Extension repeatInformation.numberOfPrescriptionsIssued should not be present for acute issues" />
+        <expression value="(courseOfTherapyType.coding.code != 'acute') or (courseOfTherapyType.coding.code = 'acute' and extension('https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-MedicationRepeatInformation').exists().not())" />
+      </constraint>
+    </element>
+    <element id="MedicationRequest.extension">
+      <path value="MedicationRequest.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="MedicationRequest.extension:medicationRepeatInformation">
+      <path value="MedicationRequest.extension" />
+      <sliceName value="medicationRepeatInformation" />
+      <short value="Continous and Continuous Repeat Dispensing" />
+      <definition value="This extension &lt;b&gt;SHOULD&lt;/b&gt; be present for  `continuous` and `continuous-repeat-dispensing` therapy types. &#xD;&#xA;&#xD;&#xA;| Field | Description |&#xD;&#xA;|---|---|&#xD;&#xA;| numberOfPrescriptionsIssued |  Running total of number of issues made against a repeat authorisation. Including this issue.   |&#xD;&#xA;| ~~numberOfRepeatPrescriptionsAllowed~~ | Retired. See &lt;a href=&quot;#numberOfRepeatsAllowed&quot;&gt;numberOfRepeatsAllowed&lt;/a&gt; | &#xD;&#xA;| authorisationExpiryDate | The date a repeat prescription authorisation will expire. |&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;extension&quot;: [&#xD;&#xA;  {&#xD;&#xA;       &quot;url&quot;: &quot;https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-MedicationRepeatInformation&quot;,&#xD;&#xA;       &quot;extension&quot;: [&#xD;&#xA;           {&#xD;&#xA;               &quot;url&quot;: &quot;numberOfPrescriptionsIssued&quot;,&#xD;&#xA;               &quot;valueUnsignedInt&quot;: 3&#xD;&#xA;           },&#xD;&#xA;           {&#xD;&#xA;               &quot;url&quot;: &quot;authorisationExpiryDate&quot;,&#xD;&#xA;               &quot;valueDateTime&quot;: &quot;2020-08-07&quot;&#xD;&#xA;           }&#xD;&#xA;       ]&#xD;&#xA;   }&#xD;&#xA;]&#xD;&#xA;```" />
+      <min value="0" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationRequest.extension:responsiblePractitioner">
+      <path value="MedicationRequest.extension" />
+      <sliceName value="responsiblePractitioner" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-DMResponsiblePractitioner" />
+      </type>
+      <isModifier value="false" />
+    </element>
+    <element id="MedicationRequest.extension:prescriptionEndorsement">
+      <path value="MedicationRequest.extension" />
+      <sliceName value="prescriptionEndorsement" />
+      <min value="0" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-DMPrescriptionEndorsement" />
+      </type>
+      <isModifier value="false" />
+    </element>
+    <element id="MedicationRequest.extension:prescriptionTaskStatusReason">
+      <path value="MedicationRequest.extension" />
+      <sliceName value="prescriptionTaskStatusReason" />
+      <min value="0" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-DMPrescriptionStatusHistory" />
+      </type>
+      <isModifier value="false" />
+    </element>
+    <element id="MedicationRequest.extension:controlledDrug">
+      <path value="MedicationRequest.extension" />
+      <sliceName value="controlledDrug" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-DMControlledDrug" />
+      </type>
+      <isModifier value="false" />
+    </element>
+    <element id="MedicationRequest.extension:dispensingInformation">
+      <path value="MedicationRequest.extension" />
+      <sliceName value="dispensingInformation" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-EPSDispensingInformation" />
+      </type>
+      <isModifier value="false" />
+    </element>
+    <element id="MedicationRequest.extension:NHSBSAPrescriptionType">
+      <path value="MedicationRequest.extension" />
+      <sliceName value="NHSBSAPrescriptionType" />
+      <min value="0" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-DMPrescriptionType" />
+      </type>
+      <isModifier value="false" />
+    </element>
+    <element id="MedicationRequest.identifier">
+      <path value="MedicationRequest.identifier" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <short value="Each MedicationRequest MUST be identified by an Universal Unique Identifiers (UUIDs) with a system of https://fhir.nhs.uk/Id/prescription-order-item-number" />
+      <definition value="UUID example (for illustration purposes only);&#xD;&#xA;&#xD;&#xA;a54219b8-f741-4c47-b662-e4f8dfa49ab6&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA; &quot;identifier&quot;:  [&#xD;&#xA;    {&#xD;&#xA;        &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/prescription-order-item-number&quot;,&#xD;&#xA;        &quot;value&quot;: &quot;a54219b8-f741-4c47-b662-e4f8dfa49ab6&quot;&#xD;&#xA;    }&#xD;&#xA;]&#xD;&#xA;```" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationRequest.identifier:prescriptionOrderItem">
+      <path value="MedicationRequest.identifier" />
+      <sliceName value="prescriptionOrderItem" />
+      <short value="Prescription Order Item" />
+      <definition value="Unique Id of the MedicationRequest within EPS" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="MedicationRequest.identifier:prescriptionOrderItem.system">
+      <path value="MedicationRequest.identifier.system" />
+      <min value="1" />
+      <fixedUri value="https://fhir.nhs.uk/Id/prescription-order-item-number" />
+    </element>
+    <element id="MedicationRequest.identifier:prescriptionOrderItem.value">
+      <path value="MedicationRequest.identifier.value" />
+      <min value="1" />
+    </element>
+    <element id="MedicationRequest.status">
+      <path value="MedicationRequest.status" />
+      <short value="active | cancelled | stopped" />
+      <definition value="A code specifying the current state of the order. Generally, this will be active or completed state. &#xD;&#xA;&#xD;&#xA;| code | Definition |&#xD;&#xA;|--|--|&#xD;&#xA;| active | The prescription is 'actionable', but not all actions that are implied by it have occurred yet. It has not been dispensed or filled. |&#xD;&#xA;| cancelled | The prescription is to be cancelled or it has been cancelled been withdrawn before any administrations have occurred. Prescriptions in the process of being cancelled will be regarded as active until all actions are complete. |&#xD;&#xA;| stopped | Actions implied by the prescription are to be permanently halted, before all of the administrations occurred. This should not be used if the original order was entered in error|&#xD;&#xA;|completed|All actions that are implied by the prescription have occurred.|&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;### Logical medicationRequest status transitions&#xD;&#xA;&#xD;&#xA;This state transition diagram is an enhancement over the generic State Machine defined within the FHIR specification. It includes the status values associated with a medication request with transitions applicable to a UK implementation.&#xD;&#xA;&#xD;&#xA;&lt;img src=&quot;https://github.com/NHSDigital/NHSDigital-FHIR-ImplementationGuide/blob/master/Diagams/medication-request-status-flow.png?raw=true&quot; width=&quot;100%&quot; hieght=&quot;auto&quot;/&gt;" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationRequest.statusReason">
+      <path value="MedicationRequest.statusReason" />
+      <definition value="This is generally only used for exception statuses such as `suspended` or `cancelled`. It is the clinical status reason for the cancellation.&#xD;&#xA;&#xD;&#xA;This is mandatory for 'prescription-order-update' messages.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;statusReason&quot;: {&#xD;&#xA;    &quot;coding&quot;: [&#xD;&#xA;        {&#xD;&#xA;            &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/medicationrequest-status-reason&quot;,&#xD;&#xA;            &quot;code&quot;: &quot;0001&quot;,&#xD;&#xA;            &quot;display&quot;: &quot;Prescribing Error&quot;&#xD;&#xA;        }&#xD;&#xA;    ]&#xD;&#xA;},&#xD;&#xA;```" />
+      <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/England-DMMedicationRequestStatusReason" />
+      </binding>
+    </element>
+    <element id="MedicationRequest.statusReason.coding">
+      <path value="MedicationRequest.statusReason.coding" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="MedicationRequest.statusReason.coding.system">
+      <path value="MedicationRequest.statusReason.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="MedicationRequest.statusReason.coding.code">
+      <path value="MedicationRequest.statusReason.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="MedicationRequest.statusReason.coding.display">
+      <path value="MedicationRequest.statusReason.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="MedicationRequest.intent">
+      <path value="MedicationRequest.intent" />
+      <comment value="Indicates the type of order. A code specifying the current state of the order. Generally, this will be active or completed state. &#xD;&#xA;&#xD;&#xA;| code | display | courseOfTherapyType | Definition |&#xD;&#xA;|---|---|&#xD;&#xA;| order | Order | acute | The request represents a request/demand and authorization for action |&#xD;&#xA;| original-order | Original Order | continuous-repeat-dispensing continuous | The request represents the original authorization for the medication request. |&#xD;&#xA;| reflex-order |Reflex Order | continuous-repeat-dispensing | The request represents an automatically generated supplemental authorization (by EPS) for action based on a parent authorization together with initial results of the action taken against that parent authorization. |&#xD;&#xA;| instance-order | Instance Order | continuous | The request represents an instance for the particular order. |" />
+    </element>
+    <element id="MedicationRequest.category">
+      <path value="MedicationRequest.category" />
+      <definition value="In primary care the code of `community` should be used. In secondary care the category will often match the Episode/Spell type.&#xD;&#xA;&#xD;&#xA;| Code | System | Display |&#xD;&#xA;|---|---|&#xD;&#xA;| leave | https://fhir.nhs.uk/CodeSystem/medicationrequest-category | Leave |&#xD;&#xA;|outpatient | http://terminology.hl7.org/CodeSystem/medicationrequest-category |Outpatient |&#xD;&#xA;| discharge | http://terminology.hl7.org/CodeSystem/medicationrequest-category | Discharge |&#xD;&#xA;| community |http://terminology.hl7.org/CodeSystem/medicationrequest-category | Community |&#xD;&#xA;| inpatient  |http://terminology.hl7.org/CodeSystem/medicationrequest-category | Inpatient |&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;category&quot;: [&#xD;&#xA;    {&#xD;&#xA;        &quot;coding&quot;: [&#xD;&#xA;            {&#xD;&#xA;                &quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/medicationrequest-category&quot;,&#xD;&#xA;                &quot;code&quot;: &quot;outpatient&quot;,&#xD;&#xA;                &quot;display&quot;: &quot;Outpatient&quot;&#xD;&#xA;            }&#xD;&#xA;        ]&#xD;&#xA;    }&#xD;&#xA;],&#xD;&#xA;```" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationRequest.category.coding">
+      <path value="MedicationRequest.category.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="MedicationRequest.category.coding:patientClassFHIR">
+      <path value="MedicationRequest.category.coding" />
+      <sliceName value="patientClassFHIR" />
+      <max value="1" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/England-DMMedicationRequestCategory" />
+      </binding>
+    </element>
+    <element id="MedicationRequest.category.coding:patientClassFHIR.system">
+      <path value="MedicationRequest.category.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://terminology.hl7.org/CodeSystem/medicationrequest-category" />
+    </element>
+    <element id="MedicationRequest.category.coding:patientClassFHIR.code">
+      <path value="MedicationRequest.category.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="MedicationRequest.category.coding:patientClassUK">
+      <path value="MedicationRequest.category.coding" />
+      <sliceName value="patientClassUK" />
+      <max value="1" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/England-DMMedicationRequestCategory" />
+      </binding>
+    </element>
+    <element id="MedicationRequest.category.coding:patientClassUK.system">
+      <path value="MedicationRequest.category.coding.system" />
+      <min value="1" />
+      <fixedUri value="https://fhir.nhs.uk/CodeSystem/England-MedicationRequestCategory" />
+    </element>
+    <element id="MedicationRequest.category.coding:patientClassUK.code">
+      <path value="MedicationRequest.category.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="MedicationRequest.medication[x]">
+      <path value="MedicationRequest.medication[x]" />
+      <definition value="Only Virtual Medical Products (VMP) and Actual Medical Products (AMP) can be used." />
+      <comment value="Any code from the SnomedCT UK DMD subset for VMP, AMP and VTM concepts&#xD;&#xA;&#xD;&#xA;&lt;table&gt;&#xD;&#xA;&lt;thead&gt;&#xD;&#xA;&lt;th data-no-sort width=&quot;25%&quot;&gt;&#xD;&#xA;dm+d Category&#xD;&#xA;&lt;/th&gt;&#xD;&#xA;&lt;th data-no-sort width=&quot;50%&quot;&gt;&#xD;&#xA;dm+d Description&#xD;&#xA;&lt;/th&gt;&#xD;&#xA;&lt;th data-no-sort width=&quot;25%&quot;&gt;&#xD;&#xA;UK SNOMED Members Of&#xD;&#xA;&lt;/th&gt;&#xD;&#xA;&#xD;&#xA;&lt;/thead&gt;&#xD;&#xA;&lt;tr&gt;&#xD;&#xA;&lt;td&gt;&#xD;&#xA;VMP&#xD;&#xA;&lt;/td&gt;&#xD;&#xA;&lt;td&gt;&#xD;&#xA;Virtual Medical Product&#xD;&#xA;&lt;/td&gt;&#xD;&#xA;&lt;td&gt;&#xD;&#xA;&lt;a href=&quot;https://termbrowser.nhs.uk/?perspective=full&amp;conceptId1=999000561000001109&quot; target=&quot;_blank&quot;&gt;999000561000001109&lt;/a&gt;&#xD;&#xA;&lt;/td&gt;&#xD;&#xA;&lt;/tr&gt;&#xD;&#xA;&lt;tr&gt;&#xD;&#xA;&lt;td&gt;&#xD;&#xA;AMP&#xD;&#xA;&lt;/td&gt;&#xD;&#xA;&lt;td&gt;&#xD;&#xA;Actual Medical Product&#xD;&#xA;&lt;/td&gt;&#xD;&#xA;&lt;td&gt;&#xD;&#xA;&lt;a href=&quot;https://termbrowser.nhs.uk/?perspective=full&amp;conceptId1=999000541000001108&quot; target=&quot;_blank&quot;&gt;999000541000001108&lt;/a&gt;&#xD;&#xA;&lt;/td&gt;&#xD;&#xA;&lt;/tr&gt;&#xD;&#xA;&lt;/table&gt;" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <aggregation value="bundled" />
+      </type>
+      <mustSupport value="true" />
+      <binding>
+        <strength value="extensible" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/England-MedicationCode" />
+      </binding>
+    </element>
+    <element id="MedicationRequest.subject">
+      <path value="MedicationRequest.subject" />
+      <definition value="A resource reference to a Patient with a traced NHS Number is required, an untraced NHS Number **MUST NOT** be used.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA; &quot;subject&quot;: {&#xD;&#xA;                    &quot;type&quot;: &quot;Patient&quot;,&#xD;&#xA;                    &quot;reference&quot;: &quot;urn:uuid:bde9eba6-079f-4210-8108-6ea8db58de8c&quot;,&#xD;&#xA;                    &quot;display&quot;: &quot;Miss Bernie Kanfeld&quot;&#xD;&#xA;                }&#xD;&#xA;```" />
+      <constraint>
+        <key value="patient-nhs" />
+        <severity value="error" />
+        <human value="Supplied NHS Number is outside the English and Welsh NHS Number range or length of the number is wrong." />
+        <expression value="identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').exists().not() or (identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').exists()  and identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').value.matches('^([456789]{1}[0-9]{9})$'))" />
+      </constraint>
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationRequest.subject.reference">
+      <path value="MedicationRequest.subject.reference" />
+      <min value="1" />
+    </element>
+    <element id="MedicationRequest.subject.identifier.system">
+      <path value="MedicationRequest.subject.identifier.system" />
+      <min value="1" />
+      <fixedUri value="https://fhir.nhs.uk/Id/nhs-number" />
+    </element>
+    <element id="MedicationRequest.subject.identifier.value">
+      <path value="MedicationRequest.subject.identifier.value" />
+      <min value="1" />
+    </element>
+    <element id="MedicationRequest.encounter">
+      <path value="MedicationRequest.encounter" />
+      <definition value="Encounter is required for secondary care prescriptions." />
+    </element>
+    <element id="MedicationRequest.authoredOn">
+      <path value="MedicationRequest.authoredOn" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationRequest.requester">
+      <path value="MedicationRequest.requester" />
+      <definition value="The requester must contain a resource reference to the Practitioner who has electronically signed the prescription.&#xD;&#xA;&#xD;&#xA;If the `requester` can not take responsibility for the prescription, i.e. they would not be the prescriber on the FP10. Then the **extension responsiblePractitioner** must be populated.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;requester&quot;: {&#xD;&#xA;    &quot;reference&quot;: &quot;urn:uuid:56166769-c1c4-4d07-afa8-132b5dfca666&quot;&#xD;&#xA;},&#xD;&#xA;```" />
+      <min value="1" />
+      <constraint>
+        <key value="eps-3" />
+        <severity value="error" />
+        <human value="requester - An identifier reference or resource reference must be provided" />
+        <expression value="(reference.exists() or (identifier.exists()))" />
+      </constraint>
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationRequest.requester.reference">
+      <path value="MedicationRequest.requester.reference" />
+      <min value="1" />
+    </element>
+    <element id="MedicationRequest.recorder">
+      <path value="MedicationRequest.recorder" />
+      <constraint>
+        <key value="eps-4" />
+        <severity value="error" />
+        <human value="recorder - An identifier reference or resource reference must be provided" />
+        <expression value="(reference.exists() or (identifier.exists()))" />
+      </constraint>
+    </element>
+    <element id="MedicationRequest.basedOn">
+      <path value="MedicationRequest.basedOn" />
+      <definition value="This MUST be populated for `continuous-repeat-dispensing` issues where intent=`reflex-order`, i.e. the issues sent from EPS to pharmacists.&#xD;&#xA;It is recommended this is populated for `continuous` issues and this should reference the original order.&#xD;&#xA;&#xD;&#xA;Example for a `reflex-order` (continuous-repeat-dispensing): &#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA; &quot;basedOn&quot;: [&#xD;&#xA;        {&#xD;&#xA;            &quot;extension&quot;: [&#xD;&#xA;                {&#xD;&#xA;                    &quot;url&quot;: &quot;https://fhir.nhs.uk/StructureDefinition/Extension-EPS-RepeatInformation&quot;,&#xD;&#xA;                    &quot;extension&quot;: [&#xD;&#xA;                        {&#xD;&#xA;                            &quot;url&quot;: &quot;numberOfRepeatsAllowed&quot;,&#xD;&#xA;                            &quot;valueInteger&quot;: 6&#xD;&#xA;                        }&#xD;&#xA;                    ]&#xD;&#xA;                }&#xD;&#xA;            ],&#xD;&#xA;            &quot;identifier&quot;: {&#xD;&#xA;                &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/prescription-order-item-number&quot;,&#xD;&#xA;                &quot;value&quot;: &quot;A7B86F8D-1D59-FC28-E050-D20AE3A215F0&quot;&#xD;&#xA;            }&#xD;&#xA;        }&#xD;&#xA;    ]&#xD;&#xA;```&#xD;&#xA;&#xD;&#xA;Example for a `instance-order` (continuous). Note this references an example MedicationRequest from GP Connect:&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA; &quot;basedOn&quot;: [&#xD;&#xA;        {&#xD;&#xA;            &quot;extension&quot;: [&#xD;&#xA;                {&#xD;&#xA;                    &quot;url&quot;: &quot;https://fhir.nhs.uk/StructureDefinition/Extension-EPS-RepeatInformation&quot;,&#xD;&#xA;                    &quot;extension&quot;: [&#xD;&#xA;                        {&#xD;&#xA;                            &quot;url&quot;: &quot;numberOfRepeatsAllowed&quot;,&#xD;&#xA;                            &quot;valueInteger&quot;: 5&#xD;&#xA;                        }&#xD;&#xA;                    ]&#xD;&#xA;                }&#xD;&#xA;            ],&#xD;&#xA;            &quot;identifier&quot;: {&#xD;&#xA;                &quot;system&quot;: &quot;https://provider.nhs.uk/data-identifier&quot;,&#xD;&#xA;                &quot;value&quot;: &quot;53426283749629&quot;&#xD;&#xA;            }&#xD;&#xA;        }&#xD;&#xA;    ]&#xD;&#xA;```" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationRequest.basedOn.extension">
+      <path value="MedicationRequest.basedOn.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="MedicationRequest.basedOn.extension:repeatInformation">
+      <path value="MedicationRequest.basedOn.extension" />
+      <sliceName value="repeatInformation" />
+      <short value="Additional repeatInformation" />
+      <definition value="The extension `numberOfRepeatsIssued` should not be populated.&#xD;&#xA;&#xD;&#xA;The meaning of `numberOfRepeatsAllowed` is the same as the dispensingRequest.numberOfRepeatsAllowed i.e. &#xD;&#xA;&#xD;&#xA;An integer indicating the number of times, in addition to the original dispense, (aka refills or repeats) that the patient can receive the prescribed medication. Usage Notes: This integer does not include the original order dispense. This means that if an order indicates dispense 30 tablets plus &quot;3 repeats&quot;, then the order can be dispensed a total of 4 times and the patient can receive a total of 120 tablets. A prescriber may explicitly say that zero refills are permitted after the initial dispense.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;extension&quot;: [&#xD;&#xA;                {&#xD;&#xA;                    &quot;url&quot;: &quot;https://fhir.nhs.uk/StructureDefinition/Extension-EPS-RepeatInformation&quot;,&#xD;&#xA;                    &quot;extension&quot;: [&#xD;&#xA;                        {&#xD;&#xA;                            &quot;url&quot;: &quot;numberOfRepeatsAllowed&quot;,&#xD;&#xA;                            &quot;valueInteger&quot;: 2&#xD;&#xA;                        }&#xD;&#xA;                    ]&#xD;&#xA;                }&#xD;&#xA;            ]&#xD;&#xA;```" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-EPSRepeatInformation" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationRequest.basedOn.extension:orignalPrescriptionId">
+      <path value="MedicationRequest.basedOn.extension" />
+      <sliceName value="orignalPrescriptionId" />
+      <definition value="The original prescription id, used in repeats. This is taken from the same extension in the original MedicationRequest.groupIdentifier.&#xD;&#xA;```json&#xD;&#xA;  &quot;extension&quot;:  [&#xD;&#xA;        {&#xD;&#xA;            &quot;url&quot;: &quot;https://fhir.nhs.uk/StructureDefinition/Extension-DM-PrescriptionId&quot;,&#xD;&#xA;            &quot;valueIdentifier&quot;: {&#xD;&#xA;                &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/prescription&quot;,&#xD;&#xA;                &quot;value&quot;: &quot;ad945a29-85f8-439a-b590-6789719adc16&quot;&#xD;&#xA;            }&#xD;&#xA;        }&#xD;&#xA;    ],&#xD;&#xA;```" />
+      <min value="0" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-DMPrescriptionId" />
+      </type>
+      <isModifier value="false" />
+    </element>
+    <element id="MedicationRequest.groupIdentifier">
+      <path value="MedicationRequest.groupIdentifier" />
+      <short value="groupIdentifier (Short Form Prescription ID)" />
+      <definition value="The purpose of the Short Form Prescription ID is to identify the prescription during its lifecycle within the Spine (i.e. prescribe, dispense &amp; claim). The prescription UUID is retained to provide the link through to the Spine medication record within the PSIS and must be included as the first identifier within the prescription message.&#xD;&#xA;The format of the Short Form Prescription ID is as follows;&#xD;&#xA;&#xD;&#xA;`&lt;RandomNumber&gt;-&lt;PracticeODSCode/ClinicODSCode&gt;-&lt;PracticeSequence/ClinicSequence&gt;&lt;CheckDigit&gt;`&#xD;&#xA;&#xD;&#xA;Where;&#xD;&#xA;&#xD;&#xA;`&lt;RandomNumber&gt;` is a locally generated random number each time a Prescription ID is generated of length 6 hexadecimal characters.&#xD;&#xA;&#xD;&#xA;`&lt;PracticeODSCode/ClinicODSCode&gt;` is the unique ODS code for the practice or clinic code (aka cost centre) as defined within the Spine SDS of length 6 characters. Where the prescriber ODS code is shorter than 6 characters it must be zero-padded up to six characters from the start of the ODS code, e.g. “0A1B2C”.&#xD;&#xA;&#xD;&#xA;`&lt;PracticeSequence/ClinicSequence&gt;` is an incremental sequence number starting from 00000 that is reset after FFFFF back to zero of length 5 hexadecimal characters. For systems that support multiple practices or clinics, a sequence number per practice/clinic is required. This is to ensure uniqueness of prescriptions within the Spine EPS component during the prescription lifecycle.&#xD;&#xA;&#xD;&#xA;`&lt;CheckDigit&gt;` is calculated on the entire ID using the ISO/IEC 7064:2003 MOD 37-2 standard. The check digit algorithm is identical to that using for EPS Release 1.&#xD;&#xA;&#xD;&#xA;Note. Hyphens are always included to separate the ID into 3 blocks of 6 characters.&#xD;&#xA;&#xD;&#xA;Note. The implementation of the MOD 37-2 standard uses a “+” character for char 36 opposed to a “*” character.&#xD;&#xA;&#xD;&#xA;Short Form Prescription ID example (for illustration purposes only);&#xD;&#xA;&#xD;&#xA;**83C40E-A23856-00123W**&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;groupIdentifier&quot;: {&#xD;&#xA;    ...&#xD;&#xA;    &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/prescription-order-number&quot;,&#xD;&#xA;    &quot;value&quot;: &quot;DC2C66-A1B2C3-23407B&quot;&#xD;&#xA;},&#xD;&#xA;```" />
+      <comment value="ITK HL7v3 Mapping = The groupIdentifier is equivalent to ParentPrescription.id (prescription-order-number). The extension is used to carry the ParentPrescription.id (UUID)." />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationRequest.groupIdentifier.extension">
+      <path value="MedicationRequest.groupIdentifier.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="MedicationRequest.groupIdentifier.extension:PrescriptionOrderUUID">
+      <path value="MedicationRequest.groupIdentifier.extension" />
+      <sliceName value="PrescriptionOrderUUID" />
+      <short value="UUID order number for grouped MedciationRequests" />
+      <definition value="When UUIDs are used within HL7 messages they must be represented in an upper case human-readable hexadecimal format where hyphen separators are used as per the example below and as defined by the ‘datatype’ schema within the DMS.&#xD;&#xA;&#xD;&#xA;UUID example (for illustration purposes only);&#xD;&#xA;&#xD;&#xA;**34026084-A445-84AD-2D01-97D69ED25865**&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;groupIdentifier&quot;: {&#xD;&#xA;    &quot;extension&quot;:  [&#xD;&#xA;        {&#xD;&#xA;            &quot;url&quot;: &quot;https://fhir.nhs.uk/StructureDefinition/Extension-DM-PrescriptionId&quot;,&#xD;&#xA;            &quot;valueIdentifier&quot;: {&#xD;&#xA;                &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/prescription&quot;,&#xD;&#xA;                &quot;value&quot;: &quot;ad945a29-85f8-439a-b590-6789719adc16&quot;&#xD;&#xA;            }&#xD;&#xA;        }&#xD;&#xA;    ],&#xD;&#xA;    &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/prescription-order-number&quot;,&#xD;&#xA;    &quot;value&quot;: &quot;DC2C66-A1B2C3-23407B&quot;&#xD;&#xA;},&#xD;&#xA;```" />
+      <min value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-DMPrescriptionId" />
+      </type>
+    </element>
+    <element id="MedicationRequest.groupIdentifier.extension:PrescriptionOrderUUID.value[x].system">
+      <path value="MedicationRequest.groupIdentifier.extension.value[x].system" />
+      <min value="1" />
+    </element>
+    <element id="MedicationRequest.groupIdentifier.extension:PrescriptionOrderUUID.value[x].value">
+      <path value="MedicationRequest.groupIdentifier.extension.value[x].value" />
+      <min value="1" />
+    </element>
+    <element id="MedicationRequest.groupIdentifier.system">
+      <path value="MedicationRequest.groupIdentifier.system" />
+      <min value="1" />
+      <fixedUri value="https://fhir.nhs.uk/Id/prescription-order-number" />
+    </element>
+    <element id="MedicationRequest.groupIdentifier.value">
+      <path value="MedicationRequest.groupIdentifier.value" />
+      <min value="1" />
+    </element>
+    <element id="MedicationRequest.courseOfTherapyType">
+      <path value="MedicationRequest.courseOfTherapyType" />
+      <definition value="```json&#xD;&#xA;&quot;courseOfTherapyType&quot;: {&#xD;&#xA;  &quot;coding&quot;:  [&#xD;&#xA;      {&#xD;&#xA;          &quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy&quot;,&#xD;&#xA;          &quot;code&quot;: &quot;acute&quot;,&#xD;&#xA;          &quot;display&quot;: &quot;Short course (acute) therapy&quot;&#xD;&#xA;      }&#xD;&#xA;  ]&#xD;&#xA;},&#xD;&#xA;```" />
+      <comment value="The type of prescription e.g. acute, continuous, etc. Was extension in STU3 https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-PrescriptionType-1 and Digital Medicine uses international codes, so continuous in place of repeat." />
+      <min value="1" />
+      <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/England-DMMedicationRequestCourseOfTherapy" />
+      </binding>
+    </element>
+    <element id="MedicationRequest.courseOfTherapyType.coding">
+      <path value="MedicationRequest.courseOfTherapyType.coding" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="MedicationRequest.courseOfTherapyType.coding.system">
+      <path value="MedicationRequest.courseOfTherapyType.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="MedicationRequest.courseOfTherapyType.coding.code">
+      <path value="MedicationRequest.courseOfTherapyType.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="MedicationRequest.note">
+      <path value="MedicationRequest.note" />
+      <short value="Dispensing Note" />
+      <definition value="Clinical information relating to a prescribed medication item that cannot be conveyed within dosage instructions is populated within `note` field.&#xD;&#xA;&#xD;&#xA;Examples of dispensing notes are:&#xD;&#xA;&#xD;&#xA;- To explain changes in dosage, for example, “Dosage has been increased on advice of the hospital”.&#xD;&#xA;- &quot;Tell patient to stop their statin whilst on this anitbiotic&quot;&#xD;&#xA;- &quot;hospital consultant has confirmed dual treatment&quot;&#xD;&#xA;&#xD;&#xA;One scenario where `note` must be populated is when the current prescribed medication item is the last authorised repeat of that medication within a repeat prescribing cycle. Appropriate text, such as “Last authorised repeat” must be included within the `note` to inform the dispenser and to allow the dispenser to communicate to the patient or patient representative. Note that for repeat dispensing, the ‘numberOfPrescriptionsIssued’ element also conveys this information.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;note&quot;: [&#xD;&#xA;    {&#xD;&#xA;      &quot;text&quot;: &quot;Tell patient to stop their statin whilst on this anitbiotic&quot;&#xD;&#xA;    }&#xD;&#xA;  ],&#xD;&#xA;```" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationRequest.dosageInstruction">
+      <path value="MedicationRequest.dosageInstruction" />
+      <definition value="The content of the `dosageInstruction` should follow guidance in [Dosage Structure Overview](https://developer.nhs.uk/apis/dose-syntax-implementation/dosage-overview.html). (Note this is based on CareConnect STU3 but the guidance is still valid in UKCore R4)&#xD;&#xA;&#xD;&#xA;`dosageInstruction.text` **MUST** be supplied and is a human readable version of the structured dose as would be printed on a paper prescription. The prescriber is required to enter a medication item dosage. The use of a generic default value, for example “Use as directed”, if a value is not entered, is not acceptable from a clinical perspective.&#xD;&#xA;&#xD;&#xA;The prescriber is required to enter a medication item dosage. The use of a generic default value, for example “Use as directed”, if a value is not entered, is not acceptable from a clinical perspective. The user must be asked to select a dosage instruction from a pick list, type by hand or have the system populate with a valid and clinically safe dosage instruction relevant to the prescribed medication or clinical circumstances.&#xD;&#xA;&#xD;&#xA;As per BNF guidelines, the dosage must be presented to the user without abbreviation although it may be entered and stored within the PMR in an abbreviated form. Within HL7 messaging, the dosage instruction must be represented without abbreviation.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;dosageInstruction&quot;: [&#xD;&#xA;   {&#xD;&#xA;        &quot;text&quot;: &quot;10 milligram, Inject, Subcutaneous route, once weekly&quot;,&#xD;&#xA;        &quot;timing&quot;: {&#xD;&#xA;            &quot;repeat&quot;: {&#xD;&#xA;                &quot;boundsDuration&quot;: {&#xD;&#xA;                    &quot;value&quot;: 10,&#xD;&#xA;                    &quot;unit&quot;: &quot;day&quot;,&#xD;&#xA;                     &quot;system&quot;: &quot;http://unitsofmeasure.org&quot;,&#xD;&#xA;                     &quot;code&quot;: &quot;d&quot;&#xD;&#xA;                },&#xD;&#xA;                 &quot;frequency&quot;: 5,&#xD;&#xA;                 &quot;period&quot;: 1,&#xD;&#xA;                &quot;periodUnit&quot;: &quot;d&quot;&#xD;&#xA;             }&#xD;&#xA;        },&#xD;&#xA;        &quot;route&quot;: {&#xD;&#xA;            &quot;coding&quot;: [&#xD;&#xA;                {&#xD;&#xA;                    &quot;system&quot;: &quot;http://snomed.info/sct&quot;,&#xD;&#xA;                    &quot;code&quot;: &quot;34206005&quot;,&#xD;&#xA;                    &quot;display&quot;: &quot;Subcutaneous route&quot;&#xD;&#xA;                }&#xD;&#xA;            ]&#xD;&#xA;        },&#xD;&#xA;        &quot;method&quot;: {&#xD;&#xA;            &quot;coding&quot;: [&#xD;&#xA;                {&#xD;&#xA;                    &quot;system&quot;: &quot;http://snomed.info/sct&quot;,&#xD;&#xA;                    &quot;code&quot;: &quot;422145002&quot;,&#xD;&#xA;                    &quot;display&quot;: &quot;Inject&quot;&#xD;&#xA;                }&#xD;&#xA;            ]&#xD;&#xA;        },&#xD;&#xA;        &quot;doseAndRate&quot;: [&#xD;&#xA;            {&#xD;&#xA;                &quot;doseQuantity&quot;: {&#xD;&#xA;                    &quot;value&quot;: 10,&#xD;&#xA;                    &quot;unit&quot;: &quot;milligram&quot;,&#xD;&#xA;                    &quot;system&quot;: &quot;http://unitsofmeasure.org&quot;,&#xD;&#xA;                    &quot;code&quot;: &quot;mg&quot;&#xD;&#xA;                }&#xD;&#xA;            }&#xD;&#xA;        ]&#xD;&#xA;    }&#xD;&#xA;]&#xD;&#xA;&#xD;&#xA;```" />
+      <min value="1" />
+      <type>
+        <code value="Dosage" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/Dosage" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationRequest.dosageInstruction.additionalInstruction">
+      <path value="MedicationRequest.dosageInstruction.additionalInstruction" />
+      <definition value="These sections **MUST** be used only be used to pass notes regarding the prescription to the pharmacist or patient. Lists of repeat medications and general practice notifications to the patient **SHOULD** be recorded in [NHSDigital-CommunicationRequest](https://simplifier.net/guide/nhsdigital/NHSDigital-CommunicationRequest) resource.&#xD;&#xA;&#xD;&#xA;Patient instructions for taking the drug are contained with in the `patientInstruction` and `additionalInstruction` as per the guidance in [Dosage Structure Overview](https://developer.nhs.uk/apis/dose-syntax-implementation/dosage-overview.html)&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;dosageInstruction&quot;: [&#xD;&#xA;    {&#xD;&#xA;        &quot;text&quot;: &quot;10 milligram, Inject, Subcutaneous route, once weekly&quot;,&#xD;&#xA;        &quot;additionalInstruction&quot;: [&#xD;&#xA;            &quot;coding&quot;: [&#xD;&#xA;                {&#xD;&#xA;                    &quot;system&quot;: &quot;http://snomed.info/sct&quot;,&#xD;&#xA;                    &quot;code&quot;: &quot;421769005&quot;,&#xD;&#xA;                    &quot;display&quot;: &quot;Follow directions&quot;&#xD;&#xA;                }&#xD;&#xA;            ],&#xD;&#xA;        ],&#xD;&#xA;        &quot;patientInstruction&quot;: &quot;As directed&quot;&#xD;&#xA;    }&#xD;&#xA;]&#xD;&#xA;```" />
+    </element>
+    <element id="MedicationRequest.dosageInstruction.patientInstruction">
+      <path value="MedicationRequest.dosageInstruction.patientInstruction" />
+      <definition value="These sections **MUST** be used only be used to pass notes regarding the prescription to the pharmacist or patient. Lists of repeat medications and general practice notifications to the patient **SHOULD** be recorded in [NHSDigital-CommunicationRequest](https://simplifier.net/guide/nhsdigital/NHSDigital-CommunicationRequest) resource.&#xD;&#xA;&#xD;&#xA;Patient instructions for taking the drug are contained with in the `patientInstruction` and `additionalInstruction` as per the guidance in [Dosage Structure Overview](https://developer.nhs.uk/apis/dose-syntax-implementation/dosage-overview.html)&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;dosageInstruction&quot;: [&#xD;&#xA;    {&#xD;&#xA;        &quot;text&quot;: &quot;10 milligram, Inject, Subcutaneous route, once weekly&quot;,&#xD;&#xA;        &quot;additionalInstruction&quot;: [&#xD;&#xA;            &quot;coding&quot;: [&#xD;&#xA;                {&#xD;&#xA;                    &quot;system&quot;: &quot;http://snomed.info/sct&quot;,&#xD;&#xA;                    &quot;code&quot;: &quot;421769005&quot;,&#xD;&#xA;                    &quot;display&quot;: &quot;Follow directions&quot;&#xD;&#xA;                }&#xD;&#xA;            ],&#xD;&#xA;        ],&#xD;&#xA;        &quot;patientInstruction&quot;: &quot;As directed&quot;&#xD;&#xA;    }&#xD;&#xA;]&#xD;&#xA;```" />
+    </element>
+    <element id="MedicationRequest.dispenseRequest">
+      <path value="MedicationRequest.dispenseRequest" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationRequest.dispenseRequest.id">
+      <path value="MedicationRequest.dispenseRequest.id" />
+      <max value="0" />
+    </element>
+    <element id="MedicationRequest.dispenseRequest.extension">
+      <path value="MedicationRequest.dispenseRequest.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="MedicationRequest.dispenseRequest.extension:performerSiteType">
+      <path value="MedicationRequest.dispenseRequest.extension" />
+      <sliceName value="performerSiteType" />
+      <short value="type of dispensing organisation" />
+      <min value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-DMPerformerSiteType" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationRequest.dispenseRequest.validityPeriod">
+      <path value="MedicationRequest.dispenseRequest.validityPeriod" />
+      <definition value="The `validityPeriod` attribute defines the validity period for the prescription authorisation. This period must start (the `validityPeriod.start`) at the date of prescribing and cannot exceed 12 months (the `validityPeriod.end`). Typically, most repeatable prescriptions will be authorised for a validity period of either 6 or 12 months.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;dispenseRequest&quot;: {&#xD;&#xA;          &quot;validityPeriod&quot;: {&#xD;&#xA;            &quot;start&quot;: &quot;2020-06-10&quot;,&#xD;&#xA;            &quot;end&quot;: &quot;2020-12-07&quot;&#xD;&#xA;          },&#xD;&#xA;          ...&#xD;&#xA;      }&#xD;&#xA;```" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationRequest.dispenseRequest.validityPeriod.start">
+      <path value="MedicationRequest.dispenseRequest.validityPeriod.start" />
+      <min value="1" />
+    </element>
+    <element id="MedicationRequest.dispenseRequest.numberOfRepeatsAllowed">
+      <path value="MedicationRequest.dispenseRequest.numberOfRepeatsAllowed" />
+      <definition value="An integer indicating the number of times, in addition to the original dispense, (aka refills or repeats) that the patient can receive the prescribed medication. Usage Notes: This integer does not include the original order dispense. This means that if an order indicates dispense 30 tablets plus &quot;3 repeats&quot;, then the order can be dispensed a total of 4 times and the patient can receive a total of 120 tablets. A prescriber may explicitly say that zero refills are permitted after the initial dispense. &#xD;&#xA;&#xD;&#xA;The number of repeat issues authorised if specified. &lt;br&gt; &lt;b&gt;MUST&lt;/b&gt; be present where a `continuous` or `continuous-repeat-dispensing` is authorised for a defined number of issues. &lt;br&gt; &lt;b&gt;MUST&lt;/b&gt; NOT be specified where the number of repeat issues has not been defined. Therefore, the numberOfRepeats allowed is the total number of allowed issues. See also &lt;a href=&quot;#repeatInformation&quot;&gt;extension repeatInformation&lt;/a&gt;&#xD;&#xA;&#xD;&#xA;For `continuous` orders and `continuous-repeat-dispensing` with intent=`reflex-order` (i.e., orders sent from EPS to pharmacists) this &lt;b&gt;MUST&lt;/b&gt; be zero. The `numberOfRepeatsAllowed` in the extension to `basedOn` can be used to convey this information to inform patients that they need to re-order the medication.&#xD;&#xA;&#xD;&#xA;Example for a `continuous` issue:&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA;&quot;dispenseRequest&quot;: {&#xD;&#xA;        &quot;numberOfRepeatsAllowed&quot;: 0&#xD;&#xA;    }&#xD;&#xA;&#xD;&#xA;```&#xD;&#xA;&#xD;&#xA;Example for a `continuous-repeat-dispensing` issue with intent of `original-order`:&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA;&quot;dispenseRequest&quot;: {&#xD;&#xA;        &quot;numberOfRepeatsAllowed&quot;: 2&#xD;&#xA;    }&#xD;&#xA;```&#xD;&#xA;&#xD;&#xA;This will result in a total of three issues of the medication." />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationRequest.dispenseRequest.quantity">
+      <path value="MedicationRequest.dispenseRequest.quantity" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationRequest.dispenseRequest.quantity.value">
+      <path value="MedicationRequest.dispenseRequest.quantity.value" />
+      <min value="1" />
+    </element>
+    <element id="MedicationRequest.dispenseRequest.quantity.unit">
+      <path value="MedicationRequest.dispenseRequest.quantity.unit" />
+      <min value="1" />
+    </element>
+    <element id="MedicationRequest.dispenseRequest.quantity.code">
+      <path value="MedicationRequest.dispenseRequest.quantity.code" />
+      <min value="1" />
+    </element>
+    <element id="MedicationRequest.dispenseRequest.expectedSupplyDuration">
+      <path value="MedicationRequest.dispenseRequest.expectedSupplyDuration" />
+      <short value="Days Supply" />
+      <definition value="The `expectedSupplyDuration` entity is required for repeat dispensing (repeatable) prescriptions only.&#xD;&#xA;&#xD;&#xA;The `expectedSupplyDuration` element defines the expected duration, in days, of each issue of the prescription. A default value of 28 can be used which must be amendable by the prescriber when required. The value must be an integer value greater than zero. A sensible upper limit validation should be included within the System. If this value is omitted, the Spine will assume a value of 28.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;dispenseRequest&quot;: {&#xD;&#xA;          ...&#xD;&#xA;          &quot;expectedSupplyDuration&quot;: {&#xD;&#xA;            &quot;value&quot;: 28,&#xD;&#xA;            &quot;unit&quot;: &quot;days&quot;,&#xD;&#xA;            &quot;system&quot;: &quot;http://unitsofmeasure.org&quot;,&#xD;&#xA;            &quot;code&quot;: &quot;d&quot;&#xD;&#xA;          }&#xD;&#xA;      }&#xD;&#xA;```" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationRequest.dispenseRequest.expectedSupplyDuration.value">
+      <path value="MedicationRequest.dispenseRequest.expectedSupplyDuration.value" />
+      <min value="1" />
+    </element>
+    <element id="MedicationRequest.dispenseRequest.expectedSupplyDuration.code">
+      <path value="MedicationRequest.dispenseRequest.expectedSupplyDuration.code" />
+      <min value="1" />
+      <fixedCode value="d" />
+    </element>
+    <element id="MedicationRequest.dispenseRequest.performer">
+      <path value="MedicationRequest.dispenseRequest.performer" />
+      <definition value="For non token based prescriptions the destination pharmacy **MUST** be recorded in the *dispenseRequest.performer.identifier* and a identifier reference (not a resource reference) with an ANANA/ODS Code **MUST** used. &#xD;&#xA;&#xD;&#xA;The extension https://fhir.nhs.uk/StructureDefinition/Extension-DM-PerformerSiteType **MUST** be present.&#xD;&#xA;&#xD;&#xA;Patients pharmacy preferences may be sourced from PDS.&#xD;&#xA;&#xD;&#xA;Patients pharmacy preferences may be overriden by an 'one-off pharmacy nomination' by populating the *dispenseRequest.performer.identifier* with the ODS/ANANA code of the destination pharmacy.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;dispenseRequest&quot;: {&#xD;&#xA;        &quot;extension&quot;:  [&#xD;&#xA;            {&#xD;&#xA;                &quot;url&quot;: &quot;https://fhir.nhs.uk/StructureDefinition/Extension-DM-PerformerSiteType&quot;,&#xD;&#xA;                &quot;valueCoding&quot;: {&#xD;&#xA;                    &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/England-DispensingSitePreference&quot;,&#xD;&#xA;                    &quot;code&quot;: &quot;0004&quot;&#xD;&#xA;                }&#xD;&#xA;            },&#xD;&#xA;        ],&#xD;&#xA;        &quot;performer&quot;: {&#xD;&#xA;            &quot;identifier&quot;: {&#xD;&#xA;                &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/ods-organization-code&quot;,&#xD;&#xA;                &quot;value&quot;: &quot;FX748&quot;&#xD;&#xA;            }&#xD;&#xA;        },&#xD;&#xA;```" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationRequest.dispenseRequest.performer.extension">
+      <path value="MedicationRequest.dispenseRequest.performer.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="MedicationRequest.dispenseRequest.performer.extension:dispensingPractitioner">
+      <path value="MedicationRequest.dispenseRequest.performer.extension" />
+      <sliceName value="dispensingPractitioner" />
+      <short value="practitioner who released(/downloaded) the prescription" />
+      <definition value="Details of the dispenser who is actioning the MedicationRequest&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;       &quot;dispenseRequest&quot;: { &#xD;&#xA;                    &quot;performer&quot;: {&#xD;&#xA;                        &quot;extension&quot;:  [&#xD;&#xA;                            {&#xD;&#xA;                                &quot;url&quot;: &quot;https://fhir.nhs.uk/StructureDefinition/Extension-DM-DispensingPerformer&quot;,&#xD;&#xA;                                &quot;valueReference&quot;: {&#xD;&#xA;                                    &quot;reference&quot;: &quot;urn:uuid:25f3dd9f-5838-44a7-930e-c78ae3ecadd6&quot;,&#xD;&#xA;                                    &quot;display&quot;: &quot;LOTTIE POTTS&quot;&#xD;&#xA;                                }&#xD;&#xA;                            }&#xD;&#xA;                        ],&#xD;&#xA;                        &quot;identifier&quot;: {&#xD;&#xA;                            &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/ods-organization-code&quot;,&#xD;&#xA;                            &quot;value&quot;: &quot;VNE51&quot;&#xD;&#xA;                        },&#xD;&#xA;                        &quot;display&quot;: &quot;The Simple Pharmacy&quot;&#xD;&#xA;                    }&#xD;&#xA;                },&#xD;&#xA;```" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-DMDispensingPerformer" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationRequest.dispenseRequest.performer.identifier">
+      <path value="MedicationRequest.dispenseRequest.performer.identifier" />
+      <min value="1" />
+    </element>
+    <element id="MedicationRequest.dispenseRequest.performer.identifier.system">
+      <path value="MedicationRequest.dispenseRequest.performer.identifier.system" />
+      <min value="1" />
+      <fixedUri value="https://fhir.nhs.uk/Id/ods-organization-code" />
+    </element>
+    <element id="MedicationRequest.dispenseRequest.performer.identifier.value">
+      <path value="MedicationRequest.dispenseRequest.performer.identifier.value" />
+      <min value="1" />
+    </element>
+    <element id="MedicationRequest.substitution">
+      <path value="MedicationRequest.substitution" />
+      <definition value="Within UK healthcare, substitution is not the norm and so this element will normally be set to a default of `false`.&#xD;&#xA;&#xD;&#xA;Substitution being set to false is a mandatory requirement for EPS..&#xD;&#xA;&#xD;&#xA;Substituition is a mandatory requirement for EPS.&#xD;&#xA;&#xD;&#xA;&lt;div markdown=&quot;span&quot; class=&quot;alert alert-warning&quot; role=&quot;alert&quot;&gt;&lt;i class=&quot;fa fa-information&quot;&gt;&lt;/i&gt;&lt;h4&gt;Important Note:&lt;/h4&gt;&#xD;&#xA;Within UK healthcare, substitution is not the norm so the international FHIR definition where &quot;_If nothing is specified substitution may be done._&quot; does not align with UK healthcare prescribing best practice.&lt;br/&gt;&#xD;&#xA;&lt;p&gt;It could be unwise to assume all UK implementations will prevent substitution if not explicitly stated, especially if the same clinical system has been previously implemented outside the UK. &lt;br/&gt;&lt;/p&gt;&#xD;&#xA;&lt;p&gt;UK Core has profiled this element as MANDATORY and MUST have a default boolean value of &lt;code&gt;false&lt;/code&gt; to denote substitution is not allowed.&lt;/p&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&lt;h3 id=&quot;allowing-substitution&quot;&gt;Allowing substitution&lt;/h3&gt;&#xD;&#xA;&lt;p&gt;Where substitution to be be allowed, set to &lt;code&gt;true&lt;/code&gt;. The inclusion of the coded reason is optional as the valueset defined in FHIR is of limited benefit to UK healthcare.&lt;/p&gt;&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA;&quot;substitution&quot;: {&#xD;&#xA;        &quot;allowedBoolean&quot;: false&#xD;&#xA;    }&#xD;&#xA;&#xD;&#xA;```" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationRequest.substitution.allowed[x]">
+      <path value="MedicationRequest.substitution.allowed[x]" />
+      <type>
+        <code value="boolean" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

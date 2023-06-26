@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+	<id value="England-DMMedicationRequestCategory"/>
+	<url value="https://fhir.nhs.uk/ValueSet/England-DMMedicationRequestCategory"/>
+	<version value="1.0.0"/>
+	<name value="EnglandDMMedicationRequestCategory"/>
+	<title value="England DM MedicationRequest Category" />
+	<status value="draft"/>
+	<date value="2023-06-01"/>
+	<publisher value="NHS England"/>
+	<contact>
+		<name value="NHS England"/>
+		<telecom>
+			<system value="email"/>
+			<value value="interoperabilityteam@nhs.net"/>
+			<use value="work"/>
+			<rank value="1"/>
+		</telecom>
+	</contact>
+	<description value="MedicationRequest Category"/>
+	<purpose value="MedicationRequest Category" />
+  <copyright value="Copyright © 2021+ HL7 UK Licensed under the Apache License, Version 2.0 (the \&quot;License\&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at  http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \&quot;AS IS\&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. HL7® FHIR® standard Copyright © 2011+ HL7 The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at  https://www.hl7.org/fhir/license.html." />
+	<compose>
+		<include>
+			<system value="https://fhir.nhs.uk/CodeSystem/England-MedicationRequestCategory"/>
+		</include>
+		<include>
+			<system value="http://terminology.hl7.org/CodeSystem/medicationrequest-category"/>
+		</include>
+	</compose>
+	<expansion>
+		<identifier value="448c02a4-ea20-4720-b46a-1cd542599be7"/>
+		<timestamp value="2020-07-29T17:12:47+10:00"/>
+		<total value="5"/>
+		<offset value="0"/>
+		<parameter>
+			<name value="version"/>
+			<valueUri value="https://fhir.nhs.uk/CodeSystem/England-MedicationRequestCategory|1.0.0"/>
+		</parameter>
+		<parameter>
+			<name value="version"/>
+			<valueUri value="http://terminology.hl7.org/CodeSystem/medicationrequest-category|4.0.1"/>
+		</parameter>
+		<parameter>
+			<name value="count"/>
+			<valueInteger value="2147483647"/>
+		</parameter>
+		<parameter>
+			<name value="offset"/>
+			<valueInteger value="0"/>
+		</parameter>
+		<contains>
+			<system value="https://fhir.nhs.uk/CodeSystem/England-MedicationRequestCategory"/>
+			<version value="1.0.0"/>
+			<code value="leave"/>
+			<display value="Leave"/>
+		</contains>
+		<contains>
+			<system value="http://terminology.hl7.org/CodeSystem/medicationrequest-category"/>
+			<version value="4.0.1"/>
+			<code value="outpatient"/>
+			<display value="Outpatient"/>
+		</contains>
+		<contains>
+			<system value="http://terminology.hl7.org/CodeSystem/medicationrequest-category"/>
+			<version value="4.0.1"/>
+			<code value="discharge"/>
+			<display value="Discharge"/>
+		</contains>
+		<contains>
+			<system value="http://terminology.hl7.org/CodeSystem/medicationrequest-category"/>
+			<version value="4.0.1"/>
+			<code value="community"/>
+			<display value="Community"/>
+		</contains>
+		<contains>
+			<system value="http://terminology.hl7.org/CodeSystem/medicationrequest-category"/>
+			<version value="4.0.1"/>
+			<code value="inpatient"/>
+			<display value="Inpatient"/>
+		</contains>
+	</expansion>
+</ValueSet>
