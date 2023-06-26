@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="England-MedicationDispense" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/England-MedicationDispense" />
+  <version value="1.0.0" />
+  <name value="EnglandMedicationDispense" />
+  <title value="England MedicationDispense" />
+  <status value="draft" />
+  <date value="2023-06-01" />
+  <publisher value="NHS England" />
+  <contact>
+    <name value="NHS England" />
+    <telecom>
+      <system value="email" />
+      <value value="interoperabilityteam@nhs.net" />
+      <use value="work" />
+      <rank value="1" />
+    </telecom>
+  </contact>
+  <description value="This profile defines the NHS England constraints and extensions on the FHIR UK Core resource [UK Core MedicationDispense](https://simplifier.net/hl7fhirukcorer4/ukcore-MedicationDispense)." />
+   <purpose value="Dispensing a medication to a named patient. Indicates that a medication product is to be or has been dispensed for a named person/patient. This includes a description of the medication product (supply) provided and the instructions for administering the medication. The medication dispense is the result of a pharmacy system responding to a medication order." />
+  <copyright value="Copyright © 2021+ HL7 UK Licensed under the Apache License, Version 2.0 (the \&quot;License\&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at  http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \&quot;AS IS\&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. HL7® FHIR® standard Copyright © 2011+ HL7 The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at  https://www.hl7.org/fhir/license.html." />
+  <fhirVersion value="4.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="MedicationDispense" />
+  <baseDefinition value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-MedicationDispense" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="MedicationDispense.extension">
+      <path value="MedicationDispense.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="MedicationDispense.extension:prescriptionStatus">
+      <path value="MedicationDispense.extension" />
+      <sliceName value="prescriptionStatus" />
+      <short value="This is the overall status of the `prescription-order`" />
+      <definition value="This is the overall status of the `prescription-order`, it is not the status of the individual prescription item. This is a code from {{pagelink:DM-Task-Status-Reason-duplicate-2}}, all prescription status reasons in a `dispense-notification` FHIR Message Bundle must be the same.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;extension&quot;: [&#xD;&#xA;    {&#xD;&#xA;        &quot;url&quot;: &quot;https://fhir.nhs.uk/StructureDefinition/Extension-England-EPSTaskBusinessStatus&quot;,&#xD;&#xA;        &quot;valueCoding&quot;: {&#xD;&#xA;            &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/EPS-task-business-status&quot;,&#xD;&#xA;            &quot;code&quot;: &quot;0003&quot;,&#xD;&#xA;            &quot;display&quot;: &quot;With Dispenser - Active&quot;&#xD;&#xA;        }&#xD;&#xA;    }&#xD;&#xA;]&#xD;&#xA;```" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-EPSTaskBusinessStatus" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationDispense.extension:prescriptionNonDispensingReason">
+      <path value="MedicationDispense.extension" />
+      <sliceName value="prescriptionNonDispensingReason" />
+      <short value="This is the non dispensing reason for the overall prescription" />
+      <definition value="This is the reason a complete prescription was not dispensed, it is not the status of the individual line items, which is contained in MedicationDispense.statusReason.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;extension&quot;: [&#xD;&#xA;    {&#xD;&#xA;        &quot;url&quot;: &quot;https://fhir.nhs.uk/StructureDefinition/Extension-England-DMPrescriptionNonDispensingReason&quot;,&#xD;&#xA;        &quot;valueCoding&quot;: {&#xD;&#xA;            &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/medicationdispense-status-reason&quot;,&#xD;&#xA;            &quot;code&quot;: &quot;0002&quot;,&#xD;&#xA;            &quot;display&quot;: &quot;Clinically unsuitable&quot;&#xD;&#xA;        }&#xD;&#xA;    }&#xD;&#xA;]&#xD;&#xA;```" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-DMPrescriptionNonDispensingReason" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationDispense.extension:repeatInformation">
+      <path value="MedicationDispense.extension" />
+      <sliceName value="repeatInformation" />
+      <short value="Repeat Prescribing and Dispensing" />
+      <definition value="The extension is mandatory for `continuous` and `continuous-repeat-dispensing`. The following elements **MUST** be populated &#xD;&#xA;&#xD;&#xA;- numberofRepeatsAllowed &#xD;&#xA;- numberOfRepeatsIssued &#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;extension&quot;: [&#xD;&#xA;    {&#xD;&#xA;        &quot;url&quot;: &quot;https://fhir.nhs.uk/StructureDefinition/Extension-England-EPSRepeatInformation&quot;,&#xD;&#xA;        &quot;extension&quot;: [&#xD;&#xA;            {&#xD;&#xA;                &quot;url&quot; : &quot;numberOfRepeatsAllowed&quot;,&#xD;&#xA;                &quot;valueInteger&quot; : 3&#xD;&#xA;            },&#xD;&#xA;            {&#xD;&#xA;                &quot;url&quot; : &quot;numberOfRepeatsIssued&quot;,&#xD;&#xA;                &quot;valueInteger&quot; : 2&#xD;&#xA;            }&#xD;&#xA;        ]&#xD;&#xA;    }&#xD;&#xA;]&#xD;&#xA;```" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-EPSRepeatInformation" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationDispense.extension:supplyHeaderIdentifier">
+      <path value="MedicationDispense.extension" />
+      <sliceName value="supplyHeaderIdentifier" />
+      <short value="Identifier for the SupplyHeader" />
+      <definition value="Identifier of the SupplyHeader (v3) object. The prescription in the context of a Dispense Notification or Claim. Mandatory for EPS interactions." />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-EPSSupplyHeaderIdentifier" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationDispense.identifier">
+      <path value="MedicationDispense.identifier" />
+      <definition value="Each MedicationDispense **MUST** be identified by an Universal Unique Identifiers (UUIDs) with a system of `https://fhir.nhs.uk/Id/prescription-dispense-item-number`&#xD;&#xA;&#xD;&#xA;UUID example (for illustration purposes only);&#xD;&#xA;&#xD;&#xA;**4509B70D-D8B8-EA03-1105-64557CB54A29**&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA; &quot;identifier&quot;:  [&#xD;&#xA;    {&#xD;&#xA;        &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/prescription-dispense-item-number&quot;,&#xD;&#xA;        &quot;value&quot;: &quot;4509B70D-D8B8-EA03-1105-64557CB54A29&quot;&#xD;&#xA;    }&#xD;&#xA;]&#xD;&#xA;```" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationDispense.identifier.system">
+      <path value="MedicationDispense.identifier.system" />
+      <min value="1" />
+    </element>
+    <element id="MedicationDispense.identifier.value">
+      <path value="MedicationDispense.identifier.value" />
+      <min value="1" />
+    </element>
+    <element id="MedicationDispense.status">
+      <path value="MedicationDispense.status" />
+      <definition value="The status of the individual medication item, this will normally indicate whether the medication has been picked up or not. &#xD;&#xA;&#xD;&#xA;| Code | Display | Definition |&#xD;&#xA;|--|--|--|&#xD;&#xA;| completed | Completed | The dispensed product has been picked up. |&#xD;&#xA;| in-progress | In Progress | The dispensed product is ready for pickup. |&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&lt;img src=&quot;https://raw.githubusercontent.com/NHSDigital/NHSDigital-FHIR-Medicines-ImplementationGuide/master/Diagrams/medication-dispense-status-flow.png&quot; width=&quot;100%&quot; hieght=&quot;auto&quot;/&gt;" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationDispense.statusReason[x]">
+      <path value="MedicationDispense.statusReason[x]" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationDispense.statusReason[x].coding">
+      <path value="MedicationDispense.statusReason[x].coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="MedicationDispense.statusReason[x].coding.system">
+      <path value="MedicationDispense.statusReason[x].coding.system" />
+      <min value="1" />
+    </element>
+    <element id="MedicationDispense.statusReason[x].coding.code">
+      <path value="MedicationDispense.statusReason[x].coding.code" />
+      <min value="1" />
+    </element>
+    <element id="MedicationDispense.statusReason[x].coding:notDispensedStatusReason">
+      <path value="MedicationDispense.statusReason[x].coding" />
+      <sliceName value="notDispensedStatusReason" />
+      <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/England-DMMedicationDispenseStatusReason" />
+      </binding>
+    </element>
+    <element id="MedicationDispense.statusReason[x].coding:notDispensedStatusReason.system">
+      <path value="MedicationDispense.statusReason[x].coding.system" />
+      <fixedUri value="https://fhir.nhs.uk/ValueSet/England-DMMedicationDispenseStatusReason" />
+    </element>
+    <element id="MedicationDispense.statusReason[x].coding:amendmentStatusReason">
+      <path value="MedicationDispense.statusReason[x].coding" />
+      <sliceName value="amendmentStatusReason" />
+      <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/England-DMTaskReasonCode" />
+      </binding>
+    </element>
+    <element id="MedicationDispense.statusReason[x].coding:amendmentStatusReason.system">
+      <path value="MedicationDispense.statusReason[x].coding.system" />
+      <fixedUri value="https://fhir.nhs.uk/CodeSystem/England-EPSTaskDispenseWithdrawReason" />
+    </element>
+    <element id="MedicationDispense.category.coding.system">
+      <path value="MedicationDispense.category.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="MedicationDispense.category.coding.code">
+      <path value="MedicationDispense.category.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="MedicationDispense.medication[x]">
+      <path value="MedicationDispense.medication[x]" />
+      <definition value="Actual Medical Product Packs (AMPP) SHOULD be used. &#xD;&#xA;It is valid to include a FHIR Medication resource within the FHIR Message, this practice is discouraged to simplify handling of the event messages.&#xD;&#xA;&#xD;&#xA;&lt;table&gt;&#xD;&#xA;&lt;thead&gt;&#xD;&#xA;&lt;th data-no-sort width=&quot;25%&quot;&gt;&#xD;&#xA;dm+d Category&#xD;&#xA;&lt;/th&gt;&#xD;&#xA;&lt;th data-no-sort width=&quot;50%&quot;&gt;&#xD;&#xA;dm+d Description&#xD;&#xA;&lt;/th&gt;&#xD;&#xA;&lt;th data-no-sort width=&quot;25%&quot;&gt;&#xD;&#xA;UK SNOMED Members Of&#xD;&#xA;&lt;/th&gt;&#xD;&#xA;&#xD;&#xA;&lt;/thead&gt;&#xD;&#xA;&lt;tr&gt;&#xD;&#xA;&lt;td&gt;&#xD;&#xA;VMPP&#xD;&#xA;&lt;/td&gt;&#xD;&#xA;&lt;td&gt;&#xD;&#xA;Virtual Medical Product Pack&#xD;&#xA;&lt;/td&gt;&#xD;&#xA;&lt;td&gt;&#xD;&#xA;&lt;a href=&quot;https://termbrowser.nhs.uk/?perspective=full&amp;conceptId1=999000571000001104&quot; target=&quot;_blank&quot;&gt;999000571000001104&lt;/a&gt;&#xD;&#xA;&lt;/td&gt;&#xD;&#xA;&#xD;&#xA;&lt;/tr&gt;&#xD;&#xA;&lt;tr&gt;&#xD;&#xA;&lt;td&gt;&#xD;&#xA;AMPP&#xD;&#xA;&lt;/td&gt;&#xD;&#xA;&lt;td&gt;&#xD;&#xA;Actual Medical Product Pack&#xD;&#xA;&lt;/td&gt;&#xD;&#xA;&lt;td&gt;&#xD;&#xA;&lt;a href=&quot;https://termbrowser.nhs.uk/?perspective=full&amp;conceptId1=999000551000001106&quot; target=&quot;_blank&quot;&gt;999000551000001106&lt;/a&gt;&#xD;&#xA;&lt;/td&gt;&#xD;&#xA;&lt;/tr&gt;&#xD;&#xA;&lt;tr&gt;&#xD;&#xA;&lt;td&gt;&#xD;&#xA;VMP&#xD;&#xA;&lt;/td&gt;&#xD;&#xA;&lt;td&gt;&#xD;&#xA;Virtual Medical Product&#xD;&#xA;&lt;/td&gt;&#xD;&#xA;&lt;td&gt;&#xD;&#xA;&lt;a href=&quot;https://termbrowser.nhs.uk/?perspective=full&amp;conceptId1=999000561000001109&quot; target=&quot;_blank&quot;&gt;999000561000001109&lt;/a&gt;&#xD;&#xA;&lt;/td&gt;&#xD;&#xA;&lt;/tr&gt;&#xD;&#xA;&lt;tr&gt;&#xD;&#xA;&lt;td&gt;&#xD;&#xA;AMP&#xD;&#xA;&lt;/td&gt;&#xD;&#xA;&lt;td&gt;&#xD;&#xA;Actual Medical Product&#xD;&#xA;&lt;/td&gt;&#xD;&#xA;&lt;td&gt;&#xD;&#xA;&lt;a href=&quot;https://termbrowser.nhs.uk/?perspective=full&amp;conceptId1=999000541000001108&quot; target=&quot;_blank&quot;&gt;999000541000001108&lt;/a&gt;&#xD;&#xA;&lt;/td&gt;&#xD;&#xA;&lt;/tr&gt;&#xD;&#xA;&lt;/table&gt;&#xD;&#xA;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;medicationCodeableConcept&quot;: {&#xD;&#xA;        &quot;coding&quot;:  [&#xD;&#xA;        {&#xD;&#xA;            &quot;system&quot;: &quot;http://snomed.info/sct&quot;,&#xD;&#xA;            &quot;code&quot;: &quot;10460811000001109&quot;,&#xD;&#xA;            &quot;display&quot;: &quot;Amoxil 500mg capsules (Dowelhurst Ltd) 12 capsule&quot;&#xD;&#xA;        }&#xD;&#xA;    ]&#xD;&#xA;}&#xD;&#xA;```" />
+      <type>
+        <code value="CodeableConcept" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/CodeableConcept" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <aggregation value="bundled" />
+      </type>
+      <mustSupport value="true" />
+      <binding>
+        <strength value="extensible" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/England-MedicationCode" />
+      </binding>
+    </element>
+    <element id="MedicationDispense.subject">
+      <path value="MedicationDispense.subject" />
+      <definition value="A reference to the patient via a traced NHS Number is required, an untraced NHS Number MUST NOT be used. This can be sent in two ways, first option is via a `identifier reference`. Only the NHS Number:&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;subject&quot;: {&#xD;&#xA;    &quot;type&quot;: &quot;Patient&quot;,&#xD;&#xA;    &quot;identifier&quot;: {&#xD;&#xA;        &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/nhs-number&quot;,&#xD;&#xA;        &quot;value&quot;: &quot;2300992742&quot;&#xD;&#xA;    }&#xD;&#xA;}&#xD;&#xA;```&#xD;&#xA;&#xD;&#xA;Second option uses a FHIR Patient resource to convey the NHS Number.  &#xD;&#xA;&#xD;&#xA;The reference in the MedicationDispesnse is now a `resource reference`. &#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA; &quot;subject&quot;: {&#xD;&#xA;                    &quot;type&quot;: &quot;Patient&quot;,&#xD;&#xA;                    &quot;reference&quot;: &quot;urn:uuid:bde9eba6-079f-4210-8108-6ea8db58de8c&quot;,&#xD;&#xA;                    &quot;display&quot;: &quot;Miss Bernie Kanfeld&quot;&#xD;&#xA;                }&#xD;&#xA;```&#xD;&#xA;&#xD;&#xA;The NHS Number has moved to the Patient resource alongside other patient identifiers such as MRN. E.g. &#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;fullUrl&quot;: &quot;urn:uuid:bde9eba6-079f-4210-8108-6ea8db58de8c&quot;,&#xD;&#xA;&quot;resource&quot;: {&#xD;&#xA;                &quot;resourceType&quot;: &quot;Patient&quot;,&#xD;&#xA;                &quot;identifier&quot;: [&#xD;&#xA;                    {&#xD;&#xA;                        &quot;extension&quot;: [&#xD;&#xA;                            {&#xD;&#xA;                                &quot;url&quot;: &quot;https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-NHSNumberVerificationStatus&quot;,&#xD;&#xA;                                &quot;valueCodeableConcept&quot;: {&#xD;&#xA;                                    &quot;coding&quot;: [&#xD;&#xA;                                        {&#xD;&#xA;                                            &quot;system&quot;: &quot;https://fhir.hl7.org.uk/CodeSystem/UKCore-NHSNumberVerificationStatus&quot;,&#xD;&#xA;                                            &quot;code&quot;: &quot;01&quot;,&#xD;&#xA;                                            &quot;display&quot;: &quot;Number present and verified&quot;&#xD;&#xA;                                        }&#xD;&#xA;                                    ]&#xD;&#xA;                                }&#xD;&#xA;                            }&#xD;&#xA;                        ],&#xD;&#xA;                        &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/nhs-number&quot;,&#xD;&#xA;                        &quot;value&quot;: &quot;9876543210&quot;&#xD;&#xA;                    },&#xD;&#xA;                    {&#xD;&#xA;                        &quot;system&quot;: &quot;https://fhir.leedsth.nhs.uk/Id/pas-number&quot;,&#xD;&#xA;                        &quot;value&quot;: &quot;ABC8650149&quot;&#xD;&#xA;                    },&#xD;&#xA;                    {&#xD;&#xA;                        &quot;system&quot;: &quot;https://fhir.leedsth.nhs.uk/Id/PPMIdentifier&quot;,&#xD;&#xA;                        &quot;value&quot;: &quot;1&quot;&#xD;&#xA;                    }&#xD;&#xA;                ],&#xD;&#xA;               ... other elements removed from example.&#xD;&#xA;            }&#xD;&#xA;```&#xD;&#xA;&#xD;&#xA;It is anticipated that hospital pharmacies will prefer the later option for compatibility with other systems. Community pharmacies are anticipated to prefer the former option." />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <aggregation value="referenced" />
+        <aggregation value="bundled" />
+      </type>
+      <constraint>
+        <key value="eps-2" />
+        <severity value="warning" />
+        <human value="subject - An identifier reference or resource reference must be provided" />
+        <expression value="(reference.exists() or (identifier.exists()))" />
+      </constraint>
+      <constraint>
+        <key value="patient-nhs" />
+        <severity value="error" />
+        <human value="Supplied NHS Number is outside the English and Welsh NHS Number range or length of the number is wrong." />
+        <expression value="identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').exists().not() or (identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').exists()  and identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').value.matches('^([456789]{1}[0-9]{9})$'))" />
+        <source value="https://fhir.nhs.uk/StructureDefinition/England-Claim" />
+      </constraint>
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationDispense.subject.identifier.system">
+      <path value="MedicationDispense.subject.identifier.system" />
+      <min value="1" />
+      <fixedUri value="https://fhir.nhs.uk/Id/nhs-number" />
+    </element>
+    <element id="MedicationDispense.subject.identifier.value">
+      <path value="MedicationDispense.subject.identifier.value" />
+      <min value="1" />
+    </element>
+    <element id="MedicationDispense.performer">
+      <path value="MedicationDispense.performer" />
+      <definition value="The pharmacist and pharmacy MUST be present and MUST use `identifier references`. This means FHIR Practitioner, Organization and PractitionerRole resource are not included in the FHIR Message. Professional codes and ODS codes should be used instead. `sds-user-role-id` is permitted to identify a Practitioner(&amp; Role) but professional codes are preferred to support wider NHS interoperability.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA; &quot;performer&quot;: [&#xD;&#xA;    {&#xD;&#xA;        &quot;actor&quot;: {&#xD;&#xA;            &quot;reference&quot; : &quot;#performer&quot;&#xD;&#xA;        }&#xD;&#xA;    }&#xD;&#xA;],&#xD;&#xA;```&#xD;&#xA;&#xD;&#xA;The contained PractitionerRole:&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;{&#xD;&#xA;    &quot;resourceType&quot;: &quot;MedicationDispense&quot;,&#xD;&#xA;    &quot;id&quot;: &quot;06167339-9337-d030-0366-514a6a46da17&quot;,&#xD;&#xA;    &quot;contained&quot;: [&#xD;&#xA;        {&#xD;&#xA;                        &quot;resourceType&quot;: &quot;PractitionerRole&quot;,&#xD;&#xA;                        &quot;id&quot;: &quot;performer&quot;,&#xD;&#xA;                        &quot;identifier&quot;: [&#xD;&#xA;                            {&#xD;&#xA;                                &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/sds-role-profile-id&quot;,&#xD;&#xA;                                &quot;value&quot;: &quot;741555508105&quot;&#xD;&#xA;                            }&#xD;&#xA;                        ],&#xD;&#xA;                        &quot;code&quot;: [&#xD;&#xA;                            {&#xD;&#xA;                                &quot;coding&quot;: [&#xD;&#xA;                                    {&#xD;&#xA;                                        &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/NHSDigital-SDS-JobRoleCode&quot;,&#xD;&#xA;                                        &quot;code&quot;: &quot;S0030:G0100:R0620&quot;&#xD;&#xA;                                    }&#xD;&#xA;                                ]&#xD;&#xA;                            }&#xD;&#xA;                        ],&#xD;&#xA;                        &quot;practitioner&quot;: {&#xD;&#xA;                            &quot;identifier&quot;: {&#xD;&#xA;                                &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/sds-user-id&quot;,&#xD;&#xA;                                &quot;value&quot;: &quot;7654321&quot;&#xD;&#xA;                            },&#xD;&#xA;                            &quot;display&quot;: &quot;Mr Peter Potion&quot;&#xD;&#xA;                        },&#xD;&#xA;                        &quot;organization&quot;: {&#xD;&#xA;                            &quot;reference&quot;: &quot;urn:uuid:2bf9f37c-d88b-4f86-ad5f-373c1416e04b&quot;&#xD;&#xA;                        },&#xD;&#xA;                        &quot;telecom&quot;: [&#xD;&#xA;                            {&#xD;&#xA;                                &quot;system&quot;: &quot;phone&quot;,&#xD;&#xA;                                &quot;use&quot;: &quot;work&quot;,&#xD;&#xA;                                &quot;value&quot;: &quot;0532567890&quot;&#xD;&#xA;                            }&#xD;&#xA;                        ]&#xD;&#xA;                   }&#xD;&#xA;    ],&#xD;&#xA;```" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationDispense.performer.actor">
+      <path value="MedicationDispense.performer.actor" />
+      <type>
+        <code value="Reference" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/Reference" />
+        <aggregation value="contained" />
+      </type>
+      <constraint>
+        <key value="performer" />
+        <severity value="error" />
+        <human value="An identifier reference or resource reference must be provided" />
+        <expression value="(reference.exists() or identifier.exists())" />
+      </constraint>
+    </element>
+    <element id="MedicationDispense.location.identifier.system">
+      <path value="MedicationDispense.location.identifier.system" />
+      <min value="1" />
+    </element>
+    <element id="MedicationDispense.location.identifier.value">
+      <path value="MedicationDispense.location.identifier.value" />
+      <min value="1" />
+    </element>
+    <element id="MedicationDispense.location.display">
+      <path value="MedicationDispense.location.display" />
+      <min value="1" />
+    </element>
+    <element id="MedicationDispense.authorizingPrescription">
+      <path value="MedicationDispense.authorizingPrescription" />
+      <definition value="A reference to the `MedicationRequest`. &#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;authorizingPrescription&quot;: [&#xD;&#xA;    {&#xD;&#xA;        &quot;reference&quot;: &quot;#m1&quot;&#xD;&#xA;    }&#xD;&#xA;]&#xD;&#xA;```&#xD;&#xA;&#xD;&#xA;When a MedicationDispesne is sent in a FHIR Message bundle, which is the case with EPS NextGen `dispense-notifications`, a contained MedicationRequest is required. &#xD;&#xA;&#xD;&#xA;This MedicationRequest **MUST** follow the rules in [NHSDigital-MedicationRequest](https://simplifier.net/resolve?target=simplifier&amp;scope=uk.nhsdigital.r4&amp;canonical=https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationRequest) and it is strongly recommended to reuse the `MedicationRequest` received when the prescription was downloaded. &#xD;&#xA;&#xD;&#xA;For example:&#xD;&#xA;&#xD;&#xA;```json &#xD;&#xA;{&#xD;&#xA;                &quot;resourceType&quot;: &quot;MedicationDispense&quot;,&#xD;&#xA;                &quot;contained&quot;:  [&#xD;&#xA;                    {&#xD;&#xA;                        &quot;resourceType&quot;: &quot;MedicationRequest&quot;,&#xD;&#xA;                        &quot;id&quot;: &quot;m1&quot;,&#xD;&#xA;                        &quot;identifier&quot;:  [&#xD;&#xA;                            {&#xD;&#xA;                                &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/prescription-order-item-number&quot;,&#xD;&#xA;                                &quot;value&quot;: &quot;299c610b-f4f1-4eac-a7d7-4fb6b0556e11&quot;&#xD;&#xA;                            }&#xD;&#xA;                        ],&#xD;&#xA;                        &quot;status&quot;: &quot;active&quot;,&#xD;&#xA;                        &quot;intent&quot;: &quot;order&quot;,&#xD;&#xA;                        &quot;medicationCodeableConcept&quot;: {&#xD;&#xA;                            &quot;coding&quot;:  [&#xD;&#xA;                                {&#xD;&#xA;                                    &quot;system&quot;: &quot;http://snomed.info/sct&quot;,&#xD;&#xA;                                    &quot;code&quot;: &quot;39720311000001101&quot;,&#xD;&#xA;                                    &quot;display&quot;: &quot;Paracetamol 500mg soluble tablets&quot;&#xD;&#xA;                                }&#xD;&#xA;                            ]&#xD;&#xA;                        },&#xD;&#xA;                        &quot;subject&quot;: {&#xD;&#xA;                            &quot;identifier&quot;: {&#xD;&#xA;                                &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/nhs-number&quot;,&#xD;&#xA;                                &quot;value&quot;: &quot;9876543210&quot;&#xD;&#xA;                            }&#xD;&#xA;                        },&#xD;&#xA;                        &quot;groupIdentifier&quot;: {&#xD;&#xA;                            &quot;extension&quot;:  [&#xD;&#xA;                                {&#xD;&#xA;                                    &quot;url&quot;: &quot;https://fhir.nhs.uk/StructureDefinition/Extension-DM-PrescriptionId&quot;,&#xD;&#xA;                                    &quot;valueIdentifier&quot;: {&#xD;&#xA;                                        &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/prescription&quot;,&#xD;&#xA;                                        &quot;value&quot;: &quot;b2fc79f0-2793-4736-9b2d-0976c21e73a5&quot;&#xD;&#xA;                                    }&#xD;&#xA;                                }&#xD;&#xA;                            ],&#xD;&#xA;                            &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/prescription-order-number&quot;,&#xD;&#xA;                            &quot;value&quot;: &quot;82D996-C81010-11DB12&quot;&#xD;&#xA;                        },&#xD;&#xA;                        &quot;dispenseRequest&quot;: {&#xD;&#xA;                            &quot;quantity&quot;: {&#xD;&#xA;                                &quot;value&quot;: 100,&#xD;&#xA;                                &quot;unit&quot;: &quot;tablet&quot;,&#xD;&#xA;                                &quot;system&quot;: &quot;http://snomed.info/sct&quot;,&#xD;&#xA;                                &quot;code&quot;: &quot;732936001&quot;&#xD;&#xA;                            }&#xD;&#xA;                        },&#xD;&#xA;                        &quot;substitution&quot;: {&#xD;&#xA;                            &quot;allowedBoolean&quot;: false&#xD;&#xA;                        }&#xD;&#xA;                    }&#xD;&#xA;                ],&#xD;&#xA;                &quot;authorizingPrescription&quot;:  [&#xD;&#xA;                    {&#xD;&#xA;                        &quot;reference&quot;: &quot;#m1&quot;&#xD;&#xA;                    }&#xD;&#xA;                ],&#xD;&#xA;```&#xD;&#xA;&#xD;&#xA;This is based on a `MedicationRequest` in this implementation guide.&#xD;&#xA;The uuid resource references are not permitted and must be replaced with identifier references. E.g. in this section from the `$release` &#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;        &quot;subject&quot;: {&#xD;&#xA;            &quot;reference&quot;: &quot;urn:uuid:78d3c2eb-009e-4ec8-a358-b042954aa9b2&quot;&#xD;&#xA;        },&#xD;&#xA;        &quot;authoredOn&quot;: &quot;2020-12-21T18:15:29+00:00&quot;,&#xD;&#xA;        &quot;requester&quot;: {&#xD;&#xA;            &quot;reference&quot;: &quot;urn:uuid:56166769-c1c4-4d07-afa8-132b5dfca666&quot;&#xD;&#xA;        },&#xD;&#xA;```&#xD;&#xA;&#xD;&#xA;The requester reference can be removed and the subject reference changed to use the Patient's NHSNumber e.g. &#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;        &quot;subject&quot;: {&#xD;&#xA;            &quot;identifier&quot;: {&#xD;&#xA;            &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/nhs-number&quot;,&#xD;&#xA;            &quot;value&quot;: &quot;9876543210&quot;&#xD;&#xA;        }&#xD;&#xA;    },&#xD;&#xA;```" />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <aggregation value="contained" />
+        <aggregation value="referenced" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationDispense.authorizingPrescription.reference">
+      <path value="MedicationDispense.authorizingPrescription.reference" />
+      <min value="1" />
+    </element>
+    <element id="MedicationDispense.type">
+      <path value="MedicationDispense.type" />
+      <definition value="Indicates the type of dispensing event that is performed. For example, Trial Fill, Completion of Trial, Partial Fill, Emergency Fill, Samples, etc.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;type&quot;: {&#xD;&#xA;    &quot;coding&quot;: [&#xD;&#xA;        {&#xD;&#xA;            &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/medicationdispense-type&quot;,&#xD;&#xA;            &quot;code&quot;: &quot;0001&quot;,&#xD;&#xA;            &quot;display&quot;: &quot;Item fully dispensed&quot;&#xD;&#xA;        }&#xD;&#xA;    ]&#xD;&#xA;}&#xD;&#xA;```" />
+      <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <description value="A ValueSet to identify the type of medication item status." />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/England-DMMedicationDispenseType" />
+      </binding>
+    </element>
+    <element id="MedicationDispense.type.coding.system">
+      <path value="MedicationDispense.type.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="MedicationDispense.type.coding.code">
+      <path value="MedicationDispense.type.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="MedicationDispense.quantity">
+      <path value="MedicationDispense.quantity" />
+      <definition value="The amount of medication that has been dispensed. Includes unit of measure.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;quantity&quot;: {&#xD;&#xA;    &quot;value&quot;: 28,&#xD;&#xA;    &quot;unit&quot;: &quot;capsule&quot;,&#xD;&#xA;    &quot;system&quot;: &quot;http://snomed.info/sct&quot;,&#xD;&#xA;    &quot;code&quot;: &quot;3316911000001105&quot;&#xD;&#xA;}&#xD;&#xA;```&#xD;&#xA;&#xD;&#xA;If no actual quantity has been dispensed then use a value of zero." />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationDispense.quantity.extension">
+      <path value="MedicationDispense.quantity.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="MedicationDispense.quantity.extension:runningTotal">
+      <path value="MedicationDispense.quantity.extension" />
+      <sliceName value="runningTotal" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-DMRunningTotal" />
+      </type>
+    </element>
+    <element id="MedicationDispense.quantity.extension:runningTotal.url">
+      <path value="MedicationDispense.quantity.extension.url" />
+      <fixedUri value="https://fhir.nhs.uk/StructureDefinition/Extension-England-DMRunningTotal" />
+    </element>
+    <element id="MedicationDispense.quantity.value">
+      <path value="MedicationDispense.quantity.value" />
+      <min value="1" />
+    </element>
+    <element id="MedicationDispense.quantity.unit">
+      <path value="MedicationDispense.quantity.unit" />
+      <min value="1" />
+    </element>
+    <element id="MedicationDispense.quantity.system">
+      <path value="MedicationDispense.quantity.system" />
+      <min value="1" />
+    </element>
+    <element id="MedicationDispense.quantity.code">
+      <path value="MedicationDispense.quantity.code" />
+      <min value="1" />
+    </element>
+    <element id="MedicationDispense.daysSupply">
+      <path value="MedicationDispense.daysSupply" />
+      <definition value="The amount of medication expressed as a timing amount.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;daysSupply&quot;: {&#xD;&#xA;    &quot;value&quot;: 7,&#xD;&#xA;    &quot;unit&quot;: &quot;Day&quot;,&#xD;&#xA;    &quot;system&quot;: &quot;http://unitsofmeasure.org&quot;,&#xD;&#xA;    &quot;code&quot;: &quot;d&quot;&#xD;&#xA;}&#xD;&#xA;```" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationDispense.whenPrepared">
+      <path value="MedicationDispense.whenPrepared" />
+      <definition value="The time when the dispensed product was packaged and reviewed.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;whenPrepared&quot;: &quot;2004-09-16T16:30:00+00:00&quot;&#xD;&#xA;```" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationDispense.whenHandedOver">
+      <path value="MedicationDispense.whenHandedOver" />
+      <definition value="The time the dispensed product was provided to the patient or their representative.&#xD;&#xA;In HL7 v3 this is: *The date and local time that the medication is issued by the dispenser*.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;whenHandedOver&quot;: &quot;2004-09-16T16:30:00+00:00&quot;&#xD;&#xA;```" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationDispense.receiver">
+      <path value="MedicationDispense.receiver" />
+      <max value="1" />
+    </element>
+    <element id="MedicationDispense.dosageInstruction">
+      <path value="MedicationDispense.dosageInstruction" />
+      <definition value="At present only the `text` element **MUST** be provided. It is recommended the guidance in [FHIR Dose Syntax Implementation Guidance](https://developer.nhs.uk/apis/dose-syntax-implementation-1-3-2-alpha/dosage-overview.html) is followed. &#xD;&#xA;&#xD;&#xA;Note the structure of this section is similar as the [NHSDigital-MedicationRequest](https://simplifier.net/resolve?target=simplifier&amp;scope=uk.nhsdigital.r4&amp;canonical=https://fhir.nhs.uk/StructureDefinition/NHSDigital-MedicationRequest) from the `prescription-order`.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;dosageInstruction&quot;: [&#xD;&#xA;    {&#xD;&#xA;        &quot;text&quot;: &quot;4 times a day for 7 days&quot;,&#xD;&#xA;        &quot;timing&quot;: {&#xD;&#xA;            &quot;repeat&quot;: {&#xD;&#xA;                &quot;boundsDuration&quot;: {&#xD;&#xA;                    &quot;value&quot;: 7,&#xD;&#xA;                    &quot;unit&quot;: &quot;d&quot;&#xD;&#xA;                },&#xD;&#xA;                &quot;frequency&quot;: 4,&#xD;&#xA;                &quot;period&quot;: 1,&#xD;&#xA;                &quot;periodUnit&quot;: &quot;d&quot;&#xD;&#xA;            }&#xD;&#xA;        },&#xD;&#xA;        &quot;doseAndRate&quot;: [&#xD;&#xA;            {&#xD;&#xA;                &quot;doseQuantity&quot;: {&#xD;&#xA;                    &quot;value&quot;: 1,&#xD;&#xA;                    &quot;unit&quot;: &quot;capsule&quot;,&#xD;&#xA;                    &quot;system&quot;: &quot;http://snomed.info/sct&quot;,&#xD;&#xA;                    &quot;code&quot;: &quot;3316911000001105&quot;&#xD;&#xA;                }&#xD;&#xA;            }&#xD;&#xA;        ]&#xD;&#xA;    }&#xD;&#xA;]&#xD;&#xA;```" />
+      <type>
+        <code value="Dosage" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/Dosage" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+  </differential>
+</StructureDefinition>

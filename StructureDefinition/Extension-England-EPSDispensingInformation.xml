@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="Extension-England-EPSDispensingInformation" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/Extension-England-EPSDispensingInformation" />
+  <version value="1.0.0" />
+  <name value="ExtensionEnglandEPSDispensingInformation" />
+  <title value="Extension England EPS Dispensing Information" />
+  <status value="draft" />
+  <date value="2023-06-01" />
+  <publisher value="NHS England" />
+  <contact>
+    <name value="NHS England" />
+    <telecom>
+      <system value="email" />
+      <value value="interoperabilityteam@nhs.net" />
+      <use value="work" />
+      <rank value="1" />
+    </telecom>
+  </contact>
+  <description value="Extension for Dispensing Information" />
+  <purpose value="Extension for Dispensing Information" />
+  <copyright value="Copyright © 2021+ HL7 UK Licensed under the Apache License, Version 2.0 (the \&quot;License\&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at  http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \&quot;AS IS\&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. HL7® FHIR® standard Copyright © 2011+ HL7 The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at  https://www.hl7.org/fhir/license.html." />
+  <fhirVersion value="4.0.1" />
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <context>
+    <type value="element" />
+    <expression value="MedicationRequest" />
+  </context>
+  <context>
+    <type value="element" />
+    <expression value="Task.input" />
+  </context>
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Extension.extension">
+      <path value="Extension.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="Extension.extension:dateLastDispensed">
+      <path value="Extension.extension" />
+      <sliceName value="dateLastDispensed" />
+      <min value="0" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:dateLastDispensed.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="dateLastDispensed" />
+    </element>
+    <element id="Extension.extension:dateLastDispensed.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <type>
+        <code value="dateTime" />
+      </type>
+    </element>
+    <element id="Extension.extension:dispenseNotificationReference">
+      <path value="Extension.extension" />
+      <sliceName value="dispenseNotificationReference" />
+      <min value="0" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:dispenseNotificationReference.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="dispenseNotificationReference" />
+    </element>
+    <element id="Extension.extension:dispenseNotificationReference.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <type>
+        <code value="Identifier" />
+      </type>
+    </element>
+    <element id="Extension.extension:dispenseStatus">
+      <path value="Extension.extension" />
+      <sliceName value="dispenseStatus" />
+      <min value="0" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:dispenseStatus.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="dispenseStatus" />
+    </element>
+    <element id="Extension.extension:dispenseStatus.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <type>
+        <code value="Coding" />
+      </type>
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url" />
+      <fixedUri value="https://fhir.nhs.uk/StructureDefinition/Extension-England-EPSDispensingInformation" />
+    </element>
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>
