@@ -1,0 +1,19 @@
+{
+	"resourceType": "SearchParameter",
+	"id": "7c5f51f1-49ca-4903-840b-305142f7d0f7",
+	"url": "https://fhir.nhs.uk/SearchParameter/prescriptionStatus",
+	"version": "0.0.1",
+	"name": "PrescriptionStatus",
+	"status": "draft",
+	"experimental": false,
+	"date": "2023-06-27T09:56:00+00:00",
+	"publisher" : "NHS England",
+	"description": "Business Status of a Prescription",
+	"purpose": "For searching prescription bundles in EPS by Prescription Status",
+	"code": "prescriptionStatus",
+	"base": [
+		"Bundle"
+	],
+	"type": "token",
+	"expression": "Bundle.entry.select((resource as MedicationRequest).extension.where(url='https://fhir.nhs.uk/StructureDefinition/Extension-DM-PrescriptionStatusHistory'))"
+}

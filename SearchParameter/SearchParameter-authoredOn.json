@@ -1,0 +1,26 @@
+{
+	"resourceType": "SearchParameter",
+	"id": "7c5f51f1-49ca-4903-840b-305142f7d0f7",
+	"url": "https://fhir.nhs.uk/SearchParameter/authoredOn",
+	"version": "0.0.1",
+	"name": "AuthoredOn",
+	"status": "draft",
+	"experimental": false,
+	"date": "2023-06-27T09:56:00+00:00",
+	"publisher" : "NHS England",
+	"description": "Date the prescription was authored on",
+	"purpose": "For searching prescription bundles in EPS by authoredOn date range",
+	"code": "authoredOn",
+	"base": [
+		"Bundle"
+	],
+	"type": "date",
+	"expression": "Bundle.entry.select((resource as MedicationRequest).authoredOn)",
+	"multipleAnd": true,
+	"comparator": [
+		"gt",
+		"lt",
+		"ge",
+		"le"
+	]
+}
