@@ -5,6 +5,17 @@
     <name value="EnglandLocationType" />
 	<title value="England Location Type" />
     <status value="draft" />
+	<date value="2023-06-01" />
+    <publisher value="NHS England" />
+    <contact>
+      <name value="NHS England" />
+      <telecom>
+        <system value="email" />
+        <value value="interoperabilityteam@nhs.net" />
+        <use value="work" />
+        <rank value="1" />
+      </telecom>
+    </contact>
     <description value="A ValueSet to identify the roles (type) of location." />
 	<purpose value="A ValueSet to identify the roles (type) of location." />
     <compose>
