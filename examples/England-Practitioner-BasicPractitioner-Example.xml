@@ -1,0 +1,12 @@
+<Practitioner xmlns="http://hl7.org/fhir">
+    <id value="England-Practitioner-BasicPractitioner-Example" />
+    <identifier>
+      <system value="https://fhir.nhs.uk/Id/sds-user-id" />
+      <value value="896547302565" />
+    </identifier>
+    <name>
+      <use value="official" />
+      <family value="Smith" />
+      <prefix value="Dr" />
+    </name>
+  </Practitioner>

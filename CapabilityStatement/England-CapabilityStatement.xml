@@ -74,5 +74,9 @@
             <type value="MedicationDispense" />
             <profile value="https://fhir.nhs.uk/StructureDefinition/England-MedicationDispense" />
         </resource>
+        <resource>
+            <type value="Practitioner" />
+            <profile value="https://fhir.nhs.uk/StructureDefinition/England-Practitioner" />
+        </resource>
     </rest>
 </CapabilityStatement>
