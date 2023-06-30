@@ -3,7 +3,7 @@
     <url value="https://fhir.nhs.uk/ValueSet/England-ERSClinicType" />
     <version value="1.0.0" />
     <name value="EnglandERSClinicType" />
-    <title value="England ERS Clinic Type" />
+	<title value="England ERS Clinic Type" />
     <status value="draft" />
     <date value="2023-06-01" />
     <publisher value="NHS England" />
@@ -13,7 +13,7 @@
             <system value="email" />
             <value value="interoperabilityteam@nhs.net" />
             <use value="work" />
-            <rank value="1" />
+			<rank value="1" />
         </telecom>
     </contact>
     <description value="A valueset to describe the clinic type" />
