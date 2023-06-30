@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSystem xmlns="http://hl7.org/fhir">
+    <id value="England-MedicationRequestControlledDrug"/>
+    <url value="https://fhir.nhs.uk/CodeSystem/England-MedicationRequestControlledDrug"/>
+    <identifier>
+        <system value="https://fhir.nhs.uk/identifier/CodeSystem"/>
+        <value value="medicationrequest-controlled-drug"/>
+    </identifier>
+    <version value="1.0.0"/>
+    <name value="EnglandMedicationRequestControlledDrug"/>
+    <title value="England MedicationRequest Controlled Drug"/>
+    <status value="draft"/>
+    <experimental value="true"/>
+    <date value="2023-06-01"/>
+    <publisher value="NHS England"/>
+    <contact>
+        <name value="NHS England" />
+        <telecom>
+          <system value="email" />
+          <value value="interoperabilityteam@nhs.net" />
+          <use value="work" />
+          <rank value="1" />
+        </telecom>
+      </contact>
+    <description value="MedicationRequest Category Controlled Drug"/>
+    <purpose value="MedicationRequest Category Controlled Drug"/>
+  <copyright value="Copyright © 2021+ HL7 UK Licensed under the Apache License, Version 2.0 (the \&quot;License\&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at  http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \&quot;AS IS\&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. HL7® FHIR® standard Copyright © 2011+ HL7 The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at  https://www.hl7.org/fhir/license.html." />
+    <caseSensitive value="true"/>
+    <content value="complete"/>
+    <concept>
+        <code value="CD1"/>
+        <display value="Schedule 1"/>
+    </concept>
+    <concept>
+        <code value="CD2"/>
+        <display value="Schedule 2"/>
+    </concept>
+    <concept>
+        <code value="CD3"/>
+        <display value="Schedule 3"/>
+    </concept>
+    <concept>
+        <code value="CD4"/>
+        <display value="Schedule 4"/>
+        <concept>
+            <code value="CD4-1"/>
+            <display value="Schedule 4 (Part I)"/>
+        </concept>
+        <concept>
+            <code value="CD4-2"/>
+            <display value="Schedule 4 (Part II)"/>
+        </concept>
+    </concept>
+    <concept>
+        <code value="CD5"/>
+        <display value="Schedule 5"/>
+    </concept>
+</CodeSystem>

@@ -1,0 +1,45 @@
+<Bundle xmlns="http://hl7.org/fhir">
+    <id value="England-Bundle-BARSMessageServiceRequestCategory-Example" />
+    <meta>
+        <lastUpdated value="2022-12-07T13:26:45.940Z" />
+    </meta>
+    <type value="searchset" />
+    <timestamp value="2022-12-07T13:26:45.940Z" />
+    <total value="1" />
+    <link>
+        <relation value="self" />
+        <url value="base_url/FHIR/R4/ServiceRequest?identifier=000000000001" />
+    </link>
+    <entry>
+        <fullUrl value="base_url/FHIR/R4/ServiceRequest/r.a79768c6-9eca-40e3-b43c-cba975b118ef" />
+        <resource>
+            <ServiceRequest>
+                <id value="r.a79768c6-9eca-40e3-b43c-cba975b118ef" />
+                <meta>
+                    <versionId value="0" />
+                </meta>
+                <identifier>
+                    <system value="https://fhir.nhs.uk/Id/UBRN" />
+                    <value value="000000000001" />
+                </identifier>
+                <status value="active" />
+                <intent value="order" />
+                <category>
+                    <coding>
+                        <system value="https://fhir.nhs.uk/CodeSystem/England-BARSMessageServiceRequestCodes" />
+                        <code value="referral" />
+                    </coding>
+                </category>
+                <subject>
+                    <identifier>
+                        <system value="https://fhir.nhs.uk/Id/nhs-number" />
+                        <value value="9999998887" />
+                    </identifier>
+                </subject>
+            </ServiceRequest>
+        </resource>
+        <search>
+            <mode value="match" />
+        </search>
+    </entry>
+</Bundle>

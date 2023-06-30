@@ -1,0 +1,60 @@
+<Patient xmlns="http://hl7.org/fhir">
+    <id value="England-Patient-FredricaSmith-Example" />
+    <identifier>
+        <system value="https://fhir.yorkhospitals.nhs.uk/Id/MRN" />
+        <value value="E3843677" />
+    </identifier>
+    <identifier>
+        <system value="https://fhir.yorkhospitals.nhs.uk/Id/MR" />
+        <value value="900070078" />
+    </identifier>
+    <identifier>
+        <system value="https://fhir.nhs.uk/Id/nhs-number" />
+        <value value="9333333333" />
+    </identifier>
+    <name>
+        <family value="SMITH" />
+        <given value="FREDRICA" />
+        <prefix value="MRS" />
+    </name>
+    <telecom>
+        <system value="phone" />
+        <value value="+441234567890" />
+        <use value="home" />
+    </telecom>
+    <gender value="female" />
+    <birthDate value="1965-11-12" />
+    <address>
+        <use value="home" />
+        <city value="MALTON" />
+        <district value="NORTH YORKSHIRE" />
+        <postalCode value="YO32 5TT" />
+    </address>
+    <contact>
+        <name>
+            <family value="SMITH" />
+            <given value="FRANCESCA" />
+            <prefix value="MRS" />
+        </name>
+        <address>
+            <use value="home" />
+            <city value="MALTON" />
+            <district value="NORTH YORKSHIRE" />
+            <postalCode value="YO32 5TT" />
+        </address>
+    </contact>
+    <generalPractitioner>
+        <identifier>
+            <system value="https://fhir.hl7.org.uk/Id/gmc-number" />
+            <value value="G5612908" />
+        </identifier>
+        <display value="Dr Gregory Townley" />
+    </generalPractitioner>
+    <generalPractitioner>
+        <identifier>
+            <system value="https://fhir.nhs.uk/Id/ods-organization-code" />
+            <value value="Y06601" />
+        </identifier>
+        <display value="MALTON GP PRACTICE" />
+    </generalPractitioner>
+</Patient>
