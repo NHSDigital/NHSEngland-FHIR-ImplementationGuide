@@ -1,0 +1,131 @@
+<Bundle xmlns="http://hl7.org/fhir">
+    <id value="England-HealthcareService-ERSSearchResults-Example" />
+    <type value="searchset" />
+    <timestamp value="2021-08-04T14:35:00+00:00" />
+    <total value="2" />
+    <link>
+        <relation value="self" />
+        <url value="_baseUrl_/R4/HealthcareService?_id=3,4" />
+    </link>
+    <entry>
+        <fullUrl value="_baseUrl_/R4/HealthcareService/3" />
+        <resource>
+            <HealthcareService>
+                <id value="1" />
+                <meta>
+                    <versionId value="1" />
+                </meta>
+                <language value="en" />
+                <extension url="https://fhir.nhs.uk/StructureDefinition/Extension-England-ERSHoursOfOperation">
+                    <valueString value="9-5 Mon-Fri" />
+                </extension>
+                <extension url="https://fhir.nhs.uk/StructureDefinition/Extension-England-ERSServiceInstructions">
+                    <valueString value="Instructions" />
+                </extension>
+                <extension url="https://fhir.nhs.uk/StructureDefinition/Extension-England-ERSHealthcareServiceContact">
+                    <extension url="purpose">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://terminology.hl7.org/CodeSystem/contactentity-type" />
+                                <code value="PATINF" />
+                                <display value="Patient" />
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <extension url="telecom">
+                        <valueContactPoint>
+                            <system value="phone" />
+                            <value value="01234567890" />
+                        </valueContactPoint>
+                    </extension>
+                </extension>
+                <extension url="https://fhir.nhs.uk/StructureDefinition/Extension-England-ERSHealthcareServiceContact">
+                    <extension url="purpose">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="https://fhir.nhs.uk/CodeSystem/England-ERSPurpose" />
+                                <code value="HEALTHCARE_PROFESSIONALS" />
+                                <display value="Healthcare Professionals" />
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <extension url="telecom">
+                        <valueContactPoint>
+                            <system value="email" />
+                            <value value="service@email.com" />
+                        </valueContactPoint>
+                    </extension>
+                </extension>
+                <active value="true" />
+                <type>
+                    <coding>
+                        <system value="https://fhir.nhs.uk/CodeSystem/England-ERSAppointmentType" />
+                        <code value="DAY_CASE" />
+                        <display value="Day Case" />
+                    </coding>
+                </type>
+                <location>
+                    <identifier>
+                        <system value="https://fhir.nhs.uk/Id/ods-site-code" />
+                        <value value="R6901" />
+                    </identifier>
+                </location>
+                <name value="Direct SVC 1" />
+                <characteristic>
+                    <coding>
+                        <system value="https://fhir.nhs.uk/CodeSystem/England-ERSRequestFlowType" />
+                        <code value="BOOKABLE" />
+                        <display value="Appointment Request" />
+                    </coding>
+                </characteristic>
+            </HealthcareService>
+        </resource>
+        <search>
+            <mode value="match" />
+        </search>
+    </entry>
+    <entry>
+        <fullUrl value="_baseUrl_/R4/HealthcareService/4" />
+        <resource>
+            <HealthcareService>
+                <id value="2" />
+                <meta>
+                    <versionId value="1" />
+                </meta>
+                <language value="en" />
+                <active value="true" />
+                <type>
+                    <coding>
+                        <system value="https://fhir.nhs.uk/CodeSystem/England-ERSAppointmentType" />
+                        <code value="DAY_CASE" />
+                        <display value="Day Case" />
+                    </coding>
+                </type>
+                <location>
+                    <identifier>
+                        <system value="https://fhir.nhs.uk/Id/ods-site-code" />
+                        <value value="R6901" />
+                    </identifier>
+                </location>
+                <name value="Direct SVC 2" />
+                <characteristic>
+                    <coding>
+                        <system value="https://fhir.nhs.uk/CodeSystem/England-ERSRequestFlowType" />
+                        <code value="BOOKABLE" />
+                        <display value="Appointment Request" />
+                    </coding>
+                </characteristic>
+                <characteristic>
+                    <coding>
+                        <system value="https://fhir.nhs.uk/CodeSystem/England-ERSRequestFlowType" />
+                        <code value="REVIEW" />
+                        <display value="Triage Request" />
+                    </coding>
+                </characteristic>
+            </HealthcareService>
+        </resource>
+        <search>
+            <mode value="match" />
+        </search>
+    </entry>
+</Bundle>

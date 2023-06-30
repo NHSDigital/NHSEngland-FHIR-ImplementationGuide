@@ -90,5 +90,9 @@
             <type value="Location" />
             <profile value="https://fhir.nhs.uk/StructureDefinition/England-Location" />
         </resource>
+        <resource>
+            <type value="HealthcareService" />
+            <profile value="https://fhir.nhs.uk/StructureDefinition/England-HealthcareService" />
+        </resource>
     </rest>
 </CapabilityStatement>
