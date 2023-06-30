@@ -1,0 +1,24 @@
+<Organization xmlns="http://hl7.org/fhir">
+    <id value="England-Organization-OrganisationPrison-Example" />
+    <identifier>
+        <system value="https://fhir.nhs.uk/Id/ods-organization-code" />
+        <value value="YDE47" />
+    </identifier>
+    <active value="true" />
+    <type>
+        <coding>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-OrganisationRole" />
+            <code value="175" />
+            <display value="PRISON" />
+        </coding>
+    </type>
+    <name value="HMP LEEDS" />
+    <address>
+        <line value="GLOUCESTER TERRACE" />
+        <line value="ARMLEY" />
+        <city value="LEEDS" />
+        <district value="WEST YORKSHIRE" />
+        <postalCode value="LS12 2TJ" />
+        <country value="ENGLAND" />
+    </address>
+</Organization>
