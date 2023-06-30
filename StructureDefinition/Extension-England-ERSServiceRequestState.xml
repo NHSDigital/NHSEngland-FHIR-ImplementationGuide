@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="Extension-England-ERSServiceRequestState" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/Extension-England-ERSServiceRequestState" />
+  <version value="1.0.0" />
+  <name value="ExtensionEnglandERSServiceRequestState" />
+  <title value="Extension England ERS ServiceRequest State" />
+  <status value="draft" />
+  <date value="2023-06-01" />
+  <publisher value="NHS England" />
+  <contact>
+    <name value="NHS England" />
+    <telecom>
+      <system value="email" />
+      <value value="interoperabilityteam@nhs.net" />
+      <use value="work" />
+      <rank value="1" />
+    </telecom>
+  </contact>
+  <description value="This extension documents the changes to a ServiceRequest, the reason for the change, and the current status of the request." />
+  <purpose value="This extension extends the ServiceRequest Resource to support the exchange of information describing the source of the Service Request." />
+  <copyright value="&quot;Copyright © 2021+ HL7 UK Licensed under the Apache License, Version 2.0 (the \&quot;License\&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at  http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \&quot;AS IS\&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. HL7® FHIR® standard Copyright © 2011+ HL7 The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at  https://www.hl7.org/fhir/license.html.&quot;," />
+  <fhirVersion value="4.0.1" />
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <context>
+    <type value="element" />
+    <expression value="ServiceRequest" />
+  </context>
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Extension">
+      <path value="Extension" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension">
+      <path value="Extension.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="Extension.extension:state">
+      <path value="Extension.extension" />
+      <sliceName value="state" />
+      <definition value="Defining state" />
+      <min value="0" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:state.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="state" />
+    </element>
+    <element id="Extension.extension:state.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <min value="1" />
+      <type>
+        <code value="Coding" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/England-ERSReferralStateCategory" />
+      </binding>
+    </element>
+    <element id="Extension.extension:state.value[x].system">
+      <path value="Extension.extension.value[x].system" />
+      <min value="1" />
+      <fixedUri value="https://fhir.nhs.uk/CodeSystem/England-ERSReferralState" />
+    </element>
+    <element id="Extension.extension:state.value[x].code">
+      <path value="Extension.extension.value[x].code" />
+      <min value="1" />
+    </element>
+    <element id="Extension.extension:reason">
+      <path value="Extension.extension" />
+      <sliceName value="reason" />
+      <min value="0" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:reason.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="reason" />
+    </element>
+    <element id="Extension.extension:reason.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <min value="1" />
+      <type>
+        <code value="Coding" />
+      </type>
+      <binding>
+        <strength value="extensible" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/England-ERSAppointmentCancellationReasonCategory" />
+      </binding>
+    </element>
+    <element id="Extension.extension:reason.value[x].system">
+      <path value="Extension.extension.value[x].system" />
+      <min value="1" />
+      <fixedUri value="https://fhir.nhs.uk/CodeSystem/England-AppointmentCancellationReason" />
+    </element>
+    <element id="Extension.extension:reason.value[x].code">
+      <path value="Extension.extension.value[x].code" />
+      <min value="1" />
+    </element>
+    <element id="Extension.extension:comments">
+      <path value="Extension.extension" />
+      <sliceName value="comments" />
+      <min value="0" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:comments.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="comments" />
+    </element>
+    <element id="Extension.extension:comments.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <min value="1" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="Extension.extension:stateResource">
+      <path value="Extension.extension" />
+      <sliceName value="stateResource" />
+      <min value="0" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:stateResource.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="stateResource" />
+    </element>
+    <element id="Extension.extension:stateResource.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <type>
+        <code value="Reference" />
+      </type>
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url" />
+      <fixedUri value="https://fhir.nhs.uk/StructureDefinition/Extension-England-ERSServiceRequestState" />
+    </element>
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>

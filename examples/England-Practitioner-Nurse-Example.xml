@@ -1,0 +1,12 @@
+<Practitioner xmlns="http://hl7.org/fhir">
+    <id value="England-Practitioner-Nurse-Example" />
+    <identifier>
+        <system value="https://fhir.hl7.org.uk/Id/nmc-number" />
+        <value value="65A4321A" />
+    </identifier>
+    <name>
+        <family value="Mafeld" />
+        <given value="Dusk" />
+        <prefix value="Mrs" />
+    </name>
+</Practitioner>
