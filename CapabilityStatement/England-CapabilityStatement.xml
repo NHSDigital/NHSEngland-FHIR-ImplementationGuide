@@ -82,5 +82,9 @@
             <type value="Organization" />
             <profile value="https://fhir.nhs.uk/StructureDefinition/England-Organization" />
         </resource>
+        <resource>
+            <type value="Patient" />
+            <profile value="https://fhir.nhs.uk/StructureDefinition/England-Patient" />
+        </resource>
     </rest>
 </CapabilityStatement>
