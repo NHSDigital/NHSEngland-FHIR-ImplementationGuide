@@ -86,5 +86,9 @@
             <type value="Patient" />
             <profile value="https://fhir.nhs.uk/StructureDefinition/England-Patient" />
         </resource>
+        <resource>
+            <type value="Location" />
+            <profile value="https://fhir.nhs.uk/StructureDefinition/England-Location" />
+        </resource>
     </rest>
 </CapabilityStatement>
