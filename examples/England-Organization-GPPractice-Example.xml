@@ -1,0 +1,67 @@
+<Organization xmlns="http://hl7.org/fhir">
+    <id value="England-Organization-GPPractice-Example" />
+    <extension url="https://fhir.nhs.uk/StructureDefinition/Extension-England-ODSOrganisationRelationships">
+        <extension url="commissionedBy">
+            <valueIdentifier>
+                <system value="https://fhir.nhs.uk/Id/ods-organization-code" />
+                <value value="15E" />
+            </valueIdentifier>
+        </extension>
+        <extension url="primaryCareNetwork">
+            <valueIdentifier>
+                <system value="https://fhir.nhs.uk/Id/ods-organization-code" />
+                <value value="U46437" />
+            </valueIdentifier>
+        </extension>
+    </extension>
+    <identifier>
+        <system value="https://fhir.nhs.uk/Id/ods-organization-code" />
+        <value value="M85011" />
+    </identifier>
+    <active value="true" />
+    <type>
+        <coding>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-OrganisationRole" />
+            <code value="76" />
+            <display value="GP PRACTICE" />
+        </coding>
+    </type>
+    <type>
+        <extension url="https://fhir.nhs.uk/StructureDefinition/Extension-England-ODSOrganizationRole">
+            <extension url="primaryRole">
+                <valueBoolean value="false" />
+            </extension>
+            <extension url="status">
+                <valueString value="Active" />
+            </extension>
+        </extension>
+        <extension url="https://fhir.nhs.uk/StructureDefinition/Extension-England-ODSOrganizationRoleActivePeriod">
+            <extension url="activePeriod">
+                <valuePeriod>
+                    <start value="2014-04-15" />
+                </valuePeriod>
+            </extension>
+            <extension url="dateType">
+                <valueString value="Operational" />
+            </extension>
+        </extension>
+        <coding>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-OrganisationRole" />
+            <code value="76" />
+            <display value="GP PRACTICE" />
+        </coding>
+    </type>
+    <name value="THE SWAN MEDICAL CENTRE" />
+    <telecom>
+        <system value="phone" />
+        <value value="0121 7060337" />
+    </telecom>
+    <address>
+        <line value="4 WILLARD RD" />
+        <line value="SOUTH YARDLEY" />
+        <city value="BIRMINGHAM" />
+        <district value="WEST MIDLANDS" />
+        <postalCode value="B25 8AA" />
+        <country value="ENGLAND" />
+    </address>
+</Organization>

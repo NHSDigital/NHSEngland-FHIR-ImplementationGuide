@@ -1,0 +1,77 @@
+<Immunization xmlns="http://hl7.org/fhir">
+    <id value="England-Immunization-AdministrationOfSARSCoV2FirstDose-Example" />
+    <extension url="https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-VaccinationProcedure">
+        <valueCodeableConcept>
+            <coding>
+                <system value="http://snomed.info/sct" />
+                <code value="1324681000000101" />
+                <display value="Administration of first dose of severe acute respiratory syndrome coronavirus 2 vaccine (procedure)" />
+            </coding>
+        </valueCodeableConcept>
+    </extension>
+    <identifier>
+        <system value="https://tools.ietf.org/html/rfc4122" />
+        <value value="bd2ec326-7570-46bd-98a0-02c4b924c79d" />
+    </identifier>
+    <status value="completed" />
+    <vaccineCode>
+        <coding>
+            <system value="http://snomed.info/sct" />
+            <code value="39114911000001105" />
+            <display value="COVID-19 Vaccine Vaxzevria (ChAdOx1 S [recombinant]) not less than 2.5x100,000,000 infectious units/0.5ml dose suspension for injection multidose vials (AstraZeneca UK Ltd)" />
+        </coding>
+    </vaccineCode>
+    <patient>
+        <reference value="Patient/1953684" />
+        <type value="Patient" />
+        <identifier>
+            <system value="https://fhir.nhs.uk/Id/nhs-number" />
+            <value value="9912003888" />
+        </identifier>
+    </patient>
+    <occurrenceDateTime value="2020-12-23T13:00:08.476+00:00" />
+    <recorded value="2020-12-23" />
+    <primarySource value="true" />
+    <location>
+        <identifier>
+            <system value="urn:iso:std:iso:3166" />
+            <value value="FR" />
+        </identifier>
+        <display value="France" />
+    </location>
+    <manufacturer>
+        <display value="DREAMLAND Pharmaceuticals Ltd" />
+    </manufacturer>
+    <lotNumber value="4XR0" />
+    <expirationDate value="2021-04-29" />
+    <site>
+        <coding>
+            <system value="http://snomed.info/sct" />
+            <code value="368208006" />
+            <display value="Left upper arm structure (body structure)" />
+        </coding>
+    </site>
+    <route>
+        <coding>
+            <system value="http://snomed.info/sct" />
+            <code value="78421000" />
+            <display value="Intramuscular route (qualifier value)" />
+        </coding>
+    </route>
+    <doseQuantity>
+        <value value="1" />
+        <unit value="pre-filled disposable injection" />
+        <system value="http://snomed.info/sct" />
+        <code value="3318611000001103" />
+    </doseQuantity>
+    <reasonCode>
+        <coding>
+            <system value="http://snomed.info/sct" />
+            <code value="443684005" />
+            <display value="Disease outbreak (event)" />
+        </coding>
+    </reasonCode>
+    <protocolApplied>
+        <doseNumberPositiveInt value="1" />
+    </protocolApplied>
+</Immunization>

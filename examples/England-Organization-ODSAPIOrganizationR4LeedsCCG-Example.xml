@@ -1,0 +1,61 @@
+<Organization xmlns="http://hl7.org/fhir">
+    <id value="England-Organization-ODSAPIOrganizationR4LeedsCCG-Example" />
+    <extension url="https://fhir.nhs.uk/StructureDefinition/Extension-England-ODSOrganisationRelationships">
+        <extension url="nationalGrouping">
+            <valueIdentifier>
+                <system value="https://fhir.nhs.uk/Id/ods-organization-code" />
+                <value value="Q72" />
+            </valueIdentifier>
+        </extension>
+    </extension>
+    <identifier>
+        <system value="https://fhir.nhs.uk/Id/ods-organization-code" />
+        <value value="15F" />
+    </identifier>
+    <active value="true" />
+    <type>
+        <extension url="https://fhir.nhs.uk/StructureDefinition/Extension-England-ODSOrganizationRole">
+            <extension url="primaryRole">
+                <valueBoolean value="true" />
+            </extension>
+            <extension url="status">
+                <valueString value="Active" />
+            </extension>
+        </extension>
+        <extension url="https://fhir.nhs.uk/StructureDefinition/Extension-England-ODSOrganizationRoleActivePeriod">
+            <extension url="activePeriod">
+                <valuePeriod>
+                    <start value="2017-12-12" />
+                </valuePeriod>
+            </extension>
+            <extension url="dateType">
+                <valueString value="Operational" />
+            </extension>
+        </extension>
+        <extension url="https://fhir.nhs.uk/StructureDefinition/Extension-England-ODSOrganizationRoleActivePeriod">
+            <extension url="activePeriod">
+                <valuePeriod>
+                    <start value="2018-04-01" />
+                </valuePeriod>
+            </extension>
+            <extension url="dateType">
+                <valueString value="Legal" />
+            </extension>
+        </extension>
+        <coding>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-OrganisationRole" />
+            <code value="98" />
+            <display value="CLINICAL COMMISSIONING GROUP" />
+        </coding>
+    </type>
+    <name value="NHS LEEDS CCG" />
+    <address>
+        <line value="SUITES 2 - 4 WIRA HOUSE" />
+        <line value="RING ROAD" />
+        <line value="WEST PARK" />
+        <city value="LEEDS" />
+        <district value="WEST YORKSHIRE" />
+        <postalCode value="LS16 6EB" />
+        <country value="ENGLAND" />
+    </address>
+</Organization>

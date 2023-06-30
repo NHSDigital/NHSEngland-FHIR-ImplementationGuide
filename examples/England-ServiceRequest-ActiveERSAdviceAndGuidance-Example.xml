@@ -1,0 +1,75 @@
+<ServiceRequest xmlns="http://hl7.org/fhir">
+    <id value="England-ServiceRequest-ActiveERSAdviceAndGuidance-Example" />
+    <meta>
+        <versionId value="5" />
+    </meta>
+    <contained>
+        <PractitionerRole>
+            <id value="requester" />
+            <practitioner>
+                <identifier>
+                    <system value="https://fhir.nhs.uk/Id/sds-user-id" />
+                    <value value="0987654321" />
+                </identifier>
+            </practitioner>
+            <organization>
+                <identifier>
+                    <system value="https://fhir.nhs.uk/Id/ods-organization-code" />
+                    <value value="RR8" />
+                </identifier>
+                <display value="LEEDS TEACHING HOSPITALS NHS TRUST" />
+            </organization>
+        </PractitionerRole>
+    </contained>
+    <extension url="https://fhir.nhs.uk/StructureDefinition/Extension-England-ERSReferral">
+        <extension url="sourceSystem">
+            <valueCode value="ers" />
+        </extension>
+        <extension url="authorisedToRefer">
+            <valueCode value="authorised" />
+        </extension>
+    </extension>
+    <extension url="https://fhir.nhs.uk/StructureDefinition/Extension-England-ERSServiceRequestState" />
+    <identifier>
+        <system value="https://fhir.nhs.uk/Id/UBRN" />
+        <value value="000000070000" />
+    </identifier>
+    <status value="active" />
+    <intent value="order" />
+    <category>
+        <coding>
+            <system value="http://snomed.info/sct" />
+            <code value="820641000000100" />
+            <display value="Choose and book advice and guidance request" />
+        </coding>
+    </category>
+    <priority value="routine" />
+    <subject>
+        <identifier>
+            <system value="https://fhir.nhs.uk/Id/nhs-number" />
+            <value value="9912003888" />
+        </identifier>
+    </subject>
+    <authoredOn value="2022-01-11T16:40:00+00:00" />
+    <requester>
+        <reference value="#requester" />
+    </requester>
+    <performerType>
+        <coding>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-ERSSpecialty" />
+            <code value="GENERAL_MEDICINE" />
+        </coding>
+        <text value="SHOULD BE SAYING ADVICE AND GUIDANCE HERE??" />
+    </performerType>
+    <supportingInfo>
+        <reference value="DocumentReference/5da894e0-a57e-43e9-a1a1-e283a484003c" />
+        <type value="DocumentReference" />
+    </supportingInfo>
+    <supportingInfo>
+        <reference value="QuestionnaireResponse/d9d4cf80-3f9d-4435-9f3b-e6efb09ad654" />
+        <type value="QuestionnaireResponse" />
+    </supportingInfo>
+    <note>
+        <text value="Please advise me on this patient who ...(information about patient)" />
+    </note>
+</ServiceRequest>

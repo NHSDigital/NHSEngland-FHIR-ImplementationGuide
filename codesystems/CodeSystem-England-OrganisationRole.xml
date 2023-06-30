@@ -1,0 +1,608 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<CodeSystem xmlns="http://hl7.org/fhir">
+   <id value="England-OrganisationRole" />
+   <url value="https://fhir.nhs.uk/CodeSystem/England-OrganisationRole" />
+   <version value="1.0.0" />
+   <name value="EnglandOrganisationRole" />
+   <title value="England Organisation Role" />
+   <status value="draft" />
+   <date value="2023-06-01" />
+   <publisher value="NHS England" />
+   <contact>
+		<name value="NHS England" />
+		<telecom>
+			<system value="email" />
+			<value value="interoperabilityteam@nhs.net" />
+			<use value="work" />
+			<rank value="1" />
+		</telecom>
+   </contact>
+   <description value="A CodeSystem to identify the role (type) of organisation." />
+   <copyright value="Copyright © 2021+ HL7 UK Licensed under the Apache License, Version 2.0 (the License); you may not use this file except in compliance with the License. You may obtain a copy of the License at  http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an AS IS BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. HL7® FHIR® standard Copyright © 2011+ HL7 The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at  https://www.hl7.org/fhir/license.html." />
+   <caseSensitive value="true" />
+   <content value="complete" />
+   <concept>
+        <code value="200"></code>
+        <display value="WELSH ASSEMBLY"></display>
+    </concept>
+    <concept>
+        <code value="123"></code>
+        <display value="LOCAL AUTHORITY DEPARTMENT"></display>
+    </concept>
+    <concept>
+        <code value="138"></code>
+        <display value="ISLE OF MAN GOVERNMENT DEPARTMENT"></display>
+    </concept>
+    <concept>
+        <code value="137"></code>
+        <display value="ISLE OF MAN GOVERNMENT DIRECTORATE"></display>
+    </concept>
+    <concept>
+        <code value="105"></code>
+        <display value="CANCER REGISTRY"></display>
+    </concept>
+    <concept>
+        <code value="140"></code>
+        <display value="ISLE OF MAN GOVERNMENT DIRECTORATE SITE"></display>
+    </concept>
+    <concept>
+        <code value="30"></code>
+        <display value="RESEARCH AND DEVELOPMENT"></display>
+    </concept>
+    <concept>
+        <code value="39"></code>
+        <display value="METROPOLITAN DISTRICT COUNCIL"></display>
+    </concept>
+    <concept>
+        <code value="134"></code>
+        <display value="HEALTH OBSERVATORY"></display>
+    </concept>
+    <concept>
+        <code value="158"></code>
+        <display value="NON STATUTORY NHS ORGANISATION"></display>
+    </concept>
+    <concept>
+        <code value="38"></code>
+        <display value="COUNCIL"></display>
+    </concept>
+    <concept>
+        <code value="159"></code>
+        <display value="NATIONAL APPLICATION SERVICE PROVIDER"></display>
+    </concept>
+    <concept>
+        <code value="220"></code>
+        <display value="SECURE TRAINING CENTRE"></display>
+    </concept>
+    <concept>
+        <code value="260"></code>
+        <display value="YOUNG OFFENDER INSTITUTION PRESCRIBING COST CENTRE"></display>
+    </concept>
+    <concept>
+        <code value="230"></code>
+        <display value="SECURE TRAINING CENTRE"></display>
+    </concept>
+    <concept>
+        <code value="251"></code>
+        <display value="IMMIGRATION REMOVAL CENTRE PRESCRIBING COST CENTRE"></display>
+    </concept>
+    <concept>
+        <code value="236"></code>
+        <display value="SEXUAL ASSAULT REFERRAL CENTRE"></display>
+    </concept>
+    <concept>
+        <code value="257"></code>
+        <display value="SECURE TRAINING CENTRE PRESCRIBING COST CENTRE"></display>
+    </concept>
+    <concept>
+        <code value="273"></code>
+        <display value="COMBINED AUTHORITY"></display>
+    </concept>
+    <concept>
+        <code value="35"></code>
+        <display value="CITY COUNCIL"></display>
+    </concept>
+    <concept>
+        <code value="233"></code>
+        <display value="CONSTABULARY"></display>
+    </concept>
+    <concept>
+        <code value="234"></code>
+        <display value="POLICE CUSTODY SUITE"></display>
+    </concept>
+    <concept>
+        <code value="12"></code>
+        <display value="LA - INNER LONDON"></display>
+    </concept>
+    <concept>
+        <code value="223"></code>
+        <display value="LONDON BOROUGH"></display>
+    </concept>
+    <concept>
+        <code value="274"></code>
+        <display value="LOCAL HEALTH AND CARE RECORD EXEMPLAR"></display>
+    </concept>
+    <concept>
+        <code value="106"></code>
+        <display value="COMMON SERVICE AGENCY (CSA)"></display>
+    </concept>
+    <concept>
+        <code value="258"></code>
+        <display value="SEXUAL ASSAULT REFERRAL CENTRE PRESCRIBING COST CE"></display>
+    </concept>
+    <concept>
+        <code value="277"></code>
+        <display value="SMHPC - ADULT SECURE SERVICES"></display>
+    </concept>
+    <concept>
+        <code value="276"></code>
+        <display value="SMHPC - ADULT EATING DISORDERS"></display>
+    </concept>
+    <concept>
+        <code value="275"></code>
+        <display value="SMHPC - CYPMHS TIER 4"></display>
+    </concept>
+    <concept>
+        <code value="148"></code>
+        <display value="LOCAL HEALTH BOARD SITE"></display>
+    </concept>
+    <concept>
+        <code value="149"></code>
+        <display value="WELSH LOCAL HEALTH BOARD SITE"></display>
+    </concept>
+    <concept>
+        <code value="71"></code>
+        <display value="PRIVATELY OWNED ENTITY"></display>
+    </concept>
+    <concept>
+        <code value="216"></code>
+        <display value="DATA SERVICES FOR COMMISSIONERS REGIONAL OFFICE (DSCRO)"></display>
+    </concept>
+    <concept>
+        <code value="217"></code>
+        <display value="DSCRO SITE"></display>
+    </concept>
+    <concept>
+        <code value="215"></code>
+        <display value="HOSTS DATA MANAGMENT INTEGRATION CENTRE (DMIC)"></display>
+    </concept>
+    <concept>
+        <code value="122"></code>
+        <display value="LOCAL AUTHORITY SITE - LEGACY"></display>
+    </concept>
+    <concept>
+        <code value="218"></code>
+        <display value="COMMISSIONING HUB"></display>
+    </concept>
+    <concept>
+        <code value="211"></code>
+        <display value="SPECIALISED COMMISSIONING HUB"></display>
+    </concept>
+    <concept>
+        <code value="256"></code>
+        <display value="SECURE CHILDREN'S HOME PRESCRIBING COST CENTRE"></display>
+    </concept>
+    <concept>
+        <code value="131"></code>
+        <display value="GOVERNMENT DEPARTMENT SITE"></display>
+    </concept>
+    <concept>
+        <code value="93"></code>
+        <display value="APPLICATION SERVICE PROVIDER - LEGACY"></display>
+    </concept>
+    <concept>
+        <code value="114"></code>
+        <display value="DMU SITE"></display>
+    </concept>
+    <concept>
+        <code value="150"></code>
+        <display value="MILITARY HOSPITAL"></display>
+    </concept>
+    <concept>
+        <code value="102"></code>
+        <display value="CLINICAL NETWORK"></display>
+    </concept>
+    <concept>
+        <code value="67"></code>
+        <display value="SPECIALISED COMMISSIONING GROUP"></display>
+    </concept>
+    <concept>
+        <code value="89"></code>
+        <display value="EXECUTIVE AGENCY PROGRAMME - DEPARTMENT"></display>
+    </concept>
+    <concept>
+        <code value="117"></code>
+        <display value="EDUCATION"></display>
+    </concept>
+    <concept>
+        <code value="103"></code>
+        <display value="CANCER NETWORK"></display>
+    </concept>
+    <concept>
+        <code value="212"></code>
+        <display value="NHS ENGLAND (REGION, LOCAL OFFICE) SITE"></display>
+    </concept>
+    <concept>
+        <code value="69"></code>
+        <display value="IMMIGRATION REMOVAL CENTRE"></display>
+    </concept>
+    <concept>
+        <code value="231"></code>
+        <display value="SECURE CHILDREN'S HOME"></display>
+    </concept>
+    <concept>
+        <code value="83"></code>
+        <display value="RESIDENTIAL INSTITUTION"></display>
+    </concept>
+    <concept>
+        <code value="232"></code>
+        <display value="IMMIGRATION REMOVAL CENTRE"></display>
+    </concept>
+    <concept>
+        <code value="175"></code>
+        <display value="PRISON"></display>
+    </concept>
+    <concept>
+        <code value="146"></code>
+        <display value="LOCAL SERVICE PROVIDER (LSP)"></display>
+    </concept>
+    <concept>
+        <code value="147"></code>
+        <display value="LSP SITE"></display>
+    </concept>
+    <concept>
+        <code value="228"></code>
+        <display value="YOUNG OFFENDER INSTITUTION"></display>
+    </concept>
+    <concept>
+        <code value="168"></code>
+        <display value="OTHER STATUTORY AUTHORITY SITE"></display>
+    </concept>
+    <concept>
+        <code value="29"></code>
+        <display value="TREATMENT CENTRE"></display>
+    </concept>
+    <concept>
+        <code value="162"></code>
+        <display value="OTHER STATUTORY AUTHORITY (OSA)"></display>
+    </concept>
+    <concept>
+        <code value="21"></code>
+        <display value="LEVEL 03 PCT"></display>
+    </concept>
+    <concept>
+        <code value="229"></code>
+        <display value="NON RESIDENTIAL INSTITUTION"></display>
+    </concept>
+    <concept>
+        <code value="235"></code>
+        <display value="COURT"></display>
+    </concept>
+    <concept>
+        <code value="267"></code>
+        <display value="EXTENDED ACCESS HUB"></display>
+    </concept>
+    <concept>
+        <code value="180"></code>
+        <display value="PRIMARY CARE TRUST SITE"></display>
+    </concept>
+    <concept>
+        <code value="22"></code>
+        <display value="LEVEL 04 PCT"></display>
+    </concept>
+    <concept>
+        <code value="108"></code>
+        <display value="CARE TRUST SITE"></display>
+    </concept>
+    <concept>
+        <code value="213"></code>
+        <display value="COMMISSIONING SUPPORT UNIT"></display>
+    </concept>
+    <concept>
+        <code value="214"></code>
+        <display value="COMMISSIONING SUPPORT UNIT SITE"></display>
+    </concept>
+    <concept>
+        <code value="128"></code>
+        <display value="GOVERNMENT OFFICE REGION"></display>
+    </concept>
+    <concept>
+        <code value="25"></code>
+        <display value="PCT DERIVED"></display>
+    </concept>
+    <concept>
+        <code value="136"></code>
+        <display value="STRATEGIC HEALTH AUTHORITY SITE"></display>
+    </concept>
+    <concept>
+        <code value="24"></code>
+        <display value="NHS TRUST DERIVED"></display>
+    </concept>
+    <concept>
+        <code value="161"></code>
+        <display value="NHS SUPPORT AGENCY"></display>
+    </concept>
+    <concept>
+        <code value="31"></code>
+        <display value="PPA EPACT SYSTEM"></display>
+    </concept>
+    <concept>
+        <code value="255"></code>
+        <display value="PUBLIC HEALTH SERVICE PRESCRIBING COST CENTRE"></display>
+    </concept>
+    <concept>
+        <code value="249"></code>
+        <display value="HOSPICE PRESCRIBING COST CENTRE"></display>
+    </concept>
+    <concept>
+        <code value="246"></code>
+        <display value="CARE HOME/NURSING HOME PRESCRIBING COST CENTRE"></display>
+    </concept>
+    <concept>
+        <code value="82"></code>
+        <display value="PRISON PRESCRIBING COST CENTRE"></display>
+    </concept>
+    <concept>
+        <code value="252"></code>
+        <display value="OPTOMETRY SERVICE PRESCRIBING COST CENTRE"></display>
+    </concept>
+    <concept>
+        <code value="99"></code>
+        <display value="CLINICAL COMMISSIONING GROUP SITE"></display>
+    </concept>
+    <concept>
+        <code value="36"></code>
+        <display value="DISTRICT COUNCIL"></display>
+    </concept>
+    <concept>
+        <code value="92"></code>
+        <display value="APPLICATION SERVICE PROVIDER"></display>
+    </concept>
+    <concept>
+        <code value="34"></code>
+        <display value="BOROUGH COUNCIL"></display>
+    </concept>
+    <concept>
+        <code value="222"></code>
+        <display value="LOCAL AUTHORITY SITE"></display>
+    </concept>
+    <concept>
+        <code value="107"></code>
+        <display value="CARE TRUST"></display>
+    </concept>
+    <concept>
+        <code value="87"></code>
+        <display value="WALK IN CENTRE"></display>
+    </concept>
+    <concept>
+        <code value="250"></code>
+        <display value="HOSPITAL SERVICE PRESCRIBING COST CENTRE"></display>
+    </concept>
+    <concept>
+        <code value="259"></code>
+        <display value="URGENT &amp; EMERGENCY CARE PRESCRIBING COST CENTRE"></display>
+    </concept>
+    <concept>
+        <code value="209"></code>
+        <display value="NHS ENGLAND (REGION)"></display>
+    </concept>
+    <concept>
+        <code value="262"></code>
+        <display value="SUSTAINABILITY TRANSFORMATION PARTNERSHIP"></display>
+    </concept>
+    <concept>
+        <code value="109"></code>
+        <display value="DISTRICT HEALTH AUTHORITY (DHA)"></display>
+    </concept>
+    <concept>
+        <code value="111"></code>
+        <display value="DIRECTLY MANAGED UNIT (DMU)"></display>
+    </concept>
+    <concept>
+        <code value="7"></code>
+        <display value="HOSPICE"></display>
+    </concept>
+    <concept>
+        <code value="126"></code>
+        <display value="GOVERNMENT DEPARTMENT"></display>
+    </concept>
+    <concept>
+        <code value="189"></code>
+        <display value="SPECIAL HEALTH AUTHORITY (SPHA)"></display>
+    </concept>
+    <concept>
+        <code value="94"></code>
+        <display value="APPLIANCE CONTRACTOR"></display>
+    </concept>
+    <concept>
+        <code value="72"></code>
+        <display value="OTHER PRESCRIBING COST CENTRE"></display>
+    </concept>
+    <concept>
+        <code value="80"></code>
+        <display value="OUT OF HOURS COST CENTRE"></display>
+    </concept>
+    <concept>
+        <code value="247"></code>
+        <display value="COMMUNITY HEALTH SERVICE PRESCRIBING COST CENTRE"></display>
+    </concept>
+    <concept>
+        <code value="268"></code>
+        <display value="MEDICINE SUPPLIER"></display>
+    </concept>
+    <concept>
+        <code value="266"></code>
+        <display value="EXTENDED ACCESS PROVIDER"></display>
+    </concept>
+    <concept>
+        <code value="141"></code>
+        <display value="LOCAL AUTHORITY"></display>
+    </concept>
+    <concept>
+        <code value="119"></code>
+        <display value="LOCAL AUTHORITY - LEGACY"></display>
+    </concept>
+    <concept>
+        <code value="33"></code>
+        <display value="COUNTY COUNCIL"></display>
+    </concept>
+    <concept>
+        <code value="142"></code>
+        <display value="LOCAL HEALTH BOARD"></display>
+    </concept>
+    <concept>
+        <code value="185"></code>
+        <display value="REGIONAL OFFICE (RO)"></display>
+    </concept>
+    <concept>
+        <code value="144"></code>
+        <display value="WELSH LOCAL HEALTH BOARD"></display>
+    </concept>
+    <concept>
+        <code value="57"></code>
+        <display value="FOUNDATION TRUST"></display>
+    </concept>
+    <concept>
+        <code value="40"></code>
+        <display value="UNITARY AUTHORITY"></display>
+    </concept>
+    <concept>
+        <code value="11"></code>
+        <display value="LA - METROPOLITAN DISTRICT"></display>
+    </concept>
+    <concept>
+        <code value="37"></code>
+        <display value="METROPOLITAN DISTRICT"></display>
+    </concept>
+    <concept>
+        <code value="173"></code>
+        <display value="PATHOLOGY LAB"></display>
+    </concept>
+    <concept>
+        <code value="179"></code>
+        <display value="PRIMARY CARE TRUST"></display>
+    </concept>
+    <concept>
+        <code value="171"></code>
+        <display value="PRIMARY CARE GROUP"></display>
+    </concept>
+    <concept>
+        <code value="98"></code>
+        <display value="CLINICAL COMMISSIONING GROUP"></display>
+    </concept>
+    <concept>
+        <code value="272"></code>
+        <display value="PRIMARY CARE NETWORK"></display>
+    </concept>
+    <concept>
+        <code value="76"></code>
+        <display value="GP PRACTICE"></display>
+    </concept>
+    <concept>
+        <code value="177"></code>
+        <display value="PRESCRIBING COST CENTRE"></display>
+    </concept>
+    <concept>
+        <code value="181"></code>
+        <display value="PHARMACY HEADQUARTER"></display>
+    </concept>
+    <concept>
+        <code value="210"></code>
+        <display value="NHS ENGLAND (REGION, LOCAL OFFICE)"></display>
+    </concept>
+    <concept>
+        <code value="261"></code>
+        <display value="STRATEGIC PARTNERSHIP"></display>
+    </concept>
+    <concept>
+        <code value="182"></code>
+        <display value="PHARMACY"></display>
+    </concept>
+    <concept>
+        <code value="172"></code>
+        <display value="INDEPENDENT SECTOR HEALTHCARE PROVIDER"></display>
+    </concept>
+    <concept>
+        <code value="176"></code>
+        <display value="INDEPENDENT SECTOR H/C PROVIDER SITE"></display>
+    </concept>
+    <concept>
+        <code value="104"></code>
+        <display value="SOCIAL CARE PROVIDER"></display>
+    </concept>
+    <concept>
+        <code value="101"></code>
+        <display value="SOCIAL CARE SITE"></display>
+    </concept>
+    <concept>
+        <code value="270"></code>
+        <display value="DOMICILIARY CARE"></display>
+    </concept>
+    <concept>
+        <code value="197"></code>
+        <display value="NHS TRUST"></display>
+    </concept>
+    <concept>
+        <code value="198"></code>
+        <display value="NHS TRUST SITE"></display>
+    </concept>
+    <concept>
+        <code value="116"></code>
+        <display value="EXECUTIVE AGENCY"></display>
+    </concept>
+    <concept>
+        <code value="91"></code>
+        <display value="EXECUTIVE AGENCY PROGRAMME"></display>
+    </concept>
+    <concept>
+        <code value="269"></code>
+        <display value="CARE HOME"></display>
+    </concept>
+    <concept>
+        <code value="65"></code>
+        <display value="PRIVATE DENTAL PRACTICE"></display>
+    </concept>
+    <concept>
+        <code value="110"></code>
+        <display value="GENERAL DENTAL PRACTICE"></display>
+    </concept>
+    <concept>
+        <code value="157"></code>
+        <display value="NON-NHS ORGANISATION"></display>
+    </concept>
+    <concept>
+        <code value="279"></code>
+        <display value="COVID VACCINATION CENTRE"></display>
+    </concept>
+    <concept>
+        <code value="280"></code>
+        <display value="PHARMACY SITE"></display>
+    </concept>
+    <concept>
+        <code value="166"></code>
+        <display value="OPTICAL HEADQUARTERS"></display>
+    </concept>
+    <concept>
+        <code value="167"></code>
+        <display value="OPTICAL SITE"></display>
+    </concept>
+    <concept>
+        <code value="132"></code>
+        <display value="HEALTH AUTHORITY (HA)"></display>
+    </concept>
+    <concept>
+        <code value="15"></code>
+        <display value="REG'D UNDER PART 2 CARE STDS ACT 2000"></display>
+    </concept>
+    <concept>
+        <code value="96"></code>
+        <display value="BRANCH SURGERY"></display>
+    </concept>
+    <concept>
+        <code value="191"></code>
+        <display value="SPECIAL HEALTH AUTHORITY SITE"></display>
+    </concept>
+    <concept>
+        <code value="90"></code>
+        <display value="EXECUTIVE AGENCY SITE"></display>
+    </concept>
+</CodeSystem>

@@ -1,0 +1,16 @@
+<Practitioner xmlns="http://hl7.org/fhir">
+    <id value="England-Practitioner-Consultant-Example" />
+    <identifier>
+        <system value="https://fhir.nhs.uk/Id/sds-user-id" />
+        <value value="3415870201" />
+    </identifier>
+    <identifier>
+        <system value="https://fhir.hl7.org.uk/Id/gmc-number" />
+        <value value="C4428981" />
+    </identifier>
+    <name>
+        <family value="Edwards" />
+        <given value="Thomas" />
+        <prefix value="DR" />
+    </name>
+</Practitioner>

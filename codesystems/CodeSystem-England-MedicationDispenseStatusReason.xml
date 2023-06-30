@@ -1,0 +1,73 @@
+<CodeSystem xmlns="http://hl7.org/fhir">
+    <id value="England-MedicationDispenseStatusReason" />
+    <url value="https://fhir.nhs.uk/CodeSystem/England-MedicationDispenseStatusReason" />
+    <identifier>
+        <system value="https://fhir.nhs.uk/identifier/CodeSystem" />
+        <value value="medicationdispense-status-reason" />
+    </identifier>
+    <version value="1.0.0" />
+    <name value="EnglandMedicationDispenseStatusReason" />
+    <title value="England MedicationDispense Status Reason" />
+    <status value="draft" />
+    <experimental value="true" />
+    <date value="2023-06-01" />
+    <publisher value="NHS England" />
+    <contact>
+        <name value="NHS England" />
+        <telecom>
+          <system value="email" />
+          <value value="interoperabilityteam@nhs.net" />
+          <use value="work" />
+          <rank value="1" />
+        </telecom>
+      </contact>
+    <description value="MedicationDispense Status Reason. Taken from HL7v3 UK DMS Not Dispensed Reason" />
+    <purpose value="MedicationDispense Status Reason. Taken from HL7v3 UK DMS Not Dispensed Reason" />
+  <copyright value="Copyright © 2021+ HL7 UK Licensed under the Apache License, Version 2.0 (the \&quot;License\&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at  http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \&quot;AS IS\&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. HL7® FHIR® standard Copyright © 2011+ HL7 The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at  https://www.hl7.org/fhir/license.html." />
+    <caseSensitive value="true" />
+    <content value="complete" />
+    <concept>
+        <code value="0001"></code>
+        <display value="Not required as instructed by the patient" />
+    </concept>
+    <concept>
+        <code value="0002"></code>
+        <display value="Clinically unsuitable" />
+    </concept>
+    <concept>
+        <code value="0003"></code>
+        <display value="Owings note issued to patient" />
+    </concept>
+    <concept>
+        <code value="0004"></code>
+        <display value="Prescription cancellation" />
+    </concept>
+    <concept>
+        <code value="0005"></code>
+        <display value="Prescription cancellation due to death" />
+    </concept>
+    <concept>
+        <code value="0006"></code>
+        <display value="Illegal NHS prescription" />
+    </concept>
+    <concept>
+        <code value="0007"></code>
+        <display value="Prescribed out of scope item" />
+    </concept>
+    <concept>
+        <code value="0008"></code>
+        <display value="Item or prescription expired" />
+    </concept>
+    <concept>
+        <code value="0009"></code>
+        <display value="Not allowed on FP10" />
+    </concept>
+    <concept>
+        <code value="0010"></code>
+        <display value="Patient did not collect medication" />
+    </concept>
+    <concept>
+        <code value="0011"></code>
+        <display value="Patient purchased medication over the counter" />
+    </concept>
+</CodeSystem>

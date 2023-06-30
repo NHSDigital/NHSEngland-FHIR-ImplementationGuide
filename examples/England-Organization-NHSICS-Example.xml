@@ -1,0 +1,27 @@
+<Organization xmlns="http://hl7.org/fhir">
+    <id value="England-Organization-NHSICS-Example" />
+    <identifier>
+        <system value="https://fhir.nhs.uk/Id/ods-organization-code" />
+        <value value="B81001" />
+    </identifier>
+    <type>
+        <coding>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-OrganisationRole" />
+            <code value="76" />
+        </coding>
+    </type>
+    <name value="DR ME AHMED&#39;S PRACTICE" />
+    <address>
+        <line value="700 HOLDERNESS ROAD" />
+        <line value="HULL" />
+        <line value="NORTH HUMBERSIDE" />
+        <postalCode value="HU9 3JA" />
+    </address>
+    <partOf>
+        <identifier>
+            <system value="https://fhir.nhs.uk/Id/ods-organization-code" />
+            <value value="5E5" />
+        </identifier>
+        <display value="The NHS CCG" />
+    </partOf>
+</Organization>
