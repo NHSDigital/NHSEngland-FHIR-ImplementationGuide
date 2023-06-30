@@ -78,5 +78,9 @@
             <type value="Practitioner" />
             <profile value="https://fhir.nhs.uk/StructureDefinition/England-Practitioner" />
         </resource>
+        <resource>
+            <type value="Organization" />
+            <profile value="https://fhir.nhs.uk/StructureDefinition/England-Organization" />
+        </resource>
     </rest>
 </CapabilityStatement>
