@@ -26,10 +26,26 @@
     <concept>
         <code value="0001"></code>
         <display value="Not required as instructed by the patient" />
+        <designation>
+          <use>
+            <system value="http://snomed.info/sct" />
+            <code value="900000000000013009" />
+            <display value="Synonym" />
+          </use>
+          <value value="Declined by the patient" />
+        </designation>
     </concept>
     <concept>
         <code value="0002"></code>
         <display value="Clinically unsuitable" />
+        <designation>
+          <use>
+            <system value="http://snomed.info/sct" />
+            <code value="900000000000013009" />
+            <display value="Synonym" />
+          </use>
+          <value value="The treatment is no longer suitable" />
+        </designation>
     </concept>
     <concept>
         <code value="0003"></code>
@@ -38,33 +54,97 @@
     <concept>
         <code value="0004"></code>
         <display value="Prescription cancellation" />
+        <designation>
+          <use>
+            <system value="http://snomed.info/sct" />
+            <code value="900000000000013009" />
+            <display value="Synonym" />
+          </use>
+          <value value="Cancelled - contact your pharmacist" />
+        </designation>
     </concept>
     <concept>
         <code value="0005"></code>
         <display value="Prescription cancellation due to death" />
+        <designation>
+          <use>
+            <system value="http://snomed.info/sct" />
+            <code value="900000000000013009" />
+            <display value="Synonym" />
+          </use>
+          <value value="Death of the patient" />
+        </designation>
     </concept>
     <concept>
         <code value="0006"></code>
         <display value="Illegal NHS prescription" />
+        <designation>
+          <use>
+            <system value="http://snomed.info/sct" />
+            <code value="900000000000013009" />
+            <display value="Synonym" />
+          </use>
+          <value value="Death of the patient" />
+        </designation>
     </concept>
     <concept>
         <code value="0007"></code>
         <display value="Prescribed out of scope item" />
+        <designation>
+          <use>
+            <system value="http://snomed.info/sct" />
+            <code value="900000000000013009" />
+            <display value="Synonym" />
+          </use>
+          <value value="The medication cannot be prescribed" />
+        </designation>
     </concept>
     <concept>
         <code value="0008"></code>
         <display value="Item or prescription expired" />
+        <designation>
+          <use>
+            <system value="http://snomed.info/sct" />
+            <code value="900000000000013009" />
+            <display value="Synonym" />
+          </use>
+          <value value="The medication or prescription expired" />
+        </designation>
     </concept>
     <concept>
         <code value="0009"></code>
         <display value="Not allowed on FP10" />
+        <designation>
+          <use>
+            <system value="http://snomed.info/sct" />
+            <code value="900000000000013009" />
+            <display value="Synonym" />
+          </use>
+          <value value="The medication cannot be supplied using this type of prescription" />
+        </designation>
     </concept>
     <concept>
         <code value="0010"></code>
         <display value="Patient did not collect medication" />
+        <designation>
+          <use>
+            <system value="http://snomed.info/sct" />
+            <code value="900000000000013009" />
+            <display value="Synonym" />
+          </use>
+          <value value="The medication was not collected by the patient" />
+        </designation>
     </concept>
     <concept>
         <code value="0011"></code>
         <display value="Patient purchased medication over the counter" />
+        <designation>
+          <use>
+            <system value="http://snomed.info/sct" />
+            <code value="900000000000013009" />
+            <display value="Synonym" />
+          </use>
+          <value value="The medication was bought over the counter" />
+        </designation>
     </concept>
 </CodeSystem>

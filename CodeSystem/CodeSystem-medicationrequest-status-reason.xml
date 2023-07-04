@@ -26,37 +26,109 @@
     <concept>
         <code value="0001"></code>
         <display value="Prescribing Error" />
+        <designation>
+          <use>
+            <system value="http://snomed.info/sct" />
+            <code value="900000000000013009" />
+            <display value="Synonym" />
+          </use>
+          <value value="The treatment is no longer suitable" />
+        </designation>
     </concept>
     <concept>
         <code value="0002"></code>
         <display value="Clinical contra-indication" />
+        <designation>
+          <use>
+            <system value="http://snomed.info/sct" />
+            <code value="900000000000013009" />
+            <display value="Synonym" />
+          </use>
+          <value value="The treatment is no longer suitable" />
+        </designation>
     </concept>
     <concept>
         <code value="0003"></code>
         <display value="Change to medication treatment regime" />
+        <designation>
+          <use>
+            <system value="http://snomed.info/sct" />
+            <code value="900000000000013009" />
+            <display value="Synonym" />
+          </use>
+          <value value="The treatment is no longer suitable" />
+        </designation>
     </concept>
     <concept>
         <code value="0004"></code>
         <display value="Clinical grounds" />
+        <designation>
+          <use>
+            <system value="http://snomed.info/sct" />
+            <code value="900000000000013009" />
+            <display value="Synonym" />
+          </use>
+          <value value="The treatment is no longer suitable" />
+        </designation>
     </concept>
     <concept>
         <code value="0005"></code>
         <display value="At the Patients request" />
+        <designation>
+          <use>
+            <system value="http://snomed.info/sct" />
+            <code value="900000000000013009" />
+            <display value="Synonym" />
+          </use>
+          <value value="The patient requested the cancellation" />
+        </designation>
     </concept>
     <concept>
         <code value="0006"></code>
         <display value="At the Pharmacists request" />
+        <designation>
+          <use>
+            <system value="http://snomed.info/sct" />
+            <code value="900000000000013009" />
+            <display value="Synonym" />
+          </use>
+          <value value="The pharmacist requested the cancellation" />
+        </designation>
     </concept>
     <concept>
         <code value="0007"></code>
         <display value="Notification of Death" />
+        <designation>
+          <use>
+            <system value="http://snomed.info/sct" />
+            <code value="900000000000013009" />
+            <display value="Synonym" />
+          </use>
+          <value value="Death of the patient" />
+        </designation>
     </concept>
     <concept>
         <code value="0008"></code>
         <display value="Patient deducted - other reason" />
+        <designation>
+          <use>
+            <system value="http://snomed.info/sct" />
+            <code value="900000000000013009" />
+            <display value="Synonym" />
+          </use>
+          <value value="The patient was removed from their GP surgery's list" />
+        </designation>
     </concept>
     <concept>
         <code value="0009"></code>
         <display value="Patient deducted - registered with new practice" />
+        <designation>
+          <use>
+            <system value="http://snomed.info/sct" />
+            <code value="900000000000013009" />
+            <display value="Synonym" />
+          </use>
+          <value value="The patient was registered at a new GP surgery" />
+        </designation>
     </concept>
 </CodeSystem>
