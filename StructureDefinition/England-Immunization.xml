@@ -27,6 +27,9 @@
   <baseDefinition value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Immunization" />
   <derivation value="constraint" />
   <differential>
+    <element id="Immunization">
+      <path value="Immunization" />
+    </element>
     <element id="Immunization.extension">
       <path value="Immunization.extension" />
       <slicing>
@@ -145,15 +148,12 @@
     </element>
     <element id="Immunization.patient.identifier.assigner.identifier.type">
       <path value="Immunization.patient.identifier.assigner.identifier.type" />
-      <definition value="" />
     </element>
     <element id="Immunization.patient.identifier.assigner.identifier.type.coding">
       <path value="Immunization.patient.identifier.assigner.identifier.type.coding" />
-      <definition value="." />
     </element>
     <element id="Immunization.encounter.identifier.period.end">
       <path value="Immunization.encounter.identifier.period.end" />
-      <definition value="" />
     </element>
     <element id="Immunization.occurrence[x]">
       <path value="Immunization.occurrence[x]" />

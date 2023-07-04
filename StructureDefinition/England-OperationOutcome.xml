@@ -61,7 +61,6 @@
     </element>
     <element id="OperationOutcome.extension:supportingInfo.value[x].identifier.type.coding.system">
       <path value="OperationOutcome.extension.value[x].identifier.type.coding.system" />
-      <definition value="" />
     </element>
     <element id="OperationOutcome.extension:supportingInfoPrescription">
       <path value="OperationOutcome.extension" />
