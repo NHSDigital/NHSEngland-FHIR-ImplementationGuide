@@ -8,10 +8,10 @@
     "status": "active",
     "date": "2022-03-14",
     "publisher": "NHS Digital",
-    "contact":  [
+    "contact": [
         {
             "name": "Interoperability Team",
-            "telecom":  [
+            "telecom": [
                 {
                     "system": "email",
                     "value": "interoperabilityteam@nhs.net",
@@ -24,7 +24,7 @@
     "copyright": "Copyright © 2022 NHS Digital",
     "caseSensitive": true,
     "content": "complete",
-    "concept":  [
+    "concept": [
         {
             "code": "REVIEW",
             "display": "A service that reviews referrals, without the support or need for any appointment with the patient to be made"

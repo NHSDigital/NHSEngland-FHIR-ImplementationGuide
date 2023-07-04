@@ -257,14 +257,12 @@
             }
           ],
           "rules": "open"
-        },
-        "min": 1
+        }
       },
       {
         "id": "ServiceRequest.code.coding:SNOMEDProcedureCode",
         "path": "ServiceRequest.code.coding",
-        "sliceName": "SNOMEDProcedureCode",
-        "min": 1
+        "sliceName": "SNOMEDProcedureCode"
       },
       {
         "id": "ServiceRequest.code.coding:SNOMEDProcedureCode.system",
@@ -274,6 +272,22 @@
       },
       {
         "id": "ServiceRequest.code.coding:SNOMEDProcedureCode.code",
+        "path": "ServiceRequest.code.coding.code",
+        "min": 1
+      },
+      {
+        "id": "ServiceRequest.code.coding:ServiceRequestCode",
+        "path": "ServiceRequest.code.coding",
+        "sliceName": "ServiceRequestCode"
+      },
+      {
+        "id": "ServiceRequest.code.coding:ServiceRequestCode.system",
+        "path": "ServiceRequest.code.coding.system",
+        "min": 1,
+        "fixedUri": "https://fhir.nhs.uk/CodeSystem/ServiceRequest-Code"
+      },
+      {
+        "id": "ServiceRequest.code.coding:ServiceRequestCode.code",
         "path": "ServiceRequest.code.coding.code",
         "min": 1
       },

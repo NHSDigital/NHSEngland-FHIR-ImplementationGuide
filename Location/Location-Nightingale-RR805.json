@@ -1,13 +1,13 @@
 {
-    "resourceType": "Organization",
+    "resourceType": "Location",
     "id": "RR805",
     "identifier": [
         {
-            "system": "https://fhir.nhs.uk/Id/ods-organization-code",
+            "system": "https://fhir.nhs.uk/Id/ods-site-code",
             "value": "RR805"
         }
     ],
-    "active": true,
+    "status": "active",
     "type": [
         {
             "extension": [
@@ -60,7 +60,7 @@
             "country": "ENGLAND"
         }
     ],
-    "partOf": {
+    "managingOrganization": {
         "reference": "https://directory.spineservices.nhs.uk/R4/Organization/RR8",
         "identifier": {
             "system": "https://fhir.nhs.uk/Id/ods-organization-code",

@@ -12,13 +12,13 @@
     <purpose value="NHS Digital Spine" />
     <group>
         <source value="http://hl7.org/fhir/issue-type" />
-        <target value="http://hl7.org/fhir/http-status-code" />
+        <target value="https://fhir.nhs.uk/CodeSystem/http-error-codes" />
         <element>
             <code value="not-found" />
             <display value="Not Found" />
             <target>
-                <code value="404" />
-                <display value="Not Found" />
+                <code value="NOT_FOUND" />
+                <display value="404: The Server was unable to find the specified resource." />
                 <equivalence value="specializes" />
             </target>
         </element>
@@ -26,8 +26,8 @@
             <code value="value" />
             <display value="Element value invalid" />
             <target>
-                <code value="400" />
-                <display value="Bad Request" />
+                <code value="BAD_REQUEST" />
+                <display value="400: The Server was unable to process the request." />
                 <equivalence value="specializes" />
             </target>
         </element>
@@ -35,8 +35,8 @@
             <code value="business-rule" />
             <display value="Business Rule Violation" />
             <target>
-                <code value="400" />
-                <display value="Bad Request" />
+                <code value="BAD_REQUEST" />
+                <display value="400: The Server was unable to process the request." />
                 <equivalence value="specializes" />
                 <comment value="Should be 422?"/>
             </target>
@@ -45,8 +45,8 @@
             <code value="invalid" />
             <display value="Invalid Content" />
             <target>
-                <code value="400" />
-                <display value="Bad Request" />
+                <code value="BAD_REQUEST" />
+                <display value="400: The Server was unable to process the request." />
                 <equivalence value="specializes" />
             </target>
         </element>
@@ -54,8 +54,8 @@
             <code value="invalid" />
             <display value="Invalid Content" />
             <target>
-                <code value="422" />
-                <display value="UNPROCESSABLE_ENTITY" />
+                <code value="UNPROCESSABLE_ENTITY" />
+                <display value="422: Message was not malformed but deemed unprocessable by the server." />
                 <equivalence value="specializes" />
                 <comment value="Should be 400?"/>
             </target>
@@ -64,8 +64,8 @@
             <code value="code-invalid" />
             <display value="Invalid Code" />
             <target>
-                <code value="400" />
-                <display value="BAD REQUEST" />
+                <code value="BAD_REQUEST" />
+                <display value="400: The Server was unable to process the request." />
                 <equivalence value="specializes" />
                 <comment value="Should be 422?"/>
             </target>
@@ -74,8 +74,8 @@
             <code value="forbidden" />
             <display value="Forbidden" />
             <target>
-                <code value="403" />
-                <display value="Forbidden" />
+                <code value="FORBIDDEN" />
+                <display value="403: Failed to Authenticate with the Server." />
                 <equivalence value="specializes" />
             </target>
         </element>
@@ -83,8 +83,8 @@
             <code value="forbidden" />
             <display value="Forbidden" />
             <target>
-                <code value="401" />
-                <display value="CLIENT_UNAUTHORIZED" />
+                <code value="UNAUTHORIZED" />
+                <display value="401: The Server deemed you unauthorized to make this request." />
                 <equivalence value="specializes" />
                 <comment value="Wrong issueType - login/unknown better?"/>
             </target>
@@ -93,8 +93,8 @@
             <code value="forbidden" />
             <display value="Forbidden" />
             <target>
-                <code value="405" />
-                <display value="METHOD_NOT_ALLOWED" />
+                <code value="METHOD_NOT_ALLOWED" />
+                <display value="405: This method is not allowed." />
                 <equivalence value="specializes" />
                 <comment value="Is 405 more suited to wrong http verb being used. This should still be 403"/>
             </target>
@@ -103,8 +103,8 @@
             <code value="duplicate" />
             <display value="Duplicate" />
             <target>
-                <code value="422" />
-                <display value="UNPROCESSABLE_ENTITY" />
+                <code value="UNPROCESSABLE_ENTITY" />
+                <display value="422: Message was not malformed but deemed unprocessable by the server." />
                 <equivalence value="specializes" />
             </target>
         </element>
@@ -112,8 +112,8 @@
             <code value="structure" />
             <display value="Structural Issue" />
             <target>
-                <code value="400" />
-                <display value="BAD REQUEST" />
+                <code value="BAD_REQUEST" />
+                <display value="400: The Server was unable to process the request." />
                 <equivalence value="specializes" />
             </target>
         </element>
@@ -121,8 +121,8 @@
             <code value="not-supported" />
             <display value="Content not supported" />
             <target>
-                <code value="501" />
-                <display value="NOT_IMPLEMENTED" />
+                <code value="NOT_IMPLEMENTED" />
+                <display value="501: The Request was not recognized by the server." />
                 <equivalence value="specializes" />
             </target>
         </element>
@@ -130,39 +130,10 @@
             <code value="processing" />
             <display value="Processing Failure" />
             <target>
-                <code value="500" />
-                <display value="INTERNAL_ERROR" />
+                <code value="SERVER_ERROR" />
+                <display value="500: The Server has encountered an error processing the request." />
                 <equivalence value="specializes" />
                 <comment value="Mapping is wrong here. processing should be 422"/>
-            </target>
-        </element>
-        <element>
-            <code value="informational" />
-            <display value="Informational Note" />
-            <target>
-                <code value="201" />
-                <display value="CREATED" />
-                <equivalence value="specializes" />
-            </target>
-        </element>
-        <element>
-            <code value="informational" />
-            <display value="Informational Note" />
-            <target>
-                <code value="200" />
-                <display value="OK" />
-                <equivalence value="specializes" />
-            
-            </target>
-        </element>
-        <element>
-            <code value="informational" />
-            <display value="Informational Note" />
-            <target>
-                <code value="202" />
-                <display value="ACCEPTED" />
-                <equivalence value="specializes" />
-               
             </target>
         </element>
     </group>

@@ -71,6 +71,11 @@
       <path value="ServiceRequest.priority" />
       <min value="1" />
     </element>
+    <element id="ServiceRequest.code.coding:SNOMEDProcedureCode">
+      <path value="ServiceRequest.code.coding" />
+      <sliceName value="SNOMEDProcedureCode" />
+      <min value="1" />
+    </element>
     <element id="ServiceRequest.subject.identifier">
       <path value="ServiceRequest.subject.identifier" />
       <min value="1" />

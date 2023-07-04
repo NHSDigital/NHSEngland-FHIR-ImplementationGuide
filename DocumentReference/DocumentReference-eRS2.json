@@ -16,6 +16,17 @@
             "value": "RGD"
         }
     },
+    "category": [
+        {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "721927009",
+              "display": "Referral note"
+            }
+          ]
+        }
+      ],
     "content": [
         {
             "attachment": {

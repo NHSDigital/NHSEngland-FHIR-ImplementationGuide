@@ -63,7 +63,7 @@
       </type>
       <mustSupport value="true" />
     </element>
-	<element id="Claim.extension:supplyHeaderIdentifier">
+    <element id="Claim.extension:supplyHeaderIdentifier">
       <path value="Claim.extension" />
       <sliceName value="supplyHeaderIdentifier" />
       <short value="Identifier for the SupplyHeader" />
@@ -125,14 +125,12 @@
         <severity value="error" />
         <human value="An identifier reference or resource reference must be provided" />
         <expression value="(reference.exists() or identifier.exists())" />
-        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Claim" />
       </constraint>
       <constraint>
         <key value="patient-nhs" />
         <severity value="error" />
         <human value="Supplied NHS Number is outside the English and Welsh NHS Number range or length of the number is wrong." />
         <expression value="identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').exists().not() or (identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').exists()  and identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').value.matches('^([456789]{1}[0-9]{9})$'))" />
-        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Claim" />
       </constraint>
       <mustSupport value="true" />
     </element>
@@ -306,7 +304,6 @@
         <severity value="error" />
         <human value="party - An identifier reference or resource reference must be provided" />
         <expression value="(reference.exists() or (identifier.exists()))" />
-        <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Claim" />
       </constraint>
     </element>
     <element id="Claim.payee.party.identifier.system">
@@ -530,6 +527,18 @@
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-EPS-RepeatInformation" />
       </type>
     </element>
+    <element id="Claim.item.detail.extension:taskBusinessStatusReason">
+      <path value="Claim.item.detail.extension" />
+      <sliceName value="taskBusinessStatusReason" />
+      <definition value="To capture non-dispensing reason within a Claim at the line-item level" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-EPS-TaskBusinessStatusReason" />
+      </type>
+      <isModifier value="false" />
+    </element>
     <element id="Claim.item.detail.sequence">
       <path value="Claim.item.detail.sequence" />
       <definition value="An integer to identify the item within the resource. Fixed value.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA;&quot;sequence&quot;: 1,&#xD;&#xA;&#xD;&#xA;```" />
@@ -566,7 +575,7 @@
         <rules value="open" />
       </slicing>
       <short value="Dispensing Endorsement and Charge Payment" />
-      <definition value="Dispensing Endorsement  - Details of the endorsement(s) to support the claim for this medication item. &#xD;&#xA;&#xD;&#xA;Charge Payment - Details on whether a prescription charge was paid for the medication treatment.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA;&quot;programCode&quot;:  [&#xD;&#xA;    {&#xD;&#xA;        &quot;coding&quot;:  [&#xD;&#xA;            {&#xD;&#xA;                &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/DM-prescription-charge&quot;,&#xD;&#xA;                &quot;code&quot;: &quot;paid-once&quot;,&#xD;&#xA;                &quot;display&quot;: &quot;Paid Once&quot;&#xD;&#xA;            }&#xD;&#xA;        ]&#xD;&#xA;    },&#xD;&#xA;    {&#xD;&#xA;        &quot;coding&quot;:  [&#xD;&#xA;            {&#xD;&#xA;                &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/medicationdispense-endorsement&quot;,&#xD;&#xA;                &quot;code&quot;: &quot;IP&quot;,&#xD;&#xA;                &quot;display&quot;: &quot;Invoice Price&quot;&#xD;&#xA;            }&#xD;&#xA;        ]&#xD;&#xA;    }&#xD;&#xA;],&#xD;&#xA;&#xD;&#xA;``` &#xD;&#xA;If an endorsement code of PD is used, the number of packaged doses dispensed minus the number of dispenses must be entered in the coding.text field e.g. PD4 for five doses packaged separately and dispensed on one occasion" />
+      <definition value="Dispensing Endorsement  - Details of the endorsement(s) to support the claim for this medication item. &#xD;&#xA;&#xD;&#xA;Charge Payment - Details on whether a prescription charge was paid for the medication treatment.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&#xD;&#xA;&quot;programCode&quot;:  [&#xD;&#xA;    {&#xD;&#xA;        &quot;coding&quot;:  [&#xD;&#xA;            {&#xD;&#xA;                &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/DM-prescription-charge&quot;,&#xD;&#xA;                &quot;code&quot;: &quot;paid-once&quot;,&#xD;&#xA;                &quot;display&quot;: &quot;Paid Once&quot;&#xD;&#xA;            }&#xD;&#xA;        ]&#xD;&#xA;    },&#xD;&#xA;    {&#xD;&#xA;        &quot;coding&quot;:  [&#xD;&#xA;            {&#xD;&#xA;                &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/medicationdispense-endorsement&quot;,&#xD;&#xA;                &quot;code&quot;: &quot;IP&quot;,&#xD;&#xA;                &quot;display&quot;: &quot;Invoice Price&quot;&#xD;&#xA;            }&#xD;&#xA;        ]&#xD;&#xA;    }&#xD;&#xA;],&#xD;&#xA;&#xD;&#xA;``` &#xD;&#xA;If an endorsement code of PD is used, the number of packaged doses dispensed minus the number of dispenses must be entered in the programCode.text field e.g. PD4 for five doses packaged separately and dispensed on one occasion" />
       <mustSupport value="true" />
     </element>
     <element id="Claim.item.detail.programCode.coding">
@@ -614,7 +623,7 @@
     <element id="Claim.item.detail.programCode:dispensingEndorsement.text">
       <path value="Claim.item.detail.programCode.text" />
       <short value="Additional Information for Dispensing Endorsements" />
-      <definition value="Additional Information for Dispensing Endorsements should be entered in this field. Details on the format of this text field can be found in `Requirements and Electronic Prescription Service Guidance for Endorsement (EPS)`&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;       {&#xD;&#xA;                &quot;coding&quot;: [&#xD;&#xA;                    {&#xD;&#xA;                       &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/medicationdispense-endorsement&quot;,&#xD;&#xA;                       &quot;code&quot;: &quot;IP&quot;,&#xD;&#xA;                       &quot;display&quot;: &quot;Invoice Price for less common products or special items&quot;&#xD;&#xA;                      }&#xD;&#xA;                   ],&#xD;&#xA;                  &quot;text&quot; : &quot;PD4,15gram,£12.34,EFGH Ltd&quot;&#xD;&#xA;          }&#xD;&#xA;```" />
+      <definition value="Additional Information for Dispensing Endorsements should be entered in this field. Details on the format of this text field can be found in `Requirements and Electronic Prescription Service Guidance for Endorsement (EPS)`&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;       {&#xD;&#xA;                &quot;coding&quot;: [&#xD;&#xA;                    {&#xD;&#xA;                       &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/medicationdispense-endorsement&quot;,&#xD;&#xA;                       &quot;code&quot;: &quot;IP&quot;,&#xD;&#xA;                       &quot;display&quot;: &quot;Invoice Price for less common products or special items&quot;&#xD;&#xA;                      }&#xD;&#xA;                   ],&#xD;&#xA;                  &quot;text&quot; : &quot;15gram,£12.34,EFGH Ltd&quot;&#xD;&#xA;          },&#xD;&#xA;          {&#xD;&#xA;                &quot;coding&quot;: [&#xD;&#xA;                    {&#xD;&#xA;                       &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/medicationdispense-endorsement&quot;,&#xD;&#xA;                       &quot;code&quot;: &quot;PD&quot;,&#xD;&#xA;                       &quot;display&quot;: &quot;Packaged Doses&quot;&#xD;&#xA;                      }&#xD;&#xA;                   ],&#xD;&#xA;                  &quot;text&quot; : &quot;PD4&quot;&#xD;&#xA;          }&#xD;&#xA;```" />
     </element>
     <element id="Claim.item.detail.quantity">
       <path value="Claim.item.detail.quantity" />
