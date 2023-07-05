@@ -59,9 +59,6 @@
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-SpineSupportingInfo" />
       </type>
     </element>
-    <element id="OperationOutcome.extension:supportingInfo.value[x].identifier.type.coding.system">
-      <path value="OperationOutcome.extension.value[x].identifier.type.coding.system" />
-    </element>
     <element id="OperationOutcome.extension:supportingInfoPrescription">
       <path value="OperationOutcome.extension" />
       <sliceName value="supportingInfoPrescription" />
