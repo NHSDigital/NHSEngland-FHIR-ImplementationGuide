@@ -108,7 +108,6 @@
         </discriminator>
         <rules value="open" />
       </slicing>
-      <comment value="SHOULD contain a professional code or SDS-user-id." />
       <min value="1" />
       <mustSupport value="true" />
     </element>

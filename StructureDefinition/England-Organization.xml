@@ -51,7 +51,6 @@
     </element>
     <element id="Organization.identifier">
       <path value="Organization.identifier" />
-      <comment value="MUST contain an ANANA/ODS code." />
       <min value="1" />
       <mustSupport value="true" />
     </element>
