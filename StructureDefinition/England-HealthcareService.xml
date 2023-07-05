@@ -1,321 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-    <id value="England-HealthcareService" />
-    <url value="https://fhir.nhs.uk/StructureDefinition/England-HealthcareService" />
-    <name value="EnglandHealthcareService" />
-	<title value="England HealthcareService" />
-    <status value="draft" />
-    <fhirVersion value="4.0.1" />
-    <kind value="resource" />
-    <abstract value="false" />
-	<version value="1.0.0" />
-	<date value="2023-06-01" />
-	<publisher value="NHS England" />
-    <contact>
-      <name value="NHS England" />
-      <telecom>
-        <system value="email" />
-        <value value="interoperabilityteam@nhs.net" />
-        <use value="work" />
-        <rank value="1" />
-      </telecom>
-    </contact>
-	<description value="This profile defines the NHS England constraints and extensions on the FHIR UK Core resource [UK Core HealthcareService](https://simplifier.net/hl7fhirukcorer4/ukcore-healthcareservice)." />
-	<purpose value="This profile is used to describe a single healthcare service or category of services that are provided by an organisation at a location, including a virtual location." />
-	<copyright value="Copyright © 2021+ HL7 UK Licensed under the Apache License, Version 2.0 (the \&quot;License\&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at  http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \&quot;AS IS\&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. HL7® FHIR® standard Copyright © 2011+ HL7 The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at  https://www.hl7.org/fhir/license.html." />
-    <type value="HealthcareService" />
-    <baseDefinition value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-HealthcareService" />
-    <derivation value="constraint" />
-    <differential>
-        <element id="HealthcareService.identifier">
-            <path value="HealthcareService.identifier" />
-            <slicing>
-                <discriminator>
-                    <type value="value" />
-                    <path value="system" />
-                </discriminator>
-                <rules value="open" />
-            </slicing>
-            <definition value="**SHOULD** contain the service identifier e.g. the serviceId from &lt;a href=&quot;https://www.directoryofservices.nhs.uk/&quot;&gt;Directory of Service&lt;/a&gt; or &lt;a href=&quot;https://digital.nhs.uk/developer/api-catalogue/e-referral-service-fhir&quot;&gt;e-RS Directory Services&lt;/a&gt;\n\n**MAY** contain an ANANA/ODS code. \n\n```json\n&quot;identifier&quot;: [\n          {\n            &quot;use&quot;: &quot;official&quot;,\n            &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/ers-service&quot;,\n            &quot;value&quot;: &quot;11021&quot;\n          }\n        ]\n```" />
-            <comment value="MUST contain an ANANA/ODS code." />
-            <mustSupport value="true" />
-        </element>
-        <element id="HealthcareService.identifier:ersServiceId">
-            <path value="HealthcareService.identifier" />
-            <sliceName value="ersServiceId" />
-            <max value="1" />
-            <mustSupport value="true" />
-        </element>
-        <element id="HealthcareService.identifier:ersServiceId.system">
-            <path value="HealthcareService.identifier.system" />
-            <min value="1" />
-            <fixedUri value="https://fhir.nhs.uk/Id/ers-service" />
-        </element>
-        <element id="HealthcareService.identifier:ersServiceId.value">
-            <path value="HealthcareService.identifier.value" />
-            <min value="1" />
-        </element>
-        <element id="HealthcareService.identifier:dosServiceId">
-            <path value="HealthcareService.identifier" />
-            <sliceName value="dosServiceId" />
-            <max value="1" />
-            <mustSupport value="true" />
-        </element>
-        <element id="HealthcareService.identifier:dosServiceId.system">
-            <path value="HealthcareService.identifier.system" />
-            <min value="1" />
-            <fixedUri value="http://fhir.nhs.uk/Id/dos-service-id" />
-        </element>
-        <element id="HealthcareService.identifier:dosServiceId.value">
-            <path value="HealthcareService.identifier.value" />
-            <min value="1" />
-        </element>
-        <element id="HealthcareService.providedBy">
-            <path value="HealthcareService.providedBy" />
-            <definition value="It is recommended an *identifier reference* using ODS code is used. \n\n```json\n&quot;providedBy&quot;: {\n        &quot;identifier&quot;: {\n            &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/ods-organization-code&quot;,\n            &quot;value&quot;: &quot;RBA&quot;\n          },\n        &quot;display&quot;: &quot;TAUNTON AND SOMERSET NHS FOUNDATION TRUST&quot;\n    }\n```" />
-            <type>
-                <code value="Reference" />
-            </type>
-            <mustSupport value="true" />
-        </element>
-        <element id="HealthcareService.providedBy.identifier">
-            <path value="HealthcareService.providedBy.identifier" />
-            <min value="1" />
-        </element>
-        <element id="HealthcareService.providedBy.identifier.system">
-            <path value="HealthcareService.providedBy.identifier.system" />
-            <min value="1" />
-            <fixedUri value="https://fhir.nhs.uk/Id/ods-organization-code" />
-        </element>
-        <element id="HealthcareService.providedBy.identifier.value">
-            <path value="HealthcareService.providedBy.identifier.value" />
-            <min value="1" />
-        </element>
-        <element id="HealthcareService.type">
-            <path value="HealthcareService.type" />
-            <definition value="Type **SHOULD** be populated. \n\n```json\n&quot;type&quot;:  [\n        {\n            &quot;coding&quot;:  [\n                {\n                    &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/DoS-ClinicType&quot;,\n                    &quot;code&quot;: &quot;PHARMACY&quot;,\n                    &quot;display&quot;: &quot;Pharmacy&quot;\n                }\n            ]\n        }\n    ],\n```\n\nor \n\n```json\n&quot;type&quot;: [\n        {\n            &quot;coding&quot;: [\n                {\n                    &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/eRS-AppointmentType&quot;,\n                    &quot;code&quot;: &quot;DAY_CASE&quot;,\n                }\n            ]\n        }\n    ],\n```" />
-            <mustSupport value="true" />
-            <binding>
-                <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-                    <valueString value="service-type" />
-                </extension>
-                <strength value="preferred" />
-            </binding>
-        </element>
-        <element id="HealthcareService.type.coding">
-            <path value="HealthcareService.type.coding" />
-            <slicing>
-                <discriminator>
-                    <type value="value" />
-                    <path value="system" />
-                </discriminator>
-                <rules value="open" />
-            </slicing>
-        </element>
-        <element id="HealthcareService.type.coding:UKCoreCareSettingType">
-            <path value="HealthcareService.type.coding" />
-            <sliceName value="UKCoreCareSettingType" />
-            <mustSupport value="true" />
-            <binding>
-                <strength value="preferred" />
-                <valueSet value="https://fhir.hl7.org.uk/ValueSet/UKCore-CareSettingType" />
-            </binding>
-        </element>
-        <element id="HealthcareService.type.coding:UKCoreCareSettingType.system">
-            <path value="HealthcareService.type.coding.system" />
-            <fixedUri value="http://snomed.info/sct" />
-        </element>
-        <element id="HealthcareService.type.coding:eRSAppointmentType">
-            <path value="HealthcareService.type.coding" />
-            <sliceName value="eRSAppointmentType" />
-            <short value="e-RS Appointment Type" />
-            <definition value="Appointment type e.g. telephone/video (only applicable and mandatory if Service Type is Appointment Request, not applicable to Service Type of Triage Request)" />
-            <mustSupport value="true" />
-        </element>
-        <element id="HealthcareService.type.coding:eRSAppointmentType.system">
-            <path value="HealthcareService.type.coding.system" />
-            <fixedUri value="https://fhir.nhs.uk/CodeSystem/England-ERSAppointmentType" />
-        </element>
-        <element id="HealthcareService.specialty">
-            <path value="HealthcareService.specialty" />
-            <definition value="Specialty **SHOULD** be from the {{link:http://hl7.org/fhir/ValueSet/c80-practice-codes}}\nand is the SNOMED equivalent of the [NHS Data Dictionary - Main Specialty and Treament Function Codes](https://datadictionary.nhs.uk/supporting_information/main_specialty_and_treatment_function_codes_table.html) and FHIR {{pagelink: NHSDataDictionaryClinicalSpecialty.md}}\n\n```json\n&quot;specialty&quot;:  [\n        {\n            &quot;coding&quot;:  [\n                {\n                    &quot;system&quot;: &quot;http://snomed.info/sct&quot;,\n                    &quot;code&quot;: &quot;394579002&quot;,\n                    &quot;display&quot;: &quot;Cardiology&quot;\n                }\n            ]\n        }\n    ],\n```\n\nor using NHS Data Dictionary codes.\n\n```json\n&quot;specialty&quot;:  [\n        {\n            &quot;coding&quot;:  [\n                {\n                    &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/NHSDataModelAndDictionary-clinical-specialty&quot;,\n                    &quot;code&quot;: &quot;320&quot;,\n                    &quot;display&quot;: &quot;Cardiology&quot;\n                }\n            ]\n        }\n    ],\n```\n\nor for e-RS Patient Care\n\n```json\n &quot;specialty&quot;: [\n        {\n            &quot;coding&quot;: [\n                {\n                    &quot;display&quot;: &quot;Dermatology&quot;\n                }\n            ]\n        }\n    ],\n```" />
-            <mustSupport value="true" />
-        </element>
-        <element id="HealthcareService.specialty.coding">
-            <path value="HealthcareService.specialty.coding" />
-            <slicing>
-                <discriminator>
-                    <type value="value" />
-                    <path value="system" />
-                </discriminator>
-                <rules value="open" />
-            </slicing>
-        </element>
-        <element id="HealthcareService.specialty.coding.system">
-            <path value="HealthcareService.specialty.coding.system" />
-            <min value="1" />
-        </element>
-        <element id="HealthcareService.specialty.coding.code">
-            <path value="HealthcareService.specialty.coding.code" />
-            <min value="1" />
-        </element>
-        <element id="HealthcareService.specialty.coding:NHSDataDictionarySpecialty">
-            <path value="HealthcareService.specialty.coding" />
-            <sliceName value="NHSDataDictionarySpecialty" />
-            <mustSupport value="true" />
-            <binding>
-                <strength value="required" />
-                <description value="NHS Data Dictionary Specialty/Treatment Function Code" />
-                <valueSet value="https://fhir.nhs.uk/ValueSet/England-ClinicalSpecialty" />
-            </binding>
-        </element>
-        <element id="HealthcareService.specialty.coding:NHSDataDictionarySpecialty.system">
-            <path value="HealthcareService.specialty.coding.system" />
-            <fixedUri value="https://fhir.nhs.uk/CodeSystem/England-ClinicalSpecialty" />
-        </element>
-        <element id="HealthcareService.specialty.coding:SNOMEDPracticeCode">
-            <path value="HealthcareService.specialty.coding" />
-            <sliceName value="SNOMEDPracticeCode" />
-            <mustSupport value="true" />
-            <binding>
-                <strength value="preferred" />
-                <description value="Specific specialty associated with the agency." />
-                <valueSet value="http://hl7.org/fhir/ValueSet/c80-practice-codes" />
-            </binding>
-        </element>
-        <element id="HealthcareService.specialty.coding:SNOMEDPracticeCode.system">
-            <path value="HealthcareService.specialty.coding.system" />
-            <fixedUri value="http://snomed.info/sct" />
-        </element>
-        <element id="HealthcareService.specialty.coding:eRSSpecialty">
-            <path value="HealthcareService.specialty.coding" />
-            <sliceName value="eRSSpecialty" />
-            <mustSupport value="true" />
-            <binding>
-                <strength value="preferred" />
-                <description value="Specific specialty associated with the agency." />
-                <valueSet value="https://fhir.nhs.uk/ValueSet/England-ERSSpecialty" />
-            </binding>
-        </element>
-        <element id="HealthcareService.specialty.coding:eRSSpecialty.system">
-            <path value="HealthcareService.specialty.coding.system" />
-            <fixedUri value="https://fhir.nhs.uk/CodeSystem/England-ERSSpecialty" />
-        </element>
-        <element id="HealthcareService.location">
-            <path value="HealthcareService.location" />
-            <definition value="Reference to a location. ODS codes may be used, however this may differ from Directory of Services and so DoS addresses are preferred.\n\n```json\n &quot;location&quot;:  [\n        {\n            &quot;reference&quot;: &quot;urn:uuid:8a5d7d67-64fb-44ec-9802-2dc214bb3dcb&quot;\n        }\n    ],\n```\n\nor \n\n```json\n&quot;location&quot;: [\n        {\n            &quot;identifier&quot;: {\n                &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/ods-site-code&quot;,\n                &quot;value&quot;: &quot;R6901&quot;\n            }\n        }\n    ],\n```" />
-            <max value="1" />
-            <type>
-                <code value="Reference" />
-            </type>
-            <constraint>
-                <key value="nhsd-8" />
-                <severity value="error" />
-                <human value="location - An identifier reference or resource reference must be provided" />
-                <expression value="(reference.exists() or identifier.exists())" />
-            </constraint>
-            <mustSupport value="true" />
-        </element>
-        <element id="HealthcareService.location.identifier.system">
-            <path value="HealthcareService.location.identifier.system" />
-            <min value="1" />
-            <fixedUri value="https://fhir.nhs.uk/Id/ods-site-code" />
-        </element>
-        <element id="HealthcareService.location.identifier.value">
-            <path value="HealthcareService.location.identifier.value" />
-            <min value="1" />
-        </element>
-        <element id="HealthcareService.name">
-            <path value="HealthcareService.name" />
-            <definition value="Name of the clinic or service.\n\n```json\n &quot;name&quot;: &quot;SOMERSET BOWEL CANCER SCREENING CENTRE&quot;,\n```" />
-            <min value="1" />
-            <mustSupport value="true" />
-        </element>
-        <element id="HealthcareService.telecom">
-            <path value="HealthcareService.telecom" />
-            <definition value="Contact details for the clinic or service. \n\n```json\n   &quot;telecom&quot;: [\n    {\n      &quot;system&quot;: &quot;phone&quot;,\n      &quot;value&quot;: &quot;0113 922 4984&quot;,\n      &quot;use&quot;: &quot;work&quot;\n    },\n    {\n      &quot;system&quot;: &quot;email&quot;,\n      &quot;value&quot;: &quot;directaddress@example.com&quot;,\n      &quot;use&quot;: &quot;work&quot;\n    }\n  ],\n```" />
-            <mustSupport value="true" />
-        </element>
-        <element id="HealthcareService.telecom.value">
-            <path value="HealthcareService.telecom.value" />
-            <min value="1" />
-        </element>
-        <element id="HealthcareService.telecom.use">
-            <path value="HealthcareService.telecom.use" />
-            <min value="1" />
-        </element>
-        <element id="HealthcareService.serviceProvisionCode">
-            <path value="HealthcareService.serviceProvisionCode" />
-            <mustSupport value="true" />
-        </element>
-        <element id="HealthcareService.serviceProvisionCode.coding">
-            <path value="HealthcareService.serviceProvisionCode.coding" />
-            <slicing>
-                <discriminator>
-                    <type value="value" />
-                    <path value="system" />
-                </discriminator>
-                <rules value="open" />
-            </slicing>
-        </element>
-        <element id="HealthcareService.serviceProvisionCode.coding:eRSClinicType">
-            <path value="HealthcareService.serviceProvisionCode.coding" />
-            <sliceName value="eRSClinicType" />
-            <mustSupport value="true" />
-            <binding>
-                <strength value="required" />
-                <valueSet value="https://fhir.nhs.uk/ValueSet/England-ERSClinicType" />
-            </binding>
-        </element>
-        <element id="HealthcareService.serviceProvisionCode.coding:eRSClinicType.system">
-            <path value="HealthcareService.serviceProvisionCode.coding.system" />
-            <fixedUri value="https://fhir.nhs.uk/CodeSystem/England-ERSClinicType" />
-        </element>
-        <element id="HealthcareService.availableTime">
-            <path value="HealthcareService.availableTime" />
-            <definition value="Opening times for the clinic or service. \n\n\n```json\n&quot;availableTime&quot;: [\n    {\n      &quot;daysOfWeek&quot;: [\n        &quot;wed&quot;\n      ],\n      &quot;allDay&quot;: true\n    },\n    {\n      &quot;daysOfWeek&quot;: [\n        &quot;mon&quot;,\n        &quot;tue&quot;,\n        &quot;wed&quot;,\n        &quot;thu&quot;\n      ],\n      &quot;availableStartTime&quot;: &quot;08:30:00&quot;,\n      &quot;availableEndTime&quot;: &quot;05:30:00&quot;\n    },\n    {\n      &quot;daysOfWeek&quot;: [\n        &quot;sat&quot;,\n        &quot;fri&quot;\n      ],\n      &quot;availableStartTime&quot;: &quot;09:30:00&quot;,\n      &quot;availableEndTime&quot;: &quot;04:30:00&quot;\n    }\n  ],\n```" />
-            <mustSupport value="true" />
-        </element>
-        <element id="HealthcareService.endpoint">
-            <path value="HealthcareService.endpoint" />
-            <slicing>
-                <discriminator>
-                    <type value="value" />
-                    <path value="identifier.system" />
-                </discriminator>
-                <rules value="open" />
-            </slicing>
-            <definition value="Technical endpoints providing access to services operated for the specific healthcare services defined at this resource.\n\nEndpoint identfiers to be used with the HealthcareService. Endpoints can be resolved using the SDS API\n\n```json\n&quot;endpoint&quot;: [\n        {\n            &quot;identifier&quot;: {\n                &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/nhsSpineASID&quot;, // or https://fhir.nhs.uk/Id/nhsMhsPartyKey\n                &quot;value&quot;: &quot;999900000041&quot;\n            }\n        }\n    ]\n```" />
-            <mustSupport value="true" />
-        </element>
-        <element id="HealthcareService.endpoint.identifier">
-            <path value="HealthcareService.endpoint.identifier" />
-            <min value="1" />
-        </element>
-        <element id="HealthcareService.endpoint.identifier.system">
-            <path value="HealthcareService.endpoint.identifier.system" />
-            <min value="1" />
-        </element>
-        <element id="HealthcareService.endpoint.identifier.value">
-            <path value="HealthcareService.endpoint.identifier.value" />
-            <min value="1" />
-        </element>
-        <element id="HealthcareService.endpoint:nhsMhsPartyKey">
-            <path value="HealthcareService.endpoint" />
-            <sliceName value="nhsMhsPartyKey" />
-            <max value="1" />
-        </element>
-        <element id="HealthcareService.endpoint:nhsMhsPartyKey.identifier.system">
-            <path value="HealthcareService.endpoint.identifier.system" />
-            <fixedUri value="https://fhir.nhs.uk/Id/nhsMhsPartyKey" />
-        </element>
-        <element id="HealthcareService.endpoint:nhsSpineASID">
-            <path value="HealthcareService.endpoint" />
-            <sliceName value="nhsSpineASID" />
-            <max value="1" />
-        </element>
-        <element id="HealthcareService.endpoint:nhsSpineASID.identifier.system">
-            <path value="HealthcareService.endpoint.identifier.system" />
-            <fixedUri value="https://fhir.nhs.uk/Id/nhsSpineASID" />
-        </element>
-    </differential>
+  <id value="England-HealthcareService" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/England-HealthcareService" />
+  <version value="1.0.0" />
+  <name value="EnglandHealthcareService" />
+  <title value="England HealthcareService" />
+  <status value="draft" />
+  <date value="2023-06-01" />
+  <publisher value="NHS England" />
+  <contact>
+    <name value="NHS England" />
+    <telecom>
+      <system value="email" />
+      <value value="interoperabilityteam@nhs.net" />
+      <use value="work" />
+      <rank value="1" />
+    </telecom>
+  </contact>
+  <description value="This profile defines the NHS England constraints and extensions on the FHIR UK Core resource [UK Core HealthcareService](https://simplifier.net/hl7fhirukcorer4/ukcore-healthcareservice)." />
+  <purpose value="This profile is used to describe a single healthcare service or category of services that are provided by an organisation at a location, including a virtual location." />
+  <copyright value="Copyright © 2021+ HL7 UK Licensed under the Apache License, Version 2.0 (the \&quot;License\&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at  http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \&quot;AS IS\&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. HL7® FHIR® standard Copyright © 2011+ HL7 The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at  https://www.hl7.org/fhir/license.html." />
+  <fhirVersion value="4.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="HealthcareService" />
+  <baseDefinition value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-HealthcareService" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="HealthcareService.identifier">
+      <path value="HealthcareService.identifier" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <comment value="MUST contain an ANANA/ODS code." />
+      <mustSupport value="true" />
+    </element>
+    <element id="HealthcareService.identifier:ersServiceId">
+      <path value="HealthcareService.identifier" />
+      <sliceName value="ersServiceId" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="HealthcareService.identifier:ersServiceId.system">
+      <path value="HealthcareService.identifier.system" />
+      <min value="1" />
+      <fixedUri value="https://fhir.nhs.uk/Id/ers-service" />
+    </element>
+    <element id="HealthcareService.identifier:ersServiceId.value">
+      <path value="HealthcareService.identifier.value" />
+      <min value="1" />
+    </element>
+    <element id="HealthcareService.identifier:dosServiceId">
+      <path value="HealthcareService.identifier" />
+      <sliceName value="dosServiceId" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="HealthcareService.identifier:dosServiceId.system">
+      <path value="HealthcareService.identifier.system" />
+      <min value="1" />
+      <fixedUri value="http://fhir.nhs.uk/Id/dos-service-id" />
+    </element>
+    <element id="HealthcareService.identifier:dosServiceId.value">
+      <path value="HealthcareService.identifier.value" />
+      <min value="1" />
+    </element>
+    <element id="HealthcareService.providedBy">
+      <path value="HealthcareService.providedBy" />
+      <mustSupport value="true" />
+    </element>
+    <element id="HealthcareService.providedBy.identifier">
+      <path value="HealthcareService.providedBy.identifier" />
+      <min value="1" />
+    </element>
+    <element id="HealthcareService.providedBy.identifier.system">
+      <path value="HealthcareService.providedBy.identifier.system" />
+      <min value="1" />
+      <fixedUri value="https://fhir.nhs.uk/Id/ods-organization-code" />
+    </element>
+    <element id="HealthcareService.providedBy.identifier.value">
+      <path value="HealthcareService.providedBy.identifier.value" />
+      <min value="1" />
+    </element>
+    <element id="HealthcareService.type">
+      <path value="HealthcareService.type" />
+      <mustSupport value="true" />
+      <binding>
+        <strength value="preferred" />
+      </binding>
+    </element>
+    <element id="HealthcareService.type.coding">
+      <path value="HealthcareService.type.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="HealthcareService.type.coding:UKCoreCareSettingType">
+      <path value="HealthcareService.type.coding" />
+      <sliceName value="UKCoreCareSettingType" />
+      <mustSupport value="true" />
+      <binding>
+        <strength value="preferred" />
+        <valueSet value="https://fhir.hl7.org.uk/ValueSet/UKCore-CareSettingType" />
+      </binding>
+    </element>
+    <element id="HealthcareService.type.coding:UKCoreCareSettingType.system">
+      <path value="HealthcareService.type.coding.system" />
+      <fixedUri value="http://snomed.info/sct" />
+    </element>
+    <element id="HealthcareService.type.coding:eRSAppointmentType">
+      <path value="HealthcareService.type.coding" />
+      <sliceName value="eRSAppointmentType" />
+      <short value="e-RS Appointment Type" />
+      <mustSupport value="true" />
+    </element>
+    <element id="HealthcareService.type.coding:eRSAppointmentType.system">
+      <path value="HealthcareService.type.coding.system" />
+      <fixedUri value="https://fhir.nhs.uk/CodeSystem/England-ERSAppointmentType" />
+    </element>
+    <element id="HealthcareService.specialty">
+      <path value="HealthcareService.specialty" />
+      <mustSupport value="true" />
+    </element>
+    <element id="HealthcareService.specialty.coding">
+      <path value="HealthcareService.specialty.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="HealthcareService.specialty.coding.system">
+      <path value="HealthcareService.specialty.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="HealthcareService.specialty.coding.code">
+      <path value="HealthcareService.specialty.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="HealthcareService.specialty.coding:NHSDataDictionarySpecialty">
+      <path value="HealthcareService.specialty.coding" />
+      <sliceName value="NHSDataDictionarySpecialty" />
+      <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <description value="NHS Data Dictionary Specialty/Treatment Function Code" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/England-ClinicalSpecialty" />
+      </binding>
+    </element>
+    <element id="HealthcareService.specialty.coding:NHSDataDictionarySpecialty.system">
+      <path value="HealthcareService.specialty.coding.system" />
+      <fixedUri value="https://fhir.nhs.uk/CodeSystem/England-ClinicalSpecialty" />
+    </element>
+    <element id="HealthcareService.specialty.coding:SNOMEDPracticeCode">
+      <path value="HealthcareService.specialty.coding" />
+      <sliceName value="SNOMEDPracticeCode" />
+      <mustSupport value="true" />
+      <binding>
+        <strength value="preferred" />
+        <description value="Specific specialty associated with the agency." />
+        <valueSet value="http://hl7.org/fhir/ValueSet/c80-practice-codes" />
+      </binding>
+    </element>
+    <element id="HealthcareService.specialty.coding:SNOMEDPracticeCode.system">
+      <path value="HealthcareService.specialty.coding.system" />
+      <fixedUri value="http://snomed.info/sct" />
+    </element>
+    <element id="HealthcareService.specialty.coding:eRSSpecialty">
+      <path value="HealthcareService.specialty.coding" />
+      <sliceName value="eRSSpecialty" />
+      <mustSupport value="true" />
+      <binding>
+        <strength value="preferred" />
+        <description value="Specific specialty associated with the agency." />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/England-ERSSpecialty" />
+      </binding>
+    </element>
+    <element id="HealthcareService.specialty.coding:eRSSpecialty.system">
+      <path value="HealthcareService.specialty.coding.system" />
+      <fixedUri value="https://fhir.nhs.uk/CodeSystem/England-ERSSpecialty" />
+    </element>
+    <element id="HealthcareService.location">
+      <path value="HealthcareService.location" />
+      <max value="1" />
+      <constraint>
+        <key value="nhsd-8" />
+        <severity value="error" />
+        <human value="location - An identifier reference or resource reference must be provided" />
+        <expression value="(reference.exists() or identifier.exists())" />
+      </constraint>
+      <mustSupport value="true" />
+    </element>
+    <element id="HealthcareService.location.identifier.system">
+      <path value="HealthcareService.location.identifier.system" />
+      <min value="1" />
+      <fixedUri value="https://fhir.nhs.uk/Id/ods-site-code" />
+    </element>
+    <element id="HealthcareService.location.identifier.value">
+      <path value="HealthcareService.location.identifier.value" />
+      <min value="1" />
+    </element>
+    <element id="HealthcareService.name">
+      <path value="HealthcareService.name" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="HealthcareService.telecom">
+      <path value="HealthcareService.telecom" />
+      <mustSupport value="true" />
+    </element>
+    <element id="HealthcareService.telecom.value">
+      <path value="HealthcareService.telecom.value" />
+      <min value="1" />
+    </element>
+    <element id="HealthcareService.telecom.use">
+      <path value="HealthcareService.telecom.use" />
+      <min value="1" />
+    </element>
+    <element id="HealthcareService.serviceProvisionCode">
+      <path value="HealthcareService.serviceProvisionCode" />
+      <mustSupport value="true" />
+    </element>
+    <element id="HealthcareService.serviceProvisionCode.coding">
+      <path value="HealthcareService.serviceProvisionCode.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="HealthcareService.serviceProvisionCode.coding:eRSClinicType">
+      <path value="HealthcareService.serviceProvisionCode.coding" />
+      <sliceName value="eRSClinicType" />
+      <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/England-ERSClinicType" />
+      </binding>
+    </element>
+    <element id="HealthcareService.serviceProvisionCode.coding:eRSClinicType.system">
+      <path value="HealthcareService.serviceProvisionCode.coding.system" />
+      <fixedUri value="https://fhir.nhs.uk/CodeSystem/England-ERSClinicType" />
+    </element>
+    <element id="HealthcareService.availableTime">
+      <path value="HealthcareService.availableTime" />
+      <mustSupport value="true" />
+    </element>
+    <element id="HealthcareService.endpoint">
+      <path value="HealthcareService.endpoint" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="identifier.system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <mustSupport value="true" />
+    </element>
+    <element id="HealthcareService.endpoint.identifier">
+      <path value="HealthcareService.endpoint.identifier" />
+      <min value="1" />
+    </element>
+    <element id="HealthcareService.endpoint.identifier.system">
+      <path value="HealthcareService.endpoint.identifier.system" />
+      <min value="1" />
+    </element>
+    <element id="HealthcareService.endpoint.identifier.value">
+      <path value="HealthcareService.endpoint.identifier.value" />
+      <min value="1" />
+    </element>
+    <element id="HealthcareService.endpoint:nhsMhsPartyKey">
+      <path value="HealthcareService.endpoint" />
+      <sliceName value="nhsMhsPartyKey" />
+      <max value="1" />
+    </element>
+    <element id="HealthcareService.endpoint:nhsMhsPartyKey.identifier.system">
+      <path value="HealthcareService.endpoint.identifier.system" />
+      <fixedUri value="https://fhir.nhs.uk/Id/nhsMhsPartyKey" />
+    </element>
+    <element id="HealthcareService.endpoint:nhsSpineASID">
+      <path value="HealthcareService.endpoint" />
+      <sliceName value="nhsSpineASID" />
+      <max value="1" />
+    </element>
+    <element id="HealthcareService.endpoint:nhsSpineASID.identifier.system">
+      <path value="HealthcareService.endpoint.identifier.system" />
+      <fixedUri value="https://fhir.nhs.uk/Id/nhsSpineASID" />
+    </element>
+  </differential>
 </StructureDefinition>
