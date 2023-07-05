@@ -36,7 +36,6 @@
         </discriminator>
         <rules value="open" />
       </slicing>
-      <comment value="MUST contain an ANANA/ODS code." />
       <mustSupport value="true" />
     </element>
     <element id="HealthcareService.identifier:ersServiceId">
