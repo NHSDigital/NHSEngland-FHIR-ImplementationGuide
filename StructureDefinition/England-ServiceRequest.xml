@@ -46,7 +46,6 @@
       <path value="ServiceRequest.extension" />
       <sliceName value="ERSAdviceAndGuidance" />
       <short value="ERS Advice and Guidance" />
-      <definition value="```json&#xD;&#xA;  &quot;extension&quot;: [&#xD;&#xA;        {&#xD;&#xA;            &quot;url&quot;: &quot;https://fhir.nhs.uk/StructureDefinition/Extension-England-ERSReferral&quot;,&#xD;&#xA;            &quot;extension&quot;: [&#xD;&#xA;                {&#xD;&#xA;                    &quot;url&quot;: &quot;sourceSystem&quot;,&#xD;&#xA;                    &quot;valueCode&quot;: &quot;ers&quot;&#xD;&#xA;                },&#xD;&#xA;                {&#xD;&#xA;                    &quot;url&quot;: &quot;status&quot;,&#xD;&#xA;                    &quot;valueCode&quot;: &quot;unbooked&quot;&#xD;&#xA;                }&#xD;&#xA;            ]&#xD;&#xA;        },&#xD;&#xA;```" />
       <min value="0" />
       <type>
         <code value="Extension" />
@@ -58,7 +57,6 @@
       <path value="ServiceRequest.extension" />
       <sliceName value="ERSServiceRequestState" />
       <short value="Request Status" />
-      <definition value="e-RS representation of the state of the referral&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;extension&quot;: [&#xD;&#xA;        {&#xD;&#xA;            &quot;url&quot;: &quot;https://fhir.nhs.uk/StructureDefinition/Extension-England-ERSServiceRequestState&quot;,&#xD;&#xA;            &quot;extension&quot;: [&#xD;&#xA;                {&#xD;&#xA;                    &quot;url&quot;: &quot;sourceSystem&quot;,&#xD;&#xA;                    &quot;valueCode&quot;: &quot;ers&quot;&#xD;&#xA;                },&#xD;&#xA;                {&#xD;&#xA;                    &quot;url&quot;: &quot;status&quot;,&#xD;&#xA;                    &quot;valueCode&quot;: &quot;unbooked&quot;&#xD;&#xA;                }&#xD;&#xA;            ]&#xD;&#xA;        }&#xD;&#xA;    ],&#xD;&#xA;```" />
       <min value="0" />
       <type>
         <code value="Extension" />
@@ -70,7 +68,6 @@
       <path value="ServiceRequest.extension" />
       <sliceName value="portalLink" />
       <short value="Portal Link" />
-      <definition value="Deep Link into the specific landing page in MYR&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;extension&quot;: [&#xD;&#xA;        {&#xD;&#xA;            &quot;url&quot;: &quot;https://fhir.nhs.uk/StructureDefinition/Extension-England-PortalLink&quot;,&#xD;&#xA;            &quot;valueUrl&quot;: &quot;https://virtual.nhs.uk/MyPatientRecords&quot;&#xD;&#xA;        }&#xD;&#xA;    ],&#xD;&#xA;```" />
       <min value="0" />
       <max value="1" />
       <type>
@@ -99,7 +96,6 @@
         </discriminator>
         <rules value="open" />
       </slicing>
-      <definition value="Identifiers assigned to this order instance by the orderer and/or the receiver and/or order fulfiller.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;identifier&quot;: [&#xD;&#xA;                    {&#xD;&#xA;                        &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/UBRN&quot;,&#xD;&#xA;                        &quot;value&quot;: &quot;111111111112&quot;&#xD;&#xA;                    }&#xD;&#xA;                ],&#xD;&#xA;```" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
@@ -111,7 +107,6 @@
       <path value="ServiceRequest.identifier" />
       <sliceName value="UBRN" />
       <short value="Unique Booking Reference Numbe" />
-      <definition value="Unique Booking Reference Number&#xD;&#xA;(12 digit number used as an internal and external identifier of the referral), known as &quot;Booking Reference&quot; Patient side" />
       <max value="1" />
       <mustSupport value="true" />
     </element>
@@ -142,11 +137,9 @@
     </element>
     <element id="ServiceRequest.intent">
       <path value="ServiceRequest.intent" />
-      <definition value="In **e-RS** default to `order`" />
     </element>
     <element id="ServiceRequest.category">
       <path value="ServiceRequest.category" />
-      <definition value="A code that classifies the service for searching, sorting and display purposes (e.g. &quot;Surgical Procedure&quot;).&#xD;&#xA;&#xD;&#xA;At present the only code in use is Patient Referral&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA; &quot;category&quot;: [&#xD;&#xA;        {&#xD;&#xA;            &quot;coding&quot;: [&#xD;&#xA;                {&#xD;&#xA;                    &quot;system&quot;: &quot;http://snomed.info/sct&quot;,&#xD;&#xA;                    &quot;code&quot;: &quot;3457005&quot;,&#xD;&#xA;                    &quot;display&quot;: &quot;Patient referral&quot;&#xD;&#xA;                }&#xD;&#xA;            ]&#xD;&#xA;        }&#xD;&#xA;    ],&#xD;&#xA;```" />
       <min value="1" />
       <max value="1" />
       <mustSupport value="true" />
@@ -208,12 +201,10 @@
     </element>
     <element id="ServiceRequest.priority">
       <path value="ServiceRequest.priority" />
-      <definition value="Request Priority Code &#xD;&#xA;&#xD;&#xA;Code for the priority of the referral set by the Referring Clinician&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA; &quot;priority&quot;: &quot;routine&quot;,&#xD;&#xA;```" />
       <mustSupport value="true" />
     </element>
     <element id="ServiceRequest.code">
       <path value="ServiceRequest.code" />
-      <definition value="A code that identifies a particular service (i.e., procedure, diagnostic investigation, or panel of investigations) that have been requested.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;code&quot;: {&#xD;&#xA;        &quot;coding&quot;:  [&#xD;&#xA;            {&#xD;&#xA;                &quot;system&quot;: &quot;http://snomed.info/sct&quot;,&#xD;&#xA;                &quot;code&quot;: &quot;73761001&quot;,&#xD;&#xA;                &quot;display&quot;: &quot;Colonoscopy&quot;&#xD;&#xA;            }&#xD;&#xA;        ],&#xD;&#xA;        &quot;text&quot;: &quot;Colonoscopy requested&quot;&#xD;&#xA;    }&#xD;&#xA;```" />
       <mustSupport value="true" />
     </element>
     <element id="ServiceRequest.code.coding">
@@ -262,7 +253,6 @@
     </element>
     <element id="ServiceRequest.subject">
       <path value="ServiceRequest.subject" />
-      <definition value="On whom or what the service is to be performed. This is usually a human patient, but can also be requested on animals, groups of humans or animals, devices such as dialysis machines, or even locations (typically for environmental scans).&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;subject&quot;: {&#xD;&#xA;        &quot;identifier&quot;: {&#xD;&#xA;            &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/nhs-number&quot;,&#xD;&#xA;            &quot;value&quot;: &quot;9999998887&quot;&#xD;&#xA;        }&#xD;&#xA;    },&#xD;&#xA;```" />
       <type>
         <code value="Reference" />
         <aggregation value="referenced" />
@@ -300,12 +290,10 @@
     <element id="ServiceRequest.authoredOn">
       <path value="ServiceRequest.authoredOn" />
       <short value="Referral Initiated Date" />
-      <definition value="Date the referral was initiated in e-RS&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;authoredOn&quot;: &quot;2022-01-11T16:40:00+00:00&quot;,&#xD;&#xA;```" />
       <mustSupport value="true" />
     </element>
     <element id="ServiceRequest.requester">
       <path value="ServiceRequest.requester" />
-      <definition value="Who created the Request or the Event. In NHS England API's this **SHOULD** always be a PractitionerRole role reference.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA; &quot;requester&quot;: {&#xD;&#xA;        &quot;reference&quot;: &quot;#requester&quot;&#xD;&#xA;    },&#xD;&#xA;```&#xD;&#xA;&#xD;&#xA;This will reference a `contained` PractitionerRole (note: this resource only contains limited user metadata such as ODS Code, professional code and SDS User Profile Id). This resource should not hold data which is held in SDS, only enough information to identify the SDS Entry,&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;{&#xD;&#xA;    &quot;resourceType&quot;: &quot;ServiceRequest&quot;,&#xD;&#xA;    &quot;id&quot;: &quot;bd1ca5c4-ff49-4f2a-9db4-f5dda0112084&quot;,&#xD;&#xA;    &quot;meta&quot;: {&#xD;&#xA;        &quot;lastUpdated&quot;: &quot;2016-07-11T11:07:22+00:00&quot;&#xD;&#xA;    },&#xD;&#xA;    &quot;contained&quot;: [&#xD;&#xA;        {&#xD;&#xA;            &quot;resourceType&quot;: &quot;PractitionerRole&quot;,&#xD;&#xA;            &quot;id&quot;: &quot;requester&quot;,&#xD;&#xA;            &quot;practitioner&quot;: {&#xD;&#xA;                &quot;identifier&quot;: {&#xD;&#xA;                    &quot;system&quot;: &quot;https://fhir.hl7.org.uk/Id/gmp-number&quot;,&#xD;&#xA;                    &quot;value&quot;: &quot;G8123456&quot;&#xD;&#xA;                },&#xD;&#xA;                &quot;display&quot;: &quot;DR AA BHATIA&quot;&#xD;&#xA;            },&#xD;&#xA;            &quot;organization&quot;: {&#xD;&#xA;                &quot;identifier&quot;: {&#xD;&#xA;                    &quot;system&quot;: &quot;https://fhir.nhs.uk/Id/ods-organization-code&quot;,&#xD;&#xA;                    &quot;value&quot;: &quot;C81007&quot;&#xD;&#xA;                },&#xD;&#xA;                &quot;display&quot;: &quot;VERNON STREET MEDICAL CTR&quot;&#xD;&#xA;            },&#xD;&#xA;        }&#xD;&#xA;    ],&#xD;&#xA;    &quot;requester&quot;: {&#xD;&#xA;        &quot;reference&quot;: &quot;#requester&quot;&#xD;&#xA;    },&#xD;&#xA;```&#xD;&#xA;&#xD;&#xA;**e-RS**&#xD;&#xA;&#xD;&#xA;The contained PractitionerRole must contain&#xD;&#xA;&#xD;&#xA;- SDS User ID of the Referrer in `practitioner`&#xD;&#xA;- ODS Code of the Referring Organisation in `organization`" />
       <type>
         <code value="Reference" />
         <aggregation value="contained" />
@@ -316,7 +304,6 @@
     <element id="ServiceRequest.performerType">
       <path value="ServiceRequest.performerType" />
       <short value="Requested Specialty Name" />
-      <definition value="**ERS**&#xD;&#xA;&#xD;&#xA;Specialty used to search for the shortlisted service(s) (if one was used)&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;performerType&quot;: {&#xD;&#xA;        &quot;coding&quot;: [&#xD;&#xA;            {&#xD;&#xA;                &quot;system&quot;: &quot;https://fhir.nhs.uk/CodeSystem/England-ERSSpecialty&quot;,&#xD;&#xA;                &quot;code&quot;: &quot;GENERAL_MEDICINE&quot;&#xD;&#xA;            }&#xD;&#xA;        ]&#xD;&#xA;    },&#xD;&#xA;```&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;performerType&quot;: {&#xD;&#xA;                    &quot;coding&quot;: [&#xD;&#xA;                        {&#xD;&#xA;                            &quot;display&quot;: &quot;Dermatology&quot;&#xD;&#xA;                        }&#xD;&#xA;                    ]&#xD;&#xA;                }&#xD;&#xA;```" />
       <mustSupport value="true" />
     </element>
     <element id="ServiceRequest.performerType.coding">
@@ -376,12 +363,10 @@
     </element>
     <element id="ServiceRequest.reasonCode">
       <path value="ServiceRequest.reasonCode" />
-      <definition value="An explanation or justification for why this service is being requested in coded or textual form.   This is often for billing purposes.  May relate to the resources referred to in `supportingInfo`.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;reasonCode&quot;:  [&#xD;&#xA;        {&#xD;&#xA;            &quot;coding&quot;:  [&#xD;&#xA;                {&#xD;&#xA;                    &quot;system&quot;: &quot;http://snomed.info/sct&quot;,&#xD;&#xA;                    &quot;code&quot;: &quot;271835004&quot;,&#xD;&#xA;                    &quot;display&quot;: &quot;Abdominal distension, gaseous&quot;&#xD;&#xA;                }&#xD;&#xA;            ],&#xD;&#xA;            &quot;text&quot;: &quot;Swollen abdomen&quot;&#xD;&#xA;        }&#xD;&#xA;    ]&#xD;&#xA;```" />
       <mustSupport value="true" />
     </element>
     <element id="ServiceRequest.supportingInfo">
       <path value="ServiceRequest.supportingInfo" />
-      <definition value="Additional clinical information about the patient or specimen that may influence the services or their interpretations.     This information includes diagnosis, clinical findings and other observations.  In laboratory ordering these are typically referred to as &quot;ask at order entry questions (AOEs)&quot;.  This includes observations explicitly requested by the producer (filler) to provide context or supporting information needed to complete the order. For example,  reporting the amount of inspired oxygen for blood gas measurements.&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;supportingInfo&quot;: [&#xD;&#xA;        {&#xD;&#xA;            &quot;type&quot; : &quot;DocumentReference&quot;,&#xD;&#xA;            &quot;reference&quot;: &quot;DocumentReference/5da894e0-a57e-43e9-a1a1-e283a484003c&quot;&#xD;&#xA;        },&#xD;&#xA;        {&#xD;&#xA;            &quot;type&quot; : &quot;QuestionnaireResponse&quot;,&#xD;&#xA;            &quot;reference&quot; : &quot;QuestionnaireResponse/d9d4cf80-3f9d-4435-9f3b-e6efb09ad654&quot;&#xD;&#xA;        }&#xD;&#xA;    ],&#xD;&#xA;```" />
       <type>
         <code value="Reference" />
         <aggregation value="referenced" />
