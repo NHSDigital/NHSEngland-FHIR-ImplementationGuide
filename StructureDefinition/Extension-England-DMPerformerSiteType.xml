@@ -39,7 +39,6 @@
     <element id="Extension">
       <path value="Extension" />
       <short value="Type of dispensing organisation" />
-      <definition value="Used to indicate type of pharmacist" />
       <max value="1" />
     </element>
     <element id="Extension.url">

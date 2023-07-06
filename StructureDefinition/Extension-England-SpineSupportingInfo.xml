@@ -39,7 +39,6 @@
     <element id="Extension">
       <path value="Extension" />
       <short value="Other information that may be relevant to this event." />
-      <definition value="Other resources *from the patient record* that may be relevant to the event. The information from these resources was either used to create the instance or is provided to help with its interpretation. This extension **should not** be used if more specific inline elements or extensions are available. For example, use `Observation.hasMember` instead of supportingInformation for representing the members of an Observation panel." />
     </element>
     <element id="Extension.url">
       <path value="Extension.url" />

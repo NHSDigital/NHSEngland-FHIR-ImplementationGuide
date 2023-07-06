@@ -49,7 +49,6 @@
     <element id="Extension.extension:state">
       <path value="Extension.extension" />
       <sliceName value="state" />
-      <definition value="Defining state" />
       <min value="0" />
       <max value="1" />
     </element>

@@ -39,7 +39,6 @@
     <element id="Extension">
       <path value="Extension" />
       <short value="practitioner responsible for the patient" />
-      <definition value="A participation used to provide a link to the healthcare professional who has direct responsibility for the patient." />
     </element>
     <element id="Extension.url">
       <path value="Extension.url" />

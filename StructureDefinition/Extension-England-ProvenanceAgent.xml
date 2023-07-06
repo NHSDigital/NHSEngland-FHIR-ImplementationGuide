@@ -46,7 +46,6 @@
   <differential>
     <element id="Extension">
       <path value="Extension" />
-      <definition value="An extenstion to track a healthcare provider activities on a patient." />
     </element>
     <element id="Extension.url">
       <path value="Extension.url" />
