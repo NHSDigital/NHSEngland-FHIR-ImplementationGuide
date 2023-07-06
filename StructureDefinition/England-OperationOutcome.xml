@@ -29,7 +29,6 @@
   <differential>
     <element id="OperationOutcome">
       <path value="OperationOutcome" />
-      <comment value="A collection of error, warning, or information messages that result from a system action.&#xD;&#xA;Can result from the failure of a REST call or be part of the response message returned from a request message." />
     </element>
     <element id="OperationOutcome.id">
       <path value="OperationOutcome.id" />
