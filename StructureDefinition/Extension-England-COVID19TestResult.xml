@@ -46,7 +46,6 @@
       <path value="Extension.extension" />
       <sliceName value="reportOrigin" />
       <short value="Indicates the source of a secondarily reported record" />
-      <definition value="Source of record creation - i.e. the digital service used to record the test registration.&#xD;&#xA;&#xD;&#xA;The source of the data when the report of the observation event is not based on information from the person who performed the observation." />
       <min value="0" />
       <max value="1" />
     </element>
@@ -64,7 +63,6 @@
       <path value="Extension.extension" />
       <sliceName value="administrationMethod" />
       <short value="Used to convey how the test was administered" />
-      <definition value="used to convey how the test was administered. Possible values are &quot;self&quot; or &quot;health_care_professional&quot;" />
       <min value="0" />
       <max value="1" />
     </element>

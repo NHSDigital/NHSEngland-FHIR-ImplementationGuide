@@ -39,7 +39,6 @@
     <element id="Extension">
       <path value="Extension" />
       <short value="Prescription Bundle this OperationOutcome relates to." />
-      <definition value="The prescription whose release was requested, including the MedicationRequest, Patient, PractitionerRole and Organization details. The information from this resource was either used to create the instance or is provided to help with its interpretation." />
     </element>
     <element id="Extension.url">
       <path value="Extension.url" />

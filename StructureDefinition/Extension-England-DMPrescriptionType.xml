@@ -39,7 +39,6 @@
     <element id="Extension">
       <path value="Extension" />
       <short value="Setting and HCP type for the prescrption" />
-      <definition value="Care Setting and type of prescriber." />
       <max value="1" />
     </element>
     <element id="Extension.url">
