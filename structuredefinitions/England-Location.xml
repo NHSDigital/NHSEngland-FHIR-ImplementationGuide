@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="England-Location" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/England-Location" />
+  <version value="1.0.0" />
+  <name value="EnglandLocation" />
+  <title value="England Location" />
+  <status value="draft" />
+  <date value="2023-06-01" />
+  <publisher value="NHS England" />
+  <contact>
+    <name value="NHS England" />
+    <telecom>
+      <system value="email" />
+      <value value="interoperabilityteam@nhs.net" />
+      <use value="work" />
+      <rank value="1" />
+    </telecom>
+  </contact>
+  <description value="This profile defines the NHS England constraints and extensions on the FHIR UK Core resource [UK Core Location](https://simplifier.net/hl7fhirukcorer4/ukcore-location)." />
+  <purpose value="This profile can be used to exchange details and position information for a physical place where services are provided and resources and participants may be stored, found, contained, or accommodated.\n\nA location includes both incidental locations (a place which is used for healthcare without prior designation or authorisation) and dedicated, formally appointed locations. Locations may be private, public, mobile or fixed and scale from small freezers to full hospital buildings or parking garages." />
+  <copyright value="Copyright © 2021+ HL7 UK Licensed under the Apache License, Version 2.0 (the \&quot;License\&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at  http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \&quot;AS IS\&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. HL7® FHIR® standard Copyright © 2011+ HL7 The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at  https://www.hl7.org/fhir/license.html." />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="rim" />
+    <uri value="http://hl7.org/v3" />
+    <name value="RIM Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="w5" />
+    <uri value="http://hl7.org/fhir/fivews" />
+    <name value="FiveWs Pattern Mapping" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Location" />
+  <baseDefinition value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Location" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Location.identifier">
+      <path value="Location.identifier" />
+    </element>
+    <element id="Location.identifier:odsCode">
+      <path value="Location.identifier" />
+      <sliceName value="odsCode" />
+      <max value="0" />
+    </element>
+    <element id="Location.identifier:odsCode.system">
+      <path value="Location.identifier.system" />
+      <min value="1" />
+      <fixedUri value="https://fhir.nhs.uk/Id/ods-organization-code" />
+    </element>
+    <element id="Location.identifier:odsCode.value">
+      <path value="Location.identifier.value" />
+      <min value="1" />
+    </element>
+    <element id="Location.type">
+      <path value="Location.type" />
+      <binding>
+        <strength value="extensible" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/England-LocationType" />
+      </binding>
+    </element>
+    <element id="Location.type.extension">
+      <path value="Location.type.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="Location.type.extension:locationRole">
+      <path value="Location.type.extension" />
+      <sliceName value="locationRole" />
+      <min value="0" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-ODSOrganizationRole" />
+      </type>
+      <isModifier value="false" />
+    </element>
+    <element id="Location.type.extension:activePeriod">
+      <path value="Location.type.extension" />
+      <sliceName value="activePeriod" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-ODSOrganizationRoleActivePeriod" />
+      </type>
+      <isModifier value="false" />
+    </element>
+    <element id="Location.address">
+      <path value="Location.address" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Location.managingOrganization">
+      <path value="Location.managingOrganization" />
+      <type>
+        <code value="Reference" />
+      </type>
+      <constraint>
+        <key value="nhds-10" />
+        <severity value="warning" />
+        <human value="managingOrganization - a display name should be provided" />
+        <expression value="(display.exists())" />
+      </constraint>
+    </element>
+    <element id="Location.managingOrganization.identifier">
+      <path value="Location.managingOrganization.identifier" />
+      <min value="1" />
+    </element>
+    <element id="Location.managingOrganization.identifier.system">
+      <path value="Location.managingOrganization.identifier.system" />
+      <min value="1" />
+    </element>
+    <element id="Location.managingOrganization.identifier.value">
+      <path value="Location.managingOrganization.identifier.value" />
+      <min value="1" />
+    </element>
+    <element id="Location.partOf">
+      <path value="Location.partOf" />
+      <constraint>
+        <key value="nhsd-9" />
+        <severity value="warning" />
+        <human value="partOf - display name should be provided" />
+        <expression value="(display.exists())" />
+      </constraint>
+    </element>
+    <element id="Location.partOf.identifier">
+      <path value="Location.partOf.identifier" />
+      <min value="1" />
+    </element>
+    <element id="Location.partOf.identifier.system">
+      <path value="Location.partOf.identifier.system" />
+      <min value="1" />
+    </element>
+    <element id="Location.partOf.identifier.value">
+      <path value="Location.partOf.identifier.value" />
+      <min value="1" />
+    </element>
+  </differential>
+</StructureDefinition>

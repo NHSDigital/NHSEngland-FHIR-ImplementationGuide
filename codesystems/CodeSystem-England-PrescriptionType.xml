@@ -1,0 +1,558 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<CodeSystem xmlns="http://hl7.org/fhir">
+	<id value="England-PrescriptionType"/>
+	<url value="https://fhir.nhs.uk/CodeSystem/England-PrescriptionType"/>
+	<version value="1.0.0"/>
+	<name value="EnglandPrescriptionType"/>
+	<title value="England Prescription Type"/>
+	<status value="draft"/>
+	<date value="2023-06-01"/>
+	<publisher value="NHS England"/>
+	<contact>
+		<name value="NHS England"/>
+		<telecom>
+			<system value="email"/>
+			<value value="interoperabilityteam@nhs.net"/>
+			<use value="work"/>
+			<rank value="1"/>
+		</telecom>
+	</contact>
+	<description value="A CodeSystem to identify the type of prescription"/>
+	<purpose value="A CodeSystem to identify the type of prescription"/>
+	<copyright value="Copyright © 2021+ HL7 UK Licensed under the Apache License, Version 2.0 (the \&quot;License\&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at  http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \&quot;AS IS\&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. HL7® FHIR® standard Copyright © 2011+ HL7 The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at  https://www.hl7.org/fhir/license.html."/>
+	<caseSensitive value="true"/>
+	<content value="complete"/>
+	<concept>
+		<code value="0001"/>
+		<display value="General Practitioner Prescribing"/>
+		<definition value="Medical prescriber use 0101"/>
+		<property>
+			<code value="deprecated"/>
+			<valueBoolean value="true"/>
+		</property>
+	</concept>
+	<concept>
+		<code value="0002"/>
+		<display value="Intentionally left blank"/>
+		<definition value="n/a"/>
+		<property>
+			<code value="deprecated"/>
+			<valueBoolean value="true"/>
+		</property>
+	</concept>
+	<concept>
+		<code value="0003"/>
+		<display value="Nurse Practitioner Prescribing"/>
+		<definition value="Nurse prescriber use either 0104 or 0105 depending upon qualification of nurse"/>
+		<property>
+			<code value="deprecated"/>
+			<valueBoolean value="true"/>
+		</property>
+	</concept>
+	<concept>
+		<code value="0004"/>
+		<display value="Hospital Prescribing"/>
+		<definition value="Out of scope for EPS"/>
+		<property>
+			<code value="deprecated"/>
+			<valueBoolean value="true"/>
+		</property>
+	</concept>
+	<concept>
+		<code value="0006"/>
+		<display value="Dental Prescribing"/>
+		<definition value="Out of scope for EPS"/>
+		<property>
+			<code value="deprecated"/>
+			<valueBoolean value="true"/>
+		</property>
+	</concept>
+	<concept>
+		<code value="0007"/>
+		<display value="Supplementary Prescriber Prescribing"/>
+		<definition value="Use appropriate prescription type depending upon type of prescriber eg 0108, 0113, 0114, 0116, 0117, 0124"/>
+		<property>
+			<code value="deprecated"/>
+			<valueBoolean value="true"/>
+		</property>
+	</concept>
+	<concept>
+		<code value="0009"/>
+		<display value="General Practitioner Prescribing: Private"/>
+		<definition value="Private prescribing not in scope for EPS"/>
+		<property>
+			<code value="deprecated"/>
+			<valueBoolean value="true"/>
+		</property>
+	</concept>
+	<concept>
+		<code value="0012"/>
+		<display value="Extended Formulary Prescriber"/>
+		<definition value="‘Extended Formulary’ Nurse Prescribers no longer exist. A nurse prescriber would use 0104 or 0105 depending upon their qualification"/>
+		<property>
+			<code value="deprecated"/>
+			<valueBoolean value="true"/>
+		</property>
+	</concept>
+	<concept>
+		<code value="0101"/>
+		<display value="Primary Care Prescriber – Medical Prescriber"/>
+	</concept>
+	<concept>
+		<code value="0102"/>
+		<display value="General Practitioner Prescribing - Trainee Doctor/GP Registrar"/>
+		<definition value="Code retired 01 September 2016 Medical prescriber use 0101"/>
+		<property>
+			<code value="deprecated"/>
+			<valueBoolean value="true"/>
+		</property>
+	</concept>
+	<concept>
+		<code value="0103"/>
+		<display value="General Practitioner Prescribing - Deputising Services"/>
+		<definition value="Code retired 01 September 2016 Medical prescriber use 0101"/>
+		<property>
+			<code value="deprecated"/>
+			<valueBoolean value="true"/>
+		</property>
+	</concept>
+	<concept>
+		<code value="0104"/>
+		<display value="Primary Care Prescriber - Nurse Independent/Supplementary prescriber"/>
+	</concept>
+	<concept>
+		<code value="0105"/>
+		<display value="Primary Care Prescriber - Community Practitioner Nurse prescriber"/>
+	</concept>
+	<concept>
+		<code value="0106"/>
+		<display value="General Practitioner Prescribing - PCT employed Nurse Independent/Supplementary prescriber"/>
+		<definition value="Code obsolete must not be used as PCTs abolished 01 April 2013 For a nurse employed as an Independent or Supplementary prescriber use 0104"/>
+		<property>
+			<code value="deprecated"/>
+			<valueBoolean value="true"/>
+		</property>
+	</concept>
+	<concept>
+		<code value="0107"/>
+		<display value="General Practitioner Prescribing - PCT employed Community Practitioner Nurse prescriber"/>
+		<definition value="Code obsolete must not be used as PCTs abolished 01 April 2013 For a nurse employed as a Community Practitioner nurse prescriber use 0105"/>
+		<property>
+			<code value="deprecated"/>
+			<valueBoolean value="true"/>
+		</property>
+	</concept>
+	<concept>
+		<code value="0108"/>
+		<display value="Primary Care Prescriber - Pharmacist Independent/Supplementary prescriber"/>
+	</concept>
+	<concept>
+		<code value="0109"/>
+		<display value="General Practitioner Prescribing - PCT employed Pharmacist prescriber"/>
+		<definition value="Code obsolete must not be used as PCTs abolished 01 April 2013 For a pharmacist employed as a prescriber use 0108"/>
+		<property>
+			<code value="deprecated"/>
+			<valueBoolean value="true"/>
+		</property>
+	</concept>
+	<concept>
+		<code value="0110"/>
+		<display value="General Practitioner Prescribing - Locum"/>
+		<definition value="Code retired 01 September 2016 Medical prescriber use 0101"/>
+		<property>
+			<code value="deprecated"/>
+			<valueBoolean value="true"/>
+		</property>
+	</concept>
+	<concept>
+		<code value="0113"/>
+		<display value="Primary Care Prescriber – Optometrist Independent/Supplementary prescriber"/>
+	</concept>
+	<concept>
+		<code value="0114"/>
+		<display value="Primary Care Prescriber – Podiatrist/Chiropodist Independent/Supplementary prescriber"/>
+	</concept>
+	<concept>
+		<code value="0116"/>
+		<display value="Primary Care Prescriber – Radiographer Independent/Supplementary prescriber"/>
+	</concept>
+	<concept>
+		<code value="0117"/>
+		<display value="Primary Care Prescriber - Physiotherapist Independent/Supplementary prescriber"/>
+	</concept>
+	<concept>
+		<code value="0119"/>
+		<display value="General Practitioner Prescribing - PCT employed Podiatrist/Chiropodist"/>
+		<definition value="Code obsolete must not be used as PCTs abolished 01 April 2013 For a podiatrist/chiropodist employed as a prescriber use 0114"/>
+		<property>
+			<code value="deprecated"/>
+			<valueBoolean value="true"/>
+		</property>
+	</concept>
+	<concept>
+		<code value="0120"/>
+		<display value="General Practitioner Prescribing - PCT employed Optometrist"/>
+		<definition value="Code obsolete must not be used as PCTs abolished 01 April 2013 For an optometrist employed as a prescriber use 0113"/>
+		<property>
+			<code value="deprecated"/>
+			<valueBoolean value="true"/>
+		</property>
+	</concept>
+	<concept>
+		<code value="0121"/>
+		<display value="General Practitioner Prescribing - PCT employed Radiographer"/>
+		<definition value="Code obsolete must not be used as PCTs abolished 01 April 2013For a radiographer employed as a prescriber use 0116"/>
+		<property>
+			<code value="deprecated"/>
+			<valueBoolean value="true"/>
+		</property>
+	</concept>
+	<concept>
+		<code value="0122"/>
+		<display value="General Practitioner Prescribing - PCT employed Physiotherapist"/>
+		<definition value="Code obsolete must not be used as PCTs abolished 01 April 2013 For a physiotherapist employed as a prescriber use 0117"/>
+		<property>
+			<code value="deprecated"/>
+			<valueBoolean value="true"/>
+		</property>
+	</concept>
+	<concept>
+		<code value="0123"/>
+		<display value="Primary Care Prescriber - Hospital prescriber"/>
+		<definition value="Code retired August 2020 upon introduction of individual prescriber types for Hospital unit prescribers prescribing on FP10 prescriptions for dispensing in the Community. Use 10nn values depending upon type of prescriber"/>
+		<property>
+			<code value="deprecated"/>
+			<valueBoolean value="true"/>
+		</property>
+	</concept>
+	<concept>
+		<code value="0124"/>
+		<display value="Primary Care Prescriber – Dietician Supplementary prescriber"/>
+	</concept>
+	<concept>
+		<code value="0125"/>
+		<display value="Primary Care Prescriber – Paramedic Independent/Supplementary prescriber"/>
+	</concept>
+	<concept>
+		<code value="0304"/>
+		<display value="Nurse Practitioner - Practice employed Nurse Independent/Supplementary prescriber"/>
+		<definition value="Code retired 01 September 2016 For a nurse employed as an Independent or Supplementary prescriber use 0104"/>
+		<property>
+			<code value="deprecated"/>
+			<valueBoolean value="true"/>
+		</property>
+	</concept>
+	<concept>
+		<code value="0305"/>
+		<display value="Nurse Practitioner - Practice employed Community Practitioner Nurse prescriber"/>
+		<definition value="Code retired 01 September 2016 For a nurse employed as a Community Practitioner nurse prescriber use 0105"/>
+		<property>
+			<code value="deprecated"/>
+			<valueBoolean value="true"/>
+		</property>
+	</concept>
+	<concept>
+		<code value="0306"/>
+		<display value="Nurse Practitioner - PCT employed Nurse Independent/Supplementary prescriber"/>
+		<definition value="Code obsolete must not be used as PCTs abolished 01 April 2013 For a nurse employed as an Independent or Supplementary prescriber use 0104"/>
+		<property>
+			<code value="deprecated"/>
+			<valueBoolean value="true"/>
+		</property>
+	</concept>
+	<concept>
+		<code value="0307"/>
+		<display value="Nurse Practitioner - PCT employed Community Practitioner Nurse prescriber"/>
+		<definition value="Code obsolete must not be used as PCTs abolished 01 April 2013 For a nurse employed as a Community Practitioner nurse prescriber use 0105"/>
+		<property>
+			<code value="deprecated"/>
+			<valueBoolean value="true"/>
+		</property>
+	</concept>
+	<concept>
+		<code value="0406"/>
+		<display value="Hospital Prescribing - Hospital Prescriber"/>
+		<definition value="Out of scope"/>
+		<property>
+			<code value="deprecated"/>
+			<valueBoolean value="true"/>
+		</property>
+	</concept>
+	<concept>
+		<code value="0607"/>
+		<display value="Dental Prescribing – Dentist"/>
+	</concept>
+	<concept>
+		<code value="0708"/>
+		<display value="Supplementary Prescribing - Practice employed Pharmacist"/>
+		<definition value="Code retired 01 September 2016 For a pharmacist employed as a prescriber use 0108"/>
+		<property>
+			<code value="deprecated"/>
+			<valueBoolean value="true"/>
+		</property>
+	</concept>
+	<concept>
+		<code value="0709"/>
+		<display value="Supplementary Prescribing - PCT employed Pharmacist"/>
+		<definition value="Code obsolete must not be used as PCTs abolished 01 April 2013 For a pharmacist employed as a prescriber use 0108"/>
+		<property>
+			<code value="deprecated"/>
+			<valueBoolean value="true"/>
+		</property>
+	</concept>
+	<concept>
+		<code value="0713"/>
+		<display value="Supplementary Prescribing - Practice employed Optometrist"/>
+		<definition value="Code retired 01 September 2016 For an optometrist employed as a prescriber use 0113"/>
+		<property>
+			<code value="deprecated"/>
+			<valueBoolean value="true"/>
+		</property>
+	</concept>
+	<concept>
+		<code value="0714"/>
+		<display value="Supplementary Prescribing - Practice employed Podiatrist/Chiropodist"/>
+		<definition value="Code retired 01 September 2016 For a podiatrist/chiropodist employed as a prescriber use 0114"/>
+		<property>
+			<code value="deprecated"/>
+			<valueBoolean value="true"/>
+		</property>
+	</concept>
+	<concept>
+		<code value="0716"/>
+		<display value="Supplementary Prescribing - Practice employed Radiographer"/>
+		<definition value="Code retired 01 September 2016 For a radiographer employed as a prescriber use 0116"/>
+		<property>
+			<code value="deprecated"/>
+			<valueBoolean value="true"/>
+		</property>
+	</concept>
+	<concept>
+		<code value="0717"/>
+		<display value="Supplementary Prescribing - Practice employed Physiotherapist"/>
+		<definition value="Code retired 01 September 2016 For a physiotherapist employed as a prescriber use 0117"/>
+		<property>
+			<code value="deprecated"/>
+			<valueBoolean value="true"/>
+		</property>
+	</concept>
+	<concept>
+		<code value="0718"/>
+		<display value="Supplementary Prescribing - PCT employed Optometrist"/>
+		<definition value="Code obsolete must not be used as PCTs abolished 01 April 2013 For an optometrist employed as a prescriber use 0113"/>
+		<property>
+			<code value="deprecated"/>
+			<valueBoolean value="true"/>
+		</property>
+	</concept>
+	<concept>
+		<code value="0719"/>
+		<display value="Supplementary Prescribing - PCT employed Podiatrist/Chiropodist"/>
+		<definition value="Code obsolete must not be used as PCTs abolished 01 April 2013 For a podiatrist/chiropodist employed as a prescriber use 0114"/>
+		<property>
+			<code value="deprecated"/>
+			<valueBoolean value="true"/>
+		</property>
+	</concept>
+	<concept>
+		<code value="0721"/>
+		<display value="Supplementary Prescribing - PCT employed Radiographer"/>
+		<definition value="Code obsolete must not be used as PCTs abolished 01 April 2013 For a radiographer employed as a prescriber use 0116"/>
+		<property>
+			<code value="deprecated"/>
+			<valueBoolean value="true"/>
+		</property>
+	</concept>
+	<concept>
+		<code value="0722"/>
+		<display value="Supplementary Prescribing - PCT employed Physiotherapist"/>
+		<definition value="Code obsolete must not be used as PCTs abolished 01 April 2013 For a physiotherapist employed as a prescriber use 0117"/>
+		<property>
+			<code value="deprecated"/>
+			<valueBoolean value="true"/>
+		</property>
+	</concept>
+	<concept>
+		<code value="1001"/>
+		<display value="Outpatient Community Prescriber - Medical Prescriber"/>
+	</concept>
+	<concept>
+		<code value="1101"/>
+		<display value="Outpatient Pharmacy Prescriber - Medical Prescriber"/>
+	</concept>
+	<concept>
+		<code value="1201"/>
+		<display value="Outpatient Homecare Prescriber - Medical Prescriber"/>
+	</concept>
+	<concept>
+		<code value="0901"/>
+		<display value="Private prescribing - GP"/>
+	</concept>
+	<concept>
+		<code value="0904"/>
+		<display value="Private prescribing - Nurse prescribing"/>
+	</concept>
+	<concept>
+		<code value="0908"/>
+		<display value="Private prescribing - Pharmacist prescribing"/>
+	</concept>
+	<concept>
+		<code value="0913"/>
+		<display value="Private prescribing - Optometrist"/>
+	</concept>
+	<concept>
+		<code value="0914"/>
+		<display value="Private prescribing - Podiatrist Chiropodist"/>
+	</concept>
+	<concept>
+		<code value="0916"/>
+		<display value="Private prescribing - Radiographer"/>
+	</concept>
+	<concept>
+		<code value="0917"/>
+		<display value="Private prescribing - Physiotherapist"/>
+	</concept>
+	<concept>
+		<code value="0924"/>
+		<display value="Private prescribing - Dietician"/>
+	</concept>
+	<concept>
+		<code value="0925"/>
+		<display value="Private prescribing - Paramedic"/>
+	</concept>
+	<concept>
+		<code value="1004"/>
+		<display value="Outpatient Community Prescriber - Nurse Independent Supplementary prescriber"/>
+		<definition value="FP10SS (HP) Hospital outpatient prescriptions dispensed in a community pharmacy"/>
+	</concept>
+	<concept>
+		<code value="1005"/>
+		<display value="Outpatient Community Prescriber - Community Practitioner Nurse prescriber"/>
+		<definition value="FP10SS (HP) Hospital outpatient prescriptions dispensed in a community pharmacy"/>
+	</concept>
+	<concept>
+		<code value="1008"/>
+		<display value="Outpatient Community Prescriber - Pharmacist Independent Supplementary prescriber"/>
+		<definition value="FP10SS (HP) Hospital outpatient prescriptions dispensed in a community pharmacy"/>
+	</concept>
+	<concept>
+		<code value="1013"/>
+		<display value="Outpatient Community Prescriber – Optometrist Independent Supplementary prescriber"/>
+		<definition value="FP10SS (HP) Hospital outpatient prescriptions dispensed in a community pharmacy"/>
+	</concept>
+	<concept>
+		<code value="1014"/>
+		<display value="Outpatient Community Prescriber – Podiatrist Chiropodist Independent Supplementary prescriber"/>
+		<definition value="FP10SS (HP) Hospital outpatient prescriptions dispensed in a community pharmacy"/>
+	</concept>
+	<concept>
+		<code value="1016"/>
+		<display value="Outpatient Community Prescriber – Radiographer Independent Supplementary prescriber"/>
+		<definition value="FP10SS (HP) Hospital outpatient prescriptions dispensed in a community pharmacy"/>
+	</concept>
+	<concept>
+		<code value="1017"/>
+		<display value="Outpatient Community Prescriber - Physiotherapist Independent Supplementary prescriber"/>
+		<definition value="FP10SS (HP) Hospital outpatient prescriptions dispensed in a community pharmacy"/>
+	</concept>
+	<concept>
+		<code value="1024"/>
+		<display value="Outpatient Community Prescriber – Dietician Supplementary prescriber"/>
+		<definition value="FP10SS (HP) Hospital outpatient prescriptions dispensed in a community pharmacy"/>
+	</concept>
+	<concept>
+		<code value="1025"/>
+		<display value="Outpatient Community Prescriber – Paramedic Independent Supplementary prescriber"/>
+		<definition value="FP10SS (HP) Hospital outpatient prescriptions dispensed in a community pharmacy"/>
+	</concept>
+	<concept>
+		<code value="1104"/>
+		<display value="Outpatient Hospital Pharmacy Prescriber - Nurse Independent Supplementary prescriber"/>
+		<definition value="NON- FP10 Hospital outpatient prescriptions dispensed in their own hospital pharmacy"/>
+	</concept>
+	<concept>
+		<code value="1105"/>
+		<display value="Outpatient Hospital Pharmacy Prescriber - Community Practitioner Nurse prescriber"/>
+		<definition value="NON- FP10 Hospital outpatient prescriptions dispensed in their own hospital pharmacy"/>
+	</concept>
+	<concept>
+		<code value="1108"/>
+		<display value="Outpatient Hospital Pharmacy Prescriber - Pharmacist Independent Supplementary prescriber"/>
+		<definition value="NON- FP10 Hospital outpatient prescriptions dispensed in their own hospital pharmacy"/>
+	</concept>
+	<concept>
+		<code value="1113"/>
+		<display value="Outpatient Hospital Pharmacy Prescriber – Optometrist Independent Supplementary prescriber"/>
+		<definition value="NON- FP10 Hospital outpatient prescriptions dispensed in their own hospital pharmacy"/>
+	</concept>
+	<concept>
+		<code value="1114"/>
+		<display value="Outpatient Hospital Pharmacy Prescriber – Podiatrist Chiropodist Independent Supplementary prescriber"/>
+		<definition value="NON- FP10 Hospital outpatient prescriptions dispensed in their own hospital pharmacy"/>
+	</concept>
+	<concept>
+		<code value="1116"/>
+		<display value="Outpatient Hospital Pharmacy Prescriber – Radiographer Independent Supplementary prescriber"/>
+		<definition value="NON- FP10 Hospital outpatient prescriptions dispensed in their own hospital pharmacy"/>
+	</concept>
+	<concept>
+		<code value="1117"/>
+		<display value="Outpatient Hospital Pharmacy Prescriber - Physiotherapist Independent Supplementary prescriber"/>
+		<definition value="NON- FP10 Hospital outpatient prescriptions dispensed in their own hospital pharmacy"/>
+	</concept>
+	<concept>
+		<code value="1124"/>
+		<display value="Outpatient Hospital Pharmacy Prescriber – Dietician Supplementary prescriber"/>
+		<definition value="NON- FP10 Hospital outpatient prescriptions dispensed in their own hospital pharmacy"/>
+	</concept>
+	<concept>
+		<code value="1125"/>
+		<display value="Outpatient Hospital Pharmacy Prescriber – Paramedic Independent Supplementary prescriber"/>
+		<definition value="NON- FP10 Hospital outpatient prescriptions dispensed in their own hospital pharmacy"/>
+	</concept>
+	<concept>
+		<code value="1204"/>
+		<display value="Outpatient Homecare Prescriber - Nurse Independent Supplementary prescriber"/>
+		<definition value="NON- FP10 Hospital outpatient prescriptions dispensed by Homecare"/>
+	</concept>
+	<concept>
+		<code value="1205"/>
+		<display value="Outpatient Homecare Prescriber - Community Practitioner Nurse prescriber"/>
+		<definition value="NON- FP10 Hospital outpatient prescriptions dispensed by Homecare"/>
+	</concept>
+	<concept>
+		<code value="1208"/>
+		<display value="Outpatient Homecare Prescriber - Pharmacist Independent Supplementary prescriber"/>
+		<definition value="NON- FP10 Hospital outpatient prescriptions dispensed by Homecare"/>
+	</concept>
+	<concept>
+		<code value="1213"/>
+		<display value="Outpatient Homecare Prescriber – Optometrist Independent Supplementary prescriber"/>
+		<definition value="NON- FP10 Hospital outpatient prescriptions dispensed by Homecare"/>
+	</concept>
+	<concept>
+		<code value="1214"/>
+		<display value="Outpatient Homecare Prescriber – Podiatrist Chiropodist Independent Supplementary prescriber"/>
+		<definition value="NON- FP10 Hospital outpatient prescriptions dispensed by Homecare"/>
+	</concept>
+	<concept>
+		<code value="1216"/>
+		<display value="Outpatient Homecare Prescriber – Radiographer Independent Supplementary prescriber"/>
+		<definition value="NON- FP10 Hospital outpatient prescriptions dispensed by Homecare"/>
+	</concept>
+	<concept>
+		<code value="1217"/>
+		<display value="Outpatient Homecare Prescriber - Physiotherapist Independent Supplementary prescriber"/>
+		<definition value="NON- FP10 Hospital outpatient prescriptions dispensed by Homecare"/>
+	</concept>
+	<concept>
+		<code value="1224"/>
+		<display value="Outpatient Homecare Prescriber – Dietician Supplementary prescriber"/>
+		<definition value="NON- FP10 Hospital outpatient prescriptions dispensed by Homecare"/>
+	</concept>
+	<concept>
+		<code value="1225"/>
+		<display value="Outpatient Homecare Prescriber – Paramedic Independent Supplementary prescriber"/>
+		<definition value="NON- FP10 Hospital outpatient prescriptions dispensed by Homecare"/>
+	</concept>
+</CodeSystem>

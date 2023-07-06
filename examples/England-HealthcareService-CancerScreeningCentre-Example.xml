@@ -1,0 +1,37 @@
+<HealthcareService xmlns="http://hl7.org/fhir">
+  <id value="England-HealthcareService-CancerScreeningCentre-Example" />
+  <identifier>
+    <system value="https://fhir.nhs.uk/Id/ods-organization-code" />
+    <value value="A99968" />
+  </identifier>
+  <active value="true" />
+  <providedBy>
+    <identifier>
+      <system value="https://fhir.nhs.uk/Id/ods-organization-code" />
+      <value value="RBA" />
+    </identifier>
+  </providedBy>
+  <type>
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="892571000000101" />
+      <display value="Medical oncology service" />
+    </coding>
+  </type>
+  <specialty>
+	<coding>
+      <system value="https://fhir.hl7.org.uk/CodeSystem/UKCore-PracticeSettingCode" />
+      <code value="800" />
+      <display value="Clinical oncology" />
+    </coding>
+  </specialty>
+  <location>
+    <reference value="urn:uuid:8a5d7d67-64fb-44ec-9802-2dc214bb3dcb" />
+  </location>
+  <name value="SOMERSET BOWEL CANCER SCREENING CENTRE" />
+  <telecom>
+    <system value="phone" />
+    <value value="01823 333444" />
+    <use value="work" />
+  </telecom>
+</HealthcareService>

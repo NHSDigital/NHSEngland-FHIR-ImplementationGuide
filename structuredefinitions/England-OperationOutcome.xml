@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="England-OperationOutcome" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/England-OperationOutcome" />
+  <version value="1.0.0" />
+  <name value="EnglandOperationOutcome" />
+  <title value="England OperationOutcome" />
+  <status value="draft" />
+  <date value="2023-06-01" />
+  <publisher value="NHS England" />
+  <contact>
+    <name value="NHS England" />
+    <telecom>
+      <system value="email" />
+      <value value="interoperabilityteam@nhs.net" />
+      <use value="work" />
+      <rank value="1" />
+    </telecom>
+  </contact>
+  <description value="This profile defines the NHS England constraints and extensions on the FHIR UK Core resource [UK Core OperationOutcome](https://simplifier.net/hl7fhirukcorer4/ukcore-operationoutcome)" />
+  <purpose value="&quot;The purpose of this profile is to provide detailed information about the outcome of an attempted system operation. Operation outcomes are sets of error, warning and information messages provided as a direct system response, or part of one, and provide information about the outcome of the operation.&quot;," />
+  <copyright value="&quot;Copyright © 2021+ HL7 UK Licensed under the Apache License, Version 2.0 (the \&quot;License\&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at  http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \&quot;AS IS\&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. HL7® FHIR® standard Copyright © 2011+ HL7 The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at  https://www.hl7.org/fhir/license.html.&quot;," />
+  <fhirVersion value="4.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="OperationOutcome" />
+  <baseDefinition value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-OperationOutcome" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="OperationOutcome">
+      <path value="OperationOutcome" />
+    </element>
+    <element id="OperationOutcome.id">
+      <path value="OperationOutcome.id" />
+      <short value="uniqueRequestID" />
+    </element>
+    <element id="OperationOutcome.meta">
+      <path value="OperationOutcome.meta" />
+      <mustSupport value="true" />
+    </element>
+    <element id="OperationOutcome.extension">
+      <path value="OperationOutcome.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="OperationOutcome.extension:supportingInfo">
+      <path value="OperationOutcome.extension" />
+      <sliceName value="supportingInfo" />
+      <min value="0" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-SpineSupportingInfo" />
+      </type>
+    </element>
+    <element id="OperationOutcome.extension:supportingInfoPrescription">
+      <path value="OperationOutcome.extension" />
+      <sliceName value="supportingInfoPrescription" />
+      <short value="Other information that may be relevant to this event" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-SpineSupportingInfoPrescription" />
+      </type>
+      <isModifier value="false" />
+    </element>
+    <element id="OperationOutcome.issue">
+      <path value="OperationOutcome.issue" />
+      <constraint>
+        <key value="nhsd-errrorcode" />
+        <severity value="error" />
+        <human value="An NHS England error or warning code is required" />
+        <expression value="(severity = 'information') or ((severity != 'information') and details.empty().not())" />
+      </constraint>
+      <mustSupport value="true" />
+    </element>
+    <element id="OperationOutcome.issue.severity">
+      <path value="OperationOutcome.issue.severity" />
+      <mustSupport value="true" />
+    </element>
+    <element id="OperationOutcome.issue.code">
+      <path value="OperationOutcome.issue.code" />
+      <mustSupport value="true" />
+    </element>
+    <element id="OperationOutcome.issue.details">
+      <path value="OperationOutcome.issue.details" />
+      <mustSupport value="true" />
+      <binding>
+        <strength value="preferred" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/England-OperationOutcomeCodes" />
+      </binding>
+    </element>
+    <element id="OperationOutcome.issue.details.coding">
+      <path value="OperationOutcome.issue.details.coding" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+      <binding>
+        <strength value="extensible" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/England-OperationOutcomeCodes" />
+      </binding>
+    </element>
+    <element id="OperationOutcome.issue.details.coding.system">
+      <path value="OperationOutcome.issue.details.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="OperationOutcome.issue.details.coding.code">
+      <path value="OperationOutcome.issue.details.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="OperationOutcome.issue.diagnostics">
+      <path value="OperationOutcome.issue.diagnostics" />
+      <mustSupport value="true" />
+    </element>
+    <element id="OperationOutcome.issue.location">
+      <path value="OperationOutcome.issue.location" />
+      <mustSupport value="true" />
+    </element>
+    <element id="OperationOutcome.issue.expression">
+      <path value="OperationOutcome.issue.expression" />
+      <mustSupport value="true" />
+    </element>
+  </differential>
+</StructureDefinition>

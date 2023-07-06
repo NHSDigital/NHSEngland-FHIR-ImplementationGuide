@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="Extension-England-COVID19TestResult" />
+  <url value="https://fhir.nhs.uk/StructureDefinition/Extension-England-COVID19TestResult" />
+  <version value="1.0.0" />
+  <name value="ExtensionEnglandCOVID19TestResult" />
+  <title value="Extension England COVID19 Test Result" />
+  <status value="draft" />
+  <date value="2023-06-01" />
+  <publisher value="NHS England" />
+  <contact>
+    <name value="NHS England" />
+    <telecom>
+      <system value="email" />
+      <value value="interoperabilityteam@nhs.net" />
+      <use value="work" />
+      <rank value="1" />
+    </telecom>
+  </contact>
+  <description value="Extension for Covid 19 Test Results" />
+  <purpose value="COVID 19 Test Results" />
+  <copyright value="Copyright © 2021+ HL7 UK Licensed under the Apache License, Version 2.0 (the \&quot;License\&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at  http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \&quot;AS IS\&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. HL7® FHIR® standard Copyright © 2011+ HL7 The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at  https://www.hl7.org/fhir/license.html." />
+  <fhirVersion value="4.0.1" />
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <context>
+    <type value="element" />
+    <expression value="Observation" />
+  </context>
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Extension.extension">
+      <path value="Extension.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="Extension.extension:reportOrigin">
+      <path value="Extension.extension" />
+      <sliceName value="reportOrigin" />
+      <short value="Indicates the source of a secondarily reported record" />
+      <min value="0" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:reportOrigin.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="reportOrigin" />
+    </element>
+    <element id="Extension.extension:reportOrigin.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+    </element>
+    <element id="Extension.extension:administrationMethod">
+      <path value="Extension.extension" />
+      <sliceName value="administrationMethod" />
+      <short value="Used to convey how the test was administered" />
+      <min value="0" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:administrationMethod.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="administrationMethod" />
+    </element>
+    <element id="Extension.extension:administrationMethod.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url" />
+      <fixedUri value="https://fhir.nhs.uk/StructureDefinition/Extension-England-COVID19TestResult" />
+    </element>
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>

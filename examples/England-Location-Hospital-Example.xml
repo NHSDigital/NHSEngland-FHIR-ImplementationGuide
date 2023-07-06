@@ -1,0 +1,10 @@
+<Location xmlns="http://hl7.org/fhir">
+    <id value="England-Location-Hospital-Example" />
+    <name value="Elmet NHS Hospital" />
+    <address>
+        <line value="Main Street" />
+        <line value="Barwick in Elment" />
+        <city value="Leeds" />
+        <postalCode value="LS15 4JF" />
+    </address>
+</Location>

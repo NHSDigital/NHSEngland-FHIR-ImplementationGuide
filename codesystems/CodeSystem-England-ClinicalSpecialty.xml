@@ -1,0 +1,412 @@
+<CodeSystem xmlns="http://hl7.org/fhir">
+   <id value="England-ClinicalSpecialty" />
+   <url value="https://fhir.nhs.uk/CodeSystem/England-ClinicalSpecialty" />
+   <version value="1.0.0" />
+   <name value="EnglandClinicalSpecialty" />
+   <title value="England Clinical Specialty" />
+   <status value="draft" />
+   <date value="2023-06-01" />
+   <publisher value="NHS England" />
+   <contact>
+      <name value="NHS England" />
+      <telecom>
+         <system value="email" />
+         <value value="interoperabilityteam@nhs.net" />
+         <use value="work" />
+		 <rank value="1" />
+      </telecom>
+   </contact>
+   <description value="A CodeSystem to identify the specialty of the care professional or team. FHIR Version of NHS Data Dictionary Main Specialty Code and HSCIC ITK HL7v2 Table ZU012" />
+   <purpose value="A CodeSystem to identify the specialty of the care professional or team. FHIR Version of NHS Data Dictionary Main Specialty Code and HSCIC ITK HL7v2 Table ZU012" />
+   <copyright value="Copyright © 2021+ HL7 UK Licensed under the Apache License, Version 2.0 (the \&quot;License\&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at  http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \&quot;AS IS\&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. HL7® FHIR® standard Copyright © 2011+ HL7 The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at  https://www.hl7.org/fhir/license.html." />
+   <caseSensitive value="true" />
+   <content value="complete" />
+   <concept>
+      <code value="100"/>
+      <display value="General Surgery" />
+   </concept>
+   <concept>
+      <code value="101"/>
+      <display value="Urology" />
+   </concept>
+   <concept>
+      <code value="107"/>
+      <display value="Vascular Surgery" />
+   </concept>
+   <concept>
+      <code value="110"/>
+      <display value="Trauma and Orthopaedics" />
+   </concept>
+   <concept>
+      <code value="120"/>
+      <display value="Ear Nose and Throat" />
+   </concept>
+   <concept>
+      <code value="130"/>
+      <display value="Ophthalmology" />
+   </concept>
+   <concept>
+      <code value="140"/>
+      <display value="Oral Surgery" />
+   </concept>
+   <concept>
+      <code value="141"/>
+      <display value="Restorative Dentistry" />
+   </concept>
+   <concept>
+      <code value="142"/>
+      <display value="Paediatric Dentistry" />
+   </concept>
+   <concept>
+      <code value="143"/>
+      <display value="Orthodontics" />
+   </concept>
+   <concept>
+      <code value="145"/>
+      <display value="Oral and Maxillofacial Surgery" />
+   </concept>
+   <concept>
+      <code value="146"/>
+      <display value="Endodontics" />
+   </concept>
+   <concept>
+      <code value="147"/>
+      <display value="Periodontics" />
+   </concept>
+   <concept>
+      <code value="148"/>
+      <display value="Prosthodontics" />
+   </concept>
+   <concept>
+      <code value="149"/>
+      <display value="Surgical Dentistry" />
+   </concept>
+   <concept>
+      <code value="150"/>
+      <display value="Neurosurgery" />
+   </concept>
+   <concept>
+      <code value="160"/>
+      <display value="Plastic Surgery" />
+   </concept>
+   <concept>
+      <code value="170"/>
+      <display value="Cardiothoracic Surgery" />
+   </concept>
+   <concept>
+      <code value="171"/>
+      <display value="Paediatric Surgery" />
+   </concept>
+   <concept>
+      <code value="191"/>
+      <display value="Pain Management"/>
+      <definition value="(Retired 1 April 2004)" />
+   </concept>
+   <concept>
+      <code value="180"/>
+      <display value="Emergency Medicine" />
+   </concept>
+   <concept>
+      <code value="190"/>
+      <display value="Anaesthetics" />
+   </concept>
+   <concept>
+      <code value="192"/>
+      <display value="Intensive Care Medicine" />
+   </concept>
+   <concept>
+      <code value="200"/>
+      <display value="Aviation and Space Medicine" />
+   </concept>
+   <concept>
+      <code value="300"/>
+      <display value="General Internal Medicine" />
+   </concept>
+   <concept>
+      <code value="301"/>
+      <display value="Gastroenterology" />
+   </concept>
+   <concept>
+      <code value="302"/>
+      <display value="Endocrinology and Diabetes" />
+   </concept>
+   <concept>
+      <code value="303"/>
+      <display value="Clinical Haematology" />
+   </concept>
+   <concept>
+      <code value="304"/>
+      <display value="Clinical Physiology" />
+   </concept>
+   <concept>
+      <code value="305"/>
+      <display value="Clinical Pharmacology" />
+   </concept>
+   <concept>
+      <code value="310"/>
+      <display value="Audio Vestibular Medicine" />
+   </concept>
+   <concept>
+      <code value="311"/>
+      <display value="Clinical Genetics" />
+   </concept>
+   <concept>
+      <code value="312"/>
+      <display value="CLINICAL CYTOGENETICS and MOLECULAR GENETICS"/>
+      <definition value="(Retired 1 April 2010) National Code 312 is retained for CONSULTANTS qualified in this Main Specialty prior to 1 April 2010" />
+   </concept>
+   <concept>
+      <code value="313"/>
+      <display value="Clinical Immunology" />
+   </concept>
+   <concept>
+      <code value="314"/>
+      <display value="Rehabilitation Medicine" />
+   </concept>
+   <concept>
+      <code value="315"/>
+      <display value="Palliative Medicine" />
+   </concept>
+   <concept>
+      <code value="317"/>
+      <display value="Allergy" />
+   </concept>
+   <concept>
+      <code value="320"/>
+      <display value="Cardiology" />
+   </concept>
+   <concept>
+      <code value="321"/>
+      <display value="Paediatric Cardiology" />
+   </concept>
+   <concept>
+      <code value="325"/>
+      <display value="Sport and Exercise Medicine" />
+   </concept>
+   <concept>
+      <code value="326"/>
+      <display value="Acute Internal Medicine" />
+   </concept>
+   <concept>
+      <code value="330"/>
+      <display value="Dermatology" />
+   </concept>
+   <concept>
+      <code value="340"/>
+      <display value="Respiratory Medicine" />
+   </concept>
+   <concept>
+      <code value="350"/>
+      <display value="Infectious Diseases" />
+   </concept>
+   <concept>
+      <code value="352"/>
+      <display value="Tropical Medicine" />
+   </concept>
+   <concept>
+      <code value="360"/>
+      <display value="Genitourinary Medicine" />
+   </concept>
+   <concept>
+      <code value="361"/>
+      <display value="Renal Medicine" />
+   </concept>
+   <concept>
+      <code value="370"/>
+      <display value="Medical Oncology" />
+   </concept>
+   <concept>
+      <code value="371"/>
+      <display value="Nuclear Medicine" />
+   </concept>
+   <concept>
+      <code value="400"/>
+      <display value="Neurology" />
+   </concept>
+   <concept>
+      <code value="401"/>
+      <display value="Clinical Neurophysiology" />
+   </concept>
+   <concept>
+      <code value="410"/>
+      <display value="Rheumatology" />
+   </concept>
+   <concept>
+      <code value="420"/>
+      <display value="Paediatrics" />
+   </concept>
+   <concept>
+      <code value="421"/>
+      <display value="Paediatric Neurology" />
+   </concept>
+   <concept>
+      <code value="430"/>
+      <display value="Geriatric Medicine" />
+   </concept>
+   <concept>
+      <code value="450"/>
+      <display value="Dental Medicine" />
+   </concept>
+   <concept>
+      <code value="451"/>
+      <display value="Special Care Dentistry" />
+   </concept>
+   <concept>
+      <code value="460"/>
+      <display value="Medical Ophthalmology" />
+   </concept>
+   <concept>
+      <code value="500"/>
+      <display value="Obstetrics and Gynaecology" />
+   </concept>
+   <concept>
+      <code value="501"/>
+      <display value="Obstetrics" />
+   </concept>
+   <concept>
+      <code value="502"/>
+      <display value="Gynaecology" />
+   </concept>
+   <concept>
+      <code value="504"/>
+      <display value="Community Sexual and Reproductive Health" />
+   </concept>
+   <concept>
+      <code value="510"/>
+      <display value="Antenatal Clinic"/>
+      <definition value="(Retired 1 April 2004)" />
+   </concept>
+   <concept>
+      <code value="520"/>
+      <display value="Postnatal Clinic"/>
+      <definition value="(Retired 1 April 2004)" />
+   </concept>
+   <concept>
+      <code value="560"/>
+      <display value="Midwifery" />
+   </concept>
+   <concept>
+      <code value="600"/>
+      <display value="General Medical Practice" />
+   </concept>
+   <concept>
+      <code value="601"/>
+      <display value="General Dental Practice" />
+   </concept>
+   <concept>
+      <code value="610"/>
+      <display value="Maternity Function"/>
+      <definition value="(Retired 1 April 2004)" />
+   </concept>
+   <concept>
+      <code value="620"/>
+      <display value="Other than Maternity"/>
+      <definition value="(Retired 1 April 2004)" />
+   </concept>
+   <concept>
+      <code value="700"/>
+      <display value="Learning Disability" />
+   </concept>
+   <concept>
+      <code value="710"/>
+      <display value="Adult Mental Illness" />
+   </concept>
+   <concept>
+      <code value="711"/>
+      <display value="Child and Adolescent Psychiatry" />
+   </concept>
+   <concept>
+      <code value="712"/>
+      <display value="Forensic Psychiatry" />
+   </concept>
+   <concept>
+      <code value="713"/>
+      <display value="Medical Psychotherapy" />
+   </concept>
+   <concept>
+      <code value="715"/>
+      <display value="Old Age Psychiatry" />
+   </concept>
+   <concept>
+      <code value="800"/>
+      <display value="Clinical Oncology" />
+   </concept>
+   <concept>
+      <code value="810"/>
+      <display value="Radiology" />
+   </concept>
+   <concept>
+      <code value="820"/>
+      <display value="General Pathology" />
+   </concept>
+   <concept>
+      <code value="821"/>
+      <display value="Blood Transfusion" />
+   </concept>
+   <concept>
+      <code value="822"/>
+      <display value="Chemical Pathology" />
+   </concept>
+   <concept>
+      <code value="823"/>
+      <display value="Haematology" />
+   </concept>
+   <concept>
+      <code value="824"/>
+      <display value="Histopathology" />
+   </concept>
+   <concept>
+      <code value="830"/>
+      <display value="Immunopathology" />
+   </concept>
+   <concept>
+      <code value="831"/>
+      <display value="Medical Microbiology and Virology" />
+   </concept>
+   <concept>
+      <code value="832"/>
+      <display value="Neuropathology"/>
+      <definition value="(Retired 1 April 2004)" />
+   </concept>
+   <concept>
+      <code value="833"/>
+      <display value="Medical Microbiology" />
+   </concept>
+   <concept>
+      <code value="834"/>
+      <display value="Medical Virology" />
+   </concept>
+   <concept>
+      <code value="900"/>
+      <display value="Community Medicine" />
+   </concept>
+   <concept>
+      <code value="901"/>
+      <display value="Occupational Medicine" />
+   </concept>
+   <concept>
+      <code value="902"/>
+      <display value="Community Health Services Dental" />
+   </concept>
+   <concept>
+      <code value="903"/>
+      <display value="Public Health Medicine" />
+   </concept>
+   <concept>
+      <code value="904"/>
+      <display value="Public Health Dental" />
+   </concept>
+   <concept>
+      <code value="950"/>
+      <display value="Nursing" />
+   </concept>
+   <concept>
+      <code value="960"/>
+      <display value="Allied Health Professional" />
+   </concept>
+   <concept>
+      <code value="990"/>
+      <display value="Joint Consultant Clinics"/>
+      <definition value="(Retired 1 April 2004)" />
+   </concept>
+</CodeSystem>

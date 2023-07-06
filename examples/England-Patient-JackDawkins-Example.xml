@@ -1,0 +1,24 @@
+<Patient xmlns="http://hl7.org/fhir">
+    <id value="England-Patient-JackDawkins-Example" />
+    <identifier>
+        <system value="https://fhir.nhs.uk/Id/nhs-number" />
+        <value value="9912003888" />
+    </identifier>
+    <name>
+        <use value="official" />
+        <family value="Dawkins" />
+        <given value="Jack" />
+    </name>
+    <gender value="male" />
+    <birthDate value="1965-02-28" />
+    <address>
+        <use value="home" />
+        <postalCode value="AB12 3CD" />
+    </address>
+    <generalPractitioner>
+        <identifier>
+            <system value="https://fhir.nhs.uk/Id/ods-organization-code" />
+            <value value="B81001" />
+        </identifier>
+    </generalPractitioner>
+</Patient>
