@@ -189,8 +189,8 @@
       <constraint>
         <key value="patient-nhs" />
         <severity value="error" />
-        <human value="Supplied NHS Number is outside the English and Welsh NHS Number range or length of the number is wrong." />
-        <expression value="identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').exists().not() or (identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').exists()  and identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').value.matches('^([456789]{1}[0-9]{9})$'))" />
+        <human value="Length of the supplied NHS Number is wrong." />
+        <expression value="identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').exists().not() or (identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').exists()  and identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').value.matches('^([0-9]{10})$'))" />
         <source value="https://fhir.nhs.uk/StructureDefinition/NHSDigital-Claim" />
       </constraint>
       <mustSupport value="true" />
