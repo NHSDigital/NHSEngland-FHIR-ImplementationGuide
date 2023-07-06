@@ -29,7 +29,6 @@
   <differential>
     <element id="Task">
       <path value="Task" />
-      <comment value="Task has three main uses: \n\n- basic delivery of an order resource (e.g. MedicationRequest or ServiceRequest)\n- minor workflow requests (e.g. phone patient, complete form or validate a referral)\n- workflow support (centred around complex workflow support and may involves a workflow engine)\n\n##### Order Fulfilment\n\nCentres on the fulfilment of the order. It does not contain the order details which are held in a referenced request resource. \nIn the diagram below the recipient or fulfiller of the order uses FHIR Task to accept or reject the order, it also uses Task to send `event` updates. \nNote the fulfiller will use other resources to record the details of the fulfilment such as MedicationDispense for a MedicationRequest.\n\n&lt;img src=&quot;https://raw.githubusercontent.com/NHSDigital/NHSDigital-FHIR-ImplementationGuide/master/Diagams/Task-Deliver.PNG&quot; width=&quot;60%&quot;/&gt;\n\nExamples:\n\n| Task.code | Task.status | Task.focus | Task.requester | Meaning | \n|--|--|--|--|\n| fulfill | rejected | MedicationRequest | dispenser | The dispenser is rejecting the fulfilment/deliver of a referenced MedicationRequest. The MedicationRequest is not cancelled |\n| fullfill | cancelled | MedicationRequest | any | The requested fulfilment of the MedicationRequest is cancelled. The referenced MedicationRequest is not cancelled |\n| fullfill | accepted | MedicationRequest | dispenser | The dispenser is taking responsibility of fulfilling the referenced MedicationRequest. |\n| fullfill | completed | MedicationRequest | dispenser | The requested fulfilment of the MedicationRequest is completed. The referenced MedicationRequest can now be changed to completed. |\n\nSee the section on `status` for more details.\n\n&lt;br/&gt;\n\n##### Minor Workflow Requests\n\nThis is used to implement additional around an order or to record specific workflow requests. These may not have a focused resource reference. It is anticipated they are coded using SNOMED CT.\n\n&lt;img src=&quot;https://raw.githubusercontent.com/NHSDigital/NHSDigital-FHIR-ImplementationGuide/master/Diagams/Task-Action.PNG&quot; width=&quot;60%&quot;/&gt;\nExamples:\n\n| Task.code | Task.focus | Task.requester | Task.owner | Task.reasonCode | Meaning |\n|--|--|--|--|--|\n| 413292001 Assessment for referral | ServiceRequest | referrer |  clinician | 3457005 Patient Referral | Check the referenced referral is valid. |  \n| 182836005 Review of medication |  | clinician | GP | 151715009 Emergency admission, asthma  | Request to review medication following an emergency admission. |  \n| 103742009 Renewal of prescription | MedicationRequest | patient | GP |   | Request for a reissue/refill of a medication |  \n| 324861000000109 Review of patient laboratory test report | DiagnosticReport | consultant | |   | Request for a lab report to be reviewed. See also &lt;a href=&quot;https://nhsconnect.github.io/CareConnectAPI/engage_poc_uhscc.html&quot;&gt;UHS Lab Reports&lt;/a&gt; | \n\nThe Task.status can be used to indicate fulfilment/delivery status.\n\n\n\n&lt;br/&gt;\n\n##### Workflow Support\n\nMore advanced workflow is supported, this adds in the use of Task.input and Task.output. This allows the passage of inputs and outputs which may be found in automated workflow activities.\n\nThe diagram below is from an acute trusts handling of a received eRS referral request. Each process communicates via the FHIR Task, the first process takes the eRS referral and gets the referral letter from eRS, these are then passed to the clinician for triage. Once triaged, the clinician creates a book appointment Task which the admin's action.\n\n&lt;img src=&quot;https://raw.githubusercontent.com/NHSDigital/NHSDigital-FHIR-ImplementationGuide/master/Diagams/Task-automated.PNG&quot; width=&quot;60%&quot;/&gt;" />
     </element>
     <element id="Task.extension">
       <path value="Task.extension" />
@@ -87,7 +86,6 @@
     </element>
     <element id="Task.status">
       <path value="Task.status" />
-      <comment value="For **EPS**\n\nOnly `in-progress` is currently supported for reasonCode = 373784005 (Dispensing medication) and focus is a `dispense-notification`. \n\n`rejected` / `cancelled` / `failed` are supported for reasonCode = 33633005 (Prescription of drug) and focus is a `prescription-order`." />
       <mustSupport value="true" />
     </element>
     <element id="Task.statusReason">
@@ -95,7 +93,6 @@
     </element>
     <element id="Task.intent">
       <path value="Task.intent" />
-      <comment value="Is not processed by EPS and is included for FHIR compliance reasons. The value should always be `order`." />
       <mustSupport value="true" />
     </element>
     <element id="Task.code">
@@ -159,7 +156,6 @@
     </element>
     <element id="Task.focus">
       <path value="Task.focus" />
-      <comment value="Tasks are often generated as a consequence of other workflows or relate to FHIR Workflow resources. For example a repeat medication request will be related to a previous `MedicationRequest` or a medication reconciliation may relate to a hospital admissions `Encounter/EpisodeOfCare`. This is carried in the `focus` element.\n\n`focus` can be omitted. For example if an ED generated a Medication Review as a result of COPD Emergency encounter they may chose to include a reference to the Encounter but they may decide instead to use a more specific reasonCode such as `394720003 | Asthma medication review`." />
       <constraint>
         <key value="nhsd-taskfocus" />
         <severity value="error" />
@@ -278,7 +274,6 @@
     </element>
     <element id="Task.restriction.period.end">
       <path value="Task.restriction.period.end" />
-      <comment value="**e-RS**\n\n- If deferred to provider (because there were no appointments available for a directly bookable service) then this is the date by which the provide should resolve the appointment slot issue; or\n- If the referral was sent to a triage service then this is the date by which the provider should have reviewed the referral" />
       <mustSupport value="true" />
     </element>
     <element id="Task.input">

@@ -375,7 +375,6 @@
     </element>
     <element id="ServiceRequest.note">
       <path value="ServiceRequest.note" />
-      <comment value="For systems that do not have structured annotations, they can simply communicate a single annotation with no author or time.  This element may need to be included in narrative because of the potential for modifying information.  *Annotations SHOULD NOT* be used to communicate &quot;modifying&quot; information that could be computable. (This is a SHOULD because enforcing user behavior is nearly impossible).&#xD;&#xA;&#xD;&#xA;```json&#xD;&#xA;&quot;note&quot;: [&#xD;&#xA;        {&#xD;&#xA;            &quot;text&quot;: &quot;Please advise me on this patient who ...(information about patient)&quot;&#xD;&#xA;        }&#xD;&#xA;    ]&#xD;&#xA;```" />
       <mustSupport value="true" />
     </element>
   </differential>
