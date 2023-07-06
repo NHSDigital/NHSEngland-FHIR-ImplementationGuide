@@ -39,7 +39,6 @@
   <differential>
     <element id="Location.identifier">
       <path value="Location.identifier" />
-      <comment value="SHOULD contain an ANANA/ODS code." />
     </element>
     <element id="Location.identifier:odsCode">
       <path value="Location.identifier" />
