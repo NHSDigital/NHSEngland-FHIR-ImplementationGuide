@@ -37,9 +37,6 @@
   <baseDefinition value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Location" />
   <derivation value="constraint" />
   <differential>
-    <element id="Location.identifier">
-      <path value="Location.identifier" />
-    </element>
     <element id="Location.identifier:odsCode">
       <path value="Location.identifier" />
       <sliceName value="odsCode" />
@@ -100,9 +97,6 @@
     </element>
     <element id="Location.managingOrganization">
       <path value="Location.managingOrganization" />
-      <type>
-        <code value="Reference" />
-      </type>
       <constraint>
         <key value="nhds-10" />
         <severity value="warning" />

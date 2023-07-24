@@ -111,7 +111,7 @@
         </discriminator>
         <rules value="open" />
       </slicing>
-      <min value="1" />
+      <min value="0" />
     </element>
     <element id="MedicationRequest.extension:medicationRepeatInformation">
       <path value="MedicationRequest.extension" />
@@ -242,9 +242,6 @@
       <path value="MedicationRequest.statusReason.coding.display" />
       <min value="1" />
     </element>
-    <element id="MedicationRequest.intent">
-      <path value="MedicationRequest.intent" />
-    </element>
     <element id="MedicationRequest.category">
       <path value="MedicationRequest.category" />
       <min value="1" />
@@ -335,9 +332,6 @@
     <element id="MedicationRequest.subject.identifier.value">
       <path value="MedicationRequest.subject.identifier.value" />
       <min value="1" />
-    </element>
-    <element id="MedicationRequest.encounter">
-      <path value="MedicationRequest.encounter" />
     </element>
     <element id="MedicationRequest.authoredOn">
       <path value="MedicationRequest.authoredOn" />
@@ -484,12 +478,6 @@
         <profile value="http://hl7.org/fhir/StructureDefinition/Dosage" />
       </type>
       <mustSupport value="true" />
-    </element>
-    <element id="MedicationRequest.dosageInstruction.additionalInstruction">
-      <path value="MedicationRequest.dosageInstruction.additionalInstruction" />
-    </element>
-    <element id="MedicationRequest.dosageInstruction.patientInstruction">
-      <path value="MedicationRequest.dosageInstruction.patientInstruction" />
     </element>
     <element id="MedicationRequest.dispenseRequest">
       <path value="MedicationRequest.dispenseRequest" />
