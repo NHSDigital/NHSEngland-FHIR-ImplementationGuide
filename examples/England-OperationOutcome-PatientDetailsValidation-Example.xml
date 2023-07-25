@@ -1,0 +1,28 @@
+<OperationOutcome xmlns="http://hl7.org/fhir">
+	<id value="England-OperationOutcome-PatientDetailsValidation-Example"/>
+	<meta>
+		<lastUpdated value="2021-04-21T16:58:00+00:00"/>
+	</meta>
+	<issue>
+		<severity value="information"/>
+		<code value="processing"/>
+		<diagnostics value="This element does not match any known slice defined in the profile https://fhir.nhs.uk/StructureDefinition/England-Patient"/>
+		<location value="Patient.identifier[1]"/>
+		<location value="Line 1, Col 651"/>
+	</issue>
+	<issue>
+		<severity value="error"/>
+		<code value="processing"/>
+		<details>
+			<coding>
+				<system value="https://fhir.nhs.uk/CodeSystem/England-SpineErrorOrWarningCode"/>
+				<code value="INVALID_VALUE"/>
+				<display value="Invalid value"/>
+			</coding>
+		</details>
+		<diagnostics value="Patient.gender: minimum required = 1, but only found 0 (from https://fhir.nhs.uk/StructureDefinition/England-Patient)"/>
+		<location value="Patient"/>
+		<location value="Line 1, Col 37"/>
+		<expression value="Patient.gender"/>
+	</issue>
+</OperationOutcome>
