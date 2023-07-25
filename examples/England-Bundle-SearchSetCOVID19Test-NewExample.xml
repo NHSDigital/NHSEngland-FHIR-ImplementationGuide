@@ -1,4 +1,4 @@
-<Bundle xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/GitHub/SchemasR4/fhir-all-xsd%20(1)/fhir-all-xsd/observation.xsd">
+<Bundle xmlns="http://hl7.org/fhir">
 	<id value="England-Bundle-SearchSetCOVID19Test-Example"/>
 	<type value="searchset"/>
 	<total value="2"/>
