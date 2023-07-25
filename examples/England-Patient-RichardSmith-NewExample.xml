@@ -1,0 +1,41 @@
+<Patient xmlns="http://hl7.org/fhir">
+	<id value="England-Patient-RichardSmith-Example"/>
+	<identifier>
+		<system value="https://fhir.nhs.uk/Id/nhs-number"/>
+		<value value="9871223456"/>
+	</identifier>
+	<identifier>
+		<system value="https://fhir.nhs.uk/Id/nhs-login-sub"/>
+		<value value="3fa85f64-5717-4562-b3fc-2c963f66afa6"/>
+	</identifier>
+	<active value="true"/>
+	<name>
+		<use value="official"/>
+		<family value="SMITH"/>
+		<given value="Richard"/>
+	</name>
+	<telecom>
+		<system value="email"/>
+		<value value="rsmith@test.com"/>
+	</telecom>
+	<telecom>
+		<system value="phone"/>
+		<value value="01131231234"/>
+		<use value="mobile"/>
+	</telecom>
+	<gender value="male"/>
+	<birthDate value="1970-09-11"/>
+	<address>
+		<use value="home"/>
+		<line value="11 Street"/>
+		<city value="YORK"/>
+		<district value="NORTH YORKSHIRE"/>
+		<postalCode value="AB12 3CD"/>
+	</address>
+	<generalPractitioner>
+		<identifier>
+			<system value="https://fhir.nhs.uk/Id/ods-organization-code"/>
+			<value value="B81001"/>
+		</identifier>
+	</generalPractitioner>
+</Patient>
