@@ -120,13 +120,6 @@
 					<value value="eb89a392-5b20-11eb-ae93-0242ac130002"/>
 				</identifier>
 				<status value="final"/>
-					<category>
-					<coding>
-						<system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
-						<code value="social-history"/>
-						<display value="Social History"/>
-					</coding>
-				</category>
 				<code>
 					<coding>
 						<system value="http://snomed.info/sct"/>
