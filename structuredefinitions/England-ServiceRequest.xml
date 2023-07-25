@@ -135,9 +135,6 @@
       <path value="ServiceRequest.basedOn.identifier.value" />
       <min value="1" />
     </element>
-    <element id="ServiceRequest.intent">
-      <path value="ServiceRequest.intent" />
-    </element>
     <element id="ServiceRequest.category">
       <path value="ServiceRequest.category" />
       <min value="1" />

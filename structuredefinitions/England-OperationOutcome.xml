@@ -27,16 +27,18 @@
   <baseDefinition value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-OperationOutcome" />
   <derivation value="constraint" />
   <differential>
-    <element id="OperationOutcome">
-      <path value="OperationOutcome" />
-    </element>
     <element id="OperationOutcome.id">
       <path value="OperationOutcome.id" />
       <short value="uniqueRequestID" />
     </element>
     <element id="OperationOutcome.meta">
       <path value="OperationOutcome.meta" />
+      <min value="1" />
       <mustSupport value="true" />
+    </element>
+    <element id="OperationOutcome.meta.lastUpdated">
+      <path value="OperationOutcome.meta.lastUpdated" />
+      <min value="1" />
     </element>
     <element id="OperationOutcome.extension">
       <path value="OperationOutcome.extension" />
