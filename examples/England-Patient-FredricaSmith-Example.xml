@@ -12,6 +12,7 @@
         <system value="https://fhir.nhs.uk/Id/nhs-number" />
         <value value="9333333333" />
     </identifier>
+    
     <name>
         <family value="SMITH" />
         <given value="FREDRICA" />
