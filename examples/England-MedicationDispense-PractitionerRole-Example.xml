@@ -61,7 +61,7 @@
         </actor>
     </performer>
     <authorizingPrescription>
-        <extension url="https://fhir.nhs.uk/StructureDefinition/Extension-DM-GroupIdentifier">
+        <extension url="https://fhir.nhs.uk/StructureDefinition/Extension-England-DMGroupIdentifier">
             <extension url="shortForm">
                 <valueIdentifier>
                     <system value="https://fhir.nhs.uk/Id/prescription-order-number" />
