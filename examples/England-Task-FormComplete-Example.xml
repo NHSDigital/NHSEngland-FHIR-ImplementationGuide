@@ -57,12 +57,12 @@
 		<type>
 			<coding>
 				<system value="http://hl7.org/fhir/resource-types"/>
-				<code value="QuestionnaireRequest"/>
+				<code value="QuestionnaireResponse"/>
 			</coding>
 			<text value="Link to completed Health review"/>
 		</type>
 		<valueReference>
-			<reference value="https://3cdzg7kbj4.execute-api.eu-west-2.amazonaws.com/poc/clinicaldatasharing/FHIR/R4/QuestionnaireRequest/9a3ea8c7-d1a4-4383-969b-5b3617245553"/>
+			<reference value="https://3cdzg7kbj4.execute-api.eu-west-2.amazonaws.com/poc/clinicaldatasharing/FHIR/R4/QuestionnaireResponse/9a3ea8c7-d1a4-4383-969b-5b3617245553"/>
 			<identifier>
 				<system value="https://tools.ietf.org/html/rfc4122"/>
 				<value value="9a3ea8c7-d1a4-4383-969b-5b3617245553"/>
