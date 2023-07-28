@@ -28,10 +28,13 @@
 	</for>
 	<authoredOn value="2021-10-13T16:20:27+07:00"/>
 	<lastModified value="2021-10-13T16:20:27+07:00"/>
-	<requester>
-		<reference value="England-Practitioner-GP-Example"/>
-		<display value="DR RAZIA ALI"/>
-	</requester>
+    <requester>
+        <identifier>
+            <system value="https://fhir.nhs.uk/Id/ods-organization-code" />
+            <value value="RR8" />
+        </identifier>
+        <display value="LEEDS TEACHING HOSPITALS NHS TRUST" />
+    </requester>
 	<performerType>
 		<coding>
 			<system value="http://snomed.info/sct"/>
@@ -66,7 +69,7 @@
 			<text value="Link to completed Health review"/>
 		</type>
 		<valueReference>
-			<reference value="https://example.fhir.nhs.uk/Questionnaire/ActiveERSAdviceAndGuidance-Example"/>
+			<reference value="https://3cdzg7kbj4.execute-api.eu-west-2.amazonaws.com/poc/clinicaldatasharing/FHIR/R4/QuestionnaireResponse/9a3ea8c7-d1a4-4383-969b-5b3617245553"/>
 			<identifier>
 				<system value="https://tools.ietf.org/html/rfc4122"/>
 				<value value="QuestionnaireResponse/d9d4cf80-3f9d-4435-9f3b-e6efb09ad654"/>
@@ -78,7 +81,7 @@
 			<text value="ADVICE AND GUIDANCE"/>
 		</type>
 		<valueReference>
-			<reference value="https://example.fhir.nhs.uk/Questionnaire/ActiveERSAdviceAndGuidance-Example"/>
+			<reference value="https://3cdzg7kbj4.execute-api.eu-west-2.amazonaws.com/poc/clinicaldatasharing/FHIR/R4/QuestionnaireResponse/9a3ea8c7-d1a4-4383-969b-5b3617245553"/>
 		</valueReference>
 	</output>
 </Task>
