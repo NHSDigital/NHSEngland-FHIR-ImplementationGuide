@@ -19,7 +19,7 @@
         <display value="Colonoscopy Request" />
     </focus>
     <for>
-        <reference value="Patient/England-Patient-RichardSmith-Example" />
+        <reference value="England-Patient-RichardSmith-Example" />
         <display value="Richard Smith" />
     </for>
     <executionPeriod>
@@ -29,8 +29,8 @@
     <authoredOn value="2021-10-13T16:20:27+07:00" />
     <lastModified value="2021-10-13T16:20:27+07:00" />
     <requester>
-        <reference value="Practitioner/England-Practitioner-Consultant-Example" />
-        <display value="Consultant" />
+        <reference value="England-Practitioner-Consultant-Example" />
+        <display value="DR Thomas Edwards" />
     </requester>
     <performerType>
         <coding>
@@ -41,8 +41,8 @@
         <text value="Performer" />
     </performerType>
     <owner>
-        <reference value="Practitioner/England-Practitioner-GP-Example" />
-        <display value="GP" />
+        <reference value="England-Practitioner-GP-Example" />
+        <display value="DR RAZIA ALI" />
     </owner>
     <reasonCode>
 		<coding>
