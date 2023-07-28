@@ -1,0 +1,84 @@
+<Task xmlns="http://hl7.org/fhir">
+    <id value="England-Task-Colonoscopy-Example" />
+    <identifier>
+        <system value="https://tools.ietf.org/html/rfc4122" />
+        <value value="b269d1d7-1acf-47bb-8b3c-e38b583d9a07" />
+    </identifier>
+    <status value="in-progress" />
+    <intent value="order" />
+    <priority value="routine" />
+    <code>
+        <coding>
+            <system value="http://hl7.org/fhir/CodeSystem/task-code" />
+            <code value="fulfill" />
+            <display value="Fulfill the focal request" />
+        </coding>
+    </code>
+    <focus>
+        <reference value="England-ServiceRequest-ActiveERSAdviceAndGuidance-Example" />
+        <display value="Colonoscopy Request" />
+    </focus>
+    <for>
+        <reference value="Patient/England-Patient-RichardSmith-Example" />
+        <display value="Richard Smith" />
+    </for>
+    <executionPeriod>
+        <start value="2021-10-13T16:20:27+07:00" />
+        <end value="2021-10-13T18:20:27+07:00" />
+    </executionPeriod>
+    <authoredOn value="2021-10-13T16:20:27+07:00" />
+    <lastModified value="2021-10-13T16:20:27+07:00" />
+    <requester>
+        <reference value="Practitioner/England-Practitioner-Consultant-Example" />
+        <display value="Consultant" />
+    </requester>
+    <performerType>
+        <coding>
+            <system value="http://snomed.info/sct" />
+            <code value="71838004" />
+            <display value="Gastroenterologist" />
+        </coding>
+        <text value="Performer" />
+    </performerType>
+    <owner>
+        <reference value="Practitioner/England-Practitioner-GP-Example" />
+        <display value="GP" />
+    </owner>
+    <reasonCode>
+		<coding>
+			<system value="http://snomed.info/sct"/>
+			<code value="306185001"/>
+			<display value="Referral to cardiac surgery service"/>
+		</coding>
+	</reasonCode>
+    <restriction>
+        <repetitions value="1" />
+        <period>
+            <end value="2021-10-13T18:30:00+07:00" />
+        </period>
+    </restriction>
+    	<input>
+		<type>
+			<coding>
+				<system value="http://hl7.org/fhir/resource-types"/>
+				<code value="QuestionnaireResponse"/>
+			</coding>
+			<text value="Link to completed Health review"/>
+		</type>
+		<valueReference>
+			<reference value="England-ServiceRequest-ActiveERSAdviceAndGuidance-Example"/>
+			<identifier>
+				<system value="https://tools.ietf.org/html/rfc4122"/>
+				<value value="9a3ea8c7-d1a4-4383-969b-5b3617245553"/>
+			</identifier>
+		</valueReference>
+	</input>
+    <output>
+        <type>
+            <text value="Colonoscopy Appointment" />
+        </type>
+        <valueReference>
+            <reference value="England-ServiceRequest-ActiveERSAdviceAndGuidance-Example" />
+        </valueReference>
+    </output>
+</Task>
