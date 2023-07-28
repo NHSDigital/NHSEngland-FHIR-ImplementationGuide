@@ -20,14 +20,18 @@
 	</focus>
 	<for>
 		<reference value="Patient/England-Patient-RichardSmith-Example"/>
-		<display value="Richard Smith"/>
+		<identifier>
+			<system value="https://fhir.nhs.uk/Id/nhs-number"/>
+			<value value="9333333333"/>
+		</identifier>
+		<display value="RichardSmith"/>
 	</for>
 	<authoredOn value="2021-10-13T16:20:27+07:00"/>
 	<lastModified value="2021-10-13T16:20:27+07:00"/>
- <requester>
-        <reference value="Practitioner/Practitioner/England-Practitioner-GP-Example" />
-        <display value="DR RAZIA ALI" />
-    </requester>
+	<requester>
+		<reference value="Practitioner/Practitioner/England-Practitioner-GP-Example"/>
+		<display value="DR RAZIA ALI"/>
+	</requester>
 	<performerType>
 		<coding>
 			<system value="http://snomed.info/sct"/>
