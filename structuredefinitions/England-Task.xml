@@ -27,9 +27,6 @@
   <baseDefinition value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Task" />
   <derivation value="constraint" />
   <differential>
-    <element id="Task">
-      <path value="Task" />
-    </element>
     <element id="Task.extension">
       <path value="Task.extension" />
       <slicing>
@@ -87,9 +84,6 @@
     <element id="Task.status">
       <path value="Task.status" />
       <mustSupport value="true" />
-    </element>
-    <element id="Task.statusReason">
-      <path value="Task.statusReason" />
     </element>
     <element id="Task.intent">
       <path value="Task.intent" />
@@ -217,9 +211,6 @@
     <element id="Task.owner">
       <path value="Task.owner" />
       <short value="Responsible organisation" />
-      <type>
-        <code value="Reference" />
-      </type>
       <mustSupport value="true" />
     </element>
     <element id="Task.owner.identifier.system">

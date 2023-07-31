@@ -27,9 +27,6 @@
   <baseDefinition value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-OperationOutcome" />
   <derivation value="constraint" />
   <differential>
-    <element id="OperationOutcome">
-      <path value="OperationOutcome" />
-    </element>
     <element id="OperationOutcome.id">
       <path value="OperationOutcome.id" />
       <short value="uniqueRequestID" />

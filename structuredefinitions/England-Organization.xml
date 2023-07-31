@@ -9,13 +9,13 @@
   <date value="2023-06-01" />
   <publisher value="NHS England" />
   <contact>
-		<name value="NHS England" />
-		<telecom>
-			<system value="email" />
-			<value value="interoperabilityteam@nhs.net" />
-			<use value="work" />
-			<rank value="1" />
-		</telecom>
+    <name value="NHS England" />
+    <telecom>
+      <system value="email" />
+      <value value="interoperabilityteam@nhs.net" />
+      <use value="work" />
+      <rank value="1" />
+    </telecom>
   </contact>
   <description value="This profile defines the NHS England constraints and extensions on the FHIR UK Core resource [UK Core Organization](https://simplifier.net/hl7fhirukcorer4/ukcore-organization)." />
   <purpose value="This profile allows exchange of a formally or informally recognised grouping of people or organisations formed for the purpose of achieving some form of collective action. Includes companies, institutions, corporations, departments, community groups, healthcare practice groups, etc." />
@@ -54,16 +54,6 @@
       <min value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Organization.identifier:odsOrganisationCode">
-      <path value="Organization.identifier" />
-      <sliceName value="odsOrganisationCode" />
-    </element>
-    <element id="Organization.identifier:odsOrganisationCode.assigner">
-      <path value="Organization.identifier.assigner" />
-      <type>
-        <code value="Reference" />
-      </type>
-    </element>
     <element id="Organization.identifier:odsSiteCode">
       <path value="Organization.identifier" />
       <sliceName value="odsSiteCode" />
@@ -91,7 +81,6 @@
       <path value="Organization.type.extension" />
       <sliceName value="activePeriod" />
       <min value="0" />
-      <max value="*" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-ODSOrganizationRoleActivePeriod" />
@@ -102,7 +91,6 @@
       <path value="Organization.type.extension" />
       <sliceName value="organisationRole" />
       <min value="0" />
-      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-ODSOrganizationRole" />
@@ -151,12 +139,6 @@
     <element id="Organization.partOf.identifier.value">
       <path value="Organization.partOf.identifier.value" />
       <min value="1" />
-    </element>
-    <element id="Organization.endpoint.identifier.assigner">
-      <path value="Organization.endpoint.identifier.assigner" />
-      <type>
-        <code value="Reference" />
-      </type>
     </element>
   </differential>
 </StructureDefinition>
