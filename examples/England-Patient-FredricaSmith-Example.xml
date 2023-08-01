@@ -12,6 +12,7 @@
 		<system value="https://fhir.nhs.uk/Id/nhs-number"/>
 		<value value="9333333333"/>
 	</identifier>
+	<active value="true"/>
 	<name>
 		<family value="SMITH"/>
 		<given value="FREDRICA"/>
@@ -38,6 +39,7 @@
 		</name>
 		<address>
 			<use value="home"/>
+			<line value="11 Street"/>
 			<city value="MALTON"/>
 			<district value="NORTH YORKSHIRE"/>
 			<postalCode value="YO32 5TT"/>
