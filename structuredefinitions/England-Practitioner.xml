@@ -81,7 +81,7 @@
         <expression value="identifier.where(system='https://fhir.hl7.org.uk/Id/hcpc-number').exists().not() or (identifier.where(system='https://fhir.hl7.org.uk/Id/hcpc-number').exists()  and identifier.where(system='https://fhir.hl7.org.uk/Id/hcpc-number').value.matches('^[A-Z]{2}[0-9]{6}$'))" />
       </constraint>
       <constraint>
-        <key value="nhse-pra-007 />
+        <key value="nhse-pra-007" />
         <severity value="warning" />
         <human value="DIN format must be NNNNNN" />
         <expression value="identifier.where(system='https://fhir.hl7.org.uk/Id/din-number').exists().not() or (identifier.where(system='https://fhir.hl7.org.uk/Id/din-number').exists()  and identifier.where(system='https://fhir.hl7.org.uk/Id/din-number').value.matches('^[0-9]{6}$'))" />
