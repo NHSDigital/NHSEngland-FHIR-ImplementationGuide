@@ -1,32 +1,49 @@
 <PractitionerRole xmlns="http://hl7.org/fhir">
-    <id value="England-PractitionerRole-SDSProvenance-Example" />
-    <identifier>
-        <system value="https://fhir.nhs.uk/Id/sds-role-profile-id" />
-        <value value="454567759542" />
+	<id value="England-PractitionerRole-SDSProvenance-Example"/>
+	<identifier>
+		<system value="https://fhir.nhs.uk/Id/sds-role-profile-id"/>
+		<value value="454567759542"/>
+	</identifier>
+	<active value="true"/>
+	<period>
+		<start value="2020-04-01"/>
+	</period>
+	<practitioner>
+		<identifier>
+			<system value="https://fhir.hl7.org.uk/Id/gmc-number"/>
+			<value value="C9876543"/>
+		</identifier>
+		<display value="Dr Smith"/>
+	</practitioner>
+	<organization>
+		<identifier>
+			<system value="https://fhir.nhs.uk/Id/ods-organization-code"/>
+			<value value="RBA"/>
+		</identifier>
+		<display value="TAUNTON AND SOMERSET NHS FOUNDATION TRUST"/>
+	</organization>
+	<code>
+		<coding>
+			<system value="https://fhir.nhs.uk/CodeSystem/England-SDSJobRoleCode"/>
+			<code value="R0050"/>
+		</coding>
+	</code>
+	<specialty>
+		<coding>
+			<system value="https://fhir.hl7.org.uk/CodeSystem/UKCore-PracticeSettingCode"/>
+			<code value="100"/>
+			<display value="GENERAL SURGERY"/>
+		</coding>
+	</specialty>
+<location>
+	<identifier>
+        <system value="https://fhir.nhs.uk/Id/ods-site-code" />
+        <value value="RR805" />
     </identifier>
-    <practitioner>
-        <identifier>
-            <system value="https://fhir.hl7.org.uk/Id/gmc-number" />
-            <value value="C9876543" />
-        </identifier>
-        <display value="Dr Smith" />
-    </practitioner>
-    <organization>
-        <identifier>
-            <system value="https://fhir.nhs.uk/Id/ods-organization-code" />
-            <value value="RBA" />
-        </identifier>
-        <display value="TAUNTON AND SOMERSET NHS FOUNDATION TRUST" />
-    </organization>
-    <code>
-        <coding>
-            <system value="https://fhir.nhs.uk/CodeSystem/England-SDSJobRoleCode" />
-            <code value="R0050" />
-        </coding>
-    </code>
-    <telecom>
-        <system value="phone" />
-        <value value="01234567890" />
-        <use value="work" />
-    </telecom>
+	</location>
+	<telecom>
+		<system value="phone"/>
+		<value value="01234567890"/>
+		<use value="work"/>
+	</telecom>
 </PractitionerRole>
