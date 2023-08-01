@@ -104,7 +104,7 @@
         <code value="Reference" />
       </type>
       <constraint>
-        <key value="nhds-10" />
+        <key value="nhse-loc-001" />
         <severity value="warning" />
         <human value="managingOrganization - a display name should be provided" />
         <expression value="(display.exists())" />
@@ -125,7 +125,7 @@
     <element id="Location.partOf">
       <path value="Location.partOf" />
       <constraint>
-        <key value="nhsd-9" />
+        <key value="nhse-loc-002" />
         <severity value="warning" />
         <human value="partOf - display name should be provided" />
         <expression value="(display.exists())" />

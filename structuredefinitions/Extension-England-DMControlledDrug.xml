@@ -39,7 +39,7 @@
     <element id="Extension">
       <path value="Extension" />
       <constraint>
-        <key value="eps-cd1" />
+        <key value="nhse-con-drug-001" />
         <severity value="error" />
         <human value="Extension(controlledDrug) - For schedule 2 or 3 Controlled Drugs, the quantity must be expressed in words" />
         <expression value="(((extension('schedule').value.code='CD2' and extension('quantityWords').exists()) or (extension('schedule').value.code='CD3' and extension('quantityWords').exists()) or (extension('schedule').value.code != 'CD2' and extension('schedule').value.code != 'CD3')) and extension('scheduled').exists()) or (extension('scheduled').exists().not())" />
