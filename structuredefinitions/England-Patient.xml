@@ -32,8 +32,8 @@
       <constraint>
         <key value="nhse-pat-001" />
         <severity value="error" />
-        <human value="Supplied NHS Number is outside the English and Welsh NHS Number range or length of the number is wrong." />
-        <expression value="identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').exists().not() or (identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').exists()  and identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').value.matches('^([456789]{1}[0-9]{9})$'))" />
+        <human value="Length of the supplied NHS Number is wrong." />
+        <expression value="identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').exists().not() or (identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').exists()  and identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').value.matches('^([0-9]{10})$'))" />
       </constraint>
     </element>
     <element id="Patient.extension">
@@ -156,12 +156,6 @@
       <path value="Patient.address.use" />
       <short value="The following values are allowed: home, work, temp, billing" />
     </element>
-    <element id="Patient.address.line">
-      <path value="Patient.address.line" />
-    </element>
-    <element id="Patient.multipleBirth[x]">
-      <path value="Patient.multipleBirth[x]" />
-    </element>
     <element id="Patient.contact">
       <path value="Patient.contact" />
       <mustSupport value="true" />
@@ -180,9 +174,6 @@
         <rules value="openAtEnd" />
       </slicing>
       <requirements value="GP Surgery SHOULD be provided. It is recommended the patients GP Surgery is the first item in the array and branch surgery is second. It is also suggested type and display (name of practice) is also included." />
-      <type>
-        <code value="Reference" />
-      </type>
       <mustSupport value="true" />
     </element>
     <element id="Patient.generalPractitioner.identifier">

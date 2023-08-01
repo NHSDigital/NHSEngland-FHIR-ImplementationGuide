@@ -1,0 +1,20 @@
+<OperationOutcome xmlns="http://hl7.org/fhir" >
+	<id value="England-OperationOutcome-PatientFirstNameValidation-Example"/>
+	<meta>
+		<lastUpdated value="2021-04-14T11:35:00+00:00"/>
+	</meta>
+	<issue>
+		<severity value="error"/>
+		<code value="value"/>
+		<details>
+			<coding>
+				<system value="https://fhir.nhs.uk/CodeSystem/England-SpineErrorOrWarningCode"/>
+				<code value="INVALID_VALUE"/>
+				<display value="Invalid value"/>
+			</coding>
+		</details>
+		<diagnostics value="(invalid_request) firstName is missing"/>
+		<location value="/data/attributes/firstName"/>
+		<expression value="Patient.firstname"/>
+	</issue>
+</OperationOutcome>
