@@ -135,9 +135,6 @@
       <path value="ServiceRequest.basedOn.identifier.value" />
       <min value="1" />
     </element>
-    <element id="ServiceRequest.intent">
-      <path value="ServiceRequest.intent" />
-    </element>
     <element id="ServiceRequest.category">
       <path value="ServiceRequest.category" />
       <min value="1" />
@@ -258,16 +255,16 @@
         <aggregation value="referenced" />
       </type>
       <constraint>
-        <key value="patient-reference" />
+        <key value="nhse-prr-001" />
         <severity value="error" />
         <human value="An identifier reference or resource reference must be provided" />
         <expression value="(reference.exists() or identifier.exists())" />
       </constraint>
       <constraint>
-        <key value="patient-nhs" />
+        <key value="nhse-prr-002" />
         <severity value="error" />
-        <human value="NHS Number must be in the English and Welsh NHS Number range or length of the number is wrong." />
-        <expression value="identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').exists().not() or (identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').exists()  and identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').value.matches('^([456789]{1}[0-9]{9})$'))" />
+        <human value="Length of the supplied NHS Number is wrong." />
+        <expression value="identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').exists().not() or (identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').exists()  and identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').value.matches('^([0-9]{10})$'))" />
       </constraint>
       <mustSupport value="true" />
     </element>

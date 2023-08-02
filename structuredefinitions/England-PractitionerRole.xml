@@ -36,7 +36,7 @@
         <expression value="identifier.where(system='https://fhir.hl7.org.uk/Id/nhsbsa-spurious-code').exists().not() or (identifier.where(system='https://fhir.hl7.org.uk/Id/nhsbsa-spurious-code').exists()  and identifier.where(system='https://fhir.hl7.org.uk/Id/nhsbsa-spurious-code').value.matches('^[G]{1}[67]{1}[0-9]{6}$'))" />
       </constraint>
       <constraint>
-        <key value="role-sds-role-profile" />
+        <key value="nhse-pro-001" />
         <severity value="error" />
         <human value="SDS Role Profile Id must be 12 digits" />
         <expression value="identifier.where(system='https://fhir.nhs.uk/Id/sds-role-profile-id').exists().not() or (identifier.where(system='https://fhir.nhs.uk/Id/sds-role-profile-id').exists()  and identifier.where(system='https://fhir.nhs.uk/Id/sds-role-profile-id').value.matches('^[0-9]{12}$'))" />
@@ -97,67 +97,64 @@
     </element>
     <element id="PractitionerRole.practitioner">
       <path value="PractitionerRole.practitioner" />
-      <type>
-        <code value="Reference" />
-      </type>
       <constraint>
-        <key value="nhsd-2" />
+        <key value="nhse-pro-002" />
         <severity value="warning" />
         <human value="An identifier reference or resource reference must be provided" />
         <expression value="(reference.exists() or identifier.exists())" />
       </constraint>
       <constraint>
-        <key value="role-nmc" />
+        <key value="nhse-pro-003" />
         <severity value="warning" />
         <human value="NMC must be of the format NNANNNNA" />
         <expression value="identifier.exists().not() or identifier.where(system='https://fhir.hl7.org.uk/Id/nmc-number').exists().not() or (identifier.where(system='https://fhir.hl7.org.uk/Id/nmc-number').exists()  and identifier.where(system='https://fhir.hl7.org.uk/Id/nmc-number').value.matches('^[0-9]{2}[A-Z]{1}[0-9]{4}[A-Z]{1}$'))" />
       </constraint>
       <constraint>
-        <key value="role-gmp" />
+        <key value="nhse-pro-004" />
         <severity value="error" />
         <human value="GMP must be of the format GNNNNNNN and not be a spurious code (starts with G6 or G7)" />
         <expression value="identifier.exists().not() or identifier.where(system='https://fhir.hl7.org.uk/Id/gmp-number').exists().not() or (identifier.where(system='https://fhir.hl7.org.uk/Id/gmp-number').exists()  and identifier.where(system='https://fhir.hl7.org.uk/Id/gmp-number').value.matches('^[G]{1}[01234589]{1}[0-9]{6}$'))" />
       </constraint>
       <constraint>
-        <key value="role-gmc" />
+        <key value="nhse-pro-005" />
         <severity value="error" />
         <human value="GMC must be of the format CNNNNNNN" />
         <expression value="identifier.exists().not() or identifier.where(system='https://fhir.hl7.org.uk/Id/gmc-number').exists().not() or (identifier.where(system='https://fhir.hl7.org.uk/Id/gmc-number').exists()  and identifier.where(system='https://fhir.hl7.org.uk/Id/gmc-number').value.matches('^[C]{1}[0-9]{7}$'))" />
       </constraint>
       <constraint>
-        <key value="role-gphc" />
+        <key value="nhse-pro-006" />
         <severity value="warning" />
         <human value="GPHC must be of the format NNNNNNN" />
         <expression value="identifier.exists().not() or identifier.where(system='https://fhir.hl7.org.uk/Id/gphc-number').exists().not() or (identifier.where(system='https://fhir.hl7.org.uk/Id/gphc-number').exists()  and identifier.where(system='https://fhir.hl7.org.uk/Id/gphc-number').value.matches('^[0-9]{7}$'))" />
       </constraint>
       <constraint>
-        <key value="role-hcpc" />
+        <key value="nhse-pro-007" />
         <severity value="warning" />
         <human value="HCPC must be of the format AANNNNNN" />
         <expression value="identifier.exists().not() or identifier.where(system='https://fhir.hl7.org.uk/Id/hcpc-number').exists().not() or (identifier.where(system='https://fhir.hl7.org.uk/Id/hcpc-number').exists()  and identifier.where(system='https://fhir.hl7.org.uk/Id/hcpc-number').value.matches('^[A-Z]{2}[0-9]{6}$'))" />
       </constraint>
       <constraint>
-        <key value="role-din" />
+        <key value="nhse-pro-008" />
         <severity value="warning" />
         <human value="DIN format must be NNNNNN" />
         <expression value="identifier.exists().not() or identifier.where(system='https://fhir.hl7.org.uk/Id/din-number').exists().not() or (identifier.where(system='https://fhir.hl7.org.uk/Id/din-number').exists()  and identifier.where(system='https://fhir.hl7.org.uk/Id/din-number').value.matches('^[0-9]{6}$'))" />
       </constraint>
       <constraint>
-        <key value="role-sds-user-numeric" />
+        <key value="nhse-pro-009" />
         <severity value="error" />
         <human value="sds-user-id must be numeric" />
         <expression value="identifier.where(system='https://fhir.nhs.uk/Id/sds-user-id').exists().not() or (identifier.where(system='https://fhir.nhs.uk/Id/sds-user-id').exists()  and identifier.where(system='https://fhir.nhs.uk/Id/sds-user-id').value.matches('^[0-9]+$'))" />
         <source value="https://fhir.nhs.uk/StructureDefinition/England-Practitioner" />
       </constraint>
       <constraint>
-        <key value="role-gmcreferencenumber" />
+        <key value="nhse-pro-010" />
         <severity value="error" />
         <human value="GMC Reference Number must be of the format NNNNNNN" />
         <expression value="identifier.where(system='https://fhir.hl7.org.uk/Id/gmc-reference-number').exists().not() or (identifier.where(system='https://fhir.hl7.org.uk/Id/gphc-number').exists()  and identifier.where(system='https://fhir.hl7.org.uk/Id/gmc-reference-number').value.matches('^[0-9]{7}$'))" />
         <source value="https://fhir.nhs.uk/StructureDefinition/England-Practitioner" />
       </constraint>
       <constraint>
-        <key value="nacs-code-retired" />
+        <key value="nhse-pro-011" />
         <severity value="warning" />
         <human value="NACS (/ODS) Practitioner Identifier is retired in NHS FHIR and should not be used. Please use the actual naming system instead (e,g, https://fhir.hl7.org.uk/Id/gmc-number, https://fhir.hl7.org.uk/Id/gmp-number, etc)." />
         <expression value="identifier.where(system='https://fhir.hl7.org.uk/Id/professional-code').exists().not()" />
@@ -167,11 +164,8 @@
     </element>
     <element id="PractitionerRole.organization">
       <path value="PractitionerRole.organization" />
-      <type>
-        <code value="Reference" />
-      </type>
       <constraint>
-        <key value="nhsd-1" />
+        <key value="nhse-pro-012" />
         <severity value="warning" />
         <human value="PractitionerRole.organization - An identifier reference or resource reference should be provided" />
         <expression value="(reference.exists() or identifier.exists())" />
@@ -283,11 +277,8 @@
     </element>
     <element id="PractitionerRole.location">
       <path value="PractitionerRole.location" />
-      <type>
-        <code value="Reference" />
-      </type>
       <constraint>
-        <key value="nhsd-3" />
+        <key value="nhse-pro-013" />
         <severity value="error" />
         <human value="PractitionerRole.location - An identifier or resource reference must be provided" />
         <expression value="(reference.exists() or identifier.exists())" />
@@ -305,11 +296,8 @@
     <element id="PractitionerRole.healthcareService">
       <path value="PractitionerRole.healthcareService" />
       <max value="1" />
-      <type>
-        <code value="Reference" />
-      </type>
       <constraint>
-        <key value="nhsd-4" />
+        <key value="nhse-pro-014" />
         <severity value="error" />
         <human value="PractitionerRole.healthcareService - An identifier reference or resource reference must be provided" />
         <expression value="(reference.exists() or (identifier.exists()))" />
