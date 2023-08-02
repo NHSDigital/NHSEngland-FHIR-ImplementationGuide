@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeSystem xmlns="http://hl7.org/fhir">
-    <id value="England-BARSMessageServiceRequestCodes"/>
-    <url value="https://fhir.nhs.uk/CodeSystem/England-BARSMessageServiceRequestCodes"/>
+    <id value="England-BARSMessageServiceRequestCode"/>
+    <url value="https://fhir.nhs.uk/CodeSystem/England-BARSMessageServiceRequestCode"/>
     <identifier>
         <system value="https://fhir.nhs.uk/identifier/CodeSystem"/>
-        <value value="England-BARSMessageServiceRequestCodes"/>
+        <value value="England-BARSMessageServiceRequestCode"/>
     </identifier>
     <version value="1.0.0"/>
-    <name value="EnglandBARSMessageServiceRequestCodes"/>
-    <title value="England BARS Message ServiceRequest Codes"/>
+    <name value="EnglandBARSMessageServiceRequestCode"/>
+    <title value="England BARS Message ServiceRequest Code"/>
     <status value="draft"/>
     <date value="2023-06-01"/>
     <publisher value="NHS England"/>

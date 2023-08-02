@@ -34,7 +34,7 @@
     </extension>
     <extension url="https://fhir.nhs.uk/StructureDefinition/Extension-England-ServiceRequestPriority">
         <valueCoding>
-            <system value="https://fhir.nhs.uk/CodeSystem/England-ERSPriorityCodes" />
+            <system value="https://fhir.nhs.uk/CodeSystem/England-ERSPriorityCode" />
             <code value="TWO_WEEK_WAIT" />
             <display value="2 Week Wait" />
         </valueCoding>

@@ -48,7 +48,7 @@
     </element>
     <element id="Extension.value[x].system">
       <path value="Extension.value[x].system" />
-      <fixedUri value="https://fhir.nhs.uk/CodeSystem/England-ERSPriorityCodes" />
+      <fixedUri value="https://fhir.nhs.uk/CodeSystem/England-ERSPriorityCode" />
     </element>
   </differential>
 </StructureDefinition>

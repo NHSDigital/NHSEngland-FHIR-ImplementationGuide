@@ -34,11 +34,11 @@
             <version value="1.0.0"/>
         </include>
         <include>
-            <system value="https://fhir.nhs.uk/CodeSystem/England-HTTPErrorCodes"/>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-HTTPErrorCode"/>
             <version value="1.0.0"/>
         </include>
         <include>
-            <system value="https://fhir.nhs.uk/CodeSystem/England-ERSErrorCodes"/>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-ERSErrorCode"/>
             <version value="1.0.0"/>
         </include>
     </compose>

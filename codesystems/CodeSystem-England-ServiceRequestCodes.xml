@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeSystem xmlns="http://hl7.org/fhir">
-    <id value="England-ServiceRequestCodes"/>
-    <url value="https://fhir.nhs.uk/CodeSystem/England-ServiceRequestCodes"/>
+    <id value="England-ServiceRequestCode"/>
+    <url value="https://fhir.nhs.uk/CodeSystem/England-ServiceRequestCode"/>
     <identifier>
         <system value="https://fhir.nhs.uk/identifier/CodeSystem"/>
-        <value value="England-ServiceRequestCodes"/>
+        <value value="England-ServiceRequestCode"/>
     </identifier>
     <version value="1.0.0"/>
     <name value="EnglandServiceRequestCodes"/>

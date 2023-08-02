@@ -26,7 +26,7 @@
                 <intent value="order" />
                 <category>
                     <coding>
-                        <system value="https://fhir.nhs.uk/CodeSystem/England-BARSMessageServiceRequestCodes" />
+                        <system value="https://fhir.nhs.uk/CodeSystem/England-BARSMessageServiceRequestCode" />
                         <code value="referral" />
                     </coding>
                 </category>
