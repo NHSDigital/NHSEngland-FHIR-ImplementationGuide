@@ -2,7 +2,7 @@
     <id value="England-MessageEventBARS" />
     <url value="https://fhir.nhs.uk/CodeSystem/England-MessageEventBARS" />
     <identifier>
-        <system value="https://fhir.nhs.uk/identifier/England-MessageEvents" />
+        <system value="https://fhir.nhs.uk/identifier/England-MessageEvent" />
         <value value="England-MessageEventBARS" />
     </identifier>
     <version value="1.0.0" />
