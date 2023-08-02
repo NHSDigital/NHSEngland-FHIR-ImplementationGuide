@@ -151,7 +151,7 @@
     <element id="Task.focus">
       <path value="Task.focus" />
       <constraint>
-        <key value="nhsd-taskfocus" />
+        <key value="nhse-tsk-001" />
         <severity value="error" />
         <human value="focus - An identifier reference or resource reference must be provided" />
         <expression value="(reference.exists() or identifier.exists())" />
@@ -162,13 +162,13 @@
       <path value="Task.for" />
       <min value="1" />
       <constraint>
-        <key value="patient-reference" />
+        <key value="nhse-tsk-002" />
         <severity value="error" />
         <human value="An identifier reference or resource reference must be provided" />
         <expression value="(reference.exists() or identifier.exists())" />
       </constraint>
       <constraint>
-        <key value="patient-nhs" />
+        <key value="nhse-tsk-003" />
         <severity value="error" />
         <human value="Length of the supplied NHS Number is wrong." />
         <expression value="identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').exists().not() or (identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').exists()  and identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').value.matches('^([0-9]{10})$'))" />

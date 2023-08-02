@@ -30,7 +30,7 @@
     <element id="Patient">
       <path value="Patient" />
       <constraint>
-        <key value="patient-nhs" />
+        <key value="nhse-pat-001" />
         <severity value="error" />
         <human value="Length of the supplied NHS Number is wrong." />
         <expression value="identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').exists().not() or (identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').exists()  and identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').value.matches('^([0-9]{10})$'))" />
