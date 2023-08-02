@@ -1,11 +1,11 @@
 <ValueSet xmlns="http://hl7.org/fhir">
-  <id value="England-RemovalReason" />
-  <url value="https://fhir.nhs.uk/ValueSet/England-RemovalReason" />
+  <id value="England-FGMRemovalReason" />
+  <url value="https://fhir.nhs.uk/ValueSet/England-FGMRemovalReason" />
   <version value="1.0.0" />
-  <name value="EnglandRemovalReason" />
-  <title value="England Removal Reason" />
+  <name value="EnglandFGMRemovalReason" />
+  <title value="England FGM Removal Reason" />
   <status value="draft" />
-  <date value="2023-07-20" />
+  <date value="2023-06-01" />
   <publisher value="NHS England" />
   <contact>
     <name value="NHS England" />
@@ -26,11 +26,11 @@
     </include>
   </compose>
   <expansion>
-    <timestamp value="2021-04-13T12:00:00+00:00" />
+    <timestamp value="2023-08-02T12:00:00+00:00" />
     <contains>
       <system value="https://fhir.nhs.uk/CodeSystem/England-FGMRemovalReason" />
       <code value="0" />
-      <display value="Added in error - this child does not have a  family history of FGM" />
+      <display value="Added in error - this child does not have a family history of FGM" />
     </contains>
     <contains>
       <system value="https://fhir.nhs.uk/CodeSystem/England-FGMRemovalReason" />
