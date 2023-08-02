@@ -193,7 +193,7 @@
       <path value="HealthcareService.location" />
       <max value="1" />
       <constraint>
-        <key value="nhsd-8" />
+        <key value="nhse-hes-001" />
         <severity value="error" />
         <human value="location - An identifier reference or resource reference must be provided" />
         <expression value="(reference.exists() or identifier.exists())" />

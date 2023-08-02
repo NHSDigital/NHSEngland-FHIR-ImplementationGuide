@@ -70,7 +70,7 @@
     <element id="OperationOutcome.issue">
       <path value="OperationOutcome.issue" />
       <constraint>
-        <key value="nhsd-errrorcode" />
+        <key value="nhse-opo-001" />
         <severity value="error" />
         <human value="An NHS England error or warning code is required" />
         <expression value="(severity = 'information') or ((severity != 'information') and details.empty().not())" />

@@ -187,13 +187,13 @@
         <aggregation value="bundled" />
       </type>
       <constraint>
-        <key value="eps-2" />
+        <key value="nhse-mdd-001" />
         <severity value="warning" />
         <human value="subject - An identifier reference or resource reference must be provided" />
         <expression value="(reference.exists() or (identifier.exists()))" />
       </constraint>
       <constraint>
-        <key value="patient-nhs" />
+        <key value="nhse-mdd-002" />
         <severity value="error" />
         <human value="Length of the supplied NHS Number is wrong." />
         <expression value="identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').exists().not() or (identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').exists()  and identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').value.matches('^([0-9]{10})$'))" />
@@ -223,7 +223,7 @@
         <aggregation value="contained" />
       </type>
       <constraint>
-        <key value="performer" />
+        <key value="nhse-mdd-003" />
         <severity value="error" />
         <human value="An identifier reference or resource reference must be provided" />
         <expression value="(reference.exists() or identifier.exists())" />

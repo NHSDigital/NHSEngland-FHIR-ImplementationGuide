@@ -121,7 +121,7 @@
     <element id="Organization.partOf">
       <path value="Organization.partOf" />
       <constraint>
-        <key value="nhsd-6" />
+        <key value="nhse-org-001" />
         <severity value="warning" />
         <human value="partOf.display - a display name should be provided" />
         <expression value="display.exists()" />
