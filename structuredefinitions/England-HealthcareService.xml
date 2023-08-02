@@ -62,7 +62,7 @@
     <element id="HealthcareService.identifier:dosServiceId.system">
       <path value="HealthcareService.identifier.system" />
       <min value="1" />
-      <fixedUri value="http://fhir.nhs.uk/Id/dos-service-id" />
+      <fixedUri value="https://fhir.nhs.uk/Id/dos-service-id" />
     </element>
     <element id="HealthcareService.identifier:dosServiceId.value">
       <path value="HealthcareService.identifier.value" />
