@@ -1,9 +1,9 @@
 <CodeSystem xmlns="http://hl7.org/fhir">
-    <id value="England-WorkflowCodes" />
-    <url value="https://fhir.nhs.uk/CodeSystem/England-WorkflowCodes" />
+    <id value="England-WorkflowCode" />
+    <url value="https://fhir.nhs.uk/CodeSystem/England-WorkflowCode" />
     <version value="1.0.0" />
-    <name value="EnglandWorkflowCodes" />
-    <title value="England Workflow Codes" />
+    <name value="EnglandWorkflowCode" />
+    <title value="England Workflow Code" />
     <status value="draft" />
     <date value="2023-06-01" />
     <publisher value="NHS England" />

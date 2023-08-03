@@ -146,7 +146,7 @@
     </element>
     <element id="Task.code.coding:Worflow.system">
       <path value="Task.code.coding.system" />
-      <fixedUri value="https://fhir.nhs.uk/CodeSystem/England-WorkflowCodes" />
+      <fixedUri value="https://fhir.nhs.uk/CodeSystem/England-WorkflowCode" />
     </element>
     <element id="Task.focus">
       <path value="Task.focus" />
