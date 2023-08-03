@@ -1,0 +1,87 @@
+<Task xmlns="http://hl7.org/fhir">
+    <id value="England-Task-FulfillPatientReferral-Example" />
+    <contained>
+        <PractitionerRole>
+            <id value="requester" />
+            <practitioner>
+                <identifier>
+                    <system value="https://fhir.nhs.uk/Id/sds-user-id" />
+                    <value value="0987654321" />
+                </identifier>
+            </practitioner>
+            <organization>
+                <identifier>
+                    <system value="https://fhir.nhs.uk/Id/ods-organization-code" />
+                    <value value="RR8" />
+                </identifier>
+                <display value="LEEDS TEACHING HOSPITALS NHS TRUST" />
+            </organization>
+        </PractitionerRole>
+    </contained>
+    <identifier>
+        <system value="https://tools.ietf.org/html/rfc4122" />
+        <value value="f9ba86b1-2c3d-441f-840f-324396128771" />
+    </identifier>
+    <status value="requested" />
+    <intent value="order" />
+    <code>
+        <coding>
+            <system value="http://hl7.org/fhir/CodeSystem/task-code" />
+            <code value="fulfill" />
+            <display value="Fulfill the focal request" />
+        </coding>
+    </code>
+    <focus>
+        <reference value="https://api.ers-service.nhs.uk/FHIR/R4/ServiceRequest/dafb61c6-7042-40aa-a72d-843f1936b573" />
+        <identifier>
+            <system value="https://fhir.nhs.uk/Id/UBRN" />
+            <value value="000000070000" />
+        </identifier>
+    </focus>
+    <for>
+        <identifier>
+            <system value="https://fhir.nhs.uk/Id/nhs-number" />
+            <value value="9446368138" />
+        </identifier>
+    </for>
+    <authoredOn value="2021-10-09T12:00:00+00:00" />
+    <requester>
+        <reference value="#requester" />
+    </requester>
+    <owner>
+        <reference value="https://directory.spineservices.nhs.uk/R4/Organization/RR8" />
+        <identifier>
+            <system value="https://fhir.nhs.uk/Id/ods-organization-code" />
+            <value value="RR8" />
+        </identifier>
+    </owner>
+    <reasonCode>
+        <coding>
+            <system value="http://snomed.info/sct" />
+            <code value="306185001" />
+            <display value="Referral to cardiac surgery service" />
+        </coding>
+    </reasonCode>
+    <restriction>
+		<repetitions value="1"/>
+		<period>
+			<end value="2021-10-13T18:30:00+07:00"/>
+		</period>
+	</restriction>
+	<input>
+		<type>
+			<coding>
+				<system value="http://hl7.org/fhir/resource-types"/>
+				<code value="QuestionnaireResponse"/>
+			</coding>
+			<text value="Link to completed Health review"/>
+		</type>
+		<valueReference>
+			<reference value="https://3cdzg7kbj4.execute-api.eu-west-2.amazonaws.com/poc/clinicaldatasharing/FHIR/R4/QuestionnaireResponse/9a3ea8c7-d1a4-4383-969b-5b3617245553"/>
+			<identifier>
+				<system value="https://tools.ietf.org/html/rfc4122"/>
+				<value value="9a3ea8c7-d1a4-4383-969b-5b3617245553"/>
+			</identifier>
+		</valueReference>
+	</input>
+</Task>

@@ -1,4 +1,4 @@
-<MessageHeader>
+<MessageHeader xmlns="http://hl7.org/fhir">
     <id value="England-MessageHeader-PrescriptionOrder-Example" />
     <eventCoding>
         <system value="https://fhir.nhs.uk/CodeSystem/England-MessageEventEPS" />

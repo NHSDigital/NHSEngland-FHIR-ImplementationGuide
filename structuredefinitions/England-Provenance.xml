@@ -78,7 +78,7 @@
     <element id="Provenance.agent.who">
       <path value="Provenance.agent.who" />
       <constraint>
-        <key value="who-reference" />
+        <key value="nhse-prov-001" />
         <severity value="warning" />
         <human value="agent.who - An identifier reference or resource reference must be provided" />
         <expression value="(reference.exists() or identifier.exists())" />

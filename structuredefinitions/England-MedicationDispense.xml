@@ -18,7 +18,7 @@
     </telecom>
   </contact>
   <description value="This profile defines the NHS England constraints and extensions on the FHIR UK Core resource [UK Core MedicationDispense](https://simplifier.net/hl7fhirukcorer4/ukcore-MedicationDispense)." />
-   <purpose value="Dispensing a medication to a named patient. Indicates that a medication product is to be or has been dispensed for a named person/patient. This includes a description of the medication product (supply) provided and the instructions for administering the medication. The medication dispense is the result of a pharmacy system responding to a medication order." />
+  <purpose value="Dispensing a medication to a named patient. Indicates that a medication product is to be or has been dispensed for a named person/patient. This includes a description of the medication product (supply) provided and the instructions for administering the medication. The medication dispense is the result of a pharmacy system responding to a medication order." />
   <copyright value="Copyright © 2021+ HL7 UK Licensed under the Apache License, Version 2.0 (the \&quot;License\&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at  http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \&quot;AS IS\&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. HL7® FHIR® standard Copyright © 2011+ HL7 The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at  https://www.hl7.org/fhir/license.html." />
   <fhirVersion value="4.0.1" />
   <kind value="resource" />
@@ -187,16 +187,16 @@
         <aggregation value="bundled" />
       </type>
       <constraint>
-        <key value="eps-2" />
+        <key value="nhse-mdd-001" />
         <severity value="warning" />
         <human value="subject - An identifier reference or resource reference must be provided" />
         <expression value="(reference.exists() or (identifier.exists()))" />
       </constraint>
       <constraint>
-        <key value="patient-nhs" />
+        <key value="nhse-mdd-002" />
         <severity value="error" />
-        <human value="Supplied NHS Number is outside the English and Welsh NHS Number range or length of the number is wrong." />
-        <expression value="identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').exists().not() or (identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').exists()  and identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').value.matches('^([456789]{1}[0-9]{9})$'))" />
+        <human value="Length of the supplied NHS Number is wrong." />
+        <expression value="identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').exists().not() or (identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').exists()  and identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').value.matches('^([0-9]{10})$'))" />
         <source value="https://fhir.nhs.uk/StructureDefinition/England-Claim" />
       </constraint>
       <mustSupport value="true" />
@@ -223,7 +223,7 @@
         <aggregation value="contained" />
       </type>
       <constraint>
-        <key value="performer" />
+        <key value="nhse-mdd-003" />
         <severity value="error" />
         <human value="An identifier reference or resource reference must be provided" />
         <expression value="(reference.exists() or identifier.exists())" />
@@ -297,10 +297,6 @@
         <code value="Extension" />
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-DMRunningTotal" />
       </type>
-    </element>
-    <element id="MedicationDispense.quantity.extension:runningTotal.url">
-      <path value="MedicationDispense.quantity.extension.url" />
-      <fixedUri value="https://fhir.nhs.uk/StructureDefinition/Extension-England-DMRunningTotal" />
     </element>
     <element id="MedicationDispense.quantity.value">
       <path value="MedicationDispense.quantity.value" />

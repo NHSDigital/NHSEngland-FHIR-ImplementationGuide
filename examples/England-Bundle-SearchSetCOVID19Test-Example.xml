@@ -1,183 +1,190 @@
 <Bundle xmlns="http://hl7.org/fhir">
-    <id value="England-Bundle-SearchSetCOVID19Test-Example" />
-    <type value="searchset" />
-    <total value="2" />
-    <link>
-        <relation value="self" />
-        <url value="http://example.org/FHIR/R4/Observation?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9686368973" />
-    </link>
-    <entry>
-        <fullUrl value="Observation/edea022a-2d81-11eb-adc1-0242ac120004" />
-        <resource>
-            <Observation>
-                <id value="edea022a-2d81-11eb-adc1-0242ac120004" />
-                <contained>
-                    <Patient>
-                        <id value="9686368973" />
-                        <identifier>
-                            <system value="https://fhir.nhs.uk/Id/nhs-number" />
-                            <value value="9686368973" />
-                        </identifier>
-                        <birthDate value="1997-12-28" />
-                    </Patient>
-                </contained>
-                <identifier>
-                    <system value="https://fhir.nhs.uk/Id/SpecimenId" />
-                    <value value="eb89a392-5b20-11eb-ae93-0242ac130003" />
-                </identifier>
-                <status value="final" />
-                <code>
-                    <coding>
-                        <system value="http://snomed.info/sct" />
-                        <code value="871562009" />
-                        <display value="Detection of SARS-CoV-2 (severe acute respiratory syndrome coronavirus 2)" />
-                    </coding>
-                </code>
-                <subject>
-                    <reference value="#9686368973" />
-                    <identifier>
-                        <system value="https://fhir.nhs.uk/Id/nhs-number" />
-                        <value value="9686368973" />
-                    </identifier>
-                </subject>
-                <encounter>
-                    <display value="health_care_professional" />
-                </encounter>
-                <effectiveDateTime value="2020-09-22T13:00:08.476+00:00" />
-                <performer>
-                    <identifier>
-                        <value value="MK" />
-                    </identifier>
-                </performer>
-                <performer>
-                    <identifier>
-                        <value value="WKE03" />
-                    </identifier>
-                </performer>
-                <performer>
-                    <identifier>
-                        <value value="electiveCare" />
-                    </identifier>
-                </performer>
-                <valueCodeableConcept>
-                    <coding>
-                        <system value="http://snomed.info/sct" />
-                        <code value="1240591000000102" />
-                        <display value="SARS-CoV-2 (severe acute respiratory syndrome coronavirus 2) detection result negative" />
-                    </coding>
-                    <text value="SARS-CoV-2-ORGY" />
-                </valueCodeableConcept>
-                <method>
-                    <coding>
-                        <system value="http://snomed.info/sct" />
-                        <code value="1240471000000102" />
-                        <display value="Measurement of COVID-19 antigen" />
-                    </coding>
-                </method>
-                <specimen>
-                    <identifier>
-                        <system value="https://fhir.nhs.uk/Id/SpecimenId" />
-                        <value value="eb89a392-5b20-11eb-ae93-0242ac130008" />
-                    </identifier>
-                </specimen>
-                <device>
-                    <identifier>
-                        <system value="https://fhir.nhs.uk/Id/Covid19-TestKit" />
-                        <value value="LFT" />
-                    </identifier>
-                    <display value="Lateral Flow Test" />
-                </device>
-            </Observation>
-        </resource>
-        <search>
-            <mode value="match" />
-        </search>
-    </entry>
-    <entry>
-        <fullUrl value="Observation/edea022a-2d81-11eb-adc1-0242ac120000" />
-        <resource>
-            <Observation>
-                <id value="edea022a-2d81-11eb-adc1-0242ac120000" />
-                <contained>
-                    <Patient>
-                        <id value="9686368973" />
-                        <identifier>
-                            <system value="https://fhir.nhs.uk/Id/nhs-number" />
-                            <value value="9686368973" />
-                        </identifier>
-                        <birthDate value="1997-12-28" />
-                    </Patient>
-                </contained>
-                <identifier>
-                    <system value="https://fhir.nhs.uk/Id/SpecimenId" />
-                    <value value="eb89a392-5b20-11eb-ae93-0242ac130002" />
-                </identifier>
-                <status value="final" />
-                <code>
-                    <coding>
-                        <system value="http://snomed.info/sct" />
-                        <code value="871562009" />
-                        <display value="Detection of SARS-CoV-2 (severe acute respiratory syndrome coronavirus 2)" />
-                    </coding>
-                </code>
-                <subject>
-                    <reference value="#9686368973" />
-                    <identifier>
-                        <system value="https://fhir.nhs.uk/Id/nhs-number" />
-                        <value value="9686368973" />
-                    </identifier>
-                </subject>
-                <encounter>
-                    <display value="self" />
-                </encounter>
-                <effectiveDateTime value="2020-09-23T13:00:08.476+00:00" />
-                <performer>
-                    <identifier>
-                        <value value="LFD004" />
-                    </identifier>
-                </performer>
-                <performer>
-                    <identifier>
-                        <value value="WKE03" />
-                    </identifier>
-                </performer>
-                <performer>
-                    <identifier>
-                        <value value="electiveCare" />
-                    </identifier>
-                </performer>
-                <valueCodeableConcept>
-                    <coding>
-                        <system value="http://snomed.info/sct" />
-                        <code value="1240581000000104" />
-                        <display value="SARS-CoV-2 (severe acute respiratory syndrome coronavirus 2) detection result positive" />
-                    </coding>
-                    <text value="SARS-CoV-2-ORGY" />
-                </valueCodeableConcept>
-                <method>
-                    <coding>
-                        <system value="http://snomed.info/sct" />
-                        <code value="1240471000000102" />
-                        <display value="Measurement of 2019-nCoV antigen" />
-                    </coding>
-                </method>
-                <specimen>
-                    <identifier>
-                        <system value="https://fhir.nhs.uk/Id/SpecimenId" />
-                        <value value="eb89a392-5b20-11eb-ae93-0242ac130002" />
-                    </identifier>
-                </specimen>
-                <device>
-                    <identifier>
-                        <system value="https://fhir.nhs.uk/Id/Covid19-TestKit" />
-                        <value value="LFT" />
-                    </identifier>
-                    <display value="Lateral Flow Test" />
-                </device>
-            </Observation>
-        </resource>
-        <search>
-            <mode value="match" />
-        </search>
-    </entry>
+	<id value="England-Bundle-SearchSetCOVID19Test-Example"/>
+	<type value="searchset"/>
+	<total value="2"/>
+	<link>
+		<relation value="self"/>
+		<url value="http://example.org/FHIR/R4/Observation?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|9686368973"/>
+	</link>
+	<entry>
+		<fullUrl value="Observation/edea022a-2d81-11eb-adc1-0242ac120004"/>
+		<resource>
+			<Observation>
+				<id value="edea022a-2d81-11eb-adc1-0242ac120004"/>
+				<contained>
+					<Patient>
+						<id value="9686368973"/>
+						<identifier>
+							<system value="https://fhir.nhs.uk/Id/nhs-number"/>
+							<value value="9686368973"/>
+						</identifier>
+						<birthDate value="1997-12-28"/>
+					</Patient>
+				</contained>
+				<identifier>
+					<system value="https://fhir.nhs.uk/Id/SpecimenId"/>
+					<value value="eb89a392-5b20-11eb-ae93-0242ac130003"/>
+				</identifier>
+				<status value="final"/>
+				<category>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/v3-ObservationCategory"/>
+						<code value="social-history"/>
+						<display value="Social History"/>
+					</coding>
+				</category>
+				<code>
+					<coding>
+						<system value="http://snomed.info/sct"/>
+						<code value="871562009"/>
+						<display value="Detection of SARS-CoV-2 (severe acute respiratory syndrome coronavirus 2)"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="#9686368973"/>
+					<identifier>
+						<system value="https://fhir.nhs.uk/Id/nhs-number"/>
+						<value value="9686368973"/>
+					</identifier>
+				</subject>
+				<encounter>
+					<display value="health_care_professional"/>
+				</encounter>
+				<effectiveDateTime value="2020-09-22T13:00:08.476+00:00"/>
+				<performer>
+					<identifier>
+						<value value="MK"/>
+					</identifier>
+				</performer>
+				<performer>
+					<identifier>
+						<value value="WKE03"/>
+					</identifier>
+				</performer>
+				<performer>
+					<identifier>
+						<value value="electiveCare"/>
+					</identifier>
+				</performer>
+				<valueCodeableConcept>
+					<coding>
+						<system value="http://snomed.info/sct"/>
+						<code value="1240591000000102"/>
+						<display value="SARS-CoV-2 (severe acute respiratory syndrome coronavirus 2) detection result negative"/>
+					</coding>
+					<text value="SARS-CoV-2-ORGY"/>
+				</valueCodeableConcept>
+				<method>
+					<coding>
+						<system value="http://snomed.info/sct"/>
+						<code value="1240471000000102"/>
+						<display value="Measurement of COVID-19 antigen"/>
+					</coding>
+				</method>
+				<specimen>
+					<identifier>
+						<system value="https://fhir.nhs.uk/Id/SpecimenId"/>
+						<value value="eb89a392-5b20-11eb-ae93-0242ac130008"/>
+					</identifier>
+				</specimen>
+				<device>
+					<identifier>
+						<system value="https://fhir.nhs.uk/Id/Covid19-TestKit"/>
+						<value value="LFT"/>
+					</identifier>
+					<display value="Lateral Flow Test"/>
+				</device>
+			</Observation>
+		</resource>
+		<search>
+			<mode value="match"/>
+		</search>
+	</entry>
+	<entry>
+		<fullUrl value="Observation/edea022a-2d81-11eb-adc1-0242ac120000"/>
+		<resource>
+			<Observation>
+				<id value="edea022a-2d81-11eb-adc1-0242ac120000"/>
+				<contained>
+					<Patient>
+						<id value="9686368973"/>
+						<identifier>
+							<system value="https://fhir.nhs.uk/Id/nhs-number"/>
+							<value value="9686368973"/>
+						</identifier>
+						<birthDate value="1997-12-28"/>
+					</Patient>
+				</contained>
+				<identifier>
+					<system value="https://fhir.nhs.uk/Id/SpecimenId"/>
+					<value value="eb89a392-5b20-11eb-ae93-0242ac130002"/>
+				</identifier>
+				<status value="final"/>
+				<code>
+					<coding>
+						<system value="http://snomed.info/sct"/>
+						<code value="871562009"/>
+						<display value="Detection of SARS-CoV-2 (severe acute respiratory syndrome coronavirus 2)"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="#9686368973"/>
+					<identifier>
+						<system value="https://fhir.nhs.uk/Id/nhs-number"/>
+						<value value="9686368973"/>
+					</identifier>
+				</subject>
+				<encounter>
+					<display value="self"/>
+				</encounter>
+				<effectiveDateTime value="2020-09-23T13:00:08.476+00:00"/>
+				<performer>
+					<identifier>
+						<value value="LFD004"/>
+					</identifier>
+				</performer>
+				<performer>
+					<identifier>
+						<value value="WKE03"/>
+					</identifier>
+				</performer>
+				<performer>
+					<identifier>
+						<value value="electiveCare"/>
+					</identifier>
+				</performer>
+				<valueCodeableConcept>
+					<coding>
+						<system value="http://snomed.info/sct"/>
+						<code value="1240581000000104"/>
+						<display value="SARS-CoV-2 (severe acute respiratory syndrome coronavirus 2) detection result positive"/>
+					</coding>
+					<text value="SARS-CoV-2-ORGY"/>
+				</valueCodeableConcept>
+				<method>
+					<coding>
+						<system value="http://snomed.info/sct"/>
+						<code value="1240471000000102"/>
+						<display value="Measurement of 2019-nCoV antigen"/>
+					</coding>
+				</method>
+				<specimen>
+					<identifier>
+						<system value="https://fhir.nhs.uk/Id/SpecimenId"/>
+						<value value="eb89a392-5b20-11eb-ae93-0242ac130002"/>
+					</identifier>
+				</specimen>
+				<device>
+					<identifier>
+						<system value="https://fhir.nhs.uk/Id/Covid19-TestKit"/>
+						<value value="LFT"/>
+					</identifier>
+					<display value="Lateral Flow Test"/>
+				</device>
+			</Observation>
+		</resource>
+		<search>
+			<mode value="match"/>
+		</search>
+	</entry>
 </Bundle>

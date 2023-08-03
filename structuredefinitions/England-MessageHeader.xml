@@ -30,7 +30,7 @@
     <element id="MessageHeader">
       <path value="MessageHeader" />
       <constraint>
-        <key value="nhsd-11" />
+        <key value="nhse-meh-001" />
         <severity value="warning" />
         <human value="replacementOf extension is required for update messages" />
         <expression value="event.code.where(substring($this.length()-6) = 'update').exists().not() or (event.code.where(substring($this.length()-6) = 'update').exists() and extension('https://fhir.nhs.uk/StructureDefinition/Extension-England-MessageHeaderReplacement').exists())" />
