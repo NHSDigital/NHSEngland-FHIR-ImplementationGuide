@@ -95,7 +95,7 @@
       <mustSupport value="true" />
       <binding>
         <strength value="preferred" />
-        <valueSet value="https://fhir.nhs.uk/ValueSet/England-OperationOutcomeCodes" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/England-OperationOutcomeCode" />
       </binding>
     </element>
     <element id="OperationOutcome.issue.details.coding">
@@ -105,7 +105,7 @@
       <mustSupport value="true" />
       <binding>
         <strength value="extensible" />
-        <valueSet value="https://fhir.nhs.uk/ValueSet/England-OperationOutcomeCodes" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/England-OperationOutcomeCode" />
       </binding>
     </element>
     <element id="OperationOutcome.issue.details.coding.system">

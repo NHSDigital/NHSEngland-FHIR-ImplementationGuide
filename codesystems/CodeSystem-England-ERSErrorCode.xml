@@ -1,9 +1,9 @@
 <CodeSystem xmlns="http://hl7.org/fhir">
-    <id value="England-ERSErrorCodes" />
-    <url value="https://fhir.nhs.uk/CodeSystem/England-ERSErrorCodes" />
+    <id value="England-ERSErrorCode" />
+    <url value="https://fhir.nhs.uk/CodeSystem/England-ERSErrorCode" />
     <version value="1.0.0" />
-    <name value="EnglandERSErrorCodes" />
-    <title value="England ERS Error Codes" />
+    <name value="EnglandERSErrorCode" />
+    <title value="England ERS Error Code" />
     <status value="draft" />
     <date value="2023-06-01" />
     <publisher value="NHS England" />

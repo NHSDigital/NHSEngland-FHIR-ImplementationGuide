@@ -67,7 +67,7 @@
       <mustSupport value="true" />
       <binding>
         <strength value="required" />
-        <valueSet value="https://fhir.nhs.uk/ValueSet/England-MessageEvents" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/England-MessageEvent" />
       </binding>
     </element>
     <element id="MessageHeader.event[x].system">
