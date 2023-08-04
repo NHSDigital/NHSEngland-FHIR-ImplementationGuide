@@ -7,7 +7,7 @@
     <status value="active" />
     <name value="NHS NIGHTINGALE HOSPITAL YORKSHIRE AND THE HUMBER" />
     <type>
-        <extension url="https://fhir.nhs.uk/StructureDefinition/Extension-England-ODSOrganizationRole">
+        <extension url="https://fhir.nhs.uk/StructureDefinition/Extension-England-ODSOrganisationRole">
             <extension url="primaryRole">
                 <valueBoolean value="true" />
             </extension>
@@ -15,7 +15,7 @@
                 <valueString value="Active" />
             </extension>
         </extension>
-        <extension url="https://fhir.nhs.uk/StructureDefinition/Extension-England-ODSOrganizationRoleActivePeriod">
+        <extension url="https://fhir.nhs.uk/StructureDefinition/Extension-England-ODSOrganisationRoleActivePeriod">
             <extension url="activePeriod">
                 <valuePeriod>
                     <start value="2020-04-01" />

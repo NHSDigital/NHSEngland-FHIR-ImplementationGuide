@@ -1,14 +1,12 @@
-<CodeSystem xmlns="http://hl7.org/fhir">
-    <id value="England-MessageReasonServiceRequest" />
-    <url value="https://fhir.nhs.uk/CodeSystem/England-MessageReasonServiceRequest" />
-    <identifier>
-        <system value="https://fhir.nhs.uk/identifier/England-MessageReasonCode" />
-        <value value="EnglandMessageReasonServiceRequest" />
-    </identifier>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+    <id value="England-MessageEvent" />
+    <url value="https://fhir.nhs.uk/ValueSet/England-MessageEvent" />
     <version value="1.0.0" />
-    <name value="EnglandMessageReasonServiceRequest" />
-    <title value="England Message Reason ServiceRequest" />
+    <name value="EnglandMessageEvent" />
+    <title value="England Message Event" />
     <status value="draft" />
+     <experimental value="false" />
     <date value="2023-06-01" />
     <publisher value="NHS England" />
     <contact>
@@ -20,22 +18,16 @@
             <rank value="1" />
         </telecom>
     </contact>
-    <description value="Message Reason ServiceRequest codes." />
+    <description value="A ValueSet to identify the type of FHIR Message" />
     <copyright value="Copyright © 2021+ HL7 UK Licensed under the Apache License, Version 2.0 (the \&quot;License\&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at  http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \&quot;AS IS\&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. HL7® FHIR® standard Copyright © 2011+ HL7 The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at  https://www.hl7.org/fhir/license.html." />
-    <content value="complete" />
-    <concept>
-        <code value="new" />
-        <display value="New" />
-        <definition value="New Service Request." />
-    </concept>
-    <concept>
-        <code value="update" />
-        <display value="Update" />
-        <definition value="Update to a Service Request." />
-    </concept>
-    <concept>
-        <code value="delete" />
-        <display value="Delete" />
-        <definition value="Delete a Service Request." />
-    </concept>
-</CodeSystem>
+    <compose>
+        <include>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-MessageEventEPS" />
+            <version value="1.0.0" />
+        </include>
+        <include>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-MessageEventBARS" />
+            <version value="1.0.0" />
+        </include>
+    </compose>
+</ValueSet>
