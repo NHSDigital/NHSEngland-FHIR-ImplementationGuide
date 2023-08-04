@@ -45,7 +45,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-ODSOrganisationRelationships" />
+        <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-ODSOrganisationRelationship" />
       </type>
       <isModifier value="false" />
     </element>

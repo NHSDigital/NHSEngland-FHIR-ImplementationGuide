@@ -2,8 +2,8 @@
     <id value="England-HTTPErrorCode" />
     <url value="https://fhir.nhs.uk/CodeSystem/England-HTTPErrorCode" />
     <version value="1.0.0" />
-    <name value="EnglandHTTPErrorCodes" />
-    <title value="England HTTP Error Codes" />
+    <name value="EnglandHTTPErrorCode" />
+    <title value="England HTTP Error Code" />
     <status value="draft" />
     <date value="2023-06-01" />
     <publisher value="NHS England" />

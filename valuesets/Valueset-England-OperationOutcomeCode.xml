@@ -3,8 +3,8 @@
     <id value="England-OperationOutcomeCode"/>
     <url value="https://fhir.nhs.uk/ValueSet/England-OperationOutcomeCode"/>
     <version value="1.0.0" />
-    <name value="EnglandOperationOutcomeCodes" />
-    <title value="England OperationOutcome Codes" />
+    <name value="EnglandOperationOutcomeCode" />
+    <title value="England OperationOutcome Code" />
     <status value="draft" />
     <date value="2023-06-01" />
     <publisher value="NHS England" />
