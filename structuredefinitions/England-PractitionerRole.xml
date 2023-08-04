@@ -30,7 +30,7 @@
     <element id="PractitionerRole">
       <path value="PractitionerRole" />
       <constraint>
-        <key value="role-spurious" />
+        <key value="nhse-pro-015" />
         <severity value="warning" />
         <human value="Spurious Code format must be G6NNNNNN or G7NNNNNN" />
         <expression value="identifier.where(system='https://fhir.hl7.org.uk/Id/nhsbsa-spurious-code').exists().not() or (identifier.where(system='https://fhir.hl7.org.uk/Id/nhsbsa-spurious-code').exists()  and identifier.where(system='https://fhir.hl7.org.uk/Id/nhsbsa-spurious-code').value.matches('^[G]{1}[67]{1}[0-9]{6}$'))" />
