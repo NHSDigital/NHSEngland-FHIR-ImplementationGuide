@@ -1,6 +1,6 @@
 <Organization xmlns="http://hl7.org/fhir">
     <id value="England-Organization-ODSAPIOrganizationR4LeedsCCG-Example" />
-    <extension url="https://fhir.nhs.uk/StructureDefinition/Extension-England-ODSOrganisationRelationships">
+    <extension url="https://fhir.nhs.uk/StructureDefinition/Extension-England-ODSOrganisationRelationship">
         <extension url="nationalGrouping">
             <valueIdentifier>
                 <system value="https://fhir.nhs.uk/Id/ods-organization-code" />
@@ -14,7 +14,7 @@
     </identifier>
     <active value="true" />
     <type>
-        <extension url="https://fhir.nhs.uk/StructureDefinition/Extension-England-ODSOrganizationRole">
+        <extension url="https://fhir.nhs.uk/StructureDefinition/Extension-England-ODSOrganisationRole">
             <extension url="primaryRole">
                 <valueBoolean value="true" />
             </extension>
@@ -22,7 +22,7 @@
                 <valueString value="Active" />
             </extension>
         </extension>
-        <extension url="https://fhir.nhs.uk/StructureDefinition/Extension-England-ODSOrganizationRoleActivePeriod">
+        <extension url="https://fhir.nhs.uk/StructureDefinition/Extension-England-ODSOrganisationRoleActivePeriod">
             <extension url="activePeriod">
                 <valuePeriod>
                     <start value="2017-12-12" />
@@ -32,7 +32,7 @@
                 <valueString value="Operational" />
             </extension>
         </extension>
-        <extension url="https://fhir.nhs.uk/StructureDefinition/Extension-England-ODSOrganizationRoleActivePeriod">
+        <extension url="https://fhir.nhs.uk/StructureDefinition/Extension-England-ODSOrganisationRoleActivePeriod">
             <extension url="activePeriod">
                 <valuePeriod>
                     <start value="2018-04-01" />

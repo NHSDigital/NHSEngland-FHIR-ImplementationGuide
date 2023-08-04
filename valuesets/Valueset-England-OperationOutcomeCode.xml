@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ValueSet xmlns="http://hl7.org/fhir">
-    <id value="England-OperationOutcomeCodes"/>
-    <url value="https://fhir.nhs.uk/ValueSet/England-OperationOutcomeCodes"/>
+    <id value="England-OperationOutcomeCode"/>
+    <url value="https://fhir.nhs.uk/ValueSet/England-OperationOutcomeCode"/>
     <version value="1.0.0" />
-    <name value="EnglandOperationOutcomeCodes" />
-    <title value="England OperationOutcome Codes" />
+    <name value="EnglandOperationOutcomeCode" />
+    <title value="England OperationOutcome Code" />
     <status value="draft" />
     <date value="2023-06-01" />
     <publisher value="NHS England" />
@@ -34,11 +34,11 @@
             <version value="1.0.0"/>
         </include>
         <include>
-            <system value="https://fhir.nhs.uk/CodeSystem/England-HTTPErrorCodes"/>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-HTTPErrorCode"/>
             <version value="1.0.0"/>
         </include>
         <include>
-            <system value="https://fhir.nhs.uk/CodeSystem/England-ERSErrorCodes"/>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-ERSErrorCode"/>
             <version value="1.0.0"/>
         </include>
     </compose>

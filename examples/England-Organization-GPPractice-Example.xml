@@ -1,6 +1,6 @@
 <Organization xmlns="http://hl7.org/fhir">
     <id value="England-Organization-GPPractice-Example" />
-    <extension url="https://fhir.nhs.uk/StructureDefinition/Extension-England-ODSOrganisationRelationships">
+    <extension url="https://fhir.nhs.uk/StructureDefinition/Extension-England-ODSOrganisationRelationship">
         <extension url="commissionedBy">
             <valueIdentifier>
                 <system value="https://fhir.nhs.uk/Id/ods-organization-code" />
@@ -27,7 +27,7 @@
         </coding>
     </type>
     <type>
-        <extension url="https://fhir.nhs.uk/StructureDefinition/Extension-England-ODSOrganizationRole">
+        <extension url="https://fhir.nhs.uk/StructureDefinition/Extension-England-ODSOrganisationRole">
             <extension url="primaryRole">
                 <valueBoolean value="false" />
             </extension>
@@ -35,7 +35,7 @@
                 <valueString value="Active" />
             </extension>
         </extension>
-        <extension url="https://fhir.nhs.uk/StructureDefinition/Extension-England-ODSOrganizationRoleActivePeriod">
+        <extension url="https://fhir.nhs.uk/StructureDefinition/Extension-England-ODSOrganisationRoleActivePeriod">
             <extension url="activePeriod">
                 <valuePeriod>
                     <start value="2014-04-15" />
