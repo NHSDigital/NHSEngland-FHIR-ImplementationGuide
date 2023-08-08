@@ -14,4 +14,4 @@ on:
 jobs:
   # This workflow contains a single job called "call-workflow" which references the FHIR validator repo
   call-workflow:
-    uses: NHSDigital/IOPS-FHIR-Test-Scripts/.github/workflows/NamingSystemChecker.yml@main
+    uses: NHSDigital/IOPS-FHIR-Test-Scripts/.github/workflows/NamingSystemCheckerNHSE.yml@main
