@@ -1,0 +1,17 @@
+name: IOPS-FHIR-NamingConvention-call
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the master branch
+  # Allows you to run this workflow manually from the Actions tab
+  
+  push:
+  
+  workflow_dispatch:
+  
+  
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "call-workflow" which references the FHIR validator repo
+  call-workflow:
+    uses: NHSDigital/IOPS-FHIR-Test-Scripts/.github/workflows/NamingSystemCheckerNHSE.yml@main
