@@ -227,7 +227,7 @@
       <sliceName value="ukCoreSNOMEDCT" />
       <binding>
         <strength value="preferred" />
-        <valueSet value="https://fhir.hl7.org.uk/ValueSet/England-PractitionerRoleCode" />
+        <valueSet value="https://fhir.hl7.org.uk/ValueSet/UKCore-PractitionerRoleCode" />
       </binding>
     </element>
     <element id="PractitionerRole.code.coding:ukCoreSNOMEDCT.system">
