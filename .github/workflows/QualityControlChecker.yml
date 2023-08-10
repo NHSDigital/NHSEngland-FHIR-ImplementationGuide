@@ -1,4 +1,4 @@
-name: IOPS-FHIR-NamingConvention-call
+name: IOPS-FHIR-QualityControlChecker-call
 
 # Controls when the workflow will run
 on:
@@ -14,4 +14,4 @@ on:
 jobs:
   # This workflow contains a single job called "call-workflow" which references the FHIR validator repo
   call-workflow:
-    uses: NHSDigital/IOPS-FHIR-Test-Scripts/.github/workflows/NamingSystemCheckerNHSE.yml@main
+    uses: NHSDigital/IOPS-FHIR-Test-Scripts/.github/workflows/QualityControlCheckerNHSE.yml@main
