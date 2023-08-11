@@ -10,8 +10,8 @@
     <code>
         <coding>
             <system value="http://hl7.org/fhir/CodeSystem/task-code" />
-            <code value="fulfil" />
-            <display value="Fulfil the focal request" />
+            <code value="fulfill" />
+            <display value="Fulfill the focal request" />
         </coding>
     </code>
     <focus>
