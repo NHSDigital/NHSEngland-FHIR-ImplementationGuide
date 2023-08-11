@@ -74,7 +74,7 @@
     <concept>
         <code value="dispense-notification-update"/>
         <display value="Dispense Notification Update"/>
-        <definition value="This message is used by the Dispensing System to notify the EPS System of an amendment to a previousy submitted dispense-notification"/>
+        <definition value="This message is used by the Dispensing System to notify the EPS System of an amendment to a previously submitted dispense-notification"/>
         <property>
             <code value="deprecated"/>
             <valueBoolean value="true"/>
@@ -98,7 +98,7 @@
      <concept>
         <code value="encounter"/>
         <display value="Patient Encounter"/>
-        <definition value="Can be used for an admission/discharge report or consulations"/>
+        <definition value="Can be used for an admission/discharge report or consultations"/>
     </concept>
     <concept>
         <code value="patient"/>

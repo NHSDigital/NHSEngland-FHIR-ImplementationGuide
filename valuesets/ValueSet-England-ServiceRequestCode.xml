@@ -2,8 +2,8 @@
     <id value="England-ServiceRequestCode" />
     <url value="https://fhir.nhs.uk/ValueSet/England-ServiceRequestCode" />
     <version value="1.0.0" />
-    <name value="EnglandServiceRequestCategoryCode" />
-	<title value="England ServiceRequest Category Code" />
+    <name value="EnglandServiceRequestCode" />
+	<title value="England ServiceRequest Code" />
     <status value="draft" />
 	<date value="2023-06-01" />
 	<publisher value="NHS England" />
