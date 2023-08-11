@@ -39,10 +39,6 @@
             <type value="Immunization" />
             <profile value="https://fhir.nhs.uk/StructureDefinition/England-Immunization" />
         </resource>
-        <resource>
-            <type value="Provenance" />
-            <profile value="https://fhir.nhs.uk/StructureDefinition/England-Provenance" />
-        </resource> 
         <resource> 
             <type value="Observation" />
             <profile value="https://fhir.nhs.uk/StructureDefinition/England-Observation" />
