@@ -9,8 +9,8 @@
 	<code>
 		<coding>
 			<system value="http://hl7.org/fhir/CodeSystem/task-code"/>
-			<code value="fulfill"/>
-			<display value="Fulfill the focal request"/>
+			<code value="fulfil"/>
+			<display value="Fulfil the focal request"/>
 		</coding>
 	</code>
 	<focus>
@@ -45,7 +45,7 @@
 		<text value="Code is for demonstration purposes and is probably not correct"/>
 	</reasonCode>
 	<note>
-		<text value="Please perfrom this health check on this patient."/>
+		<text value="Please perform this health check on this patient."/>
 	</note>
 	<restriction>
 		<repetitions value="1"/>

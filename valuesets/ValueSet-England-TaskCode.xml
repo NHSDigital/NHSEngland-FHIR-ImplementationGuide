@@ -22,8 +22,8 @@
 		<include>
 			<system value="http://hl7.org/fhir/CodeSystem/task-code"/>
 			<concept>
-				<code value="fulfill"/>
-				<display value="Fulfill the focal request"/>
+				<code value="fulfil"/>
+				<display value="Fulfil the focal request"/>
 			</concept>
 			<concept>
 				<code value="abort"/>

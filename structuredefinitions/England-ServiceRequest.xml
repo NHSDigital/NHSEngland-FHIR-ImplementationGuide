@@ -106,7 +106,7 @@
     <element id="ServiceRequest.identifier:UBRN">
       <path value="ServiceRequest.identifier" />
       <sliceName value="UBRN" />
-      <short value="Unique Booking Reference Numbe" />
+      <short value="Unique Booking Reference Number" />
       <max value="1" />
       <mustSupport value="true" />
     </element>
