@@ -98,7 +98,7 @@
      <concept>
         <code value="encounter"/>
         <display value="Patient Encounter"/>
-        <definition value="Can be used for an admission/discharge report or consultations"/>
+        <definition value="Can be used for an admission/discharge report or consultation"/>
     </concept>
     <concept>
         <code value="patient"/>

@@ -42,23 +42,23 @@
         <definition value="The Server has given a 400 response to the Senders request." />
     </concept>
     <concept>
-        <code value="SEND_UNAUTHORISED" />
-        <display value="401: The API deemed you unauthorised to make this request." />
+        <code value="SEND_UNAUTHORIZED" />
+        <display value="401: The API deemed you unauthorized to make this request." />
         <definition value="The API has given a 401 response to the Senders request." />
     </concept>
     <concept>
-        <code value="REC_UNAUTHORISED" />
-        <display value="401: The Receiver deemed you unauthorised to make this request." />
+        <code value="REC_UNAUTHORIZED" />
+        <display value="401: The Receiver deemed you unauthorized to make this request." />
         <definition value="The Receiver has given a 401 response to the Senders request." />
     </concept>
     <concept>
-        <code value="PROXY_UNAUTHORISED" />
-        <display value="401: The Proxy deemed you unauthorised to make this request." />
+        <code value="PROXY_UNAUTHORIZED" />
+        <display value="401: The Proxy deemed you unauthorized to make this request." />
         <definition value="The Proxy has given a 401 response internally to the Senders request." />
     </concept>
     <concept>
-        <code value="UNAUTHORISED" />
-        <display value="401: The Server deemed you unauthorised to make this request." />
+        <code value="UNAUTHORIZED" />
+        <display value="401: The Server deemed you unauthorized to make this request." />
         <definition value="The Server has given a 401 response to the Senders request." />
     </concept>
     <concept>
@@ -228,22 +228,22 @@
     </concept>
     <concept>
         <code value="SEND_NOT_IMPLEMENTED" />
-        <display value="501:The Request was not recognised by the API." />
+        <display value="501:The Request was not recognized by the API." />
         <definition value="The API has given a 501 response to the Senders request." />
     </concept>
     <concept>
         <code value="REC_NOT_IMPLEMENTED" />
-        <display value="501: The Request was not recognised by the Receiver." />
+        <display value="501: The Request was not recognized by the Receiver." />
         <definition value="The Receiver has given a 501 response to the Senders request." />
     </concept>
     <concept>
         <code value="PROXY_NOT_IMPLEMENTED" />
-        <display value="501: The Request was not recognised by the Proxy." />
+        <display value="501: The Request was not recognized by the Proxy." />
         <definition value="The Proxy has given a 501 response to the Senders request." />
     </concept>
     <concept>
         <code value="NOT_IMPLEMENTED" />
-        <display value="501: The Request was not recognised by the server." />
+        <display value="501: The Request was not recognized by the server." />
         <definition value="The Server has given a 501 response to the Senders request." />
     </concept>
     <concept>

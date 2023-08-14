@@ -51,7 +51,7 @@
         <contains>
             <system value="https://fhir.nhs.uk/CodeSystem/England-PrescriptionType"/>
             <code value="0924"/>
-            <display value="Private prescribing - Dietitian"/>
+            <display value="Private prescribing - Dietician"/>
         </contains>
         <contains>
             <system value="https://fhir.nhs.uk/CodeSystem/England-PrescriptionType"/>
@@ -81,7 +81,7 @@
         <contains>
             <system value="https://fhir.nhs.uk/CodeSystem/England-PrescriptionType"/>
             <code value="1024"/>
-            <display value="Outpatient Community Prescriber – Dietitian Supplementary prescriber"/>
+            <display value="Outpatient Community Prescriber – Dietician Supplementary prescriber"/>
         </contains>
         <contains>
             <system value="https://fhir.nhs.uk/CodeSystem/England-PrescriptionType"/>
@@ -96,7 +96,7 @@
         <contains>
             <system value="https://fhir.nhs.uk/CodeSystem/England-PrescriptionType"/>
             <code value="1224"/>
-            <display value="Outpatient Homecare Prescriber – Dietitian Supplementary prescriber"/>
+            <display value="Outpatient Homecare Prescriber – Dietician Supplementary prescriber"/>
         </contains>
         <contains>
             <system value="https://fhir.nhs.uk/CodeSystem/England-PrescriptionType"/>
@@ -176,7 +176,7 @@
         <contains>
             <system value="https://fhir.nhs.uk/CodeSystem/England-PrescriptionType"/>
             <code value="1124"/>
-            <display value="Outpatient Hospital Pharmacy Prescriber – Dietitian Supplementary prescriber"/>
+            <display value="Outpatient Hospital Pharmacy Prescriber – Dietician Supplementary prescriber"/>
         </contains>
         <contains>
             <system value="https://fhir.nhs.uk/CodeSystem/England-PrescriptionType"/>
@@ -281,7 +281,7 @@
         <contains>
             <system value="https://fhir.nhs.uk/CodeSystem/England-PrescriptionType"/>
             <code value="0124"/>
-            <display value="Primary Care Prescriber – Dietitian Supplementary prescriber"/>
+            <display value="Primary Care Prescriber – Dietician Supplementary prescriber"/>
         </contains>
         <contains>
             <system value="https://fhir.nhs.uk/CodeSystem/England-PrescriptionType"/>
