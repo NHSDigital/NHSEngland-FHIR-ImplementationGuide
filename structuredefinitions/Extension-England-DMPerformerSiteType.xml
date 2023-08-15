@@ -47,7 +47,7 @@
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />
-      <short value="Dispensing Site Prefererence" />
+      <short value="Dispensing Site Preference" />
       <min value="1" />
       <type>
         <code value="Coding" />

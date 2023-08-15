@@ -38,7 +38,7 @@
   <differential>
     <element id="Extension">
       <path value="Extension" />
-      <short value="Setting and HCP type for the prescrption" />
+      <short value="Setting and HCP type for the prescription" />
       <max value="1" />
     </element>
     <element id="Extension.url">

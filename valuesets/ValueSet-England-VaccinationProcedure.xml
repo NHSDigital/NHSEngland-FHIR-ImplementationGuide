@@ -3,7 +3,7 @@
     <url value="https://fhir.nhs.uk/ValueSet/England-VaccinationProcedure" />
     <version value="1.0.0" />
     <name value="EnglandVaccinationProcedure" />
-    <title value="Interim version of UK Core Vaccination Procedure."/>
+    <title value="England Vaccination Procedure"/>
     <status value="draft" />
     <date value="2023-06-01" />
     <publisher value="NHS England" />

@@ -68,7 +68,7 @@
       <constraint>
         <key value="nhse-mer-007" />
         <severity value="error" />
-        <human value="For continuous-repeat-dispensing (intent=reflex-order) or continous orders, numberOfRepeatsAllowed must be empty or equal to 0" />
+        <human value="For continuous-repeat-dispensing (intent=reflex-order) or continuous orders, numberOfRepeatsAllowed must be empty or equal to 0" />
         <expression value="(courseOfTherapyType.coding.code = 'acute') or (courseOfTherapyType.coding.code = 'continuous-repeat-dispensing' and intent !='reflex-order') or ((courseOfTherapyType.coding.code = 'continuous' or (courseOfTherapyType.coding.code = 'continuous-repeat-dispensing' and intent ='reflex-order')) and (dispenseRequest.numberOfRepeatsAllowed.exists().not() or (dispenseRequest.numberOfRepeatsAllowed.exists() and dispenseRequest.numberOfRepeatsAllowed = 0)))" />
       </constraint>
       <constraint>
@@ -116,7 +116,7 @@
     <element id="MedicationRequest.extension:medicationRepeatInformation">
       <path value="MedicationRequest.extension" />
       <sliceName value="medicationRepeatInformation" />
-      <short value="Continous and Continuous Repeat Dispensing" />
+      <short value="Continuous and Continuous Repeat Dispensing" />
       <min value="0" />
       <mustSupport value="true" />
     </element>

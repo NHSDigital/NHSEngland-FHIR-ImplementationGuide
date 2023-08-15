@@ -3,8 +3,8 @@
   <id value="Extension-England-SpineSupportingInfoPrescription" />
   <url value="https://fhir.nhs.uk/StructureDefinition/Extension-England-SpineSupportingInfoPrescription" />
   <version value="1.0.0" />
-  <name value="ExtensionEnglandOperationSpineSupportingInfoPrescription" />
-  <title value="Extension England Spine Supporting Information Prescription" />
+  <name value="ExtensionEnglandSpineSupportingInfoPrescription" />
+  <title value="Extension England Spine Supporting Info Prescription" />
   <status value="draft" />
   <date value="2023-06-01" />
   <publisher value="NHS England" />

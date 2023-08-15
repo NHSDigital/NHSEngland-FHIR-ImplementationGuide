@@ -136,15 +136,15 @@
       <path value="Task.code.coding.system" />
       <fixedUri value="http://hl7.org/fhir/CodeSystem/task-code" />
     </element>
-    <element id="Task.code.coding:Worflow">
+    <element id="Task.code.coding:Workflow">
       <path value="Task.code.coding" />
-      <sliceName value="Worflow" />
+      <sliceName value="Workflow" />
       <binding>
         <strength value="extensible" />
         <valueSet value="https://fhir.nhs.uk/ValueSet/England-WorkflowCode" />
       </binding>
     </element>
-    <element id="Task.code.coding:Worflow.system">
+    <element id="Task.code.coding:Workflow.system">
       <path value="Task.code.coding.system" />
       <fixedUri value="https://fhir.nhs.uk/CodeSystem/England-WorkflowCode" />
     </element>

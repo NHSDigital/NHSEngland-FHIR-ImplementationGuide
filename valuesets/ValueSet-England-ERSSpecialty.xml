@@ -1,9 +1,9 @@
 <ValueSet xmlns="http://hl7.org/fhir">
-    <id value="England-ERSSpeciality" />
+    <id value="England-ERSSpecialty" />
     <url value="https://fhir.nhs.uk/ValueSet/England-ERSSpecialty" />
     <version value="1.0.0" />
     <name value="EnglandERSSpecialty" />
-	<title value="England ERS Speciality" />
+	<title value="England ERS Specialty" />
     <status value="draft" />
     <publisher value="NHS England" />
     <contact>
