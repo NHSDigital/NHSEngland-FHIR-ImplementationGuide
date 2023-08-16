@@ -1,9 +1,9 @@
 <ValueSet xmlns="http://hl7.org/fhir">
-    <id value="England-NHSDataModelAndDictionaryTreatmentFunctionCategory" />
-    <url value="https://fhir.nhs.uk/ValueSet/England-NHSDataModelAndDictionaryTreatmentFunctionCategory" />
+    <id value="England-NHSDataModelAndDictionaryTreatmentFunction" />
+    <url value="https://fhir.nhs.uk/ValueSet/England-NHSDataModelAndDictionaryTreatmentFunction" />
     <version value="1.0.0" />
-    <name value="EnglandNHSDataModelAndDictionaryTreatmentFunctionCategory" />
-    <title value="England NHS Data Model And Dictionary Treatment Function Category" />
+    <name value="EnglandNHSDataModelAndDictionaryTreatmentFunction" />
+    <title value="England NHS Data Model And Dictionary Treatment Function" />
     <status value="draft" />
     <date value="2023-08-16" />
     <publisher value="NHS England" />
