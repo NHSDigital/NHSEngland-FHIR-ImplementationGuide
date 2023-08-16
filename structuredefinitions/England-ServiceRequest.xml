@@ -184,18 +184,6 @@
       <path value="ServiceRequest.category.coding.system" />
       <fixedUri value="http://snomed.info/sct" />
     </element>
-    <element id="ServiceRequest.category.coding:genomicsWholeCaseSequencing">
-      <path value="ServiceRequest.category.coding" />
-      <sliceName value="genomicsWholeCaseSequencing" />
-      <binding>
-        <strength value="extensible" />
-        <valueSet value="https://fhir.hl7.org.uk/ValueSet/UKCore-GenomeSequencingCategory" />
-      </binding>
-    </element>
-    <element id="ServiceRequest.category.coding:genomicsWholeCaseSequencing.system">
-      <path value="ServiceRequest.category.coding.system" />
-      <fixedUri value="https://fhir.hl7.org.uk/CodeSystem/UKCore-GenomeSequencingCategory" />
-    </element>
     <element id="ServiceRequest.priority">
       <path value="ServiceRequest.priority" />
       <mustSupport value="true" />
@@ -323,7 +311,7 @@
       <mustSupport value="true" />
       <binding>
         <strength value="required" />
-        <valueSet value="https://fhir.nhs.uk/ValueSet/England-NHSDataModelAndDictionaryTreatmentFunctionCategory" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/England-NHSDataModelAndDictionaryTreatmentFunction" />
       </binding>
     </element>
     <element id="ServiceRequest.performerType.coding:treatmentFunctionCodes.system">
@@ -335,7 +323,7 @@
       <sliceName value="eRSSpecialty" />
       <binding>
         <strength value="required" />
-        <valueSet value="https://fhir.nhs.uk/ValueSet/England-ERSSpecialtyCategory" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/England-ERSSpecialty" />
       </binding>
     </element>
     <element id="ServiceRequest.performerType.coding:eRSSpecialty.system">
