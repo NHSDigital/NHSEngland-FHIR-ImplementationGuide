@@ -1,0 +1,25 @@
+<NamingSystem xmlns="http://hl7.org/fhir">
+    <id value="NamingSystem-England-NhsMhsPartyKey" />
+    <name value="NamingSystemEnglandNhsMhsPartyKey" />
+    <status value="draft" />
+    <kind value="identifier" />
+    <date value="2023-08-18" />
+    <publisher value="NHS England" />
+    <contact>
+        <name value="NHS England" />
+        <telecom>
+            <system value="email" />
+            <value value="interoperabilityteam@nhs.net" />
+            <use value="work" />
+            <rank value="1" />
+        </telecom>
+    </contact>
+    <responsible value="NHS England" />
+    <description value="NHS Message Handling Service Party Key" />
+    <usage value="NHS Message Handling Service Party Key" />
+    <uniqueId>
+        <type value="uri" />
+        <value value="https://fhir.nhs.uk/Id/nhsMhsPartyKey" />
+        <preferred value="true" />
+    </uniqueId>
+</NamingSystem>
