@@ -1,0 +1,29 @@
+<NamingSystem xmlns="http://hl7.org/fhir">
+    <id value="NamingSystem-England-ERSUBRN" />
+    <name value="NamingSystemEnglandERSUBRN" />
+    <status value="draft" />
+    <kind value="identifier" />
+    <date value="2023-08-18" />
+    <publisher value="NHS England" />
+    <contact>
+        <name value="NHS England" />
+        <telecom>
+            <system value="email" />
+            <value value="interoperabilityteam@nhs.net" />
+            <use value="work" />
+            <rank value="1" />
+        </telecom>
+    </contact>
+    <responsible value="NHS England" />
+    <description value="Unique Booking Reference Number" />
+    <uniqueId>
+        <type value="uri" />
+        <value value="https://fhir.nhs.uk/Id/UBRN" />
+        <preferred value="true" />
+    </uniqueId>
+    <uniqueId>
+        <type value="oid" />
+        <value value="2.16.840.1.113883.2.1.3.2.4.1" />
+        <preferred value="false" />
+    </uniqueId>
+</NamingSystem>
