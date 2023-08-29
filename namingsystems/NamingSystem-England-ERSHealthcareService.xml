@@ -1,6 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
 <NamingSystem xmlns="http://hl7.org/fhir">
-    <id value="NamingSystem-England-ERShealthcareserice"/>
-    <name value="NamingSystemEnglandERShealthcareserice"/>
+    <id value="England-ERSHealthcareService"/>
+    <name value="EnglandERSHealthcareService"/>
     <status value="draft"/>
     <kind value="identifier"/>
     <date value="2023-08-18"/>

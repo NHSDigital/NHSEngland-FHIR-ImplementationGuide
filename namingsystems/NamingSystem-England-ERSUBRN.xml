@@ -1,6 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
 <NamingSystem xmlns="http://hl7.org/fhir">
-    <id value="NamingSystem-England-ERSUBRN" />
-    <name value="NamingSystemEnglandERSUBRN" />
+    <id value="England-ERSUBRN" />
+    <name value="EnglandERSUBRN" />
     <status value="draft" />
     <kind value="identifier" />
     <date value="2023-08-18" />
