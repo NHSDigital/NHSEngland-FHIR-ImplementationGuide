@@ -16,7 +16,7 @@
         </telecom>
     </contact>
     <responsible value="NHS England"/>
-    <description value="identifier of a healthcare service in eRS"/>
+    <description value="Identifier of a healthcare service in eRS"/>
     <usage value="EPS"/>
     <uniqueId>
         <type value="uri"/>
