@@ -172,10 +172,6 @@
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-EPSDispensingInformation" />
       </type>
       <isModifier value="false" />
-      <binding>
-        <strength value="required" />
-        <valueSet value="https://fhir.nhs.uk/ValueSet/England-DMPrescriptionEndorsement" />
-      </binding>
     </element>
     <element id="MedicationRequest.extension:NHSBSAPrescriptionType">
       <path value="MedicationRequest.extension" />
