@@ -32,7 +32,7 @@
         <offset value="0" />
         <parameter>
             <name value="version" />
-            <valueUri value="https://fhir.nhs.uk/CodeSystem/England-MedicationRequestControlledDrug|1.0.0" />
+            <valueUri value="https://fhir.nhs.uk/CodeSystem/England-MedicationRequestControlledDrug" />
         </parameter>
         <parameter>
             <name value="count" />
@@ -43,37 +43,37 @@
             <valueInteger value="0" />
         </parameter>
         <contains>
-            <system value="https://fhir.nhs.uk/CodeSystem/England-MedicationRequestControlledDrug|1.0.0" />
+            <system value="https://fhir.nhs.uk/CodeSystem/England-MedicationRequestControlledDrug" />
             <code value="CD3" />
             <display value="Schedule 3" />
         </contains>
         <contains>
-            <system value="https://fhir.nhs.uk/CodeSystem/England-MedicationRequestControlledDrug|1.0.0" />
+            <system value="https://fhir.nhs.uk/CodeSystem/England-MedicationRequestControlledDrug" />
             <code value="CD2" />
             <display value="Schedule 2" />
         </contains>
         <contains>
-            <system value="https://fhir.nhs.uk/CodeSystem/England-MedicationRequestControlledDrug|1.0.0" />
+            <system value="https://fhir.nhs.uk/CodeSystem/England-MedicationRequestControlledDrug" />
             <code value="CD5" />
             <display value="Schedule 5" />
         </contains>
         <contains>
-            <system value="https://fhir.nhs.uk/CodeSystem/England-MedicationRequestControlledDrug|1.0.0" />
+            <system value="https://fhir.nhs.uk/CodeSystem/England-MedicationRequestControlledDrug" />
             <code value="CD4-1" />
             <display value="Schedule 4 (Part I)" />
         </contains>
         <contains>
-            <system value="https://fhir.nhs.uk/CodeSystem/England-MedicationRequestControlledDrug|1.0.0" />
+            <system value="https://fhir.nhs.uk/CodeSystem/England-MedicationRequestControlledDrug" />
             <code value="CD4-2" />
             <display value="Schedule 4 (Part II)" />
         </contains>
         <contains>
-            <system value="https://fhir.nhs.uk/CodeSystem/England-MedicationRequestControlledDrug|1.0.0" />
+            <system value="https://fhir.nhs.uk/CodeSystem/England-MedicationRequestControlledDrug" />
             <code value="CD1" />
             <display value="Schedule 1" />
         </contains>
         <contains>
-            <system value="https://fhir.nhs.uk/CodeSystem/England-MedicationRequestControlledDrug|1.0.0" />
+            <system value="https://fhir.nhs.uk/CodeSystem/England-MedicationRequestControlledDrug" />
             <code value="CD4" />
             <display value="Schedule 4" />
         </contains>
