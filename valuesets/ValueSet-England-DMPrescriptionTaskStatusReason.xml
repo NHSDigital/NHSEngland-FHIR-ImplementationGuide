@@ -32,7 +32,7 @@
         <offset value="0" />
         <parameter>
             <name value="version" />
-            <valueUri value="https://fhir.nhs.uk/CodeSystem/England-MedicationRequestStatusHistory|1.0.0" />
+            <valueUri value="https://fhir.nhs.uk/CodeSystem/England-MedicationRequestStatusHistory" />
         </parameter>
         <parameter>
             <name value="count" />
