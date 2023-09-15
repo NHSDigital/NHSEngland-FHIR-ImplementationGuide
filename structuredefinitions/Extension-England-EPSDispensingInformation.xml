@@ -83,6 +83,10 @@
       <sliceName value="dispenseStatus" />
       <min value="0" />
       <max value="1" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/England-DMMedicationDispenseType" />
+      </binding>
     </element>
     <element id="Extension.extension:dispenseStatus.url">
       <path value="Extension.extension.url" />

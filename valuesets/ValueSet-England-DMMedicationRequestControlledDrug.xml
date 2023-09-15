@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+    <id value="England-DMMedicationRequestControlledDrug" />
+    <url value="https://fhir.nhs.uk/ValueSet/England-DMMedicationRequestControlledDrug" />
+    <version value="1.0.0" />
+    <name value="EnglandDMMedicationRequestControlledDrug" />
+    <title value="England DM MedicationRequest Controlled Drug" />
+    <status value="draft" />
+    <date value="2023-08-18" />
+    <publisher value="NHS England" />
+    <contact>
+        <name value="NHS England" />
+        <telecom>
+            <system value="email" />
+            <value value="interoperabilityteam@nhs.net" />
+            <use value="work" />
+            <rank value="1" />
+        </telecom>
+    </contact>
+    <description value="A ValueSet use to describe medication request category controlled drug." />
+    <copyright value="Copyright © 2023+ NHS England Licensed under the Apache License, Version 2.0 (the \&quot;License\&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at  http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \&quot;AS IS\&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. HL7® FHIR® standard Copyright © 2011+ HL7 The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at  https://www.hl7.org/fhir/license.html." />
+    <compose>
+        <include>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-MedicationRequestControlledDrug" />
+            <version value="1.0.0" />
+        </include>
+    </compose>
+    <expansion>
+        <identifier value="31c5a646-0ea9-4399-bc87-b4239c2ce6b2" />
+        <timestamp value="2021-04-29T11:14:20+10:00" />
+        <total value="7" />
+        <offset value="0" />
+        <parameter>
+            <name value="version" />
+            <valueUri value="https://fhir.nhs.uk/CodeSystem/England-MedicationRequestControlledDrug" />
+        </parameter>
+        <parameter>
+            <name value="count" />
+            <valueInteger value="2147483647" />
+        </parameter>
+        <parameter>
+            <name value="offset" />
+            <valueInteger value="0" />
+        </parameter>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-MedicationRequestControlledDrug" />
+            <code value="CD3" />
+            <display value="Schedule 3" />
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-MedicationRequestControlledDrug" />
+            <code value="CD2" />
+            <display value="Schedule 2" />
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-MedicationRequestControlledDrug" />
+            <code value="CD5" />
+            <display value="Schedule 5" />
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-MedicationRequestControlledDrug" />
+            <code value="CD4-1" />
+            <display value="Schedule 4 (Part I)" />
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-MedicationRequestControlledDrug" />
+            <code value="CD4-2" />
+            <display value="Schedule 4 (Part II)" />
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-MedicationRequestControlledDrug" />
+            <code value="CD1" />
+            <display value="Schedule 1" />
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/England-MedicationRequestControlledDrug" />
+            <code value="CD4" />
+            <display value="Schedule 4" />
+        </contains>
+    </expansion>
+</ValueSet>
