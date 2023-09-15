@@ -1,0 +1,3 @@
+# Declare files that will always have CRLF line endings on checkout.
+*.xml text eol=crlf
+*.json text eol=crlf

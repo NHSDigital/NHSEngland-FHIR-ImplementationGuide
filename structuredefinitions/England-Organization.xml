@@ -62,7 +62,7 @@
     <element id="Organization.type">
       <path value="Organization.type" />
       <binding>
-        <strength value="preferred" />
+        <strength value="extensible" />
         <valueSet value="https://fhir.nhs.uk/ValueSet/England-OrganisationRole" />
       </binding>
     </element>
