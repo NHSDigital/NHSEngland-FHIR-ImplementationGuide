@@ -253,6 +253,40 @@
       <path value="HealthcareService.serviceProvisionCode.coding.system" />
       <fixedUri value="https://fhir.nhs.uk/CodeSystem/England-ERSClinicType" />
     </element>
+    <element id="HealthcareService.characteristic">
+      <path value="HealthcareService.characteristic" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="coding.system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="HealthcareService.characteristic:eRS-BookableType">
+      <path value="HealthcareService.characteristic" />
+      <sliceName value="eRS-BookableType" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/England-ERSBookableType" />
+      </binding>
+    </element>
+    <element id="HealthcareService.characteristic:eRS-BookableType.coding.system">
+      <path value="HealthcareService.characteristic.coding.system" />
+      <fixedUri value="https://fhir.nhs.uk/CodeSystem/England-ERSBookableType" />
+    </element>
+    <element id="HealthcareService.characteristic:eRS-RequestFlowType">
+      <path value="HealthcareService.characteristic" />
+      <sliceName value="eRS-RequestFlowType" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://fhir.nhs.uk/ValueSet/England-ERSRequestFlowType" />
+      </binding>
+    </element>
+    <element id="HealthcareService.characteristic:eRS-RequestFlowType.coding.system">
+      <path value="HealthcareService.characteristic.coding.system" />
+      <fixedUri value="https://fhir.nhs.uk/CodeSystem/England-ERSRequestFlowType" />
+    </element>
     <element id="HealthcareService.availableTime">
       <path value="HealthcareService.availableTime" />
       <mustSupport value="true" />

@@ -39,23 +39,6 @@
                         </valueContactPoint>
                     </extension>
                 </extension>
-                <extension url="https://fhir.nhs.uk/StructureDefinition/Extension-England-ERSHealthcareServiceContact">
-                    <extension url="purpose">
-                        <valueCodeableConcept>
-                            <coding>
-                                <system value="https://fhir.nhs.uk/CodeSystem/England-ERSPurpose" />
-                                <code value="HEALTHCARE_PROFESSIONALS" />
-                                <display value="Healthcare Professionals" />
-                            </coding>
-                        </valueCodeableConcept>
-                    </extension>
-                    <extension url="telecom">
-                        <valueContactPoint>
-                            <system value="email" />
-                            <value value="service@email.com" />
-                        </valueContactPoint>
-                    </extension>
-                </extension>
                 <active value="true" />
                 <type>
                     <coding>
