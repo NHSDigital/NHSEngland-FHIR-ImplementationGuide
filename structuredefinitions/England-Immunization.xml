@@ -27,27 +27,14 @@
   <baseDefinition value="https://fhir.hl7.org.uk/StructureDefinition/UKCore-Immunization" />
   <derivation value="constraint" />
   <differential>
-    <element id="Immunization.extension">
-      <path value="Immunization.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="0" />
-    </element>
     <element id="Immunization.extension:parentPresent">
       <path value="Immunization.extension" />
       <sliceName value="parentPresent" />
-      <min value="0" />
       <mustSupport value="false" />
     </element>
     <element id="Immunization.extension:vaccinationProcedure">
       <path value="Immunization.extension" />
       <sliceName value="vaccinationProcedure" />
-      <min value="0" />
       <mustSupport value="true" />
     </element>
     <element id="Immunization.identifier">
