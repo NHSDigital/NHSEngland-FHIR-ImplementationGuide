@@ -35,21 +35,9 @@
       <path value="Extension" />
       <max value="1" />
     </element>
-    <element id="Extension.extension">
-      <path value="Extension.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="0" />
-    </element>
     <element id="Extension.extension:state">
       <path value="Extension.extension" />
       <sliceName value="state" />
-      <min value="0" />
       <max value="1" />
     </element>
     <element id="Extension.extension:state.url">
@@ -79,7 +67,6 @@
     <element id="Extension.extension:reason">
       <path value="Extension.extension" />
       <sliceName value="reason" />
-      <min value="0" />
       <max value="1" />
     </element>
     <element id="Extension.extension:reason.url">
@@ -109,7 +96,6 @@
     <element id="Extension.extension:comments">
       <path value="Extension.extension" />
       <sliceName value="comments" />
-      <min value="0" />
       <max value="1" />
     </element>
     <element id="Extension.extension:comments.url">
@@ -126,7 +112,6 @@
     <element id="Extension.extension:stateResource">
       <path value="Extension.extension" />
       <sliceName value="stateResource" />
-      <min value="0" />
       <max value="1" />
     </element>
     <element id="Extension.extension:stateResource.url">
