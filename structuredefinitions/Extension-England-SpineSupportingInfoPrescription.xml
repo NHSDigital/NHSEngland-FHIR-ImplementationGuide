@@ -46,5 +46,6 @@
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />
+    </element>
   </differential>
 </StructureDefinition>
