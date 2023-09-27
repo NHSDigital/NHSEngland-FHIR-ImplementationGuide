@@ -120,9 +120,6 @@
     </element>
     <element id="Extension.extension:stateResource.value[x]">
       <path value="Extension.extension.value[x]" />
-      <type>
-        <code value="Reference" />
-      </type>
     </element>
     <element id="Extension.url">
       <path value="Extension.url" />

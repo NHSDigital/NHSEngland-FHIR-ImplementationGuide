@@ -46,9 +46,5 @@
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />
-      <type>
-        <code value="Reference" />
-      </type>
-    </element>
   </differential>
 </StructureDefinition>
