@@ -31,22 +31,10 @@
       <path value="ServiceRequest.id" />
       <short value="Local Referral ID" />
     </element>
-    <element id="ServiceRequest.extension">
-      <path value="ServiceRequest.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="0" />
-    </element>
     <element id="ServiceRequest.extension:ERSAdviceAndGuidance">
       <path value="ServiceRequest.extension" />
       <sliceName value="ERSAdviceAndGuidance" />
       <short value="ERS Advice and Guidance" />
-      <min value="0" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-ERSReferral" />
@@ -57,7 +45,6 @@
       <path value="ServiceRequest.extension" />
       <sliceName value="ERSServiceRequestState" />
       <short value="Request Status" />
-      <min value="0" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-ERSServiceRequestState" />
@@ -68,7 +55,6 @@
       <path value="ServiceRequest.extension" />
       <sliceName value="portalLink" />
       <short value="Portal Link" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -79,7 +65,6 @@
     <element id="ServiceRequest.extension:serviceRequestPriority">
       <path value="ServiceRequest.extension" />
       <sliceName value="serviceRequestPriority" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -205,10 +190,6 @@
     <element id="ServiceRequest.code.coding:SNOMEDProcedureCode">
       <path value="ServiceRequest.code.coding" />
       <sliceName value="SNOMEDProcedureCode" />
-      <binding>
-        <strength value="preferred" />
-        <valueSet value="https://fhir.hl7.org.uk/ValueSet/UKCore-ProcedureCode" />
-      </binding>
     </element>
     <element id="ServiceRequest.code.coding:SNOMEDProcedureCode.system">
       <path value="ServiceRequest.code.coding.system" />

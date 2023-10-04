@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <CapabilityStatement xmlns="http://hl7.org/fhir">
-    <id value="England-CapabilityStatement" />
-    <url value="https://fhir.nhs.uk/CapabilityStatement/England-CapabilityStatement" />
+    <id value="CapabilityStatement-England" />
+    <url value="https://fhir.nhs.uk/CapabilityStatement/CapabilityStatement-England" />
     <version value="1.0.0" />
-    <name value="EnglandCapabilityStatement" />
-    <title value="England CapabilityStatement" />
+    <name value="CapabilityStatementEngland" />
+    <title value="CapabilityStatementEngland" />
     <status value="draft" />
     <date value="2023-08-18" />
     <publisher value="NHS England" />

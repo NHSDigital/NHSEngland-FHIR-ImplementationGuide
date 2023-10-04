@@ -29,13 +29,6 @@
   <differential>
     <element id="MedicationDispense.extension">
       <path value="MedicationDispense.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
       <min value="1" />
     </element>
     <element id="MedicationDispense.extension:prescriptionStatus">
@@ -54,7 +47,6 @@
       <path value="MedicationDispense.extension" />
       <sliceName value="prescriptionNonDispensingReason" />
       <short value="This is the non dispensing reason for the overall prescription" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -66,7 +58,6 @@
       <path value="MedicationDispense.extension" />
       <sliceName value="repeatInformation" />
       <short value="Repeat Prescribing and Dispensing" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -78,7 +69,6 @@
       <path value="MedicationDispense.extension" />
       <sliceName value="supplyHeaderIdentifier" />
       <short value="Identifier for the SupplyHeader" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -139,7 +129,7 @@
     </element>
     <element id="MedicationDispense.statusReason[x].coding:notDispensedStatusReason.system">
       <path value="MedicationDispense.statusReason[x].coding.system" />
-      <fixedUri value="https://fhir.nhs.uk/ValueSet/England-DMMedicationDispenseStatusReason" />
+      <fixedUri value="https://fhir.nhs.uk/CodeSystem/England-MedicationDispenseStatusReason" />
     </element>
     <element id="MedicationDispense.statusReason[x].coding:amendmentStatusReason">
       <path value="MedicationDispense.statusReason[x].coding" />
@@ -197,7 +187,6 @@
         <severity value="error" />
         <human value="Length of the supplied NHS Number is wrong." />
         <expression value="identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').exists().not() or (identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').exists()  and identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').value.matches('^([0-9]{10})$'))" />
-        <source value="https://fhir.nhs.uk/StructureDefinition/England-Claim" />
       </constraint>
       <mustSupport value="true" />
     </element>
@@ -217,11 +206,6 @@
     </element>
     <element id="MedicationDispense.performer.actor">
       <path value="MedicationDispense.performer.actor" />
-      <type>
-        <code value="Reference" />
-        <profile value="http://hl7.org/fhir/StructureDefinition/Reference" />
-        <aggregation value="contained" />
-      </type>
       <constraint>
         <key value="nhse-mdd-003" />
         <severity value="error" />
@@ -277,21 +261,9 @@
       <min value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="MedicationDispense.quantity.extension">
-      <path value="MedicationDispense.quantity.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="0" />
-    </element>
     <element id="MedicationDispense.quantity.extension:runningTotal">
       <path value="MedicationDispense.quantity.extension" />
       <sliceName value="runningTotal" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -332,10 +304,6 @@
     </element>
     <element id="MedicationDispense.dosageInstruction">
       <path value="MedicationDispense.dosageInstruction" />
-      <type>
-        <code value="Dosage" />
-        <profile value="http://hl7.org/fhir/StructureDefinition/Dosage" />
-      </type>
       <mustSupport value="true" />
     </element>
   </differential>

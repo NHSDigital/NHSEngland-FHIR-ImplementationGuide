@@ -36,22 +36,10 @@
         <expression value="event.code.where(substring($this.length()-6) = 'update').exists().not() or (event.code.where(substring($this.length()-6) = 'update').exists() and extension('https://fhir.nhs.uk/StructureDefinition/Extension-England-MessageHeaderReplacement').exists())" />
       </constraint>
     </element>
-    <element id="MessageHeader.extension">
-      <path value="MessageHeader.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="0" />
-    </element>
     <element id="MessageHeader.extension:replacementOf">
       <path value="MessageHeader.extension" />
       <sliceName value="replacementOf" />
       <short value="An extension used to track history of message headers (Previous Bundle.identifier)." />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -86,21 +74,9 @@
       <path value="MessageHeader.destination.receiver" />
       <min value="1" />
     </element>
-    <element id="MessageHeader.destination.receiver.extension">
-      <path value="MessageHeader.destination.receiver.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="0" />
-    </element>
     <element id="MessageHeader.destination.receiver.extension:receiverLocalPart">
       <path value="MessageHeader.destination.receiver.extension" />
       <sliceName value="receiverLocalPart" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -123,21 +99,9 @@
       <path value="MessageHeader.sender" />
       <mustSupport value="true" />
     </element>
-    <element id="MessageHeader.sender.extension">
-      <path value="MessageHeader.sender.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="0" />
-    </element>
     <element id="MessageHeader.sender.extension:senderLocalPart">
       <path value="MessageHeader.sender.extension" />
       <sliceName value="senderLocalPart" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
