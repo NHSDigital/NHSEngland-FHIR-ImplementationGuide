@@ -40,7 +40,6 @@
     <element id="Location.identifier:odsCode">
       <path value="Location.identifier" />
       <sliceName value="odsCode" />
-      <max value="1" />
     </element>
     <element id="Location.identifier:odsCode.system">
       <path value="Location.identifier.system" />
