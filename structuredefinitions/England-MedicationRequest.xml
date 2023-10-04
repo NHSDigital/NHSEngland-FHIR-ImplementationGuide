@@ -102,86 +102,68 @@
         <expression value="(courseOfTherapyType.coding.code != 'acute') or (courseOfTherapyType.coding.code = 'acute' and extension('https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-MedicationRepeatInformation').exists().not())" />
       </constraint>
     </element>
-    <element id="MedicationRequest.extension">
-      <path value="MedicationRequest.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="0" />
-    </element>
     <element id="MedicationRequest.extension:medicationRepeatInformation">
       <path value="MedicationRequest.extension" />
       <sliceName value="medicationRepeatInformation" />
       <short value="Continuous and Continuous Repeat Dispensing" />
-      <min value="0" />
       <mustSupport value="true" />
     </element>
     <element id="MedicationRequest.extension:responsiblePractitioner">
       <path value="MedicationRequest.extension" />
       <sliceName value="responsiblePractitioner" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-DMResponsiblePractitioner" />
       </type>
-      <isModifier value="false" />
+      <mustSupport value="true" />
     </element>
     <element id="MedicationRequest.extension:prescriptionEndorsement">
       <path value="MedicationRequest.extension" />
       <sliceName value="prescriptionEndorsement" />
-      <min value="0" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-DMPrescriptionEndorsement" />
       </type>
-      <isModifier value="false" />
+      <mustSupport value="true" />
     </element>
     <element id="MedicationRequest.extension:prescriptionTaskStatusReason">
       <path value="MedicationRequest.extension" />
       <sliceName value="prescriptionTaskStatusReason" />
-      <min value="0" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-DMPrescriptionStatusHistory" />
       </type>
-      <isModifier value="false" />
+      <mustSupport value="true" />
     </element>
     <element id="MedicationRequest.extension:controlledDrug">
       <path value="MedicationRequest.extension" />
       <sliceName value="controlledDrug" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-DMControlledDrug" />
       </type>
-      <isModifier value="false" />
+      <mustSupport value="true" />
     </element>
     <element id="MedicationRequest.extension:dispensingInformation">
       <path value="MedicationRequest.extension" />
       <sliceName value="dispensingInformation" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-EPSDispensingInformation" />
       </type>
-      <isModifier value="false" />
+      <mustSupport value="true" />
     </element>
     <element id="MedicationRequest.extension:NHSBSAPrescriptionType">
       <path value="MedicationRequest.extension" />
       <sliceName value="NHSBSAPrescriptionType" />
-      <min value="0" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-DMPrescriptionType" />
       </type>
-      <isModifier value="false" />
+      <mustSupport value="true" />
     </element>
     <element id="MedicationRequest.identifier">
       <path value="MedicationRequest.identifier" />
@@ -300,10 +282,6 @@
       <type>
         <code value="CodeableConcept" />
       </type>
-      <type>
-        <code value="Reference" />
-        <aggregation value="bundled" />
-      </type>
       <mustSupport value="true" />
       <binding>
         <strength value="extensible" />
@@ -319,10 +297,6 @@
         <expression value="identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').exists().not() or (identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').exists()  and identifier.where(system='https://fhir.nhs.uk/Id/nhs-number').value.matches('^([0-9]{10})$'))" />
       </constraint>
       <mustSupport value="true" />
-    </element>
-    <element id="MedicationRequest.subject.reference">
-      <path value="MedicationRequest.subject.reference" />
-      <min value="1" />
     </element>
     <element id="MedicationRequest.subject.identifier.system">
       <path value="MedicationRequest.subject.identifier.system" />
@@ -366,22 +340,10 @@
       <path value="MedicationRequest.basedOn" />
       <mustSupport value="true" />
     </element>
-    <element id="MedicationRequest.basedOn.extension">
-      <path value="MedicationRequest.basedOn.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="0" />
-    </element>
     <element id="MedicationRequest.basedOn.extension:repeatInformation">
       <path value="MedicationRequest.basedOn.extension" />
       <sliceName value="repeatInformation" />
       <short value="Additional repeatInformation" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -392,7 +354,6 @@
     <element id="MedicationRequest.basedOn.extension:orignalPrescriptionId">
       <path value="MedicationRequest.basedOn.extension" />
       <sliceName value="orignalPrescriptionId" />
-      <min value="0" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-DMPrescriptionId" />
@@ -407,13 +368,6 @@
     </element>
     <element id="MedicationRequest.groupIdentifier.extension">
       <path value="MedicationRequest.groupIdentifier.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
       <min value="1" />
     </element>
     <element id="MedicationRequest.groupIdentifier.extension:PrescriptionOrderUUID">
@@ -490,13 +444,6 @@
     </element>
     <element id="MedicationRequest.dispenseRequest.extension">
       <path value="MedicationRequest.dispenseRequest.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
       <min value="1" />
     </element>
     <element id="MedicationRequest.dispenseRequest.extension:performerSiteType">
@@ -557,32 +504,16 @@
       <path value="MedicationRequest.dispenseRequest.performer" />
       <mustSupport value="true" />
     </element>
-    <element id="MedicationRequest.dispenseRequest.performer.extension">
-      <path value="MedicationRequest.dispenseRequest.performer.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="0" />
-    </element>
     <element id="MedicationRequest.dispenseRequest.performer.extension:dispensingPractitioner">
       <path value="MedicationRequest.dispenseRequest.performer.extension" />
       <sliceName value="dispensingPractitioner" />
       <short value="practitioner who released(/downloaded) the prescription" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-DMDispensingPerformer" />
       </type>
       <mustSupport value="true" />
-    </element>
-    <element id="MedicationRequest.dispenseRequest.performer.identifier">
-      <path value="MedicationRequest.dispenseRequest.performer.identifier" />
-      <min value="1" />
     </element>
     <element id="MedicationRequest.dispenseRequest.performer.identifier.system">
       <path value="MedicationRequest.dispenseRequest.performer.identifier.system" />

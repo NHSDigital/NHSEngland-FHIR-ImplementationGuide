@@ -40,7 +40,6 @@
     <element id="Location.identifier:odsCode">
       <path value="Location.identifier" />
       <sliceName value="odsCode" />
-      <max value="0" />
     </element>
     <element id="Location.identifier:odsCode.system">
       <path value="Location.identifier.system" />
@@ -58,21 +57,9 @@
         <valueSet value="https://fhir.nhs.uk/ValueSet/England-LocationType" />
       </binding>
     </element>
-    <element id="Location.type.extension">
-      <path value="Location.type.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="0" />
-    </element>
     <element id="Location.type.extension:locationRole">
       <path value="Location.type.extension" />
       <sliceName value="locationRole" />
-      <min value="0" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-ODSOrganisationRole" />
@@ -82,7 +69,6 @@
     <element id="Location.type.extension:activePeriod">
       <path value="Location.type.extension" />
       <sliceName value="activePeriod" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />

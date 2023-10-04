@@ -42,21 +42,9 @@
         <expression value="identifier.where(system='https://fhir.nhs.uk/Id/sds-role-profile-id').exists().not() or (identifier.where(system='https://fhir.nhs.uk/Id/sds-role-profile-id').exists()  and identifier.where(system='https://fhir.nhs.uk/Id/sds-role-profile-id').value.matches('^[0-9]{12}$'))" />
       </constraint>
     </element>
-    <element id="PractitionerRole.extension">
-      <path value="PractitionerRole.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="0" />
-    </element>
     <element id="PractitionerRole.extension:costCentre">
       <path value="PractitionerRole.extension" />
       <sliceName value="costCentre" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />

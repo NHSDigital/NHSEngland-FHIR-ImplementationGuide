@@ -40,21 +40,9 @@
       <path value="OperationOutcome.meta.lastUpdated" />
       <min value="1" />
     </element>
-    <element id="OperationOutcome.extension">
-      <path value="OperationOutcome.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="0" />
-    </element>
     <element id="OperationOutcome.extension:supportingInfo">
       <path value="OperationOutcome.extension" />
       <sliceName value="supportingInfo" />
-      <min value="0" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-SpineSupportingInfo" />
@@ -64,13 +52,11 @@
       <path value="OperationOutcome.extension" />
       <sliceName value="supportingInfoPrescription" />
       <short value="Other information that may be relevant to this event" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-SpineSupportingInfoPrescription" />
       </type>
-      <isModifier value="false" />
     </element>
     <element id="OperationOutcome.issue">
       <path value="OperationOutcome.issue" />
