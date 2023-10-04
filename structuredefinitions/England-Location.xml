@@ -60,7 +60,6 @@
     <element id="Location.type.extension:locationRole">
       <path value="Location.type.extension" />
       <sliceName value="locationRole" />
-      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-ODSOrganisationRole" />

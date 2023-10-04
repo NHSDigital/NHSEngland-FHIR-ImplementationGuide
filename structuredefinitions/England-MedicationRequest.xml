@@ -282,10 +282,6 @@
       <type>
         <code value="CodeableConcept" />
       </type>
-      <type>
-        <code value="Reference" />
-        <aggregation value="bundled" />
-      </type>
       <mustSupport value="true" />
       <binding>
         <strength value="extensible" />
