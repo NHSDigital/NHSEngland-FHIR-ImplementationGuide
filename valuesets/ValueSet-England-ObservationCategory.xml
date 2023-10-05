@@ -13,6 +13,7 @@
             <system value="email" />
             <value value="interoperabilityteam@nhs.net" />
             <use value="work" />
+            <rank value="1" />
         </telecom>
     </contact>
     <description value="Observation Category" />
