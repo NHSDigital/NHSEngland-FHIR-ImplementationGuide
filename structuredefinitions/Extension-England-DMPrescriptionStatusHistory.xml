@@ -38,19 +38,11 @@
   <differential>
     <element id="Extension.extension">
       <path value="Extension.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
       <min value="1" />
     </element>
     <element id="Extension.extension:statusDate">
       <path value="Extension.extension" />
       <sliceName value="statusDate" />
-      <min value="0" />
       <max value="1" />
     </element>
     <element id="Extension.extension:statusDate.url">
