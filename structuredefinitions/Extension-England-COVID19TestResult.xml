@@ -31,22 +31,10 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
   <derivation value="constraint" />
   <differential>
-    <element id="Extension.extension">
-      <path value="Extension.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="0" />
-    </element>
     <element id="Extension.extension:reportOrigin">
       <path value="Extension.extension" />
       <sliceName value="reportOrigin" />
       <short value="Indicates the source of a secondarily reported record" />
-      <min value="0" />
       <max value="1" />
     </element>
     <element id="Extension.extension:reportOrigin.url">
@@ -63,7 +51,6 @@
       <path value="Extension.extension" />
       <sliceName value="administrationMethod" />
       <short value="Used to convey how the test was administered" />
-      <min value="0" />
       <max value="1" />
     </element>
     <element id="Extension.extension:administrationMethod.url">

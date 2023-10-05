@@ -44,21 +44,9 @@
       <short value="An Extension to describe what an Organization does and whether this is the primary role of the Organisation." />
       <max value="1" />
     </element>
-    <element id="Extension.extension">
-      <path value="Extension.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="0" />
-    </element>
     <element id="Extension.extension:primaryRole">
       <path value="Extension.extension" />
       <sliceName value="primaryRole" />
-      <min value="0" />
       <max value="1" />
     </element>
     <element id="Extension.extension:primaryRole.url">
@@ -74,7 +62,6 @@
     <element id="Extension.extension:status">
       <path value="Extension.extension" />
       <sliceName value="status" />
-      <min value="0" />
       <max value="1" />
     </element>
     <element id="Extension.extension:status.url">
