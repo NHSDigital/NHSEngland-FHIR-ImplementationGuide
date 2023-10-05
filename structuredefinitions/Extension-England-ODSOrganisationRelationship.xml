@@ -31,21 +31,9 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
   <derivation value="constraint" />
   <differential>
-    <element id="Extension.extension">
-      <path value="Extension.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="0" />
-    </element>
     <element id="Extension.extension:nationalGrouping">
       <path value="Extension.extension" />
       <sliceName value="nationalGrouping" />
-      <min value="0" />
       <max value="1" />
     </element>
     <element id="Extension.extension:nationalGrouping.url">
@@ -69,7 +57,6 @@
     <element id="Extension.extension:highLevelHealthGeography">
       <path value="Extension.extension" />
       <sliceName value="highLevelHealthGeography" />
-      <min value="0" />
       <max value="1" />
     </element>
     <element id="Extension.extension:highLevelHealthGeography.url">
@@ -93,7 +80,6 @@
     <element id="Extension.extension:commissionedBy">
       <path value="Extension.extension" />
       <sliceName value="commissionedBy" />
-      <min value="0" />
       <max value="1" />
     </element>
     <element id="Extension.extension:commissionedBy.url">
@@ -117,7 +103,6 @@
     <element id="Extension.extension:reimbursementAuthority">
       <path value="Extension.extension" />
       <sliceName value="reimbursementAuthority" />
-      <min value="0" />
       <max value="1" />
     </element>
     <element id="Extension.extension:reimbursementAuthority.url">
@@ -141,7 +126,6 @@
     <element id="Extension.extension:primaryCareNetwork">
       <path value="Extension.extension" />
       <sliceName value="primaryCareNetwork" />
-      <min value="0" />
       <max value="1" />
     </element>
     <element id="Extension.extension:primaryCareNetwork.url">
