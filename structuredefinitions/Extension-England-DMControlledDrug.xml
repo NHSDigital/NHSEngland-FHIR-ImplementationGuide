@@ -45,21 +45,9 @@
         <expression value="(((extension('schedule').value.code='CD2' and extension('quantityWords').exists()) or (extension('schedule').value.code='CD3' and extension('quantityWords').exists()) or (extension('schedule').value.code != 'CD2' and extension('schedule').value.code != 'CD3')) and extension('scheduled').exists()) or (extension('scheduled').exists().not())" />
       </constraint>
     </element>
-    <element id="Extension.extension">
-      <path value="Extension.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="0" />
-    </element>
     <element id="Extension.extension:quantityWords">
       <path value="Extension.extension" />
       <sliceName value="quantityWords" />
-      <min value="0" />
       <max value="1" />
     </element>
     <element id="Extension.extension:quantityWords.url">
@@ -76,7 +64,6 @@
     <element id="Extension.extension:schedule">
       <path value="Extension.extension" />
       <sliceName value="schedule" />
-      <min value="0" />
       <max value="1" />
       <binding>
         <strength value="required" />

@@ -44,21 +44,9 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
   <derivation value="constraint" />
   <differential>
-    <element id="Extension.extension">
-      <path value="Extension.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="0" />
-    </element>
     <element id="Extension.extension:activePeriod">
       <path value="Extension.extension" />
       <sliceName value="activePeriod" />
-      <min value="0" />
     </element>
     <element id="Extension.extension:activePeriod.url">
       <path value="Extension.extension.url" />
@@ -73,7 +61,6 @@
     <element id="Extension.extension:dateType">
       <path value="Extension.extension" />
       <sliceName value="dateType" />
-      <min value="0" />
     </element>
     <element id="Extension.extension:dateType.url">
       <path value="Extension.extension.url" />
