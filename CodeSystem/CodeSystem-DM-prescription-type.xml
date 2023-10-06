@@ -2,10 +2,10 @@
 <CodeSystem xmlns="http://hl7.org/fhir">
    <id value="prescription-type" />
    <url value="https://fhir.nhs.uk/CodeSystem/prescription-type" />
-   <version value="1.1.5" />
+   <version value="1.1.6" />
    <name value="PrescriptionType" />
    <status value="active" />
-   <date value="2023-03-24T00:00:00+00:00" />
+   <date value="2023-10-06T00:00:00+00:00" />
    <publisher value="NHS Digital and NHS Business Services Authority" />
    <contact>
       <name value="Interoperability Team" />
@@ -230,6 +230,46 @@
       <code value="0125" />
       <display value="Primary Care Prescriber – Paramedic Independent/Supplementary prescriber" />
    </concept>
+	 <concept>
+      <code value="0201" />
+      <display value="Primary Care Prescriber – Medical Prescriber (Wales)" />
+   </concept>
+	 <concept>
+      <code value="0204" />
+      <display value="Primary Care Prescriber - Nurse Independent/Supplementary prescriber (Wales)" />
+   </concept>
+	 <concept>
+      <code value="0205" />
+      <display value="Primary Care Prescriber - Community Practitioner Nurse prescriber (Wales)" />
+   </concept>
+	 <concept>
+      <code value="0208" />
+      <display value="Primary Care Prescriber - Pharmacist Independent/Supplementary prescriber (Wales)" />
+   </concept>
+	 <concept>
+      <code value="0213" />
+      <display value="Primary Care Prescriber – Optometrist Independent/Supplementary prescriber (Wales)" />
+   </concept>
+	 <concept>
+      <code value="0214" />
+      <display value="Primary Care Prescriber – Podiatrist/Chiropodist Independent/Supplementary prescriber (Wales)" />
+   </concept>
+	 <concept>
+      <code value="0216" />
+      <display value="Primary Care Prescriber – Radiographer Independent/Supplementary prescriber (Wales)" />
+   </concept>
+	 <concept>
+      <code value="0217" />
+      <display value="Primary Care Prescriber - Physiotherapist Independent/Supplementary prescriber (Wales)" />
+   </concept>
+	 <concept>
+      <code value="0224" />
+      <display value="Primary Care Prescriber – Dietician Supplementary prescriber (Wales)" />
+   </concept>
+	 <concept>
+      <code value="0225" />
+      <display value="Primary Care Prescriber – Paramedic Independent/Supplementary prescriber (Wales)" />
+   </concept>
    <concept>
       <code value="0304" />
       <display value="Nurse Practitioner - Practice employed Nurse Independent/Supplementary prescriber" />
@@ -278,6 +318,10 @@
    <concept>
       <code value="0607" />
       <display value="Dental Prescribing – Dentist" />
+   </concept>
+	 <concept>
+      <code value="0707" />
+      <display value="Dental Prescribing - Dentist (Wales)" />
    </concept>
    <concept>
       <code value="0708" />
@@ -553,4 +597,44 @@
       <display value="Outpatient Homecare Prescriber – Paramedic Independent Supplementary prescriber" />
       <definition value="NON- FP10 Hospital outpatient prescriptions dispensed by Homecare" />
    </concept>
+	 <concept>
+      <code value="2001" />
+      <display value="Outpatient Community Prescriber – Medical Prescriber (Wales)" />
+   </concept>
+	 <concept>
+      <code value="2004" />
+      <display value="Outpatient Community Prescriber - Nurse Independent/Supplementary prescriber (Wales)" />
+   </concept>
+	 <concept>
+      <code value="2005" />
+      <display value="Outpatient Community Prescriber - Community Practitioner Nurse prescriber (Wales)" />
+   </concept>
+	 <concept>
+      <code value="2008" />
+      <display value="Outpatient Community Prescriber - Pharmacist Independent/Supplementary prescriber (Wales)" />
+   </concept>
+	 <concept>
+      <code value="2013" />
+      <display value="Outpatient Community Prescriber – Optometrist Independent/Supplementary prescriber (Wales)" />
+   </concept>
+	 <concept>
+      <code value="2014" />
+      <display value="Outpatient Community Prescriber – Podiatrist/Chiropodist Independent/Supplementary (Wales)" />
+   </concept>
+	 <concept>
+      <code value="2016" />
+      <display value="Outpatient Community Prescriber – Radiographer Independent/Supplementary prescriber (Wales)" />
+   </concept>
+	 <concept>
+      <code value="2017" />
+      <display value="Outpatient Community Prescriber - Physiotherapist Independent/Supplementary prescriber (Wales)" />
+   </concept>
+	 <concept>
+      <code value="2024" />
+      <display value="Outpatient Community Prescriber – Dietician Supplementary prescriber (Wales)" />
+   </concept>
+	 <concept>
+      <code value="2025" />
+      <display value="Outpatient Community Prescriber – Paramedic Independent/Supplementary prescriber (Wales)" />
+   </concept>	
 </CodeSystem>
