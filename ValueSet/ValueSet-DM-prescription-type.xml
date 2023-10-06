@@ -2,14 +2,14 @@
 <ValueSet xmlns="http://hl7.org/fhir">
     <id value="043b4a0c-1677-4d95-b804-9880ef818e27"/>
     <url value="https://fhir.nhs.uk/ValueSet/DM-prescription-type"/>
-    <version value="1.0.5"/>
+    <version value="1.0.6"/>
     <name value="DMPrescriptionType"/>
     <status value="draft"/>
     <description value="Subset on UK Core Prescription Therapy Type which is permitted for EPS use."/>
     <compose>
         <include>
             <system value="https://fhir.nhs.uk/CodeSystem/prescription-type"/>
-            <version value="1.1.5"/>
+            <version value="1.1.6"/>
             <filter>
                 <property value="deprecated"/>
                 <op value="exists"/>
@@ -19,8 +19,8 @@
     </compose>
     <expansion>
         <identifier value="8a5f2d29-63b6-4835-bd60-412031a1e654"/>
-        <timestamp value="2020-10-12T20:11:12+10:00"/>
-        <total value="51"/>
+        <timestamp value="2023-10-06T10:11:12+10:00"/>
+        <total value="71"/>
         <offset value="0"/>
         <parameter>
             <name value="version"/>
@@ -34,6 +34,61 @@
             <name value="offset"/>
             <valueInteger value="0"/>
         </parameter>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/prescription-type"/>
+            <code value="0201"/>
+            <display value="Primary Care Prescriber – Medical Prescriber (Wales)"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/prescription-type"/>
+            <code value="0204" />
+            <display value="Primary Care Prescriber - Nurse Independent/Supplementary prescriber (Wales)" />
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/prescription-type"/>
+            <code value="0205" />
+            <display value="Primary Care Prescriber - Community Practitioner Nurse prescriber (Wales)" />
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/prescription-type"/>
+            <code value="0208" />
+            <display value="Primary Care Prescriber - Pharmacist Independent/Supplementary prescriber (Wales)" />
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/prescription-type"/>
+            <code value="0213" />
+            <display value="Primary Care Prescriber – Optometrist Independent/Supplementary prescriber (Wales)" />
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/prescription-type"/>
+            <code value="0214" />
+            <display value="Primary Care Prescriber – Podiatrist/Chiropodist Independent/Supplementary prescriber (Wales)" />
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/prescription-type"/>
+            <code value="0216" />
+            <display value="Primary Care Prescriber – Radiographer Independent/Supplementary prescriber (Wales)" />
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/prescription-type"/>
+            <code value="0217" />
+            <display value="Primary Care Prescriber - Physiotherapist Independent/Supplementary prescriber (Wales)" />
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/prescription-type"/>
+            <code value="0224" />
+            <display value="Primary Care Prescriber – Dietician Supplementary prescriber (Wales)" />
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/prescription-type"/>
+            <code value="0225" />
+            <display value="Primary Care Prescriber – Paramedic Independent/Supplementary prescriber (Wales)" />
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/prescription-type"/>
+            <code value="0707" />
+            <display value="Dental Prescribing - Dentist (Wales)" />
+        </contains>
         <contains>
             <system value="https://fhir.nhs.uk/CodeSystem/prescription-type"/>
             <code value="0924"/>
@@ -283,6 +338,56 @@
             <system value="https://fhir.nhs.uk/CodeSystem/prescription-type"/>
             <code value="0125"/>
             <display value="Primary Care Prescriber – Paramedic Independent/Supplementary prescriber"/>
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/prescription-type"/>
+            <code value="2001" />
+            <display value="Outpatient Community Prescriber – Medical Prescriber (Wales)" />
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/prescription-type"/>
+            <code value="2004" />
+            <display value="Outpatient Community Prescriber - Nurse Independent/Supplementary prescriber (Wales)" />
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/prescription-type"/>
+            <code value="2005" />
+            <display value="Outpatient Community Prescriber - Community Practitioner Nurse prescriber (Wales)" />
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/prescription-type"/>
+            <code value="2008" />
+            <display value="Outpatient Community Prescriber - Pharmacist Independent/Supplementary prescriber (Wales)" />
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/prescription-type"/>
+            <code value="2013" />
+            <display value="Outpatient Community Prescriber – Optometrist Independent/Supplementary prescriber (Wales)" />
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/prescription-type"/>
+            <code value="2014" />
+            <display value="Outpatient Community Prescriber – Podiatrist/Chiropodist Independent/Supplementary (Wales)" />
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/prescription-type"/>
+            <code value="2016" />
+            <display value="Outpatient Community Prescriber – Radiographer Independent/Supplementary prescriber (Wales)" />
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/prescription-type"/>
+            <code value="2017" />
+            <display value="Outpatient Community Prescriber - Physiotherapist Independent/Supplementary prescriber (Wales)" />
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/prescription-type"/>
+            <code value="2024" />
+            <display value="Outpatient Community Prescriber – Dietician Supplementary prescriber (Wales)" />
+        </contains>
+        <contains>
+            <system value="https://fhir.nhs.uk/CodeSystem/prescription-type"/>
+            <code value="2025" />
+            <display value="Outpatient Community Prescriber – Paramedic Independent/Supplementary prescriber (Wales)" />
         </contains>
     </expansion>
 </ValueSet>
