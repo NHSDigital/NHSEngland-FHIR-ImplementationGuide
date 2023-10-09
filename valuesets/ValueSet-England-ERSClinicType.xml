@@ -5,6 +5,7 @@
     <name value="EnglandERSClinicType" />
 	<title value="England ERS Clinic Type" />
     <status value="draft" />
+    <experimental value="false"/>
     <publisher value="NHS England" />
     <contact>
         <name value="NHS England" />
