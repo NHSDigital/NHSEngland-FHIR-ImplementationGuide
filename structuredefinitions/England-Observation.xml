@@ -36,6 +36,7 @@
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-COVID19TestResult" />
       </type>
       <mustSupport value="true" />
+      <isModifier value="false" />
     </element>
     <element id="Observation.identifier">
       <path value="Observation.identifier" />

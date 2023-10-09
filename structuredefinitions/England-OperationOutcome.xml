@@ -47,6 +47,7 @@
         <code value="Extension" />
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-SpineSupportingInfo" />
       </type>
+      <isModifier value="false" />
     </element>
     <element id="OperationOutcome.extension:supportingInfoPrescription">
       <path value="OperationOutcome.extension" />
@@ -57,6 +58,7 @@
         <code value="Extension" />
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-SpineSupportingInfoPrescription" />
       </type>
+      <isModifier value="false" />
     </element>
     <element id="OperationOutcome.issue">
       <path value="OperationOutcome.issue" />

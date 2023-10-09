@@ -35,6 +35,7 @@
         <code value="Extension" />
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-ODSOrganisationRelationship" />
       </type>
+      <isModifier value="false" />
     </element>
     <element id="Organization.identifier">
       <path value="Organization.identifier" />
@@ -60,6 +61,7 @@
         <code value="Extension" />
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-ODSOrganisationRoleActivePeriod" />
       </type>
+      <isModifier value="false" />
     </element>
     <element id="Organization.type.extension:organisationRole">
       <path value="Organization.type.extension" />

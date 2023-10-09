@@ -42,6 +42,7 @@
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-EPSTaskBusinessStatus" />
       </type>
       <mustSupport value="true" />
+      <isModifier value="false" />
     </element>
     <element id="MedicationDispense.extension:prescriptionNonDispensingReason">
       <path value="MedicationDispense.extension" />
@@ -53,6 +54,7 @@
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-DMPrescriptionNonDispensingReason" />
       </type>
       <mustSupport value="true" />
+      <isModifier value="false" />
     </element>
     <element id="MedicationDispense.extension:repeatInformation">
       <path value="MedicationDispense.extension" />
@@ -64,6 +66,7 @@
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-EPSRepeatInformation" />
       </type>
       <mustSupport value="true" />
+      <isModifier value="false" />
     </element>
     <element id="MedicationDispense.extension:supplyHeaderIdentifier">
       <path value="MedicationDispense.extension" />
@@ -75,6 +78,7 @@
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-EPSSupplyHeaderIdentifier" />
       </type>
       <mustSupport value="true" />
+      <isModifier value="false" />
     </element>
     <element id="MedicationDispense.identifier">
       <path value="MedicationDispense.identifier" />
@@ -269,6 +273,7 @@
         <code value="Extension" />
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-DMRunningTotal" />
       </type>
+      <isModifier value="false" />
     </element>
     <element id="MedicationDispense.quantity.value">
       <path value="MedicationDispense.quantity.value" />

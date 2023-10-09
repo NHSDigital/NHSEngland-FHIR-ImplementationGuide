@@ -40,6 +40,7 @@
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-ERSReferral" />
       </type>
       <mustSupport value="true" />
+      <isModifier value="false" />
     </element>
     <element id="ServiceRequest.extension:ERSServiceRequestState">
       <path value="ServiceRequest.extension" />
@@ -50,6 +51,7 @@
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-ERSServiceRequestState" />
       </type>
       <mustSupport value="true" />
+      <isModifier value="false" />
     </element>
     <element id="ServiceRequest.extension:portalLink">
       <path value="ServiceRequest.extension" />
@@ -61,6 +63,7 @@
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-PortalLink" />
       </type>
       <mustSupport value="true" />
+      <isModifier value="false" />
     </element>
     <element id="ServiceRequest.extension:serviceRequestPriority">
       <path value="ServiceRequest.extension" />
@@ -71,6 +74,7 @@
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-ServiceRequestPriority" />
       </type>
       <mustSupport value="true" />
+      <isModifier value="false" />
     </element>
     <element id="ServiceRequest.identifier">
       <path value="ServiceRequest.identifier" />

@@ -51,6 +51,7 @@
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-AccountCode" />
       </type>
       <mustSupport value="true" />
+      <isModifier value="false" />
     </element>
     <element id="PractitionerRole.identifier">
       <path value="PractitionerRole.identifier" />
