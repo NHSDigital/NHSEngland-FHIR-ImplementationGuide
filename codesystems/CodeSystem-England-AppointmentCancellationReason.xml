@@ -1,6 +1,7 @@
 <CodeSystem xmlns="http://hl7.org/fhir">
     <id value="England-AppointmentCancellationReason" />
     <url value="https://fhir.nhs.uk/CodeSystem/England-AppointmentCancellationReason" />
+    <version value="1.0.0" />
     <name value="EnglandAppointmentCancellationReason" />
     <title value="England Appointment Cancellation Reason" />
     <status value="draft" />
