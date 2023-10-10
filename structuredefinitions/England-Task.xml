@@ -6,6 +6,7 @@
   <name value="EnglandTask" />
   <title value="England Task" />
   <status value="draft" />
+  <experimental value="false"/>
   <date value="2023-08-18" />
   <publisher value="NHS England" />
   <contact>
@@ -36,6 +37,7 @@
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-ProvenanceAgent" />
       </type>
       <mustSupport value="true" />
+      <isModifier value="false" />
     </element>
     <element id="Task.extension:prescription">
       <path value="Task.extension" />
@@ -46,6 +48,7 @@
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-EPSPrescription" />
       </type>
       <mustSupport value="true" />
+      <isModifier value="false" />
     </element>
     <element id="Task.extension:repeatInformation">
       <path value="Task.extension" />
@@ -57,6 +60,7 @@
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-EPSRepeatInformation" />
       </type>
       <mustSupport value="true" />
+      <isModifier value="false" />
     </element>
     <element id="Task.identifier">
       <path value="Task.identifier" />

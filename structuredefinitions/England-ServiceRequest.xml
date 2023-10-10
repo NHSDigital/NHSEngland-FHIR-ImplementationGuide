@@ -6,6 +6,7 @@
   <name value="EnglandServiceRequest" />
   <title value="England ServiceRequest" />
   <status value="draft" />
+  <experimental value="false" />
   <date value="2023-08-18" />
   <publisher value="NHS England" />
   <contact>
@@ -40,6 +41,7 @@
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-ERSReferral" />
       </type>
       <mustSupport value="true" />
+      <isModifier value="false" />
     </element>
     <element id="ServiceRequest.extension:ERSServiceRequestState">
       <path value="ServiceRequest.extension" />
@@ -50,6 +52,7 @@
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-ERSServiceRequestState" />
       </type>
       <mustSupport value="true" />
+      <isModifier value="false" />
     </element>
     <element id="ServiceRequest.extension:portalLink">
       <path value="ServiceRequest.extension" />
@@ -61,6 +64,7 @@
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-PortalLink" />
       </type>
       <mustSupport value="true" />
+      <isModifier value="false" />
     </element>
     <element id="ServiceRequest.extension:serviceRequestPriority">
       <path value="ServiceRequest.extension" />
@@ -71,6 +75,7 @@
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-ServiceRequestPriority" />
       </type>
       <mustSupport value="true" />
+      <isModifier value="false" />
     </element>
     <element id="ServiceRequest.identifier">
       <path value="ServiceRequest.identifier" />
@@ -176,46 +181,6 @@
     <element id="ServiceRequest.code">
       <path value="ServiceRequest.code" />
       <mustSupport value="true" />
-    </element>
-    <element id="ServiceRequest.code.coding">
-      <path value="ServiceRequest.code.coding" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="system" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="ServiceRequest.code.coding:SNOMEDProcedureCode">
-      <path value="ServiceRequest.code.coding" />
-      <sliceName value="SNOMEDProcedureCode" />
-    </element>
-    <element id="ServiceRequest.code.coding:SNOMEDProcedureCode.system">
-      <path value="ServiceRequest.code.coding.system" />
-      <min value="1" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="ServiceRequest.code.coding:SNOMEDProcedureCode.code">
-      <path value="ServiceRequest.code.coding.code" />
-      <min value="1" />
-    </element>
-    <element id="ServiceRequest.code.coding:ServiceRequestCode">
-      <path value="ServiceRequest.code.coding" />
-      <sliceName value="ServiceRequestCode" />
-      <binding>
-        <strength value="preferred" />
-        <valueSet value="https://fhir.nhs.uk/ValueSet/England-ServiceRequestCode" />
-      </binding>
-    </element>
-    <element id="ServiceRequest.code.coding:ServiceRequestCode.system">
-      <path value="ServiceRequest.code.coding.system" />
-      <min value="1" />
-      <fixedUri value="https://fhir.nhs.uk/CodeSystem/England-ServiceRequestCode" />
-    </element>
-    <element id="ServiceRequest.code.coding:ServiceRequestCode.code">
-      <path value="ServiceRequest.code.coding.code" />
-      <min value="1" />
     </element>
     <element id="ServiceRequest.subject">
       <path value="ServiceRequest.subject" />

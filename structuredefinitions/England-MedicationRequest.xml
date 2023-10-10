@@ -6,6 +6,7 @@
   <name value="EnglandMedicationRequest" />
   <title value="England MedicationRequest" />
   <status value="draft" />
+  <experimental value="false"/>
   <date value="2023-08-18" />
   <publisher value="NHS England" />
   <contact>
@@ -117,6 +118,7 @@
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-DMResponsiblePractitioner" />
       </type>
       <mustSupport value="true" />
+      <isModifier value="false" />
     </element>
     <element id="MedicationRequest.extension:prescriptionEndorsement">
       <path value="MedicationRequest.extension" />
@@ -126,6 +128,7 @@
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-DMPrescriptionEndorsement" />
       </type>
       <mustSupport value="true" />
+      <isModifier value="false" />
     </element>
     <element id="MedicationRequest.extension:prescriptionTaskStatusReason">
       <path value="MedicationRequest.extension" />
@@ -135,6 +138,7 @@
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-DMPrescriptionStatusHistory" />
       </type>
       <mustSupport value="true" />
+      <isModifier value="false" />
     </element>
     <element id="MedicationRequest.extension:controlledDrug">
       <path value="MedicationRequest.extension" />
@@ -145,6 +149,7 @@
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-DMControlledDrug" />
       </type>
       <mustSupport value="true" />
+      <isModifier value="false" />
     </element>
     <element id="MedicationRequest.extension:dispensingInformation">
       <path value="MedicationRequest.extension" />
@@ -155,6 +160,7 @@
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-EPSDispensingInformation" />
       </type>
       <mustSupport value="true" />
+      <isModifier value="false" />
     </element>
     <element id="MedicationRequest.extension:NHSBSAPrescriptionType">
       <path value="MedicationRequest.extension" />
@@ -164,6 +170,7 @@
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-DMPrescriptionType" />
       </type>
       <mustSupport value="true" />
+      <isModifier value="false" />
     </element>
     <element id="MedicationRequest.identifier">
       <path value="MedicationRequest.identifier" />
@@ -350,6 +357,7 @@
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-EPSRepeatInformation" />
       </type>
       <mustSupport value="true" />
+      <isModifier value="false" />
     </element>
     <element id="MedicationRequest.basedOn.extension:orignalPrescriptionId">
       <path value="MedicationRequest.basedOn.extension" />
@@ -379,6 +387,7 @@
         <code value="Extension" />
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-DMPrescriptionId" />
       </type>
+      <isModifier value="false" />
     </element>
     <element id="MedicationRequest.groupIdentifier.extension:PrescriptionOrderUUID.value[x].system">
       <path value="MedicationRequest.groupIdentifier.extension.value[x].system" />
@@ -456,6 +465,7 @@
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-DMPerformerSiteType" />
       </type>
       <mustSupport value="true" />
+      <isModifier value="false" />
     </element>
     <element id="MedicationRequest.dispenseRequest.validityPeriod">
       <path value="MedicationRequest.dispenseRequest.validityPeriod" />
@@ -514,6 +524,7 @@
         <profile value="https://fhir.nhs.uk/StructureDefinition/Extension-England-DMDispensingPerformer" />
       </type>
       <mustSupport value="true" />
+      <isModifier value="false" />
     </element>
     <element id="MedicationRequest.dispenseRequest.performer.identifier.system">
       <path value="MedicationRequest.dispenseRequest.performer.identifier.system" />

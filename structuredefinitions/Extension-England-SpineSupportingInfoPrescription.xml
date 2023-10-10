@@ -6,6 +6,7 @@
   <name value="ExtensionEnglandSpineSupportingInfoPrescription" />
   <title value="Extension England Spine Supporting Info Prescription" />
   <status value="draft" />
+  <experimental value="false"/>
   <date value="2023-08-18" />
   <publisher value="NHS England" />
   <contact>
