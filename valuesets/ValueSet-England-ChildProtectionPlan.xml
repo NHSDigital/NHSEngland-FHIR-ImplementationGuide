@@ -1,6 +1,6 @@
 <ValueSet xmlns="http://hl7.org/fhir">
     <id value="England-ChildProtectionPlan" />
-    <url value="https://fhir.nhs.uk/ValueSet/England-ChildProtectionPlan" />
+    <url value="https://fhir.nhs.uk/England/ValueSet/England-ChildProtectionPlan" />
     <version value="1.0.0" />
     <name value="EnglandChildProtectionPlan" />
     <title value="England Child Protection Plan" />
