@@ -1,6 +1,6 @@
 <ValueSet xmlns="http://hl7.org/fhir">
   <id value="England-FGMRemovalReason" />
-  <url value="https://fhir.nhs.uk/ValueSet/England-FGMRemovalReason" />
+  <url value="https://fhir.nhs.uk/England/ValueSet/England-FGMRemovalReason" />
   <version value="1.0.0" />
   <name value="EnglandFGMRemovalReason" />
   <title value="England FGM Removal Reason" />
@@ -22,19 +22,19 @@
   <copyright value="Copyright © 2023+ NHS England Licensed under the Apache License, Version 2.0 (the \&quot;License\&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at  http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \&quot;AS IS\&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. HL7® FHIR® standard Copyright © 2011+ HL7 The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at  https://www.hl7.org/fhir/license.html." />
   <compose>
     <include>
-      <system value="https://fhir.nhs.uk/CodeSystem/England-FGMRemovalReason" />
+      <system value="https://fhir.nhs.uk/England/CodeSystem/England-FGMRemovalReason" />
       <version value="1.0.0" />
     </include>
   </compose>
   <expansion>
     <timestamp value="2023-08-02T12:00:00+00:00" />
     <contains>
-      <system value="https://fhir.nhs.uk/CodeSystem/England-FGMRemovalReason" />
+      <system value="https://fhir.nhs.uk/England/CodeSystem/England-FGMRemovalReason" />
       <code value="0" />
       <display value="Added in error - this child does not have a family history of FGM" />
     </contains>
     <contains>
-      <system value="https://fhir.nhs.uk/CodeSystem/England-FGMRemovalReason" />
+      <system value="https://fhir.nhs.uk/England/CodeSystem/England-FGMRemovalReason" />
       <code value="2" />
       <display value="No longer required - this child has had FGM" />
     </contains>
