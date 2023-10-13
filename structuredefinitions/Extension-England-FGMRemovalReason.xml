@@ -1,10 +1,11 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="Extension-England-FGMRemovalReason" />
-  <url value="https://fhir.nhs.uk/StructureDefinition/Extension-England-FGMRemovalReason" />
+  <url value="https://fhir.nhs.uk/England/StructureDefinition/Extension-England-FGMRemovalReason" />
   <version value="1.0.0" />
   <name value="ExtensionEnglandFGMRemovalReason" />
   <title value="Extension England FGM Removal Reason" />
   <status value="draft" />
+  <experimental value="false"/>
   <date value="2023-08-18" />
   <publisher value="NHS England" />
   <contact>
@@ -37,7 +38,7 @@
   <differential>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="https://fhir.nhs.uk/StructureDefinition/Extension-England-FGMRemovalReason" />
+      <fixedUri value="https://fhir.nhs.uk/England/StructureDefinition/Extension-England-FGMRemovalReason" />
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />
@@ -47,7 +48,7 @@
       </type>
       <binding>
         <strength value="required" />
-        <valueSet value="https://fhir.nhs.uk/ValueSet/England-FGMRemovalReason" />
+        <valueSet value="https://fhir.nhs.uk/England/ValueSet/England-FGMRemovalReason" />
       </binding>
     </element>
     <element id="Extension.value[x].system">
