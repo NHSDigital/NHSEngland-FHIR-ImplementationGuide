@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="Extension-England-ODSOrganisationRole" />
-  <url value="https://fhir.nhs.uk/England/StructureDefinition/Extension-England-ODSOrganisationRole" />
-  <version value="1.1.0" />
-  <name value="ExtensionEnglandODSOrganisationRole" />
-  <title value="Extension England ODS Organisation Role" />
+  <id value="Extension-England-OrganisationRole" />
+  <url value="https://fhir.nhs.uk/England/StructureDefinition/Extension-England-OrganisationRole" />
+  <version value="1.0.0" />
+  <name value="ExtensionEnglandOrganisationRole" />
+  <title value="Extension England Organisation Role" />
   <status value="draft" />
+  <experimental value="false" />
   <date value="2023-10-16" />
   <publisher value="NHS England" />
   <contact>
@@ -42,8 +43,8 @@
     <element id="Extension.extension:primaryRole">
       <path value="Extension.extension" />
       <sliceName value="primaryRole" />
-      <short value="This describes the type of role of the Organisation." />
-      <definition value="This denotes whether the specific role is primary or non primary. Where if the boolean value is true then this is a primary role.  Conversely, if the boolean value is false then this indicates this is a non primary role," />
+      <short value="This describes the type of role of the organisation." />
+      <definition value="This denotes whether the specific role is primary or non primary. Where the Boolean value is true then this is a primary role. Conversely, if the Boolean value is false then this indicates this is a non primary role." />
       <min value="1" />
       <max value="1" />
     </element>
@@ -61,7 +62,7 @@
     <element id="Extension.extension:instanceID">
       <path value="Extension.extension" />
       <sliceName value="instanceID" />
-      <short value="Unique ID for each instance of an org role (org roles can be ended and then the org later undertakes same role again)" />
+      <short value="Unique ID for each instance of an organisation role (organisation roles can be ended and then the organisation later undertakes same role again)." />
       <min value="1" />
       <max value="1" />
     </element>
@@ -83,8 +84,8 @@
       <max value="1" />
       <binding>
         <strength value="extensible" />
-        <description value="A valueset to identify the Organisation Data Service (ODS) role codes" />
-        <valueSet value="https://fhir.nhs.uk/England/ValueSet/England-ODSRoleCode" />
+        <description value="A ValueSet to identify the Organisation Data Service (ODS) role codes" />
+        <valueSet value="https://fhir.nhs.uk/England/ValueSet/England-RoleCode" />
       </binding>
     </element>
     <element id="Extension.extension:code.url">
@@ -123,7 +124,7 @@
       <path value="Extension.extension" />
       <sliceName value="active" />
       <short value="Roles are either active or inactive" />
-      <definition value="Where the boolean value is true, this means that the role is active.  Conversely if the boolean value is false, then this means that the role is inactive." />
+      <definition value="Where the Boolean value is true, this means that the role is active.  Conversely if the Boolean value is false, then this means that the role is inactive." />
       <min value="1" />
       <max value="1" />
     </element>
@@ -140,7 +141,7 @@
     </element>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="https://fhir.nhs.uk/England/StructureDefinition/Extension-England-ODSOrganisationRole" />
+      <fixedUri value="https://fhir.nhs.uk/England/StructureDefinition/Extension-England-OrganisationRole" />
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />
