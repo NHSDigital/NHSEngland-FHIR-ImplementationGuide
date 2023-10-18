@@ -1,9 +1,9 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="Extension-England-FGMRemovalReason" />
-  <url value="https://fhir.nhs.uk/England/StructureDefinition/Extension-England-FGMRemovalReason" />
+  <id value="Extension-England-FlagRemovalReason" />
+  <url value="https://fhir.nhs.uk/England/StructureDefinition/Extension-England-FlagRemovalReason" />
   <version value="1.0.0" />
-  <name value="ExtensionEnglandFGMRemovalReason" />
-  <title value="Extension England FGM Removal Reason" />
+  <name value="ExtensionEnglandFlagRemovalReason" />
+  <title value="Extension England Flag Removal Reason" />
   <status value="draft" />
   <date value="2023-08-18" />
   <publisher value="NHS England" />
@@ -16,8 +16,8 @@
       <rank value="1" />
     </telecom>
   </contact>
-  <description value="An Extension used to allow the removal of an FGM Flag and to indicate the reason why the Flag needs removal." />
-  <purpose value="The Extension extends the Flag resource to support the NHS England requirements for removal of FGM Flags with a stated reason." />
+  <description value="An extension used to allow the removal of a Flag and to indicate the reason why the Flag needs removal or has been removed." />
+  <purpose value="The extension extends the Flag resource to support the NHS England requirements for removal of Flags with a stated reason." />
   <copyright value="Copyright © 2023+ NHS England Licensed under the Apache License, Version 2.0 (the \&quot;License\&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at  http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \&quot;AS IS\&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. HL7® FHIR® standard Copyright © 2011+ HL7 The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at  https://www.hl7.org/fhir/license.html." />
   <fhirVersion value="4.0.1" />
   <mapping>
@@ -37,7 +37,7 @@
   <differential>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="https://fhir.nhs.uk/England/StructureDefinition/Extension-England-FGMRemovalReason" />
+      <fixedUri value="https://fhir.nhs.uk/England/StructureDefinition/Extension-England-FlagRemovalReason" />
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />
@@ -47,7 +47,7 @@
       </type>
       <binding>
         <strength value="required" />
-        <valueSet value="https://fhir.nhs.uk/England/ValueSet/England-FGMRemovalReason" />
+        <valueSet value="https://fhir.nhs.uk/England/ValueSet/England-RemovalReason" />
       </binding>
     </element>
     <element id="Extension.value[x].system">
