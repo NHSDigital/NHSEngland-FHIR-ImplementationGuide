@@ -5,7 +5,7 @@
   <name value="ExtensionEnglandOrganisationRole" />
   <title value="Extension England Organisation Role" />
   <status value="draft" />
-  <date value="2023-10-16" />
+  <date value="2023-10-18" />
   <publisher value="NHS England" />
   <contact>
     <name value="NHS England" />
@@ -83,7 +83,7 @@
       <binding>
         <strength value="extensible" />
         <description value="A ValueSet to identify the Organisation Data Service (ODS) role codes" />
-        <valueSet value="https://fhir.nhs.uk/England/ValueSet/England-OrganisationRoleCode" />
+        <valueSet value="https://fhir.nhs.uk/England/ValueSet/England-OrganisationRole" />
       </binding>
     </element>
     <element id="Extension.extension:code.url">

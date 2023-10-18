@@ -1,11 +1,11 @@
 <CodeSystem xmlns="http://hl7.org/fhir">
-	<id value="England-ODSOrganisationRoleCode" />
-	<url value="https://fhir.nhs.uk/England/CodeSystem/England-ODSOrganisationRoleCode" />
+	<id value="England-ODSOrganisationRole" />
+	<url value="https://fhir.nhs.uk/England/CodeSystem/England-ODSOrganisationRole" />
 	<version value="1.0.0" />
-	<name value="EnglandODSOrganisationRoleCode" />
-	<title value="England ODS Organisation Role Code" />
+	<name value="EnglandODSOrganisationRole" />
+	<title value="England ODS Organisation Role" />
 	<status value="draft" />
-	<date value="2023-10-16" />
+	<date value="2023-10-18" />
 	<publisher value="NHS England" />
 	<contact>
 		<name value="NHS England" />
