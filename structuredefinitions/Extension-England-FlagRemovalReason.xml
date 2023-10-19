@@ -47,7 +47,7 @@
       </type>
       <binding>
         <strength value="required" />
-        <valueSet value="https://fhir.nhs.uk/England/ValueSet/England-RemovalReason" />
+        <valueSet value="https://fhir.nhs.uk/England/ValueSet/England-FlagRemovalReason" />
       </binding>
     </element>
     <element id="Extension.value[x].system">
