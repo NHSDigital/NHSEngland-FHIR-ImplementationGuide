@@ -1,0 +1,149 @@
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="Extension-England-OrganisationRole" />
+  <url value="https://fhir.nhs.uk/England/StructureDefinition/Extension-England-OrganisationRole" />
+  <version value="1.0.0" />
+  <name value="ExtensionEnglandOrganisationRole" />
+  <title value="Extension England Organisation Role" />
+  <status value="draft" />
+  <date value="2023-10-18" />
+  <publisher value="NHS England" />
+  <contact>
+    <name value="NHS England" />
+    <telecom>
+      <system value="email" />
+      <value value="interoperabilityteam@nhs.net" />
+      <use value="work" />
+      <rank value="1" />
+    </telecom>
+  </contact>
+  <description value="An extension to describe the role of the organisation and whether this is it's primary role." />
+  <purpose value="This extension extends the Organization resource to support the NHS England requirement for additional information about organisational roles." />
+  <copyright value="Copyright © 2023+ NHS England Licensed under the Apache License, Version 2.0 (the \&quot;License\&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at  http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \&quot;AS IS\&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. HL7® FHIR® standard Copyright © 2011+ HL7 The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at  https://www.hl7.org/fhir/license.html." />
+  <fhirVersion value="4.0.1" />
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <context>
+    <type value="element" />
+    <expression value="Organization" />
+  </context>
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Extension">
+      <path value="Extension" />
+      <short value="An Extension to describe what an Organisation does and whether this is the primary role of the Organisation." />
+    </element>
+    <element id="Extension.extension">
+      <path value="Extension.extension" />
+      <min value="5" />
+    </element>
+    <element id="Extension.extension:primaryRole">
+      <path value="Extension.extension" />
+      <sliceName value="primaryRole" />
+      <short value="This describes the type of role of the organisation." />
+      <definition value="This denotes whether the specific role is primary or non primary. Where the Boolean value is true then this is a primary role. Conversely, if the Boolean value is false then this indicates this is a non primary role." />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:primaryRole.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="primaryRole" />
+    </element>
+    <element id="Extension.extension:primaryRole.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <min value="1" />
+      <type>
+        <code value="boolean" />
+      </type>
+    </element>
+    <element id="Extension.extension:instanceID">
+      <path value="Extension.extension" />
+      <sliceName value="instanceID" />
+      <short value="Unique ID for each instance of an organisation role (organisation roles can be ended and then the organisation later undertakes same role again)." />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:instanceID.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="instanceID" />
+    </element>
+    <element id="Extension.extension:instanceID.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <min value="1" />
+      <type>
+        <code value="integer" />
+      </type>
+    </element>
+    <element id="Extension.extension:code">
+      <path value="Extension.extension" />
+      <sliceName value="code" />
+      <min value="1" />
+      <max value="1" />
+      <binding>
+        <strength value="extensible" />
+        <description value="A ValueSet to identify the Organisation Data Service (ODS) role codes" />
+        <valueSet value="https://fhir.nhs.uk/England/ValueSet/England-OrganisationRole" />
+      </binding>
+    </element>
+    <element id="Extension.extension:code.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="code" />
+    </element>
+    <element id="Extension.extension:code.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <min value="1" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+    </element>
+    <element id="Extension.extension:code.value[x].coding.code">
+      <path value="Extension.extension.value[x].coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Extension.extension:period">
+      <path value="Extension.extension" />
+      <sliceName value="period" />
+      <short value="Period of the role" />
+      <min value="1" />
+    </element>
+    <element id="Extension.extension:period.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="period" />
+    </element>
+    <element id="Extension.extension:period.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <min value="1" />
+      <type>
+        <code value="Period" />
+      </type>
+    </element>
+    <element id="Extension.extension:active">
+      <path value="Extension.extension" />
+      <sliceName value="active" />
+      <short value="Roles are either active or inactive" />
+      <definition value="Where the Boolean value is true, this means that the role is active.  Conversely if the Boolean value is false, then this means that the role is inactive." />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:active.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="active" />
+    </element>
+    <element id="Extension.extension:active.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <min value="1" />
+      <type>
+        <code value="boolean" />
+      </type>
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url" />
+      <fixedUri value="https://fhir.nhs.uk/England/StructureDefinition/Extension-England-OrganisationRole" />
+    </element>
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>
