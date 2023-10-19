@@ -1,9 +1,9 @@
 <ValueSet xmlns="http://hl7.org/fhir">
-  <id value="England-RemovalReason" />
-  <url value="https://fhir.nhs.uk/England/ValueSet/England-RemovalReason" />
+  <id value="England-FlagRemovalReason" />
+  <url value="https://fhir.nhs.uk/England/ValueSet/England-FlagRemovalReason" />
   <version value="1.0.0" />
-  <name value="EnglandRemovalReason" />
-  <title value="England Removal Reason" />
+  <name value="EnglandFlagRemovalReason" />
+  <title value="England Flag Removal Reason" />
   <status value="draft" />
   <date value="2023-08-18" />
   <publisher value="NHS England" />
