@@ -1,37 +1,37 @@
 <ValueSet xmlns="http://hl7.org/fhir">
-	<id value="England-TypedDateTime"/>
-	<url value="https://fhir.nhs.uk/England/ValueSet/England-TypedDateTime"/>
-	<version value="1.0.0"/>
-	<name value="EnglandTypedDateTime"/>
-	<title value="England Typed Date Time"/>
-	<status value="draft"/>
-	<date value="2023-10-24"/>
-	<publisher value="NHS England"/>
+	<id value="England-TypedDateTime" />
+	<url value="https://fhir.nhs.uk/England/ValueSet/England-TypedDateTime" />
+	<version value="1.0.0" />
+	<name value="EnglandTypedDateTime" />
+	<title value="England Typed Date Time" />
+	<status value="draft" />
+	<date value="2023-10-24" />
+	<publisher value="NHS England" />
 	<contact>
-		<name value="NHS England"/>
+		<name value="NHS England" />
 		<telecom>
-			<system value="email"/>
-			<value value="interoperabilityteam@nhs.net"/>
-			<use value="work"/>
-			<rank value="1"/>
+			<system value="email" />
+			<value value="interoperabilityteam@nhs.net" />
+			<use value="work" />
+			<rank value="1" />
 		</telecom>
 	</contact>
-	<description value="This ValueSet defines the set of codes that can be used to describe the type of business date and time being recorded."/>
-	<copyright value="Copyright &#169; 2023+ HL7 UK Licensed under the Apache License, Version 2.0 (the &quot;License&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at  http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. HL7&#174; FHIR&#174; standard Copyright &#169; 2011+ HL7 The HL7&#174; FHIR&#174; standard is used under the FHIR license. You may obtain a copy of the FHIR license at  https://www.hl7.org/fhir/license.html."/>
+	<description value="This ValueSet defines the set of codes that can be used to describe the type of business date and time being recorded." />
+	<copyright value="Copyright © 2023+ NHS England Licensed under the Apache License, Version 2.0 (the \&quot;License\&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at  http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \&quot;AS IS\&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. HL7® FHIR® standard Copyright © 2011+ HL7 The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at  https://www.hl7.org/fhir/license.html." />
 	<compose>
 		<include>
-			<system value="https://fhir.nhs.uk/England/CodeSystem/England-ORDDateTime"/>
+			<system value="https://fhir.nhs.uk/England/CodeSystem/England-ORDDateTime" />
 		</include>
 	</compose>
 	<expansion>
-		<identifier value="0782b2cc-5813-434e-bb6c-1cf79f2ca01d"/>
-		<timestamp value="2023-10-24T17:45:44+00:00"/>
-		<total value="1"/>
-		<offset value="0"/>
+		<identifier value="0782b2cc-5813-434e-bb6c-1cf79f2ca01d" />
+		<timestamp value="2023-10-24T17:45:44+00:00" />
+		<total value="1" />
+		<offset value="0" />
 		<contains>
-			<system value="https://fhir.nhs.uk/England/CodeSystem/England-ORDDateTime"/>
-			<code value="last-change-date"/>
-			<display value="Last Change Date"/>
+			<system value="https://fhir.nhs.uk/England/CodeSystem/England-ORDDateTime" />
+			<code value="last-change-date" />
+			<display value="Last Change Date" />
 		</contains>
 	</expansion>
 </ValueSet>
