@@ -3,7 +3,7 @@
   <url value="https://fhir.nhs.uk/England/StructureDefinition/Extension-England-DateTime" />
   <version value="1.0.0" />
   <name value="ExtensionEnglandDateTime" />
-  <title value="Extension England Business Date Time" />
+  <title value="Extension England Date Time" />
   <status value="draft" />
   <date value="2023-10-24" />
   <publisher value="NHS England" />
