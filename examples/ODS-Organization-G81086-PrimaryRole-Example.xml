@@ -1,0 +1,110 @@
+<Organization xmlns="http://hl7.org/fhir">
+	<id value="ODS-Organization-G81086-PrimaryRole-Example" />
+	<extension url="https://fhir.nhs.uk/England/StructureDefinition/Extension-England-OrganisationRole">
+		<extension url="primaryRole">
+			<valueBoolean value="true" />
+		</extension>
+		<extension url="instanceID">
+			<valueInteger value="103262" />
+		</extension>
+		<extension url="code">
+			<valueCoding>
+				<system value="https://fhir.nhs.uk/England/CodeSystem/England-ODSOrganisationRole" />
+				<code value="community-surgery" />
+				<display value="Community Surgery" />
+			</valueCoding>
+		</extension>
+		<extension url="ttps://fhir.nhs.uk/England/StructureDefinition/Extension-England-TypedPeriod">
+			<extension url="dataType">
+				<valueCoding>
+					<system value="https://fhir.nhs.uk/England/CodeSystem/England-PeriodType" />
+					<code value="legal" />
+					<display value="Legal" />
+				</valueCoding>
+			</extension>
+			<extension url="period">
+				<valuePeriod>
+					<start value="1974-04-01" />
+				</valuePeriod>
+			</extension>
+		</extension>
+		<extension url="https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-TypedPeriod">
+			<extension url="dataType">
+				<valueCoding>
+					<system value="https://fhir.nhs.uk/England/CodeSystem/England-PeriodType" />
+					<code value="operational" />
+					<display value="Operational" />
+				</valueCoding>
+			</extension>
+			<extension url="period">
+				<valuePeriod>
+					<start value="1974-04-01" />
+				</valuePeriod>
+			</extension>
+		</extension>
+		<extension url="period">
+			<valuePeriod>
+				<start value="1974-04-01" />
+			</valuePeriod>
+		</extension>
+		<extension url="active">
+			<valueBoolean value="true" />
+		</extension>
+	</extension>
+	<extension url="https://fhir.nhs.uk/England/StructureDefinition/Extension-England-DateTime">
+		<extension url="type">
+			<valueCoding>
+				<system value="https://fhir.nhs.uk/England/CodeSystem/England-ORDDateTime" />
+				<code value="last-change-date" />
+				<display value="Last Change Date" />
+			</valueCoding>
+		</extension>
+		<extension url="dateTime">
+			<valueDateTime value="2023-08-22" />
+		</extension>
+	</extension>
+	<identifier>
+		<use value="official" />
+		<system value="https://fhir.nhs.uk/Id/ods-organization-code" />
+		<value value="G81086" />
+	</identifier>
+	<type>
+		<coding>
+			<system value="https://ods-prototype/role" />
+			<code value="RO177" />
+			<display value="PRESCRIBING COST CENTRE" />
+		</coding>
+	</type>
+	<type>
+		<coding>
+			<system value="https://ods-prototype/recordClass" />
+			<code value="RC1" />
+			<display value="HSCOrg" />
+		</coding>
+	</type>
+	<name value="BIRD-IN-EYE SURGERY" />
+	<telecom>
+		<system value="phone" />
+		<value value="01825 763196" />
+	</telecom>
+	<address>
+		<extension url="https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-AddressKey">
+			<extension url="type">
+				<valueCoding>
+					<system value="https://fhir.hl7.org.uk/CodeSystem/UKCore-AddressKeyType" />
+					<code value="UPRN" />
+					<display value="Unique Property Reference Number" />
+				</valueCoding>
+			</extension>
+			<extension url="value">
+				<valueString value="10091054340" />
+			</extension>
+		</extension>
+		<line value="UCKFIELD COMMUNITY HOSPITAL" />
+		<line value="FRAMFIELD ROAD" />
+		<city value="UCKFIELD" />
+		<district value="EAST SUSSEX" />
+		<postalCode value="TN22 5AW" />
+		<country value="ENGLAND" />
+	</address>
+</Organization>
