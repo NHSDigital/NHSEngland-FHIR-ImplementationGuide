@@ -14,7 +14,7 @@
 				<display value="Community Surgery" />
 			</valueCoding>
 		</extension>
-		<extension url="ttps://fhir.nhs.uk/England/StructureDefinition/Extension-England-TypedPeriod">
+		<extension url="https://fhir.nhs.uk/England/StructureDefinition/Extension-England-TypedPeriod">
 			<extension url="dataType">
 				<valueCoding>
 					<system value="https://fhir.nhs.uk/England/CodeSystem/England-PeriodType" />
@@ -41,11 +41,6 @@
 					<start value="1974-04-01" />
 				</valuePeriod>
 			</extension>
-		</extension>
-		<extension url="period">
-			<valuePeriod>
-				<start value="1974-04-01" />
-			</valuePeriod>
 		</extension>
 		<extension url="active">
 			<valueBoolean value="true" />
