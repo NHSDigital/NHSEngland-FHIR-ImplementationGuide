@@ -80,11 +80,6 @@
       <sliceName value="code" />
       <min value="1" />
       <max value="1" />
-      <binding>
-        <strength value="preferred" />
-        <description value="A ValueSet to identify the Organisation Data Service (ODS) role codes" />
-        <valueSet value="https://fhir.nhs.uk/England/ValueSet/England-OrganisationRole" />
-      </binding>
     </element>
     <element id="Extension.extension:code.url">
       <path value="Extension.extension.url" />
@@ -96,6 +91,11 @@
       <type>
         <code value="Coding" />
       </type>
+      <binding>
+        <strength value="extensible" />
+        <description value="A ValueSet to identify the Organisation Data Service (ODS) role codes" />
+        <valueSet value="https://fhir.nhs.uk/England/ValueSet/England-OrganisationRole" />
+      </binding>
     </element>
     <element id="Extension.extension:code.value[x].code">
       <path value="Extension.extension.value[x].code" />
