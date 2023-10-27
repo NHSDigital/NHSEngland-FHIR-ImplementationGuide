@@ -23,4 +23,15 @@
 			<system value="https://fhir.nhs.uk/England/CodeSystem/England-ODSOrganisationRole" />
 		</include>
 	</compose>
+	<expansion>
+		<identifier value="94af73b0-8078-4323-be5e-43ced75666fb"/>
+		<timestamp value="2023-10-13T13:34:44+00:00"/>
+		<total value="1"/>
+		<offset value="0"/>
+		<contains>
+			<system value="https://fhir.nhs.uk/England/CodeSystem/England-ODSOrganisationRole"/>
+			<code value="community-surgery" />
+			<display value="Community Surgery" />
+		</contains>
+	</expansion>
 </ValueSet>
