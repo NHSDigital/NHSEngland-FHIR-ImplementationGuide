@@ -97,8 +97,8 @@
         <code value="Coding" />
       </type>
     </element>
-    <element id="Extension.extension:code.value[x].coding.code">
-      <path value="Extension.extension.value[x].coding.code" />
+    <element id="Extension.extension:code.value[x].code">
+      <path value="Extension.extension.value[x].code" />
       <min value="1" />
     </element>
     <element id="Extension.extension:period">
