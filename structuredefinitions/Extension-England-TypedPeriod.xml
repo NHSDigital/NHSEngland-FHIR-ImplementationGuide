@@ -7,16 +7,7 @@
   <title value="Extension England Typed Period" />
   <status value="draft" />
   <date value="2023-10-13" />
-  <publisher value="HL7 UK" />
-  <contact>
-    <name value="HL7 UK" />
-    <telecom>
-      <system value="email" />
-      <value value="ukcore@hl7.org.uk" />
-      <use value="work" />
-      <rank value="1" />
-    </telecom>
-  </contact><publisher value="NHS England" />
+  <publisher value="NHS England" />
   <contact>
     <name value="NHS England" />
     <telecom>
