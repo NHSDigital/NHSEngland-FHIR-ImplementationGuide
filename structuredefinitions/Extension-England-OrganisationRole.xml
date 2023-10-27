@@ -81,7 +81,7 @@
       <min value="1" />
       <max value="1" />
       <binding>
-        <strength value="extensible" />
+        <strength value="preferred" />
         <description value="A ValueSet to identify the Organisation Data Service (ODS) role codes" />
         <valueSet value="https://fhir.nhs.uk/England/ValueSet/England-OrganisationRole" />
       </binding>
