@@ -37,7 +37,7 @@
     <expression value="OrganizationAffiliation" />
   </context>
   <context>
-    <type value="element" />
+    <type value="extension" />
     <expression value="https://fhir.nhs.uk/England/StructureDefinition/Extension-England-OrganisationRole" />
   </context>
   <type value="Extension" />
