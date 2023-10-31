@@ -1,20 +1,33 @@
-name: find and replace
+name: Find and Replace
 on:
-  - push
-  - pull_request
+  # NOTE: Need to run on a PR so that the ${{ github.head_ref }} (branch) is non-null
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - reopened
+
 jobs:
-  build:
+  fmt-code:
     runs-on: ubuntu-latest
+
+    permissions:
+      # Give the default GITHUB_TOKEN write permission to commit and push the
+      # added or changed files to the repository.
+      contents: write
+
     steps:
       - uses: actions/checkout@v3
-        with:
-          repository: ${{ github.event.pull_request.head.repo.full_name }}
-          ref: ${{ github.event.pull_request.head.ref }}
-          
+
+      # Run steps that make changes to the local repo here.
       - name: Tabs to spaces
         run: find ./ -type f -name *.xml -exec sed -i -e 's/\t/  /g' -e 's/\"\/>/\" \/>/g' {} \;
-      
-      - name: Push changes
-        uses: EndBug/add-and-commit@v7
+        
+      # Commit all changed files back to the repository
+      - uses: planetscale/ghcommit-action@v0.1.6
         with:
-          message: 'Find and Replace'
+          commit_message: "GitHub Action: Find and Replace"
+          repo: ${{ github.repository }}
+          branch: ${{ github.head_ref || github.ref_name }}
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
