@@ -9,9 +9,9 @@
 		</extension>
 		<extension url="code">
 			<valueCoding>
-				<system value="https://fhir.nhs.uk/England/CodeSystem/England-ODSOrganisationRole" />
-				<code value="community-surgery" />
-				<display value="Community Surgery" />
+				<system value="https://fhir.nhs.uk/England/CodeSystem/England-ODSPrimaryRole" />
+				<code value="RO94" />
+				<display value="APPLIANCE CONTRACTOR" />
 			</valueCoding>
 		</extension>
 		<extension url="https://fhir.nhs.uk/England/StructureDefinition/Extension-England-TypedPeriod">
@@ -66,8 +66,8 @@
 	<type>
 		<coding>
 			<system value="https://ods-prototype/role" />
-			<code value="RO177" />
-			<display value="PRESCRIBING COST CENTRE" />
+			<code value="RO94" />
+			<display value="APPLIANCE CONTRACTOR" />
 		</coding>
 	</type>
 	<type>

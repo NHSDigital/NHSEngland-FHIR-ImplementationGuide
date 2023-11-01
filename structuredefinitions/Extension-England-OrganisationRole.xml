@@ -43,7 +43,7 @@
       <sliceName value="primaryRole" />
       <short value="This describes the type of role of the organisation." />
       <definition value="This denotes whether the specific role is primary or non primary. Where the Boolean value is true then this is a primary role. Conversely, if the Boolean value is false then this indicates this is a non primary role." />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
     </element>
     <element id="Extension.extension:primaryRole.url">
