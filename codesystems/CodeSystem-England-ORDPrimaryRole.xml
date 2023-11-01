@@ -1,9 +1,9 @@
 <CodeSystem xmlns="http://hl7.org/fhir">
-	<id value="England-ORDOrganisationRole" />
-	<url value="https://fhir.nhs.uk/England/CodeSystem/England-ORDOrganisationRole" />
+	<id value="England-ORDPrimaryRole" />
+	<url value="https://fhir.nhs.uk/England/CodeSystem/England-ORDPrimaryRole" />
 	<version value="1.0.0" />
-	<name value="EnglandODSOrganisationRole" />
-	<title value="England ODS Organisation Role" />
+	<name value="EnglandODSPrimaryRole" />
+	<title value="England ODS Primary Role" />
 	<status value="draft" />
 	<date value="2023-10-18" />
 	<publisher value="NHS England" />
@@ -16,7 +16,7 @@
 			<rank value="1" />
 		</telecom>
 	</contact>
-	<description value="A set of codes that define the role of an organisation using the Organisation Data Service (ODS)." />
+	<description value="A set of codes that define the primary role of an organisation using the Organisation Data Service (ODS)." />
 	<copyright value="Copyright © 2023+ NHS England Licensed under the Apache License, Version 2.0 (the \&quot;License\&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at  http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \&quot;AS IS\&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. HL7® FHIR® standard Copyright © 2011+ HL7 The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at  https://www.hl7.org/fhir/license.html." />
 	<caseSensitive value="true" />
 	<content value="fragment" />
