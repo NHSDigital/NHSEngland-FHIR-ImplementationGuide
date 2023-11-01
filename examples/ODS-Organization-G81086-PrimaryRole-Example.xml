@@ -9,7 +9,7 @@
 		</extension>
 		<extension url="code">
 			<valueCoding>
-				<system value="https://fhir.nhs.uk/England/CodeSystem/England-ODSPrimaryRole" />
+				<system value="https://ord.nhs.uk/CodeSystem/primaryrole" />
 				<code value="RO94" />
 				<display value="APPLIANCE CONTRACTOR" />
 			</valueCoding>
@@ -65,9 +65,9 @@
 	</identifier>
 	<type>
 		<coding>
-			<system value="https://ods-prototype/role" />
-			<code value="RO94" />
-			<display value="APPLIANCE CONTRACTOR" />
+			<system value="https://ord.nhs.uk/CodeSystem/role" />
+			<code value="RO177" />
+			<display value="PRESCRIBING COST CENTRE" />
 		</coding>
 	</type>
 	<type>
