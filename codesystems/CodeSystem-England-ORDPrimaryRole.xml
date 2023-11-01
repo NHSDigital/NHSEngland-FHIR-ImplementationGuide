@@ -2,8 +2,8 @@
 	<id value="England-ORDPrimaryRole" />
 	<url value="https://fhir.nhs.uk/England/CodeSystem/England-ORDPrimaryRole" />
 	<version value="1.0.0" />
-	<name value="EnglandODSPrimaryRole" />
-	<title value="England ODS Primary Role" />
+	<name value="EnglandORDPrimaryRole" />
+	<title value="England ORD Primary Role" />
 	<status value="draft" />
 	<date value="2023-10-18" />
 	<publisher value="NHS England" />
