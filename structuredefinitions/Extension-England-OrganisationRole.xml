@@ -106,16 +106,9 @@
       <sliceName value="period" />
       <short value="Period of the role" />
       <min value="1" />
-    </element>
-    <element id="Extension.extension:period.url">
-      <path value="Extension.extension.url" />
-      <fixedUri value="period" />
-    </element>
-    <element id="Extension.extension:period.value[x]">
-      <path value="Extension.extension.value[x]" />
-      <min value="1" />
       <type>
-        <code value="Period" />
+        <code value="Extension" />
+        <profile value="https://fhir.nhs.uk/England/StructureDefinition/Extension-England-TypedPeriod" />
       </type>
     </element>
     <element id="Extension.extension:active">
