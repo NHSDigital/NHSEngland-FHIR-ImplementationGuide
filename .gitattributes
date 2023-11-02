@@ -1,3 +1,2 @@
-# Declare files that will always have CRLF line endings on checkout.
-*.xml text eol=crlf
-*.json text eol=crlf
+# normalizes line endings to LF for all text files checked into your repo while leaving local line endings untouched in the working tree:
+* text=auto
