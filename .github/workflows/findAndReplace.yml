@@ -17,17 +17,17 @@ jobs:
       contents: write
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       # Run steps that make changes to the local repo here.
       - name: Tabs to spaces
         run: find ./ -type f -name *.xml -exec sed -i -e 's/\t/  /g' -e 's/\"\/>/\" \/>/g' {} \;
         
       # Commit all changed files back to the repository
-      - uses: planetscale/ghcommit-action@v0.1.6
+      - uses: planetscale/ghcommit-action@v0.1.13
         with:
           commit_message: "GitHub Action: Find and Replace"
           repo: ${{ github.repository }}
           branch: ${{ github.head_ref || github.ref_name }}
         env:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          GITHUB_TOKEN: ${{secrets.FindAndReplacePAT}} #uses PAT rather than GITHUB_TOKEN due to not running actions once merged https://github.com/orgs/community/discussions/25702
