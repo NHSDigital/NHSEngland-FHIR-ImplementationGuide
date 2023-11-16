@@ -1,6 +1,6 @@
 <NamingSystem xmlns="http://hl7.org/fhir">
 	<id value="ord-record-class-namingsystem"/>
-	<name value="ORD Record Class"/>
+	<name value="ORDRecordClass"/>
 	<status value="active"/>
 	<kind value="codesystem"/>
 	<date value="2023-08-01"/>
