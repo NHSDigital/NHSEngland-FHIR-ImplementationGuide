@@ -2,7 +2,7 @@
   <id value="England-ORDRelationship" />
   <url value="https://ord.nhs.uk/CodeSystem/relationship" />
   <version value="0.0.1" />
-  <name value="EnglandODRDRelationship" />
+  <name value="EnglandORDRelationship" />
   <title value="England ORD Relationship" />
   <status value="draft" />
   <date value="2023-11-16" />
