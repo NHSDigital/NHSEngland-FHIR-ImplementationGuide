@@ -1,0 +1,24 @@
+<NamingSystem xmlns="http://hl7.org/fhir">
+	<id value="ord-role-namingsystem"/>
+	<name value="ORDRole"/>
+	<status value="draft"/>
+	<kind value="codesystem"/>
+	<date value="2023-08-01"/>
+	<publisher value="NHS England"/>
+	<contact>
+        <name value="Organisation Data Service" />
+        <telecom>
+            <system value="email" />
+            <value value="exeter.helpdesk@nhs.net" />
+            <use value="work" />
+            <rank value="1" />
+        </telecom>
+    </contact>
+	<responsible value="Organisation Data Service"/>
+	<description value="Role defines the organisation type (primary role, mandatory) and any non primary roles that give added information for an organisation/site's function."/>
+	<uniqueId>
+		<type value="uri"/>
+		<value value="https://ord.nhs.uk/CodeSystem/role"/>
+		<preferred value="true"/>
+	</uniqueId>
+</NamingSystem>
