@@ -1,6 +1,6 @@
 <NamingSystem xmlns="http://hl7.org/fhir">
 	<id value="ods-organization-code-namingsystem"/>
-	<name value="ODS Organisation Code"/>
+	<name value="ODSOrganisationCode"/>
 	<status value="active"/>
 	<kind value="identifier"/>
 	<date value="2023-08-01"/>
