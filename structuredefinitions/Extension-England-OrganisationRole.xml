@@ -36,26 +36,7 @@
     </element>
     <element id="Extension.extension">
       <path value="Extension.extension" />
-      <min value="5" />
-    </element>
-    <element id="Extension.extension:primaryRole">
-      <path value="Extension.extension" />
-      <sliceName value="primaryRole" />
-      <short value="This describes the type of role of the organisation." />
-      <definition value="This denotes whether the specific role is primary or non primary. Where the Boolean value is true then this is a primary role. Conversely, if the Boolean value is false then this indicates this is a non primary role." />
-      <min value="1" />
-      <max value="1" />
-    </element>
-    <element id="Extension.extension:primaryRole.url">
-      <path value="Extension.extension.url" />
-      <fixedUri value="primaryRole" />
-    </element>
-    <element id="Extension.extension:primaryRole.value[x]">
-      <path value="Extension.extension.value[x]" />
-      <min value="1" />
-      <type>
-        <code value="boolean" />
-      </type>
+      <min value="3" />
     </element>
     <element id="Extension.extension:instanceID">
       <path value="Extension.extension" />
@@ -105,18 +86,14 @@
       <path value="Extension.extension" />
       <sliceName value="period" />
       <short value="Period of the role" />
-      <min value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.nhs.uk/England/StructureDefinition/Extension-England-TypedPeriod" />
+      </type>
     </element>
     <element id="Extension.extension:period.url">
       <path value="Extension.extension.url" />
-      <fixedUri value="period" />
-    </element>
-    <element id="Extension.extension:period.value[x]">
-      <path value="Extension.extension.value[x]" />
-      <min value="1" />
-      <type>
-        <code value="Period" />
-      </type>
+      <fixedUri value="https://fhir.nhs.uk/England/StructureDefinition/Extension-England-TypedPeriod" />
     </element>
     <element id="Extension.extension:active">
       <path value="Extension.extension" />
