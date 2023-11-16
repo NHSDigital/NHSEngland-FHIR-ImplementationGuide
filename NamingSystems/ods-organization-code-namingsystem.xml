@@ -1,11 +1,11 @@
 <NamingSystem xmlns="http://hl7.org/fhir">
-	<id value="ods-organization-code-namingsystem"/>
-	<name value="ODSOrganisationCode"/>
-	<status value="draft"/>
-	<kind value="identifier"/>
-	<date value="2023-08-01"/>
-	<publisher value="NHS England"/>
-	<contact>
+  <id value="ods-organization-code-namingsystem" />
+  <name value="ODSOrganisationCode" />
+  <status value="draft" />
+  <kind value="identifier" />
+  <date value="2023-08-01" />
+  <publisher value="NHS England" />
+  <contact>
         <name value="Organisation Data Service" />
         <telecom>
             <system value="email" />
@@ -14,23 +14,23 @@
             <rank value="1" />
         </telecom>
     </contact>
-	<responsible value="Organisation Data Service"/>
-	<description value="The identifier system for an Organisation registered with the Organisation Data Service (ODS)."/>
-	<usage value="To be used to identify an Organisation registered with the Organisation Data Service (ODS)."/>
-	<uniqueId>
-		<type value="uri"/>
-		<value value="https://fhir.nhs.uk/Id/ods-organization-code"/>
-		<preferred value="true"/>
-	</uniqueId>
-	<uniqueId>
-		<type value="oid"/>
-		<value value="2.16.840.1.113883.2.1.4.3"/>
-		<preferred value="false"/>
-	</uniqueId>
-	<uniqueId>
-		<type value="oid"/>
-		<value value="1.2.826.0.1285.0.1.10"/>
-		<preferred value="false"/>
-		<comment value="NHS SDS Organisation Id - Organisation Id. [BT]"/>
-	</uniqueId>
+  <responsible value="Organisation Data Service" />
+  <description value="The identifier system for an Organisation registered with the Organisation Data Service (ODS)." />
+  <usage value="To be used to identify an Organisation registered with the Organisation Data Service (ODS)." />
+  <uniqueId>
+    <type value="uri" />
+    <value value="https://fhir.nhs.uk/Id/ods-organization-code" />
+    <preferred value="true" />
+  </uniqueId>
+  <uniqueId>
+    <type value="oid" />
+    <value value="2.16.840.1.113883.2.1.4.3" />
+    <preferred value="false" />
+  </uniqueId>
+  <uniqueId>
+    <type value="oid" />
+    <value value="1.2.826.0.1285.0.1.10" />
+    <preferred value="false" />
+    <comment value="NHS SDS Organisation Id - Organisation Id. [BT]" />
+  </uniqueId>
 </NamingSystem>
