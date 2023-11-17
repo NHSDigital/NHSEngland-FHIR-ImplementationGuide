@@ -86,6 +86,7 @@
       <path value="Extension.extension" />
       <sliceName value="period" />
       <short value="Period of the role" />
+      <min value="1" />
       <type>
         <code value="Extension" />
         <profile value="https://fhir.nhs.uk/England/StructureDefinition/Extension-England-TypedPeriod" />
