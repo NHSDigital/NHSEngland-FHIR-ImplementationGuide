@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="Extension-England-TypedPeriod" />
   <url value="https://fhir.nhs.uk/England/StructureDefinition/Extension-England-TypedPeriod" />
@@ -17,8 +16,8 @@
       <rank value="1" />
     </telecom>
   </contact>
-  <description value="This supports the exchange of time periods. The extension time period is carried along with a code to identify whether the data is record for legal or operational periods." />
-  <purpose value="This extension has been created from an ODS use-case in which there is a requirement to hold data for Legal and Operational dates, although it is expected to be broader than ODS and can be used for other scenarios." />
+  <description value="This supports the exchange of time periods. The extension time period is carried along with a code to identify whether the data is recorded for legal or operational periods." />
+  <purpose value="This extension has been created from an ORD use-case in which there is a requirement to hold data for Legal and Operational dates, although it is expected to be broader than ORD and can be used for other scenarios." />
   <copyright value="Copyright © 2023+ NHS England Licensed under the Apache License, Version 2.0 (the \&quot;License\&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at  http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \&quot;AS IS\&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. HL7® FHIR® standard Copyright © 2011+ HL7 The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at  https://www.hl7.org/fhir/license.html." />
   <fhirVersion value="4.0.1" />
   <mapping>
@@ -47,24 +46,24 @@
     <element id="Extension">
       <path value="Extension" />
       <short value="This supports the recording of a period related to the specified date type." />
-      <definition value="This supports the recording of a period related to the specified date type. The period is carried along with a code to identify the type of data." />
+      <definition value="This supports the recording of a period related to the specified date type. The date/time period is carried along with a code to identify the type of period." />
     </element>
     <element id="Extension.extension">
       <path value="Extension.extension" />
       <min value="2" />
     </element>
-    <element id="Extension.extension:dataType">
+    <element id="Extension.extension:dateType">
       <path value="Extension.extension" />
-      <sliceName value="dataType" />
+      <sliceName value="dateType" />
       <short value="Whether the Date Period is 'Legal' or 'Operational'." />
       <min value="1" />
       <max value="1" />
     </element>
-    <element id="Extension.extension:dataType.url">
+    <element id="Extension.extension:dateType.url">
       <path value="Extension.extension.url" />
-      <fixedUri value="dataType" />
+      <fixedUri value="dateType" />
     </element>
-    <element id="Extension.extension:dataType.value[x]">
+    <element id="Extension.extension:dateType.value[x]">
       <path value="Extension.extension.value[x]" />
       <short value="A ValueSet to identify the type of period." />
       <min value="1" />
