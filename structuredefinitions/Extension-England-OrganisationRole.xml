@@ -1,11 +1,11 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="Extension-England-OrganisationRole" />
   <url value="https://fhir.nhs.uk/England/StructureDefinition/Extension-England-OrganisationRole" />
-  <version value="1.0.0" />
+  <version value="1.1.0" />
   <name value="ExtensionEnglandOrganisationRole" />
   <title value="Extension England Organisation Role" />
-  <status value="draft" />
-  <date value="2023-10-18" />
+  <status value="active" />
+  <date value="2023-12-07" />
   <publisher value="NHS England" />
   <contact>
     <name value="NHS England" />

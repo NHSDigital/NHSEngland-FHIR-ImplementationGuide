@@ -1,11 +1,11 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="Extension-England-FlagRemovalReason" />
   <url value="https://fhir.nhs.uk/England/StructureDefinition/Extension-England-FlagRemovalReason" />
-  <version value="1.0.0" />
+  <version value="1.1.0" />
   <name value="ExtensionEnglandFlagRemovalReason" />
   <title value="Extension England Flag Removal Reason" />
   <status value="active" />
-  <date value="2023-11-09" />
+  <date value="2023-12-07" />
   <publisher value="NHS England" />
   <contact>
     <name value="NHS England" />

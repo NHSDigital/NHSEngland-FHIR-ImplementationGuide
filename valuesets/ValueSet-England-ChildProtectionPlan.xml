@@ -1,11 +1,11 @@
 <ValueSet xmlns="http://hl7.org/fhir">
   <id value="England-ChildProtectionPlan" />
   <url value="https://fhir.nhs.uk/England/ValueSet/England-ChildProtectionPlan" />
-  <version value="1.0.0" />
+  <version value="1.1.0" />
   <name value="EnglandChildProtectionPlan" />
   <title value="England Child Protection Plan" />
   <status value="active" />
-  <date value="2023-11-09" />
+  <date value="2023-12-07" />
   <publisher value="NHS England" />
   <contact>
     <name value="NHS England" />

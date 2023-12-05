@@ -1,11 +1,11 @@
 <CodeSystem xmlns="http://hl7.org/fhir">
-  <id value="England-ORDRecordClass" />
-  <url value="https://ord.nhs.uk/CodeSystem/record-class" />
-  <version value="1.0.0" />
-  <name value="EnglandORDRecordClass" />
-  <title value="England ORD Record Class" />
-  <status value="draft" />
-  <date value="2023-11-16" />
+  <id value="England-ODSRecordClass" />
+  <url value="https://digital.nhs.uk/services/organisation-data-service/CodeSystem/ODSRecordClass" />
+  <version value="1.1.0" />
+  <name value="EnglandODSRecordClass" />
+  <title value="England ODS Record Class" />
+  <status value="active" />
+  <date value="2023-12-07" />
   <publisher value="NHS England" />
   <contact>
     <name value="NHS England" />
@@ -22,7 +22,7 @@
       <system value="email" />
       <value value="exeter.helpdesk@nhs.net" />
       <use value="work" />
-      <rank value="1" />
+      <rank value="2" />
     </telecom>
   </contact>
   <description value="A set of codes that define the high level type / class of record published by Organisation Data Service (ODS).&#13;&#13;For more information and an up to date list see: [Organisation Data Service CodeSet](https://digital.nhs.uk/services/organisation-data-service/codesystems)." />

@@ -1,11 +1,11 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="Extension-England-DateTime" />
-  <url value="https://fhir.nhs.uk/England/StructureDefinition/Extension-England-DateTime" />
-  <version value="1.0.0" />
-  <name value="ExtensionEnglandDateTime" />
-  <title value="Extension England Date Time" />
-  <status value="draft" />
-  <date value="2023-10-24" />
+  <id value="Extension-England-TypedDateTime" />
+  <url value="https://fhir.nhs.uk/England/StructureDefinition/Extension-England-TypedDateTime" />
+  <version value="1.1.0" />
+  <name value="ExtensionEnglandTypedDateTime" />
+  <title value="Extension England Typed Date Time" />
+  <status value="active" />
+  <date value="2023-12-07" />
   <publisher value="NHS England" />
   <contact>
     <name value="NHS England" />
@@ -16,8 +16,8 @@
       <rank value="1" />
     </telecom>
   </contact>
-  <description value="This supports the exchange of non-clinical business dates and times.  The extension date and/or time is carried along with a code to identify the type of date and/or time." />
-  <purpose value="This extension extends the Encounter, the Communication, the Organization and the OrganizationAffiliation resources to support the exchange of information describing the specific business related date and/or time." />
+  <description value="This supports the exchange of non-clinical business dates and times. The extension date and/or time is carried along with a code to identify the type of date and/or time." />
+  <purpose value="This extension extends the Organization and the OrganizationAffiliation resources to support the exchange of information describing the specific business related date and/or time." />
   <copyright value="Copyright © 2023+ HL7 UK Licensed under the Apache License, Version 2.0 (the &quot;License&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at  http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. HL7® FHIR® standard Copyright © 2011+ HL7 The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at  https://www.hl7.org/fhir/license.html." />
   <fhirVersion value="4.0.1" />
   <mapping>
@@ -72,18 +72,18 @@
         <valueSet value="https://fhir.nhs.uk/England/ValueSet/England-TypedDateTime" />
       </binding>
     </element>
-    <element id="Extension.extension:dateTime">
+    <element id="Extension.extension:typedDateTime">
       <path value="Extension.extension" />
-      <sliceName value="dateTime" />
+      <sliceName value="typedDateTime" />
       <short value="The specific business related date and/or time." />
       <min value="1" />
       <max value="1" />
     </element>
-    <element id="Extension.extension:dateTime.url">
+    <element id="Extension.extension:typedDateTime.url">
       <path value="Extension.extension.url" />
-      <fixedUri value="dateTime" />
+      <fixedUri value="typedDateTime" />
     </element>
-    <element id="Extension.extension:dateTime.value[x]">
+    <element id="Extension.extension:typedDateTime.value[x]">
       <path value="Extension.extension.value[x]" />
       <short value="The date and/or time." />
       <min value="1" />
@@ -93,7 +93,7 @@
     </element>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="https://fhir.nhs.uk/England/StructureDefinition/Extension-England-DateTime" />
+      <fixedUri value="https://fhir.nhs.uk/England/StructureDefinition/Extension-England-TypedDateTime" />
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />
