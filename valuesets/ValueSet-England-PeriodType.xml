@@ -1,7 +1,7 @@
 <ValueSet xmlns="http://hl7.org/fhir">
   <id value="England-PeriodType" />
   <url value="https://fhir.nhs.uk/England/ValueSet/England-PeriodType" />
-  <version value="1.1.0" />
+  <version value="1.0.0" />
   <name value="EnglandPeriodType" />
   <title value="England Period Type" />
   <status value="active" />

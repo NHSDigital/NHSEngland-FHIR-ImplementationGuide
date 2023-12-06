@@ -1,7 +1,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="Extension-England-OrganisationRole" />
   <url value="https://fhir.nhs.uk/England/StructureDefinition/Extension-England-OrganisationRole" />
-  <version value="1.1.0" />
+  <version value="1.0.0" />
   <name value="ExtensionEnglandOrganisationRole" />
   <title value="Extension England Organisation Role" />
   <status value="active" />

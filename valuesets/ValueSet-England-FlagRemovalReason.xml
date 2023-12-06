@@ -1,11 +1,11 @@
 <ValueSet xmlns="http://hl7.org/fhir">
   <id value="England-FlagRemovalReason" />
   <url value="https://fhir.nhs.uk/England/ValueSet/England-FlagRemovalReason" />
-  <version value="1.1.0" />
+  <version value="1.0.0" />
   <name value="EnglandFlagRemovalReason" />
   <title value="England Flag Removal Reason" />
   <status value="active" />
-  <date value="2023-12-07" />
+  <date value="2023-11-09" />
   <publisher value="NHS England" />
   <contact>
     <name value="NHS England" />
@@ -21,7 +21,7 @@
   <compose>
     <include>
       <system value="https://fhir.nhs.uk/England/CodeSystem/England-FGMRemovalReason" />
-      <version value="1.1.0" />
+      <version value="1.0.0" />
     </include>
   </compose>
   <expansion>

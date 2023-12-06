@@ -1,7 +1,7 @@
 <CodeSystem xmlns="http://hl7.org/fhir">
   <id value="England-PFSPrescriptionOrderingParameter" />
   <url value="https://fhir.nhs.uk/England/CodeSystem/England-PFSPrescriptionOrderingParameter" />
-  <version value="1.1.0" />
+  <version value="1.0.0" />
   <name value="EnglandPFSPrescriptionOrderingParameter" />
   <title value="England PFS Prescription Ordering Parameter" />
   <status value="active" />

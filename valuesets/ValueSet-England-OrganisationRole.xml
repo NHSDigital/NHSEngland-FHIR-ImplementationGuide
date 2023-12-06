@@ -1,7 +1,7 @@
 <ValueSet xmlns="http://hl7.org/fhir">
   <id value="England-OrganisationRole" />
   <url value="https://fhir.nhs.uk/England/ValueSet/England-OrganisationRole" />
-  <version value="1.1.0" />
+  <version value="1.0.0" />
   <name value="EnglandOrganisationRole" />
   <title value="England Organisation Role" />
   <status value="active" />

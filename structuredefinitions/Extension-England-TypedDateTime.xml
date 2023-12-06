@@ -1,7 +1,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="Extension-England-TypedDateTime" />
   <url value="https://fhir.nhs.uk/England/StructureDefinition/Extension-England-TypedDateTime" />
-  <version value="1.1.0" />
+  <version value="1.0.0" />
   <name value="ExtensionEnglandTypedDateTime" />
   <title value="Extension England Typed Date Time" />
   <status value="active" />
@@ -72,18 +72,18 @@
         <valueSet value="https://fhir.nhs.uk/England/ValueSet/England-TypedDateTime" />
       </binding>
     </element>
-    <element id="Extension.extension:typedDateTime">
+    <element id="Extension.extension:dateTime">
       <path value="Extension.extension" />
-      <sliceName value="typedDateTime" />
+      <sliceName value="dateTime" />
       <short value="The specific business related date and/or time." />
       <min value="1" />
       <max value="1" />
     </element>
-    <element id="Extension.extension:typedDateTime.url">
+    <element id="Extension.extension:dateTime.url">
       <path value="Extension.extension.url" />
-      <fixedUri value="typedDateTime" />
+      <fixedUri value="dateTime" />
     </element>
-    <element id="Extension.extension:typedDateTime.value[x]">
+    <element id="Extension.extension:dateTime.value[x]">
       <path value="Extension.extension.value[x]" />
       <short value="The date and/or time." />
       <min value="1" />
