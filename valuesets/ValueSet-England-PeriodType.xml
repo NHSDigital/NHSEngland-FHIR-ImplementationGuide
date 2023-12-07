@@ -29,12 +29,12 @@
     <offset value="0" />
     <contains>
       <system value="https://fhir.nhs.uk/England/CodeSystem/England-PeriodType" />
-      <code value="legal" />
+      <code value="Legal" />
       <display value="Legal" />
     </contains>
     <contains>
       <system value="https://fhir.nhs.uk/England/CodeSystem/England-PeriodType" />
-      <code value="operational" />
+      <code value="Operational" />
       <display value="Operational" />
     </contains>
   </expansion>
