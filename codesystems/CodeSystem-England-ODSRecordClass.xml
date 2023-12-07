@@ -1,11 +1,11 @@
 <CodeSystem xmlns="http://hl7.org/fhir">
-  <id value="England-ORDRecordUseType" />
-  <url value="https://ord.nhs.uk/CodeSystem/record-use-type" />
+  <id value="England-ODSRecordClass" />
+  <url value="https://digital.nhs.uk/services/organisation-data-service/CodeSystem/ODSRecordClass" />
   <version value="1.0.0" />
-  <name value="EnglandORDRecordUseType" />
-  <title value="England ORD Record Use Type" />
-  <status value="draft" />
-  <date value="2023-11-16" />
+  <name value="EnglandODSRecordClass" />
+  <title value="England ODS Record Class" />
+  <status value="active" />
+  <date value="2023-12-07" />
   <publisher value="NHS England" />
   <contact>
     <name value="NHS England" />
@@ -25,7 +25,7 @@
       <rank value="1" />
     </telecom>
   </contact>
-  <description value="A set of codes that define the intended use of a record within the Organisation Data Services (ODS). Full records are complete, whereas skeleton/partial records are provided for reference use only. Record use type is distinct from Status and Record Class.&#13;&#13;For more information and an up to date list see: [Organisation Data Service CodeSet](https://digital.nhs.uk/services/organisation-data-service/codesystems)." />
+  <description value="A set of codes that define the high level type / class of record published by Organisation Data Service (ODS).&#13;&#13;For more information and an up to date list see: [Organisation Data Service CodeSet](https://digital.nhs.uk/services/organisation-data-service/codesystems)." />
   <copyright value="Copyright © 2023+ NHS England Licensed under the Apache License, Version 2.0 (the \&quot;License\&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at  http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \&quot;AS IS\&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. HL7® FHIR® standard Copyright © 2011+ HL7 The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at  https://www.hl7.org/fhir/license.html." />
   <content value="not-present" />
 </CodeSystem>

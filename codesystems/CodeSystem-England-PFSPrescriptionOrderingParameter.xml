@@ -4,8 +4,8 @@
   <version value="1.0.0" />
   <name value="EnglandPFSPrescriptionOrderingParameter" />
   <title value="England PFS Prescription Ordering Parameter" />
-  <status value="draft" />
-  <date value="2023-11-20" />
+  <status value="active" />
+  <date value="2023-12-07" />
   <publisher value="NHS England" />
   <contact>
     <name value="NHS England" />
