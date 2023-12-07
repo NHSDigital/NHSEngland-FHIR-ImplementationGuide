@@ -4,8 +4,8 @@
   <version value="1.0.0" />
   <name value="ExtensionEnglandTypedPeriod" />
   <title value="Extension England Typed Period" />
-  <status value="draft" />
-  <date value="2023-10-13" />
+  <status value="active" />
+  <date value="2023-12-07" />
   <publisher value="NHS England" />
   <contact>
     <name value="NHS England" />
@@ -17,7 +17,7 @@
     </telecom>
   </contact>
   <description value="This supports the exchange of time periods. The extension time period is carried along with a code to identify whether the data is recorded for legal or operational periods." />
-  <purpose value="This extension has been created from an ORD use-case in which there is a requirement to hold data for Legal and Operational dates, although it is expected to be broader than ORD and can be used for other scenarios." />
+  <purpose value="This extension has been created from an ODS use-case in which there is a requirement to hold data for Legal and Operational dates, although it is expected to be broader than ODS and can be used for other scenarios." />
   <copyright value="Copyright © 2023+ NHS England Licensed under the Apache License, Version 2.0 (the \&quot;License\&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at  http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \&quot;AS IS\&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. HL7® FHIR® standard Copyright © 2011+ HL7 The HL7® FHIR® standard is used under the FHIR license. You may obtain a copy of the FHIR license at  https://www.hl7.org/fhir/license.html." />
   <fhirVersion value="4.0.1" />
   <mapping>
