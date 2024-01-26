@@ -8,10 +8,10 @@
 	<date value="2024-01-24"/>
 	<publisher value="NHS England"/>
 	<contact>
-		<name value="NHS England"/>
+		<name value="NRLS Team"/>
 		<telecom>
 			<system value="email"/>
-			<value value="interoperabilityteam@nhs.net"/>
+			<value value="nrls@nhs.net"/>
 			<use value="work"/>
 			<rank value="1"/>
 		</telecom>
